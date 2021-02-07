@@ -18,7 +18,7 @@ meta_desc: "Explore the StorageDrsVmOverride resource of the vSphere package, in
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#StorageDrsVmOverride">StorageDrsVmOverride</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#StorageDrsVmOverrideArgs">StorageDrsVmOverrideArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#StorageDrsVmOverride">StorageDrsVmOverride</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#StorageDrsVmOverrideArgs">StorageDrsVmOverrideArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -26,11 +26,11 @@ meta_desc: "Explore the StorageDrsVmOverride resource of the vSphere package, in
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#StorageDrsVmOverride">NewStorageDrsVmOverride</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#StorageDrsVmOverrideArgs">StorageDrsVmOverrideArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#StorageDrsVmOverride">StorageDrsVmOverride</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#StorageDrsVmOverride">NewStorageDrsVmOverride</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#StorageDrsVmOverrideArgs">StorageDrsVmOverrideArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#StorageDrsVmOverride">StorageDrsVmOverride</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.StorageDrsVmOverride.html">StorageDrsVmOverride</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.StorageDrsVmOverrideArgs.html">StorageDrsVmOverrideArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.StorageDrsVmOverride.html">StorageDrsVmOverride</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.StorageDrsVmOverrideArgs.html">StorageDrsVmOverrideArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -41,7 +41,7 @@ meta_desc: "Explore the StorageDrsVmOverride resource of the vSphere package, in
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -110,7 +110,7 @@ meta_desc: "Explore the StorageDrsVmOverride resource of the vSphere package, in
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -149,7 +149,7 @@ meta_desc: "Explore the StorageDrsVmOverride resource of the vSphere package, in
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -190,7 +190,6 @@ The StorageDrsVmOverride resource accepts the following [input]({{< relref "/doc
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -198,61 +197,57 @@ The StorageDrsVmOverride resource accepts the following [input]({{< relref "/doc
             title="Required">
         <span id="datastoreclusterid_csharp">
 <a href="#datastoreclusterid_csharp" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Cluster<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the datastore cluster to put the override in.
 Forces a new resource if changed.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="virtualmachineid_csharp">
 <a href="#virtualmachineid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsautomationlevel_csharp">
 <a href="#sdrsautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides any Storage DRS automation
 levels for this virtual machine. Can be one of `automated` or `manual`. When
 not specified, the datastore cluster's settings are used according to the
 specific SDRS subsystem.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsenabled_csharp">
 <a href="#sdrsenabled_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default Storage DRS setting for
 this virtual machine. When not specified, the datastore cluster setting is
 used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsintravmaffinity_csharp">
 <a href="#sdrsintravmaffinity_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Intra<wbr>Vm<wbr>Affinity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the intra-VM affinity setting
 for this virtual machine. When `true`, all disks for this virtual machine
@@ -260,10 +255,8 @@ will be kept on the same datastore. When `false`, Storage DRS may locate
 individual disks on different datastores if it helps satisfy cluster
 requirements. When not specified, the datastore cluster's settings are used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -272,61 +265,57 @@ requirements. When not specified, the datastore cluster's settings are used.
             title="Required">
         <span id="datastoreclusterid_go">
 <a href="#datastoreclusterid_go" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Cluster<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the datastore cluster to put the override in.
 Forces a new resource if changed.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="virtualmachineid_go">
 <a href="#virtualmachineid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsautomationlevel_go">
 <a href="#sdrsautomationlevel_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides any Storage DRS automation
 levels for this virtual machine. Can be one of `automated` or `manual`. When
 not specified, the datastore cluster's settings are used according to the
 specific SDRS subsystem.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsenabled_go">
 <a href="#sdrsenabled_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default Storage DRS setting for
 this virtual machine. When not specified, the datastore cluster setting is
 used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsintravmaffinity_go">
 <a href="#sdrsintravmaffinity_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Intra<wbr>Vm<wbr>Affinity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the intra-VM affinity setting
 for this virtual machine. When `true`, all disks for this virtual machine
@@ -334,10 +323,8 @@ will be kept on the same datastore. When `false`, Storage DRS may locate
 individual disks on different datastores if it helps satisfy cluster
 requirements. When not specified, the datastore cluster's settings are used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -346,61 +333,57 @@ requirements. When not specified, the datastore cluster's settings are used.
             title="Required">
         <span id="datastoreclusterid_nodejs">
 <a href="#datastoreclusterid_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Cluster<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the datastore cluster to put the override in.
 Forces a new resource if changed.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="virtualmachineid_nodejs">
 <a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsautomationlevel_nodejs">
 <a href="#sdrsautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides any Storage DRS automation
 levels for this virtual machine. Can be one of `automated` or `manual`. When
 not specified, the datastore cluster's settings are used according to the
 specific SDRS subsystem.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsenabled_nodejs">
 <a href="#sdrsenabled_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default Storage DRS setting for
 this virtual machine. When not specified, the datastore cluster setting is
 used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrsintravmaffinity_nodejs">
 <a href="#sdrsintravmaffinity_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Intra<wbr>Vm<wbr>Affinity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the intra-VM affinity setting
 for this virtual machine. When `true`, all disks for this virtual machine
@@ -408,10 +391,8 @@ will be kept on the same datastore. When `false`, Storage DRS may locate
 individual disks on different datastores if it helps satisfy cluster
 requirements. When not specified, the datastore cluster's settings are used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -420,61 +401,57 @@ requirements. When not specified, the datastore cluster's settings are used.
             title="Required">
         <span id="datastore_cluster_id_python">
 <a href="#datastore_cluster_id_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>cluster_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the datastore cluster to put the override in.
 Forces a new resource if changed.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="virtual_machine_id_python">
 <a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrs_automation_level_python">
 <a href="#sdrs_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>automation_<wbr>level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Overrides any Storage DRS automation
 levels for this virtual machine. Can be one of `automated` or `manual`. When
 not specified, the datastore cluster's settings are used according to the
 specific SDRS subsystem.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrs_enabled_python">
 <a href="#sdrs_enabled_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Overrides the default Storage DRS setting for
 this virtual machine. When not specified, the datastore cluster setting is
 used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sdrs_intra_vm_affinity_python">
 <a href="#sdrs_intra_vm_affinity_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>intra_<wbr>vm_<wbr>affinity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Overrides the intra-VM affinity setting
 for this virtual machine. When `true`, all disks for this virtual machine
@@ -482,19 +459,13 @@ will be kept on the same datastore. When `false`, Storage DRS may locate
 individual disks on different datastores if it helps satisfy cluster
 requirements. When not specified, the datastore cluster's settings are used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the StorageDrsVmOverride resource produces the following output properties:
-
 
 
 
@@ -505,15 +476,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -522,15 +491,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -539,15 +506,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -556,18 +521,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -577,7 +537,7 @@ Get an existing StorageDrsVmOverride resource's state with the given name, ID, a
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#StorageDrsVmOverrideState">StorageDrsVmOverrideState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#StorageDrsVmOverride">StorageDrsVmOverride</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#StorageDrsVmOverrideState">StorageDrsVmOverrideState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#StorageDrsVmOverride">StorageDrsVmOverride</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -586,11 +546,11 @@ Get an existing StorageDrsVmOverride resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetStorageDrsVmOverride<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#StorageDrsVmOverrideState">StorageDrsVmOverrideState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#StorageDrsVmOverride">StorageDrsVmOverride</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetStorageDrsVmOverride<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#StorageDrsVmOverrideState">StorageDrsVmOverrideState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#StorageDrsVmOverride">StorageDrsVmOverride</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.StorageDrsVmOverride.html">StorageDrsVmOverride</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..StorageDrsVmOverrideState.html">StorageDrsVmOverrideState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.StorageDrsVmOverride.html">StorageDrsVmOverride</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..StorageDrsVmOverrideState.html">StorageDrsVmOverrideState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -692,7 +652,6 @@ Get an existing StorageDrsVmOverride resource's state with the given name, ID, a
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -700,49 +659,46 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_datastoreclusterid_csharp">
 <a href="#state_datastoreclusterid_csharp" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Cluster<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the datastore cluster to put the override in.
 Forces a new resource if changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsautomationlevel_csharp">
 <a href="#state_sdrsautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides any Storage DRS automation
 levels for this virtual machine. Can be one of `automated` or `manual`. When
 not specified, the datastore cluster's settings are used according to the
 specific SDRS subsystem.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsenabled_csharp">
 <a href="#state_sdrsenabled_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default Storage DRS setting for
 this virtual machine. When not specified, the datastore cluster setting is
 used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsintravmaffinity_csharp">
 <a href="#state_sdrsintravmaffinity_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Intra<wbr>Vm<wbr>Affinity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the intra-VM affinity setting
 for this virtual machine. When `true`, all disks for this virtual machine
@@ -750,22 +706,19 @@ will be kept on the same datastore. When `false`, Storage DRS may locate
 individual disks on different datastores if it helps satisfy cluster
 requirements. When not specified, the datastore cluster's settings are used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachineid_csharp">
 <a href="#state_virtualmachineid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -774,49 +727,46 @@ the override for.  Forces a new resource if changed.
             title="Optional">
         <span id="state_datastoreclusterid_go">
 <a href="#state_datastoreclusterid_go" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Cluster<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the datastore cluster to put the override in.
 Forces a new resource if changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsautomationlevel_go">
 <a href="#state_sdrsautomationlevel_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides any Storage DRS automation
 levels for this virtual machine. Can be one of `automated` or `manual`. When
 not specified, the datastore cluster's settings are used according to the
 specific SDRS subsystem.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsenabled_go">
 <a href="#state_sdrsenabled_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default Storage DRS setting for
 this virtual machine. When not specified, the datastore cluster setting is
 used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsintravmaffinity_go">
 <a href="#state_sdrsintravmaffinity_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Intra<wbr>Vm<wbr>Affinity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the intra-VM affinity setting
 for this virtual machine. When `true`, all disks for this virtual machine
@@ -824,22 +774,19 @@ will be kept on the same datastore. When `false`, Storage DRS may locate
 individual disks on different datastores if it helps satisfy cluster
 requirements. When not specified, the datastore cluster's settings are used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachineid_go">
 <a href="#state_virtualmachineid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -848,49 +795,46 @@ the override for.  Forces a new resource if changed.
             title="Optional">
         <span id="state_datastoreclusterid_nodejs">
 <a href="#state_datastoreclusterid_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Cluster<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the datastore cluster to put the override in.
 Forces a new resource if changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsautomationlevel_nodejs">
 <a href="#state_sdrsautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Automation<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides any Storage DRS automation
 levels for this virtual machine. Can be one of `automated` or `manual`. When
 not specified, the datastore cluster's settings are used according to the
 specific SDRS subsystem.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsenabled_nodejs">
 <a href="#state_sdrsenabled_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default Storage DRS setting for
 this virtual machine. When not specified, the datastore cluster setting is
 used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrsintravmaffinity_nodejs">
 <a href="#state_sdrsintravmaffinity_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Intra<wbr>Vm<wbr>Affinity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the intra-VM affinity setting
 for this virtual machine. When `true`, all disks for this virtual machine
@@ -898,22 +842,19 @@ will be kept on the same datastore. When `false`, Storage DRS may locate
 individual disks on different datastores if it helps satisfy cluster
 requirements. When not specified, the datastore cluster's settings are used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachineid_nodejs">
 <a href="#state_virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -922,49 +863,46 @@ the override for.  Forces a new resource if changed.
             title="Optional">
         <span id="state_datastore_cluster_id_python">
 <a href="#state_datastore_cluster_id_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>cluster_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the datastore cluster to put the override in.
 Forces a new resource if changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_automation_level_python">
 <a href="#state_sdrs_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>automation_<wbr>level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Overrides any Storage DRS automation
 levels for this virtual machine. Can be one of `automated` or `manual`. When
 not specified, the datastore cluster's settings are used according to the
 specific SDRS subsystem.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_enabled_python">
 <a href="#state_sdrs_enabled_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Overrides the default Storage DRS setting for
 this virtual machine. When not specified, the datastore cluster setting is
 used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_intra_vm_affinity_python">
 <a href="#state_sdrs_intra_vm_affinity_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>intra_<wbr>vm_<wbr>affinity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Overrides the intra-VM affinity setting
 for this virtual machine. When `true`, all disks for this virtual machine
@@ -972,25 +910,19 @@ will be kept on the same datastore. When `false`, Storage DRS may locate
 individual disks on different datastores if it helps satisfy cluster
 requirements. When not specified, the datastore cluster's settings are used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_virtual_machine_id_python">
 <a href="#state_virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

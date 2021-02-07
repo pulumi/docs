@@ -18,19 +18,19 @@ meta_desc: "Explore the DistributedPortGroup resource of the vSphere package, in
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DistributedPortGroup">DistributedPortGroup</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DistributedPortGroupArgs">DistributedPortGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DistributedPortGroup">DistributedPortGroup</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DistributedPortGroupArgs">DistributedPortGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vsphere/#pulumi_vsphere.DistributedPortGroup">DistributedPortGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">active_uplinks</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">allow_forged_transmits</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_mac_changes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_promiscuous</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_expand</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">block_all_ports</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">block_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">check_beacon</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">directpath_gen2_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">distributed_virtual_switch_uuid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">egress_shaping_average_bandwidth</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">egress_shaping_burst_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">egress_shaping_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">egress_shaping_peak_bandwidth</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">failback</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ingress_shaping_average_bandwidth</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ingress_shaping_burst_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ingress_shaping_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ingress_shaping_peak_bandwidth</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">lacp_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lacp_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">live_port_moving_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">netflow_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">netflow_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_resource_pool_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_resource_pool_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">notify_switches</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">number_of_ports</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">port_config_reset_at_disconnect</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">port_name_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port_private_secondary_vlan_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">security_policy_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">shaping_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">standby_uplinks</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">teaming_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">traffic_filter_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tx_uplink</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">uplink_teaming_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vlan_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">vlan_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vlan_ranges</span><span class="p">:</span> <span class="nx">Optional[List[DistributedPortGroupVlanRange]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vsphere/#pulumi_vsphere.DistributedPortGroup">DistributedPortGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">active_uplinks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">allow_forged_transmits</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_mac_changes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_promiscuous</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_expand</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">block_all_ports</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">block_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">check_beacon</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">directpath_gen2_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">distributed_virtual_switch_uuid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">egress_shaping_average_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">egress_shaping_burst_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">egress_shaping_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">egress_shaping_peak_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">failback</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ingress_shaping_average_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ingress_shaping_burst_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ingress_shaping_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ingress_shaping_peak_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">lacp_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lacp_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">live_port_moving_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">netflow_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">netflow_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_resource_pool_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_resource_pool_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">notify_switches</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">number_of_ports</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">port_config_reset_at_disconnect</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">port_name_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port_private_secondary_vlan_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">security_policy_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">shaping_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">standby_uplinks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">teaming_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">traffic_filter_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tx_uplink</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">uplink_teaming_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vlan_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vlan_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vlan_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributedPortGroupVlanRangeArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DistributedPortGroup">NewDistributedPortGroup</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DistributedPortGroupArgs">DistributedPortGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DistributedPortGroup">DistributedPortGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DistributedPortGroup">NewDistributedPortGroup</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DistributedPortGroupArgs">DistributedPortGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DistributedPortGroup">DistributedPortGroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.DistributedPortGroup.html">DistributedPortGroup</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.DistributedPortGroupArgs.html">DistributedPortGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.DistributedPortGroup.html">DistributedPortGroup</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.DistributedPortGroupArgs.html">DistributedPortGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -41,7 +41,7 @@ meta_desc: "Explore the DistributedPortGroup resource of the vSphere package, in
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -110,7 +110,7 @@ meta_desc: "Explore the DistributedPortGroup resource of the vSphere package, in
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -149,7 +149,7 @@ meta_desc: "Explore the DistributedPortGroup resource of the vSphere package, in
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -190,7 +190,6 @@ The DistributedPortGroup resource accepts the following [input]({{< relref "/doc
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -198,537 +197,490 @@ The DistributedPortGroup resource accepts the following [input]({{< relref "/doc
             title="Required">
         <span id="distributedvirtualswitchuuid_csharp">
 <a href="#distributedvirtualswitchuuid_csharp" style="color: inherit; text-decoration: inherit;">Distributed<wbr>Virtual<wbr>Switch<wbr>Uuid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the DVS to add the
 port group to. Forces a new resource if changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="activeuplinks_csharp">
 <a href="#activeuplinks_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Uplinks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of active uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowforgedtransmits_csharp">
 <a href="#allowforgedtransmits_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Forged<wbr>Transmits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the virtual network adapter is allowed to send network traffic with a different MAC address than
 that of its own.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowmacchanges_csharp">
 <a href="#allowmacchanges_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Mac<wbr>Changes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access Control (MAC) address can be changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowpromiscuous_csharp">
 <a href="#allowpromiscuous_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Promiscuous</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoexpand_csharp">
 <a href="#autoexpand_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Expand</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows the port group to create additional ports
 past the limit specified in `number_of_ports` if necessary. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="blockallports_csharp">
 <a href="#blockallports_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>All<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to block all ports by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="blockoverrideallowed_csharp">
 <a href="#blockoverrideallowed_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the port shutdown
 policy to be overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="checkbeacon_csharp">
 <a href="#checkbeacon_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Beacon</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable beacon probing on the ports this policy applies to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customattributes_csharp">
 <a href="#customattributes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
 value string to set for port group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description for the port group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="directpathgen2allowed_csharp">
 <a href="#directpathgen2allowed_csharp" style="color: inherit; text-decoration: inherit;">Directpath<wbr>Gen2Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow VMDirectPath Gen2 on the ports this policy applies to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="egressshapingaveragebandwidth_csharp">
 <a href="#egressshapingaveragebandwidth_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The average egress bandwidth in bits per second if egress shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="egressshapingburstsize_csharp">
 <a href="#egressshapingburstsize_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Burst<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum egress burst size allowed in bytes if egress shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="egressshapingenabled_csharp">
 <a href="#egressshapingenabled_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the traffic shaper is enabled for egress traffic on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="egressshapingpeakbandwidth_csharp">
 <a href="#egressshapingpeakbandwidth_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The peak egress bandwidth during bursts in bits per second if egress traffic shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="failback_csharp">
 <a href="#failback_csharp" style="color: inherit; text-decoration: inherit;">Failback</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will re-activate failed interfaces higher in precedence when they come back up.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ingressshapingaveragebandwidth_csharp">
 <a href="#ingressshapingaveragebandwidth_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The average ingress bandwidth in bits per second if ingress shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ingressshapingburstsize_csharp">
 <a href="#ingressshapingburstsize_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Burst<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum ingress burst size allowed in bytes if ingress shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ingressshapingenabled_csharp">
 <a href="#ingressshapingenabled_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the traffic shaper is enabled for ingress traffic on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ingressshapingpeakbandwidth_csharp">
 <a href="#ingressshapingpeakbandwidth_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The peak ingress bandwidth during bursts in bits per second if ingress traffic shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lacpenabled_csharp">
 <a href="#lacpenabled_csharp" style="color: inherit; text-decoration: inherit;">Lacp<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to enable LACP on all uplink ports.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lacpmode_csharp">
 <a href="#lacpmode_csharp" style="color: inherit; text-decoration: inherit;">Lacp<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uplink LACP mode to use. Can be one of active or passive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="liveportmovingallowed_csharp">
 <a href="#liveportmovingallowed_csharp" style="color: inherit; text-decoration: inherit;">Live<wbr>Port<wbr>Moving<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a port in this port group to be
 moved to another port group while it is connected.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the port group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="netflowenabled_csharp">
 <a href="#netflowenabled_csharp" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable netflow on all ports.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="netflowoverrideallowed_csharp">
 <a href="#netflowoverrideallowed_csharp" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the Netflow
 policy on this port group to be overridden on an individual
 port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkresourcepoolkey_csharp">
 <a href="#networkresourcepoolkey_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Resource<wbr>Pool<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key of a network resource pool
 to associate with this port group. The default is `-1`, which implies no
 association.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkresourcepooloverrideallowed_csharp">
 <a href="#networkresourcepooloverrideallowed_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Resource<wbr>Pool<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the network
 resource pool set on this port group to be overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notifyswitches_csharp">
 <a href="#notifyswitches_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Switches</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will notify the broadcast network of a NIC failover, triggering cache updates.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="numberofports_csharp">
 <a href="#numberofports_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of ports available on this port
 group. Cannot be decreased below the amount of used ports on the port group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="portconfigresetatdisconnect_csharp">
 <a href="#portconfigresetatdisconnect_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Config<wbr>Reset<wbr>At<wbr>Disconnect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Reset a port's settings to the
 settings defined on this port group policy when the port disconnects.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="portnameformat_csharp">
 <a href="#portnameformat_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Name<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional formatting policy for naming of
 the ports in this port group. See the `portNameFormat` attribute listed
 [here][ext-vsphere-portname-format] for details on the format syntax.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="portprivatesecondaryvlanid_csharp">
 <a href="#portprivatesecondaryvlanid_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Private<wbr>Secondary<wbr>Vlan<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The secondary VLAN ID for this port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="securitypolicyoverrideallowed_csharp">
 <a href="#securitypolicyoverrideallowed_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Policy<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the security policy
 settings defined in this port group policy to be
 overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shapingoverrideallowed_csharp">
 <a href="#shapingoverrideallowed_csharp" style="color: inherit; text-decoration: inherit;">Shaping<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the traffic shaping
 options on this port group policy to be overridden
 on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="standbyuplinks_csharp">
 <a href="#standbyuplinks_csharp" style="color: inherit; text-decoration: inherit;">Standby<wbr>Uplinks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of active uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
+    <dd>{{% md %}}List of standby uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of tag IDs to apply to this object.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="teamingpolicy_csharp">
 <a href="#teamingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Teaming<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network adapter teaming policy. Can be one of loadbalance_ip, loadbalance_srcmac, loadbalance_srcid,
 failover_explicit, or loadbalance_loadbased.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="trafficfilteroverrideallowed_csharp">
 <a href="#trafficfilteroverrideallowed_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Filter<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow any traffic filters on
 this port group to be overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="txuplink_csharp">
 <a href="#txuplink_csharp" style="color: inherit; text-decoration: inherit;">Tx<wbr>Uplink</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, a copy of packets sent to the switch will always be forwarded to an uplink in addition to the regular packet
 forwarded done by the switch.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The port group type. Can be one of `earlyBinding` (static
 binding) or `ephemeral`. Default: `earlyBinding`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="uplinkteamingoverrideallowed_csharp">
 <a href="#uplinkteamingoverrideallowed_csharp" style="color: inherit; text-decoration: inherit;">Uplink<wbr>Teaming<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the uplink teaming
 options on this port group to be overridden on an
 individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vlanid_csharp">
 <a href="#vlanid_csharp" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vlanoverrideallowed_csharp">
 <a href="#vlanoverrideallowed_csharp" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the VLAN settings
 on this port group to be overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vlanranges_csharp">
 <a href="#vlanranges_csharp" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributedportgroupvlanrange">List&lt;Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Distributed<wbr>Port<wbr>Group<wbr>Vlan<wbr>Range<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -737,537 +689,490 @@ on this port group to be overridden on an individual port.
             title="Required">
         <span id="distributedvirtualswitchuuid_go">
 <a href="#distributedvirtualswitchuuid_go" style="color: inherit; text-decoration: inherit;">Distributed<wbr>Virtual<wbr>Switch<wbr>Uuid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the DVS to add the
 port group to. Forces a new resource if changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="activeuplinks_go">
 <a href="#activeuplinks_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Uplinks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of active uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowforgedtransmits_go">
 <a href="#allowforgedtransmits_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Forged<wbr>Transmits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the virtual network adapter is allowed to send network traffic with a different MAC address than
 that of its own.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowmacchanges_go">
 <a href="#allowmacchanges_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Mac<wbr>Changes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access Control (MAC) address can be changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowpromiscuous_go">
 <a href="#allowpromiscuous_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Promiscuous</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoexpand_go">
 <a href="#autoexpand_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Expand</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows the port group to create additional ports
 past the limit specified in `number_of_ports` if necessary. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="blockallports_go">
 <a href="#blockallports_go" style="color: inherit; text-decoration: inherit;">Block<wbr>All<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to block all ports by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="blockoverrideallowed_go">
 <a href="#blockoverrideallowed_go" style="color: inherit; text-decoration: inherit;">Block<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the port shutdown
 policy to be overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="checkbeacon_go">
 <a href="#checkbeacon_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Beacon</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable beacon probing on the ports this policy applies to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customattributes_go">
 <a href="#customattributes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
 value string to set for port group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description for the port group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="directpathgen2allowed_go">
 <a href="#directpathgen2allowed_go" style="color: inherit; text-decoration: inherit;">Directpath<wbr>Gen2Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow VMDirectPath Gen2 on the ports this policy applies to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="egressshapingaveragebandwidth_go">
 <a href="#egressshapingaveragebandwidth_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The average egress bandwidth in bits per second if egress shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="egressshapingburstsize_go">
 <a href="#egressshapingburstsize_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Burst<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum egress burst size allowed in bytes if egress shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="egressshapingenabled_go">
 <a href="#egressshapingenabled_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the traffic shaper is enabled for egress traffic on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="egressshapingpeakbandwidth_go">
 <a href="#egressshapingpeakbandwidth_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The peak egress bandwidth during bursts in bits per second if egress traffic shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="failback_go">
 <a href="#failback_go" style="color: inherit; text-decoration: inherit;">Failback</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will re-activate failed interfaces higher in precedence when they come back up.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ingressshapingaveragebandwidth_go">
 <a href="#ingressshapingaveragebandwidth_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The average ingress bandwidth in bits per second if ingress shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ingressshapingburstsize_go">
 <a href="#ingressshapingburstsize_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Burst<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum ingress burst size allowed in bytes if ingress shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ingressshapingenabled_go">
 <a href="#ingressshapingenabled_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the traffic shaper is enabled for ingress traffic on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ingressshapingpeakbandwidth_go">
 <a href="#ingressshapingpeakbandwidth_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The peak ingress bandwidth during bursts in bits per second if ingress traffic shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lacpenabled_go">
 <a href="#lacpenabled_go" style="color: inherit; text-decoration: inherit;">Lacp<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to enable LACP on all uplink ports.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lacpmode_go">
 <a href="#lacpmode_go" style="color: inherit; text-decoration: inherit;">Lacp<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uplink LACP mode to use. Can be one of active or passive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="liveportmovingallowed_go">
 <a href="#liveportmovingallowed_go" style="color: inherit; text-decoration: inherit;">Live<wbr>Port<wbr>Moving<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a port in this port group to be
 moved to another port group while it is connected.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the port group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="netflowenabled_go">
 <a href="#netflowenabled_go" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable netflow on all ports.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="netflowoverrideallowed_go">
 <a href="#netflowoverrideallowed_go" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the Netflow
 policy on this port group to be overridden on an individual
 port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkresourcepoolkey_go">
 <a href="#networkresourcepoolkey_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Resource<wbr>Pool<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key of a network resource pool
 to associate with this port group. The default is `-1`, which implies no
 association.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkresourcepooloverrideallowed_go">
 <a href="#networkresourcepooloverrideallowed_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Resource<wbr>Pool<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the network
 resource pool set on this port group to be overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notifyswitches_go">
 <a href="#notifyswitches_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Switches</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will notify the broadcast network of a NIC failover, triggering cache updates.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="numberofports_go">
 <a href="#numberofports_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of ports available on this port
 group. Cannot be decreased below the amount of used ports on the port group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="portconfigresetatdisconnect_go">
 <a href="#portconfigresetatdisconnect_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Config<wbr>Reset<wbr>At<wbr>Disconnect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Reset a port's settings to the
 settings defined on this port group policy when the port disconnects.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="portnameformat_go">
 <a href="#portnameformat_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Name<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional formatting policy for naming of
 the ports in this port group. See the `portNameFormat` attribute listed
 [here][ext-vsphere-portname-format] for details on the format syntax.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="portprivatesecondaryvlanid_go">
 <a href="#portprivatesecondaryvlanid_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Private<wbr>Secondary<wbr>Vlan<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The secondary VLAN ID for this port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="securitypolicyoverrideallowed_go">
 <a href="#securitypolicyoverrideallowed_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Policy<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the security policy
 settings defined in this port group policy to be
 overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shapingoverrideallowed_go">
 <a href="#shapingoverrideallowed_go" style="color: inherit; text-decoration: inherit;">Shaping<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the traffic shaping
 options on this port group policy to be overridden
 on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="standbyuplinks_go">
 <a href="#standbyuplinks_go" style="color: inherit; text-decoration: inherit;">Standby<wbr>Uplinks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of active uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
+    <dd>{{% md %}}List of standby uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of tag IDs to apply to this object.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="teamingpolicy_go">
 <a href="#teamingpolicy_go" style="color: inherit; text-decoration: inherit;">Teaming<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network adapter teaming policy. Can be one of loadbalance_ip, loadbalance_srcmac, loadbalance_srcid,
 failover_explicit, or loadbalance_loadbased.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="trafficfilteroverrideallowed_go">
 <a href="#trafficfilteroverrideallowed_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Filter<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow any traffic filters on
 this port group to be overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="txuplink_go">
 <a href="#txuplink_go" style="color: inherit; text-decoration: inherit;">Tx<wbr>Uplink</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, a copy of packets sent to the switch will always be forwarded to an uplink in addition to the regular packet
 forwarded done by the switch.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The port group type. Can be one of `earlyBinding` (static
 binding) or `ephemeral`. Default: `earlyBinding`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="uplinkteamingoverrideallowed_go">
 <a href="#uplinkteamingoverrideallowed_go" style="color: inherit; text-decoration: inherit;">Uplink<wbr>Teaming<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the uplink teaming
 options on this port group to be overridden on an
 individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vlanid_go">
 <a href="#vlanid_go" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vlanoverrideallowed_go">
 <a href="#vlanoverrideallowed_go" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the VLAN settings
 on this port group to be overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vlanranges_go">
 <a href="#vlanranges_go" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributedportgroupvlanrange">[]Distributed<wbr>Port<wbr>Group<wbr>Vlan<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1276,537 +1181,490 @@ on this port group to be overridden on an individual port.
             title="Required">
         <span id="distributedvirtualswitchuuid_nodejs">
 <a href="#distributedvirtualswitchuuid_nodejs" style="color: inherit; text-decoration: inherit;">distributed<wbr>Virtual<wbr>Switch<wbr>Uuid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the DVS to add the
 port group to. Forces a new resource if changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="activeuplinks_nodejs">
 <a href="#activeuplinks_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Uplinks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of active uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowforgedtransmits_nodejs">
 <a href="#allowforgedtransmits_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Forged<wbr>Transmits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the virtual network adapter is allowed to send network traffic with a different MAC address than
 that of its own.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowmacchanges_nodejs">
 <a href="#allowmacchanges_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Mac<wbr>Changes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access Control (MAC) address can be changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowpromiscuous_nodejs">
 <a href="#allowpromiscuous_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Promiscuous</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoexpand_nodejs">
 <a href="#autoexpand_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Expand</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allows the port group to create additional ports
 past the limit specified in `number_of_ports` if necessary. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="blockallports_nodejs">
 <a href="#blockallports_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>All<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether to block all ports by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="blockoverrideallowed_nodejs">
 <a href="#blockoverrideallowed_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow the port shutdown
 policy to be overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="checkbeacon_nodejs">
 <a href="#checkbeacon_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Beacon</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable beacon probing on the ports this policy applies to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customattributes_nodejs">
 <a href="#customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
 value string to set for port group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description for the port group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="directpathgen2allowed_nodejs">
 <a href="#directpathgen2allowed_nodejs" style="color: inherit; text-decoration: inherit;">directpath<wbr>Gen2Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow VMDirectPath Gen2 on the ports this policy applies to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="egressshapingaveragebandwidth_nodejs">
 <a href="#egressshapingaveragebandwidth_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The average egress bandwidth in bits per second if egress shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="egressshapingburstsize_nodejs">
 <a href="#egressshapingburstsize_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Burst<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum egress burst size allowed in bytes if egress shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="egressshapingenabled_nodejs">
 <a href="#egressshapingenabled_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}True if the traffic shaper is enabled for egress traffic on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="egressshapingpeakbandwidth_nodejs">
 <a href="#egressshapingpeakbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The peak egress bandwidth during bursts in bits per second if egress traffic shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="failback_nodejs">
 <a href="#failback_nodejs" style="color: inherit; text-decoration: inherit;">failback</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will re-activate failed interfaces higher in precedence when they come back up.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ingressshapingaveragebandwidth_nodejs">
 <a href="#ingressshapingaveragebandwidth_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The average ingress bandwidth in bits per second if ingress shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ingressshapingburstsize_nodejs">
 <a href="#ingressshapingburstsize_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Burst<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum ingress burst size allowed in bytes if ingress shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ingressshapingenabled_nodejs">
 <a href="#ingressshapingenabled_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}True if the traffic shaper is enabled for ingress traffic on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ingressshapingpeakbandwidth_nodejs">
 <a href="#ingressshapingpeakbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The peak ingress bandwidth during bursts in bits per second if ingress traffic shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lacpenabled_nodejs">
 <a href="#lacpenabled_nodejs" style="color: inherit; text-decoration: inherit;">lacp<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not to enable LACP on all uplink ports.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lacpmode_nodejs">
 <a href="#lacpmode_nodejs" style="color: inherit; text-decoration: inherit;">lacp<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uplink LACP mode to use. Can be one of active or passive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="liveportmovingallowed_nodejs">
 <a href="#liveportmovingallowed_nodejs" style="color: inherit; text-decoration: inherit;">live<wbr>Port<wbr>Moving<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow a port in this port group to be
 moved to another port group while it is connected.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the port group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="netflowenabled_nodejs">
 <a href="#netflowenabled_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable netflow on all ports.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="netflowoverrideallowed_nodejs">
 <a href="#netflowoverrideallowed_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow the Netflow
 policy on this port group to be overridden on an individual
 port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkresourcepoolkey_nodejs">
 <a href="#networkresourcepoolkey_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Resource<wbr>Pool<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key of a network resource pool
 to associate with this port group. The default is `-1`, which implies no
 association.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkresourcepooloverrideallowed_nodejs">
 <a href="#networkresourcepooloverrideallowed_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Resource<wbr>Pool<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow the network
 resource pool set on this port group to be overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notifyswitches_nodejs">
 <a href="#notifyswitches_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Switches</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will notify the broadcast network of a NIC failover, triggering cache updates.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="numberofports_nodejs">
 <a href="#numberofports_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of ports available on this port
 group. Cannot be decreased below the amount of used ports on the port group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="portconfigresetatdisconnect_nodejs">
 <a href="#portconfigresetatdisconnect_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Config<wbr>Reset<wbr>At<wbr>Disconnect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Reset a port's settings to the
 settings defined on this port group policy when the port disconnects.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="portnameformat_nodejs">
 <a href="#portnameformat_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional formatting policy for naming of
 the ports in this port group. See the `portNameFormat` attribute listed
 [here][ext-vsphere-portname-format] for details on the format syntax.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="portprivatesecondaryvlanid_nodejs">
 <a href="#portprivatesecondaryvlanid_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Private<wbr>Secondary<wbr>Vlan<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The secondary VLAN ID for this port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="securitypolicyoverrideallowed_nodejs">
 <a href="#securitypolicyoverrideallowed_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Policy<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow the security policy
 settings defined in this port group policy to be
 overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shapingoverrideallowed_nodejs">
 <a href="#shapingoverrideallowed_nodejs" style="color: inherit; text-decoration: inherit;">shaping<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow the traffic shaping
 options on this port group policy to be overridden
 on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="standbyuplinks_nodejs">
 <a href="#standbyuplinks_nodejs" style="color: inherit; text-decoration: inherit;">standby<wbr>Uplinks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of active uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
+    <dd>{{% md %}}List of standby uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of tag IDs to apply to this object.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="teamingpolicy_nodejs">
 <a href="#teamingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">teaming<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network adapter teaming policy. Can be one of loadbalance_ip, loadbalance_srcmac, loadbalance_srcid,
 failover_explicit, or loadbalance_loadbased.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="trafficfilteroverrideallowed_nodejs">
 <a href="#trafficfilteroverrideallowed_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Filter<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow any traffic filters on
 this port group to be overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="txuplink_nodejs">
 <a href="#txuplink_nodejs" style="color: inherit; text-decoration: inherit;">tx<wbr>Uplink</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, a copy of packets sent to the switch will always be forwarded to an uplink in addition to the regular packet
 forwarded done by the switch.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The port group type. Can be one of `earlyBinding` (static
 binding) or `ephemeral`. Default: `earlyBinding`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="uplinkteamingoverrideallowed_nodejs">
 <a href="#uplinkteamingoverrideallowed_nodejs" style="color: inherit; text-decoration: inherit;">uplink<wbr>Teaming<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow the uplink teaming
 options on this port group to be overridden on an
 individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vlanid_nodejs">
 <a href="#vlanid_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vlanoverrideallowed_nodejs">
 <a href="#vlanoverrideallowed_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow the VLAN settings
 on this port group to be overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vlanranges_nodejs">
 <a href="#vlanranges_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributedportgroupvlanrange">Distributed<wbr>Port<wbr>Group<wbr>Vlan<wbr>Range[]</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1815,546 +1673,495 @@ on this port group to be overridden on an individual port.
             title="Required">
         <span id="distributed_virtual_switch_uuid_python">
 <a href="#distributed_virtual_switch_uuid_python" style="color: inherit; text-decoration: inherit;">distributed_<wbr>virtual_<wbr>switch_<wbr>uuid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the DVS to add the
 port group to. Forces a new resource if changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="active_uplinks_python">
 <a href="#active_uplinks_python" style="color: inherit; text-decoration: inherit;">active_<wbr>uplinks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of active uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allow_forged_transmits_python">
 <a href="#allow_forged_transmits_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>forged_<wbr>transmits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the virtual network adapter is allowed to send network traffic with a different MAC address than
 that of its own.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allow_mac_changes_python">
 <a href="#allow_mac_changes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>mac_<wbr>changes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access Control (MAC) address can be changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allow_promiscuous_python">
 <a href="#allow_promiscuous_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>promiscuous</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="auto_expand_python">
 <a href="#auto_expand_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>expand</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows the port group to create additional ports
 past the limit specified in `number_of_ports` if necessary. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="block_all_ports_python">
 <a href="#block_all_ports_python" style="color: inherit; text-decoration: inherit;">block_<wbr>all_<wbr>ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to block all ports by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="block_override_allowed_python">
 <a href="#block_override_allowed_python" style="color: inherit; text-decoration: inherit;">block_<wbr>override_<wbr>allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the port shutdown
 policy to be overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="check_beacon_python">
 <a href="#check_beacon_python" style="color: inherit; text-decoration: inherit;">check_<wbr>beacon</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable beacon probing on the ports this policy applies to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custom_attributes_python">
 <a href="#custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
 value string to set for port group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description for the port group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="directpath_gen2_allowed_python">
 <a href="#directpath_gen2_allowed_python" style="color: inherit; text-decoration: inherit;">directpath_<wbr>gen2_<wbr>allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow VMDirectPath Gen2 on the ports this policy applies to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="egress_shaping_average_bandwidth_python">
 <a href="#egress_shaping_average_bandwidth_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>average_<wbr>bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The average egress bandwidth in bits per second if egress shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="egress_shaping_burst_size_python">
 <a href="#egress_shaping_burst_size_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>burst_<wbr>size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum egress burst size allowed in bytes if egress shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="egress_shaping_enabled_python">
 <a href="#egress_shaping_enabled_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the traffic shaper is enabled for egress traffic on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="egress_shaping_peak_bandwidth_python">
 <a href="#egress_shaping_peak_bandwidth_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>peak_<wbr>bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The peak egress bandwidth during bursts in bits per second if egress traffic shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="failback_python">
 <a href="#failback_python" style="color: inherit; text-decoration: inherit;">failback</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will re-activate failed interfaces higher in precedence when they come back up.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ingress_shaping_average_bandwidth_python">
 <a href="#ingress_shaping_average_bandwidth_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>average_<wbr>bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The average ingress bandwidth in bits per second if ingress shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ingress_shaping_burst_size_python">
 <a href="#ingress_shaping_burst_size_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>burst_<wbr>size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum ingress burst size allowed in bytes if ingress shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ingress_shaping_enabled_python">
 <a href="#ingress_shaping_enabled_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the traffic shaper is enabled for ingress traffic on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ingress_shaping_peak_bandwidth_python">
 <a href="#ingress_shaping_peak_bandwidth_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>peak_<wbr>bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The peak ingress bandwidth during bursts in bits per second if ingress traffic shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lacp_enabled_python">
 <a href="#lacp_enabled_python" style="color: inherit; text-decoration: inherit;">lacp_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to enable LACP on all uplink ports.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lacp_mode_python">
 <a href="#lacp_mode_python" style="color: inherit; text-decoration: inherit;">lacp_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The uplink LACP mode to use. Can be one of active or passive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="live_port_moving_allowed_python">
 <a href="#live_port_moving_allowed_python" style="color: inherit; text-decoration: inherit;">live_<wbr>port_<wbr>moving_<wbr>allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a port in this port group to be
 moved to another port group while it is connected.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the port group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="netflow_enabled_python">
 <a href="#netflow_enabled_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable netflow on all ports.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="netflow_override_allowed_python">
 <a href="#netflow_override_allowed_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>override_<wbr>allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the Netflow
 policy on this port group to be overridden on an individual
 port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_resource_pool_key_python">
 <a href="#network_resource_pool_key_python" style="color: inherit; text-decoration: inherit;">network_<wbr>resource_<wbr>pool_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key of a network resource pool
 to associate with this port group. The default is `-1`, which implies no
 association.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_resource_pool_override_allowed_python">
 <a href="#network_resource_pool_override_allowed_python" style="color: inherit; text-decoration: inherit;">network_<wbr>resource_<wbr>pool_<wbr>override_<wbr>allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the network
 resource pool set on this port group to be overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notify_switches_python">
 <a href="#notify_switches_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>switches</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will notify the broadcast network of a NIC failover, triggering cache updates.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="number_of_ports_python">
 <a href="#number_of_ports_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of ports available on this port
 group. Cannot be decreased below the amount of used ports on the port group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_config_reset_at_disconnect_python">
 <a href="#port_config_reset_at_disconnect_python" style="color: inherit; text-decoration: inherit;">port_<wbr>config_<wbr>reset_<wbr>at_<wbr>disconnect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Reset a port's settings to the
 settings defined on this port group policy when the port disconnects.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_name_format_python">
 <a href="#port_name_format_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name_<wbr>format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional formatting policy for naming of
 the ports in this port group. See the `portNameFormat` attribute listed
 [here][ext-vsphere-portname-format] for details on the format syntax.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_private_secondary_vlan_id_python">
 <a href="#port_private_secondary_vlan_id_python" style="color: inherit; text-decoration: inherit;">port_<wbr>private_<wbr>secondary_<wbr>vlan_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The secondary VLAN ID for this port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="security_policy_override_allowed_python">
 <a href="#security_policy_override_allowed_python" style="color: inherit; text-decoration: inherit;">security_<wbr>policy_<wbr>override_<wbr>allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the security policy
 settings defined in this port group policy to be
 overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shaping_override_allowed_python">
 <a href="#shaping_override_allowed_python" style="color: inherit; text-decoration: inherit;">shaping_<wbr>override_<wbr>allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the traffic shaping
 options on this port group policy to be overridden
 on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="standby_uplinks_python">
 <a href="#standby_uplinks_python" style="color: inherit; text-decoration: inherit;">standby_<wbr>uplinks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of active uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
+    <dd>{{% md %}}List of standby uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of tag IDs to apply to this object.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="teaming_policy_python">
 <a href="#teaming_policy_python" style="color: inherit; text-decoration: inherit;">teaming_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The network adapter teaming policy. Can be one of loadbalance_ip, loadbalance_srcmac, loadbalance_srcid,
 failover_explicit, or loadbalance_loadbased.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="traffic_filter_override_allowed_python">
 <a href="#traffic_filter_override_allowed_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>filter_<wbr>override_<wbr>allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow any traffic filters on
 this port group to be overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tx_uplink_python">
 <a href="#tx_uplink_python" style="color: inherit; text-decoration: inherit;">tx_<wbr>uplink</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, a copy of packets sent to the switch will always be forwarded to an uplink in addition to the regular packet
 forwarded done by the switch.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The port group type. Can be one of `earlyBinding` (static
 binding) or `ephemeral`. Default: `earlyBinding`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="uplink_teaming_override_allowed_python">
 <a href="#uplink_teaming_override_allowed_python" style="color: inherit; text-decoration: inherit;">uplink_<wbr>teaming_<wbr>override_<wbr>allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the uplink teaming
 options on this port group to be overridden on an
 individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vlan_id_python">
 <a href="#vlan_id_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vlan_override_allowed_python">
 <a href="#vlan_override_allowed_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>override_<wbr>allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the VLAN settings
 on this port group to be overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vlan_ranges_python">
 <a href="#vlan_ranges_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributedportgroupvlanrange">List[Distributed<wbr>Port<wbr>Group<wbr>Vlan<wbr>Range]</a></span>
+        <span class="property-type"><a href="#distributedportgroupvlanrange">Sequence[Distributed<wbr>Port<wbr>Group<wbr>Vlan<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the DistributedPortGroup resource produces the following output properties:
-
 
 
 
@@ -2365,37 +2172,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="configversion_csharp">
 <a href="#configversion_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version string of the configuration that this spec is trying to change.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The generated UUID of the portgroup.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2404,37 +2207,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="configversion_go">
 <a href="#configversion_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version string of the configuration that this spec is trying to change.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The generated UUID of the portgroup.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2443,37 +2242,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="configversion_nodejs">
 <a href="#configversion_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version string of the configuration that this spec is trying to change.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The generated UUID of the portgroup.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2482,40 +2277,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="config_version_python">
 <a href="#config_version_python" style="color: inherit; text-decoration: inherit;">config_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version string of the configuration that this spec is trying to change.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The generated UUID of the portgroup.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -2525,20 +2313,20 @@ Get an existing DistributedPortGroup resource's state with the given name, ID, a
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DistributedPortGroupState">DistributedPortGroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DistributedPortGroup">DistributedPortGroup</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DistributedPortGroupState">DistributedPortGroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DistributedPortGroup">DistributedPortGroup</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">active_uplinks</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">allow_forged_transmits</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_mac_changes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_promiscuous</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_expand</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">block_all_ports</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">block_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">check_beacon</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">config_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">directpath_gen2_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">distributed_virtual_switch_uuid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">egress_shaping_average_bandwidth</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">egress_shaping_burst_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">egress_shaping_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">egress_shaping_peak_bandwidth</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">failback</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ingress_shaping_average_bandwidth</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ingress_shaping_burst_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ingress_shaping_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ingress_shaping_peak_bandwidth</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lacp_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lacp_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">live_port_moving_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">netflow_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">netflow_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_resource_pool_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_resource_pool_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">notify_switches</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">number_of_ports</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">port_config_reset_at_disconnect</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">port_name_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port_private_secondary_vlan_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">security_policy_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">shaping_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">standby_uplinks</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">teaming_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">traffic_filter_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tx_uplink</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">uplink_teaming_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vlan_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">vlan_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vlan_ranges</span><span class="p">:</span> <span class="nx">Optional[List[DistributedPortGroupVlanRange]]</span> = None<span class="p">) -&gt;</span> DistributedPortGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">active_uplinks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">allow_forged_transmits</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_mac_changes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_promiscuous</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_expand</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">block_all_ports</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">block_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">check_beacon</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">config_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">directpath_gen2_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">distributed_virtual_switch_uuid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">egress_shaping_average_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">egress_shaping_burst_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">egress_shaping_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">egress_shaping_peak_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">failback</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ingress_shaping_average_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ingress_shaping_burst_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ingress_shaping_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ingress_shaping_peak_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lacp_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lacp_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">live_port_moving_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">netflow_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">netflow_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_resource_pool_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_resource_pool_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">notify_switches</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">number_of_ports</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">port_config_reset_at_disconnect</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">port_name_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port_private_secondary_vlan_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">security_policy_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">shaping_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">standby_uplinks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">teaming_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">traffic_filter_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tx_uplink</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">uplink_teaming_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vlan_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vlan_override_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vlan_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributedPortGroupVlanRangeArgs]]</span> = None<span class="p">) -&gt;</span> DistributedPortGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDistributedPortGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DistributedPortGroupState">DistributedPortGroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DistributedPortGroup">DistributedPortGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDistributedPortGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DistributedPortGroupState">DistributedPortGroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DistributedPortGroup">DistributedPortGroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.DistributedPortGroup.html">DistributedPortGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..DistributedPortGroupState.html">DistributedPortGroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.DistributedPortGroup.html">DistributedPortGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..DistributedPortGroupState.html">DistributedPortGroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2640,7 +2428,6 @@ Get an existing DistributedPortGroup resource's state with the given name, ID, a
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2648,559 +2435,510 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_activeuplinks_csharp">
 <a href="#state_activeuplinks_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Uplinks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of active uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowforgedtransmits_csharp">
 <a href="#state_allowforgedtransmits_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Forged<wbr>Transmits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the virtual network adapter is allowed to send network traffic with a different MAC address than
 that of its own.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowmacchanges_csharp">
 <a href="#state_allowmacchanges_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Mac<wbr>Changes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access Control (MAC) address can be changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowpromiscuous_csharp">
 <a href="#state_allowpromiscuous_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Promiscuous</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_autoexpand_csharp">
 <a href="#state_autoexpand_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Expand</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows the port group to create additional ports
 past the limit specified in `number_of_ports` if necessary. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_blockallports_csharp">
 <a href="#state_blockallports_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>All<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to block all ports by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_blockoverrideallowed_csharp">
 <a href="#state_blockoverrideallowed_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the port shutdown
 policy to be overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_checkbeacon_csharp">
 <a href="#state_checkbeacon_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Beacon</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable beacon probing on the ports this policy applies to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_configversion_csharp">
 <a href="#state_configversion_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version string of the configuration that this spec is trying to change.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_customattributes_csharp">
 <a href="#state_customattributes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
 value string to set for port group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description for the port group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_directpathgen2allowed_csharp">
 <a href="#state_directpathgen2allowed_csharp" style="color: inherit; text-decoration: inherit;">Directpath<wbr>Gen2Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow VMDirectPath Gen2 on the ports this policy applies to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_distributedvirtualswitchuuid_csharp">
 <a href="#state_distributedvirtualswitchuuid_csharp" style="color: inherit; text-decoration: inherit;">Distributed<wbr>Virtual<wbr>Switch<wbr>Uuid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the DVS to add the
 port group to. Forces a new resource if changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_egressshapingaveragebandwidth_csharp">
 <a href="#state_egressshapingaveragebandwidth_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The average egress bandwidth in bits per second if egress shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_egressshapingburstsize_csharp">
 <a href="#state_egressshapingburstsize_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Burst<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum egress burst size allowed in bytes if egress shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_egressshapingenabled_csharp">
 <a href="#state_egressshapingenabled_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the traffic shaper is enabled for egress traffic on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_egressshapingpeakbandwidth_csharp">
 <a href="#state_egressshapingpeakbandwidth_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The peak egress bandwidth during bursts in bits per second if egress traffic shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_failback_csharp">
 <a href="#state_failback_csharp" style="color: inherit; text-decoration: inherit;">Failback</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will re-activate failed interfaces higher in precedence when they come back up.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ingressshapingaveragebandwidth_csharp">
 <a href="#state_ingressshapingaveragebandwidth_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The average ingress bandwidth in bits per second if ingress shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ingressshapingburstsize_csharp">
 <a href="#state_ingressshapingburstsize_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Burst<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum ingress burst size allowed in bytes if ingress shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ingressshapingenabled_csharp">
 <a href="#state_ingressshapingenabled_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the traffic shaper is enabled for ingress traffic on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ingressshapingpeakbandwidth_csharp">
 <a href="#state_ingressshapingpeakbandwidth_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The peak ingress bandwidth during bursts in bits per second if ingress traffic shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_key_csharp">
 <a href="#state_key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The generated UUID of the portgroup.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lacpenabled_csharp">
 <a href="#state_lacpenabled_csharp" style="color: inherit; text-decoration: inherit;">Lacp<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to enable LACP on all uplink ports.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lacpmode_csharp">
 <a href="#state_lacpmode_csharp" style="color: inherit; text-decoration: inherit;">Lacp<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uplink LACP mode to use. Can be one of active or passive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_liveportmovingallowed_csharp">
 <a href="#state_liveportmovingallowed_csharp" style="color: inherit; text-decoration: inherit;">Live<wbr>Port<wbr>Moving<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a port in this port group to be
 moved to another port group while it is connected.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the port group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_netflowenabled_csharp">
 <a href="#state_netflowenabled_csharp" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable netflow on all ports.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_netflowoverrideallowed_csharp">
 <a href="#state_netflowoverrideallowed_csharp" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the Netflow
 policy on this port group to be overridden on an individual
 port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkresourcepoolkey_csharp">
 <a href="#state_networkresourcepoolkey_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Resource<wbr>Pool<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key of a network resource pool
 to associate with this port group. The default is `-1`, which implies no
 association.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkresourcepooloverrideallowed_csharp">
 <a href="#state_networkresourcepooloverrideallowed_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Resource<wbr>Pool<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the network
 resource pool set on this port group to be overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_notifyswitches_csharp">
 <a href="#state_notifyswitches_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Switches</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will notify the broadcast network of a NIC failover, triggering cache updates.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_numberofports_csharp">
 <a href="#state_numberofports_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of ports available on this port
 group. Cannot be decreased below the amount of used ports on the port group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_portconfigresetatdisconnect_csharp">
 <a href="#state_portconfigresetatdisconnect_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Config<wbr>Reset<wbr>At<wbr>Disconnect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Reset a port's settings to the
 settings defined on this port group policy when the port disconnects.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_portnameformat_csharp">
 <a href="#state_portnameformat_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Name<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional formatting policy for naming of
 the ports in this port group. See the `portNameFormat` attribute listed
 [here][ext-vsphere-portname-format] for details on the format syntax.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_portprivatesecondaryvlanid_csharp">
 <a href="#state_portprivatesecondaryvlanid_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Private<wbr>Secondary<wbr>Vlan<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The secondary VLAN ID for this port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_securitypolicyoverrideallowed_csharp">
 <a href="#state_securitypolicyoverrideallowed_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Policy<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the security policy
 settings defined in this port group policy to be
 overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_shapingoverrideallowed_csharp">
 <a href="#state_shapingoverrideallowed_csharp" style="color: inherit; text-decoration: inherit;">Shaping<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the traffic shaping
 options on this port group policy to be overridden
 on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_standbyuplinks_csharp">
 <a href="#state_standbyuplinks_csharp" style="color: inherit; text-decoration: inherit;">Standby<wbr>Uplinks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of active uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
+    <dd>{{% md %}}List of standby uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of tag IDs to apply to this object.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_teamingpolicy_csharp">
 <a href="#state_teamingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Teaming<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network adapter teaming policy. Can be one of loadbalance_ip, loadbalance_srcmac, loadbalance_srcid,
 failover_explicit, or loadbalance_loadbased.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_trafficfilteroverrideallowed_csharp">
 <a href="#state_trafficfilteroverrideallowed_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Filter<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow any traffic filters on
 this port group to be overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_txuplink_csharp">
 <a href="#state_txuplink_csharp" style="color: inherit; text-decoration: inherit;">Tx<wbr>Uplink</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, a copy of packets sent to the switch will always be forwarded to an uplink in addition to the regular packet
 forwarded done by the switch.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The port group type. Can be one of `earlyBinding` (static
 binding) or `ephemeral`. Default: `earlyBinding`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_uplinkteamingoverrideallowed_csharp">
 <a href="#state_uplinkteamingoverrideallowed_csharp" style="color: inherit; text-decoration: inherit;">Uplink<wbr>Teaming<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the uplink teaming
 options on this port group to be overridden on an
 individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vlanid_csharp">
 <a href="#state_vlanid_csharp" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vlanoverrideallowed_csharp">
 <a href="#state_vlanoverrideallowed_csharp" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the VLAN settings
 on this port group to be overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vlanranges_csharp">
 <a href="#state_vlanranges_csharp" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributedportgroupvlanrange">List&lt;Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Distributed<wbr>Port<wbr>Group<wbr>Vlan<wbr>Range<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3209,559 +2947,510 @@ on this port group to be overridden on an individual port.
             title="Optional">
         <span id="state_activeuplinks_go">
 <a href="#state_activeuplinks_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Uplinks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of active uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowforgedtransmits_go">
 <a href="#state_allowforgedtransmits_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Forged<wbr>Transmits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the virtual network adapter is allowed to send network traffic with a different MAC address than
 that of its own.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowmacchanges_go">
 <a href="#state_allowmacchanges_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Mac<wbr>Changes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access Control (MAC) address can be changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowpromiscuous_go">
 <a href="#state_allowpromiscuous_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Promiscuous</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_autoexpand_go">
 <a href="#state_autoexpand_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Expand</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows the port group to create additional ports
 past the limit specified in `number_of_ports` if necessary. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_blockallports_go">
 <a href="#state_blockallports_go" style="color: inherit; text-decoration: inherit;">Block<wbr>All<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to block all ports by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_blockoverrideallowed_go">
 <a href="#state_blockoverrideallowed_go" style="color: inherit; text-decoration: inherit;">Block<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the port shutdown
 policy to be overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_checkbeacon_go">
 <a href="#state_checkbeacon_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Beacon</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable beacon probing on the ports this policy applies to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_configversion_go">
 <a href="#state_configversion_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version string of the configuration that this spec is trying to change.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_customattributes_go">
 <a href="#state_customattributes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
 value string to set for port group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description for the port group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_directpathgen2allowed_go">
 <a href="#state_directpathgen2allowed_go" style="color: inherit; text-decoration: inherit;">Directpath<wbr>Gen2Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow VMDirectPath Gen2 on the ports this policy applies to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_distributedvirtualswitchuuid_go">
 <a href="#state_distributedvirtualswitchuuid_go" style="color: inherit; text-decoration: inherit;">Distributed<wbr>Virtual<wbr>Switch<wbr>Uuid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the DVS to add the
 port group to. Forces a new resource if changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_egressshapingaveragebandwidth_go">
 <a href="#state_egressshapingaveragebandwidth_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The average egress bandwidth in bits per second if egress shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_egressshapingburstsize_go">
 <a href="#state_egressshapingburstsize_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Burst<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum egress burst size allowed in bytes if egress shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_egressshapingenabled_go">
 <a href="#state_egressshapingenabled_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the traffic shaper is enabled for egress traffic on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_egressshapingpeakbandwidth_go">
 <a href="#state_egressshapingpeakbandwidth_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The peak egress bandwidth during bursts in bits per second if egress traffic shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_failback_go">
 <a href="#state_failback_go" style="color: inherit; text-decoration: inherit;">Failback</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will re-activate failed interfaces higher in precedence when they come back up.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ingressshapingaveragebandwidth_go">
 <a href="#state_ingressshapingaveragebandwidth_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The average ingress bandwidth in bits per second if ingress shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ingressshapingburstsize_go">
 <a href="#state_ingressshapingburstsize_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Burst<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum ingress burst size allowed in bytes if ingress shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ingressshapingenabled_go">
 <a href="#state_ingressshapingenabled_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the traffic shaper is enabled for ingress traffic on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ingressshapingpeakbandwidth_go">
 <a href="#state_ingressshapingpeakbandwidth_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The peak ingress bandwidth during bursts in bits per second if ingress traffic shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_key_go">
 <a href="#state_key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The generated UUID of the portgroup.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lacpenabled_go">
 <a href="#state_lacpenabled_go" style="color: inherit; text-decoration: inherit;">Lacp<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to enable LACP on all uplink ports.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lacpmode_go">
 <a href="#state_lacpmode_go" style="color: inherit; text-decoration: inherit;">Lacp<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uplink LACP mode to use. Can be one of active or passive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_liveportmovingallowed_go">
 <a href="#state_liveportmovingallowed_go" style="color: inherit; text-decoration: inherit;">Live<wbr>Port<wbr>Moving<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a port in this port group to be
 moved to another port group while it is connected.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the port group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_netflowenabled_go">
 <a href="#state_netflowenabled_go" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable netflow on all ports.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_netflowoverrideallowed_go">
 <a href="#state_netflowoverrideallowed_go" style="color: inherit; text-decoration: inherit;">Netflow<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the Netflow
 policy on this port group to be overridden on an individual
 port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkresourcepoolkey_go">
 <a href="#state_networkresourcepoolkey_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Resource<wbr>Pool<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key of a network resource pool
 to associate with this port group. The default is `-1`, which implies no
 association.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkresourcepooloverrideallowed_go">
 <a href="#state_networkresourcepooloverrideallowed_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Resource<wbr>Pool<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the network
 resource pool set on this port group to be overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_notifyswitches_go">
 <a href="#state_notifyswitches_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Switches</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will notify the broadcast network of a NIC failover, triggering cache updates.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_numberofports_go">
 <a href="#state_numberofports_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of ports available on this port
 group. Cannot be decreased below the amount of used ports on the port group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_portconfigresetatdisconnect_go">
 <a href="#state_portconfigresetatdisconnect_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Config<wbr>Reset<wbr>At<wbr>Disconnect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Reset a port's settings to the
 settings defined on this port group policy when the port disconnects.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_portnameformat_go">
 <a href="#state_portnameformat_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Name<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional formatting policy for naming of
 the ports in this port group. See the `portNameFormat` attribute listed
 [here][ext-vsphere-portname-format] for details on the format syntax.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_portprivatesecondaryvlanid_go">
 <a href="#state_portprivatesecondaryvlanid_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Private<wbr>Secondary<wbr>Vlan<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The secondary VLAN ID for this port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_securitypolicyoverrideallowed_go">
 <a href="#state_securitypolicyoverrideallowed_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Policy<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the security policy
 settings defined in this port group policy to be
 overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_shapingoverrideallowed_go">
 <a href="#state_shapingoverrideallowed_go" style="color: inherit; text-decoration: inherit;">Shaping<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the traffic shaping
 options on this port group policy to be overridden
 on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_standbyuplinks_go">
 <a href="#state_standbyuplinks_go" style="color: inherit; text-decoration: inherit;">Standby<wbr>Uplinks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of active uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
+    <dd>{{% md %}}List of standby uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of tag IDs to apply to this object.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_teamingpolicy_go">
 <a href="#state_teamingpolicy_go" style="color: inherit; text-decoration: inherit;">Teaming<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network adapter teaming policy. Can be one of loadbalance_ip, loadbalance_srcmac, loadbalance_srcid,
 failover_explicit, or loadbalance_loadbased.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_trafficfilteroverrideallowed_go">
 <a href="#state_trafficfilteroverrideallowed_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Filter<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow any traffic filters on
 this port group to be overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_txuplink_go">
 <a href="#state_txuplink_go" style="color: inherit; text-decoration: inherit;">Tx<wbr>Uplink</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, a copy of packets sent to the switch will always be forwarded to an uplink in addition to the regular packet
 forwarded done by the switch.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The port group type. Can be one of `earlyBinding` (static
 binding) or `ephemeral`. Default: `earlyBinding`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_uplinkteamingoverrideallowed_go">
 <a href="#state_uplinkteamingoverrideallowed_go" style="color: inherit; text-decoration: inherit;">Uplink<wbr>Teaming<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the uplink teaming
 options on this port group to be overridden on an
 individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vlanid_go">
 <a href="#state_vlanid_go" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vlanoverrideallowed_go">
 <a href="#state_vlanoverrideallowed_go" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the VLAN settings
 on this port group to be overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vlanranges_go">
 <a href="#state_vlanranges_go" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributedportgroupvlanrange">[]Distributed<wbr>Port<wbr>Group<wbr>Vlan<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3770,559 +3459,510 @@ on this port group to be overridden on an individual port.
             title="Optional">
         <span id="state_activeuplinks_nodejs">
 <a href="#state_activeuplinks_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Uplinks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of active uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowforgedtransmits_nodejs">
 <a href="#state_allowforgedtransmits_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Forged<wbr>Transmits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the virtual network adapter is allowed to send network traffic with a different MAC address than
 that of its own.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowmacchanges_nodejs">
 <a href="#state_allowmacchanges_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Mac<wbr>Changes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access Control (MAC) address can be changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowpromiscuous_nodejs">
 <a href="#state_allowpromiscuous_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Promiscuous</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_autoexpand_nodejs">
 <a href="#state_autoexpand_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Expand</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allows the port group to create additional ports
 past the limit specified in `number_of_ports` if necessary. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_blockallports_nodejs">
 <a href="#state_blockallports_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>All<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether to block all ports by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_blockoverrideallowed_nodejs">
 <a href="#state_blockoverrideallowed_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow the port shutdown
 policy to be overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_checkbeacon_nodejs">
 <a href="#state_checkbeacon_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Beacon</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable beacon probing on the ports this policy applies to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_configversion_nodejs">
 <a href="#state_configversion_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version string of the configuration that this spec is trying to change.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_customattributes_nodejs">
 <a href="#state_customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
 value string to set for port group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description for the port group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_directpathgen2allowed_nodejs">
 <a href="#state_directpathgen2allowed_nodejs" style="color: inherit; text-decoration: inherit;">directpath<wbr>Gen2Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow VMDirectPath Gen2 on the ports this policy applies to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_distributedvirtualswitchuuid_nodejs">
 <a href="#state_distributedvirtualswitchuuid_nodejs" style="color: inherit; text-decoration: inherit;">distributed<wbr>Virtual<wbr>Switch<wbr>Uuid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the DVS to add the
 port group to. Forces a new resource if changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_egressshapingaveragebandwidth_nodejs">
 <a href="#state_egressshapingaveragebandwidth_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The average egress bandwidth in bits per second if egress shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_egressshapingburstsize_nodejs">
 <a href="#state_egressshapingburstsize_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Burst<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum egress burst size allowed in bytes if egress shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_egressshapingenabled_nodejs">
 <a href="#state_egressshapingenabled_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}True if the traffic shaper is enabled for egress traffic on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_egressshapingpeakbandwidth_nodejs">
 <a href="#state_egressshapingpeakbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The peak egress bandwidth during bursts in bits per second if egress traffic shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_failback_nodejs">
 <a href="#state_failback_nodejs" style="color: inherit; text-decoration: inherit;">failback</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will re-activate failed interfaces higher in precedence when they come back up.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ingressshapingaveragebandwidth_nodejs">
 <a href="#state_ingressshapingaveragebandwidth_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Average<wbr>Bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The average ingress bandwidth in bits per second if ingress shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ingressshapingburstsize_nodejs">
 <a href="#state_ingressshapingburstsize_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Burst<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum ingress burst size allowed in bytes if ingress shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ingressshapingenabled_nodejs">
 <a href="#state_ingressshapingenabled_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}True if the traffic shaper is enabled for ingress traffic on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ingressshapingpeakbandwidth_nodejs">
 <a href="#state_ingressshapingpeakbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The peak ingress bandwidth during bursts in bits per second if ingress traffic shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_key_nodejs">
 <a href="#state_key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The generated UUID of the portgroup.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lacpenabled_nodejs">
 <a href="#state_lacpenabled_nodejs" style="color: inherit; text-decoration: inherit;">lacp<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not to enable LACP on all uplink ports.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lacpmode_nodejs">
 <a href="#state_lacpmode_nodejs" style="color: inherit; text-decoration: inherit;">lacp<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uplink LACP mode to use. Can be one of active or passive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_liveportmovingallowed_nodejs">
 <a href="#state_liveportmovingallowed_nodejs" style="color: inherit; text-decoration: inherit;">live<wbr>Port<wbr>Moving<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow a port in this port group to be
 moved to another port group while it is connected.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the port group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_netflowenabled_nodejs">
 <a href="#state_netflowenabled_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable netflow on all ports.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_netflowoverrideallowed_nodejs">
 <a href="#state_netflowoverrideallowed_nodejs" style="color: inherit; text-decoration: inherit;">netflow<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow the Netflow
 policy on this port group to be overridden on an individual
 port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkresourcepoolkey_nodejs">
 <a href="#state_networkresourcepoolkey_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Resource<wbr>Pool<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key of a network resource pool
 to associate with this port group. The default is `-1`, which implies no
 association.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkresourcepooloverrideallowed_nodejs">
 <a href="#state_networkresourcepooloverrideallowed_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Resource<wbr>Pool<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow the network
 resource pool set on this port group to be overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_notifyswitches_nodejs">
 <a href="#state_notifyswitches_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Switches</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will notify the broadcast network of a NIC failover, triggering cache updates.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_numberofports_nodejs">
 <a href="#state_numberofports_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of ports available on this port
 group. Cannot be decreased below the amount of used ports on the port group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_portconfigresetatdisconnect_nodejs">
 <a href="#state_portconfigresetatdisconnect_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Config<wbr>Reset<wbr>At<wbr>Disconnect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Reset a port's settings to the
 settings defined on this port group policy when the port disconnects.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_portnameformat_nodejs">
 <a href="#state_portnameformat_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional formatting policy for naming of
 the ports in this port group. See the `portNameFormat` attribute listed
 [here][ext-vsphere-portname-format] for details on the format syntax.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_portprivatesecondaryvlanid_nodejs">
 <a href="#state_portprivatesecondaryvlanid_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Private<wbr>Secondary<wbr>Vlan<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The secondary VLAN ID for this port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_securitypolicyoverrideallowed_nodejs">
 <a href="#state_securitypolicyoverrideallowed_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Policy<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow the security policy
 settings defined in this port group policy to be
 overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_shapingoverrideallowed_nodejs">
 <a href="#state_shapingoverrideallowed_nodejs" style="color: inherit; text-decoration: inherit;">shaping<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow the traffic shaping
 options on this port group policy to be overridden
 on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_standbyuplinks_nodejs">
 <a href="#state_standbyuplinks_nodejs" style="color: inherit; text-decoration: inherit;">standby<wbr>Uplinks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of active uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
+    <dd>{{% md %}}List of standby uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of tag IDs to apply to this object.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_teamingpolicy_nodejs">
 <a href="#state_teamingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">teaming<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network adapter teaming policy. Can be one of loadbalance_ip, loadbalance_srcmac, loadbalance_srcid,
 failover_explicit, or loadbalance_loadbased.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_trafficfilteroverrideallowed_nodejs">
 <a href="#state_trafficfilteroverrideallowed_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Filter<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow any traffic filters on
 this port group to be overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_txuplink_nodejs">
 <a href="#state_txuplink_nodejs" style="color: inherit; text-decoration: inherit;">tx<wbr>Uplink</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, a copy of packets sent to the switch will always be forwarded to an uplink in addition to the regular packet
 forwarded done by the switch.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The port group type. Can be one of `earlyBinding` (static
 binding) or `ephemeral`. Default: `earlyBinding`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_uplinkteamingoverrideallowed_nodejs">
 <a href="#state_uplinkteamingoverrideallowed_nodejs" style="color: inherit; text-decoration: inherit;">uplink<wbr>Teaming<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow the uplink teaming
 options on this port group to be overridden on an
 individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vlanid_nodejs">
 <a href="#state_vlanid_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vlanoverrideallowed_nodejs">
 <a href="#state_vlanoverrideallowed_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Override<wbr>Allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow the VLAN settings
 on this port group to be overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vlanranges_nodejs">
 <a href="#state_vlanranges_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributedportgroupvlanrange">Distributed<wbr>Port<wbr>Group<wbr>Vlan<wbr>Range[]</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4331,556 +3971,508 @@ on this port group to be overridden on an individual port.
             title="Optional">
         <span id="state_active_uplinks_python">
 <a href="#state_active_uplinks_python" style="color: inherit; text-decoration: inherit;">active_<wbr>uplinks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of active uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allow_forged_transmits_python">
 <a href="#state_allow_forged_transmits_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>forged_<wbr>transmits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the virtual network adapter is allowed to send network traffic with a different MAC address than
 that of its own.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allow_mac_changes_python">
 <a href="#state_allow_mac_changes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>mac_<wbr>changes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access Control (MAC) address can be changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allow_promiscuous_python">
 <a href="#state_allow_promiscuous_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>promiscuous</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_auto_expand_python">
 <a href="#state_auto_expand_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>expand</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows the port group to create additional ports
 past the limit specified in `number_of_ports` if necessary. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_block_all_ports_python">
 <a href="#state_block_all_ports_python" style="color: inherit; text-decoration: inherit;">block_<wbr>all_<wbr>ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to block all ports by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_block_override_allowed_python">
 <a href="#state_block_override_allowed_python" style="color: inherit; text-decoration: inherit;">block_<wbr>override_<wbr>allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the port shutdown
 policy to be overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_check_beacon_python">
 <a href="#state_check_beacon_python" style="color: inherit; text-decoration: inherit;">check_<wbr>beacon</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable beacon probing on the ports this policy applies to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_config_version_python">
 <a href="#state_config_version_python" style="color: inherit; text-decoration: inherit;">config_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version string of the configuration that this spec is trying to change.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_custom_attributes_python">
 <a href="#state_custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
 value string to set for port group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description for the port group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_directpath_gen2_allowed_python">
 <a href="#state_directpath_gen2_allowed_python" style="color: inherit; text-decoration: inherit;">directpath_<wbr>gen2_<wbr>allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow VMDirectPath Gen2 on the ports this policy applies to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_distributed_virtual_switch_uuid_python">
 <a href="#state_distributed_virtual_switch_uuid_python" style="color: inherit; text-decoration: inherit;">distributed_<wbr>virtual_<wbr>switch_<wbr>uuid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the DVS to add the
 port group to. Forces a new resource if changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_egress_shaping_average_bandwidth_python">
 <a href="#state_egress_shaping_average_bandwidth_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>average_<wbr>bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The average egress bandwidth in bits per second if egress shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_egress_shaping_burst_size_python">
 <a href="#state_egress_shaping_burst_size_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>burst_<wbr>size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum egress burst size allowed in bytes if egress shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_egress_shaping_enabled_python">
 <a href="#state_egress_shaping_enabled_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the traffic shaper is enabled for egress traffic on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_egress_shaping_peak_bandwidth_python">
 <a href="#state_egress_shaping_peak_bandwidth_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>shaping_<wbr>peak_<wbr>bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The peak egress bandwidth during bursts in bits per second if egress traffic shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_failback_python">
 <a href="#state_failback_python" style="color: inherit; text-decoration: inherit;">failback</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will re-activate failed interfaces higher in precedence when they come back up.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ingress_shaping_average_bandwidth_python">
 <a href="#state_ingress_shaping_average_bandwidth_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>average_<wbr>bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The average ingress bandwidth in bits per second if ingress shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ingress_shaping_burst_size_python">
 <a href="#state_ingress_shaping_burst_size_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>burst_<wbr>size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum ingress burst size allowed in bytes if ingress shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ingress_shaping_enabled_python">
 <a href="#state_ingress_shaping_enabled_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the traffic shaper is enabled for ingress traffic on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ingress_shaping_peak_bandwidth_python">
 <a href="#state_ingress_shaping_peak_bandwidth_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>shaping_<wbr>peak_<wbr>bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The peak ingress bandwidth during bursts in bits per second if ingress traffic shaping is enabled on the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_key_python">
 <a href="#state_key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The generated UUID of the portgroup.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lacp_enabled_python">
 <a href="#state_lacp_enabled_python" style="color: inherit; text-decoration: inherit;">lacp_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to enable LACP on all uplink ports.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lacp_mode_python">
 <a href="#state_lacp_mode_python" style="color: inherit; text-decoration: inherit;">lacp_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The uplink LACP mode to use. Can be one of active or passive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_live_port_moving_allowed_python">
 <a href="#state_live_port_moving_allowed_python" style="color: inherit; text-decoration: inherit;">live_<wbr>port_<wbr>moving_<wbr>allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a port in this port group to be
 moved to another port group while it is connected.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the port group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_netflow_enabled_python">
 <a href="#state_netflow_enabled_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable netflow on all ports.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_netflow_override_allowed_python">
 <a href="#state_netflow_override_allowed_python" style="color: inherit; text-decoration: inherit;">netflow_<wbr>override_<wbr>allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the Netflow
 policy on this port group to be overridden on an individual
 port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_resource_pool_key_python">
 <a href="#state_network_resource_pool_key_python" style="color: inherit; text-decoration: inherit;">network_<wbr>resource_<wbr>pool_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key of a network resource pool
 to associate with this port group. The default is `-1`, which implies no
 association.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_resource_pool_override_allowed_python">
 <a href="#state_network_resource_pool_override_allowed_python" style="color: inherit; text-decoration: inherit;">network_<wbr>resource_<wbr>pool_<wbr>override_<wbr>allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the network
 resource pool set on this port group to be overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_notify_switches_python">
 <a href="#state_notify_switches_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>switches</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will notify the broadcast network of a NIC failover, triggering cache updates.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_number_of_ports_python">
 <a href="#state_number_of_ports_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of ports available on this port
 group. Cannot be decreased below the amount of used ports on the port group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_port_config_reset_at_disconnect_python">
 <a href="#state_port_config_reset_at_disconnect_python" style="color: inherit; text-decoration: inherit;">port_<wbr>config_<wbr>reset_<wbr>at_<wbr>disconnect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Reset a port's settings to the
 settings defined on this port group policy when the port disconnects.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_port_name_format_python">
 <a href="#state_port_name_format_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name_<wbr>format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional formatting policy for naming of
 the ports in this port group. See the `portNameFormat` attribute listed
 [here][ext-vsphere-portname-format] for details on the format syntax.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_port_private_secondary_vlan_id_python">
 <a href="#state_port_private_secondary_vlan_id_python" style="color: inherit; text-decoration: inherit;">port_<wbr>private_<wbr>secondary_<wbr>vlan_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The secondary VLAN ID for this port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_security_policy_override_allowed_python">
 <a href="#state_security_policy_override_allowed_python" style="color: inherit; text-decoration: inherit;">security_<wbr>policy_<wbr>override_<wbr>allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the security policy
 settings defined in this port group policy to be
 overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_shaping_override_allowed_python">
 <a href="#state_shaping_override_allowed_python" style="color: inherit; text-decoration: inherit;">shaping_<wbr>override_<wbr>allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the traffic shaping
 options on this port group policy to be overridden
 on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_standby_uplinks_python">
 <a href="#state_standby_uplinks_python" style="color: inherit; text-decoration: inherit;">standby_<wbr>uplinks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of active uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
+    <dd>{{% md %}}List of standby uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of tag IDs to apply to this object.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_teaming_policy_python">
 <a href="#state_teaming_policy_python" style="color: inherit; text-decoration: inherit;">teaming_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The network adapter teaming policy. Can be one of loadbalance_ip, loadbalance_srcmac, loadbalance_srcid,
 failover_explicit, or loadbalance_loadbased.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_traffic_filter_override_allowed_python">
 <a href="#state_traffic_filter_override_allowed_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>filter_<wbr>override_<wbr>allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow any traffic filters on
 this port group to be overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tx_uplink_python">
 <a href="#state_tx_uplink_python" style="color: inherit; text-decoration: inherit;">tx_<wbr>uplink</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, a copy of packets sent to the switch will always be forwarded to an uplink in addition to the regular packet
 forwarded done by the switch.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The port group type. Can be one of `earlyBinding` (static
 binding) or `ephemeral`. Default: `earlyBinding`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_uplink_teaming_override_allowed_python">
 <a href="#state_uplink_teaming_override_allowed_python" style="color: inherit; text-decoration: inherit;">uplink_<wbr>teaming_<wbr>override_<wbr>allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the uplink teaming
 options on this port group to be overridden on an
 individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vlan_id_python">
 <a href="#state_vlan_id_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vlan_override_allowed_python">
 <a href="#state_vlan_override_allowed_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>override_<wbr>allowed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the VLAN settings
 on this port group to be overridden on an individual port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vlan_ranges_python">
 <a href="#state_vlan_ranges_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributedportgroupvlanrange">List[Distributed<wbr>Port<wbr>Group<wbr>Vlan<wbr>Range]</a></span>
+        <span class="property-type"><a href="#distributedportgroupvlanrange">Sequence[Distributed<wbr>Port<wbr>Group<wbr>Vlan<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -4889,11 +4481,8 @@ on this port group to be overridden on an individual port.
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="distributedportgroupvlanrange">Distributed<wbr>Port<wbr>Group<wbr>Vlan<wbr>Range</h4>
@@ -4904,11 +4493,10 @@ on this port group to be overridden on an individual port.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DistributedPortGroupVlanRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DistributedPortGroupVlanRangeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Inputs.DistributedPortGroupVlanRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Outputs.DistributedPortGroupVlanRange.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4918,25 +4506,22 @@ on this port group to be overridden on an individual port.
             title="Required">
         <span id="maxvlan_csharp">
 <a href="#maxvlan_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Vlan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="minvlan_csharp">
 <a href="#minvlan_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Vlan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4945,25 +4530,22 @@ on this port group to be overridden on an individual port.
             title="Required">
         <span id="maxvlan_go">
 <a href="#maxvlan_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Vlan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="minvlan_go">
 <a href="#minvlan_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Vlan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4972,58 +4554,46 @@ on this port group to be overridden on an individual port.
             title="Required">
         <span id="maxvlan_nodejs">
 <a href="#maxvlan_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Vlan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="minvlan_nodejs">
 <a href="#minvlan_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Vlan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="maxvlan_python">
-<a href="#maxvlan_python" style="color: inherit; text-decoration: inherit;">max<wbr>Vlan</a>
-</span> 
+        <span id="max_vlan_python">
+<a href="#max_vlan_python" style="color: inherit; text-decoration: inherit;">max_<wbr>vlan</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="minvlan_python">
-<a href="#minvlan_python" style="color: inherit; text-decoration: inherit;">min<wbr>Vlan</a>
-</span> 
+        <span id="min_vlan_python">
+<a href="#min_vlan_python" style="color: inherit; text-decoration: inherit;">min_<wbr>vlan</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>

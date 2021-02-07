@@ -14,6 +14,7 @@ The `vsphere.getHostPciDevice` data source can be used to discover the DeviceID
 of a vSphere host's PCI device. This can then be used with
 `vsphere.VirtualMachine`'s `pci_device_id`.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -56,6 +57,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere"
+	"github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -102,8 +104,8 @@ datacenter = vsphere.get_datacenter(name="dc1")
 host = vsphere.get_host(name="esxi1",
     datacenter_id=datacenter.id)
 dev = vsphere.get_host_pci_device(host_id=host.id,
-    class_id=123,
-    vendor_id=456)
+    class_id="123",
+    vendor_id="456")
 ```
 
 {{% /example %}}
@@ -165,7 +167,6 @@ const dev = host.then(host => vsphere.getHostPciDevice({
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -173,51 +174,46 @@ The following arguments are supported:
             title="Required">
         <span id="hostid_csharp">
 <a href="#hostid_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of a host.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="classid_csharp">
 <a href="#classid_csharp" style="color: inherit; text-decoration: inherit;">Class<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hexadecimal PCI device class ID
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nameregex_csharp">
 <a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regular expression that will be used to match
 the host PCI device name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vendorid_csharp">
 <a href="#vendorid_csharp" style="color: inherit; text-decoration: inherit;">Vendor<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hexadecimal PCI device vendor ID.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -226,51 +222,46 @@ the host PCI device name.
             title="Required">
         <span id="hostid_go">
 <a href="#hostid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of a host.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="classid_go">
 <a href="#classid_go" style="color: inherit; text-decoration: inherit;">Class<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hexadecimal PCI device class ID
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nameregex_go">
 <a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regular expression that will be used to match
 the host PCI device name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vendorid_go">
 <a href="#vendorid_go" style="color: inherit; text-decoration: inherit;">Vendor<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hexadecimal PCI device vendor ID.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -279,51 +270,46 @@ the host PCI device name.
             title="Required">
         <span id="hostid_nodejs">
 <a href="#hostid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of a host.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="classid_nodejs">
 <a href="#classid_nodejs" style="color: inherit; text-decoration: inherit;">class<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hexadecimal PCI device class ID
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nameregex_nodejs">
 <a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regular expression that will be used to match
 the host PCI device name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vendorid_nodejs">
 <a href="#vendorid_nodejs" style="color: inherit; text-decoration: inherit;">vendor<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hexadecimal PCI device vendor ID.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -332,54 +318,46 @@ the host PCI device name.
             title="Required">
         <span id="host_id_python">
 <a href="#host_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of a host.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="class_id_python">
 <a href="#class_id_python" style="color: inherit; text-decoration: inherit;">class_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hexadecimal PCI device class ID
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_regex_python">
 <a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A regular expression that will be used to match
 the host PCI device name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vendor_id_python">
 <a href="#vendor_id_python" style="color: inherit; text-decoration: inherit;">vendor_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hexadecimal PCI device vendor ID.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -390,7 +368,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -398,67 +375,60 @@ The following output properties are available:
             title="">
         <span id="hostid_csharp">
 <a href="#hostid_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the PCI device.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="classid_csharp">
 <a href="#classid_csharp" style="color: inherit; text-decoration: inherit;">Class<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nameregex_csharp">
 <a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vendorid_csharp">
 <a href="#vendorid_csharp" style="color: inherit; text-decoration: inherit;">Vendor<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -467,67 +437,60 @@ The following output properties are available:
             title="">
         <span id="hostid_go">
 <a href="#hostid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the PCI device.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="classid_go">
 <a href="#classid_go" style="color: inherit; text-decoration: inherit;">Class<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nameregex_go">
 <a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vendorid_go">
 <a href="#vendorid_go" style="color: inherit; text-decoration: inherit;">Vendor<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -536,67 +499,60 @@ The following output properties are available:
             title="">
         <span id="hostid_nodejs">
 <a href="#hostid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the PCI device.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="classid_nodejs">
 <a href="#classid_nodejs" style="color: inherit; text-decoration: inherit;">class<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nameregex_nodejs">
 <a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vendorid_nodejs">
 <a href="#vendorid_nodejs" style="color: inherit; text-decoration: inherit;">vendor<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -605,70 +561,60 @@ The following output properties are available:
             title="">
         <span id="host_id_python">
 <a href="#host_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the PCI device.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="class_id_python">
 <a href="#class_id_python" style="color: inherit; text-decoration: inherit;">class_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_regex_python">
 <a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vendor_id_python">
 <a href="#vendor_id_python" style="color: inherit; text-decoration: inherit;">vendor_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

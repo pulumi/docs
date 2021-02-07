@@ -18,19 +18,19 @@ meta_desc: "Explore the VirtualMachine resource of the vSphere package, includin
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VirtualMachine">VirtualMachine</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VirtualMachineArgs">VirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VirtualMachine">VirtualMachine</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VirtualMachineArgs">VirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vsphere/#pulumi_vsphere.VirtualMachine">VirtualMachine</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alternate_guest_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">annotation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">boot_delay</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">boot_retry_delay</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">boot_retry_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cdrom</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualMachineCdrom]]</span> = None<span class="p">, </span><span class="nx">clone</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualMachineClone]]</span> = None<span class="p">, </span><span class="nx">cpu_hot_add_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cpu_hot_remove_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cpu_limit</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">cpu_performance_counters_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cpu_reservation</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">cpu_share_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">cpu_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">datacenter_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">datastore_cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">datastore_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[List[VirtualMachineDisk]]</span> = None<span class="p">, </span><span class="nx">efi_secure_boot_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_disk_uuid</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ept_rvi_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extra_config</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">firmware</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_power_off</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">guest_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hardware_version</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">host_system_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hv_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ide_controller_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ignored_guest_ips</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">latency_sensitivity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">memory_hot_add_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">memory_limit</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">memory_reservation</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">memory_share_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">memory_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">migrate_wait_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nested_hv_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[List[VirtualMachineNetworkInterface]]</span> = None<span class="p">, </span><span class="nx">num_cores_per_socket</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">num_cpus</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ovf_deploy</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualMachineOvfDeploy]]</span> = None<span class="p">, </span><span class="nx">pci_device_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">poweron_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_tools_scripts_after_power_on</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">run_tools_scripts_after_resume</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">run_tools_scripts_before_guest_reboot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">run_tools_scripts_before_guest_shutdown</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">run_tools_scripts_before_guest_standby</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sata_controller_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">scsi_bus_sharing</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scsi_controller_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">scsi_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shutdown_wait_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">storage_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">swap_placement_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sync_time_with_host</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">vapp</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualMachineVapp]]</span> = None<span class="p">, </span><span class="nx">wait_for_guest_ip_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">wait_for_guest_net_routable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">wait_for_guest_net_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vsphere/#pulumi_vsphere.VirtualMachine">VirtualMachine</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alternate_guest_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">annotation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">boot_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">boot_retry_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">boot_retry_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cdrom</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineCdromArgs]</span> = None<span class="p">, </span><span class="nx">clone</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineCloneArgs]</span> = None<span class="p">, </span><span class="nx">cpu_hot_add_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cpu_hot_remove_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cpu_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cpu_performance_counters_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cpu_reservation</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cpu_share_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cpu_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">datacenter_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">datastore_cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">datastore_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualMachineDiskArgs]]</span> = None<span class="p">, </span><span class="nx">efi_secure_boot_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_disk_uuid</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ept_rvi_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extra_config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">firmware</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_power_off</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">guest_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hardware_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">host_system_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hv_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ide_controller_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ignored_guest_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">latency_sensitivity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory_hot_add_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">memory_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory_reservation</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory_share_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">migrate_wait_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nested_hv_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualMachineNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">num_cores_per_socket</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">num_cpus</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ovf_deploy</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineOvfDeployArgs]</span> = None<span class="p">, </span><span class="nx">pci_device_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">poweron_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_tools_scripts_after_power_on</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">run_tools_scripts_after_resume</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">run_tools_scripts_before_guest_reboot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">run_tools_scripts_before_guest_shutdown</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">run_tools_scripts_before_guest_standby</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sata_controller_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">scsi_bus_sharing</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scsi_controller_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">scsi_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shutdown_wait_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">storage_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">swap_placement_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sync_time_with_host</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">vapp</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineVappArgs]</span> = None<span class="p">, </span><span class="nx">wait_for_guest_ip_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">wait_for_guest_net_routable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">wait_for_guest_net_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachine">NewVirtualMachine</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineArgs">VirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachine">VirtualMachine</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachine">NewVirtualMachine</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineArgs">VirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachine">VirtualMachine</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.VirtualMachine.html">VirtualMachine</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.VirtualMachineArgs.html">VirtualMachineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.VirtualMachine.html">VirtualMachine</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.VirtualMachineArgs.html">VirtualMachineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -41,7 +41,7 @@ meta_desc: "Explore the VirtualMachine resource of the vSphere package, includin
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -110,7 +110,7 @@ meta_desc: "Explore the VirtualMachine resource of the vSphere package, includin
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -149,7 +149,7 @@ meta_desc: "Explore the VirtualMachine resource of the vSphere package, includin
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -190,7 +190,6 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -198,95 +197,88 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="resourcepoolid_csharp">
 <a href="#resourcepoolid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Pool<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the resource pool to put this virtual machine in.
 See the section on virtual machine migration
 for details on changing this value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="alternateguestname_csharp">
 <a href="#alternateguestname_csharp" style="color: inherit; text-decoration: inherit;">Alternate<wbr>Guest<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The guest name for the operating system
 when `guest_id` is `other` or `other-64`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="annotation_csharp">
 <a href="#annotation_csharp" style="color: inherit; text-decoration: inherit;">Annotation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-provided description of the virtual machine.
 The default is no annotation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootdelay_csharp">
 <a href="#bootdelay_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of milliseconds to wait before starting
 the boot sequence. The default is no delay.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootretrydelay_csharp">
 <a href="#bootretrydelay_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Retry<wbr>Delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of milliseconds to wait before
 retrying the boot sequence. This only valid if `boot_retry_enabled` is true.
 Default: `10000` (10 seconds).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootretryenabled_csharp">
 <a href="#bootretryenabled_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Retry<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, a virtual machine that
 fails to boot will try again after the delay defined in `boot_retry_delay`.
 Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cdrom_csharp">
 <a href="#cdrom_csharp" style="color: inherit; text-decoration: inherit;">Cdrom</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinecdrom">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Cdrom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A specification for a CDROM device on this virtual
 machine. See CDROM options below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="clone_csharp">
 <a href="#clone_csharp" style="color: inherit; text-decoration: inherit;">Clone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineclone">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Clone<wbr>Args</a></span>
     </dt>
@@ -295,123 +287,113 @@ specified template. Optional customization options can be submitted as well.
 See creating a virtual machine from a
 template for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpuhotaddenabled_csharp">
 <a href="#cpuhotaddenabled_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Hot<wbr>Add<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow CPUs to be added to this virtual
 machine while it is running.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpuhotremoveenabled_csharp">
 <a href="#cpuhotremoveenabled_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Hot<wbr>Remove<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow CPUs to be removed to this
 virtual machine while it is running.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpulimit_csharp">
 <a href="#cpulimit_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of CPU (in MHz) that this virtual
 machine can consume, regardless of available resources. The default is no
 limit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpuperformancecountersenabled_csharp">
 <a href="#cpuperformancecountersenabled_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Performance<wbr>Counters<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable CPU performance
 counters on this virtual machine. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpureservation_csharp">
 <a href="#cpureservation_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of CPU (in MHz) that this virtual
 machine is guaranteed. The default is no reservation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpusharecount_csharp">
 <a href="#cpusharecount_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Share<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of CPU shares allocated to the
 virtual machine when the `cpu_share_level` is `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpusharelevel_csharp">
 <a href="#cpusharelevel_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Share<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for CPU resources. Can be
 one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customattributes_csharp">
 <a href="#customattributes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
 value strings to set for virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datacenterid_csharp">
 <a href="#datacenterid_csharp" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter id. Required only when deploying
 an ovf template.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datastoreclusterid_csharp">
 <a href="#datastoreclusterid_csharp" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Cluster<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the datastore cluster ID to use. This setting
@@ -419,85 +401,78 @@ applies to entire virtual machine and implies that you wish to use Storage
 DRS with this virtual machine. See the section on virtual machine
 migration for details on changing this value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datastoreid_csharp">
 <a href="#datastoreid_csharp" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with `client_device`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disks_csharp">
 <a href="#disks_csharp" style="color: inherit; text-decoration: inherit;">Disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinedisk">List&lt;Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A specification for a virtual disk device on this virtual
 machine. See disk options below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="efisecurebootenabled_csharp">
 <a href="#efisecurebootenabled_csharp" style="color: inherit; text-decoration: inherit;">Efi<wbr>Secure<wbr>Boot<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When the `firmware` type is set to is
 `efi`, this enables EFI secure boot. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enablediskuuid_csharp">
 <a href="#enablediskuuid_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Disk<wbr>Uuid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Expose the UUIDs of attached virtual disks to
 the virtual machine, allowing access to them in the guest. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enablelogging_csharp">
 <a href="#enablelogging_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logging</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable logging of virtual machine events to a
 log file stored in the virtual machine directory. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="eptrvimode_csharp">
 <a href="#eptrvimode_csharp" style="color: inherit; text-decoration: inherit;">Ept<wbr>Rvi<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EPT/RVI (hardware memory virtualization)
 setting for this virtual machine. Can be one of `automatic`, `on`, or `off`.
 Default: `automatic`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extraconfig_csharp">
 <a href="#extraconfig_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -505,78 +480,72 @@ Default: `automatic`.
 machine. Can be used to supply advanced parameters not normally in
 configuration, such as instance metadata.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="firmware_csharp">
 <a href="#firmware_csharp" style="color: inherit; text-decoration: inherit;">Firmware</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The firmware interface to use on the virtual machine.
 Can be one of `bios` or `EFI`. Default: `bios`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="folder_csharp">
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the folder to put this virtual machine in,
 relative to the datacenter that the resource pool is in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forcepoweroff_csharp">
 <a href="#forcepoweroff_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Power<wbr>Off</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If a guest shutdown failed or timed out while
 updating or destroying (see
 `shutdown_wait_timeout`), force the power-off of
 the virtual machine. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="guestid_csharp">
 <a href="#guestid_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The guest ID for the operating system type. For a
 full list of possible values, see [here][vmware-docs-guest-ids]. Default: `other-64`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hardwareversion_csharp">
 <a href="#hardwareversion_csharp" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The hardware version number. Valid range
 is from 4 to 15. The hardware version cannot be downgraded. See [virtual
 machine hardware compatibility][virtual-machine-hardware-compatibility] for
 more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hostsystemid_csharp">
 <a href="#hostsystemid_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional managed object reference
 ID of a host to put this virtual machine on. See the
@@ -585,54 +554,50 @@ details on changing this value. If a `host_system_id` is not supplied,
 vSphere will select a host in the resource pool to place the virtual machine,
 according to any defaults or DRS policies in place.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hvmode_csharp">
 <a href="#hvmode_csharp" style="color: inherit; text-decoration: inherit;">Hv<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The (non-nested) hardware virtualization setting for
 this virtual machine. Can be one of `hvAuto`, `hvOn`, or `hvOff`. Default:
 `hvAuto`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="idecontrollercount_csharp">
 <a href="#idecontrollercount_csharp" style="color: inherit; text-decoration: inherit;">Ide<wbr>Controller<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of IDE controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
 you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
 controllers.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ignoredguestips_csharp">
 <a href="#ignoredguestips_csharp" style="color: inherit; text-decoration: inherit;">Ignored<wbr>Guest<wbr>Ips</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of IP addresses and CIDR networks to
 ignore while waiting for an available IP address using either of the waiters.
 Any IP addresses in this list will be ignored if they show up so that the
 waiter will continue to wait for a real IP address. Default: [].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="latencysensitivity_csharp">
 <a href="#latencysensitivity_csharp" style="color: inherit; text-decoration: inherit;">Latency<wbr>Sensitivity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls the scheduling delay of the
 virtual machine. Use a higher sensitivity for applications that require lower
@@ -640,124 +605,114 @@ latency, such as VOIP, media player applications, or applications that
 require frequent access to mouse or keyboard devices. Can be one of `low`,
 `normal`, `medium`, or `high`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memory_csharp">
 <a href="#memory_csharp" style="color: inherit; text-decoration: inherit;">Memory</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the virtual machine's memory, in MB.
 Default: `1024` (1 GB).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memoryhotaddenabled_csharp">
 <a href="#memoryhotaddenabled_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Hot<wbr>Add<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow memory to be added to this
 virtual machine while it is running.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memorylimit_csharp">
 <a href="#memorylimit_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of memory (in MB) that this
 virtual machine can consume, regardless of available resources. The default
 is no limit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memoryreservation_csharp">
 <a href="#memoryreservation_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of memory (in MB) that this
 virtual machine is guaranteed. The default is no reservation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memorysharecount_csharp">
 <a href="#memorysharecount_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Share<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of memory shares allocated to
 the virtual machine when the `memory_share_level` is `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memorysharelevel_csharp">
 <a href="#memorysharelevel_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Share<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for memory resources.
 Can be one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="migratewaittimeout_csharp">
 <a href="#migratewaittimeout_csharp" style="color: inherit; text-decoration: inherit;">Migrate<wbr>Wait<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to wait
 for a virtual machine migration to complete before failing. Default: 10
 minutes. Also see the section on virtual machine
 migration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An alias for both `label` and `path`, the latter when
 using `attach`. Required if not using `label`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nestedhvenabled_csharp">
 <a href="#nestedhvenabled_csharp" style="color: inherit; text-decoration: inherit;">Nested<wbr>Hv<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable nested hardware virtualization on
 this virtual machine, facilitating nested virtualization in the guest.
 Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkinterfaces_csharp">
 <a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinenetworkinterface">List&lt;Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
     </dt>
@@ -765,38 +720,35 @@ Default: `false`.
 virtual machine. See network interface options
 below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="numcorespersocket_csharp">
 <a href="#numcorespersocket_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Cores<wbr>Per<wbr>Socket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of cores per socket in this
 virtual machine. The number of vCPUs on the virtual machine will be
 `num_cpus` divided by `num_cores_per_socket`. If specified, the value
 supplied to `num_cpus` must be evenly divisible by this value. Default: `1`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="numcpus_csharp">
 <a href="#numcpus_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Cpus</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total number of virtual processor cores to assign
 to this virtual machine. Default: `1`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ovfdeploy_csharp">
 <a href="#ovfdeploy_csharp" style="color: inherit; text-decoration: inherit;">Ovf<wbr>Deploy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineovfdeploy">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy<wbr>Args</a></span>
     </dt>
@@ -804,208 +756,191 @@ to this virtual machine. Default: `1`.
 provided ovf/ova template. See creating a virtual machine from a
 ovf/ova template for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pcideviceids_csharp">
 <a href="#pcideviceids_csharp" style="color: inherit; text-decoration: inherit;">Pci<wbr>Device<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of host PCI device IDs to create PCI
 passthroughs for.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="powerontimeout_csharp">
 <a href="#powerontimeout_csharp" style="color: inherit; text-decoration: inherit;">Poweron<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, that we will be trying to power on a VM
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runtoolsscriptsafterpoweron_csharp">
 <a href="#runtoolsscriptsafterpoweron_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>After<wbr>Power<wbr>On</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 post-power-on scripts when VMware tools is installed. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runtoolsscriptsafterresume_csharp">
 <a href="#runtoolsscriptsafterresume_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>After<wbr>Resume</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 post-resume scripts when VMware tools is installed. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runtoolsscriptsbeforeguestreboot_csharp">
 <a href="#runtoolsscriptsbeforeguestreboot_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Reboot</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 pre-reboot scripts when VMware tools is installed. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runtoolsscriptsbeforeguestshutdown_csharp">
 <a href="#runtoolsscriptsbeforeguestshutdown_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Shutdown</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution
 of pre-shutdown scripts when VMware tools is installed. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runtoolsscriptsbeforegueststandby_csharp">
 <a href="#runtoolsscriptsbeforegueststandby_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Standby</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 pre-standby scripts when VMware tools is installed. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="satacontrollercount_csharp">
 <a href="#satacontrollercount_csharp" style="color: inherit; text-decoration: inherit;">Sata<wbr>Controller<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of SATA controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
 you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
 controllers.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scsibussharing_csharp">
 <a href="#scsibussharing_csharp" style="color: inherit; text-decoration: inherit;">Scsi<wbr>Bus<wbr>Sharing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mode for sharing the SCSI bus. The modes are
 physicalSharing, virtualSharing, and noSharing. Default: `noSharing`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scsicontrollercount_csharp">
 <a href="#scsicontrollercount_csharp" style="color: inherit; text-decoration: inherit;">Scsi<wbr>Controller<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of SCSI controllers that
 this provider manages on this virtual machine. This directly affects the amount
 of disks you can add to the virtual machine and the maximum disk unit number.
 Note that lowering this value does not remove controllers. Default: `1`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scsitype_csharp">
 <a href="#scsitype_csharp" style="color: inherit; text-decoration: inherit;">Scsi<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of SCSI bus this virtual machine will have.
 Can be one of lsilogic (LSI Logic Parallel), lsilogic-sas (LSI Logic SAS) or
 pvscsi (VMware Paravirtual). Defualt: `pvscsi`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shutdownwaittimeout_csharp">
 <a href="#shutdownwaittimeout_csharp" style="color: inherit; text-decoration: inherit;">Shutdown<wbr>Wait<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to wait
 for a graceful guest shutdown when making necessary updates to the virtual
 machine. If `force_power_off` is set to true, the VM will be force powered-off
 after this timeout, otherwise an error is returned. Default: 3 minutes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storagepolicyid_csharp">
 <a href="#storagepolicyid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the storage policy to assign to this disk.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="swapplacementpolicy_csharp">
 <a href="#swapplacementpolicy_csharp" style="color: inherit; text-decoration: inherit;">Swap<wbr>Placement<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The swap file placement policy for this
 virtual machine. Can be one of `inherit`, `hostLocal`, or `vmDirectory`.
 Default: `inherit`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="synctimewithhost_csharp">
 <a href="#synctimewithhost_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Time<wbr>With<wbr>Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable guest clock synchronization with
 the host. Requires VMware tools to be installed. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vapp_csharp">
 <a href="#vapp_csharp" style="color: inherit; text-decoration: inherit;">Vapp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinevapp">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Vapp<wbr>Args</a></span>
     </dt>
@@ -1015,14 +950,13 @@ imported from OVF or OVA files. See Using vApp properties to supply OVF/OVA
 configuration for
 more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="waitforguestiptimeout_csharp">
 <a href="#waitforguestiptimeout_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Guest<wbr>Ip<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to
 wait for an available guest IP address on this virtual machine. This should
@@ -1030,14 +964,13 @@ only be used if your version of VMware Tools does not allow the
 `wait_for_guest_net_timeout` waiter to be
 used. A value less than 1 disables the waiter. Default: 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="waitforguestnetroutable_csharp">
 <a href="#waitforguestnetroutable_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Guest<wbr>Net<wbr>Routable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the guest
 network waiter waits for a routable address. When `false`, the waiter does
@@ -1046,14 +979,13 @@ discovered default gateways as part of its success criteria. This property is
 ignored if the `wait_for_guest_ip_timeout`
 waiter is used. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="waitforguestnettimeout_csharp">
 <a href="#waitforguestnettimeout_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Guest<wbr>Net<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to
 wait for an available IP address on this virtual machine's NICs. Older
@@ -1062,10 +994,8 @@ waiter can be disabled and the
 `wait_for_guest_ip_timeout` waiter can be used
 instead. A value less than 1 disables the waiter. Default: 5 minutes.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1074,95 +1004,88 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.
             title="Required">
         <span id="resourcepoolid_go">
 <a href="#resourcepoolid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Pool<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the resource pool to put this virtual machine in.
 See the section on virtual machine migration
 for details on changing this value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="alternateguestname_go">
 <a href="#alternateguestname_go" style="color: inherit; text-decoration: inherit;">Alternate<wbr>Guest<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The guest name for the operating system
 when `guest_id` is `other` or `other-64`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="annotation_go">
 <a href="#annotation_go" style="color: inherit; text-decoration: inherit;">Annotation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-provided description of the virtual machine.
 The default is no annotation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootdelay_go">
 <a href="#bootdelay_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of milliseconds to wait before starting
 the boot sequence. The default is no delay.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootretrydelay_go">
 <a href="#bootretrydelay_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Retry<wbr>Delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of milliseconds to wait before
 retrying the boot sequence. This only valid if `boot_retry_enabled` is true.
 Default: `10000` (10 seconds).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootretryenabled_go">
 <a href="#bootretryenabled_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Retry<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, a virtual machine that
 fails to boot will try again after the delay defined in `boot_retry_delay`.
 Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cdrom_go">
 <a href="#cdrom_go" style="color: inherit; text-decoration: inherit;">Cdrom</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinecdrom">Virtual<wbr>Machine<wbr>Cdrom</a></span>
     </dt>
     <dd>{{% md %}}A specification for a CDROM device on this virtual
 machine. See CDROM options below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="clone_go">
 <a href="#clone_go" style="color: inherit; text-decoration: inherit;">Clone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineclone">Virtual<wbr>Machine<wbr>Clone</a></span>
     </dt>
@@ -1171,123 +1094,113 @@ specified template. Optional customization options can be submitted as well.
 See creating a virtual machine from a
 template for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpuhotaddenabled_go">
 <a href="#cpuhotaddenabled_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Hot<wbr>Add<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow CPUs to be added to this virtual
 machine while it is running.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpuhotremoveenabled_go">
 <a href="#cpuhotremoveenabled_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Hot<wbr>Remove<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow CPUs to be removed to this
 virtual machine while it is running.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpulimit_go">
 <a href="#cpulimit_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of CPU (in MHz) that this virtual
 machine can consume, regardless of available resources. The default is no
 limit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpuperformancecountersenabled_go">
 <a href="#cpuperformancecountersenabled_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Performance<wbr>Counters<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable CPU performance
 counters on this virtual machine. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpureservation_go">
 <a href="#cpureservation_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of CPU (in MHz) that this virtual
 machine is guaranteed. The default is no reservation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpusharecount_go">
 <a href="#cpusharecount_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Share<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of CPU shares allocated to the
 virtual machine when the `cpu_share_level` is `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpusharelevel_go">
 <a href="#cpusharelevel_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Share<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for CPU resources. Can be
 one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customattributes_go">
 <a href="#customattributes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
 value strings to set for virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datacenterid_go">
 <a href="#datacenterid_go" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter id. Required only when deploying
 an ovf template.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datastoreclusterid_go">
 <a href="#datastoreclusterid_go" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Cluster<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the datastore cluster ID to use. This setting
@@ -1295,85 +1208,78 @@ applies to entire virtual machine and implies that you wish to use Storage
 DRS with this virtual machine. See the section on virtual machine
 migration for details on changing this value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datastoreid_go">
 <a href="#datastoreid_go" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with `client_device`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disks_go">
 <a href="#disks_go" style="color: inherit; text-decoration: inherit;">Disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinedisk">[]Virtual<wbr>Machine<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}A specification for a virtual disk device on this virtual
 machine. See disk options below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="efisecurebootenabled_go">
 <a href="#efisecurebootenabled_go" style="color: inherit; text-decoration: inherit;">Efi<wbr>Secure<wbr>Boot<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When the `firmware` type is set to is
 `efi`, this enables EFI secure boot. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enablediskuuid_go">
 <a href="#enablediskuuid_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Disk<wbr>Uuid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Expose the UUIDs of attached virtual disks to
 the virtual machine, allowing access to them in the guest. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enablelogging_go">
 <a href="#enablelogging_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logging</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable logging of virtual machine events to a
 log file stored in the virtual machine directory. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="eptrvimode_go">
 <a href="#eptrvimode_go" style="color: inherit; text-decoration: inherit;">Ept<wbr>Rvi<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EPT/RVI (hardware memory virtualization)
 setting for this virtual machine. Can be one of `automatic`, `on`, or `off`.
 Default: `automatic`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extraconfig_go">
 <a href="#extraconfig_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1381,78 +1287,72 @@ Default: `automatic`.
 machine. Can be used to supply advanced parameters not normally in
 configuration, such as instance metadata.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="firmware_go">
 <a href="#firmware_go" style="color: inherit; text-decoration: inherit;">Firmware</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The firmware interface to use on the virtual machine.
 Can be one of `bios` or `EFI`. Default: `bios`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="folder_go">
 <a href="#folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the folder to put this virtual machine in,
 relative to the datacenter that the resource pool is in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forcepoweroff_go">
 <a href="#forcepoweroff_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Power<wbr>Off</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If a guest shutdown failed or timed out while
 updating or destroying (see
 `shutdown_wait_timeout`), force the power-off of
 the virtual machine. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="guestid_go">
 <a href="#guestid_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The guest ID for the operating system type. For a
 full list of possible values, see [here][vmware-docs-guest-ids]. Default: `other-64`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hardwareversion_go">
 <a href="#hardwareversion_go" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The hardware version number. Valid range
 is from 4 to 15. The hardware version cannot be downgraded. See [virtual
 machine hardware compatibility][virtual-machine-hardware-compatibility] for
 more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hostsystemid_go">
 <a href="#hostsystemid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional managed object reference
 ID of a host to put this virtual machine on. See the
@@ -1461,54 +1361,50 @@ details on changing this value. If a `host_system_id` is not supplied,
 vSphere will select a host in the resource pool to place the virtual machine,
 according to any defaults or DRS policies in place.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hvmode_go">
 <a href="#hvmode_go" style="color: inherit; text-decoration: inherit;">Hv<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The (non-nested) hardware virtualization setting for
 this virtual machine. Can be one of `hvAuto`, `hvOn`, or `hvOff`. Default:
 `hvAuto`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="idecontrollercount_go">
 <a href="#idecontrollercount_go" style="color: inherit; text-decoration: inherit;">Ide<wbr>Controller<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of IDE controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
 you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
 controllers.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ignoredguestips_go">
 <a href="#ignoredguestips_go" style="color: inherit; text-decoration: inherit;">Ignored<wbr>Guest<wbr>Ips</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of IP addresses and CIDR networks to
 ignore while waiting for an available IP address using either of the waiters.
 Any IP addresses in this list will be ignored if they show up so that the
 waiter will continue to wait for a real IP address. Default: [].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="latencysensitivity_go">
 <a href="#latencysensitivity_go" style="color: inherit; text-decoration: inherit;">Latency<wbr>Sensitivity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls the scheduling delay of the
 virtual machine. Use a higher sensitivity for applications that require lower
@@ -1516,124 +1412,114 @@ latency, such as VOIP, media player applications, or applications that
 require frequent access to mouse or keyboard devices. Can be one of `low`,
 `normal`, `medium`, or `high`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memory_go">
 <a href="#memory_go" style="color: inherit; text-decoration: inherit;">Memory</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the virtual machine's memory, in MB.
 Default: `1024` (1 GB).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memoryhotaddenabled_go">
 <a href="#memoryhotaddenabled_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Hot<wbr>Add<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow memory to be added to this
 virtual machine while it is running.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memorylimit_go">
 <a href="#memorylimit_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of memory (in MB) that this
 virtual machine can consume, regardless of available resources. The default
 is no limit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memoryreservation_go">
 <a href="#memoryreservation_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of memory (in MB) that this
 virtual machine is guaranteed. The default is no reservation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memorysharecount_go">
 <a href="#memorysharecount_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Share<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of memory shares allocated to
 the virtual machine when the `memory_share_level` is `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memorysharelevel_go">
 <a href="#memorysharelevel_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Share<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for memory resources.
 Can be one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="migratewaittimeout_go">
 <a href="#migratewaittimeout_go" style="color: inherit; text-decoration: inherit;">Migrate<wbr>Wait<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to wait
 for a virtual machine migration to complete before failing. Default: 10
 minutes. Also see the section on virtual machine
 migration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An alias for both `label` and `path`, the latter when
 using `attach`. Required if not using `label`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nestedhvenabled_go">
 <a href="#nestedhvenabled_go" style="color: inherit; text-decoration: inherit;">Nested<wbr>Hv<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable nested hardware virtualization on
 this virtual machine, facilitating nested virtualization in the guest.
 Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkinterfaces_go">
 <a href="#networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinenetworkinterface">[]Virtual<wbr>Machine<wbr>Network<wbr>Interface</a></span>
     </dt>
@@ -1641,38 +1527,35 @@ Default: `false`.
 virtual machine. See network interface options
 below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="numcorespersocket_go">
 <a href="#numcorespersocket_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Cores<wbr>Per<wbr>Socket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of cores per socket in this
 virtual machine. The number of vCPUs on the virtual machine will be
 `num_cpus` divided by `num_cores_per_socket`. If specified, the value
 supplied to `num_cpus` must be evenly divisible by this value. Default: `1`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="numcpus_go">
 <a href="#numcpus_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Cpus</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total number of virtual processor cores to assign
 to this virtual machine. Default: `1`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ovfdeploy_go">
 <a href="#ovfdeploy_go" style="color: inherit; text-decoration: inherit;">Ovf<wbr>Deploy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineovfdeploy">Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy</a></span>
     </dt>
@@ -1680,208 +1563,191 @@ to this virtual machine. Default: `1`.
 provided ovf/ova template. See creating a virtual machine from a
 ovf/ova template for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pcideviceids_go">
 <a href="#pcideviceids_go" style="color: inherit; text-decoration: inherit;">Pci<wbr>Device<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of host PCI device IDs to create PCI
 passthroughs for.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="powerontimeout_go">
 <a href="#powerontimeout_go" style="color: inherit; text-decoration: inherit;">Poweron<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, that we will be trying to power on a VM
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runtoolsscriptsafterpoweron_go">
 <a href="#runtoolsscriptsafterpoweron_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>After<wbr>Power<wbr>On</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 post-power-on scripts when VMware tools is installed. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runtoolsscriptsafterresume_go">
 <a href="#runtoolsscriptsafterresume_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>After<wbr>Resume</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 post-resume scripts when VMware tools is installed. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runtoolsscriptsbeforeguestreboot_go">
 <a href="#runtoolsscriptsbeforeguestreboot_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Reboot</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 pre-reboot scripts when VMware tools is installed. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runtoolsscriptsbeforeguestshutdown_go">
 <a href="#runtoolsscriptsbeforeguestshutdown_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Shutdown</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution
 of pre-shutdown scripts when VMware tools is installed. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runtoolsscriptsbeforegueststandby_go">
 <a href="#runtoolsscriptsbeforegueststandby_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Standby</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 pre-standby scripts when VMware tools is installed. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="satacontrollercount_go">
 <a href="#satacontrollercount_go" style="color: inherit; text-decoration: inherit;">Sata<wbr>Controller<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of SATA controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
 you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
 controllers.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scsibussharing_go">
 <a href="#scsibussharing_go" style="color: inherit; text-decoration: inherit;">Scsi<wbr>Bus<wbr>Sharing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mode for sharing the SCSI bus. The modes are
 physicalSharing, virtualSharing, and noSharing. Default: `noSharing`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scsicontrollercount_go">
 <a href="#scsicontrollercount_go" style="color: inherit; text-decoration: inherit;">Scsi<wbr>Controller<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of SCSI controllers that
 this provider manages on this virtual machine. This directly affects the amount
 of disks you can add to the virtual machine and the maximum disk unit number.
 Note that lowering this value does not remove controllers. Default: `1`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scsitype_go">
 <a href="#scsitype_go" style="color: inherit; text-decoration: inherit;">Scsi<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of SCSI bus this virtual machine will have.
 Can be one of lsilogic (LSI Logic Parallel), lsilogic-sas (LSI Logic SAS) or
 pvscsi (VMware Paravirtual). Defualt: `pvscsi`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shutdownwaittimeout_go">
 <a href="#shutdownwaittimeout_go" style="color: inherit; text-decoration: inherit;">Shutdown<wbr>Wait<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to wait
 for a graceful guest shutdown when making necessary updates to the virtual
 machine. If `force_power_off` is set to true, the VM will be force powered-off
 after this timeout, otherwise an error is returned. Default: 3 minutes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storagepolicyid_go">
 <a href="#storagepolicyid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the storage policy to assign to this disk.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="swapplacementpolicy_go">
 <a href="#swapplacementpolicy_go" style="color: inherit; text-decoration: inherit;">Swap<wbr>Placement<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The swap file placement policy for this
 virtual machine. Can be one of `inherit`, `hostLocal`, or `vmDirectory`.
 Default: `inherit`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="synctimewithhost_go">
 <a href="#synctimewithhost_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Time<wbr>With<wbr>Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable guest clock synchronization with
 the host. Requires VMware tools to be installed. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vapp_go">
 <a href="#vapp_go" style="color: inherit; text-decoration: inherit;">Vapp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinevapp">Virtual<wbr>Machine<wbr>Vapp</a></span>
     </dt>
@@ -1891,14 +1757,13 @@ imported from OVF or OVA files. See Using vApp properties to supply OVF/OVA
 configuration for
 more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="waitforguestiptimeout_go">
 <a href="#waitforguestiptimeout_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Guest<wbr>Ip<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to
 wait for an available guest IP address on this virtual machine. This should
@@ -1906,14 +1771,13 @@ only be used if your version of VMware Tools does not allow the
 `wait_for_guest_net_timeout` waiter to be
 used. A value less than 1 disables the waiter. Default: 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="waitforguestnetroutable_go">
 <a href="#waitforguestnetroutable_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Guest<wbr>Net<wbr>Routable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the guest
 network waiter waits for a routable address. When `false`, the waiter does
@@ -1922,14 +1786,13 @@ discovered default gateways as part of its success criteria. This property is
 ignored if the `wait_for_guest_ip_timeout`
 waiter is used. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="waitforguestnettimeout_go">
 <a href="#waitforguestnettimeout_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Guest<wbr>Net<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to
 wait for an available IP address on this virtual machine's NICs. Older
@@ -1938,10 +1801,8 @@ waiter can be disabled and the
 `wait_for_guest_ip_timeout` waiter can be used
 instead. A value less than 1 disables the waiter. Default: 5 minutes.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1950,95 +1811,88 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.
             title="Required">
         <span id="resourcepoolid_nodejs">
 <a href="#resourcepoolid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Pool<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the resource pool to put this virtual machine in.
 See the section on virtual machine migration
 for details on changing this value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="alternateguestname_nodejs">
 <a href="#alternateguestname_nodejs" style="color: inherit; text-decoration: inherit;">alternate<wbr>Guest<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The guest name for the operating system
 when `guest_id` is `other` or `other-64`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="annotation_nodejs">
 <a href="#annotation_nodejs" style="color: inherit; text-decoration: inherit;">annotation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-provided description of the virtual machine.
 The default is no annotation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootdelay_nodejs">
 <a href="#bootdelay_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of milliseconds to wait before starting
 the boot sequence. The default is no delay.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootretrydelay_nodejs">
 <a href="#bootretrydelay_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Retry<wbr>Delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of milliseconds to wait before
 retrying the boot sequence. This only valid if `boot_retry_enabled` is true.
 Default: `10000` (10 seconds).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootretryenabled_nodejs">
 <a href="#bootretryenabled_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Retry<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, a virtual machine that
 fails to boot will try again after the delay defined in `boot_retry_delay`.
 Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cdrom_nodejs">
 <a href="#cdrom_nodejs" style="color: inherit; text-decoration: inherit;">cdrom</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinecdrom">Virtual<wbr>Machine<wbr>Cdrom</a></span>
     </dt>
     <dd>{{% md %}}A specification for a CDROM device on this virtual
 machine. See CDROM options below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="clone_nodejs">
 <a href="#clone_nodejs" style="color: inherit; text-decoration: inherit;">clone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineclone">Virtual<wbr>Machine<wbr>Clone</a></span>
     </dt>
@@ -2047,123 +1901,113 @@ specified template. Optional customization options can be submitted as well.
 See creating a virtual machine from a
 template for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpuhotaddenabled_nodejs">
 <a href="#cpuhotaddenabled_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Hot<wbr>Add<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow CPUs to be added to this virtual
 machine while it is running.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpuhotremoveenabled_nodejs">
 <a href="#cpuhotremoveenabled_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Hot<wbr>Remove<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow CPUs to be removed to this
 virtual machine while it is running.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpulimit_nodejs">
 <a href="#cpulimit_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum amount of CPU (in MHz) that this virtual
 machine can consume, regardless of available resources. The default is no
 limit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpuperformancecountersenabled_nodejs">
 <a href="#cpuperformancecountersenabled_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Performance<wbr>Counters<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable CPU performance
 counters on this virtual machine. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpureservation_nodejs">
 <a href="#cpureservation_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of CPU (in MHz) that this virtual
 machine is guaranteed. The default is no reservation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpusharecount_nodejs">
 <a href="#cpusharecount_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Share<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of CPU shares allocated to the
 virtual machine when the `cpu_share_level` is `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpusharelevel_nodejs">
 <a href="#cpusharelevel_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Share<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for CPU resources. Can be
 one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customattributes_nodejs">
 <a href="#customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
 value strings to set for virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datacenterid_nodejs">
 <a href="#datacenterid_nodejs" style="color: inherit; text-decoration: inherit;">datacenter<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter id. Required only when deploying
 an ovf template.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datastoreclusterid_nodejs">
 <a href="#datastoreclusterid_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Cluster<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the datastore cluster ID to use. This setting
@@ -2171,85 +2015,78 @@ applies to entire virtual machine and implies that you wish to use Storage
 DRS with this virtual machine. See the section on virtual machine
 migration for details on changing this value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datastoreid_nodejs">
 <a href="#datastoreid_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with `client_device`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disks_nodejs">
 <a href="#disks_nodejs" style="color: inherit; text-decoration: inherit;">disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinedisk">Virtual<wbr>Machine<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}A specification for a virtual disk device on this virtual
 machine. See disk options below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="efisecurebootenabled_nodejs">
 <a href="#efisecurebootenabled_nodejs" style="color: inherit; text-decoration: inherit;">efi<wbr>Secure<wbr>Boot<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When the `firmware` type is set to is
 `efi`, this enables EFI secure boot. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enablediskuuid_nodejs">
 <a href="#enablediskuuid_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Disk<wbr>Uuid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Expose the UUIDs of attached virtual disks to
 the virtual machine, allowing access to them in the guest. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enablelogging_nodejs">
 <a href="#enablelogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Logging</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable logging of virtual machine events to a
 log file stored in the virtual machine directory. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="eptrvimode_nodejs">
 <a href="#eptrvimode_nodejs" style="color: inherit; text-decoration: inherit;">ept<wbr>Rvi<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EPT/RVI (hardware memory virtualization)
 setting for this virtual machine. Can be one of `automatic`, `on`, or `off`.
 Default: `automatic`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extraconfig_nodejs">
 <a href="#extraconfig_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -2257,78 +2094,72 @@ Default: `automatic`.
 machine. Can be used to supply advanced parameters not normally in
 configuration, such as instance metadata.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="firmware_nodejs">
 <a href="#firmware_nodejs" style="color: inherit; text-decoration: inherit;">firmware</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The firmware interface to use on the virtual machine.
 Can be one of `bios` or `EFI`. Default: `bios`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="folder_nodejs">
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the folder to put this virtual machine in,
 relative to the datacenter that the resource pool is in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forcepoweroff_nodejs">
 <a href="#forcepoweroff_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Power<wbr>Off</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If a guest shutdown failed or timed out while
 updating or destroying (see
 `shutdown_wait_timeout`), force the power-off of
 the virtual machine. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="guestid_nodejs">
 <a href="#guestid_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The guest ID for the operating system type. For a
 full list of possible values, see [here][vmware-docs-guest-ids]. Default: `other-64`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hardwareversion_nodejs">
 <a href="#hardwareversion_nodejs" style="color: inherit; text-decoration: inherit;">hardware<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The hardware version number. Valid range
 is from 4 to 15. The hardware version cannot be downgraded. See [virtual
 machine hardware compatibility][virtual-machine-hardware-compatibility] for
 more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hostsystemid_nodejs">
 <a href="#hostsystemid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>System<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional managed object reference
 ID of a host to put this virtual machine on. See the
@@ -2337,54 +2168,50 @@ details on changing this value. If a `host_system_id` is not supplied,
 vSphere will select a host in the resource pool to place the virtual machine,
 according to any defaults or DRS policies in place.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hvmode_nodejs">
 <a href="#hvmode_nodejs" style="color: inherit; text-decoration: inherit;">hv<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The (non-nested) hardware virtualization setting for
 this virtual machine. Can be one of `hvAuto`, `hvOn`, or `hvOff`. Default:
 `hvAuto`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="idecontrollercount_nodejs">
 <a href="#idecontrollercount_nodejs" style="color: inherit; text-decoration: inherit;">ide<wbr>Controller<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of IDE controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
 you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
 controllers.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ignoredguestips_nodejs">
 <a href="#ignoredguestips_nodejs" style="color: inherit; text-decoration: inherit;">ignored<wbr>Guest<wbr>Ips</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of IP addresses and CIDR networks to
 ignore while waiting for an available IP address using either of the waiters.
 Any IP addresses in this list will be ignored if they show up so that the
 waiter will continue to wait for a real IP address. Default: [].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="latencysensitivity_nodejs">
 <a href="#latencysensitivity_nodejs" style="color: inherit; text-decoration: inherit;">latency<wbr>Sensitivity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls the scheduling delay of the
 virtual machine. Use a higher sensitivity for applications that require lower
@@ -2392,124 +2219,114 @@ latency, such as VOIP, media player applications, or applications that
 require frequent access to mouse or keyboard devices. Can be one of `low`,
 `normal`, `medium`, or `high`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memory_nodejs">
 <a href="#memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the virtual machine's memory, in MB.
 Default: `1024` (1 GB).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memoryhotaddenabled_nodejs">
 <a href="#memoryhotaddenabled_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Hot<wbr>Add<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow memory to be added to this
 virtual machine while it is running.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memorylimit_nodejs">
 <a href="#memorylimit_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum amount of memory (in MB) that this
 virtual machine can consume, regardless of available resources. The default
 is no limit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memoryreservation_nodejs">
 <a href="#memoryreservation_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of memory (in MB) that this
 virtual machine is guaranteed. The default is no reservation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memorysharecount_nodejs">
 <a href="#memorysharecount_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Share<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of memory shares allocated to
 the virtual machine when the `memory_share_level` is `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memorysharelevel_nodejs">
 <a href="#memorysharelevel_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Share<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for memory resources.
 Can be one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="migratewaittimeout_nodejs">
 <a href="#migratewaittimeout_nodejs" style="color: inherit; text-decoration: inherit;">migrate<wbr>Wait<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to wait
 for a virtual machine migration to complete before failing. Default: 10
 minutes. Also see the section on virtual machine
 migration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An alias for both `label` and `path`, the latter when
 using `attach`. Required if not using `label`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nestedhvenabled_nodejs">
 <a href="#nestedhvenabled_nodejs" style="color: inherit; text-decoration: inherit;">nested<wbr>Hv<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable nested hardware virtualization on
 this virtual machine, facilitating nested virtualization in the guest.
 Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkinterfaces_nodejs">
 <a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinenetworkinterface">Virtual<wbr>Machine<wbr>Network<wbr>Interface[]</a></span>
     </dt>
@@ -2517,38 +2334,35 @@ Default: `false`.
 virtual machine. See network interface options
 below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="numcorespersocket_nodejs">
 <a href="#numcorespersocket_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Cores<wbr>Per<wbr>Socket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of cores per socket in this
 virtual machine. The number of vCPUs on the virtual machine will be
 `num_cpus` divided by `num_cores_per_socket`. If specified, the value
 supplied to `num_cpus` must be evenly divisible by this value. Default: `1`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="numcpus_nodejs">
 <a href="#numcpus_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Cpus</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The total number of virtual processor cores to assign
 to this virtual machine. Default: `1`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ovfdeploy_nodejs">
 <a href="#ovfdeploy_nodejs" style="color: inherit; text-decoration: inherit;">ovf<wbr>Deploy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineovfdeploy">Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy</a></span>
     </dt>
@@ -2556,208 +2370,191 @@ to this virtual machine. Default: `1`.
 provided ovf/ova template. See creating a virtual machine from a
 ovf/ova template for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pcideviceids_nodejs">
 <a href="#pcideviceids_nodejs" style="color: inherit; text-decoration: inherit;">pci<wbr>Device<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of host PCI device IDs to create PCI
 passthroughs for.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="powerontimeout_nodejs">
 <a href="#powerontimeout_nodejs" style="color: inherit; text-decoration: inherit;">poweron<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, that we will be trying to power on a VM
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runtoolsscriptsafterpoweron_nodejs">
 <a href="#runtoolsscriptsafterpoweron_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Tools<wbr>Scripts<wbr>After<wbr>Power<wbr>On</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 post-power-on scripts when VMware tools is installed. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runtoolsscriptsafterresume_nodejs">
 <a href="#runtoolsscriptsafterresume_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Tools<wbr>Scripts<wbr>After<wbr>Resume</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 post-resume scripts when VMware tools is installed. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runtoolsscriptsbeforeguestreboot_nodejs">
 <a href="#runtoolsscriptsbeforeguestreboot_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Reboot</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 pre-reboot scripts when VMware tools is installed. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runtoolsscriptsbeforeguestshutdown_nodejs">
 <a href="#runtoolsscriptsbeforeguestshutdown_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Shutdown</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the execution
 of pre-shutdown scripts when VMware tools is installed. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runtoolsscriptsbeforegueststandby_nodejs">
 <a href="#runtoolsscriptsbeforegueststandby_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Standby</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 pre-standby scripts when VMware tools is installed. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="satacontrollercount_nodejs">
 <a href="#satacontrollercount_nodejs" style="color: inherit; text-decoration: inherit;">sata<wbr>Controller<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of SATA controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
 you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
 controllers.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scsibussharing_nodejs">
 <a href="#scsibussharing_nodejs" style="color: inherit; text-decoration: inherit;">scsi<wbr>Bus<wbr>Sharing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mode for sharing the SCSI bus. The modes are
 physicalSharing, virtualSharing, and noSharing. Default: `noSharing`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scsicontrollercount_nodejs">
 <a href="#scsicontrollercount_nodejs" style="color: inherit; text-decoration: inherit;">scsi<wbr>Controller<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of SCSI controllers that
 this provider manages on this virtual machine. This directly affects the amount
 of disks you can add to the virtual machine and the maximum disk unit number.
 Note that lowering this value does not remove controllers. Default: `1`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scsitype_nodejs">
 <a href="#scsitype_nodejs" style="color: inherit; text-decoration: inherit;">scsi<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of SCSI bus this virtual machine will have.
 Can be one of lsilogic (LSI Logic Parallel), lsilogic-sas (LSI Logic SAS) or
 pvscsi (VMware Paravirtual). Defualt: `pvscsi`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shutdownwaittimeout_nodejs">
 <a href="#shutdownwaittimeout_nodejs" style="color: inherit; text-decoration: inherit;">shutdown<wbr>Wait<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to wait
 for a graceful guest shutdown when making necessary updates to the virtual
 machine. If `force_power_off` is set to true, the VM will be force powered-off
 after this timeout, otherwise an error is returned. Default: 3 minutes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storagepolicyid_nodejs">
 <a href="#storagepolicyid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the storage policy to assign to this disk.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="swapplacementpolicy_nodejs">
 <a href="#swapplacementpolicy_nodejs" style="color: inherit; text-decoration: inherit;">swap<wbr>Placement<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The swap file placement policy for this
 virtual machine. Can be one of `inherit`, `hostLocal`, or `vmDirectory`.
 Default: `inherit`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="synctimewithhost_nodejs">
 <a href="#synctimewithhost_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Time<wbr>With<wbr>Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable guest clock synchronization with
 the host. Requires VMware tools to be installed. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vapp_nodejs">
 <a href="#vapp_nodejs" style="color: inherit; text-decoration: inherit;">vapp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinevapp">Virtual<wbr>Machine<wbr>Vapp</a></span>
     </dt>
@@ -2767,14 +2564,13 @@ imported from OVF or OVA files. See Using vApp properties to supply OVF/OVA
 configuration for
 more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="waitforguestiptimeout_nodejs">
 <a href="#waitforguestiptimeout_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Guest<wbr>Ip<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to
 wait for an available guest IP address on this virtual machine. This should
@@ -2782,14 +2578,13 @@ only be used if your version of VMware Tools does not allow the
 `wait_for_guest_net_timeout` waiter to be
 used. A value less than 1 disables the waiter. Default: 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="waitforguestnetroutable_nodejs">
 <a href="#waitforguestnetroutable_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Guest<wbr>Net<wbr>Routable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the guest
 network waiter waits for a routable address. When `false`, the waiter does
@@ -2798,14 +2593,13 @@ discovered default gateways as part of its success criteria. This property is
 ignored if the `wait_for_guest_ip_timeout`
 waiter is used. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="waitforguestnettimeout_nodejs">
 <a href="#waitforguestnettimeout_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Guest<wbr>Net<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to
 wait for an available IP address on this virtual machine's NICs. Older
@@ -2814,10 +2608,8 @@ waiter can be disabled and the
 `wait_for_guest_ip_timeout` waiter can be used
 instead. A value less than 1 disables the waiter. Default: 5 minutes.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2826,220 +2618,203 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.
             title="Required">
         <span id="resource_pool_id_python">
 <a href="#resource_pool_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>pool_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the resource pool to put this virtual machine in.
 See the section on virtual machine migration
 for details on changing this value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="alternate_guest_name_python">
 <a href="#alternate_guest_name_python" style="color: inherit; text-decoration: inherit;">alternate_<wbr>guest_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The guest name for the operating system
 when `guest_id` is `other` or `other-64`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="annotation_python">
 <a href="#annotation_python" style="color: inherit; text-decoration: inherit;">annotation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A user-provided description of the virtual machine.
 The default is no annotation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boot_delay_python">
 <a href="#boot_delay_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of milliseconds to wait before starting
 the boot sequence. The default is no delay.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boot_retry_delay_python">
 <a href="#boot_retry_delay_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>retry_<wbr>delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of milliseconds to wait before
 retrying the boot sequence. This only valid if `boot_retry_enabled` is true.
 Default: `10000` (10 seconds).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boot_retry_enabled_python">
 <a href="#boot_retry_enabled_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>retry_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, a virtual machine that
 fails to boot will try again after the delay defined in `boot_retry_delay`.
 Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cdrom_python">
 <a href="#cdrom_python" style="color: inherit; text-decoration: inherit;">cdrom</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinecdrom">Dict[Virtual<wbr>Machine<wbr>Cdrom]</a></span>
+        <span class="property-type"><a href="#virtualmachinecdrom">Virtual<wbr>Machine<wbr>Cdrom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A specification for a CDROM device on this virtual
 machine. See CDROM options below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="clone_python">
 <a href="#clone_python" style="color: inherit; text-decoration: inherit;">clone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineclone">Dict[Virtual<wbr>Machine<wbr>Clone]</a></span>
+        <span class="property-type"><a href="#virtualmachineclone">Virtual<wbr>Machine<wbr>Clone<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When specified, the VM will be created as a clone of a
 specified template. Optional customization options can be submitted as well.
 See creating a virtual machine from a
 template for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpu_hot_add_enabled_python">
 <a href="#cpu_hot_add_enabled_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>hot_<wbr>add_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow CPUs to be added to this virtual
 machine while it is running.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpu_hot_remove_enabled_python">
 <a href="#cpu_hot_remove_enabled_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>hot_<wbr>remove_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow CPUs to be removed to this
 virtual machine while it is running.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpu_limit_python">
 <a href="#cpu_limit_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of CPU (in MHz) that this virtual
 machine can consume, regardless of available resources. The default is no
 limit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpu_performance_counters_enabled_python">
 <a href="#cpu_performance_counters_enabled_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>performance_<wbr>counters_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable CPU performance
 counters on this virtual machine. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpu_reservation_python">
 <a href="#cpu_reservation_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of CPU (in MHz) that this virtual
 machine is guaranteed. The default is no reservation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpu_share_count_python">
 <a href="#cpu_share_count_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>share_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of CPU shares allocated to the
 virtual machine when the `cpu_share_level` is `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpu_share_level_python">
 <a href="#cpu_share_level_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>share_<wbr>level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The allocation level for CPU resources. Can be
 one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custom_attributes_python">
 <a href="#custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
 value strings to set for virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datacenter_id_python">
 <a href="#datacenter_id_python" style="color: inherit; text-decoration: inherit;">datacenter_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The datacenter id. Required only when deploying
 an ovf template.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datastore_cluster_id_python">
 <a href="#datastore_cluster_id_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>cluster_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the datastore cluster ID to use. This setting
@@ -3047,164 +2822,151 @@ applies to entire virtual machine and implies that you wish to use Storage
 DRS with this virtual machine. See the section on virtual machine
 migration for details on changing this value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datastore_id_python">
 <a href="#datastore_id_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with `client_device`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disks_python">
 <a href="#disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinedisk">List[Virtual<wbr>Machine<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#virtualmachinedisk">Sequence[Virtual<wbr>Machine<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A specification for a virtual disk device on this virtual
 machine. See disk options below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="efi_secure_boot_enabled_python">
 <a href="#efi_secure_boot_enabled_python" style="color: inherit; text-decoration: inherit;">efi_<wbr>secure_<wbr>boot_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When the `firmware` type is set to is
 `efi`, this enables EFI secure boot. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enable_disk_uuid_python">
 <a href="#enable_disk_uuid_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>disk_<wbr>uuid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Expose the UUIDs of attached virtual disks to
 the virtual machine, allowing access to them in the guest. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enable_logging_python">
 <a href="#enable_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>logging</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable logging of virtual machine events to a
 log file stored in the virtual machine directory. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ept_rvi_mode_python">
 <a href="#ept_rvi_mode_python" style="color: inherit; text-decoration: inherit;">ept_<wbr>rvi_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The EPT/RVI (hardware memory virtualization)
 setting for this virtual machine. Can be one of `automatic`, `on`, or `off`.
 Default: `automatic`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extra_config_python">
 <a href="#extra_config_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Extra configuration data for this virtual
 machine. Can be used to supply advanced parameters not normally in
 configuration, such as instance metadata.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="firmware_python">
 <a href="#firmware_python" style="color: inherit; text-decoration: inherit;">firmware</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The firmware interface to use on the virtual machine.
 Can be one of `bios` or `EFI`. Default: `bios`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="folder_python">
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the folder to put this virtual machine in,
 relative to the datacenter that the resource pool is in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="force_power_off_python">
 <a href="#force_power_off_python" style="color: inherit; text-decoration: inherit;">force_<wbr>power_<wbr>off</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If a guest shutdown failed or timed out while
 updating or destroying (see
 `shutdown_wait_timeout`), force the power-off of
 the virtual machine. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="guest_id_python">
 <a href="#guest_id_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The guest ID for the operating system type. For a
 full list of possible values, see [here][vmware-docs-guest-ids]. Default: `other-64`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hardware_version_python">
 <a href="#hardware_version_python" style="color: inherit; text-decoration: inherit;">hardware_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The hardware version number. Valid range
 is from 4 to 15. The hardware version cannot be downgraded. See [virtual
 machine hardware compatibility][virtual-machine-hardware-compatibility] for
 more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="host_system_id_python">
 <a href="#host_system_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>system_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional managed object reference
 ID of a host to put this virtual machine on. See the
@@ -3213,54 +2975,50 @@ details on changing this value. If a `host_system_id` is not supplied,
 vSphere will select a host in the resource pool to place the virtual machine,
 according to any defaults or DRS policies in place.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hv_mode_python">
 <a href="#hv_mode_python" style="color: inherit; text-decoration: inherit;">hv_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The (non-nested) hardware virtualization setting for
 this virtual machine. Can be one of `hvAuto`, `hvOn`, or `hvOff`. Default:
 `hvAuto`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ide_controller_count_python">
 <a href="#ide_controller_count_python" style="color: inherit; text-decoration: inherit;">ide_<wbr>controller_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of IDE controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
 you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
 controllers.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ignored_guest_ips_python">
 <a href="#ignored_guest_ips_python" style="color: inherit; text-decoration: inherit;">ignored_<wbr>guest_<wbr>ips</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of IP addresses and CIDR networks to
 ignore while waiting for an available IP address using either of the waiters.
 Any IP addresses in this list will be ignored if they show up so that the
 waiter will continue to wait for a real IP address. Default: [].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="latency_sensitivity_python">
 <a href="#latency_sensitivity_python" style="color: inherit; text-decoration: inherit;">latency_<wbr>sensitivity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls the scheduling delay of the
 virtual machine. Use a higher sensitivity for applications that require lower
@@ -3268,374 +3026,344 @@ latency, such as VOIP, media player applications, or applications that
 require frequent access to mouse or keyboard devices. Can be one of `low`,
 `normal`, `medium`, or `high`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memory_python">
 <a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the virtual machine's memory, in MB.
 Default: `1024` (1 GB).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memory_hot_add_enabled_python">
 <a href="#memory_hot_add_enabled_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>hot_<wbr>add_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow memory to be added to this
 virtual machine while it is running.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memory_limit_python">
 <a href="#memory_limit_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of memory (in MB) that this
 virtual machine can consume, regardless of available resources. The default
 is no limit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memory_reservation_python">
 <a href="#memory_reservation_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of memory (in MB) that this
 virtual machine is guaranteed. The default is no reservation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memory_share_count_python">
 <a href="#memory_share_count_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>share_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of memory shares allocated to
 the virtual machine when the `memory_share_level` is `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memory_share_level_python">
 <a href="#memory_share_level_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>share_<wbr>level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The allocation level for memory resources.
 Can be one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="migrate_wait_timeout_python">
 <a href="#migrate_wait_timeout_python" style="color: inherit; text-decoration: inherit;">migrate_<wbr>wait_<wbr>timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to wait
 for a virtual machine migration to complete before failing. Default: 10
 minutes. Also see the section on virtual machine
 migration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An alias for both `label` and `path`, the latter when
 using `attach`. Required if not using `label`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nested_hv_enabled_python">
 <a href="#nested_hv_enabled_python" style="color: inherit; text-decoration: inherit;">nested_<wbr>hv_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable nested hardware virtualization on
 this virtual machine, facilitating nested virtualization in the guest.
 Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_interfaces_python">
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinenetworkinterface">List[Virtual<wbr>Machine<wbr>Network<wbr>Interface]</a></span>
+        <span class="property-type"><a href="#virtualmachinenetworkinterface">Sequence[Virtual<wbr>Machine<wbr>Network<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A specification for a virtual NIC on this
 virtual machine. See network interface options
 below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="num_cores_per_socket_python">
 <a href="#num_cores_per_socket_python" style="color: inherit; text-decoration: inherit;">num_<wbr>cores_<wbr>per_<wbr>socket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of cores per socket in this
 virtual machine. The number of vCPUs on the virtual machine will be
 `num_cpus` divided by `num_cores_per_socket`. If specified, the value
 supplied to `num_cpus` must be evenly divisible by this value. Default: `1`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="num_cpus_python">
 <a href="#num_cpus_python" style="color: inherit; text-decoration: inherit;">num_<wbr>cpus</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total number of virtual processor cores to assign
 to this virtual machine. Default: `1`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ovf_deploy_python">
 <a href="#ovf_deploy_python" style="color: inherit; text-decoration: inherit;">ovf_<wbr>deploy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineovfdeploy">Dict[Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy]</a></span>
+        <span class="property-type"><a href="#virtualmachineovfdeploy">Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When specified, the VM will be deployed from the
 provided ovf/ova template. See creating a virtual machine from a
 ovf/ova template for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pci_device_ids_python">
 <a href="#pci_device_ids_python" style="color: inherit; text-decoration: inherit;">pci_<wbr>device_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of host PCI device IDs to create PCI
 passthroughs for.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="poweron_timeout_python">
 <a href="#poweron_timeout_python" style="color: inherit; text-decoration: inherit;">poweron_<wbr>timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, that we will be trying to power on a VM
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="run_tools_scripts_after_power_on_python">
 <a href="#run_tools_scripts_after_power_on_python" style="color: inherit; text-decoration: inherit;">run_<wbr>tools_<wbr>scripts_<wbr>after_<wbr>power_<wbr>on</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 post-power-on scripts when VMware tools is installed. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="run_tools_scripts_after_resume_python">
 <a href="#run_tools_scripts_after_resume_python" style="color: inherit; text-decoration: inherit;">run_<wbr>tools_<wbr>scripts_<wbr>after_<wbr>resume</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 post-resume scripts when VMware tools is installed. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="run_tools_scripts_before_guest_reboot_python">
 <a href="#run_tools_scripts_before_guest_reboot_python" style="color: inherit; text-decoration: inherit;">run_<wbr>tools_<wbr>scripts_<wbr>before_<wbr>guest_<wbr>reboot</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 pre-reboot scripts when VMware tools is installed. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="run_tools_scripts_before_guest_shutdown_python">
 <a href="#run_tools_scripts_before_guest_shutdown_python" style="color: inherit; text-decoration: inherit;">run_<wbr>tools_<wbr>scripts_<wbr>before_<wbr>guest_<wbr>shutdown</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution
 of pre-shutdown scripts when VMware tools is installed. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="run_tools_scripts_before_guest_standby_python">
 <a href="#run_tools_scripts_before_guest_standby_python" style="color: inherit; text-decoration: inherit;">run_<wbr>tools_<wbr>scripts_<wbr>before_<wbr>guest_<wbr>standby</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 pre-standby scripts when VMware tools is installed. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sata_controller_count_python">
 <a href="#sata_controller_count_python" style="color: inherit; text-decoration: inherit;">sata_<wbr>controller_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of SATA controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
 you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
 controllers.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scsi_bus_sharing_python">
 <a href="#scsi_bus_sharing_python" style="color: inherit; text-decoration: inherit;">scsi_<wbr>bus_<wbr>sharing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Mode for sharing the SCSI bus. The modes are
 physicalSharing, virtualSharing, and noSharing. Default: `noSharing`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scsi_controller_count_python">
 <a href="#scsi_controller_count_python" style="color: inherit; text-decoration: inherit;">scsi_<wbr>controller_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of SCSI controllers that
 this provider manages on this virtual machine. This directly affects the amount
 of disks you can add to the virtual machine and the maximum disk unit number.
 Note that lowering this value does not remove controllers. Default: `1`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scsi_type_python">
 <a href="#scsi_type_python" style="color: inherit; text-decoration: inherit;">scsi_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of SCSI bus this virtual machine will have.
 Can be one of lsilogic (LSI Logic Parallel), lsilogic-sas (LSI Logic SAS) or
 pvscsi (VMware Paravirtual). Defualt: `pvscsi`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shutdown_wait_timeout_python">
 <a href="#shutdown_wait_timeout_python" style="color: inherit; text-decoration: inherit;">shutdown_<wbr>wait_<wbr>timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to wait
 for a graceful guest shutdown when making necessary updates to the virtual
 machine. If `force_power_off` is set to true, the VM will be force powered-off
 after this timeout, otherwise an error is returned. Default: 3 minutes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storage_policy_id_python">
 <a href="#storage_policy_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>policy_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The UUID of the storage policy to assign to this disk.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="swap_placement_policy_python">
 <a href="#swap_placement_policy_python" style="color: inherit; text-decoration: inherit;">swap_<wbr>placement_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The swap file placement policy for this
 virtual machine. Can be one of `inherit`, `hostLocal`, or `vmDirectory`.
 Default: `inherit`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sync_time_with_host_python">
 <a href="#sync_time_with_host_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>time_<wbr>with_<wbr>host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable guest clock synchronization with
 the host. Requires VMware tools to be installed. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vapp_python">
 <a href="#vapp_python" style="color: inherit; text-decoration: inherit;">vapp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinevapp">Dict[Virtual<wbr>Machine<wbr>Vapp]</a></span>
+        <span class="property-type"><a href="#virtualmachinevapp">Virtual<wbr>Machine<wbr>Vapp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional vApp configuration. The only sub-key available
 is `properties`, which is a key/value map of properties for virtual machines
@@ -3643,14 +3371,13 @@ imported from OVF or OVA files. See Using vApp properties to supply OVF/OVA
 configuration for
 more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="wait_for_guest_ip_timeout_python">
 <a href="#wait_for_guest_ip_timeout_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>guest_<wbr>ip_<wbr>timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to
 wait for an available guest IP address on this virtual machine. This should
@@ -3658,14 +3385,13 @@ only be used if your version of VMware Tools does not allow the
 `wait_for_guest_net_timeout` waiter to be
 used. A value less than 1 disables the waiter. Default: 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="wait_for_guest_net_routable_python">
 <a href="#wait_for_guest_net_routable_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>guest_<wbr>net_<wbr>routable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the guest
 network waiter waits for a routable address. When `false`, the waiter does
@@ -3674,14 +3400,13 @@ discovered default gateways as part of its success criteria. This property is
 ignored if the `wait_for_guest_ip_timeout`
 waiter is used. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="wait_for_guest_net_timeout_python">
 <a href="#wait_for_guest_net_timeout_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>guest_<wbr>net_<wbr>timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to
 wait for an available IP address on this virtual machine's NICs. Older
@@ -3690,19 +3415,13 @@ waiter can be disabled and the
 `wait_for_guest_ip_timeout` waiter can be used
 instead. A value less than 1 disables the waiter. Default: 5 minutes.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the VirtualMachine resource produces the following output properties:
-
 
 
 
@@ -3713,22 +3432,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="changeversion_csharp">
 <a href="#changeversion_csharp" style="color: inherit; text-decoration: inherit;">Change<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier for a given version of the last
 configuration applied, such the timestamp of the last update to the
 configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="defaultipaddress_csharp">
 <a href="#defaultipaddress_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address selected by the provider to be used with
 any provisioners configured on this resource.
@@ -3738,14 +3456,13 @@ address, and then the first general discovered address if neither exist. If
 VMware tools is not running on the virtual machine, or if the VM is powered
 off, this value will be blank.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="guestipaddresses_csharp">
 <a href="#guestipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Ip<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The current list of IP addresses on this machine,
 including the value of `default_ip_address`. If VMware tools is not running
@@ -3753,107 +3470,97 @@ on the virtual machine, or if the VM is powered off, this list will be empty.
 * `moid`: The managed object reference ID of the created
 virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="imported_csharp">
 <a href="#imported_csharp" style="color: inherit; text-decoration: inherit;">Imported</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This is flagged if the virtual machine has been imported, or the
 state has been migrated from a previous version of the resource. It
 influences the behavior of the first post-import apply operation. See the
 section on importing below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="moid_csharp">
 <a href="#moid_csharp" style="color: inherit; text-decoration: inherit;">Moid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine object ID from VMWare
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rebootrequired_csharp">
 <a href="#rebootrequired_csharp" style="color: inherit; text-decoration: inherit;">Reboot<wbr>Required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Value internal to the provider used to determine if a
 configuration set change requires a reboot. This value is only useful during
 an update process and gets reset on refresh.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="uuid_csharp">
 <a href="#uuid_csharp" style="color: inherit; text-decoration: inherit;">Uuid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual disk's VMDK file. This is used to track the
 virtual disk on the virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vapptransports_csharp">
 <a href="#vapptransports_csharp" style="color: inherit; text-decoration: inherit;">Vapp<wbr>Transports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Computed value which is only valid for cloned virtual
 machines. A list of vApp transport methods supported by the source virtual
 machine or template.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vmwaretoolsstatus_csharp">
 <a href="#vmwaretoolsstatus_csharp" style="color: inherit; text-decoration: inherit;">Vmware<wbr>Tools<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of VMware tools in the guest. This will
 determine the proper course of action for some device operations.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vmxpath_csharp">
 <a href="#vmxpath_csharp" style="color: inherit; text-decoration: inherit;">Vmx<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of the virtual machine's configuration file in the VM's
 datastore.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3862,22 +3569,21 @@ datastore.
             title="">
         <span id="changeversion_go">
 <a href="#changeversion_go" style="color: inherit; text-decoration: inherit;">Change<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier for a given version of the last
 configuration applied, such the timestamp of the last update to the
 configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="defaultipaddress_go">
 <a href="#defaultipaddress_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address selected by the provider to be used with
 any provisioners configured on this resource.
@@ -3887,14 +3593,13 @@ address, and then the first general discovered address if neither exist. If
 VMware tools is not running on the virtual machine, or if the VM is powered
 off, this value will be blank.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="guestipaddresses_go">
 <a href="#guestipaddresses_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Ip<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The current list of IP addresses on this machine,
 including the value of `default_ip_address`. If VMware tools is not running
@@ -3902,107 +3607,97 @@ on the virtual machine, or if the VM is powered off, this list will be empty.
 * `moid`: The managed object reference ID of the created
 virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="imported_go">
 <a href="#imported_go" style="color: inherit; text-decoration: inherit;">Imported</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This is flagged if the virtual machine has been imported, or the
 state has been migrated from a previous version of the resource. It
 influences the behavior of the first post-import apply operation. See the
 section on importing below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="moid_go">
 <a href="#moid_go" style="color: inherit; text-decoration: inherit;">Moid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine object ID from VMWare
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rebootrequired_go">
 <a href="#rebootrequired_go" style="color: inherit; text-decoration: inherit;">Reboot<wbr>Required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Value internal to the provider used to determine if a
 configuration set change requires a reboot. This value is only useful during
 an update process and gets reset on refresh.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="uuid_go">
 <a href="#uuid_go" style="color: inherit; text-decoration: inherit;">Uuid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual disk's VMDK file. This is used to track the
 virtual disk on the virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vapptransports_go">
 <a href="#vapptransports_go" style="color: inherit; text-decoration: inherit;">Vapp<wbr>Transports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Computed value which is only valid for cloned virtual
 machines. A list of vApp transport methods supported by the source virtual
 machine or template.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vmwaretoolsstatus_go">
 <a href="#vmwaretoolsstatus_go" style="color: inherit; text-decoration: inherit;">Vmware<wbr>Tools<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of VMware tools in the guest. This will
 determine the proper course of action for some device operations.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vmxpath_go">
 <a href="#vmxpath_go" style="color: inherit; text-decoration: inherit;">Vmx<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of the virtual machine's configuration file in the VM's
 datastore.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4011,22 +3706,21 @@ datastore.
             title="">
         <span id="changeversion_nodejs">
 <a href="#changeversion_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier for a given version of the last
 configuration applied, such the timestamp of the last update to the
 configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="defaultipaddress_nodejs">
 <a href="#defaultipaddress_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address selected by the provider to be used with
 any provisioners configured on this resource.
@@ -4036,14 +3730,13 @@ address, and then the first general discovered address if neither exist. If
 VMware tools is not running on the virtual machine, or if the VM is powered
 off, this value will be blank.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="guestipaddresses_nodejs">
 <a href="#guestipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Ip<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The current list of IP addresses on this machine,
 including the value of `default_ip_address`. If VMware tools is not running
@@ -4051,107 +3744,97 @@ on the virtual machine, or if the VM is powered off, this list will be empty.
 * `moid`: The managed object reference ID of the created
 virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="imported_nodejs">
 <a href="#imported_nodejs" style="color: inherit; text-decoration: inherit;">imported</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This is flagged if the virtual machine has been imported, or the
 state has been migrated from a previous version of the resource. It
 influences the behavior of the first post-import apply operation. See the
 section on importing below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="moid_nodejs">
 <a href="#moid_nodejs" style="color: inherit; text-decoration: inherit;">moid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine object ID from VMWare
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rebootrequired_nodejs">
 <a href="#rebootrequired_nodejs" style="color: inherit; text-decoration: inherit;">reboot<wbr>Required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Value internal to the provider used to determine if a
 configuration set change requires a reboot. This value is only useful during
 an update process and gets reset on refresh.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="uuid_nodejs">
 <a href="#uuid_nodejs" style="color: inherit; text-decoration: inherit;">uuid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual disk's VMDK file. This is used to track the
 virtual disk on the virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vapptransports_nodejs">
 <a href="#vapptransports_nodejs" style="color: inherit; text-decoration: inherit;">vapp<wbr>Transports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Computed value which is only valid for cloned virtual
 machines. A list of vApp transport methods supported by the source virtual
 machine or template.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vmwaretoolsstatus_nodejs">
 <a href="#vmwaretoolsstatus_nodejs" style="color: inherit; text-decoration: inherit;">vmware<wbr>Tools<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of VMware tools in the guest. This will
 determine the proper course of action for some device operations.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vmxpath_nodejs">
 <a href="#vmxpath_nodejs" style="color: inherit; text-decoration: inherit;">vmx<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of the virtual machine's configuration file in the VM's
 datastore.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4160,22 +3843,21 @@ datastore.
             title="">
         <span id="change_version_python">
 <a href="#change_version_python" style="color: inherit; text-decoration: inherit;">change_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique identifier for a given version of the last
 configuration applied, such the timestamp of the last update to the
 configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="default_ip_address_python">
 <a href="#default_ip_address_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ip_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address selected by the provider to be used with
 any provisioners configured on this resource.
@@ -4185,14 +3867,13 @@ address, and then the first general discovered address if neither exist. If
 VMware tools is not running on the virtual machine, or if the VM is powered
 off, this value will be blank.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="guest_ip_addresses_python">
 <a href="#guest_ip_addresses_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>ip_<wbr>addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The current list of IP addresses on this machine,
 including the value of `default_ip_address`. If VMware tools is not running
@@ -4200,110 +3881,97 @@ on the virtual machine, or if the VM is powered off, this list will be empty.
 * `moid`: The managed object reference ID of the created
 virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="imported_python">
 <a href="#imported_python" style="color: inherit; text-decoration: inherit;">imported</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This is flagged if the virtual machine has been imported, or the
 state has been migrated from a previous version of the resource. It
 influences the behavior of the first post-import apply operation. See the
 section on importing below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="moid_python">
 <a href="#moid_python" style="color: inherit; text-decoration: inherit;">moid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The machine object ID from VMWare
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="reboot_required_python">
 <a href="#reboot_required_python" style="color: inherit; text-decoration: inherit;">reboot_<wbr>required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Value internal to the provider used to determine if a
 configuration set change requires a reboot. This value is only useful during
 an update process and gets reset on refresh.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="uuid_python">
 <a href="#uuid_python" style="color: inherit; text-decoration: inherit;">uuid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual disk's VMDK file. This is used to track the
 virtual disk on the virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vapp_transports_python">
 <a href="#vapp_transports_python" style="color: inherit; text-decoration: inherit;">vapp_<wbr>transports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Computed value which is only valid for cloned virtual
 machines. A list of vApp transport methods supported by the source virtual
 machine or template.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vmware_tools_status_python">
 <a href="#vmware_tools_status_python" style="color: inherit; text-decoration: inherit;">vmware_<wbr>tools_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of VMware tools in the guest. This will
 determine the proper course of action for some device operations.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vmx_path_python">
 <a href="#vmx_path_python" style="color: inherit; text-decoration: inherit;">vmx_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path of the virtual machine's configuration file in the VM's
 datastore.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -4313,20 +3981,20 @@ Get an existing VirtualMachine resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VirtualMachineState">VirtualMachineState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VirtualMachine">VirtualMachine</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VirtualMachineState">VirtualMachineState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#VirtualMachine">VirtualMachine</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alternate_guest_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">annotation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">boot_delay</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">boot_retry_delay</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">boot_retry_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cdrom</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualMachineCdrom]]</span> = None<span class="p">, </span><span class="nx">change_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">clone</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualMachineClone]]</span> = None<span class="p">, </span><span class="nx">cpu_hot_add_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cpu_hot_remove_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cpu_limit</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">cpu_performance_counters_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cpu_reservation</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">cpu_share_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">cpu_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">datacenter_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">datastore_cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">datastore_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[List[VirtualMachineDisk]]</span> = None<span class="p">, </span><span class="nx">efi_secure_boot_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_disk_uuid</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ept_rvi_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extra_config</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">firmware</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_power_off</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">guest_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">guest_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">hardware_version</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">host_system_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hv_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ide_controller_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ignored_guest_ips</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">imported</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">latency_sensitivity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">memory_hot_add_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">memory_limit</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">memory_reservation</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">memory_share_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">memory_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">migrate_wait_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">moid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nested_hv_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[List[VirtualMachineNetworkInterface]]</span> = None<span class="p">, </span><span class="nx">num_cores_per_socket</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">num_cpus</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ovf_deploy</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualMachineOvfDeploy]]</span> = None<span class="p">, </span><span class="nx">pci_device_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">poweron_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">reboot_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_tools_scripts_after_power_on</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">run_tools_scripts_after_resume</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">run_tools_scripts_before_guest_reboot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">run_tools_scripts_before_guest_shutdown</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">run_tools_scripts_before_guest_standby</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sata_controller_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">scsi_bus_sharing</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scsi_controller_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">scsi_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shutdown_wait_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">storage_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">swap_placement_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sync_time_with_host</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">uuid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vapp</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualMachineVapp]]</span> = None<span class="p">, </span><span class="nx">vapp_transports</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">vmware_tools_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vmx_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_guest_ip_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">wait_for_guest_net_routable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">wait_for_guest_net_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> VirtualMachine</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alternate_guest_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">annotation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">boot_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">boot_retry_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">boot_retry_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cdrom</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineCdromArgs]</span> = None<span class="p">, </span><span class="nx">change_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">clone</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineCloneArgs]</span> = None<span class="p">, </span><span class="nx">cpu_hot_add_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cpu_hot_remove_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cpu_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cpu_performance_counters_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cpu_reservation</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cpu_share_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cpu_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">datacenter_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">datastore_cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">datastore_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualMachineDiskArgs]]</span> = None<span class="p">, </span><span class="nx">efi_secure_boot_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_disk_uuid</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ept_rvi_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extra_config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">firmware</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_power_off</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">guest_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">guest_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">hardware_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">host_system_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hv_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ide_controller_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ignored_guest_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">imported</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">latency_sensitivity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory_hot_add_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">memory_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory_reservation</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory_share_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">migrate_wait_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">moid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nested_hv_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualMachineNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">num_cores_per_socket</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">num_cpus</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ovf_deploy</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineOvfDeployArgs]</span> = None<span class="p">, </span><span class="nx">pci_device_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">poweron_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">reboot_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_tools_scripts_after_power_on</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">run_tools_scripts_after_resume</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">run_tools_scripts_before_guest_reboot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">run_tools_scripts_before_guest_shutdown</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">run_tools_scripts_before_guest_standby</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sata_controller_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">scsi_bus_sharing</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scsi_controller_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">scsi_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shutdown_wait_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">storage_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">swap_placement_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sync_time_with_host</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">uuid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vapp</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineVappArgs]</span> = None<span class="p">, </span><span class="nx">vapp_transports</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">vmware_tools_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vmx_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_guest_ip_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">wait_for_guest_net_routable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">wait_for_guest_net_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> VirtualMachine</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualMachine<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineState">VirtualMachineState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachine">VirtualMachine</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualMachine<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineState">VirtualMachineState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachine">VirtualMachine</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.VirtualMachine.html">VirtualMachine</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..VirtualMachineState.html">VirtualMachineState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.VirtualMachine.html">VirtualMachine</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..VirtualMachineState.html">VirtualMachineState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4428,7 +4096,6 @@ Get an existing VirtualMachine resource's state with the given name, ID, and opt
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4436,94 +4103,87 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_alternateguestname_csharp">
 <a href="#state_alternateguestname_csharp" style="color: inherit; text-decoration: inherit;">Alternate<wbr>Guest<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The guest name for the operating system
 when `guest_id` is `other` or `other-64`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_annotation_csharp">
 <a href="#state_annotation_csharp" style="color: inherit; text-decoration: inherit;">Annotation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-provided description of the virtual machine.
 The default is no annotation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bootdelay_csharp">
 <a href="#state_bootdelay_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of milliseconds to wait before starting
 the boot sequence. The default is no delay.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bootretrydelay_csharp">
 <a href="#state_bootretrydelay_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Retry<wbr>Delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of milliseconds to wait before
 retrying the boot sequence. This only valid if `boot_retry_enabled` is true.
 Default: `10000` (10 seconds).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bootretryenabled_csharp">
 <a href="#state_bootretryenabled_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Retry<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, a virtual machine that
 fails to boot will try again after the delay defined in `boot_retry_delay`.
 Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cdrom_csharp">
 <a href="#state_cdrom_csharp" style="color: inherit; text-decoration: inherit;">Cdrom</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinecdrom">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Cdrom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A specification for a CDROM device on this virtual
 machine. See CDROM options below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_changeversion_csharp">
 <a href="#state_changeversion_csharp" style="color: inherit; text-decoration: inherit;">Change<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier for a given version of the last
 configuration applied, such the timestamp of the last update to the
 configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_clone_csharp">
 <a href="#state_clone_csharp" style="color: inherit; text-decoration: inherit;">Clone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineclone">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Clone<wbr>Args</a></span>
     </dt>
@@ -4532,123 +4192,113 @@ specified template. Optional customization options can be submitted as well.
 See creating a virtual machine from a
 template for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpuhotaddenabled_csharp">
 <a href="#state_cpuhotaddenabled_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Hot<wbr>Add<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow CPUs to be added to this virtual
 machine while it is running.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpuhotremoveenabled_csharp">
 <a href="#state_cpuhotremoveenabled_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Hot<wbr>Remove<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow CPUs to be removed to this
 virtual machine while it is running.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpulimit_csharp">
 <a href="#state_cpulimit_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of CPU (in MHz) that this virtual
 machine can consume, regardless of available resources. The default is no
 limit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpuperformancecountersenabled_csharp">
 <a href="#state_cpuperformancecountersenabled_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Performance<wbr>Counters<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable CPU performance
 counters on this virtual machine. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpureservation_csharp">
 <a href="#state_cpureservation_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of CPU (in MHz) that this virtual
 machine is guaranteed. The default is no reservation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpusharecount_csharp">
 <a href="#state_cpusharecount_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Share<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of CPU shares allocated to the
 virtual machine when the `cpu_share_level` is `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpusharelevel_csharp">
 <a href="#state_cpusharelevel_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Share<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for CPU resources. Can be
 one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_customattributes_csharp">
 <a href="#state_customattributes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
 value strings to set for virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_datacenterid_csharp">
 <a href="#state_datacenterid_csharp" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter id. Required only when deploying
 an ovf template.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_datastoreclusterid_csharp">
 <a href="#state_datastoreclusterid_csharp" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Cluster<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the datastore cluster ID to use. This setting
@@ -4656,26 +4306,24 @@ applies to entire virtual machine and implies that you wish to use Storage
 DRS with this virtual machine. See the section on virtual machine
 migration for details on changing this value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_datastoreid_csharp">
 <a href="#state_datastoreid_csharp" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with `client_device`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_defaultipaddress_csharp">
 <a href="#state_defaultipaddress_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address selected by the provider to be used with
 any provisioners configured on this resource.
@@ -4685,73 +4333,67 @@ address, and then the first general discovered address if neither exist. If
 VMware tools is not running on the virtual machine, or if the VM is powered
 off, this value will be blank.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disks_csharp">
 <a href="#state_disks_csharp" style="color: inherit; text-decoration: inherit;">Disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinedisk">List&lt;Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A specification for a virtual disk device on this virtual
 machine. See disk options below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_efisecurebootenabled_csharp">
 <a href="#state_efisecurebootenabled_csharp" style="color: inherit; text-decoration: inherit;">Efi<wbr>Secure<wbr>Boot<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When the `firmware` type is set to is
 `efi`, this enables EFI secure boot. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enablediskuuid_csharp">
 <a href="#state_enablediskuuid_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Disk<wbr>Uuid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Expose the UUIDs of attached virtual disks to
 the virtual machine, allowing access to them in the guest. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enablelogging_csharp">
 <a href="#state_enablelogging_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logging</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable logging of virtual machine events to a
 log file stored in the virtual machine directory. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_eptrvimode_csharp">
 <a href="#state_eptrvimode_csharp" style="color: inherit; text-decoration: inherit;">Ept<wbr>Rvi<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EPT/RVI (hardware memory virtualization)
 setting for this virtual machine. Can be one of `automatic`, `on`, or `off`.
 Default: `automatic`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_extraconfig_csharp">
 <a href="#state_extraconfig_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -4759,64 +4401,59 @@ Default: `automatic`.
 machine. Can be used to supply advanced parameters not normally in
 configuration, such as instance metadata.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_firmware_csharp">
 <a href="#state_firmware_csharp" style="color: inherit; text-decoration: inherit;">Firmware</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The firmware interface to use on the virtual machine.
 Can be one of `bios` or `EFI`. Default: `bios`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_folder_csharp">
 <a href="#state_folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the folder to put this virtual machine in,
 relative to the datacenter that the resource pool is in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_forcepoweroff_csharp">
 <a href="#state_forcepoweroff_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Power<wbr>Off</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If a guest shutdown failed or timed out while
 updating or destroying (see
 `shutdown_wait_timeout`), force the power-off of
 the virtual machine. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_guestid_csharp">
 <a href="#state_guestid_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The guest ID for the operating system type. For a
 full list of possible values, see [here][vmware-docs-guest-ids]. Default: `other-64`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_guestipaddresses_csharp">
 <a href="#state_guestipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Ip<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The current list of IP addresses on this machine,
 including the value of `default_ip_address`. If VMware tools is not running
@@ -4824,28 +4461,26 @@ on the virtual machine, or if the VM is powered off, this list will be empty.
 * `moid`: The managed object reference ID of the created
 virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_hardwareversion_csharp">
 <a href="#state_hardwareversion_csharp" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The hardware version number. Valid range
 is from 4 to 15. The hardware version cannot be downgraded. See [virtual
 machine hardware compatibility][virtual-machine-hardware-compatibility] for
 more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_hostsystemid_csharp">
 <a href="#state_hostsystemid_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional managed object reference
 ID of a host to put this virtual machine on. See the
@@ -4854,68 +4489,63 @@ details on changing this value. If a `host_system_id` is not supplied,
 vSphere will select a host in the resource pool to place the virtual machine,
 according to any defaults or DRS policies in place.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_hvmode_csharp">
 <a href="#state_hvmode_csharp" style="color: inherit; text-decoration: inherit;">Hv<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The (non-nested) hardware virtualization setting for
 this virtual machine. Can be one of `hvAuto`, `hvOn`, or `hvOff`. Default:
 `hvAuto`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_idecontrollercount_csharp">
 <a href="#state_idecontrollercount_csharp" style="color: inherit; text-decoration: inherit;">Ide<wbr>Controller<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of IDE controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
 you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
 controllers.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ignoredguestips_csharp">
 <a href="#state_ignoredguestips_csharp" style="color: inherit; text-decoration: inherit;">Ignored<wbr>Guest<wbr>Ips</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of IP addresses and CIDR networks to
 ignore while waiting for an available IP address using either of the waiters.
 Any IP addresses in this list will be ignored if they show up so that the
 waiter will continue to wait for a real IP address. Default: [].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_imported_csharp">
 <a href="#state_imported_csharp" style="color: inherit; text-decoration: inherit;">Imported</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This is flagged if the virtual machine has been imported, or the
 state has been migrated from a previous version of the resource. It
 influences the behavior of the first post-import apply operation. See the
 section on importing below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_latencysensitivity_csharp">
 <a href="#state_latencysensitivity_csharp" style="color: inherit; text-decoration: inherit;">Latency<wbr>Sensitivity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls the scheduling delay of the
 virtual machine. Use a higher sensitivity for applications that require lower
@@ -4923,135 +4553,124 @@ latency, such as VOIP, media player applications, or applications that
 require frequent access to mouse or keyboard devices. Can be one of `low`,
 `normal`, `medium`, or `high`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memory_csharp">
 <a href="#state_memory_csharp" style="color: inherit; text-decoration: inherit;">Memory</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the virtual machine's memory, in MB.
 Default: `1024` (1 GB).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memoryhotaddenabled_csharp">
 <a href="#state_memoryhotaddenabled_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Hot<wbr>Add<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow memory to be added to this
 virtual machine while it is running.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memorylimit_csharp">
 <a href="#state_memorylimit_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of memory (in MB) that this
 virtual machine can consume, regardless of available resources. The default
 is no limit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memoryreservation_csharp">
 <a href="#state_memoryreservation_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of memory (in MB) that this
 virtual machine is guaranteed. The default is no reservation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memorysharecount_csharp">
 <a href="#state_memorysharecount_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Share<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of memory shares allocated to
 the virtual machine when the `memory_share_level` is `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memorysharelevel_csharp">
 <a href="#state_memorysharelevel_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Share<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for memory resources.
 Can be one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_migratewaittimeout_csharp">
 <a href="#state_migratewaittimeout_csharp" style="color: inherit; text-decoration: inherit;">Migrate<wbr>Wait<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to wait
 for a virtual machine migration to complete before failing. Default: 10
 minutes. Also see the section on virtual machine
 migration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_moid_csharp">
 <a href="#state_moid_csharp" style="color: inherit; text-decoration: inherit;">Moid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine object ID from VMWare
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An alias for both `label` and `path`, the latter when
 using `attach`. Required if not using `label`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nestedhvenabled_csharp">
 <a href="#state_nestedhvenabled_csharp" style="color: inherit; text-decoration: inherit;">Nested<wbr>Hv<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable nested hardware virtualization on
 this virtual machine, facilitating nested virtualization in the guest.
 Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkinterfaces_csharp">
 <a href="#state_networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinenetworkinterface">List&lt;Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
     </dt>
@@ -5059,38 +4678,35 @@ Default: `false`.
 virtual machine. See network interface options
 below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_numcorespersocket_csharp">
 <a href="#state_numcorespersocket_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Cores<wbr>Per<wbr>Socket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of cores per socket in this
 virtual machine. The number of vCPUs on the virtual machine will be
 `num_cpus` divided by `num_cores_per_socket`. If specified, the value
 supplied to `num_cpus` must be evenly divisible by this value. Default: `1`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_numcpus_csharp">
 <a href="#state_numcpus_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Cpus</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total number of virtual processor cores to assign
 to this virtual machine. Default: `1`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ovfdeploy_csharp">
 <a href="#state_ovfdeploy_csharp" style="color: inherit; text-decoration: inherit;">Ovf<wbr>Deploy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineovfdeploy">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy<wbr>Args</a></span>
     </dt>
@@ -5098,247 +4714,227 @@ to this virtual machine. Default: `1`.
 provided ovf/ova template. See creating a virtual machine from a
 ovf/ova template for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pcideviceids_csharp">
 <a href="#state_pcideviceids_csharp" style="color: inherit; text-decoration: inherit;">Pci<wbr>Device<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of host PCI device IDs to create PCI
 passthroughs for.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_powerontimeout_csharp">
 <a href="#state_powerontimeout_csharp" style="color: inherit; text-decoration: inherit;">Poweron<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, that we will be trying to power on a VM
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rebootrequired_csharp">
 <a href="#state_rebootrequired_csharp" style="color: inherit; text-decoration: inherit;">Reboot<wbr>Required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Value internal to the provider used to determine if a
 configuration set change requires a reboot. This value is only useful during
 an update process and gets reset on refresh.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resourcepoolid_csharp">
 <a href="#state_resourcepoolid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Pool<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the resource pool to put this virtual machine in.
 See the section on virtual machine migration
 for details on changing this value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runtoolsscriptsafterpoweron_csharp">
 <a href="#state_runtoolsscriptsafterpoweron_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>After<wbr>Power<wbr>On</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 post-power-on scripts when VMware tools is installed. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runtoolsscriptsafterresume_csharp">
 <a href="#state_runtoolsscriptsafterresume_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>After<wbr>Resume</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 post-resume scripts when VMware tools is installed. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runtoolsscriptsbeforeguestreboot_csharp">
 <a href="#state_runtoolsscriptsbeforeguestreboot_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Reboot</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 pre-reboot scripts when VMware tools is installed. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runtoolsscriptsbeforeguestshutdown_csharp">
 <a href="#state_runtoolsscriptsbeforeguestshutdown_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Shutdown</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution
 of pre-shutdown scripts when VMware tools is installed. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runtoolsscriptsbeforegueststandby_csharp">
 <a href="#state_runtoolsscriptsbeforegueststandby_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Standby</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 pre-standby scripts when VMware tools is installed. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_satacontrollercount_csharp">
 <a href="#state_satacontrollercount_csharp" style="color: inherit; text-decoration: inherit;">Sata<wbr>Controller<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of SATA controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
 you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
 controllers.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_scsibussharing_csharp">
 <a href="#state_scsibussharing_csharp" style="color: inherit; text-decoration: inherit;">Scsi<wbr>Bus<wbr>Sharing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mode for sharing the SCSI bus. The modes are
 physicalSharing, virtualSharing, and noSharing. Default: `noSharing`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_scsicontrollercount_csharp">
 <a href="#state_scsicontrollercount_csharp" style="color: inherit; text-decoration: inherit;">Scsi<wbr>Controller<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of SCSI controllers that
 this provider manages on this virtual machine. This directly affects the amount
 of disks you can add to the virtual machine and the maximum disk unit number.
 Note that lowering this value does not remove controllers. Default: `1`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_scsitype_csharp">
 <a href="#state_scsitype_csharp" style="color: inherit; text-decoration: inherit;">Scsi<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of SCSI bus this virtual machine will have.
 Can be one of lsilogic (LSI Logic Parallel), lsilogic-sas (LSI Logic SAS) or
 pvscsi (VMware Paravirtual). Defualt: `pvscsi`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_shutdownwaittimeout_csharp">
 <a href="#state_shutdownwaittimeout_csharp" style="color: inherit; text-decoration: inherit;">Shutdown<wbr>Wait<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to wait
 for a graceful guest shutdown when making necessary updates to the virtual
 machine. If `force_power_off` is set to true, the VM will be force powered-off
 after this timeout, otherwise an error is returned. Default: 3 minutes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_storagepolicyid_csharp">
 <a href="#state_storagepolicyid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the storage policy to assign to this disk.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_swapplacementpolicy_csharp">
 <a href="#state_swapplacementpolicy_csharp" style="color: inherit; text-decoration: inherit;">Swap<wbr>Placement<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The swap file placement policy for this
 virtual machine. Can be one of `inherit`, `hostLocal`, or `vmDirectory`.
 Default: `inherit`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_synctimewithhost_csharp">
 <a href="#state_synctimewithhost_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Time<wbr>With<wbr>Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable guest clock synchronization with
 the host. Requires VMware tools to be installed. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_uuid_csharp">
 <a href="#state_uuid_csharp" style="color: inherit; text-decoration: inherit;">Uuid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual disk's VMDK file. This is used to track the
 virtual disk on the virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vapp_csharp">
 <a href="#state_vapp_csharp" style="color: inherit; text-decoration: inherit;">Vapp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinevapp">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Vapp<wbr>Args</a></span>
     </dt>
@@ -5348,51 +4944,47 @@ imported from OVF or OVA files. See Using vApp properties to supply OVF/OVA
 configuration for
 more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vapptransports_csharp">
 <a href="#state_vapptransports_csharp" style="color: inherit; text-decoration: inherit;">Vapp<wbr>Transports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Computed value which is only valid for cloned virtual
 machines. A list of vApp transport methods supported by the source virtual
 machine or template.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vmwaretoolsstatus_csharp">
 <a href="#state_vmwaretoolsstatus_csharp" style="color: inherit; text-decoration: inherit;">Vmware<wbr>Tools<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of VMware tools in the guest. This will
 determine the proper course of action for some device operations.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vmxpath_csharp">
 <a href="#state_vmxpath_csharp" style="color: inherit; text-decoration: inherit;">Vmx<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of the virtual machine's configuration file in the VM's
 datastore.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_waitforguestiptimeout_csharp">
 <a href="#state_waitforguestiptimeout_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Guest<wbr>Ip<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to
 wait for an available guest IP address on this virtual machine. This should
@@ -5400,14 +4992,13 @@ only be used if your version of VMware Tools does not allow the
 `wait_for_guest_net_timeout` waiter to be
 used. A value less than 1 disables the waiter. Default: 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_waitforguestnetroutable_csharp">
 <a href="#state_waitforguestnetroutable_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Guest<wbr>Net<wbr>Routable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the guest
 network waiter waits for a routable address. When `false`, the waiter does
@@ -5416,14 +5007,13 @@ discovered default gateways as part of its success criteria. This property is
 ignored if the `wait_for_guest_ip_timeout`
 waiter is used. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_waitforguestnettimeout_csharp">
 <a href="#state_waitforguestnettimeout_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Guest<wbr>Net<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to
 wait for an available IP address on this virtual machine's NICs. Older
@@ -5432,10 +5022,8 @@ waiter can be disabled and the
 `wait_for_guest_ip_timeout` waiter can be used
 instead. A value less than 1 disables the waiter. Default: 5 minutes.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5444,94 +5032,87 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.
             title="Optional">
         <span id="state_alternateguestname_go">
 <a href="#state_alternateguestname_go" style="color: inherit; text-decoration: inherit;">Alternate<wbr>Guest<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The guest name for the operating system
 when `guest_id` is `other` or `other-64`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_annotation_go">
 <a href="#state_annotation_go" style="color: inherit; text-decoration: inherit;">Annotation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-provided description of the virtual machine.
 The default is no annotation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bootdelay_go">
 <a href="#state_bootdelay_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of milliseconds to wait before starting
 the boot sequence. The default is no delay.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bootretrydelay_go">
 <a href="#state_bootretrydelay_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Retry<wbr>Delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of milliseconds to wait before
 retrying the boot sequence. This only valid if `boot_retry_enabled` is true.
 Default: `10000` (10 seconds).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bootretryenabled_go">
 <a href="#state_bootretryenabled_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Retry<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, a virtual machine that
 fails to boot will try again after the delay defined in `boot_retry_delay`.
 Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cdrom_go">
 <a href="#state_cdrom_go" style="color: inherit; text-decoration: inherit;">Cdrom</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinecdrom">Virtual<wbr>Machine<wbr>Cdrom</a></span>
     </dt>
     <dd>{{% md %}}A specification for a CDROM device on this virtual
 machine. See CDROM options below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_changeversion_go">
 <a href="#state_changeversion_go" style="color: inherit; text-decoration: inherit;">Change<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier for a given version of the last
 configuration applied, such the timestamp of the last update to the
 configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_clone_go">
 <a href="#state_clone_go" style="color: inherit; text-decoration: inherit;">Clone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineclone">Virtual<wbr>Machine<wbr>Clone</a></span>
     </dt>
@@ -5540,123 +5121,113 @@ specified template. Optional customization options can be submitted as well.
 See creating a virtual machine from a
 template for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpuhotaddenabled_go">
 <a href="#state_cpuhotaddenabled_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Hot<wbr>Add<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow CPUs to be added to this virtual
 machine while it is running.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpuhotremoveenabled_go">
 <a href="#state_cpuhotremoveenabled_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Hot<wbr>Remove<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow CPUs to be removed to this
 virtual machine while it is running.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpulimit_go">
 <a href="#state_cpulimit_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of CPU (in MHz) that this virtual
 machine can consume, regardless of available resources. The default is no
 limit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpuperformancecountersenabled_go">
 <a href="#state_cpuperformancecountersenabled_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Performance<wbr>Counters<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable CPU performance
 counters on this virtual machine. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpureservation_go">
 <a href="#state_cpureservation_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of CPU (in MHz) that this virtual
 machine is guaranteed. The default is no reservation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpusharecount_go">
 <a href="#state_cpusharecount_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Share<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of CPU shares allocated to the
 virtual machine when the `cpu_share_level` is `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpusharelevel_go">
 <a href="#state_cpusharelevel_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Share<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for CPU resources. Can be
 one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_customattributes_go">
 <a href="#state_customattributes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
 value strings to set for virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_datacenterid_go">
 <a href="#state_datacenterid_go" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter id. Required only when deploying
 an ovf template.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_datastoreclusterid_go">
 <a href="#state_datastoreclusterid_go" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Cluster<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the datastore cluster ID to use. This setting
@@ -5664,26 +5235,24 @@ applies to entire virtual machine and implies that you wish to use Storage
 DRS with this virtual machine. See the section on virtual machine
 migration for details on changing this value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_datastoreid_go">
 <a href="#state_datastoreid_go" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with `client_device`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_defaultipaddress_go">
 <a href="#state_defaultipaddress_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address selected by the provider to be used with
 any provisioners configured on this resource.
@@ -5693,73 +5262,67 @@ address, and then the first general discovered address if neither exist. If
 VMware tools is not running on the virtual machine, or if the VM is powered
 off, this value will be blank.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disks_go">
 <a href="#state_disks_go" style="color: inherit; text-decoration: inherit;">Disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinedisk">[]Virtual<wbr>Machine<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}A specification for a virtual disk device on this virtual
 machine. See disk options below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_efisecurebootenabled_go">
 <a href="#state_efisecurebootenabled_go" style="color: inherit; text-decoration: inherit;">Efi<wbr>Secure<wbr>Boot<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When the `firmware` type is set to is
 `efi`, this enables EFI secure boot. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enablediskuuid_go">
 <a href="#state_enablediskuuid_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Disk<wbr>Uuid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Expose the UUIDs of attached virtual disks to
 the virtual machine, allowing access to them in the guest. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enablelogging_go">
 <a href="#state_enablelogging_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logging</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable logging of virtual machine events to a
 log file stored in the virtual machine directory. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_eptrvimode_go">
 <a href="#state_eptrvimode_go" style="color: inherit; text-decoration: inherit;">Ept<wbr>Rvi<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EPT/RVI (hardware memory virtualization)
 setting for this virtual machine. Can be one of `automatic`, `on`, or `off`.
 Default: `automatic`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_extraconfig_go">
 <a href="#state_extraconfig_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -5767,64 +5330,59 @@ Default: `automatic`.
 machine. Can be used to supply advanced parameters not normally in
 configuration, such as instance metadata.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_firmware_go">
 <a href="#state_firmware_go" style="color: inherit; text-decoration: inherit;">Firmware</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The firmware interface to use on the virtual machine.
 Can be one of `bios` or `EFI`. Default: `bios`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_folder_go">
 <a href="#state_folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the folder to put this virtual machine in,
 relative to the datacenter that the resource pool is in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_forcepoweroff_go">
 <a href="#state_forcepoweroff_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Power<wbr>Off</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If a guest shutdown failed or timed out while
 updating or destroying (see
 `shutdown_wait_timeout`), force the power-off of
 the virtual machine. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_guestid_go">
 <a href="#state_guestid_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The guest ID for the operating system type. For a
 full list of possible values, see [here][vmware-docs-guest-ids]. Default: `other-64`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_guestipaddresses_go">
 <a href="#state_guestipaddresses_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Ip<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The current list of IP addresses on this machine,
 including the value of `default_ip_address`. If VMware tools is not running
@@ -5832,28 +5390,26 @@ on the virtual machine, or if the VM is powered off, this list will be empty.
 * `moid`: The managed object reference ID of the created
 virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_hardwareversion_go">
 <a href="#state_hardwareversion_go" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The hardware version number. Valid range
 is from 4 to 15. The hardware version cannot be downgraded. See [virtual
 machine hardware compatibility][virtual-machine-hardware-compatibility] for
 more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_hostsystemid_go">
 <a href="#state_hostsystemid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional managed object reference
 ID of a host to put this virtual machine on. See the
@@ -5862,68 +5418,63 @@ details on changing this value. If a `host_system_id` is not supplied,
 vSphere will select a host in the resource pool to place the virtual machine,
 according to any defaults or DRS policies in place.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_hvmode_go">
 <a href="#state_hvmode_go" style="color: inherit; text-decoration: inherit;">Hv<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The (non-nested) hardware virtualization setting for
 this virtual machine. Can be one of `hvAuto`, `hvOn`, or `hvOff`. Default:
 `hvAuto`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_idecontrollercount_go">
 <a href="#state_idecontrollercount_go" style="color: inherit; text-decoration: inherit;">Ide<wbr>Controller<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of IDE controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
 you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
 controllers.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ignoredguestips_go">
 <a href="#state_ignoredguestips_go" style="color: inherit; text-decoration: inherit;">Ignored<wbr>Guest<wbr>Ips</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of IP addresses and CIDR networks to
 ignore while waiting for an available IP address using either of the waiters.
 Any IP addresses in this list will be ignored if they show up so that the
 waiter will continue to wait for a real IP address. Default: [].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_imported_go">
 <a href="#state_imported_go" style="color: inherit; text-decoration: inherit;">Imported</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This is flagged if the virtual machine has been imported, or the
 state has been migrated from a previous version of the resource. It
 influences the behavior of the first post-import apply operation. See the
 section on importing below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_latencysensitivity_go">
 <a href="#state_latencysensitivity_go" style="color: inherit; text-decoration: inherit;">Latency<wbr>Sensitivity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls the scheduling delay of the
 virtual machine. Use a higher sensitivity for applications that require lower
@@ -5931,135 +5482,124 @@ latency, such as VOIP, media player applications, or applications that
 require frequent access to mouse or keyboard devices. Can be one of `low`,
 `normal`, `medium`, or `high`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memory_go">
 <a href="#state_memory_go" style="color: inherit; text-decoration: inherit;">Memory</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the virtual machine's memory, in MB.
 Default: `1024` (1 GB).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memoryhotaddenabled_go">
 <a href="#state_memoryhotaddenabled_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Hot<wbr>Add<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow memory to be added to this
 virtual machine while it is running.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memorylimit_go">
 <a href="#state_memorylimit_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of memory (in MB) that this
 virtual machine can consume, regardless of available resources. The default
 is no limit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memoryreservation_go">
 <a href="#state_memoryreservation_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of memory (in MB) that this
 virtual machine is guaranteed. The default is no reservation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memorysharecount_go">
 <a href="#state_memorysharecount_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Share<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of memory shares allocated to
 the virtual machine when the `memory_share_level` is `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memorysharelevel_go">
 <a href="#state_memorysharelevel_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Share<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for memory resources.
 Can be one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_migratewaittimeout_go">
 <a href="#state_migratewaittimeout_go" style="color: inherit; text-decoration: inherit;">Migrate<wbr>Wait<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to wait
 for a virtual machine migration to complete before failing. Default: 10
 minutes. Also see the section on virtual machine
 migration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_moid_go">
 <a href="#state_moid_go" style="color: inherit; text-decoration: inherit;">Moid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine object ID from VMWare
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An alias for both `label` and `path`, the latter when
 using `attach`. Required if not using `label`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nestedhvenabled_go">
 <a href="#state_nestedhvenabled_go" style="color: inherit; text-decoration: inherit;">Nested<wbr>Hv<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable nested hardware virtualization on
 this virtual machine, facilitating nested virtualization in the guest.
 Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkinterfaces_go">
 <a href="#state_networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinenetworkinterface">[]Virtual<wbr>Machine<wbr>Network<wbr>Interface</a></span>
     </dt>
@@ -6067,38 +5607,35 @@ Default: `false`.
 virtual machine. See network interface options
 below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_numcorespersocket_go">
 <a href="#state_numcorespersocket_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Cores<wbr>Per<wbr>Socket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of cores per socket in this
 virtual machine. The number of vCPUs on the virtual machine will be
 `num_cpus` divided by `num_cores_per_socket`. If specified, the value
 supplied to `num_cpus` must be evenly divisible by this value. Default: `1`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_numcpus_go">
 <a href="#state_numcpus_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Cpus</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total number of virtual processor cores to assign
 to this virtual machine. Default: `1`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ovfdeploy_go">
 <a href="#state_ovfdeploy_go" style="color: inherit; text-decoration: inherit;">Ovf<wbr>Deploy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineovfdeploy">Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy</a></span>
     </dt>
@@ -6106,247 +5643,227 @@ to this virtual machine. Default: `1`.
 provided ovf/ova template. See creating a virtual machine from a
 ovf/ova template for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pcideviceids_go">
 <a href="#state_pcideviceids_go" style="color: inherit; text-decoration: inherit;">Pci<wbr>Device<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of host PCI device IDs to create PCI
 passthroughs for.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_powerontimeout_go">
 <a href="#state_powerontimeout_go" style="color: inherit; text-decoration: inherit;">Poweron<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, that we will be trying to power on a VM
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rebootrequired_go">
 <a href="#state_rebootrequired_go" style="color: inherit; text-decoration: inherit;">Reboot<wbr>Required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Value internal to the provider used to determine if a
 configuration set change requires a reboot. This value is only useful during
 an update process and gets reset on refresh.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resourcepoolid_go">
 <a href="#state_resourcepoolid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Pool<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the resource pool to put this virtual machine in.
 See the section on virtual machine migration
 for details on changing this value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runtoolsscriptsafterpoweron_go">
 <a href="#state_runtoolsscriptsafterpoweron_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>After<wbr>Power<wbr>On</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 post-power-on scripts when VMware tools is installed. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runtoolsscriptsafterresume_go">
 <a href="#state_runtoolsscriptsafterresume_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>After<wbr>Resume</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 post-resume scripts when VMware tools is installed. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runtoolsscriptsbeforeguestreboot_go">
 <a href="#state_runtoolsscriptsbeforeguestreboot_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Reboot</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 pre-reboot scripts when VMware tools is installed. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runtoolsscriptsbeforeguestshutdown_go">
 <a href="#state_runtoolsscriptsbeforeguestshutdown_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Shutdown</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution
 of pre-shutdown scripts when VMware tools is installed. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runtoolsscriptsbeforegueststandby_go">
 <a href="#state_runtoolsscriptsbeforegueststandby_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Standby</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 pre-standby scripts when VMware tools is installed. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_satacontrollercount_go">
 <a href="#state_satacontrollercount_go" style="color: inherit; text-decoration: inherit;">Sata<wbr>Controller<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of SATA controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
 you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
 controllers.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_scsibussharing_go">
 <a href="#state_scsibussharing_go" style="color: inherit; text-decoration: inherit;">Scsi<wbr>Bus<wbr>Sharing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mode for sharing the SCSI bus. The modes are
 physicalSharing, virtualSharing, and noSharing. Default: `noSharing`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_scsicontrollercount_go">
 <a href="#state_scsicontrollercount_go" style="color: inherit; text-decoration: inherit;">Scsi<wbr>Controller<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of SCSI controllers that
 this provider manages on this virtual machine. This directly affects the amount
 of disks you can add to the virtual machine and the maximum disk unit number.
 Note that lowering this value does not remove controllers. Default: `1`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_scsitype_go">
 <a href="#state_scsitype_go" style="color: inherit; text-decoration: inherit;">Scsi<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of SCSI bus this virtual machine will have.
 Can be one of lsilogic (LSI Logic Parallel), lsilogic-sas (LSI Logic SAS) or
 pvscsi (VMware Paravirtual). Defualt: `pvscsi`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_shutdownwaittimeout_go">
 <a href="#state_shutdownwaittimeout_go" style="color: inherit; text-decoration: inherit;">Shutdown<wbr>Wait<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to wait
 for a graceful guest shutdown when making necessary updates to the virtual
 machine. If `force_power_off` is set to true, the VM will be force powered-off
 after this timeout, otherwise an error is returned. Default: 3 minutes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_storagepolicyid_go">
 <a href="#state_storagepolicyid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the storage policy to assign to this disk.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_swapplacementpolicy_go">
 <a href="#state_swapplacementpolicy_go" style="color: inherit; text-decoration: inherit;">Swap<wbr>Placement<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The swap file placement policy for this
 virtual machine. Can be one of `inherit`, `hostLocal`, or `vmDirectory`.
 Default: `inherit`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_synctimewithhost_go">
 <a href="#state_synctimewithhost_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Time<wbr>With<wbr>Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable guest clock synchronization with
 the host. Requires VMware tools to be installed. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_uuid_go">
 <a href="#state_uuid_go" style="color: inherit; text-decoration: inherit;">Uuid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual disk's VMDK file. This is used to track the
 virtual disk on the virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vapp_go">
 <a href="#state_vapp_go" style="color: inherit; text-decoration: inherit;">Vapp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinevapp">Virtual<wbr>Machine<wbr>Vapp</a></span>
     </dt>
@@ -6356,51 +5873,47 @@ imported from OVF or OVA files. See Using vApp properties to supply OVF/OVA
 configuration for
 more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vapptransports_go">
 <a href="#state_vapptransports_go" style="color: inherit; text-decoration: inherit;">Vapp<wbr>Transports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Computed value which is only valid for cloned virtual
 machines. A list of vApp transport methods supported by the source virtual
 machine or template.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vmwaretoolsstatus_go">
 <a href="#state_vmwaretoolsstatus_go" style="color: inherit; text-decoration: inherit;">Vmware<wbr>Tools<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of VMware tools in the guest. This will
 determine the proper course of action for some device operations.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vmxpath_go">
 <a href="#state_vmxpath_go" style="color: inherit; text-decoration: inherit;">Vmx<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of the virtual machine's configuration file in the VM's
 datastore.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_waitforguestiptimeout_go">
 <a href="#state_waitforguestiptimeout_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Guest<wbr>Ip<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to
 wait for an available guest IP address on this virtual machine. This should
@@ -6408,14 +5921,13 @@ only be used if your version of VMware Tools does not allow the
 `wait_for_guest_net_timeout` waiter to be
 used. A value less than 1 disables the waiter. Default: 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_waitforguestnetroutable_go">
 <a href="#state_waitforguestnetroutable_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Guest<wbr>Net<wbr>Routable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the guest
 network waiter waits for a routable address. When `false`, the waiter does
@@ -6424,14 +5936,13 @@ discovered default gateways as part of its success criteria. This property is
 ignored if the `wait_for_guest_ip_timeout`
 waiter is used. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_waitforguestnettimeout_go">
 <a href="#state_waitforguestnettimeout_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Guest<wbr>Net<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to
 wait for an available IP address on this virtual machine's NICs. Older
@@ -6440,10 +5951,8 @@ waiter can be disabled and the
 `wait_for_guest_ip_timeout` waiter can be used
 instead. A value less than 1 disables the waiter. Default: 5 minutes.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6452,94 +5961,87 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.
             title="Optional">
         <span id="state_alternateguestname_nodejs">
 <a href="#state_alternateguestname_nodejs" style="color: inherit; text-decoration: inherit;">alternate<wbr>Guest<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The guest name for the operating system
 when `guest_id` is `other` or `other-64`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_annotation_nodejs">
 <a href="#state_annotation_nodejs" style="color: inherit; text-decoration: inherit;">annotation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-provided description of the virtual machine.
 The default is no annotation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bootdelay_nodejs">
 <a href="#state_bootdelay_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of milliseconds to wait before starting
 the boot sequence. The default is no delay.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bootretrydelay_nodejs">
 <a href="#state_bootretrydelay_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Retry<wbr>Delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of milliseconds to wait before
 retrying the boot sequence. This only valid if `boot_retry_enabled` is true.
 Default: `10000` (10 seconds).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bootretryenabled_nodejs">
 <a href="#state_bootretryenabled_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Retry<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, a virtual machine that
 fails to boot will try again after the delay defined in `boot_retry_delay`.
 Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cdrom_nodejs">
 <a href="#state_cdrom_nodejs" style="color: inherit; text-decoration: inherit;">cdrom</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinecdrom">Virtual<wbr>Machine<wbr>Cdrom</a></span>
     </dt>
     <dd>{{% md %}}A specification for a CDROM device on this virtual
 machine. See CDROM options below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_changeversion_nodejs">
 <a href="#state_changeversion_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier for a given version of the last
 configuration applied, such the timestamp of the last update to the
 configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_clone_nodejs">
 <a href="#state_clone_nodejs" style="color: inherit; text-decoration: inherit;">clone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineclone">Virtual<wbr>Machine<wbr>Clone</a></span>
     </dt>
@@ -6548,123 +6050,113 @@ specified template. Optional customization options can be submitted as well.
 See creating a virtual machine from a
 template for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpuhotaddenabled_nodejs">
 <a href="#state_cpuhotaddenabled_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Hot<wbr>Add<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow CPUs to be added to this virtual
 machine while it is running.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpuhotremoveenabled_nodejs">
 <a href="#state_cpuhotremoveenabled_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Hot<wbr>Remove<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow CPUs to be removed to this
 virtual machine while it is running.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpulimit_nodejs">
 <a href="#state_cpulimit_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum amount of CPU (in MHz) that this virtual
 machine can consume, regardless of available resources. The default is no
 limit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpuperformancecountersenabled_nodejs">
 <a href="#state_cpuperformancecountersenabled_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Performance<wbr>Counters<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable CPU performance
 counters on this virtual machine. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpureservation_nodejs">
 <a href="#state_cpureservation_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of CPU (in MHz) that this virtual
 machine is guaranteed. The default is no reservation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpusharecount_nodejs">
 <a href="#state_cpusharecount_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Share<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of CPU shares allocated to the
 virtual machine when the `cpu_share_level` is `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpusharelevel_nodejs">
 <a href="#state_cpusharelevel_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Share<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for CPU resources. Can be
 one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_customattributes_nodejs">
 <a href="#state_customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
 value strings to set for virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_datacenterid_nodejs">
 <a href="#state_datacenterid_nodejs" style="color: inherit; text-decoration: inherit;">datacenter<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter id. Required only when deploying
 an ovf template.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_datastoreclusterid_nodejs">
 <a href="#state_datastoreclusterid_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Cluster<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the datastore cluster ID to use. This setting
@@ -6672,26 +6164,24 @@ applies to entire virtual machine and implies that you wish to use Storage
 DRS with this virtual machine. See the section on virtual machine
 migration for details on changing this value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_datastoreid_nodejs">
 <a href="#state_datastoreid_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with `client_device`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_defaultipaddress_nodejs">
 <a href="#state_defaultipaddress_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address selected by the provider to be used with
 any provisioners configured on this resource.
@@ -6701,73 +6191,67 @@ address, and then the first general discovered address if neither exist. If
 VMware tools is not running on the virtual machine, or if the VM is powered
 off, this value will be blank.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disks_nodejs">
 <a href="#state_disks_nodejs" style="color: inherit; text-decoration: inherit;">disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinedisk">Virtual<wbr>Machine<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}A specification for a virtual disk device on this virtual
 machine. See disk options below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_efisecurebootenabled_nodejs">
 <a href="#state_efisecurebootenabled_nodejs" style="color: inherit; text-decoration: inherit;">efi<wbr>Secure<wbr>Boot<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When the `firmware` type is set to is
 `efi`, this enables EFI secure boot. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enablediskuuid_nodejs">
 <a href="#state_enablediskuuid_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Disk<wbr>Uuid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Expose the UUIDs of attached virtual disks to
 the virtual machine, allowing access to them in the guest. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enablelogging_nodejs">
 <a href="#state_enablelogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Logging</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable logging of virtual machine events to a
 log file stored in the virtual machine directory. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_eptrvimode_nodejs">
 <a href="#state_eptrvimode_nodejs" style="color: inherit; text-decoration: inherit;">ept<wbr>Rvi<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EPT/RVI (hardware memory virtualization)
 setting for this virtual machine. Can be one of `automatic`, `on`, or `off`.
 Default: `automatic`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_extraconfig_nodejs">
 <a href="#state_extraconfig_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -6775,64 +6259,59 @@ Default: `automatic`.
 machine. Can be used to supply advanced parameters not normally in
 configuration, such as instance metadata.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_firmware_nodejs">
 <a href="#state_firmware_nodejs" style="color: inherit; text-decoration: inherit;">firmware</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The firmware interface to use on the virtual machine.
 Can be one of `bios` or `EFI`. Default: `bios`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_folder_nodejs">
 <a href="#state_folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the folder to put this virtual machine in,
 relative to the datacenter that the resource pool is in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_forcepoweroff_nodejs">
 <a href="#state_forcepoweroff_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Power<wbr>Off</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If a guest shutdown failed or timed out while
 updating or destroying (see
 `shutdown_wait_timeout`), force the power-off of
 the virtual machine. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_guestid_nodejs">
 <a href="#state_guestid_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The guest ID for the operating system type. For a
 full list of possible values, see [here][vmware-docs-guest-ids]. Default: `other-64`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_guestipaddresses_nodejs">
 <a href="#state_guestipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Ip<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The current list of IP addresses on this machine,
 including the value of `default_ip_address`. If VMware tools is not running
@@ -6840,28 +6319,26 @@ on the virtual machine, or if the VM is powered off, this list will be empty.
 * `moid`: The managed object reference ID of the created
 virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_hardwareversion_nodejs">
 <a href="#state_hardwareversion_nodejs" style="color: inherit; text-decoration: inherit;">hardware<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The hardware version number. Valid range
 is from 4 to 15. The hardware version cannot be downgraded. See [virtual
 machine hardware compatibility][virtual-machine-hardware-compatibility] for
 more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_hostsystemid_nodejs">
 <a href="#state_hostsystemid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>System<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional managed object reference
 ID of a host to put this virtual machine on. See the
@@ -6870,68 +6347,63 @@ details on changing this value. If a `host_system_id` is not supplied,
 vSphere will select a host in the resource pool to place the virtual machine,
 according to any defaults or DRS policies in place.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_hvmode_nodejs">
 <a href="#state_hvmode_nodejs" style="color: inherit; text-decoration: inherit;">hv<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The (non-nested) hardware virtualization setting for
 this virtual machine. Can be one of `hvAuto`, `hvOn`, or `hvOff`. Default:
 `hvAuto`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_idecontrollercount_nodejs">
 <a href="#state_idecontrollercount_nodejs" style="color: inherit; text-decoration: inherit;">ide<wbr>Controller<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of IDE controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
 you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
 controllers.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ignoredguestips_nodejs">
 <a href="#state_ignoredguestips_nodejs" style="color: inherit; text-decoration: inherit;">ignored<wbr>Guest<wbr>Ips</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of IP addresses and CIDR networks to
 ignore while waiting for an available IP address using either of the waiters.
 Any IP addresses in this list will be ignored if they show up so that the
 waiter will continue to wait for a real IP address. Default: [].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_imported_nodejs">
 <a href="#state_imported_nodejs" style="color: inherit; text-decoration: inherit;">imported</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This is flagged if the virtual machine has been imported, or the
 state has been migrated from a previous version of the resource. It
 influences the behavior of the first post-import apply operation. See the
 section on importing below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_latencysensitivity_nodejs">
 <a href="#state_latencysensitivity_nodejs" style="color: inherit; text-decoration: inherit;">latency<wbr>Sensitivity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls the scheduling delay of the
 virtual machine. Use a higher sensitivity for applications that require lower
@@ -6939,135 +6411,124 @@ latency, such as VOIP, media player applications, or applications that
 require frequent access to mouse or keyboard devices. Can be one of `low`,
 `normal`, `medium`, or `high`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memory_nodejs">
 <a href="#state_memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the virtual machine's memory, in MB.
 Default: `1024` (1 GB).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memoryhotaddenabled_nodejs">
 <a href="#state_memoryhotaddenabled_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Hot<wbr>Add<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow memory to be added to this
 virtual machine while it is running.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memorylimit_nodejs">
 <a href="#state_memorylimit_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum amount of memory (in MB) that this
 virtual machine can consume, regardless of available resources. The default
 is no limit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memoryreservation_nodejs">
 <a href="#state_memoryreservation_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of memory (in MB) that this
 virtual machine is guaranteed. The default is no reservation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memorysharecount_nodejs">
 <a href="#state_memorysharecount_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Share<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of memory shares allocated to
 the virtual machine when the `memory_share_level` is `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memorysharelevel_nodejs">
 <a href="#state_memorysharelevel_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Share<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation level for memory resources.
 Can be one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_migratewaittimeout_nodejs">
 <a href="#state_migratewaittimeout_nodejs" style="color: inherit; text-decoration: inherit;">migrate<wbr>Wait<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to wait
 for a virtual machine migration to complete before failing. Default: 10
 minutes. Also see the section on virtual machine
 migration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_moid_nodejs">
 <a href="#state_moid_nodejs" style="color: inherit; text-decoration: inherit;">moid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine object ID from VMWare
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An alias for both `label` and `path`, the latter when
 using `attach`. Required if not using `label`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nestedhvenabled_nodejs">
 <a href="#state_nestedhvenabled_nodejs" style="color: inherit; text-decoration: inherit;">nested<wbr>Hv<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable nested hardware virtualization on
 this virtual machine, facilitating nested virtualization in the guest.
 Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkinterfaces_nodejs">
 <a href="#state_networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinenetworkinterface">Virtual<wbr>Machine<wbr>Network<wbr>Interface[]</a></span>
     </dt>
@@ -7075,38 +6536,35 @@ Default: `false`.
 virtual machine. See network interface options
 below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_numcorespersocket_nodejs">
 <a href="#state_numcorespersocket_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Cores<wbr>Per<wbr>Socket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of cores per socket in this
 virtual machine. The number of vCPUs on the virtual machine will be
 `num_cpus` divided by `num_cores_per_socket`. If specified, the value
 supplied to `num_cpus` must be evenly divisible by this value. Default: `1`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_numcpus_nodejs">
 <a href="#state_numcpus_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Cpus</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The total number of virtual processor cores to assign
 to this virtual machine. Default: `1`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ovfdeploy_nodejs">
 <a href="#state_ovfdeploy_nodejs" style="color: inherit; text-decoration: inherit;">ovf<wbr>Deploy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineovfdeploy">Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy</a></span>
     </dt>
@@ -7114,247 +6572,227 @@ to this virtual machine. Default: `1`.
 provided ovf/ova template. See creating a virtual machine from a
 ovf/ova template for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pcideviceids_nodejs">
 <a href="#state_pcideviceids_nodejs" style="color: inherit; text-decoration: inherit;">pci<wbr>Device<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of host PCI device IDs to create PCI
 passthroughs for.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_powerontimeout_nodejs">
 <a href="#state_powerontimeout_nodejs" style="color: inherit; text-decoration: inherit;">poweron<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, that we will be trying to power on a VM
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rebootrequired_nodejs">
 <a href="#state_rebootrequired_nodejs" style="color: inherit; text-decoration: inherit;">reboot<wbr>Required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Value internal to the provider used to determine if a
 configuration set change requires a reboot. This value is only useful during
 an update process and gets reset on refresh.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resourcepoolid_nodejs">
 <a href="#state_resourcepoolid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Pool<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the resource pool to put this virtual machine in.
 See the section on virtual machine migration
 for details on changing this value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runtoolsscriptsafterpoweron_nodejs">
 <a href="#state_runtoolsscriptsafterpoweron_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Tools<wbr>Scripts<wbr>After<wbr>Power<wbr>On</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 post-power-on scripts when VMware tools is installed. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runtoolsscriptsafterresume_nodejs">
 <a href="#state_runtoolsscriptsafterresume_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Tools<wbr>Scripts<wbr>After<wbr>Resume</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 post-resume scripts when VMware tools is installed. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runtoolsscriptsbeforeguestreboot_nodejs">
 <a href="#state_runtoolsscriptsbeforeguestreboot_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Reboot</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 pre-reboot scripts when VMware tools is installed. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runtoolsscriptsbeforeguestshutdown_nodejs">
 <a href="#state_runtoolsscriptsbeforeguestshutdown_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Shutdown</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the execution
 of pre-shutdown scripts when VMware tools is installed. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runtoolsscriptsbeforegueststandby_nodejs">
 <a href="#state_runtoolsscriptsbeforegueststandby_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Standby</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 pre-standby scripts when VMware tools is installed. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_satacontrollercount_nodejs">
 <a href="#state_satacontrollercount_nodejs" style="color: inherit; text-decoration: inherit;">sata<wbr>Controller<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of SATA controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
 you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
 controllers.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_scsibussharing_nodejs">
 <a href="#state_scsibussharing_nodejs" style="color: inherit; text-decoration: inherit;">scsi<wbr>Bus<wbr>Sharing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mode for sharing the SCSI bus. The modes are
 physicalSharing, virtualSharing, and noSharing. Default: `noSharing`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_scsicontrollercount_nodejs">
 <a href="#state_scsicontrollercount_nodejs" style="color: inherit; text-decoration: inherit;">scsi<wbr>Controller<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of SCSI controllers that
 this provider manages on this virtual machine. This directly affects the amount
 of disks you can add to the virtual machine and the maximum disk unit number.
 Note that lowering this value does not remove controllers. Default: `1`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_scsitype_nodejs">
 <a href="#state_scsitype_nodejs" style="color: inherit; text-decoration: inherit;">scsi<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of SCSI bus this virtual machine will have.
 Can be one of lsilogic (LSI Logic Parallel), lsilogic-sas (LSI Logic SAS) or
 pvscsi (VMware Paravirtual). Defualt: `pvscsi`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_shutdownwaittimeout_nodejs">
 <a href="#state_shutdownwaittimeout_nodejs" style="color: inherit; text-decoration: inherit;">shutdown<wbr>Wait<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to wait
 for a graceful guest shutdown when making necessary updates to the virtual
 machine. If `force_power_off` is set to true, the VM will be force powered-off
 after this timeout, otherwise an error is returned. Default: 3 minutes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_storagepolicyid_nodejs">
 <a href="#state_storagepolicyid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the storage policy to assign to this disk.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_swapplacementpolicy_nodejs">
 <a href="#state_swapplacementpolicy_nodejs" style="color: inherit; text-decoration: inherit;">swap<wbr>Placement<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The swap file placement policy for this
 virtual machine. Can be one of `inherit`, `hostLocal`, or `vmDirectory`.
 Default: `inherit`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_synctimewithhost_nodejs">
 <a href="#state_synctimewithhost_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Time<wbr>With<wbr>Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable guest clock synchronization with
 the host. Requires VMware tools to be installed. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_uuid_nodejs">
 <a href="#state_uuid_nodejs" style="color: inherit; text-decoration: inherit;">uuid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual disk's VMDK file. This is used to track the
 virtual disk on the virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vapp_nodejs">
 <a href="#state_vapp_nodejs" style="color: inherit; text-decoration: inherit;">vapp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinevapp">Virtual<wbr>Machine<wbr>Vapp</a></span>
     </dt>
@@ -7364,51 +6802,47 @@ imported from OVF or OVA files. See Using vApp properties to supply OVF/OVA
 configuration for
 more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vapptransports_nodejs">
 <a href="#state_vapptransports_nodejs" style="color: inherit; text-decoration: inherit;">vapp<wbr>Transports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Computed value which is only valid for cloned virtual
 machines. A list of vApp transport methods supported by the source virtual
 machine or template.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vmwaretoolsstatus_nodejs">
 <a href="#state_vmwaretoolsstatus_nodejs" style="color: inherit; text-decoration: inherit;">vmware<wbr>Tools<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of VMware tools in the guest. This will
 determine the proper course of action for some device operations.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vmxpath_nodejs">
 <a href="#state_vmxpath_nodejs" style="color: inherit; text-decoration: inherit;">vmx<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of the virtual machine's configuration file in the VM's
 datastore.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_waitforguestiptimeout_nodejs">
 <a href="#state_waitforguestiptimeout_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Guest<wbr>Ip<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to
 wait for an available guest IP address on this virtual machine. This should
@@ -7416,14 +6850,13 @@ only be used if your version of VMware Tools does not allow the
 `wait_for_guest_net_timeout` waiter to be
 used. A value less than 1 disables the waiter. Default: 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_waitforguestnetroutable_nodejs">
 <a href="#state_waitforguestnetroutable_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Guest<wbr>Net<wbr>Routable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the guest
 network waiter waits for a routable address. When `false`, the waiter does
@@ -7432,14 +6865,13 @@ discovered default gateways as part of its success criteria. This property is
 ignored if the `wait_for_guest_ip_timeout`
 waiter is used. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_waitforguestnettimeout_nodejs">
 <a href="#state_waitforguestnettimeout_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Guest<wbr>Net<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to
 wait for an available IP address on this virtual machine's NICs. Older
@@ -7448,10 +6880,8 @@ waiter can be disabled and the
 `wait_for_guest_ip_timeout` waiter can be used
 instead. A value less than 1 disables the waiter. Default: 5 minutes.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -7460,219 +6890,202 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.
             title="Optional">
         <span id="state_alternate_guest_name_python">
 <a href="#state_alternate_guest_name_python" style="color: inherit; text-decoration: inherit;">alternate_<wbr>guest_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The guest name for the operating system
 when `guest_id` is `other` or `other-64`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_annotation_python">
 <a href="#state_annotation_python" style="color: inherit; text-decoration: inherit;">annotation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A user-provided description of the virtual machine.
 The default is no annotation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boot_delay_python">
 <a href="#state_boot_delay_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of milliseconds to wait before starting
 the boot sequence. The default is no delay.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boot_retry_delay_python">
 <a href="#state_boot_retry_delay_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>retry_<wbr>delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of milliseconds to wait before
 retrying the boot sequence. This only valid if `boot_retry_enabled` is true.
 Default: `10000` (10 seconds).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boot_retry_enabled_python">
 <a href="#state_boot_retry_enabled_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>retry_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, a virtual machine that
 fails to boot will try again after the delay defined in `boot_retry_delay`.
 Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cdrom_python">
 <a href="#state_cdrom_python" style="color: inherit; text-decoration: inherit;">cdrom</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinecdrom">Dict[Virtual<wbr>Machine<wbr>Cdrom]</a></span>
+        <span class="property-type"><a href="#virtualmachinecdrom">Virtual<wbr>Machine<wbr>Cdrom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A specification for a CDROM device on this virtual
 machine. See CDROM options below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_change_version_python">
 <a href="#state_change_version_python" style="color: inherit; text-decoration: inherit;">change_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique identifier for a given version of the last
 configuration applied, such the timestamp of the last update to the
 configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_clone_python">
 <a href="#state_clone_python" style="color: inherit; text-decoration: inherit;">clone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineclone">Dict[Virtual<wbr>Machine<wbr>Clone]</a></span>
+        <span class="property-type"><a href="#virtualmachineclone">Virtual<wbr>Machine<wbr>Clone<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When specified, the VM will be created as a clone of a
 specified template. Optional customization options can be submitted as well.
 See creating a virtual machine from a
 template for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpu_hot_add_enabled_python">
 <a href="#state_cpu_hot_add_enabled_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>hot_<wbr>add_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow CPUs to be added to this virtual
 machine while it is running.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpu_hot_remove_enabled_python">
 <a href="#state_cpu_hot_remove_enabled_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>hot_<wbr>remove_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow CPUs to be removed to this
 virtual machine while it is running.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpu_limit_python">
 <a href="#state_cpu_limit_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of CPU (in MHz) that this virtual
 machine can consume, regardless of available resources. The default is no
 limit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpu_performance_counters_enabled_python">
 <a href="#state_cpu_performance_counters_enabled_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>performance_<wbr>counters_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable CPU performance
 counters on this virtual machine. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpu_reservation_python">
 <a href="#state_cpu_reservation_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of CPU (in MHz) that this virtual
 machine is guaranteed. The default is no reservation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpu_share_count_python">
 <a href="#state_cpu_share_count_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>share_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of CPU shares allocated to the
 virtual machine when the `cpu_share_level` is `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cpu_share_level_python">
 <a href="#state_cpu_share_level_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>share_<wbr>level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The allocation level for CPU resources. Can be
 one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_custom_attributes_python">
 <a href="#state_custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute
 value strings to set for virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_id_python">
 <a href="#state_datacenter_id_python" style="color: inherit; text-decoration: inherit;">datacenter_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The datacenter id. Required only when deploying
 an ovf template.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_datastore_cluster_id_python">
 <a href="#state_datastore_cluster_id_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>cluster_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the datastore cluster ID to use. This setting
@@ -7680,26 +7093,24 @@ applies to entire virtual machine and implies that you wish to use Storage
 DRS with this virtual machine. See the section on virtual machine
 migration for details on changing this value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_datastore_id_python">
 <a href="#state_datastore_id_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with `client_device`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_default_ip_address_python">
 <a href="#state_default_ip_address_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ip_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address selected by the provider to be used with
 any provisioners configured on this resource.
@@ -7709,138 +7120,127 @@ address, and then the first general discovered address if neither exist. If
 VMware tools is not running on the virtual machine, or if the VM is powered
 off, this value will be blank.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disks_python">
 <a href="#state_disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinedisk">List[Virtual<wbr>Machine<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#virtualmachinedisk">Sequence[Virtual<wbr>Machine<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A specification for a virtual disk device on this virtual
 machine. See disk options below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_efi_secure_boot_enabled_python">
 <a href="#state_efi_secure_boot_enabled_python" style="color: inherit; text-decoration: inherit;">efi_<wbr>secure_<wbr>boot_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When the `firmware` type is set to is
 `efi`, this enables EFI secure boot. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enable_disk_uuid_python">
 <a href="#state_enable_disk_uuid_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>disk_<wbr>uuid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Expose the UUIDs of attached virtual disks to
 the virtual machine, allowing access to them in the guest. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enable_logging_python">
 <a href="#state_enable_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>logging</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable logging of virtual machine events to a
 log file stored in the virtual machine directory. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ept_rvi_mode_python">
 <a href="#state_ept_rvi_mode_python" style="color: inherit; text-decoration: inherit;">ept_<wbr>rvi_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The EPT/RVI (hardware memory virtualization)
 setting for this virtual machine. Can be one of `automatic`, `on`, or `off`.
 Default: `automatic`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_extra_config_python">
 <a href="#state_extra_config_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Extra configuration data for this virtual
 machine. Can be used to supply advanced parameters not normally in
 configuration, such as instance metadata.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_firmware_python">
 <a href="#state_firmware_python" style="color: inherit; text-decoration: inherit;">firmware</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The firmware interface to use on the virtual machine.
 Can be one of `bios` or `EFI`. Default: `bios`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_folder_python">
 <a href="#state_folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the folder to put this virtual machine in,
 relative to the datacenter that the resource pool is in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_force_power_off_python">
 <a href="#state_force_power_off_python" style="color: inherit; text-decoration: inherit;">force_<wbr>power_<wbr>off</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If a guest shutdown failed or timed out while
 updating or destroying (see
 `shutdown_wait_timeout`), force the power-off of
 the virtual machine. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_guest_id_python">
 <a href="#state_guest_id_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The guest ID for the operating system type. For a
 full list of possible values, see [here][vmware-docs-guest-ids]. Default: `other-64`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_guest_ip_addresses_python">
 <a href="#state_guest_ip_addresses_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>ip_<wbr>addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The current list of IP addresses on this machine,
 including the value of `default_ip_address`. If VMware tools is not running
@@ -7848,28 +7248,26 @@ on the virtual machine, or if the VM is powered off, this list will be empty.
 * `moid`: The managed object reference ID of the created
 virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_hardware_version_python">
 <a href="#state_hardware_version_python" style="color: inherit; text-decoration: inherit;">hardware_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The hardware version number. Valid range
 is from 4 to 15. The hardware version cannot be downgraded. See [virtual
 machine hardware compatibility][virtual-machine-hardware-compatibility] for
 more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_host_system_id_python">
 <a href="#state_host_system_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>system_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional managed object reference
 ID of a host to put this virtual machine on. See the
@@ -7878,68 +7276,63 @@ details on changing this value. If a `host_system_id` is not supplied,
 vSphere will select a host in the resource pool to place the virtual machine,
 according to any defaults or DRS policies in place.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_hv_mode_python">
 <a href="#state_hv_mode_python" style="color: inherit; text-decoration: inherit;">hv_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The (non-nested) hardware virtualization setting for
 this virtual machine. Can be one of `hvAuto`, `hvOn`, or `hvOff`. Default:
 `hvAuto`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ide_controller_count_python">
 <a href="#state_ide_controller_count_python" style="color: inherit; text-decoration: inherit;">ide_<wbr>controller_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of IDE controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
 you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
 controllers.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ignored_guest_ips_python">
 <a href="#state_ignored_guest_ips_python" style="color: inherit; text-decoration: inherit;">ignored_<wbr>guest_<wbr>ips</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of IP addresses and CIDR networks to
 ignore while waiting for an available IP address using either of the waiters.
 Any IP addresses in this list will be ignored if they show up so that the
 waiter will continue to wait for a real IP address. Default: [].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_imported_python">
 <a href="#state_imported_python" style="color: inherit; text-decoration: inherit;">imported</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This is flagged if the virtual machine has been imported, or the
 state has been migrated from a previous version of the resource. It
 influences the behavior of the first post-import apply operation. See the
 section on importing below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_latency_sensitivity_python">
 <a href="#state_latency_sensitivity_python" style="color: inherit; text-decoration: inherit;">latency_<wbr>sensitivity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls the scheduling delay of the
 virtual machine. Use a higher sensitivity for applications that require lower
@@ -7947,424 +7340,390 @@ latency, such as VOIP, media player applications, or applications that
 require frequent access to mouse or keyboard devices. Can be one of `low`,
 `normal`, `medium`, or `high`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memory_python">
 <a href="#state_memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the virtual machine's memory, in MB.
 Default: `1024` (1 GB).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memory_hot_add_enabled_python">
 <a href="#state_memory_hot_add_enabled_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>hot_<wbr>add_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow memory to be added to this
 virtual machine while it is running.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memory_limit_python">
 <a href="#state_memory_limit_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of memory (in MB) that this
 virtual machine can consume, regardless of available resources. The default
 is no limit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memory_reservation_python">
 <a href="#state_memory_reservation_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of memory (in MB) that this
 virtual machine is guaranteed. The default is no reservation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memory_share_count_python">
 <a href="#state_memory_share_count_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>share_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of memory shares allocated to
 the virtual machine when the `memory_share_level` is `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memory_share_level_python">
 <a href="#state_memory_share_level_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>share_<wbr>level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The allocation level for memory resources.
 Can be one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_migrate_wait_timeout_python">
 <a href="#state_migrate_wait_timeout_python" style="color: inherit; text-decoration: inherit;">migrate_<wbr>wait_<wbr>timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to wait
 for a virtual machine migration to complete before failing. Default: 10
 minutes. Also see the section on virtual machine
 migration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_moid_python">
 <a href="#state_moid_python" style="color: inherit; text-decoration: inherit;">moid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The machine object ID from VMWare
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An alias for both `label` and `path`, the latter when
 using `attach`. Required if not using `label`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nested_hv_enabled_python">
 <a href="#state_nested_hv_enabled_python" style="color: inherit; text-decoration: inherit;">nested_<wbr>hv_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable nested hardware virtualization on
 this virtual machine, facilitating nested virtualization in the guest.
 Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_interfaces_python">
 <a href="#state_network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinenetworkinterface">List[Virtual<wbr>Machine<wbr>Network<wbr>Interface]</a></span>
+        <span class="property-type"><a href="#virtualmachinenetworkinterface">Sequence[Virtual<wbr>Machine<wbr>Network<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A specification for a virtual NIC on this
 virtual machine. See network interface options
 below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_num_cores_per_socket_python">
 <a href="#state_num_cores_per_socket_python" style="color: inherit; text-decoration: inherit;">num_<wbr>cores_<wbr>per_<wbr>socket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of cores per socket in this
 virtual machine. The number of vCPUs on the virtual machine will be
 `num_cpus` divided by `num_cores_per_socket`. If specified, the value
 supplied to `num_cpus` must be evenly divisible by this value. Default: `1`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_num_cpus_python">
 <a href="#state_num_cpus_python" style="color: inherit; text-decoration: inherit;">num_<wbr>cpus</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total number of virtual processor cores to assign
 to this virtual machine. Default: `1`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ovf_deploy_python">
 <a href="#state_ovf_deploy_python" style="color: inherit; text-decoration: inherit;">ovf_<wbr>deploy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineovfdeploy">Dict[Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy]</a></span>
+        <span class="property-type"><a href="#virtualmachineovfdeploy">Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When specified, the VM will be deployed from the
 provided ovf/ova template. See creating a virtual machine from a
 ovf/ova template for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pci_device_ids_python">
 <a href="#state_pci_device_ids_python" style="color: inherit; text-decoration: inherit;">pci_<wbr>device_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of host PCI device IDs to create PCI
 passthroughs for.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_poweron_timeout_python">
 <a href="#state_poweron_timeout_python" style="color: inherit; text-decoration: inherit;">poweron_<wbr>timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, that we will be trying to power on a VM
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_reboot_required_python">
 <a href="#state_reboot_required_python" style="color: inherit; text-decoration: inherit;">reboot_<wbr>required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Value internal to the provider used to determine if a
 configuration set change requires a reboot. This value is only useful during
 an update process and gets reset on refresh.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resource_pool_id_python">
 <a href="#state_resource_pool_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>pool_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the resource pool to put this virtual machine in.
 See the section on virtual machine migration
 for details on changing this value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_run_tools_scripts_after_power_on_python">
 <a href="#state_run_tools_scripts_after_power_on_python" style="color: inherit; text-decoration: inherit;">run_<wbr>tools_<wbr>scripts_<wbr>after_<wbr>power_<wbr>on</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 post-power-on scripts when VMware tools is installed. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_run_tools_scripts_after_resume_python">
 <a href="#state_run_tools_scripts_after_resume_python" style="color: inherit; text-decoration: inherit;">run_<wbr>tools_<wbr>scripts_<wbr>after_<wbr>resume</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 post-resume scripts when VMware tools is installed. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_run_tools_scripts_before_guest_reboot_python">
 <a href="#state_run_tools_scripts_before_guest_reboot_python" style="color: inherit; text-decoration: inherit;">run_<wbr>tools_<wbr>scripts_<wbr>before_<wbr>guest_<wbr>reboot</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 pre-reboot scripts when VMware tools is installed. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_run_tools_scripts_before_guest_shutdown_python">
 <a href="#state_run_tools_scripts_before_guest_shutdown_python" style="color: inherit; text-decoration: inherit;">run_<wbr>tools_<wbr>scripts_<wbr>before_<wbr>guest_<wbr>shutdown</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution
 of pre-shutdown scripts when VMware tools is installed. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_run_tools_scripts_before_guest_standby_python">
 <a href="#state_run_tools_scripts_before_guest_standby_python" style="color: inherit; text-decoration: inherit;">run_<wbr>tools_<wbr>scripts_<wbr>before_<wbr>guest_<wbr>standby</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the execution of
 pre-standby scripts when VMware tools is installed. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sata_controller_count_python">
 <a href="#state_sata_controller_count_python" style="color: inherit; text-decoration: inherit;">sata_<wbr>controller_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of SATA controllers that Terraform manages on this virtual machine. This directly affects the amount of disks
 you can add to the virtual machine and the maximum disk unit number. Note that lowering this value does not remove
 controllers.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_scsi_bus_sharing_python">
 <a href="#state_scsi_bus_sharing_python" style="color: inherit; text-decoration: inherit;">scsi_<wbr>bus_<wbr>sharing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Mode for sharing the SCSI bus. The modes are
 physicalSharing, virtualSharing, and noSharing. Default: `noSharing`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_scsi_controller_count_python">
 <a href="#state_scsi_controller_count_python" style="color: inherit; text-decoration: inherit;">scsi_<wbr>controller_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of SCSI controllers that
 this provider manages on this virtual machine. This directly affects the amount
 of disks you can add to the virtual machine and the maximum disk unit number.
 Note that lowering this value does not remove controllers. Default: `1`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_scsi_type_python">
 <a href="#state_scsi_type_python" style="color: inherit; text-decoration: inherit;">scsi_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of SCSI bus this virtual machine will have.
 Can be one of lsilogic (LSI Logic Parallel), lsilogic-sas (LSI Logic SAS) or
 pvscsi (VMware Paravirtual). Defualt: `pvscsi`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_shutdown_wait_timeout_python">
 <a href="#state_shutdown_wait_timeout_python" style="color: inherit; text-decoration: inherit;">shutdown_<wbr>wait_<wbr>timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to wait
 for a graceful guest shutdown when making necessary updates to the virtual
 machine. If `force_power_off` is set to true, the VM will be force powered-off
 after this timeout, otherwise an error is returned. Default: 3 minutes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_storage_policy_id_python">
 <a href="#state_storage_policy_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>policy_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The UUID of the storage policy to assign to this disk.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_swap_placement_policy_python">
 <a href="#state_swap_placement_policy_python" style="color: inherit; text-decoration: inherit;">swap_<wbr>placement_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The swap file placement policy for this
 virtual machine. Can be one of `inherit`, `hostLocal`, or `vmDirectory`.
 Default: `inherit`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sync_time_with_host_python">
 <a href="#state_sync_time_with_host_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>time_<wbr>with_<wbr>host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable guest clock synchronization with
 the host. Requires VMware tools to be installed. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_uuid_python">
 <a href="#state_uuid_python" style="color: inherit; text-decoration: inherit;">uuid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual disk's VMDK file. This is used to track the
 virtual disk on the virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vapp_python">
 <a href="#state_vapp_python" style="color: inherit; text-decoration: inherit;">vapp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinevapp">Dict[Virtual<wbr>Machine<wbr>Vapp]</a></span>
+        <span class="property-type"><a href="#virtualmachinevapp">Virtual<wbr>Machine<wbr>Vapp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional vApp configuration. The only sub-key available
 is `properties`, which is a key/value map of properties for virtual machines
@@ -8372,51 +7731,47 @@ imported from OVF or OVA files. See Using vApp properties to supply OVF/OVA
 configuration for
 more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vapp_transports_python">
 <a href="#state_vapp_transports_python" style="color: inherit; text-decoration: inherit;">vapp_<wbr>transports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Computed value which is only valid for cloned virtual
 machines. A list of vApp transport methods supported by the source virtual
 machine or template.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vmware_tools_status_python">
 <a href="#state_vmware_tools_status_python" style="color: inherit; text-decoration: inherit;">vmware_<wbr>tools_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of VMware tools in the guest. This will
 determine the proper course of action for some device operations.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vmx_path_python">
 <a href="#state_vmx_path_python" style="color: inherit; text-decoration: inherit;">vmx_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path of the virtual machine's configuration file in the VM's
 datastore.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_wait_for_guest_ip_timeout_python">
 <a href="#state_wait_for_guest_ip_timeout_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>guest_<wbr>ip_<wbr>timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to
 wait for an available guest IP address on this virtual machine. This should
@@ -8424,14 +7779,13 @@ only be used if your version of VMware Tools does not allow the
 `wait_for_guest_net_timeout` waiter to be
 used. A value less than 1 disables the waiter. Default: 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_wait_for_guest_net_routable_python">
 <a href="#state_wait_for_guest_net_routable_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>guest_<wbr>net_<wbr>routable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the guest
 network waiter waits for a routable address. When `false`, the waiter does
@@ -8440,14 +7794,13 @@ discovered default gateways as part of its success criteria. This property is
 ignored if the `wait_for_guest_ip_timeout`
 waiter is used. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_wait_for_guest_net_timeout_python">
 <a href="#state_wait_for_guest_net_timeout_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>guest_<wbr>net_<wbr>timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in minutes, to
 wait for an available IP address on this virtual machine's NICs. Older
@@ -8456,7 +7809,6 @@ waiter can be disabled and the
 `wait_for_guest_ip_timeout` waiter can be used
 instead. A value less than 1 disables the waiter. Default: 5 minutes.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -8465,11 +7817,8 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="virtualmachinecdrom">Virtual<wbr>Machine<wbr>Cdrom</h4>
@@ -8480,11 +7829,10 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineCdromArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineCdromOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Inputs.VirtualMachineCdromArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Outputs.VirtualMachineCdrom.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -8494,66 +7842,60 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.
             title="Optional">
         <span id="clientdevice_csharp">
 <a href="#clientdevice_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Device</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the device should be backed by
 remote client device. Conflicts with `datastore_id` and `path`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datastoreid_csharp">
 <a href="#datastoreid_csharp" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with `client_device`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deviceaddress_csharp">
 <a href="#deviceaddress_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An address internal to this provider that helps locate the
 device when `key` is unavailable. This follows a convention of
 `CONTROLLER_TYPE:BUS_NUMBER:UNIT_NUMBER`. Example: `scsi:0:1` means device
 unit 1 on SCSI bus 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the device within the virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the ISO file. Required for using a datastore
 ISO. Conflicts with `client_device`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -8562,66 +7904,60 @@ ISO. Conflicts with `client_device`.
             title="Optional">
         <span id="clientdevice_go">
 <a href="#clientdevice_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Device</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the device should be backed by
 remote client device. Conflicts with `datastore_id` and `path`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datastoreid_go">
 <a href="#datastoreid_go" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with `client_device`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deviceaddress_go">
 <a href="#deviceaddress_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An address internal to this provider that helps locate the
 device when `key` is unavailable. This follows a convention of
 `CONTROLLER_TYPE:BUS_NUMBER:UNIT_NUMBER`. Example: `scsi:0:1` means device
 unit 1 on SCSI bus 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the device within the virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the ISO file. Required for using a datastore
 ISO. Conflicts with `client_device`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -8630,137 +7966,122 @@ ISO. Conflicts with `client_device`.
             title="Optional">
         <span id="clientdevice_nodejs">
 <a href="#clientdevice_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Device</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the device should be backed by
 remote client device. Conflicts with `datastore_id` and `path`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datastoreid_nodejs">
 <a href="#datastoreid_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with `client_device`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deviceaddress_nodejs">
 <a href="#deviceaddress_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An address internal to this provider that helps locate the
 device when `key` is unavailable. This follows a convention of
 `CONTROLLER_TYPE:BUS_NUMBER:UNIT_NUMBER`. Example: `scsi:0:1` means device
 unit 1 on SCSI bus 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the device within the virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the ISO file. Required for using a datastore
 ISO. Conflicts with `client_device`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientdevice_python">
-<a href="#clientdevice_python" style="color: inherit; text-decoration: inherit;">client<wbr>Device</a>
-</span> 
+        <span id="client_device_python">
+<a href="#client_device_python" style="color: inherit; text-decoration: inherit;">client_<wbr>device</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the device should be backed by
 remote client device. Conflicts with `datastore_id` and `path`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datastore_id_python">
 <a href="#datastore_id_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with `client_device`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="deviceaddress_python">
-<a href="#deviceaddress_python" style="color: inherit; text-decoration: inherit;">device<wbr>Address</a>
-</span> 
+        <span id="device_address_python">
+<a href="#device_address_python" style="color: inherit; text-decoration: inherit;">device_<wbr>address</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An address internal to this provider that helps locate the
 device when `key` is unavailable. This follows a convention of
 `CONTROLLER_TYPE:BUS_NUMBER:UNIT_NUMBER`. Example: `scsi:0:1` means device
 unit 1 on SCSI bus 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the device within the virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the ISO file. Required for using a datastore
 ISO. Conflicts with `client_device`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="virtualmachineclone">Virtual<wbr>Machine<wbr>Clone</h4>
 {{% choosable language nodejs %}}
@@ -8770,11 +8091,10 @@ ISO. Conflicts with `client_device`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineCloneArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineCloneOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Inputs.VirtualMachineCloneArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Outputs.VirtualMachineClone.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -8784,65 +8104,58 @@ ISO. Conflicts with `client_device`.
             title="Required">
         <span id="templateuuid_csharp">
 <a href="#templateuuid_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Uuid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customize_csharp">
 <a href="#customize_csharp" style="color: inherit; text-decoration: inherit;">Customize</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineclonecustomize">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="linkedclone_csharp">
 <a href="#linkedclone_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Clone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ovfnetworkmap_csharp">
 <a href="#ovfnetworkmap_csharp" style="color: inherit; text-decoration: inherit;">Ovf<wbr>Network<wbr>Map</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ovfstoragemap_csharp">
 <a href="#ovfstoragemap_csharp" style="color: inherit; text-decoration: inherit;">Ovf<wbr>Storage<wbr>Map</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeout_csharp">
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -8851,65 +8164,58 @@ ISO. Conflicts with `client_device`.
             title="Required">
         <span id="templateuuid_go">
 <a href="#templateuuid_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Uuid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customize_go">
 <a href="#customize_go" style="color: inherit; text-decoration: inherit;">Customize</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineclonecustomize">Virtual<wbr>Machine<wbr>Clone<wbr>Customize</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="linkedclone_go">
 <a href="#linkedclone_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Clone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ovfnetworkmap_go">
 <a href="#ovfnetworkmap_go" style="color: inherit; text-decoration: inherit;">Ovf<wbr>Network<wbr>Map</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ovfstoragemap_go">
 <a href="#ovfstoragemap_go" style="color: inherit; text-decoration: inherit;">Ovf<wbr>Storage<wbr>Map</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeout_go">
 <a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -8918,135 +8224,118 @@ ISO. Conflicts with `client_device`.
             title="Required">
         <span id="templateuuid_nodejs">
 <a href="#templateuuid_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Uuid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customize_nodejs">
 <a href="#customize_nodejs" style="color: inherit; text-decoration: inherit;">customize</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineclonecustomize">Virtual<wbr>Machine<wbr>Clone<wbr>Customize</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="linkedclone_nodejs">
 <a href="#linkedclone_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Clone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ovfnetworkmap_nodejs">
 <a href="#ovfnetworkmap_nodejs" style="color: inherit; text-decoration: inherit;">ovf<wbr>Network<wbr>Map</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ovfstoragemap_nodejs">
 <a href="#ovfstoragemap_nodejs" style="color: inherit; text-decoration: inherit;">ovf<wbr>Storage<wbr>Map</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeout_nodejs">
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="templateuuid_python">
-<a href="#templateuuid_python" style="color: inherit; text-decoration: inherit;">template<wbr>Uuid</a>
-</span> 
+        <span id="template_uuid_python">
+<a href="#template_uuid_python" style="color: inherit; text-decoration: inherit;">template_<wbr>uuid</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customize_python">
 <a href="#customize_python" style="color: inherit; text-decoration: inherit;">customize</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineclonecustomize">Dict[Virtual<wbr>Machine<wbr>Clone<wbr>Customize]</a></span>
+        <span class="property-type"><a href="#virtualmachineclonecustomize">Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="linkedclone_python">
-<a href="#linkedclone_python" style="color: inherit; text-decoration: inherit;">linked<wbr>Clone</a>
-</span> 
+        <span id="linked_clone_python">
+<a href="#linked_clone_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>clone</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="ovfnetworkmap_python">
-<a href="#ovfnetworkmap_python" style="color: inherit; text-decoration: inherit;">ovf<wbr>Network<wbr>Map</a>
-</span> 
+        <span id="ovf_network_map_python">
+<a href="#ovf_network_map_python" style="color: inherit; text-decoration: inherit;">ovf_<wbr>network_<wbr>map</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="ovfstoragemap_python">
-<a href="#ovfstoragemap_python" style="color: inherit; text-decoration: inherit;">ovf<wbr>Storage<wbr>Map</a>
-</span> 
+        <span id="ovf_storage_map_python">
+<a href="#ovf_storage_map_python" style="color: inherit; text-decoration: inherit;">ovf_<wbr>storage_<wbr>map</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeout_python">
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="virtualmachineclonecustomize">Virtual<wbr>Machine<wbr>Clone<wbr>Customize</h4>
 {{% choosable language nodejs %}}
@@ -9056,11 +8345,10 @@ ISO. Conflicts with `client_device`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineCloneCustomizeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineCloneCustomizeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Inputs.VirtualMachineCloneCustomizeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Outputs.VirtualMachineCloneCustomize.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -9070,57 +8358,52 @@ ISO. Conflicts with `client_device`.
             title="Optional">
         <span id="dnsserverlists_csharp">
 <a href="#dnsserverlists_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Server<wbr>Lists</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dnssuffixlists_csharp">
 <a href="#dnssuffixlists_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Suffix<wbr>Lists</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipv4gateway_csharp">
 <a href="#ipv4gateway_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Gateway</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipv6gateway_csharp">
 <a href="#ipv6gateway_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Gateway</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="linuxoptions_csharp">
 <a href="#linuxoptions_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineclonecustomizelinuxoptions">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Linux<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkinterfaces_csharp">
 <a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineclonecustomizenetworkinterface">List&lt;Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
     </dt>
@@ -9128,40 +8411,35 @@ ISO. Conflicts with `client_device`.
 virtual machine. See network interface options
 below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeout_csharp">
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="windowsoptions_csharp">
 <a href="#windowsoptions_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineclonecustomizewindowsoptions">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Windows<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="windowssyspreptext_csharp">
 <a href="#windowssyspreptext_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Sysprep<wbr>Text</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -9170,57 +8448,52 @@ below.
             title="Optional">
         <span id="dnsserverlists_go">
 <a href="#dnsserverlists_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Server<wbr>Lists</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dnssuffixlists_go">
 <a href="#dnssuffixlists_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Suffix<wbr>Lists</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipv4gateway_go">
 <a href="#ipv4gateway_go" style="color: inherit; text-decoration: inherit;">Ipv4Gateway</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipv6gateway_go">
 <a href="#ipv6gateway_go" style="color: inherit; text-decoration: inherit;">Ipv6Gateway</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="linuxoptions_go">
 <a href="#linuxoptions_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineclonecustomizelinuxoptions">Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Linux<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkinterfaces_go">
 <a href="#networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineclonecustomizenetworkinterface">[]Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Network<wbr>Interface</a></span>
     </dt>
@@ -9228,40 +8501,35 @@ below.
 virtual machine. See network interface options
 below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeout_go">
 <a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="windowsoptions_go">
 <a href="#windowsoptions_go" style="color: inherit; text-decoration: inherit;">Windows<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineclonecustomizewindowsoptions">Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Windows<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="windowssyspreptext_go">
 <a href="#windowssyspreptext_go" style="color: inherit; text-decoration: inherit;">Windows<wbr>Sysprep<wbr>Text</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -9270,57 +8538,52 @@ below.
             title="Optional">
         <span id="dnsserverlists_nodejs">
 <a href="#dnsserverlists_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Server<wbr>Lists</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dnssuffixlists_nodejs">
 <a href="#dnssuffixlists_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Suffix<wbr>Lists</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipv4gateway_nodejs">
 <a href="#ipv4gateway_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Gateway</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipv6gateway_nodejs">
 <a href="#ipv6gateway_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Gateway</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="linuxoptions_nodejs">
 <a href="#linuxoptions_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineclonecustomizelinuxoptions">Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Linux<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkinterfaces_nodejs">
 <a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineclonecustomizenetworkinterface">Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Network<wbr>Interface[]</a></span>
     </dt>
@@ -9328,143 +8591,125 @@ below.
 virtual machine. See network interface options
 below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeout_nodejs">
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="windowsoptions_nodejs">
 <a href="#windowsoptions_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineclonecustomizewindowsoptions">Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Windows<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="windowssyspreptext_nodejs">
 <a href="#windowssyspreptext_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Sysprep<wbr>Text</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dnsserverlists_python">
-<a href="#dnsserverlists_python" style="color: inherit; text-decoration: inherit;">dns<wbr>Server<wbr>Lists</a>
-</span> 
+        <span id="dns_server_lists_python">
+<a href="#dns_server_lists_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>server_<wbr>lists</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="dnssuffixlists_python">
-<a href="#dnssuffixlists_python" style="color: inherit; text-decoration: inherit;">dns<wbr>Suffix<wbr>Lists</a>
-</span> 
+        <span id="dns_suffix_lists_python">
+<a href="#dns_suffix_lists_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>suffix_<wbr>lists</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="ipv4gateway_python">
-<a href="#ipv4gateway_python" style="color: inherit; text-decoration: inherit;">ipv4Gateway</a>
-</span> 
+        <span id="ipv4_gateway_python">
+<a href="#ipv4_gateway_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>gateway</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="ipv6gateway_python">
-<a href="#ipv6gateway_python" style="color: inherit; text-decoration: inherit;">ipv6Gateway</a>
-</span> 
+        <span id="ipv6_gateway_python">
+<a href="#ipv6_gateway_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>gateway</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="linuxoptions_python">
-<a href="#linuxoptions_python" style="color: inherit; text-decoration: inherit;">linux<wbr>Options</a>
-</span> 
+        <span id="linux_options_python">
+<a href="#linux_options_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>options</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineclonecustomizelinuxoptions">Dict[Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Linux<wbr>Options]</a></span>
+        <span class="property-type"><a href="#virtualmachineclonecustomizelinuxoptions">Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Linux<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_interfaces_python">
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineclonecustomizenetworkinterface">List[Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Network<wbr>Interface]</a></span>
+        <span class="property-type"><a href="#virtualmachineclonecustomizenetworkinterface">Sequence[Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Network<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A specification for a virtual NIC on this
 virtual machine. See network interface options
 below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeout_python">
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="windowsoptions_python">
-<a href="#windowsoptions_python" style="color: inherit; text-decoration: inherit;">windows<wbr>Options</a>
-</span> 
+        <span id="windows_options_python">
+<a href="#windows_options_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>options</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineclonecustomizewindowsoptions">Dict[Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Windows<wbr>Options]</a></span>
+        <span class="property-type"><a href="#virtualmachineclonecustomizewindowsoptions">Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Windows<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="windowssyspreptext_python">
-<a href="#windowssyspreptext_python" style="color: inherit; text-decoration: inherit;">windows<wbr>Sysprep<wbr>Text</a>
-</span> 
+        <span id="windows_sysprep_text_python">
+<a href="#windows_sysprep_text_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>sysprep_<wbr>text</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="virtualmachineclonecustomizelinuxoptions">Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Linux<wbr>Options</h4>
 {{% choosable language nodejs %}}
@@ -9474,11 +8719,10 @@ below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineCloneCustomizeLinuxOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineCloneCustomizeLinuxOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Inputs.VirtualMachineCloneCustomizeLinuxOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Outputs.VirtualMachineCloneCustomizeLinuxOptions.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -9488,45 +8732,40 @@ below.
             title="Required">
         <span id="domain_csharp">
 <a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hwclockutc_csharp">
 <a href="#hwclockutc_csharp" style="color: inherit; text-decoration: inherit;">Hw<wbr>Clock<wbr>Utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timezone_csharp">
 <a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -9535,45 +8774,40 @@ below.
             title="Required">
         <span id="domain_go">
 <a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hwclockutc_go">
 <a href="#hwclockutc_go" style="color: inherit; text-decoration: inherit;">Hw<wbr>Clock<wbr>Utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timezone_go">
 <a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -9582,45 +8816,40 @@ below.
             title="Required">
         <span id="domain_nodejs">
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hwclockutc_nodejs">
 <a href="#hwclockutc_nodejs" style="color: inherit; text-decoration: inherit;">hw<wbr>Clock<wbr>Utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timezone_nodejs">
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -9629,48 +8858,40 @@ below.
             title="Required">
         <span id="domain_python">
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="hostname_python">
-<a href="#hostname_python" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
-</span> 
+        <span id="host_name_python">
+<a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="hwclockutc_python">
-<a href="#hwclockutc_python" style="color: inherit; text-decoration: inherit;">hw<wbr>Clock<wbr>Utc</a>
-</span> 
+        <span id="hw_clock_utc_python">
+<a href="#hw_clock_utc_python" style="color: inherit; text-decoration: inherit;">hw_<wbr>clock_<wbr>utc</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="timezone_python">
-<a href="#timezone_python" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
-</span> 
+        <span id="time_zone_python">
+<a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="virtualmachineclonecustomizenetworkinterface">Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Network<wbr>Interface</h4>
 {{% choosable language nodejs %}}
@@ -9680,11 +8901,10 @@ below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineCloneCustomizeNetworkInterfaceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineCloneCustomizeNetworkInterfaceOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Inputs.VirtualMachineCloneCustomizeNetworkInterfaceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Outputs.VirtualMachineCloneCustomizeNetworkInterface.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -9694,65 +8914,58 @@ below.
             title="Optional">
         <span id="dnsdomain_csharp">
 <a href="#dnsdomain_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dnsserverlists_csharp">
 <a href="#dnsserverlists_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Server<wbr>Lists</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipv4address_csharp">
 <a href="#ipv4address_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipv4netmask_csharp">
 <a href="#ipv4netmask_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Netmask</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipv6address_csharp">
 <a href="#ipv6address_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipv6netmask_csharp">
 <a href="#ipv6netmask_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Netmask</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -9761,65 +8974,58 @@ below.
             title="Optional">
         <span id="dnsdomain_go">
 <a href="#dnsdomain_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dnsserverlists_go">
 <a href="#dnsserverlists_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Server<wbr>Lists</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipv4address_go">
 <a href="#ipv4address_go" style="color: inherit; text-decoration: inherit;">Ipv4Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipv4netmask_go">
 <a href="#ipv4netmask_go" style="color: inherit; text-decoration: inherit;">Ipv4Netmask</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipv6address_go">
 <a href="#ipv6address_go" style="color: inherit; text-decoration: inherit;">Ipv6Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipv6netmask_go">
 <a href="#ipv6netmask_go" style="color: inherit; text-decoration: inherit;">Ipv6Netmask</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -9828,135 +9034,118 @@ below.
             title="Optional">
         <span id="dnsdomain_nodejs">
 <a href="#dnsdomain_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dnsserverlists_nodejs">
 <a href="#dnsserverlists_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Server<wbr>Lists</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipv4address_nodejs">
 <a href="#ipv4address_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipv4netmask_nodejs">
 <a href="#ipv4netmask_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Netmask</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipv6address_nodejs">
 <a href="#ipv6address_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipv6netmask_nodejs">
 <a href="#ipv6netmask_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Netmask</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dnsdomain_python">
-<a href="#dnsdomain_python" style="color: inherit; text-decoration: inherit;">dns<wbr>Domain</a>
-</span> 
+        <span id="dns_domain_python">
+<a href="#dns_domain_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>domain</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="dnsserverlists_python">
-<a href="#dnsserverlists_python" style="color: inherit; text-decoration: inherit;">dns<wbr>Server<wbr>Lists</a>
-</span> 
+        <span id="dns_server_lists_python">
+<a href="#dns_server_lists_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>server_<wbr>lists</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="ipv4netmask_python">
-<a href="#ipv4netmask_python" style="color: inherit; text-decoration: inherit;">ipv4Netmask</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipv4_address_python">
 <a href="#ipv4_address_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="ipv6address_python">
-<a href="#ipv6address_python" style="color: inherit; text-decoration: inherit;">ipv6Address</a>
-</span> 
+        <span id="ipv4_netmask_python">
+<a href="#ipv4_netmask_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>netmask</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="ipv6netmask_python">
-<a href="#ipv6netmask_python" style="color: inherit; text-decoration: inherit;">ipv6Netmask</a>
-</span> 
+        <span id="ipv6_address_python">
+<a href="#ipv6_address_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipv6_netmask_python">
+<a href="#ipv6_netmask_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>netmask</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="virtualmachineclonecustomizewindowsoptions">Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Windows<wbr>Options</h4>
 {{% choosable language nodejs %}}
@@ -9966,11 +9155,10 @@ below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineCloneCustomizeWindowsOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineCloneCustomizeWindowsOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Inputs.VirtualMachineCloneCustomizeWindowsOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Outputs.VirtualMachineCloneCustomizeWindowsOptions.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -9980,135 +9168,121 @@ below.
             title="Required">
         <span id="computername_csharp">
 <a href="#computername_csharp" style="color: inherit; text-decoration: inherit;">Computer<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="adminpassword_csharp">
 <a href="#adminpassword_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autologon_csharp">
 <a href="#autologon_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Logon</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autologoncount_csharp">
 <a href="#autologoncount_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Logon<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="domainadminpassword_csharp">
 <a href="#domainadminpassword_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Admin<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="domainadminuser_csharp">
 <a href="#domainadminuser_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Admin<wbr>User</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fullname_csharp">
 <a href="#fullname_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="joindomain_csharp">
 <a href="#joindomain_csharp" style="color: inherit; text-decoration: inherit;">Join<wbr>Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="organizationname_csharp">
 <a href="#organizationname_csharp" style="color: inherit; text-decoration: inherit;">Organization<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="productkey_csharp">
 <a href="#productkey_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runoncecommandlists_csharp">
 <a href="#runoncecommandlists_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Once<wbr>Command<wbr>Lists</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timezone_csharp">
 <a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workgroup_csharp">
 <a href="#workgroup_csharp" style="color: inherit; text-decoration: inherit;">Workgroup</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -10117,135 +9291,121 @@ below.
             title="Required">
         <span id="computername_go">
 <a href="#computername_go" style="color: inherit; text-decoration: inherit;">Computer<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="adminpassword_go">
 <a href="#adminpassword_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autologon_go">
 <a href="#autologon_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Logon</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autologoncount_go">
 <a href="#autologoncount_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Logon<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="domainadminpassword_go">
 <a href="#domainadminpassword_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Admin<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="domainadminuser_go">
 <a href="#domainadminuser_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Admin<wbr>User</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fullname_go">
 <a href="#fullname_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="joindomain_go">
 <a href="#joindomain_go" style="color: inherit; text-decoration: inherit;">Join<wbr>Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="organizationname_go">
 <a href="#organizationname_go" style="color: inherit; text-decoration: inherit;">Organization<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="productkey_go">
 <a href="#productkey_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runoncecommandlists_go">
 <a href="#runoncecommandlists_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Once<wbr>Command<wbr>Lists</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timezone_go">
 <a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workgroup_go">
 <a href="#workgroup_go" style="color: inherit; text-decoration: inherit;">Workgroup</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -10254,275 +9414,244 @@ below.
             title="Required">
         <span id="computername_nodejs">
 <a href="#computername_nodejs" style="color: inherit; text-decoration: inherit;">computer<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="adminpassword_nodejs">
 <a href="#adminpassword_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autologon_nodejs">
 <a href="#autologon_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Logon</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autologoncount_nodejs">
 <a href="#autologoncount_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Logon<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="domainadminpassword_nodejs">
 <a href="#domainadminpassword_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Admin<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="domainadminuser_nodejs">
 <a href="#domainadminuser_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Admin<wbr>User</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fullname_nodejs">
 <a href="#fullname_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="joindomain_nodejs">
 <a href="#joindomain_nodejs" style="color: inherit; text-decoration: inherit;">join<wbr>Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="organizationname_nodejs">
 <a href="#organizationname_nodejs" style="color: inherit; text-decoration: inherit;">organization<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="productkey_nodejs">
 <a href="#productkey_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runoncecommandlists_nodejs">
 <a href="#runoncecommandlists_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Once<wbr>Command<wbr>Lists</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timezone_nodejs">
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workgroup_nodejs">
 <a href="#workgroup_nodejs" style="color: inherit; text-decoration: inherit;">workgroup</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="computername_python">
-<a href="#computername_python" style="color: inherit; text-decoration: inherit;">computer<wbr>Name</a>
-</span> 
+        <span id="computer_name_python">
+<a href="#computer_name_python" style="color: inherit; text-decoration: inherit;">computer_<wbr>name</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="adminpassword_python">
-<a href="#adminpassword_python" style="color: inherit; text-decoration: inherit;">admin<wbr>Password</a>
-</span> 
+        <span id="admin_password_python">
+<a href="#admin_password_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>password</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="autologon_python">
-<a href="#autologon_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Logon</a>
-</span> 
+        <span id="auto_logon_python">
+<a href="#auto_logon_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>logon</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="autologoncount_python">
-<a href="#autologoncount_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Logon<wbr>Count</a>
-</span> 
+        <span id="auto_logon_count_python">
+<a href="#auto_logon_count_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>logon_<wbr>count</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="domainadminpassword_python">
-<a href="#domainadminpassword_python" style="color: inherit; text-decoration: inherit;">domain<wbr>Admin<wbr>Password</a>
-</span> 
+        <span id="domain_admin_password_python">
+<a href="#domain_admin_password_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>admin_<wbr>password</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="domainadminuser_python">
-<a href="#domainadminuser_python" style="color: inherit; text-decoration: inherit;">domain<wbr>Admin<wbr>User</a>
-</span> 
+        <span id="domain_admin_user_python">
+<a href="#domain_admin_user_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>admin_<wbr>user</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="fullname_python">
-<a href="#fullname_python" style="color: inherit; text-decoration: inherit;">full<wbr>Name</a>
-</span> 
+        <span id="full_name_python">
+<a href="#full_name_python" style="color: inherit; text-decoration: inherit;">full_<wbr>name</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="joindomain_python">
-<a href="#joindomain_python" style="color: inherit; text-decoration: inherit;">join<wbr>Domain</a>
-</span> 
+        <span id="join_domain_python">
+<a href="#join_domain_python" style="color: inherit; text-decoration: inherit;">join_<wbr>domain</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="organizationname_python">
-<a href="#organizationname_python" style="color: inherit; text-decoration: inherit;">organization<wbr>Name</a>
-</span> 
+        <span id="organization_name_python">
+<a href="#organization_name_python" style="color: inherit; text-decoration: inherit;">organization_<wbr>name</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="productkey_python">
-<a href="#productkey_python" style="color: inherit; text-decoration: inherit;">product<wbr>Key</a>
-</span> 
+        <span id="product_key_python">
+<a href="#product_key_python" style="color: inherit; text-decoration: inherit;">product_<wbr>key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="runoncecommandlists_python">
-<a href="#runoncecommandlists_python" style="color: inherit; text-decoration: inherit;">run<wbr>Once<wbr>Command<wbr>Lists</a>
-</span> 
+        <span id="run_once_command_lists_python">
+<a href="#run_once_command_lists_python" style="color: inherit; text-decoration: inherit;">run_<wbr>once_<wbr>command_<wbr>lists</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="timezone_python">
-<a href="#timezone_python" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
-</span> 
+        <span id="time_zone_python">
+<a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workgroup_python">
 <a href="#workgroup_python" style="color: inherit; text-decoration: inherit;">workgroup</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="virtualmachinedisk">Virtual<wbr>Machine<wbr>Disk</h4>
 {{% choosable language nodejs %}}
@@ -10532,11 +9661,10 @@ below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineDiskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineDiskOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Inputs.VirtualMachineDiskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Outputs.VirtualMachineDisk.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -10546,61 +9674,57 @@ below.
             title="Optional">
         <span id="attach_csharp">
 <a href="#attach_csharp" style="color: inherit; text-decoration: inherit;">Attach</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Attach an external disk instead of creating a new one.
 Implies and conflicts with `keep_on_remove`. If set, you cannot set `size`,
 `eagerly_scrub`, or `thin_provisioned`. Must set `path` if used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="controllertype_csharp">
 <a href="#controllertype_csharp" style="color: inherit; text-decoration: inherit;">Controller<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of storage controller to attach the
 disk to. Can be `scsi`, `sata`, or `ide`. You must have the appropriate
 number of controllers enabled for the selected type. Default `scsi`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datastoreid_csharp">
 <a href="#datastoreid_csharp" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with `client_device`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deviceaddress_csharp">
 <a href="#deviceaddress_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An address internal to this provider that helps locate the
 device when `key` is unavailable. This follows a convention of
 `CONTROLLER_TYPE:BUS_NUMBER:UNIT_NUMBER`. Example: `scsi:0:1` means device
 unit 1 on SCSI bus 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="diskmode_csharp">
 <a href="#diskmode_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mode of this this virtual disk for purposes of
 writes and snapshotting. Can be one of `append`, `independent_nonpersistent`,
@@ -10608,122 +9732,112 @@ writes and snapshotting. Can be one of `append`, `independent_nonpersistent`,
 Default: `persistent`. For an explanation of options, click
 [here][vmware-docs-disk-mode].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disksharing_csharp">
 <a href="#disksharing_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Sharing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sharing mode of this virtual disk. Can be one
 of `sharingMultiWriter` or `sharingNone`. Default: `sharingNone`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="eagerlyscrub_csharp">
 <a href="#eagerlyscrub_csharp" style="color: inherit; text-decoration: inherit;">Eagerly<wbr>Scrub</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the disk space is zeroed out
 on VM creation. This will delay the creation of the disk or virtual machine.
 Cannot be set to `true` when `thin_provisioned` is `true`.  See the section
 on picking a disk type.  Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iolimit_csharp">
 <a href="#iolimit_csharp" style="color: inherit; text-decoration: inherit;">Io<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The upper limit of IOPS that this disk can use. The
 default is no limit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ioreservation_csharp">
 <a href="#ioreservation_csharp" style="color: inherit; text-decoration: inherit;">Io<wbr>Reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The I/O reservation (guarantee) that this disk
 has, in IOPS.  The default is no reservation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iosharecount_csharp">
 <a href="#iosharecount_csharp" style="color: inherit; text-decoration: inherit;">Io<wbr>Share<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The share count for this disk when the share
 level is `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iosharelevel_csharp">
 <a href="#iosharelevel_csharp" style="color: inherit; text-decoration: inherit;">Io<wbr>Share<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share allocation level for this disk. Can
 be one of `low`, `normal`, `high`, or `custom`. Default: `normal`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keeponremove_csharp">
 <a href="#keeponremove_csharp" style="color: inherit; text-decoration: inherit;">Keep<wbr>On<wbr>Remove</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Keep this disk when removing the device or
 destroying the virtual machine. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the device within the virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A label for the disk. Forces a new disk if changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An alias for both `label` and `path`, the latter when
 using `attach`. Required if not using `label`.
@@ -10738,62 +9852,57 @@ documentation for the label attribute at:
 
 https://www.terraform.io/docs/providers/vsphere/r/virtual_machine.html#label
 {{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the ISO file. Required for using a datastore
 ISO. Conflicts with `client_device`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the disk, in GB.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storagepolicyid_csharp">
 <a href="#storagepolicyid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the storage policy to assign to this disk.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="thinprovisioned_csharp">
 <a href="#thinprovisioned_csharp" style="color: inherit; text-decoration: inherit;">Thin<wbr>Provisioned</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, this disk is thin provisioned,
 with space for the file being allocated on an as-needed basis. Cannot be set
 to `true` when `eagerly_scrub` is `true`. See the section on picking a disk
 type. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unitnumber_csharp">
 <a href="#unitnumber_csharp" style="color: inherit; text-decoration: inherit;">Unit<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The disk number on the storage bus. The maximum
 value for this setting is the value of the controller count times the
@@ -10801,35 +9910,31 @@ controller capacity (15 for SCSI, 30 for SATA, and 2 for IDE).
 The default is `0`, for which one disk must be set to. Duplicate unit numbers
 are not allowed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="uuid_csharp">
 <a href="#uuid_csharp" style="color: inherit; text-decoration: inherit;">Uuid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual disk's VMDK file. This is used to track the
 virtual disk on the virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="writethrough_csharp">
 <a href="#writethrough_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Through</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, writes for this disk are sent
 directly to the filesystem immediately instead of being buffered. Default:
 `false`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -10838,61 +9943,57 @@ directly to the filesystem immediately instead of being buffered. Default:
             title="Optional">
         <span id="attach_go">
 <a href="#attach_go" style="color: inherit; text-decoration: inherit;">Attach</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Attach an external disk instead of creating a new one.
 Implies and conflicts with `keep_on_remove`. If set, you cannot set `size`,
 `eagerly_scrub`, or `thin_provisioned`. Must set `path` if used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="controllertype_go">
 <a href="#controllertype_go" style="color: inherit; text-decoration: inherit;">Controller<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of storage controller to attach the
 disk to. Can be `scsi`, `sata`, or `ide`. You must have the appropriate
 number of controllers enabled for the selected type. Default `scsi`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datastoreid_go">
 <a href="#datastoreid_go" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with `client_device`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deviceaddress_go">
 <a href="#deviceaddress_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An address internal to this provider that helps locate the
 device when `key` is unavailable. This follows a convention of
 `CONTROLLER_TYPE:BUS_NUMBER:UNIT_NUMBER`. Example: `scsi:0:1` means device
 unit 1 on SCSI bus 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="diskmode_go">
 <a href="#diskmode_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mode of this this virtual disk for purposes of
 writes and snapshotting. Can be one of `append`, `independent_nonpersistent`,
@@ -10900,122 +10001,112 @@ writes and snapshotting. Can be one of `append`, `independent_nonpersistent`,
 Default: `persistent`. For an explanation of options, click
 [here][vmware-docs-disk-mode].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disksharing_go">
 <a href="#disksharing_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Sharing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sharing mode of this virtual disk. Can be one
 of `sharingMultiWriter` or `sharingNone`. Default: `sharingNone`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="eagerlyscrub_go">
 <a href="#eagerlyscrub_go" style="color: inherit; text-decoration: inherit;">Eagerly<wbr>Scrub</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the disk space is zeroed out
 on VM creation. This will delay the creation of the disk or virtual machine.
 Cannot be set to `true` when `thin_provisioned` is `true`.  See the section
 on picking a disk type.  Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iolimit_go">
 <a href="#iolimit_go" style="color: inherit; text-decoration: inherit;">Io<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The upper limit of IOPS that this disk can use. The
 default is no limit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ioreservation_go">
 <a href="#ioreservation_go" style="color: inherit; text-decoration: inherit;">Io<wbr>Reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The I/O reservation (guarantee) that this disk
 has, in IOPS.  The default is no reservation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iosharecount_go">
 <a href="#iosharecount_go" style="color: inherit; text-decoration: inherit;">Io<wbr>Share<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The share count for this disk when the share
 level is `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iosharelevel_go">
 <a href="#iosharelevel_go" style="color: inherit; text-decoration: inherit;">Io<wbr>Share<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share allocation level for this disk. Can
 be one of `low`, `normal`, `high`, or `custom`. Default: `normal`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keeponremove_go">
 <a href="#keeponremove_go" style="color: inherit; text-decoration: inherit;">Keep<wbr>On<wbr>Remove</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Keep this disk when removing the device or
 destroying the virtual machine. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the device within the virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A label for the disk. Forces a new disk if changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An alias for both `label` and `path`, the latter when
 using `attach`. Required if not using `label`.
@@ -11030,62 +10121,57 @@ documentation for the label attribute at:
 
 https://www.terraform.io/docs/providers/vsphere/r/virtual_machine.html#label
 {{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the ISO file. Required for using a datastore
 ISO. Conflicts with `client_device`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the disk, in GB.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storagepolicyid_go">
 <a href="#storagepolicyid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the storage policy to assign to this disk.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="thinprovisioned_go">
 <a href="#thinprovisioned_go" style="color: inherit; text-decoration: inherit;">Thin<wbr>Provisioned</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, this disk is thin provisioned,
 with space for the file being allocated on an as-needed basis. Cannot be set
 to `true` when `eagerly_scrub` is `true`. See the section on picking a disk
 type. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unitnumber_go">
 <a href="#unitnumber_go" style="color: inherit; text-decoration: inherit;">Unit<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The disk number on the storage bus. The maximum
 value for this setting is the value of the controller count times the
@@ -11093,35 +10179,31 @@ controller capacity (15 for SCSI, 30 for SATA, and 2 for IDE).
 The default is `0`, for which one disk must be set to. Duplicate unit numbers
 are not allowed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="uuid_go">
 <a href="#uuid_go" style="color: inherit; text-decoration: inherit;">Uuid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual disk's VMDK file. This is used to track the
 virtual disk on the virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="writethrough_go">
 <a href="#writethrough_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Through</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, writes for this disk are sent
 directly to the filesystem immediately instead of being buffered. Default:
 `false`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -11130,61 +10212,57 @@ directly to the filesystem immediately instead of being buffered. Default:
             title="Optional">
         <span id="attach_nodejs">
 <a href="#attach_nodejs" style="color: inherit; text-decoration: inherit;">attach</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Attach an external disk instead of creating a new one.
 Implies and conflicts with `keep_on_remove`. If set, you cannot set `size`,
 `eagerly_scrub`, or `thin_provisioned`. Must set `path` if used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="controllertype_nodejs">
 <a href="#controllertype_nodejs" style="color: inherit; text-decoration: inherit;">controller<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of storage controller to attach the
 disk to. Can be `scsi`, `sata`, or `ide`. You must have the appropriate
 number of controllers enabled for the selected type. Default `scsi`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datastoreid_nodejs">
 <a href="#datastoreid_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with `client_device`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deviceaddress_nodejs">
 <a href="#deviceaddress_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An address internal to this provider that helps locate the
 device when `key` is unavailable. This follows a convention of
 `CONTROLLER_TYPE:BUS_NUMBER:UNIT_NUMBER`. Example: `scsi:0:1` means device
 unit 1 on SCSI bus 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="diskmode_nodejs">
 <a href="#diskmode_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mode of this this virtual disk for purposes of
 writes and snapshotting. Can be one of `append`, `independent_nonpersistent`,
@@ -11192,122 +10270,112 @@ writes and snapshotting. Can be one of `append`, `independent_nonpersistent`,
 Default: `persistent`. For an explanation of options, click
 [here][vmware-docs-disk-mode].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disksharing_nodejs">
 <a href="#disksharing_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Sharing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sharing mode of this virtual disk. Can be one
 of `sharingMultiWriter` or `sharingNone`. Default: `sharingNone`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="eagerlyscrub_nodejs">
 <a href="#eagerlyscrub_nodejs" style="color: inherit; text-decoration: inherit;">eagerly<wbr>Scrub</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the disk space is zeroed out
 on VM creation. This will delay the creation of the disk or virtual machine.
 Cannot be set to `true` when `thin_provisioned` is `true`.  See the section
 on picking a disk type.  Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iolimit_nodejs">
 <a href="#iolimit_nodejs" style="color: inherit; text-decoration: inherit;">io<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The upper limit of IOPS that this disk can use. The
 default is no limit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ioreservation_nodejs">
 <a href="#ioreservation_nodejs" style="color: inherit; text-decoration: inherit;">io<wbr>Reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The I/O reservation (guarantee) that this disk
 has, in IOPS.  The default is no reservation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iosharecount_nodejs">
 <a href="#iosharecount_nodejs" style="color: inherit; text-decoration: inherit;">io<wbr>Share<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The share count for this disk when the share
 level is `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iosharelevel_nodejs">
 <a href="#iosharelevel_nodejs" style="color: inherit; text-decoration: inherit;">io<wbr>Share<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share allocation level for this disk. Can
 be one of `low`, `normal`, `high`, or `custom`. Default: `normal`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keeponremove_nodejs">
 <a href="#keeponremove_nodejs" style="color: inherit; text-decoration: inherit;">keep<wbr>On<wbr>Remove</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Keep this disk when removing the device or
 destroying the virtual machine. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the device within the virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A label for the disk. Forces a new disk if changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An alias for both `label` and `path`, the latter when
 using `attach`. Required if not using `label`.
@@ -11322,62 +10390,57 @@ documentation for the label attribute at:
 
 https://www.terraform.io/docs/providers/vsphere/r/virtual_machine.html#label
 {{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the ISO file. Required for using a datastore
 ISO. Conflicts with `client_device`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the disk, in GB.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storagepolicyid_nodejs">
 <a href="#storagepolicyid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the storage policy to assign to this disk.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="thinprovisioned_nodejs">
 <a href="#thinprovisioned_nodejs" style="color: inherit; text-decoration: inherit;">thin<wbr>Provisioned</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If `true`, this disk is thin provisioned,
 with space for the file being allocated on an as-needed basis. Cannot be set
 to `true` when `eagerly_scrub` is `true`. See the section on picking a disk
 type. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unitnumber_nodejs">
 <a href="#unitnumber_nodejs" style="color: inherit; text-decoration: inherit;">unit<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The disk number on the storage bus. The maximum
 value for this setting is the value of the controller count times the
@@ -11385,35 +10448,31 @@ controller capacity (15 for SCSI, 30 for SATA, and 2 for IDE).
 The default is `0`, for which one disk must be set to. Duplicate unit numbers
 are not allowed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="uuid_nodejs">
 <a href="#uuid_nodejs" style="color: inherit; text-decoration: inherit;">uuid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual disk's VMDK file. This is used to track the
 virtual disk on the virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="writethrough_nodejs">
 <a href="#writethrough_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Through</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If `true`, writes for this disk are sent
 directly to the filesystem immediately instead of being buffered. Default:
 `false`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -11422,61 +10481,57 @@ directly to the filesystem immediately instead of being buffered. Default:
             title="Optional">
         <span id="attach_python">
 <a href="#attach_python" style="color: inherit; text-decoration: inherit;">attach</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Attach an external disk instead of creating a new one.
 Implies and conflicts with `keep_on_remove`. If set, you cannot set `size`,
 `eagerly_scrub`, or `thin_provisioned`. Must set `path` if used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="controllertype_python">
-<a href="#controllertype_python" style="color: inherit; text-decoration: inherit;">controller<wbr>Type</a>
-</span> 
+        <span id="controller_type_python">
+<a href="#controller_type_python" style="color: inherit; text-decoration: inherit;">controller_<wbr>type</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of storage controller to attach the
 disk to. Can be `scsi`, `sata`, or `ide`. You must have the appropriate
 number of controllers enabled for the selected type. Default `scsi`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datastore_id_python">
 <a href="#datastore_id_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with `client_device`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="deviceaddress_python">
-<a href="#deviceaddress_python" style="color: inherit; text-decoration: inherit;">device<wbr>Address</a>
-</span> 
+        <span id="device_address_python">
+<a href="#device_address_python" style="color: inherit; text-decoration: inherit;">device_<wbr>address</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An address internal to this provider that helps locate the
 device when `key` is unavailable. This follows a convention of
 `CONTROLLER_TYPE:BUS_NUMBER:UNIT_NUMBER`. Example: `scsi:0:1` means device
 unit 1 on SCSI bus 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="diskmode_python">
-<a href="#diskmode_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Mode</a>
-</span> 
+        <span id="disk_mode_python">
+<a href="#disk_mode_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>mode</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The mode of this this virtual disk for purposes of
 writes and snapshotting. Can be one of `append`, `independent_nonpersistent`,
@@ -11484,122 +10539,112 @@ writes and snapshotting. Can be one of `append`, `independent_nonpersistent`,
 Default: `persistent`. For an explanation of options, click
 [here][vmware-docs-disk-mode].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="disksharing_python">
-<a href="#disksharing_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Sharing</a>
-</span> 
+        <span id="disk_sharing_python">
+<a href="#disk_sharing_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>sharing</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The sharing mode of this virtual disk. Can be one
 of `sharingMultiWriter` or `sharingNone`. Default: `sharingNone`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="eagerlyscrub_python">
-<a href="#eagerlyscrub_python" style="color: inherit; text-decoration: inherit;">eagerly<wbr>Scrub</a>
-</span> 
+        <span id="eagerly_scrub_python">
+<a href="#eagerly_scrub_python" style="color: inherit; text-decoration: inherit;">eagerly_<wbr>scrub</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the disk space is zeroed out
 on VM creation. This will delay the creation of the disk or virtual machine.
 Cannot be set to `true` when `thin_provisioned` is `true`.  See the section
 on picking a disk type.  Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="iolimit_python">
-<a href="#iolimit_python" style="color: inherit; text-decoration: inherit;">io<wbr>Limit</a>
-</span> 
+        <span id="io_limit_python">
+<a href="#io_limit_python" style="color: inherit; text-decoration: inherit;">io_<wbr>limit</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The upper limit of IOPS that this disk can use. The
 default is no limit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="ioreservation_python">
-<a href="#ioreservation_python" style="color: inherit; text-decoration: inherit;">io<wbr>Reservation</a>
-</span> 
+        <span id="io_reservation_python">
+<a href="#io_reservation_python" style="color: inherit; text-decoration: inherit;">io_<wbr>reservation</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The I/O reservation (guarantee) that this disk
 has, in IOPS.  The default is no reservation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="iosharecount_python">
-<a href="#iosharecount_python" style="color: inherit; text-decoration: inherit;">io<wbr>Share<wbr>Count</a>
-</span> 
+        <span id="io_share_count_python">
+<a href="#io_share_count_python" style="color: inherit; text-decoration: inherit;">io_<wbr>share_<wbr>count</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The share count for this disk when the share
 level is `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="iosharelevel_python">
-<a href="#iosharelevel_python" style="color: inherit; text-decoration: inherit;">io<wbr>Share<wbr>Level</a>
-</span> 
+        <span id="io_share_level_python">
+<a href="#io_share_level_python" style="color: inherit; text-decoration: inherit;">io_<wbr>share_<wbr>level</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The share allocation level for this disk. Can
 be one of `low`, `normal`, `high`, or `custom`. Default: `normal`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="keeponremove_python">
-<a href="#keeponremove_python" style="color: inherit; text-decoration: inherit;">keep<wbr>On<wbr>Remove</a>
-</span> 
+        <span id="keep_on_remove_python">
+<a href="#keep_on_remove_python" style="color: inherit; text-decoration: inherit;">keep_<wbr>on_<wbr>remove</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Keep this disk when removing the device or
 destroying the virtual machine. Default: `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the device within the virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A label for the disk. Forces a new disk if changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An alias for both `label` and `path`, the latter when
 using `attach`. Required if not using `label`.
@@ -11614,62 +10659,57 @@ documentation for the label attribute at:
 
 https://www.terraform.io/docs/providers/vsphere/r/virtual_machine.html#label
 {{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the ISO file. Required for using a datastore
 ISO. Conflicts with `client_device`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the disk, in GB.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storage_policy_id_python">
 <a href="#storage_policy_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>policy_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The UUID of the storage policy to assign to this disk.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="thinprovisioned_python">
-<a href="#thinprovisioned_python" style="color: inherit; text-decoration: inherit;">thin<wbr>Provisioned</a>
-</span> 
+        <span id="thin_provisioned_python">
+<a href="#thin_provisioned_python" style="color: inherit; text-decoration: inherit;">thin_<wbr>provisioned</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, this disk is thin provisioned,
 with space for the file being allocated on an as-needed basis. Cannot be set
 to `true` when `eagerly_scrub` is `true`. See the section on picking a disk
 type. Default: `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="unitnumber_python">
-<a href="#unitnumber_python" style="color: inherit; text-decoration: inherit;">unit<wbr>Number</a>
-</span> 
+        <span id="unit_number_python">
+<a href="#unit_number_python" style="color: inherit; text-decoration: inherit;">unit_<wbr>number</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The disk number on the storage bus. The maximum
 value for this setting is the value of the controller count times the
@@ -11677,38 +10717,31 @@ controller capacity (15 for SCSI, 30 for SATA, and 2 for IDE).
 The default is `0`, for which one disk must be set to. Duplicate unit numbers
 are not allowed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="uuid_python">
 <a href="#uuid_python" style="color: inherit; text-decoration: inherit;">uuid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual disk's VMDK file. This is used to track the
 virtual disk on the virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="writethrough_python">
-<a href="#writethrough_python" style="color: inherit; text-decoration: inherit;">write<wbr>Through</a>
-</span> 
+        <span id="write_through_python">
+<a href="#write_through_python" style="color: inherit; text-decoration: inherit;">write_<wbr>through</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, writes for this disk are sent
 directly to the filesystem immediately instead of being buffered. Default:
 `false`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="virtualmachinenetworkinterface">Virtual<wbr>Machine<wbr>Network<wbr>Interface</h4>
 {{% choosable language nodejs %}}
@@ -11718,11 +10751,10 @@ directly to the filesystem immediately instead of being buffered. Default:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineNetworkInterfaceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineNetworkInterfaceOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Inputs.VirtualMachineNetworkInterfaceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Outputs.VirtualMachineNetworkInterface.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -11732,142 +10764,130 @@ directly to the filesystem immediately instead of being buffered. Default:
             title="Required">
         <span id="networkid_csharp">
 <a href="#networkid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the network to connect this interface to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="adaptertype_csharp">
 <a href="#adaptertype_csharp" style="color: inherit; text-decoration: inherit;">Adapter<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network interface type. Can be one of
 `e1000`, `e1000e`, or `vmxnet3`. Default: `vmxnet3`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bandwidthlimit_csharp">
 <a href="#bandwidthlimit_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The upper bandwidth limit of this network
 interface, in Mbits/sec. The default is no limit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bandwidthreservation_csharp">
 <a href="#bandwidthreservation_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The bandwidth reservation of this
 network interface, in Mbits/sec. The default is no reservation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bandwidthsharecount_csharp">
 <a href="#bandwidthsharecount_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Share<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The share count for this network
 interface when the share level is `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bandwidthsharelevel_csharp">
 <a href="#bandwidthsharelevel_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Share<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bandwidth share allocation level for
 this interface. Can be one of `low`, `normal`, `high`, or `custom`. Default:
 `normal`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deviceaddress_csharp">
 <a href="#deviceaddress_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An address internal to this provider that helps locate the
 device when `key` is unavailable. This follows a convention of
 `CONTROLLER_TYPE:BUS_NUMBER:UNIT_NUMBER`. Example: `scsi:0:1` means device
 unit 1 on SCSI bus 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the device within the virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="macaddress_csharp">
 <a href="#macaddress_csharp" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MAC address of this network interface. Can
 only be manually set if `use_static_mac` is true, otherwise this is a
 computed value that gives the current MAC address of this interface.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ovfmapping_csharp">
 <a href="#ovfmapping_csharp" style="color: inherit; text-decoration: inherit;">Ovf<wbr>Mapping</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies which OVF NIC the `network_interface`
 should be associated with. Only applies at creation and only when deploying
 from an OVF source.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="usestaticmac_csharp">
 <a href="#usestaticmac_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Static<wbr>Mac</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the `mac_address` field is treated as
 a static MAC address and set accordingly. Setting this to `true` requires
 `mac_address` to be set. Default: `false`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -11876,142 +10896,130 @@ a static MAC address and set accordingly. Setting this to `true` requires
             title="Required">
         <span id="networkid_go">
 <a href="#networkid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the network to connect this interface to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="adaptertype_go">
 <a href="#adaptertype_go" style="color: inherit; text-decoration: inherit;">Adapter<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network interface type. Can be one of
 `e1000`, `e1000e`, or `vmxnet3`. Default: `vmxnet3`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bandwidthlimit_go">
 <a href="#bandwidthlimit_go" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The upper bandwidth limit of this network
 interface, in Mbits/sec. The default is no limit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bandwidthreservation_go">
 <a href="#bandwidthreservation_go" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The bandwidth reservation of this
 network interface, in Mbits/sec. The default is no reservation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bandwidthsharecount_go">
 <a href="#bandwidthsharecount_go" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Share<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The share count for this network
 interface when the share level is `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bandwidthsharelevel_go">
 <a href="#bandwidthsharelevel_go" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Share<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bandwidth share allocation level for
 this interface. Can be one of `low`, `normal`, `high`, or `custom`. Default:
 `normal`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deviceaddress_go">
 <a href="#deviceaddress_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An address internal to this provider that helps locate the
 device when `key` is unavailable. This follows a convention of
 `CONTROLLER_TYPE:BUS_NUMBER:UNIT_NUMBER`. Example: `scsi:0:1` means device
 unit 1 on SCSI bus 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the device within the virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="macaddress_go">
 <a href="#macaddress_go" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MAC address of this network interface. Can
 only be manually set if `use_static_mac` is true, otherwise this is a
 computed value that gives the current MAC address of this interface.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ovfmapping_go">
 <a href="#ovfmapping_go" style="color: inherit; text-decoration: inherit;">Ovf<wbr>Mapping</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies which OVF NIC the `network_interface`
 should be associated with. Only applies at creation and only when deploying
 from an OVF source.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="usestaticmac_go">
 <a href="#usestaticmac_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Static<wbr>Mac</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the `mac_address` field is treated as
 a static MAC address and set accordingly. Setting this to `true` requires
 `mac_address` to be set. Default: `false`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -12020,289 +11028,262 @@ a static MAC address and set accordingly. Setting this to `true` requires
             title="Required">
         <span id="networkid_nodejs">
 <a href="#networkid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the network to connect this interface to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="adaptertype_nodejs">
 <a href="#adaptertype_nodejs" style="color: inherit; text-decoration: inherit;">adapter<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network interface type. Can be one of
 `e1000`, `e1000e`, or `vmxnet3`. Default: `vmxnet3`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bandwidthlimit_nodejs">
 <a href="#bandwidthlimit_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The upper bandwidth limit of this network
 interface, in Mbits/sec. The default is no limit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bandwidthreservation_nodejs">
 <a href="#bandwidthreservation_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>Reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The bandwidth reservation of this
 network interface, in Mbits/sec. The default is no reservation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bandwidthsharecount_nodejs">
 <a href="#bandwidthsharecount_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>Share<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The share count for this network
 interface when the share level is `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bandwidthsharelevel_nodejs">
 <a href="#bandwidthsharelevel_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>Share<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bandwidth share allocation level for
 this interface. Can be one of `low`, `normal`, `high`, or `custom`. Default:
 `normal`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deviceaddress_nodejs">
 <a href="#deviceaddress_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An address internal to this provider that helps locate the
 device when `key` is unavailable. This follows a convention of
 `CONTROLLER_TYPE:BUS_NUMBER:UNIT_NUMBER`. Example: `scsi:0:1` means device
 unit 1 on SCSI bus 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the device within the virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="macaddress_nodejs">
 <a href="#macaddress_nodejs" style="color: inherit; text-decoration: inherit;">mac<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MAC address of this network interface. Can
 only be manually set if `use_static_mac` is true, otherwise this is a
 computed value that gives the current MAC address of this interface.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ovfmapping_nodejs">
 <a href="#ovfmapping_nodejs" style="color: inherit; text-decoration: inherit;">ovf<wbr>Mapping</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies which OVF NIC the `network_interface`
 should be associated with. Only applies at creation and only when deploying
 from an OVF source.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="usestaticmac_nodejs">
 <a href="#usestaticmac_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Static<wbr>Mac</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the `mac_address` field is treated as
 a static MAC address and set accordingly. Setting this to `true` requires
 `mac_address` to be set. Default: `false`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="networkid_python">
-<a href="#networkid_python" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
-</span> 
+        <span id="network_id_python">
+<a href="#network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The managed object reference
 ID of the network to connect this interface to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="adapter_type_python">
 <a href="#adapter_type_python" style="color: inherit; text-decoration: inherit;">adapter_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The network interface type. Can be one of
 `e1000`, `e1000e`, or `vmxnet3`. Default: `vmxnet3`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="bandwidthlimit_python">
-<a href="#bandwidthlimit_python" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>Limit</a>
-</span> 
+        <span id="bandwidth_limit_python">
+<a href="#bandwidth_limit_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>limit</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The upper bandwidth limit of this network
 interface, in Mbits/sec. The default is no limit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="bandwidthreservation_python">
-<a href="#bandwidthreservation_python" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>Reservation</a>
-</span> 
+        <span id="bandwidth_reservation_python">
+<a href="#bandwidth_reservation_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>reservation</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The bandwidth reservation of this
 network interface, in Mbits/sec. The default is no reservation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="bandwidthsharecount_python">
-<a href="#bandwidthsharecount_python" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>Share<wbr>Count</a>
-</span> 
+        <span id="bandwidth_share_count_python">
+<a href="#bandwidth_share_count_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>share_<wbr>count</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The share count for this network
 interface when the share level is `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="bandwidthsharelevel_python">
-<a href="#bandwidthsharelevel_python" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>Share<wbr>Level</a>
-</span> 
+        <span id="bandwidth_share_level_python">
+<a href="#bandwidth_share_level_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>share_<wbr>level</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bandwidth share allocation level for
 this interface. Can be one of `low`, `normal`, `high`, or `custom`. Default:
 `normal`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="deviceaddress_python">
-<a href="#deviceaddress_python" style="color: inherit; text-decoration: inherit;">device<wbr>Address</a>
-</span> 
+        <span id="device_address_python">
+<a href="#device_address_python" style="color: inherit; text-decoration: inherit;">device_<wbr>address</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An address internal to this provider that helps locate the
 device when `key` is unavailable. This follows a convention of
 `CONTROLLER_TYPE:BUS_NUMBER:UNIT_NUMBER`. Example: `scsi:0:1` means device
 unit 1 on SCSI bus 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the device within the virtual machine.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="macaddress_python">
-<a href="#macaddress_python" style="color: inherit; text-decoration: inherit;">mac<wbr>Address</a>
-</span> 
+        <span id="mac_address_python">
+<a href="#mac_address_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>address</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The MAC address of this network interface. Can
 only be manually set if `use_static_mac` is true, otherwise this is a
 computed value that gives the current MAC address of this interface.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="ovfmapping_python">
-<a href="#ovfmapping_python" style="color: inherit; text-decoration: inherit;">ovf<wbr>Mapping</a>
-</span> 
+        <span id="ovf_mapping_python">
+<a href="#ovf_mapping_python" style="color: inherit; text-decoration: inherit;">ovf_<wbr>mapping</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies which OVF NIC the `network_interface`
 should be associated with. Only applies at creation and only when deploying
 from an OVF source.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="usestaticmac_python">
-<a href="#usestaticmac_python" style="color: inherit; text-decoration: inherit;">use<wbr>Static<wbr>Mac</a>
-</span> 
+        <span id="use_static_mac_python">
+<a href="#use_static_mac_python" style="color: inherit; text-decoration: inherit;">use_<wbr>static_<wbr>mac</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the `mac_address` field is treated as
 a static MAC address and set accordingly. Setting this to `true` requires
 `mac_address` to be set. Default: `false`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="virtualmachineovfdeploy">Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy</h4>
 {{% choosable language nodejs %}}
@@ -12312,11 +11293,10 @@ a static MAC address and set accordingly. Setting this to `true` requires
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineOvfDeployArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineOvfDeployOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Inputs.VirtualMachineOvfDeployArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Outputs.VirtualMachineOvfDeploy.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -12326,75 +11306,67 @@ a static MAC address and set accordingly. Setting this to `true` requires
             title="Optional">
         <span id="allowunverifiedsslcert_csharp">
 <a href="#allowunverifiedsslcert_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Unverified<wbr>Ssl<wbr>Cert</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="diskprovisioning_csharp">
 <a href="#diskprovisioning_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Provisioning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipallocationpolicy_csharp">
 <a href="#ipallocationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocation<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipprotocol_csharp">
 <a href="#ipprotocol_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="localovfpath_csharp">
 <a href="#localovfpath_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Ovf<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ovfnetworkmap_csharp">
 <a href="#ovfnetworkmap_csharp" style="color: inherit; text-decoration: inherit;">Ovf<wbr>Network<wbr>Map</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="remoteovfurl_csharp">
 <a href="#remoteovfurl_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Ovf<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -12403,75 +11375,67 @@ a static MAC address and set accordingly. Setting this to `true` requires
             title="Optional">
         <span id="allowunverifiedsslcert_go">
 <a href="#allowunverifiedsslcert_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Unverified<wbr>Ssl<wbr>Cert</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="diskprovisioning_go">
 <a href="#diskprovisioning_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Provisioning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipallocationpolicy_go">
 <a href="#ipallocationpolicy_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocation<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipprotocol_go">
 <a href="#ipprotocol_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="localovfpath_go">
 <a href="#localovfpath_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Ovf<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ovfnetworkmap_go">
 <a href="#ovfnetworkmap_go" style="color: inherit; text-decoration: inherit;">Ovf<wbr>Network<wbr>Map</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="remoteovfurl_go">
 <a href="#remoteovfurl_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Ovf<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -12480,155 +11444,136 @@ a static MAC address and set accordingly. Setting this to `true` requires
             title="Optional">
         <span id="allowunverifiedsslcert_nodejs">
 <a href="#allowunverifiedsslcert_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Unverified<wbr>Ssl<wbr>Cert</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="diskprovisioning_nodejs">
 <a href="#diskprovisioning_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Provisioning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipallocationpolicy_nodejs">
 <a href="#ipallocationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Allocation<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipprotocol_nodejs">
 <a href="#ipprotocol_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="localovfpath_nodejs">
 <a href="#localovfpath_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Ovf<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ovfnetworkmap_nodejs">
 <a href="#ovfnetworkmap_nodejs" style="color: inherit; text-decoration: inherit;">ovf<wbr>Network<wbr>Map</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="remoteovfurl_nodejs">
 <a href="#remoteovfurl_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Ovf<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowunverifiedsslcert_python">
-<a href="#allowunverifiedsslcert_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Unverified<wbr>Ssl<wbr>Cert</a>
-</span> 
+        <span id="allow_unverified_ssl_cert_python">
+<a href="#allow_unverified_ssl_cert_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>unverified_<wbr>ssl_<wbr>cert</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="diskprovisioning_python">
-<a href="#diskprovisioning_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Provisioning</a>
-</span> 
+        <span id="disk_provisioning_python">
+<a href="#disk_provisioning_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>provisioning</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="ipallocationpolicy_python">
-<a href="#ipallocationpolicy_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Allocation<wbr>Policy</a>
-</span> 
+        <span id="ip_allocation_policy_python">
+<a href="#ip_allocation_policy_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>allocation_<wbr>policy</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="ipprotocol_python">
-<a href="#ipprotocol_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocol</a>
-</span> 
+        <span id="ip_protocol_python">
+<a href="#ip_protocol_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocol</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="localovfpath_python">
-<a href="#localovfpath_python" style="color: inherit; text-decoration: inherit;">local<wbr>Ovf<wbr>Path</a>
-</span> 
+        <span id="local_ovf_path_python">
+<a href="#local_ovf_path_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ovf_<wbr>path</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="ovfnetworkmap_python">
-<a href="#ovfnetworkmap_python" style="color: inherit; text-decoration: inherit;">ovf<wbr>Network<wbr>Map</a>
-</span> 
+        <span id="ovf_network_map_python">
+<a href="#ovf_network_map_python" style="color: inherit; text-decoration: inherit;">ovf_<wbr>network_<wbr>map</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="remoteovfurl_python">
-<a href="#remoteovfurl_python" style="color: inherit; text-decoration: inherit;">remote<wbr>Ovf<wbr>Url</a>
-</span> 
+        <span id="remote_ovf_url_python">
+<a href="#remote_ovf_url_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>ovf_<wbr>url</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="virtualmachinevapp">Virtual<wbr>Machine<wbr>Vapp</h4>
 {{% choosable language nodejs %}}
@@ -12638,11 +11583,10 @@ a static MAC address and set accordingly. Setting this to `true` requires
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineVappArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#VirtualMachineVappOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Inputs.VirtualMachineVappArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Outputs.VirtualMachineVapp.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -12652,15 +11596,13 @@ a static MAC address and set accordingly. Setting this to `true` requires
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -12669,15 +11611,13 @@ a static MAC address and set accordingly. Setting this to `true` requires
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -12686,15 +11626,13 @@ a static MAC address and set accordingly. Setting this to `true` requires
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -12703,21 +11641,13 @@ a static MAC address and set accordingly. Setting this to `true` requires
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>

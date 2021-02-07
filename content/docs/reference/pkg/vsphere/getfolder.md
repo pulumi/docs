@@ -14,6 +14,7 @@ The `vsphere.Folder` data source can be used to get the general attributes of a
 vSphere inventory folder. Paths are absolute and include must include the
 datacenter.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -45,6 +46,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere"
+	"github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -123,7 +125,6 @@ const folder = pulumi.output(vsphere.getFolder({
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -131,9 +132,9 @@ The following arguments are supported:
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The absolute path of the folder. For example, given a
 default datacenter of `default-dc`, a folder of type `vm`, and a folder name
@@ -141,10 +142,8 @@ of `test-folder`, the resulting path would be
 `/default-dc/vm/test-folder`. The valid folder types to be used in
 the path are: `vm`, `host`, `datacenter`, `datastore`, or `network`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -153,9 +152,9 @@ the path are: `vm`, `host`, `datacenter`, `datastore`, or `network`.
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The absolute path of the folder. For example, given a
 default datacenter of `default-dc`, a folder of type `vm`, and a folder name
@@ -163,10 +162,8 @@ of `test-folder`, the resulting path would be
 `/default-dc/vm/test-folder`. The valid folder types to be used in
 the path are: `vm`, `host`, `datacenter`, `datastore`, or `network`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -175,9 +172,9 @@ the path are: `vm`, `host`, `datacenter`, `datastore`, or `network`.
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The absolute path of the folder. For example, given a
 default datacenter of `default-dc`, a folder of type `vm`, and a folder name
@@ -185,10 +182,8 @@ of `test-folder`, the resulting path would be
 `/default-dc/vm/test-folder`. The valid folder types to be used in
 the path are: `vm`, `host`, `datacenter`, `datastore`, or `network`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -197,9 +192,9 @@ the path are: `vm`, `host`, `datacenter`, `datastore`, or `network`.
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The absolute path of the folder. For example, given a
 default datacenter of `default-dc`, a folder of type `vm`, and a folder name
@@ -207,13 +202,8 @@ of `test-folder`, the resulting path would be
 `/default-dc/vm/test-folder`. The valid folder types to be used in
 the path are: `vm`, `host`, `datacenter`, `datastore`, or `network`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -224,7 +214,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -232,26 +221,23 @@ The following output properties are available:
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -260,26 +246,23 @@ The following output properties are available:
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -288,26 +271,23 @@ The following output properties are available:
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -316,29 +296,23 @@ The following output properties are available:
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

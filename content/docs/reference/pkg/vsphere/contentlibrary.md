@@ -18,19 +18,19 @@ meta_desc: "Explore the ContentLibrary resource of the vSphere package, includin
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ContentLibrary">ContentLibrary</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ContentLibraryArgs">ContentLibraryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ContentLibrary">ContentLibrary</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ContentLibraryArgs">ContentLibraryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vsphere/#pulumi_vsphere.ContentLibrary">ContentLibrary</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_backings</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vsphere/#pulumi_vsphere.ContentLibrary">ContentLibrary</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">publication</span><span class="p">:</span> <span class="nx">Optional[ContentLibraryPublicationArgs]</span> = None<span class="p">, </span><span class="nx">storage_backings</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">subscription</span><span class="p">:</span> <span class="nx">Optional[ContentLibrarySubscriptionArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ContentLibrary">NewContentLibrary</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ContentLibraryArgs">ContentLibraryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ContentLibrary">ContentLibrary</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ContentLibrary">NewContentLibrary</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ContentLibraryArgs">ContentLibraryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ContentLibrary">ContentLibrary</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.ContentLibrary.html">ContentLibrary</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.ContentLibraryArgs.html">ContentLibraryArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.ContentLibrary.html">ContentLibrary</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.ContentLibraryArgs.html">ContentLibraryArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -41,7 +41,7 @@ meta_desc: "Explore the ContentLibrary resource of the vSphere package, includin
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -110,7 +110,7 @@ meta_desc: "Explore the ContentLibrary resource of the vSphere package, includin
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -149,7 +149,7 @@ meta_desc: "Explore the ContentLibrary resource of the vSphere package, includin
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -190,7 +190,6 @@ The ContentLibrary resource accepts the following [input]({{< relref "/docs/intr
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -198,39 +197,55 @@ The ContentLibrary resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="storagebackings_csharp">
 <a href="#storagebackings_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Backings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The managed object reference ID on which to store Content Library
 items.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the Content Library.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Content Library.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publication_csharp">
+<a href="#publication_csharp" style="color: inherit; text-decoration: inherit;">Publication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#contentlibrarypublication">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Content<wbr>Library<wbr>Publication<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Options to publish a local Content Library.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subscription_csharp">
+<a href="#subscription_csharp" style="color: inherit; text-decoration: inherit;">Subscription</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#contentlibrarysubscription">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Content<wbr>Library<wbr>Subscription<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Options to publish a local Content Library.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -239,39 +254,55 @@ items.
             title="Required">
         <span id="storagebackings_go">
 <a href="#storagebackings_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Backings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The managed object reference ID on which to store Content Library
 items.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the Content Library.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Content Library.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publication_go">
+<a href="#publication_go" style="color: inherit; text-decoration: inherit;">Publication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#contentlibrarypublication">Content<wbr>Library<wbr>Publication</a></span>
+    </dt>
+    <dd>{{% md %}}Options to publish a local Content Library.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subscription_go">
+<a href="#subscription_go" style="color: inherit; text-decoration: inherit;">Subscription</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#contentlibrarysubscription">Content<wbr>Library<wbr>Subscription</a></span>
+    </dt>
+    <dd>{{% md %}}Options to publish a local Content Library.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -280,39 +311,55 @@ items.
             title="Required">
         <span id="storagebackings_nodejs">
 <a href="#storagebackings_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Backings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The managed object reference ID on which to store Content Library
 items.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the Content Library.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Content Library.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publication_nodejs">
+<a href="#publication_nodejs" style="color: inherit; text-decoration: inherit;">publication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#contentlibrarypublication">Content<wbr>Library<wbr>Publication</a></span>
+    </dt>
+    <dd>{{% md %}}Options to publish a local Content Library.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subscription_nodejs">
+<a href="#subscription_nodejs" style="color: inherit; text-decoration: inherit;">subscription</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#contentlibrarysubscription">Content<wbr>Library<wbr>Subscription</a></span>
+    </dt>
+    <dd>{{% md %}}Options to publish a local Content Library.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -321,48 +368,60 @@ items.
             title="Required">
         <span id="storage_backings_python">
 <a href="#storage_backings_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>backings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The managed object reference ID on which to store Content Library
 items.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the Content Library.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Content Library.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publication_python">
+<a href="#publication_python" style="color: inherit; text-decoration: inherit;">publication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#contentlibrarypublication">Content<wbr>Library<wbr>Publication<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Options to publish a local Content Library.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subscription_python">
+<a href="#subscription_python" style="color: inherit; text-decoration: inherit;">subscription</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#contentlibrarysubscription">Content<wbr>Library<wbr>Subscription<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Options to publish a local Content Library.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the ContentLibrary resource produces the following output properties:
-
 
 
 
@@ -373,15 +432,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -390,15 +447,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -407,15 +462,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -424,18 +477,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -445,20 +493,20 @@ Get an existing ContentLibrary resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ContentLibraryState">ContentLibraryState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ContentLibrary">ContentLibrary</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ContentLibraryState">ContentLibraryState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ContentLibrary">ContentLibrary</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_backings</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> ContentLibrary</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">publication</span><span class="p">:</span> <span class="nx">Optional[ContentLibraryPublicationArgs]</span> = None<span class="p">, </span><span class="nx">storage_backings</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">subscription</span><span class="p">:</span> <span class="nx">Optional[ContentLibrarySubscriptionArgs]</span> = None<span class="p">) -&gt;</span> ContentLibrary</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetContentLibrary<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ContentLibraryState">ContentLibraryState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ContentLibrary">ContentLibrary</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetContentLibrary<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ContentLibraryState">ContentLibraryState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ContentLibrary">ContentLibrary</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.ContentLibrary.html">ContentLibrary</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..ContentLibraryState.html">ContentLibraryState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.ContentLibrary.html">ContentLibrary</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere..ContentLibraryState.html">ContentLibraryState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -560,7 +608,6 @@ Get an existing ContentLibrary resource's state with the given name, ID, and opt
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -568,39 +615,55 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the Content Library.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Content Library.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_publication_csharp">
+<a href="#state_publication_csharp" style="color: inherit; text-decoration: inherit;">Publication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#contentlibrarypublication">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Content<wbr>Library<wbr>Publication<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Options to publish a local Content Library.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_storagebackings_csharp">
 <a href="#state_storagebackings_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Backings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The managed object reference ID on which to store Content Library
 items.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_subscription_csharp">
+<a href="#state_subscription_csharp" style="color: inherit; text-decoration: inherit;">Subscription</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#contentlibrarysubscription">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Content<wbr>Library<wbr>Subscription<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Options to publish a local Content Library.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -609,39 +672,55 @@ items.
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the Content Library.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Content Library.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_publication_go">
+<a href="#state_publication_go" style="color: inherit; text-decoration: inherit;">Publication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#contentlibrarypublication">Content<wbr>Library<wbr>Publication</a></span>
+    </dt>
+    <dd>{{% md %}}Options to publish a local Content Library.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_storagebackings_go">
 <a href="#state_storagebackings_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Backings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The managed object reference ID on which to store Content Library
 items.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_subscription_go">
+<a href="#state_subscription_go" style="color: inherit; text-decoration: inherit;">Subscription</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#contentlibrarysubscription">Content<wbr>Library<wbr>Subscription</a></span>
+    </dt>
+    <dd>{{% md %}}Options to publish a local Content Library.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -650,39 +729,55 @@ items.
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the Content Library.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Content Library.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_publication_nodejs">
+<a href="#state_publication_nodejs" style="color: inherit; text-decoration: inherit;">publication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#contentlibrarypublication">Content<wbr>Library<wbr>Publication</a></span>
+    </dt>
+    <dd>{{% md %}}Options to publish a local Content Library.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_storagebackings_nodejs">
 <a href="#state_storagebackings_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Backings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The managed object reference ID on which to store Content Library
 items.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_subscription_nodejs">
+<a href="#state_subscription_nodejs" style="color: inherit; text-decoration: inherit;">subscription</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#contentlibrarysubscription">Content<wbr>Library<wbr>Subscription</a></span>
+    </dt>
+    <dd>{{% md %}}Options to publish a local Content Library.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -691,36 +786,53 @@ items.
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the Content Library.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Content Library.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_publication_python">
+<a href="#state_publication_python" style="color: inherit; text-decoration: inherit;">publication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#contentlibrarypublication">Content<wbr>Library<wbr>Publication<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Options to publish a local Content Library.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_storage_backings_python">
 <a href="#state_storage_backings_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>backings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The managed object reference ID on which to store Content Library
 items.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_subscription_python">
+<a href="#state_subscription_python" style="color: inherit; text-decoration: inherit;">subscription</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#contentlibrarysubscription">Content<wbr>Library<wbr>Subscription<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Options to publish a local Content Library.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -729,9 +841,525 @@ items.
 
 
 
+## Supporting Types
 
 
 
+<h4 id="contentlibrarypublication">Content<wbr>Library<wbr>Publication</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#ContentLibraryPublication">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#ContentLibraryPublication">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ContentLibraryPublicationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ContentLibraryPublicationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Inputs.ContentLibraryPublicationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Outputs.ContentLibraryPublication.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authenticationmethod_csharp">
+<a href="#authenticationmethod_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Method to log into remote Content Library. Must be `NONE` or `BASIC`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Password to log in with.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publishurl_csharp">
+<a href="#publishurl_csharp" style="color: inherit; text-decoration: inherit;">Publish<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URL to remotely access the published Content Library.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="published_csharp">
+<a href="#published_csharp" style="color: inherit; text-decoration: inherit;">Published</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Bool determining if Content Library is published.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User name to log in with.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authenticationmethod_go">
+<a href="#authenticationmethod_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Method to log into remote Content Library. Must be `NONE` or `BASIC`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Password to log in with.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publishurl_go">
+<a href="#publishurl_go" style="color: inherit; text-decoration: inherit;">Publish<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URL to remotely access the published Content Library.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="published_go">
+<a href="#published_go" style="color: inherit; text-decoration: inherit;">Published</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Bool determining if Content Library is published.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User name to log in with.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authenticationmethod_nodejs">
+<a href="#authenticationmethod_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Method to log into remote Content Library. Must be `NONE` or `BASIC`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Password to log in with.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publishurl_nodejs">
+<a href="#publishurl_nodejs" style="color: inherit; text-decoration: inherit;">publish<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URL to remotely access the published Content Library.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="published_nodejs">
+<a href="#published_nodejs" style="color: inherit; text-decoration: inherit;">published</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Bool determining if Content Library is published.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User name to log in with.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authentication_method_python">
+<a href="#authentication_method_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Method to log into remote Content Library. Must be `NONE` or `BASIC`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Password to log in with.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publish_url_python">
+<a href="#publish_url_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}URL to remotely access the published Content Library.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="published_python">
+<a href="#published_python" style="color: inherit; text-decoration: inherit;">published</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Bool determining if Content Library is published.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}User name to log in with.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="contentlibrarysubscription">Content<wbr>Library<wbr>Subscription</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#ContentLibrarySubscription">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#ContentLibrarySubscription">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ContentLibrarySubscriptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ContentLibrarySubscriptionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Inputs.ContentLibrarySubscriptionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Outputs.ContentLibrarySubscription.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authenticationmethod_csharp">
+<a href="#authenticationmethod_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Method to log into remote Content Library. Must be `NONE` or `BASIC`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="automaticsync_csharp">
+<a href="#automaticsync_csharp" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Sync</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable automatic synchronization with the external content library.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ondemand_csharp">
+<a href="#ondemand_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Demand</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Download all library content immediately.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Password to log in with.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subscriptionurl_csharp">
+<a href="#subscriptionurl_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URL of remote Content Library.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User name to log in with.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authenticationmethod_go">
+<a href="#authenticationmethod_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Method to log into remote Content Library. Must be `NONE` or `BASIC`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="automaticsync_go">
+<a href="#automaticsync_go" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Sync</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable automatic synchronization with the external content library.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ondemand_go">
+<a href="#ondemand_go" style="color: inherit; text-decoration: inherit;">On<wbr>Demand</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Download all library content immediately.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Password to log in with.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subscriptionurl_go">
+<a href="#subscriptionurl_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URL of remote Content Library.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User name to log in with.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authenticationmethod_nodejs">
+<a href="#authenticationmethod_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Method to log into remote Content Library. Must be `NONE` or `BASIC`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="automaticsync_nodejs">
+<a href="#automaticsync_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Sync</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable automatic synchronization with the external content library.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ondemand_nodejs">
+<a href="#ondemand_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Demand</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Download all library content immediately.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Password to log in with.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subscriptionurl_nodejs">
+<a href="#subscriptionurl_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URL of remote Content Library.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User name to log in with.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authentication_method_python">
+<a href="#authentication_method_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Method to log into remote Content Library. Must be `NONE` or `BASIC`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="automatic_sync_python">
+<a href="#automatic_sync_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>sync</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable automatic synchronization with the external content library.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="on_demand_python">
+<a href="#on_demand_python" style="color: inherit; text-decoration: inherit;">on_<wbr>demand</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Download all library content immediately.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Password to log in with.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subscription_url_python">
+<a href="#subscription_url_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}URL of remote Content Library.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}User name to log in with.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

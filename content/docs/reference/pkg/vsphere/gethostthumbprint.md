@@ -15,6 +15,7 @@ thumbprint of an ESXi host. This can be used when adding the `vsphere.Host`
 resource. If the host is using a certificate chain, the first one returned
 will be used to generate the thumbprint.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -46,6 +47,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere"
+	"github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -122,7 +124,6 @@ const thumbprint = pulumi.output(vsphere.getHostThumbprint({
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -130,40 +131,36 @@ The following arguments are supported:
             title="Required">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of the ESXi host to retrieve the
 thumbprint from.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="insecure_csharp">
 <a href="#insecure_csharp" style="color: inherit; text-decoration: inherit;">Insecure</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean that can be set to true to disable SSL 
 certificate verification. Default: false
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The port to use connecting to the ESXi host. Default: 443
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -172,40 +169,36 @@ certificate verification. Default: false
             title="Required">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of the ESXi host to retrieve the
 thumbprint from.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="insecure_go">
 <a href="#insecure_go" style="color: inherit; text-decoration: inherit;">Insecure</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean that can be set to true to disable SSL 
 certificate verification. Default: false
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The port to use connecting to the ESXi host. Default: 443
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -214,40 +207,36 @@ certificate verification. Default: false
             title="Required">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of the ESXi host to retrieve the
 thumbprint from.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="insecure_nodejs">
 <a href="#insecure_nodejs" style="color: inherit; text-decoration: inherit;">insecure</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean that can be set to true to disable SSL 
 certificate verification. Default: false
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The port to use connecting to the ESXi host. Default: 443
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -256,43 +245,36 @@ certificate verification. Default: false
             title="Required">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The address of the ESXi host to retrieve the
 thumbprint from.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="insecure_python">
 <a href="#insecure_python" style="color: inherit; text-decoration: inherit;">insecure</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean that can be set to true to disable SSL 
 certificate verification. Default: false
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The port to use connecting to the ESXi host. Default: 443
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -303,7 +285,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -311,46 +292,41 @@ The following output properties are available:
             title="">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="insecure_csharp">
 <a href="#insecure_csharp" style="color: inherit; text-decoration: inherit;">Insecure</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -359,46 +335,41 @@ The following output properties are available:
             title="">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="insecure_go">
 <a href="#insecure_go" style="color: inherit; text-decoration: inherit;">Insecure</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -407,46 +378,41 @@ The following output properties are available:
             title="">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="insecure_nodejs">
 <a href="#insecure_nodejs" style="color: inherit; text-decoration: inherit;">insecure</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -455,49 +421,41 @@ The following output properties are available:
             title="">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="insecure_python">
 <a href="#insecure_python" style="color: inherit; text-decoration: inherit;">insecure</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

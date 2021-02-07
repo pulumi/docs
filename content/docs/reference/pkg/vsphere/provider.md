@@ -17,24 +17,25 @@ construction to achieve fine-grained programmatic control over provider settings
 
 
 
+
 ## Create a Provider Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#Provider">Provider</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#Provider">Provider</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vsphere/#pulumi_vsphere.Provider">Provider</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_unverified_ssl</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">client_debug</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">client_debug_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_debug_path_run</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">persist_session</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">rest_session_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vcenter_server</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vim_keep_alive</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">vim_session_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vsphere_server</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vsphere/#pulumi_vsphere.Provider">Provider</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_unverified_ssl</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">api_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">client_debug</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">client_debug_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_debug_path_run</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">persist_session</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">rest_session_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vcenter_server</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vim_keep_alive</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vim_session_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vsphere_server</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#Provider">NewProvider</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#Provider">Provider</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#Provider">NewProvider</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#Provider">Provider</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Provider.html">Provider</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.Pulumi.VsphereArgs.html">ProviderArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Provider.html">Provider</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.Pulumi.VsphereArgs.html">ProviderArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -45,7 +46,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -114,7 +115,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -153,7 +154,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -194,7 +195,6 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -202,136 +202,133 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="allowunverifiedssl_csharp">
 <a href="#allowunverifiedssl_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Unverified<wbr>Ssl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set, VMware vSphere client will permit unverifiable SSL certificates.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="apitimeout_csharp">
+<a href="#apitimeout_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}API timeout in minutes (Default: 5)
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clientdebug_csharp">
 <a href="#clientdebug_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Debug</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}govmomi debug
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="clientdebugpath_csharp">
 <a href="#clientdebugpath_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Debug<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}govmomi debug path for debug
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="clientdebugpathrun_csharp">
 <a href="#clientdebugpathrun_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Debug<wbr>Path<wbr>Run</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}govmomi debug path for a single run
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user password for vSphere API operations.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="persistsession_csharp">
 <a href="#persistsession_csharp" style="color: inherit; text-decoration: inherit;">Persist<wbr>Session</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Persist vSphere client sessions to disk
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="restsessionpath_csharp">
 <a href="#restsessionpath_csharp" style="color: inherit; text-decoration: inherit;">Rest<wbr>Session<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory to save vSphere REST API sessions to
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="user_csharp">
 <a href="#user_csharp" style="color: inherit; text-decoration: inherit;">User</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name for vSphere API operations.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="vcenterserver_csharp">
 <a href="#vcenterserver_csharp" style="color: inherit; text-decoration: inherit;">Vcenter<wbr>Server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been renamed to vsphere_server.{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vimkeepalive_csharp">
 <a href="#vimkeepalive_csharp" style="color: inherit; text-decoration: inherit;">Vim<wbr>Keep<wbr>Alive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Keep alive interval for the VIM session in minutes
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vimsessionpath_csharp">
 <a href="#vimsessionpath_csharp" style="color: inherit; text-decoration: inherit;">Vim<wbr>Session<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory to save vSphere SOAP API sessions to
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vsphereserver_csharp">
 <a href="#vsphereserver_csharp" style="color: inherit; text-decoration: inherit;">Vsphere<wbr>Server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vSphere Server name for vSphere API operations.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -340,136 +337,133 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="allowunverifiedssl_go">
 <a href="#allowunverifiedssl_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Unverified<wbr>Ssl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set, VMware vSphere client will permit unverifiable SSL certificates.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="apitimeout_go">
+<a href="#apitimeout_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}API timeout in minutes (Default: 5)
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clientdebug_go">
 <a href="#clientdebug_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Debug</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}govmomi debug
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="clientdebugpath_go">
 <a href="#clientdebugpath_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Debug<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}govmomi debug path for debug
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="clientdebugpathrun_go">
 <a href="#clientdebugpathrun_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Debug<wbr>Path<wbr>Run</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}govmomi debug path for a single run
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user password for vSphere API operations.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="persistsession_go">
 <a href="#persistsession_go" style="color: inherit; text-decoration: inherit;">Persist<wbr>Session</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Persist vSphere client sessions to disk
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="restsessionpath_go">
 <a href="#restsessionpath_go" style="color: inherit; text-decoration: inherit;">Rest<wbr>Session<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory to save vSphere REST API sessions to
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="user_go">
 <a href="#user_go" style="color: inherit; text-decoration: inherit;">User</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name for vSphere API operations.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="vcenterserver_go">
 <a href="#vcenterserver_go" style="color: inherit; text-decoration: inherit;">Vcenter<wbr>Server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been renamed to vsphere_server.{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vimkeepalive_go">
 <a href="#vimkeepalive_go" style="color: inherit; text-decoration: inherit;">Vim<wbr>Keep<wbr>Alive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Keep alive interval for the VIM session in minutes
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vimsessionpath_go">
 <a href="#vimsessionpath_go" style="color: inherit; text-decoration: inherit;">Vim<wbr>Session<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory to save vSphere SOAP API sessions to
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vsphereserver_go">
 <a href="#vsphereserver_go" style="color: inherit; text-decoration: inherit;">Vsphere<wbr>Server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vSphere Server name for vSphere API operations.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -478,136 +472,133 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="allowunverifiedssl_nodejs">
 <a href="#allowunverifiedssl_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Unverified<wbr>Ssl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set, VMware vSphere client will permit unverifiable SSL certificates.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="apitimeout_nodejs">
+<a href="#apitimeout_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}API timeout in minutes (Default: 5)
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clientdebug_nodejs">
 <a href="#clientdebug_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Debug</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}govmomi debug
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="clientdebugpath_nodejs">
 <a href="#clientdebugpath_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Debug<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}govmomi debug path for debug
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="clientdebugpathrun_nodejs">
 <a href="#clientdebugpathrun_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Debug<wbr>Path<wbr>Run</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}govmomi debug path for a single run
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user password for vSphere API operations.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="persistsession_nodejs">
 <a href="#persistsession_nodejs" style="color: inherit; text-decoration: inherit;">persist<wbr>Session</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Persist vSphere client sessions to disk
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="restsessionpath_nodejs">
 <a href="#restsessionpath_nodejs" style="color: inherit; text-decoration: inherit;">rest<wbr>Session<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory to save vSphere REST API sessions to
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="user_nodejs">
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name for vSphere API operations.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="vcenterserver_nodejs">
 <a href="#vcenterserver_nodejs" style="color: inherit; text-decoration: inherit;">vcenter<wbr>Server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been renamed to vsphere_server.{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vimkeepalive_nodejs">
 <a href="#vimkeepalive_nodejs" style="color: inherit; text-decoration: inherit;">vim<wbr>Keep<wbr>Alive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Keep alive interval for the VIM session in minutes
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vimsessionpath_nodejs">
 <a href="#vimsessionpath_nodejs" style="color: inherit; text-decoration: inherit;">vim<wbr>Session<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory to save vSphere SOAP API sessions to
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vsphereserver_nodejs">
 <a href="#vsphereserver_nodejs" style="color: inherit; text-decoration: inherit;">vsphere<wbr>Server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vSphere Server name for vSphere API operations.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -616,145 +607,138 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="allow_unverified_ssl_python">
 <a href="#allow_unverified_ssl_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>unverified_<wbr>ssl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set, VMware vSphere client will permit unverifiable SSL certificates.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="api_timeout_python">
+<a href="#api_timeout_python" style="color: inherit; text-decoration: inherit;">api_<wbr>timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}API timeout in minutes (Default: 5)
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="client_debug_python">
 <a href="#client_debug_python" style="color: inherit; text-decoration: inherit;">client_<wbr>debug</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}govmomi debug
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="client_debug_path_python">
 <a href="#client_debug_path_python" style="color: inherit; text-decoration: inherit;">client_<wbr>debug_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}govmomi debug path for debug
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="client_debug_path_run_python">
 <a href="#client_debug_path_run_python" style="color: inherit; text-decoration: inherit;">client_<wbr>debug_<wbr>path_<wbr>run</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}govmomi debug path for a single run
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user password for vSphere API operations.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="persist_session_python">
 <a href="#persist_session_python" style="color: inherit; text-decoration: inherit;">persist_<wbr>session</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Persist vSphere client sessions to disk
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rest_session_path_python">
 <a href="#rest_session_path_python" style="color: inherit; text-decoration: inherit;">rest_<wbr>session_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The directory to save vSphere REST API sessions to
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="user_python">
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user name for vSphere API operations.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="vcenter_server_python">
 <a href="#vcenter_server_python" style="color: inherit; text-decoration: inherit;">vcenter_<wbr>server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been renamed to vsphere_server.{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vim_keep_alive_python">
 <a href="#vim_keep_alive_python" style="color: inherit; text-decoration: inherit;">vim_<wbr>keep_<wbr>alive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Keep alive interval for the VIM session in minutes
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vim_session_path_python">
 <a href="#vim_session_path_python" style="color: inherit; text-decoration: inherit;">vim_<wbr>session_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The directory to save vSphere SOAP API sessions to
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vsphere_server_python">
 <a href="#vsphere_server_python" style="color: inherit; text-decoration: inherit;">vsphere_<wbr>server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The vSphere Server name for vSphere API operations.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Provider resource produces the following output properties:
-
 
 
 
@@ -765,15 +749,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -782,15 +764,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -799,15 +779,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -816,18 +794,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
