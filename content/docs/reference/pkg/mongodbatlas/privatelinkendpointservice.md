@@ -73,7 +73,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
-	"github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas"
+	"github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -587,13 +587,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="connectionstatus_csharp">
-<a href="#connectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Status</a>
+        <span id="awsconnectionstatus_csharp">
+<a href="#awsconnectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Connection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the interface endpoint.
+    <dd>{{% md %}}Status of the interface endpoint for AWS.
+Returns one of the following values:
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="azurestatus_csharp">
+<a href="#azurestatus_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of the interface endpoint for AZURE.
 Returns one of the following values:
 {{% /md %}}</dd>
     <dt class="property-"
@@ -663,13 +674,24 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span id="connectionstatus_go">
-<a href="#connectionstatus_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Status</a>
+        <span id="awsconnectionstatus_go">
+<a href="#awsconnectionstatus_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Connection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the interface endpoint.
+    <dd>{{% md %}}Status of the interface endpoint for AWS.
+Returns one of the following values:
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="azurestatus_go">
+<a href="#azurestatus_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of the interface endpoint for AZURE.
 Returns one of the following values:
 {{% /md %}}</dd>
     <dt class="property-"
@@ -739,13 +761,24 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span id="connectionstatus_nodejs">
-<a href="#connectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Status</a>
+        <span id="awsconnectionstatus_nodejs">
+<a href="#awsconnectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Connection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the interface endpoint.
+    <dd>{{% md %}}Status of the interface endpoint for AWS.
+Returns one of the following values:
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="azurestatus_nodejs">
+<a href="#azurestatus_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of the interface endpoint for AZURE.
 Returns one of the following values:
 {{% /md %}}</dd>
     <dt class="property-"
@@ -815,13 +848,24 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span id="connection_status_python">
-<a href="#connection_status_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>status</a>
+        <span id="aws_connection_status_python">
+<a href="#aws_connection_status_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>connection_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Status of the interface endpoint.
+    <dd>{{% md %}}Status of the interface endpoint for AWS.
+Returns one of the following values:
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="azure_status_python">
+<a href="#azure_status_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Status of the interface endpoint for AZURE.
 Returns one of the following values:
 {{% /md %}}</dd>
     <dt class="property-"
@@ -899,7 +943,7 @@ Get an existing PrivateLinkEndpointService resource's state with the given name,
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connection_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delete_requested</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">endpoint_service_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">error_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interface_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_endpoint_connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_endpoint_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_endpoint_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_link_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PrivateLinkEndpointService</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aws_connection_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delete_requested</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">endpoint_service_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">error_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interface_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_endpoint_connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_endpoint_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_endpoint_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_link_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PrivateLinkEndpointService</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1014,13 +1058,24 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_connectionstatus_csharp">
-<a href="#state_connectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Status</a>
+        <span id="state_awsconnectionstatus_csharp">
+<a href="#state_awsconnectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Connection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the interface endpoint.
+    <dd>{{% md %}}Status of the interface endpoint for AWS.
+Returns one of the following values:
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_azurestatus_csharp">
+<a href="#state_azurestatus_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of the interface endpoint for AZURE.
 Returns one of the following values:
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -1131,13 +1186,24 @@ Returns one of the following values:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_connectionstatus_go">
-<a href="#state_connectionstatus_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Status</a>
+        <span id="state_awsconnectionstatus_go">
+<a href="#state_awsconnectionstatus_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Connection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the interface endpoint.
+    <dd>{{% md %}}Status of the interface endpoint for AWS.
+Returns one of the following values:
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_azurestatus_go">
+<a href="#state_azurestatus_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of the interface endpoint for AZURE.
 Returns one of the following values:
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -1248,13 +1314,24 @@ Returns one of the following values:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_connectionstatus_nodejs">
-<a href="#state_connectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Status</a>
+        <span id="state_awsconnectionstatus_nodejs">
+<a href="#state_awsconnectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Connection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the interface endpoint.
+    <dd>{{% md %}}Status of the interface endpoint for AWS.
+Returns one of the following values:
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_azurestatus_nodejs">
+<a href="#state_azurestatus_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of the interface endpoint for AZURE.
 Returns one of the following values:
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -1365,13 +1442,24 @@ Returns one of the following values:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_connection_status_python">
-<a href="#state_connection_status_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>status</a>
+        <span id="state_aws_connection_status_python">
+<a href="#state_aws_connection_status_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>connection_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Status of the interface endpoint.
+    <dd>{{% md %}}Status of the interface endpoint for AWS.
+Returns one of the following values:
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_azure_status_python">
+<a href="#state_azure_status_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Status of the interface endpoint for AZURE.
 Returns one of the following values:
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -1487,7 +1575,7 @@ Returns one of the following values:
 Private Endpoint Link Connection can be imported using project ID and username, in the format `{project_id}--{private_link_id}--{endpoint_service_id}--{provider_name}`, e.g.
 
 ```sh
- $ pulumi import mongodbatlas:index/privateLinkEndpointService:PrivateLinkEndpointService test 1112222b3bf99403840e8934--vpce-4242342343--3242342343112--AWS
+ $ pulumi import mongodbatlas:index/privateLinkEndpointService:PrivateLinkEndpointService test 1112222b3bf99403840e8934--3242342343112--vpce-4242342343--AWS
 ```
 
  See detailed information for arguments and attributes[MongoDB API Private Endpoint Link Connection](https://docs.atlas.mongodb.com/reference/api/private-endpoints-endpoint-create-one/)

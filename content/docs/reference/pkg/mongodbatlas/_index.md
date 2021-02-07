@@ -89,7 +89,7 @@ A Pulumi package for creating and managing mongodbatlas cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/mongodb/terraform-provider-mongodbatlas).</dd>
 	<dt>Version</dt>
-	<dd>1.4.0</dd>
+	<dd>1.5.1</dd>
 </dl>
 
 

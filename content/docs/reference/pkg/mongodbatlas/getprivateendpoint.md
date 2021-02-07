@@ -273,8 +273,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the AWS PrivateLink connection.
-Returns one of the following values:
+    <dd>{{% md %}}Status of the AWS PrivateLink connection or Status of the Azure Private Link Service. Atlas returns one of the following values:
+AWS:
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -348,8 +348,8 @@ Returns one of the following values:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the AWS PrivateLink connection.
-Returns one of the following values:
+    <dd>{{% md %}}Status of the AWS PrivateLink connection or Status of the Azure Private Link Service. Atlas returns one of the following values:
+AWS:
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -423,8 +423,8 @@ Returns one of the following values:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the AWS PrivateLink connection.
-Returns one of the following values:
+    <dd>{{% md %}}Status of the AWS PrivateLink connection or Status of the Azure Private Link Service. Atlas returns one of the following values:
+AWS:
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -498,8 +498,8 @@ Returns one of the following values:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Status of the AWS PrivateLink connection.
-Returns one of the following values:
+    <dd>{{% md %}}Status of the AWS PrivateLink connection or Status of the Azure Private Link Service. Atlas returns one of the following values:
+AWS:
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
