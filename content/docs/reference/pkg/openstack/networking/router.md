@@ -101,7 +101,7 @@ const router1 = new openstack.networking.Router("router_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/networking/#pulumi_openstack.networking.Router">Router</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_state_up</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">availability_zone_hints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">distributed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_snat</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">external_fixed_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[RouterExternalFixedIpArgs]]</span> = None<span class="p">, </span><span class="nx">external_gateway</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value_specs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vendor_options</span><span class="p">:</span> <span class="nx">Optional[RouterVendorOptionsArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/networking/#pulumi_openstack.networking.Router">Router</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_state_up</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">availability_zone_hints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">distributed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_snat</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">external_fixed_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[RouterExternalFixedIpArgs]]</span> = None<span class="p">, </span><span class="nx">external_gateway</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value_specs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vendor_options</span><span class="p">:</span> <span class="nx">Optional[RouterVendorOptionsArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -293,8 +293,9 @@ The Router resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An availability zone is used to make 
-network resources highly available. Used for resources with high availability so that they are scheduled on different availability zones. Changing
-this creates a new router.
+network resources highly available. Used for resources with high availability
+so that they are scheduled on different availability zones. Changing this
+creates a new router.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -371,6 +372,20 @@ of an existing router.
 for the router. A router with an external gateway is required if any
 compute instances or load balancers will be using floating IPs. Changing
 this updates the external gateway of the router.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="externalsubnetids_csharp">
+<a href="#externalsubnetids_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Subnet<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of external subnet IDs to try over
+each to obtain a fixed IP for the router. If a subnet ID in a list has
+exhausted floating IP pool, the next subnet ID will be tried. This argument is
+used only during the router creation and allows to set only one external fixed
+IP. Conflicts with an `external_fixed_ip` argument.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -465,8 +480,9 @@ Supported options are described below.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An availability zone is used to make 
-network resources highly available. Used for resources with high availability so that they are scheduled on different availability zones. Changing
-this creates a new router.
+network resources highly available. Used for resources with high availability
+so that they are scheduled on different availability zones. Changing this
+creates a new router.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -543,6 +559,20 @@ of an existing router.
 for the router. A router with an external gateway is required if any
 compute instances or load balancers will be using floating IPs. Changing
 this updates the external gateway of the router.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="externalsubnetids_go">
+<a href="#externalsubnetids_go" style="color: inherit; text-decoration: inherit;">External<wbr>Subnet<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of external subnet IDs to try over
+each to obtain a fixed IP for the router. If a subnet ID in a list has
+exhausted floating IP pool, the next subnet ID will be tried. This argument is
+used only during the router creation and allows to set only one external fixed
+IP. Conflicts with an `external_fixed_ip` argument.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -637,8 +667,9 @@ Supported options are described below.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An availability zone is used to make 
-network resources highly available. Used for resources with high availability so that they are scheduled on different availability zones. Changing
-this creates a new router.
+network resources highly available. Used for resources with high availability
+so that they are scheduled on different availability zones. Changing this
+creates a new router.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -715,6 +746,20 @@ of an existing router.
 for the router. A router with an external gateway is required if any
 compute instances or load balancers will be using floating IPs. Changing
 this updates the external gateway of the router.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="externalsubnetids_nodejs">
+<a href="#externalsubnetids_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Subnet<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of external subnet IDs to try over
+each to obtain a fixed IP for the router. If a subnet ID in a list has
+exhausted floating IP pool, the next subnet ID will be tried. This argument is
+used only during the router creation and allows to set only one external fixed
+IP. Conflicts with an `external_fixed_ip` argument.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -809,8 +854,9 @@ Supported options are described below.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An availability zone is used to make 
-network resources highly available. Used for resources with high availability so that they are scheduled on different availability zones. Changing
-this creates a new router.
+network resources highly available. Used for resources with high availability
+so that they are scheduled on different availability zones. Changing this
+creates a new router.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -887,6 +933,20 @@ of an existing router.
 for the router. A router with an external gateway is required if any
 compute instances or load balancers will be using floating IPs. Changing
 this updates the external gateway of the router.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="external_subnet_ids_python">
+<a href="#external_subnet_ids_python" style="color: inherit; text-decoration: inherit;">external_<wbr>subnet_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of external subnet IDs to try over
+each to obtain a fixed IP for the router. If a subnet ID in a list has
+exhausted floating IP pool, the next subnet ID will be tried. This argument is
+used only during the router creation and allows to set only one external fixed
+IP. Conflicts with an `external_fixed_ip` argument.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1081,7 +1141,7 @@ Get an existing Router resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_state_up</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">all_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">availability_zone_hints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">distributed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_snat</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">external_fixed_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[RouterExternalFixedIpArgs]]</span> = None<span class="p">, </span><span class="nx">external_gateway</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value_specs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vendor_options</span><span class="p">:</span> <span class="nx">Optional[RouterVendorOptionsArgs]</span> = None<span class="p">) -&gt;</span> Router</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_state_up</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">all_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">availability_zone_hints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">distributed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_snat</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">external_fixed_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[RouterExternalFixedIpArgs]]</span> = None<span class="p">, </span><span class="nx">external_gateway</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value_specs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vendor_options</span><span class="p">:</span> <span class="nx">Optional[RouterVendorOptionsArgs]</span> = None<span class="p">) -&gt;</span> Router</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1226,8 +1286,9 @@ explicitly and implicitly added.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An availability zone is used to make 
-network resources highly available. Used for resources with high availability so that they are scheduled on different availability zones. Changing
-this creates a new router.
+network resources highly available. Used for resources with high availability
+so that they are scheduled on different availability zones. Changing this
+creates a new router.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1304,6 +1365,20 @@ of an existing router.
 for the router. A router with an external gateway is required if any
 compute instances or load balancers will be using floating IPs. Changing
 this updates the external gateway of the router.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_externalsubnetids_csharp">
+<a href="#state_externalsubnetids_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Subnet<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of external subnet IDs to try over
+each to obtain a fixed IP for the router. If a subnet ID in a list has
+exhausted floating IP pool, the next subnet ID will be tried. This argument is
+used only during the router creation and allows to set only one external fixed
+IP. Conflicts with an `external_fixed_ip` argument.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1409,8 +1484,9 @@ explicitly and implicitly added.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An availability zone is used to make 
-network resources highly available. Used for resources with high availability so that they are scheduled on different availability zones. Changing
-this creates a new router.
+network resources highly available. Used for resources with high availability
+so that they are scheduled on different availability zones. Changing this
+creates a new router.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1487,6 +1563,20 @@ of an existing router.
 for the router. A router with an external gateway is required if any
 compute instances or load balancers will be using floating IPs. Changing
 this updates the external gateway of the router.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_externalsubnetids_go">
+<a href="#state_externalsubnetids_go" style="color: inherit; text-decoration: inherit;">External<wbr>Subnet<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of external subnet IDs to try over
+each to obtain a fixed IP for the router. If a subnet ID in a list has
+exhausted floating IP pool, the next subnet ID will be tried. This argument is
+used only during the router creation and allows to set only one external fixed
+IP. Conflicts with an `external_fixed_ip` argument.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1592,8 +1682,9 @@ explicitly and implicitly added.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An availability zone is used to make 
-network resources highly available. Used for resources with high availability so that they are scheduled on different availability zones. Changing
-this creates a new router.
+network resources highly available. Used for resources with high availability
+so that they are scheduled on different availability zones. Changing this
+creates a new router.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1670,6 +1761,20 @@ of an existing router.
 for the router. A router with an external gateway is required if any
 compute instances or load balancers will be using floating IPs. Changing
 this updates the external gateway of the router.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_externalsubnetids_nodejs">
+<a href="#state_externalsubnetids_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Subnet<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of external subnet IDs to try over
+each to obtain a fixed IP for the router. If a subnet ID in a list has
+exhausted floating IP pool, the next subnet ID will be tried. This argument is
+used only during the router creation and allows to set only one external fixed
+IP. Conflicts with an `external_fixed_ip` argument.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1775,8 +1880,9 @@ explicitly and implicitly added.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An availability zone is used to make 
-network resources highly available. Used for resources with high availability so that they are scheduled on different availability zones. Changing
-this creates a new router.
+network resources highly available. Used for resources with high availability
+so that they are scheduled on different availability zones. Changing this
+creates a new router.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1853,6 +1959,20 @@ of an existing router.
 for the router. A router with an external gateway is required if any
 compute instances or load balancers will be using floating IPs. Changing
 this updates the external gateway of the router.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_external_subnet_ids_python">
+<a href="#state_external_subnet_ids_python" style="color: inherit; text-decoration: inherit;">external_<wbr>subnet_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of external subnet IDs to try over
+each to obtain a fixed IP for the router. If a subnet ID in a list has
+exhausted floating IP pool, the next subnet ID will be tried. This argument is
+used only during the router creation and allows to set only one external fixed
+IP. Conflicts with an `external_fixed_ip` argument.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

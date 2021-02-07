@@ -20,6 +20,7 @@ Explore the resources and functions of the identity module in the Open Stack pac
     <li><a href="roleassignment" title="RoleAssignment"><span class="symbol resource"></span>RoleAssignment</a></li>
     <li><a href="servicev3" title="ServiceV3"><span class="symbol resource"></span>ServiceV3</a></li>
     <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
+    <li><a href="usermembershipv3" title="UserMembershipV3"><span class="symbol resource"></span>UserMembershipV3</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -42,7 +43,7 @@ Explore the resources and functions of the identity module in the Open Stack pac
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
 	<dt>Version</dt>
-	<dd>2.12.0</dd>
+	<dd>2.13.0</dd>
 </dl>
 
 
