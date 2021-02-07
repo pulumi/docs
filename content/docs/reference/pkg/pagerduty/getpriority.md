@@ -101,6 +101,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty"
+	"github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
