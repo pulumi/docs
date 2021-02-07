@@ -20,15 +20,148 @@ This resource allows you to create and configure an Okta User.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Okta = Pulumi.Okta;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Okta.User.User("example", new Okta.User.UserArgs
+        {
+            City = "New York",
+            CostCenter = "10",
+            CountryCode = "US",
+            Department = "IT",
+            DisplayName = "Dr. John Smith",
+            Division = "Acquisitions",
+            Email = "john.smith@example.com",
+            EmployeeNumber = "111111",
+            FirstName = "John",
+            HonorificPrefix = "Dr.",
+            HonorificSuffix = "Jr.",
+            LastName = "Smith",
+            Locale = "en_US",
+            Login = "john.smith@example.com",
+            Manager = "Jimbo",
+            ManagerId = "222222",
+            MiddleName = "John",
+            MobilePhone = "1112223333",
+            NickName = "Johnny",
+            Organization = "Testing Inc.",
+            PostalAddress = "1234 Testing St.",
+            PreferredLanguage = "en-us",
+            PrimaryPhone = "4445556666",
+            ProfileUrl = "http://www.example.com/profile",
+            SecondEmail = "john.smith.fun@example.com",
+            State = "NY",
+            StreetAddress = "5678 Testing Ave.",
+            Timezone = "America/New_York",
+            Title = "Director",
+            UserType = "Employee",
+            ZipCode = "11111",
+        });
+    }
+
+}
+```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-okta/sdk/v2/go/okta/user"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := user.NewUser(ctx, "example", &user.UserArgs{
+			City:              pulumi.String("New York"),
+			CostCenter:        pulumi.String("10"),
+			CountryCode:       pulumi.String("US"),
+			Department:        pulumi.String("IT"),
+			DisplayName:       pulumi.String("Dr. John Smith"),
+			Division:          pulumi.String("Acquisitions"),
+			Email:             pulumi.String("john.smith@example.com"),
+			EmployeeNumber:    pulumi.String("111111"),
+			FirstName:         pulumi.String("John"),
+			HonorificPrefix:   pulumi.String("Dr."),
+			HonorificSuffix:   pulumi.String("Jr."),
+			LastName:          pulumi.String("Smith"),
+			Locale:            pulumi.String("en_US"),
+			Login:             pulumi.String("john.smith@example.com"),
+			Manager:           pulumi.String("Jimbo"),
+			ManagerId:         pulumi.String("222222"),
+			MiddleName:        pulumi.String("John"),
+			MobilePhone:       pulumi.String("1112223333"),
+			NickName:          pulumi.String("Johnny"),
+			Organization:      pulumi.String("Testing Inc."),
+			PostalAddress:     pulumi.String("1234 Testing St."),
+			PreferredLanguage: pulumi.String("en-us"),
+			PrimaryPhone:      pulumi.String("4445556666"),
+			ProfileUrl:        pulumi.String("http://www.example.com/profile"),
+			SecondEmail:       pulumi.String("john.smith.fun@example.com"),
+			State:             pulumi.String("NY"),
+			StreetAddress:     pulumi.String("5678 Testing Ave."),
+			Timezone:          pulumi.String("America/New_York"),
+			Title:             pulumi.String("Director"),
+			UserType:          pulumi.String("Employee"),
+			ZipCode:           pulumi.String("11111"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
-Coming soon!
+```python
+import pulumi
+import pulumi_okta as okta
+
+example = okta.user.User("example",
+    city="New York",
+    cost_center="10",
+    country_code="US",
+    department="IT",
+    display_name="Dr. John Smith",
+    division="Acquisitions",
+    email="john.smith@example.com",
+    employee_number="111111",
+    first_name="John",
+    honorific_prefix="Dr.",
+    honorific_suffix="Jr.",
+    last_name="Smith",
+    locale="en_US",
+    login="john.smith@example.com",
+    manager="Jimbo",
+    manager_id="222222",
+    middle_name="John",
+    mobile_phone="1112223333",
+    nick_name="Johnny",
+    organization="Testing Inc.",
+    postal_address="1234 Testing St.",
+    preferred_language="en-us",
+    primary_phone="4445556666",
+    profile_url="http://www.example.com/profile",
+    second_email="john.smith.fun@example.com",
+    state="NY",
+    street_address="5678 Testing Ave.",
+    timezone="America/New_York",
+    title="Director",
+    user_type="Employee",
+    zip_code="11111")
+```
+
 {{% /example %}}
 
 {{% example typescript %}}
@@ -38,12 +171,37 @@ import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
 
 const example = new okta.user.User("example", {
-    description: "My custom property name",
-    index: "customPropertyName",
-    master: "OKTA",
-    scope: "SELF",
-    title: "customPropertyName",
-    type: "string",
+    city: "New York",
+    costCenter: "10",
+    countryCode: "US",
+    department: "IT",
+    displayName: "Dr. John Smith",
+    division: "Acquisitions",
+    email: "john.smith@example.com",
+    employeeNumber: "111111",
+    firstName: "John",
+    honorificPrefix: "Dr.",
+    honorificSuffix: "Jr.",
+    lastName: "Smith",
+    locale: "en_US",
+    login: "john.smith@example.com",
+    manager: "Jimbo",
+    managerId: "222222",
+    middleName: "John",
+    mobilePhone: "1112223333",
+    nickName: "Johnny",
+    organization: "Testing Inc.",
+    postalAddress: "1234 Testing St.",
+    preferredLanguage: "en-us",
+    primaryPhone: "4445556666",
+    profileUrl: "http://www.example.com/profile",
+    secondEmail: "john.smith.fun@example.com",
+    state: "NY",
+    streetAddress: "5678 Testing Ave.",
+    timezone: "America/New_York",
+    title: "Director",
+    userType: "Employee",
+    zipCode: "11111",
 });
 ```
 

@@ -370,7 +370,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If the user name must be excluded from the password.
+    <dd>{{% md %}}If the username must be excluded from the password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -410,7 +410,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.",
+    <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.,
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -450,7 +450,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of lower case characters in password.
+    <dd>{{% md %}}Minimum number of lower case characters in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -460,7 +460,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of numbers in password.
+    <dd>{{% md %}}Minimum number of numbers in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -470,7 +470,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of symbols in password.
+    <dd>{{% md %}}Minimum number of symbols in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -480,7 +480,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of upper case characters in password.
+    <dd>{{% md %}}Minimum number of upper case characters in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -676,7 +676,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If the user name must be excluded from the password.
+    <dd>{{% md %}}If the username must be excluded from the password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -716,7 +716,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.",
+    <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.,
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -756,7 +756,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of lower case characters in password.
+    <dd>{{% md %}}Minimum number of lower case characters in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -766,7 +766,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of numbers in password.
+    <dd>{{% md %}}Minimum number of numbers in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -776,7 +776,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of symbols in password.
+    <dd>{{% md %}}Minimum number of symbols in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -786,7 +786,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of upper case characters in password.
+    <dd>{{% md %}}Minimum number of upper case characters in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -982,7 +982,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If the user name must be excluded from the password.
+    <dd>{{% md %}}If the username must be excluded from the password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1022,7 +1022,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.",
+    <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.,
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1062,7 +1062,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Minimum number of lower case characters in password.
+    <dd>{{% md %}}Minimum number of lower case characters in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1072,7 +1072,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Minimum number of numbers in password.
+    <dd>{{% md %}}Minimum number of numbers in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1082,7 +1082,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Minimum number of symbols in password.
+    <dd>{{% md %}}Minimum number of symbols in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1092,7 +1092,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Minimum number of upper case characters in password.
+    <dd>{{% md %}}Minimum number of upper case characters in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1288,7 +1288,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If the user name must be excluded from the password.
+    <dd>{{% md %}}If the username must be excluded from the password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1328,7 +1328,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.",
+    <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.,
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1368,7 +1368,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of lower case characters in password.
+    <dd>{{% md %}}Minimum number of lower case characters in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1378,7 +1378,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of numbers in password.
+    <dd>{{% md %}}Minimum number of numbers in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1388,7 +1388,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of symbols in password.
+    <dd>{{% md %}}Minimum number of symbols in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1398,7 +1398,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of upper case characters in password.
+    <dd>{{% md %}}Minimum number of upper case characters in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1784,7 +1784,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If the user name must be excluded from the password.
+    <dd>{{% md %}}If the username must be excluded from the password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1824,7 +1824,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.",
+    <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.,
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1864,7 +1864,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of lower case characters in password.
+    <dd>{{% md %}}Minimum number of lower case characters in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1874,7 +1874,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of numbers in password.
+    <dd>{{% md %}}Minimum number of numbers in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1884,7 +1884,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of symbols in password.
+    <dd>{{% md %}}Minimum number of symbols in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1894,7 +1894,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of upper case characters in password.
+    <dd>{{% md %}}Minimum number of upper case characters in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2090,7 +2090,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If the user name must be excluded from the password.
+    <dd>{{% md %}}If the username must be excluded from the password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2130,7 +2130,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.",
+    <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.,
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2170,7 +2170,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of lower case characters in password.
+    <dd>{{% md %}}Minimum number of lower case characters in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2180,7 +2180,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of numbers in password.
+    <dd>{{% md %}}Minimum number of numbers in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2190,7 +2190,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of symbols in password.
+    <dd>{{% md %}}Minimum number of symbols in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2200,7 +2200,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of upper case characters in password.
+    <dd>{{% md %}}Minimum number of upper case characters in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2396,7 +2396,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If the user name must be excluded from the password.
+    <dd>{{% md %}}If the username must be excluded from the password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2436,7 +2436,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.",
+    <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.,
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2476,7 +2476,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Minimum number of lower case characters in password.
+    <dd>{{% md %}}Minimum number of lower case characters in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2486,7 +2486,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Minimum number of numbers in password.
+    <dd>{{% md %}}Minimum number of numbers in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2496,7 +2496,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Minimum number of symbols in password.
+    <dd>{{% md %}}Minimum number of symbols in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2506,7 +2506,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Minimum number of upper case characters in password.
+    <dd>{{% md %}}Minimum number of upper case characters in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2702,7 +2702,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If the user name must be excluded from the password.
+    <dd>{{% md %}}If the username must be excluded from the password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2742,7 +2742,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.",
+    <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.,
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2782,7 +2782,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of lower case characters in password.
+    <dd>{{% md %}}Minimum number of lower case characters in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2792,7 +2792,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of numbers in password.
+    <dd>{{% md %}}Minimum number of numbers in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2802,7 +2802,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of symbols in password.
+    <dd>{{% md %}}Minimum number of symbols in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2812,7 +2812,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of upper case characters in password.
+    <dd>{{% md %}}Minimum number of upper case characters in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

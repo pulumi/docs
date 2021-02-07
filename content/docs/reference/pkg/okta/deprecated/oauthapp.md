@@ -22,7 +22,7 @@ meta_desc: "Documentation for the okta.deprecated.OauthApp resource with example
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/deprecated/#pulumi_okta.deprecated.OauthApp">OauthApp</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_key_rotation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_submit_toolbar</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">client_basic_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consent_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">grant_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">hide_ios</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hide_web</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">issuer_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jwks</span><span class="p">:</span> <span class="nx">Optional[Sequence[OauthAppJwkArgs]]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">login_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logo_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">omit_secret</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">policy_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">post_logout_redirect_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redirect_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">response_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">token_endpoint_auth_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tos_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[Sequence[OauthAppUserArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/deprecated/#pulumi_okta.deprecated.OauthApp">OauthApp</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_key_rotation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_submit_toolbar</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">client_basic_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consent_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">grant_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">hide_ios</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hide_web</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">implicit_assignment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">issuer_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jwks</span><span class="p">:</span> <span class="nx">Optional[Sequence[OauthAppJwkArgs]]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">login_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">login_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">login_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logo_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">omit_secret</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">policy_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">post_logout_redirect_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redirect_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">response_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">token_endpoint_auth_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tos_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[Sequence[OauthAppUserArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -329,6 +329,16 @@ app type.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="implicitassignment_csharp">
+<a href="#implicitassignment_csharp" style="color: inherit; text-decoration: inherit;">Implicit<wbr>Assignment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}*Early Access Property*. Enable Federation Broker Mode.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="issuermode_csharp">
 <a href="#issuermode_csharp" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Mode</a>
 </span>
@@ -347,6 +357,26 @@ custom domain URL as the issuer of ID token for this client.
         <span class="property-type"><a href="#oauthappjwk">List&lt;Oauth<wbr>App<wbr>Jwk<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loginmode_csharp">
+<a href="#loginmode_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of Idp-Initiated login that the client supports, if any
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loginscopes_csharp">
+<a href="#loginscopes_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of scopes to use for the request
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="loginuri_csharp">
@@ -386,7 +416,7 @@ your app will be recreated.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}*Early Access Property*. URI to web page providing client policy document.
+    <dd>{{% md %}}URI to web page providing client policy document.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -457,7 +487,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}*Early Access Property*. URI to web page providing client tos (terms of service).
+    <dd>{{% md %}}URI to web page providing client tos (terms of service).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -611,6 +641,16 @@ app type.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="implicitassignment_go">
+<a href="#implicitassignment_go" style="color: inherit; text-decoration: inherit;">Implicit<wbr>Assignment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}*Early Access Property*. Enable Federation Broker Mode.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="issuermode_go">
 <a href="#issuermode_go" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Mode</a>
 </span>
@@ -629,6 +669,26 @@ custom domain URL as the issuer of ID token for this client.
         <span class="property-type"><a href="#oauthappjwk">[]Oauth<wbr>App<wbr>Jwk</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loginmode_go">
+<a href="#loginmode_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of Idp-Initiated login that the client supports, if any
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loginscopes_go">
+<a href="#loginscopes_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of scopes to use for the request
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="loginuri_go">
@@ -668,7 +728,7 @@ your app will be recreated.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}*Early Access Property*. URI to web page providing client policy document.
+    <dd>{{% md %}}URI to web page providing client policy document.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -739,7 +799,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}*Early Access Property*. URI to web page providing client tos (terms of service).
+    <dd>{{% md %}}URI to web page providing client tos (terms of service).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -893,6 +953,16 @@ app type.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="implicitassignment_nodejs">
+<a href="#implicitassignment_nodejs" style="color: inherit; text-decoration: inherit;">implicit<wbr>Assignment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}*Early Access Property*. Enable Federation Broker Mode.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="issuermode_nodejs">
 <a href="#issuermode_nodejs" style="color: inherit; text-decoration: inherit;">issuer<wbr>Mode</a>
 </span>
@@ -911,6 +981,26 @@ custom domain URL as the issuer of ID token for this client.
         <span class="property-type"><a href="#oauthappjwk">Oauth<wbr>App<wbr>Jwk[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loginmode_nodejs">
+<a href="#loginmode_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of Idp-Initiated login that the client supports, if any
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loginscopes_nodejs">
+<a href="#loginscopes_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of scopes to use for the request
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="loginuri_nodejs">
@@ -950,7 +1040,7 @@ your app will be recreated.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}*Early Access Property*. URI to web page providing client policy document.
+    <dd>{{% md %}}URI to web page providing client policy document.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1021,7 +1111,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}*Early Access Property*. URI to web page providing client tos (terms of service).
+    <dd>{{% md %}}URI to web page providing client tos (terms of service).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1175,6 +1265,16 @@ app type.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="implicit_assignment_python">
+<a href="#implicit_assignment_python" style="color: inherit; text-decoration: inherit;">implicit_<wbr>assignment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}*Early Access Property*. Enable Federation Broker Mode.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="issuer_mode_python">
 <a href="#issuer_mode_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>mode</a>
 </span>
@@ -1193,6 +1293,26 @@ custom domain URL as the issuer of ID token for this client.
         <span class="property-type"><a href="#oauthappjwk">Sequence[Oauth<wbr>App<wbr>Jwk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="login_mode_python">
+<a href="#login_mode_python" style="color: inherit; text-decoration: inherit;">login_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of Idp-Initiated login that the client supports, if any
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="login_scopes_python">
+<a href="#login_scopes_python" style="color: inherit; text-decoration: inherit;">login_<wbr>scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of scopes to use for the request
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="login_uri_python">
@@ -1232,7 +1352,7 @@ your app will be recreated.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}*Early Access Property*. URI to web page providing client policy document.
+    <dd>{{% md %}}URI to web page providing client policy document.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1303,7 +1423,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}*Early Access Property*. URI to web page providing client tos (terms of service).
+    <dd>{{% md %}}URI to web page providing client tos (terms of service).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1518,7 +1638,7 @@ Get an existing OauthApp resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_key_rotation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_submit_toolbar</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">client_basic_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consent_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">grant_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">hide_ios</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hide_web</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">issuer_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jwks</span><span class="p">:</span> <span class="nx">Optional[Sequence[OauthAppJwkArgs]]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">login_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logo_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">omit_secret</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">policy_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">post_logout_redirect_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redirect_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">response_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">sign_on_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">token_endpoint_auth_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tos_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[Sequence[OauthAppUserArgs]]</span> = None<span class="p">) -&gt;</span> OauthApp</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_key_rotation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_submit_toolbar</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">client_basic_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">consent_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">grant_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">hide_ios</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hide_web</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">implicit_assignment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">issuer_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jwks</span><span class="p">:</span> <span class="nx">Optional[Sequence[OauthAppJwkArgs]]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">login_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">login_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">login_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logo_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">omit_secret</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">policy_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">post_logout_redirect_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redirect_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">response_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">sign_on_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">token_endpoint_auth_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tos_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[Sequence[OauthAppUserArgs]]</span> = None<span class="p">) -&gt;</span> OauthApp</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1757,6 +1877,16 @@ app type.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_implicitassignment_csharp">
+<a href="#state_implicitassignment_csharp" style="color: inherit; text-decoration: inherit;">Implicit<wbr>Assignment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}*Early Access Property*. Enable Federation Broker Mode.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_issuermode_csharp">
 <a href="#state_issuermode_csharp" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Mode</a>
 </span>
@@ -1784,6 +1914,26 @@ custom domain URL as the issuer of ID token for this client.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pretty name of app.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_loginmode_csharp">
+<a href="#state_loginmode_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of Idp-Initiated login that the client supports, if any
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_loginscopes_csharp">
+<a href="#state_loginscopes_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of scopes to use for the request
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1834,7 +1984,7 @@ your app will be recreated.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}*Early Access Property*. URI to web page providing client policy document.
+    <dd>{{% md %}}URI to web page providing client policy document.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1915,7 +2065,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}*Early Access Property*. URI to web page providing client tos (terms of service).
+    <dd>{{% md %}}URI to web page providing client tos (terms of service).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2069,6 +2219,16 @@ app type.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_implicitassignment_go">
+<a href="#state_implicitassignment_go" style="color: inherit; text-decoration: inherit;">Implicit<wbr>Assignment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}*Early Access Property*. Enable Federation Broker Mode.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_issuermode_go">
 <a href="#state_issuermode_go" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Mode</a>
 </span>
@@ -2096,6 +2256,26 @@ custom domain URL as the issuer of ID token for this client.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pretty name of app.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_loginmode_go">
+<a href="#state_loginmode_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of Idp-Initiated login that the client supports, if any
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_loginscopes_go">
+<a href="#state_loginscopes_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of scopes to use for the request
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2146,7 +2326,7 @@ your app will be recreated.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}*Early Access Property*. URI to web page providing client policy document.
+    <dd>{{% md %}}URI to web page providing client policy document.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2227,7 +2407,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}*Early Access Property*. URI to web page providing client tos (terms of service).
+    <dd>{{% md %}}URI to web page providing client tos (terms of service).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2381,6 +2561,16 @@ app type.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_implicitassignment_nodejs">
+<a href="#state_implicitassignment_nodejs" style="color: inherit; text-decoration: inherit;">implicit<wbr>Assignment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}*Early Access Property*. Enable Federation Broker Mode.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_issuermode_nodejs">
 <a href="#state_issuermode_nodejs" style="color: inherit; text-decoration: inherit;">issuer<wbr>Mode</a>
 </span>
@@ -2408,6 +2598,26 @@ custom domain URL as the issuer of ID token for this client.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pretty name of app.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_loginmode_nodejs">
+<a href="#state_loginmode_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of Idp-Initiated login that the client supports, if any
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_loginscopes_nodejs">
+<a href="#state_loginscopes_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of scopes to use for the request
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2458,7 +2668,7 @@ your app will be recreated.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}*Early Access Property*. URI to web page providing client policy document.
+    <dd>{{% md %}}URI to web page providing client policy document.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2539,7 +2749,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}*Early Access Property*. URI to web page providing client tos (terms of service).
+    <dd>{{% md %}}URI to web page providing client tos (terms of service).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2693,6 +2903,16 @@ app type.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_implicit_assignment_python">
+<a href="#state_implicit_assignment_python" style="color: inherit; text-decoration: inherit;">implicit_<wbr>assignment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}*Early Access Property*. Enable Federation Broker Mode.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_issuer_mode_python">
 <a href="#state_issuer_mode_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>mode</a>
 </span>
@@ -2720,6 +2940,26 @@ custom domain URL as the issuer of ID token for this client.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Pretty name of app.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_login_mode_python">
+<a href="#state_login_mode_python" style="color: inherit; text-decoration: inherit;">login_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of Idp-Initiated login that the client supports, if any
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_login_scopes_python">
+<a href="#state_login_scopes_python" style="color: inherit; text-decoration: inherit;">login_<wbr>scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of scopes to use for the request
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2770,7 +3010,7 @@ your app will be recreated.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}*Early Access Property*. URI to web page providing client policy document.
+    <dd>{{% md %}}URI to web page providing client policy document.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2851,7 +3091,7 @@ okta_app_oauth_redirect_uri for appending to this list in a decentralized way.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}*Early Access Property*. URI to web page providing client tos (terms of service).
+    <dd>{{% md %}}URI to web page providing client tos (terms of service).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

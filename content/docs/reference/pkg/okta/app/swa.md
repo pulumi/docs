@@ -314,7 +314,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable self service. By default it is `false`.
+    <dd>{{% md %}}Enable self-service. By default, it is `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -394,7 +394,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of application. By default it is `"ACTIVE"`.
+    <dd>{{% md %}}Status of application. By default, it is `"ACTIVE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -500,7 +500,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable self service. By default it is `false`.
+    <dd>{{% md %}}Enable self-service. By default, it is `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -580,7 +580,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of application. By default it is `"ACTIVE"`.
+    <dd>{{% md %}}Status of application. By default, it is `"ACTIVE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -686,7 +686,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable self service. By default it is `false`.
+    <dd>{{% md %}}Enable self-service. By default, it is `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -766,7 +766,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of application. By default it is `"ACTIVE"`.
+    <dd>{{% md %}}Status of application. By default, it is `"ACTIVE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -872,7 +872,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable self service. By default it is `false`.
+    <dd>{{% md %}}Enable self-service. By default, it is `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -952,7 +952,7 @@ The Swa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Status of application. By default it is `"ACTIVE"`.
+    <dd>{{% md %}}Status of application. By default, it is `"ACTIVE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1064,7 +1064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sign on mode of application.
+    <dd>{{% md %}}Sign-on mode of application.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1099,7 +1099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sign on mode of application.
+    <dd>{{% md %}}Sign-on mode of application.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1134,7 +1134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sign on mode of application.
+    <dd>{{% md %}}Sign-on mode of application.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1169,7 +1169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Sign on mode of application.
+    <dd>{{% md %}}Sign-on mode of application.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1318,7 +1318,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable self service. By default it is `false`.
+    <dd>{{% md %}}Enable self-service. By default, it is `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1418,7 +1418,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sign on mode of application.
+    <dd>{{% md %}}Sign-on mode of application.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1428,7 +1428,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of application. By default it is `"ACTIVE"`.
+    <dd>{{% md %}}Status of application. By default, it is `"ACTIVE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1524,7 +1524,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable self service. By default it is `false`.
+    <dd>{{% md %}}Enable self-service. By default, it is `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1624,7 +1624,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sign on mode of application.
+    <dd>{{% md %}}Sign-on mode of application.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1634,7 +1634,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of application. By default it is `"ACTIVE"`.
+    <dd>{{% md %}}Status of application. By default, it is `"ACTIVE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1730,7 +1730,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable self service. By default it is `false`.
+    <dd>{{% md %}}Enable self-service. By default, it is `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1830,7 +1830,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sign on mode of application.
+    <dd>{{% md %}}Sign-on mode of application.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1840,7 +1840,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of application. By default it is `"ACTIVE"`.
+    <dd>{{% md %}}Status of application. By default, it is `"ACTIVE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1936,7 +1936,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable self service. By default it is `false`.
+    <dd>{{% md %}}Enable self-service. By default, it is `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2036,7 +2036,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Sign on mode of application.
+    <dd>{{% md %}}Sign-on mode of application.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2046,7 +2046,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Status of application. By default it is `"ACTIVE"`.
+    <dd>{{% md %}}Status of application. By default, it is `"ACTIVE"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

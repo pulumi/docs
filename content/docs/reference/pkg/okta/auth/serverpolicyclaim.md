@@ -349,7 +349,7 @@ The ServerPolicyClaim resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440.
+    <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440 minutes.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -409,7 +409,8 @@ The ServerPolicyClaim resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Window in which a refresh token can be used. It can be a value between 10 and 2628000 (5 years).
+    <dd>{{% md %}}Window in which a refresh token can be used. It can be a value between 5 and 2628000 (5 years) minutes.
+`"refresh_token_window_minutes"` must be between `"access_token_lifetime_minutes"` and `"refresh_token_lifetime_minutes"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -515,7 +516,7 @@ The ServerPolicyClaim resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440.
+    <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440 minutes.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -575,7 +576,8 @@ The ServerPolicyClaim resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Window in which a refresh token can be used. It can be a value between 10 and 2628000 (5 years).
+    <dd>{{% md %}}Window in which a refresh token can be used. It can be a value between 5 and 2628000 (5 years) minutes.
+`"refresh_token_window_minutes"` must be between `"access_token_lifetime_minutes"` and `"refresh_token_lifetime_minutes"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -681,7 +683,7 @@ The ServerPolicyClaim resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440.
+    <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440 minutes.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -741,7 +743,8 @@ The ServerPolicyClaim resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Window in which a refresh token can be used. It can be a value between 10 and 2628000 (5 years).
+    <dd>{{% md %}}Window in which a refresh token can be used. It can be a value between 5 and 2628000 (5 years) minutes.
+`"refresh_token_window_minutes"` must be between `"access_token_lifetime_minutes"` and `"refresh_token_lifetime_minutes"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -847,7 +850,7 @@ The ServerPolicyClaim resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440.
+    <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440 minutes.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -907,7 +910,8 @@ The ServerPolicyClaim resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Window in which a refresh token can be used. It can be a value between 10 and 2628000 (5 years).
+    <dd>{{% md %}}Window in which a refresh token can be used. It can be a value between 5 and 2628000 (5 years) minutes.
+`"refresh_token_window_minutes"` must be between `"access_token_lifetime_minutes"` and `"refresh_token_lifetime_minutes"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1163,7 +1167,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440.
+    <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440 minutes.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1263,7 +1267,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Window in which a refresh token can be used. It can be a value between 10 and 2628000 (5 years).
+    <dd>{{% md %}}Window in which a refresh token can be used. It can be a value between 5 and 2628000 (5 years) minutes.
+`"refresh_token_window_minutes"` must be between `"access_token_lifetime_minutes"` and `"refresh_token_lifetime_minutes"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1329,7 +1334,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440.
+    <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440 minutes.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1429,7 +1434,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Window in which a refresh token can be used. It can be a value between 10 and 2628000 (5 years).
+    <dd>{{% md %}}Window in which a refresh token can be used. It can be a value between 5 and 2628000 (5 years) minutes.
+`"refresh_token_window_minutes"` must be between `"access_token_lifetime_minutes"` and `"refresh_token_lifetime_minutes"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1495,7 +1501,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440.
+    <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440 minutes.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1595,7 +1601,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Window in which a refresh token can be used. It can be a value between 10 and 2628000 (5 years).
+    <dd>{{% md %}}Window in which a refresh token can be used. It can be a value between 5 and 2628000 (5 years) minutes.
+`"refresh_token_window_minutes"` must be between `"access_token_lifetime_minutes"` and `"refresh_token_lifetime_minutes"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1661,7 +1668,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440.
+    <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440 minutes.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1761,7 +1768,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Window in which a refresh token can be used. It can be a value between 10 and 2628000 (5 years).
+    <dd>{{% md %}}Window in which a refresh token can be used. It can be a value between 5 and 2628000 (5 years) minutes.
+`"refresh_token_window_minutes"` must be between `"access_token_lifetime_minutes"` and `"refresh_token_lifetime_minutes"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

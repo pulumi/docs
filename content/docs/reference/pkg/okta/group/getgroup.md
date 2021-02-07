@@ -143,7 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}whether or not to retrieve all member ids.
+    <dd>{{% md %}}whether to retrieve all member ids.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -180,7 +180,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}whether or not to retrieve all member ids.
+    <dd>{{% md %}}whether to retrieve all member ids.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -217,7 +217,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}whether or not to retrieve all member ids.
+    <dd>{{% md %}}whether to retrieve all member ids.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -254,7 +254,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}whether or not to retrieve all member ids.
+    <dd>{{% md %}}whether to retrieve all member ids.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
