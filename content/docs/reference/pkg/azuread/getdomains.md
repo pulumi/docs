@@ -46,6 +46,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread"
+	"github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -285,7 +286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainsdomain">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Outputs.<wbr>Get<wbr>Domains<wbr>Domain&gt;</a></span>
     </dt>
-    <dd>{{% md %}}One or more `domain` blocks as defined below.
+    <dd>{{% md %}}A list of domains. Each `domain` object provides the attributes documented below.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -338,7 +339,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainsdomain">[]Get<wbr>Domains<wbr>Domain</a></span>
     </dt>
-    <dd>{{% md %}}One or more `domain` blocks as defined below.
+    <dd>{{% md %}}A list of domains. Each `domain` object provides the attributes documented below.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -391,7 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainsdomain">Get<wbr>Domains<wbr>Domain[]</a></span>
     </dt>
-    <dd>{{% md %}}One or more `domain` blocks as defined below.
+    <dd>{{% md %}}A list of domains. Each `domain` object provides the attributes documented below.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -444,7 +445,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainsdomain">Sequence[Get<wbr>Domains<wbr>Domain]</a></span>
     </dt>
-    <dd>{{% md %}}One or more `domain` blocks as defined below.
+    <dd>{{% md %}}A list of domains. Each `domain` object provides the attributes documented below.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">

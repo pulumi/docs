@@ -65,7 +65,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread"
+	"github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -344,7 +344,7 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Azure AD Application for which to create a Service Principal.
+    <dd>{{% md %}}The App ID of the Application for which to create a Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -354,7 +354,7 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Does this Service Principal require an AppRoleAssignment to a user or group before Azure AD will issue a user or access token to the application? Defaults to `false`.
+    <dd>{{% md %}}Whether this Service Principal requires an AppRoleAssignment to a user or group before Azure AD will issue a user or access token to the application. Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -364,7 +364,7 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceprincipaloauth2permission">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Service<wbr>Principal<wbr>Oauth2Permission<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A collection of OAuth 2.0 permissions exposed by the associated application. Each permission is covered by a `oauth2_permission` block as documented below.
+    <dd>{{% md %}}A collection of OAuth 2.0 permissions exposed by the associated Application. Each permission is covered by an `oauth2_permission` block as documented below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -390,7 +390,7 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Azure AD Application for which to create a Service Principal.
+    <dd>{{% md %}}The App ID of the Application for which to create a Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -400,7 +400,7 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Does this Service Principal require an AppRoleAssignment to a user or group before Azure AD will issue a user or access token to the application? Defaults to `false`.
+    <dd>{{% md %}}Whether this Service Principal requires an AppRoleAssignment to a user or group before Azure AD will issue a user or access token to the application. Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -410,7 +410,7 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceprincipaloauth2permission">[]Service<wbr>Principal<wbr>Oauth2Permission</a></span>
     </dt>
-    <dd>{{% md %}}A collection of OAuth 2.0 permissions exposed by the associated application. Each permission is covered by a `oauth2_permission` block as documented below.
+    <dd>{{% md %}}A collection of OAuth 2.0 permissions exposed by the associated Application. Each permission is covered by an `oauth2_permission` block as documented below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -436,7 +436,7 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Azure AD Application for which to create a Service Principal.
+    <dd>{{% md %}}The App ID of the Application for which to create a Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -446,7 +446,7 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Does this Service Principal require an AppRoleAssignment to a user or group before Azure AD will issue a user or access token to the application? Defaults to `false`.
+    <dd>{{% md %}}Whether this Service Principal requires an AppRoleAssignment to a user or group before Azure AD will issue a user or access token to the application. Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -456,7 +456,7 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceprincipaloauth2permission">Service<wbr>Principal<wbr>Oauth2Permission[]</a></span>
     </dt>
-    <dd>{{% md %}}A collection of OAuth 2.0 permissions exposed by the associated application. Each permission is covered by a `oauth2_permission` block as documented below.
+    <dd>{{% md %}}A collection of OAuth 2.0 permissions exposed by the associated Application. Each permission is covered by an `oauth2_permission` block as documented below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -482,7 +482,7 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the Azure AD Application for which to create a Service Principal.
+    <dd>{{% md %}}The App ID of the Application for which to create a Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -492,7 +492,7 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Does this Service Principal require an AppRoleAssignment to a user or group before Azure AD will issue a user or access token to the application? Defaults to `false`.
+    <dd>{{% md %}}Whether this Service Principal requires an AppRoleAssignment to a user or group before Azure AD will issue a user or access token to the application. Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -502,7 +502,7 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceprincipaloauth2permission">Sequence[Service<wbr>Principal<wbr>Oauth2Permission<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A collection of OAuth 2.0 permissions exposed by the associated application. Each permission is covered by a `oauth2_permission` block as documented below.
+    <dd>{{% md %}}A collection of OAuth 2.0 permissions exposed by the associated Application. Each permission is covered by an `oauth2_permission` block as documented below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -544,7 +544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Display Name of the Azure Active Directory Application associated with this Service Principal.
+    <dd>{{% md %}}The Display Name of the Application associated with this Service Principal.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -563,7 +563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Service Principal's Object ID.
+    <dd>{{% md %}}The Object ID of the Service Principal.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -588,7 +588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Display Name of the Azure Active Directory Application associated with this Service Principal.
+    <dd>{{% md %}}The Display Name of the Application associated with this Service Principal.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -607,7 +607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Service Principal's Object ID.
+    <dd>{{% md %}}The Object ID of the Service Principal.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -632,7 +632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Display Name of the Azure Active Directory Application associated with this Service Principal.
+    <dd>{{% md %}}The Display Name of the Application associated with this Service Principal.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -651,7 +651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Service Principal's Object ID.
+    <dd>{{% md %}}The Object ID of the Service Principal.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -676,7 +676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Display Name of the Azure Active Directory Application associated with this Service Principal.
+    <dd>{{% md %}}The Display Name of the Application associated with this Service Principal.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -695,7 +695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Service Principal's Object ID.
+    <dd>{{% md %}}The Object ID of the Service Principal.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -834,7 +834,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Does this Service Principal require an AppRoleAssignment to a user or group before Azure AD will issue a user or access token to the application? Defaults to `false`.
+    <dd>{{% md %}}Whether this Service Principal requires an AppRoleAssignment to a user or group before Azure AD will issue a user or access token to the application. Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -853,7 +853,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Azure AD Application for which to create a Service Principal.
+    <dd>{{% md %}}The App ID of the Application for which to create a Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -863,7 +863,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Display Name of the Azure Active Directory Application associated with this Service Principal.
+    <dd>{{% md %}}The Display Name of the Application associated with this Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -873,7 +873,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceprincipaloauth2permission">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Service<wbr>Principal<wbr>Oauth2Permission<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A collection of OAuth 2.0 permissions exposed by the associated application. Each permission is covered by a `oauth2_permission` block as documented below.
+    <dd>{{% md %}}A collection of OAuth 2.0 permissions exposed by the associated Application. Each permission is covered by an `oauth2_permission` block as documented below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -883,7 +883,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Service Principal's Object ID.
+    <dd>{{% md %}}The Object ID of the Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -909,7 +909,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Does this Service Principal require an AppRoleAssignment to a user or group before Azure AD will issue a user or access token to the application? Defaults to `false`.
+    <dd>{{% md %}}Whether this Service Principal requires an AppRoleAssignment to a user or group before Azure AD will issue a user or access token to the application. Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -928,7 +928,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Azure AD Application for which to create a Service Principal.
+    <dd>{{% md %}}The App ID of the Application for which to create a Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -938,7 +938,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Display Name of the Azure Active Directory Application associated with this Service Principal.
+    <dd>{{% md %}}The Display Name of the Application associated with this Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -948,7 +948,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceprincipaloauth2permission">[]Service<wbr>Principal<wbr>Oauth2Permission</a></span>
     </dt>
-    <dd>{{% md %}}A collection of OAuth 2.0 permissions exposed by the associated application. Each permission is covered by a `oauth2_permission` block as documented below.
+    <dd>{{% md %}}A collection of OAuth 2.0 permissions exposed by the associated Application. Each permission is covered by an `oauth2_permission` block as documented below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -958,7 +958,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Service Principal's Object ID.
+    <dd>{{% md %}}The Object ID of the Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -984,7 +984,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Does this Service Principal require an AppRoleAssignment to a user or group before Azure AD will issue a user or access token to the application? Defaults to `false`.
+    <dd>{{% md %}}Whether this Service Principal requires an AppRoleAssignment to a user or group before Azure AD will issue a user or access token to the application. Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1003,7 +1003,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Azure AD Application for which to create a Service Principal.
+    <dd>{{% md %}}The App ID of the Application for which to create a Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1013,7 +1013,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Display Name of the Azure Active Directory Application associated with this Service Principal.
+    <dd>{{% md %}}The Display Name of the Application associated with this Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1023,7 +1023,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceprincipaloauth2permission">Service<wbr>Principal<wbr>Oauth2Permission[]</a></span>
     </dt>
-    <dd>{{% md %}}A collection of OAuth 2.0 permissions exposed by the associated application. Each permission is covered by a `oauth2_permission` block as documented below.
+    <dd>{{% md %}}A collection of OAuth 2.0 permissions exposed by the associated Application. Each permission is covered by an `oauth2_permission` block as documented below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1033,7 +1033,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Service Principal's Object ID.
+    <dd>{{% md %}}The Object ID of the Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1059,7 +1059,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Does this Service Principal require an AppRoleAssignment to a user or group before Azure AD will issue a user or access token to the application? Defaults to `false`.
+    <dd>{{% md %}}Whether this Service Principal requires an AppRoleAssignment to a user or group before Azure AD will issue a user or access token to the application. Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1078,7 +1078,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the Azure AD Application for which to create a Service Principal.
+    <dd>{{% md %}}The App ID of the Application for which to create a Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1088,7 +1088,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Display Name of the Azure Active Directory Application associated with this Service Principal.
+    <dd>{{% md %}}The Display Name of the Application associated with this Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1098,7 +1098,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceprincipaloauth2permission">Sequence[Service<wbr>Principal<wbr>Oauth2Permission<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A collection of OAuth 2.0 permissions exposed by the associated application. Each permission is covered by a `oauth2_permission` block as documented below.
+    <dd>{{% md %}}A collection of OAuth 2.0 permissions exposed by the associated Application. Each permission is covered by an `oauth2_permission` block as documented below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1108,7 +1108,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Service Principal's Object ID.
+    <dd>{{% md %}}The Object ID of the Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1175,7 +1175,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Display Name of the Azure Active Directory Application associated with this Service Principal.
+    <dd>{{% md %}}The Display Name of the Application associated with this Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1239,7 +1239,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Display Name of the Azure Active Directory Application associated with this Service Principal.
+    <dd>{{% md %}}The Display Name of the Application associated with this Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1303,7 +1303,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Display Name of the Azure Active Directory Application associated with this Service Principal.
+    <dd>{{% md %}}The Display Name of the Application associated with this Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1367,7 +1367,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Display Name of the Azure Active Directory Application associated with this Service Principal.
+    <dd>{{% md %}}The Display Name of the Application associated with this Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

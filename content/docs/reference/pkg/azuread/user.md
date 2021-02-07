@@ -47,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread"
+	"github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -310,7 +310,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The User Principal Name of the Azure AD User.
+    <dd>{{% md %}}The User Principal Name of the User.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -516,7 +516,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The User Principal Name of the Azure AD User.
+    <dd>{{% md %}}The User Principal Name of the User.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -722,7 +722,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The User Principal Name of the Azure AD User.
+    <dd>{{% md %}}The User Principal Name of the User.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -928,7 +928,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The User Principal Name of the Azure AD User.
+    <dd>{{% md %}}The User Principal Name of the User.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1130,7 +1130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The primary email address of the Azure AD User.
+    <dd>{{% md %}}The primary email address of the User.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1140,7 +1140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Object ID of the Azure AD User.
+    <dd>{{% md %}}The Object ID of the User.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1150,7 +1150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The on-premise SAM account name of the Azure AD User.
+    <dd>{{% md %}}The on-premise SAM account name of the User.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1160,7 +1160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The on-premise user principal name of the Azure AD User.
+    <dd>{{% md %}}The on-premise user principal name of the User.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1185,7 +1185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The primary email address of the Azure AD User.
+    <dd>{{% md %}}The primary email address of the User.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1195,7 +1195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Object ID of the Azure AD User.
+    <dd>{{% md %}}The Object ID of the User.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1205,7 +1205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The on-premise SAM account name of the Azure AD User.
+    <dd>{{% md %}}The on-premise SAM account name of the User.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1215,7 +1215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The on-premise user principal name of the Azure AD User.
+    <dd>{{% md %}}The on-premise user principal name of the User.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1240,7 +1240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The primary email address of the Azure AD User.
+    <dd>{{% md %}}The primary email address of the User.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1250,7 +1250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Object ID of the Azure AD User.
+    <dd>{{% md %}}The Object ID of the User.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1260,7 +1260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The on-premise SAM account name of the Azure AD User.
+    <dd>{{% md %}}The on-premise SAM account name of the User.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1270,7 +1270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The on-premise user principal name of the Azure AD User.
+    <dd>{{% md %}}The on-premise user principal name of the User.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1295,7 +1295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The primary email address of the Azure AD User.
+    <dd>{{% md %}}The primary email address of the User.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1305,7 +1305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Object ID of the Azure AD User.
+    <dd>{{% md %}}The Object ID of the User.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1315,7 +1315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The on-premise SAM account name of the Azure AD User.
+    <dd>{{% md %}}The on-premise SAM account name of the User.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1325,7 +1325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The on-premise user principal name of the Azure AD User.
+    <dd>{{% md %}}The on-premise user principal name of the User.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1564,7 +1564,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The primary email address of the Azure AD User.
+    <dd>{{% md %}}The primary email address of the User.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1594,7 +1594,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Object ID of the Azure AD User.
+    <dd>{{% md %}}The Object ID of the User.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1604,7 +1604,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The on-premise SAM account name of the Azure AD User.
+    <dd>{{% md %}}The on-premise SAM account name of the User.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1614,7 +1614,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The on-premise user principal name of the Azure AD User.
+    <dd>{{% md %}}The on-premise user principal name of the User.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1694,7 +1694,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The User Principal Name of the Azure AD User.
+    <dd>{{% md %}}The User Principal Name of the User.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1810,7 +1810,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The primary email address of the Azure AD User.
+    <dd>{{% md %}}The primary email address of the User.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1840,7 +1840,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Object ID of the Azure AD User.
+    <dd>{{% md %}}The Object ID of the User.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1850,7 +1850,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The on-premise SAM account name of the Azure AD User.
+    <dd>{{% md %}}The on-premise SAM account name of the User.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1860,7 +1860,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The on-premise user principal name of the Azure AD User.
+    <dd>{{% md %}}The on-premise user principal name of the User.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1940,7 +1940,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The User Principal Name of the Azure AD User.
+    <dd>{{% md %}}The User Principal Name of the User.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2056,7 +2056,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The primary email address of the Azure AD User.
+    <dd>{{% md %}}The primary email address of the User.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2086,7 +2086,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Object ID of the Azure AD User.
+    <dd>{{% md %}}The Object ID of the User.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2096,7 +2096,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The on-premise SAM account name of the Azure AD User.
+    <dd>{{% md %}}The on-premise SAM account name of the User.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2106,7 +2106,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The on-premise user principal name of the Azure AD User.
+    <dd>{{% md %}}The on-premise user principal name of the User.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2186,7 +2186,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The User Principal Name of the Azure AD User.
+    <dd>{{% md %}}The User Principal Name of the User.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2302,7 +2302,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The primary email address of the Azure AD User.
+    <dd>{{% md %}}The primary email address of the User.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2332,7 +2332,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Object ID of the Azure AD User.
+    <dd>{{% md %}}The Object ID of the User.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2342,7 +2342,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The on-premise SAM account name of the Azure AD User.
+    <dd>{{% md %}}The on-premise SAM account name of the User.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2352,7 +2352,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The on-premise user principal name of the Azure AD User.
+    <dd>{{% md %}}The on-premise user principal name of the User.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2432,7 +2432,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The User Principal Name of the Azure AD User.
+    <dd>{{% md %}}The User Principal Name of the User.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
