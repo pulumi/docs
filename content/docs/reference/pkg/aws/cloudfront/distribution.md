@@ -3945,6 +3945,15 @@ whether the object has been updated. Defaults to 0 seconds.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="originrequestpolicyid_csharp">
+<a href="#originrequestpolicyid_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Request<wbr>Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="smoothstreaming_csharp">
 <a href="#smoothstreaming_csharp" style="color: inherit; text-decoration: inherit;">Smooth<wbr>Streaming</a>
 </span>
@@ -4102,6 +4111,15 @@ s-maxage`, and `Expires` headers. Defaults to 365 days.
 stay in CloudFront caches before CloudFront queries your origin to see
 whether the object has been updated. Defaults to 0 seconds.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="originrequestpolicyid_go">
+<a href="#originrequestpolicyid_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Request<wbr>Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="smoothstreaming_go">
@@ -4263,6 +4281,15 @@ whether the object has been updated. Defaults to 0 seconds.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="originrequestpolicyid_nodejs">
+<a href="#originrequestpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Request<wbr>Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="smoothstreaming_nodejs">
 <a href="#smoothstreaming_nodejs" style="color: inherit; text-decoration: inherit;">smooth<wbr>Streaming</a>
 </span>
@@ -4420,6 +4447,15 @@ s-maxage`, and `Expires` headers. Defaults to 365 days.
 stay in CloudFront caches before CloudFront queries your origin to see
 whether the object has been updated. Defaults to 0 seconds.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="origin_request_policy_id_python">
+<a href="#origin_request_policy_id_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>request_<wbr>policy_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="smooth_streaming_python">
@@ -5306,6 +5342,15 @@ whether the object has been updated. Defaults to 0 seconds.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="originrequestpolicyid_csharp">
+<a href="#originrequestpolicyid_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Request<wbr>Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="smoothstreaming_csharp">
 <a href="#smoothstreaming_csharp" style="color: inherit; text-decoration: inherit;">Smooth<wbr>Streaming</a>
 </span>
@@ -5474,6 +5519,15 @@ s-maxage`, and `Expires` headers. Defaults to 365 days.
 stay in CloudFront caches before CloudFront queries your origin to see
 whether the object has been updated. Defaults to 0 seconds.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="originrequestpolicyid_go">
+<a href="#originrequestpolicyid_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Request<wbr>Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="smoothstreaming_go">
@@ -5646,6 +5700,15 @@ whether the object has been updated. Defaults to 0 seconds.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="originrequestpolicyid_nodejs">
+<a href="#originrequestpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Request<wbr>Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="smoothstreaming_nodejs">
 <a href="#smoothstreaming_nodejs" style="color: inherit; text-decoration: inherit;">smooth<wbr>Streaming</a>
 </span>
@@ -5814,6 +5877,15 @@ s-maxage`, and `Expires` headers. Defaults to 365 days.
 stay in CloudFront caches before CloudFront queries your origin to see
 whether the object has been updated. Defaults to 0 seconds.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="origin_request_policy_id_python">
+<a href="#origin_request_policy_id_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>request_<wbr>policy_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="smooth_streaming_python">
