@@ -42,24 +42,6 @@ A Pulumi package for creating and managing auth0 cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`auth0` Terraform Provider](https://github.com/alexkappa/terraform-provider-auth0).</dd>
 	<dt>Version</dt>
-	<dd>1.7.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.html" title="Pulumi.Auth0">Pulumi.Auth0</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#" title="auth0">auth0</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/auth0/#" title="@pulumi/auth0">@pulumi/auth0</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_auth0" title="pulumi_auth0">pulumi_auth0</a></dd>
-
+	<dd>1.8.0</dd>
 </dl>
 

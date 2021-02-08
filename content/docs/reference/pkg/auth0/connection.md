@@ -1768,6 +1768,16 @@ The following state arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="setuserrootattributes_csharp">
+<a href="#setuserrootattributes_csharp" style="color: inherit; text-decoration: inherit;">Set<wbr>User<wbr>Root<wbr>Attributes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines whether the 'name', 'given_name', 'family_name', 'nickname', and 'picture' attributes can be independently updated when using the external IdP. Default is `on_each_login` and can be set to `on_first_login`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="signinendpoint_csharp">
 <a href="#signinendpoint_csharp" style="color: inherit; text-decoration: inherit;">Sign<wbr>In<wbr>Endpoint</a>
 </span>
@@ -2433,6 +2443,16 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="setuserrootattributes_go">
+<a href="#setuserrootattributes_go" style="color: inherit; text-decoration: inherit;">Set<wbr>User<wbr>Root<wbr>Attributes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines whether the 'name', 'given_name', 'family_name', 'nickname', and 'picture' attributes can be independently updated when using the external IdP. Default is `on_each_login` and can be set to `on_first_login`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="signinendpoint_go">
@@ -3102,6 +3122,16 @@ The following state arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="setuserrootattributes_nodejs">
+<a href="#setuserrootattributes_nodejs" style="color: inherit; text-decoration: inherit;">set<wbr>User<wbr>Root<wbr>Attributes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines whether the 'name', 'given_name', 'family_name', 'nickname', and 'picture' attributes can be independently updated when using the external IdP. Default is `on_each_login` and can be set to `on_first_login`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="signinendpoint_nodejs">
 <a href="#signinendpoint_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>In<wbr>Endpoint</a>
 </span>
@@ -3767,6 +3797,16 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="set_user_root_attributes_python">
+<a href="#set_user_root_attributes_python" style="color: inherit; text-decoration: inherit;">set_<wbr>user_<wbr>root_<wbr>attributes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Determines whether the 'name', 'given_name', 'family_name', 'nickname', and 'picture' attributes can be independently updated when using the external IdP. Default is `on_each_login` and can be set to `on_first_login`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="sign_in_endpoint_python">
