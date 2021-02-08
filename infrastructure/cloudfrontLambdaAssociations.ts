@@ -159,7 +159,7 @@ function nodeSDKRedirect(uri: string): string | undefined {
     ];
 
     if (match && match.provider && !exceptions.includes(match.provider)) {
-        if (match.service) {
+        if (match.service && !match.service.match(/types|config/)) {
             return `/docs/reference/pkg/${match.provider}/${match.service}/?language=nodejs`;
         }
         return `/docs/reference/pkg/${match.provider}/?language=nodejs`;
