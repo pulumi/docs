@@ -343,7 +343,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location of the volume to create, optional if server_id argument is passed.
+    <dd>{{% md %}}Location of the volume to create, not allowed if server_id argument is passed.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -363,7 +363,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Server to attach the Volume to, optional if location argument is passed.
+    <dd>{{% md %}}Server to attach the Volume to, not allowed if location argument is passed.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -419,7 +419,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location of the volume to create, optional if server_id argument is passed.
+    <dd>{{% md %}}Location of the volume to create, not allowed if server_id argument is passed.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -439,7 +439,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Server to attach the Volume to, optional if location argument is passed.
+    <dd>{{% md %}}Server to attach the Volume to, not allowed if location argument is passed.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -495,7 +495,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location of the volume to create, optional if server_id argument is passed.
+    <dd>{{% md %}}Location of the volume to create, not allowed if server_id argument is passed.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -515,7 +515,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Server to attach the Volume to, optional if location argument is passed.
+    <dd>{{% md %}}Server to attach the Volume to, not allowed if location argument is passed.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -571,7 +571,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Location of the volume to create, optional if server_id argument is passed.
+    <dd>{{% md %}}Location of the volume to create, not allowed if server_id argument is passed.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -591,7 +591,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Server to attach the Volume to, optional if location argument is passed.
+    <dd>{{% md %}}Server to attach the Volume to, not allowed if location argument is passed.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -877,7 +877,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location of the volume to create, optional if server_id argument is passed.
+    <dd>{{% md %}}Location of the volume to create, not allowed if server_id argument is passed.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -897,7 +897,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Server to attach the Volume to, optional if location argument is passed.
+    <dd>{{% md %}}Server to attach the Volume to, not allowed if location argument is passed.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -963,7 +963,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location of the volume to create, optional if server_id argument is passed.
+    <dd>{{% md %}}Location of the volume to create, not allowed if server_id argument is passed.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -983,7 +983,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Server to attach the Volume to, optional if location argument is passed.
+    <dd>{{% md %}}Server to attach the Volume to, not allowed if location argument is passed.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1049,7 +1049,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location of the volume to create, optional if server_id argument is passed.
+    <dd>{{% md %}}Location of the volume to create, not allowed if server_id argument is passed.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1069,7 +1069,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Server to attach the Volume to, optional if location argument is passed.
+    <dd>{{% md %}}Server to attach the Volume to, not allowed if location argument is passed.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1135,7 +1135,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Location of the volume to create, optional if server_id argument is passed.
+    <dd>{{% md %}}Location of the volume to create, not allowed if server_id argument is passed.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1155,7 +1155,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Server to attach the Volume to, optional if location argument is passed.
+    <dd>{{% md %}}Server to attach the Volume to, not allowed if location argument is passed.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
