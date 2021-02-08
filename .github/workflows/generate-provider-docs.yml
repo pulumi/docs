@@ -9,6 +9,9 @@ on:
   repository_dispatch:
     types:
       - tfgen-provider
+      - non-resource-provider
+      # Non-resource providers are things like awsx / cloud / kubernetesx
+      # it's essentially anything that isn't using the resource based docs
 
 jobs:
   pull-request:
@@ -31,6 +34,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Building ${{ env.PROVIDER_NAME }} docs @ ${{ env.PROVIDER_VERSION }}"
+      - if: github.event.action != 'non-resource-provider'
+        run: echo "Building docs for a resource based provider"
+      - if: github.event.action == 'non-resource-provider'
+        run: echo "Building docs for a non-resource based provider"
       - name: checkout docs repo
         uses: actions/checkout@v2
         with:
@@ -75,17 +82,24 @@ jobs:
           go get -u github.com/pkg/errors
           go get -u gopkg.in/russross/blackfriday.v2
         working-directory: docs
-      - name: run yarn install in nodejs sdk
+      # We only want to run typedoc and python doc for non-resource providers
+      - if: github.event.action == 'non-resource-provider'
+        name: run yarn install in nodejs sdk
         run: yarn install && yarn run tsc
         working-directory: ${{ env.PROVIDER_NAME }}/sdk/nodejs
-      - name: run typedoc
+      - if: github.event.action == 'non-resource-provider'
+        name: run typedoc
         run: PKGS=${{ env.PROVIDER_SHORT_NAME }} NOBUILD=true ./scripts/run_typedoc.sh
         working-directory: docs
-      - name: generate resource docs
-        run: ./scripts/gen_resource_docs.sh "${{ env.PROVIDER_SHORT_NAME }}" true "${{ env.PROVIDER_VERSION }}"
-        working-directory: docs
-      - name: generate python docs
+      - if: github.event.action == 'non-resource-provider'
+        name: generate python docs
         run: ./scripts/generate_python_docs.sh "${{ env.PROVIDER_SHORT_NAME }}"
+        working-directory: docs
+      # We only want to run resource docs for providers with a schema - for legacy purposes they are referred to as
+      # tfgen-providers in this script
+      - if: github.event.action != 'non-resource-provider'
+        name: generate resource docs
+        run: ./scripts/gen_resource_docs.sh "${{ env.PROVIDER_SHORT_NAME }}" true "${{ env.PROVIDER_VERSION }}"
         working-directory: docs
       - name: git status
         run: git status && git diff
