@@ -247,9 +247,15 @@ main {
     }
 }
 
-// Hide the language-specific SDK-docs tables until we've removed them from the provider builds.
-.section-docs main .container dl.package-details + p + dl.tabular {
-    @apply hidden;
+.section-docs {
+    // Hide the language-specific SDK-docs tables until we've removed them from the provider builds.
+    main .container dl.package-details + p + dl.tabular {
+        @apply hidden;
+    }
+    // Hide input and output type notes as well.
+    #supporting-types ~ h4 ~ div pulumi-choosable .active blockquote {
+        @apply hidden;
+    }
 }
 
 @tailwind utilities;
