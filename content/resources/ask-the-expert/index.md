@@ -54,7 +54,7 @@ multiple:
     - datetime: 2021-03-11T11:00:00+01:00
       hubspot_form_id: 3ec7c538-d08a-4c94-b161-2824d41ae9c9
 
-    - datetime: 2021-03-25T11:00:00+01:00
+    - datetime: 2021-03-25T11:00:00+02:00
       hubspot_form_id: 776a238e-e34c-4ac9-9af8-4d069fd303b3
 
 # Content for the left hand side section of the page.

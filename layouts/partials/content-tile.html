@@ -3,8 +3,11 @@
     {{ $relref := "noopener noreferrer" }}
     {{ $target := "_blank" }}
 
-    {{ if and (eq .external false) (not (isset . "multiple")) }}
-        {{ $href = (relref .pageContext .link) }}
+    {{ if eq .external false }}
+        {{ if not (isset . "multiple") }}
+            {{ $href = (relref .pageContext .link) }}
+        {{ end }}
+
         {{ $relref = "" }}
         {{ $target = "" }}
     {{ end }}
