@@ -64,6 +64,7 @@ module.exports = {
             whitelist: [
                 "supported-cicd-platforms", ":not", ":target", "md:max-w-lg", "blink", "typing",
                 "char", "resource-deprecated", "btn-scroll-top", "lg:btn-purple-transparent", "section-docs",
+                "supporting-types"
             ],
 
             // Whitelist custom parent selectors and their children.
