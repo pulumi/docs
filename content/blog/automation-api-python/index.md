@@ -24,7 +24,7 @@ To use Automation API, install the Pulumi CLI, which bundles and distributes the
 
 ## Automation Use Cases
 
-Let's look at two use cases where Pulumi customers are applying the Automation API. Our users have applied the Pulumi Automation API to these scenarios:
+Let's look at two use cases where Pulumi customers are applying the Automation API:
 
 ### Platform APIs
 
