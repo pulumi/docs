@@ -39,7 +39,7 @@ class MyStack : Stack
         {
             NoDefaultAlarms = true,
             Nodes = 1,
-            Plan = "bunny",
+            Plan = "bunny-1",
             Region = "amazon-web-services::us-west-1",
             RmqVersion = "3.8.3",
             Tags = 
@@ -75,7 +75,7 @@ func main() {
 		_, err = cloudamqp.NewInstance(ctx, "instance", &cloudamqp.InstanceArgs{
 			NoDefaultAlarms: pulumi.Bool(true),
 			Nodes:           pulumi.Int(1),
-			Plan:            pulumi.String("bunny"),
+			Plan:            pulumi.String("bunny-1"),
 			Region:          pulumi.String("amazon-web-services::us-west-1"),
 			RmqVersion:      pulumi.String("3.8.3"),
 			Tags: pulumi.StringArray{
@@ -105,7 +105,7 @@ lemur_instance = cloudamqp.Instance("lemurInstance",
 instance = cloudamqp.Instance("instance",
     no_default_alarms=True,
     nodes=1,
-    plan="bunny",
+    plan="bunny-1",
     region="amazon-web-services::us-west-1",
     rmq_version="3.8.3",
     tags=["terraform"])
@@ -128,7 +128,7 @@ const lemurInstance = new cloudamqp.Instance("lemur_instance", {
 const instance = new cloudamqp.Instance("instance", {
     noDefaultAlarms: true,
     nodes: 1,
-    plan: "bunny",
+    plan: "bunny-1",
     region: "amazon-web-services::us-west-1",
     rmqVersion: "3.8.3",
     tags: ["terraform"],
@@ -368,7 +368,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of nodes, 1 to 3, in the CloudAMQP instance, default set to 1. The plan chosen must support the number of nodes.
+    <dd>{{% md %}}Number of nodes, 1, 3 or 5. **Note: Changed from optional to computed. In order to change number of nodes, the subscription plan needs to be updated.**
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -454,7 +454,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of nodes, 1 to 3, in the CloudAMQP instance, default set to 1. The plan chosen must support the number of nodes.
+    <dd>{{% md %}}Number of nodes, 1, 3 or 5. **Note: Changed from optional to computed. In order to change number of nodes, the subscription plan needs to be updated.**
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -540,7 +540,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of nodes, 1 to 3, in the CloudAMQP instance, default set to 1. The plan chosen must support the number of nodes.
+    <dd>{{% md %}}Number of nodes, 1, 3 or 5. **Note: Changed from optional to computed. In order to change number of nodes, the subscription plan needs to be updated.**
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -626,7 +626,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of nodes, 1 to 3, in the CloudAMQP instance, default set to 1. The plan chosen must support the number of nodes.
+    <dd>{{% md %}}Number of nodes, 1, 3 or 5. **Note: Changed from optional to computed. In order to change number of nodes, the subscription plan needs to be updated.**
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1152,7 +1152,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of nodes, 1 to 3, in the CloudAMQP instance, default set to 1. The plan chosen must support the number of nodes.
+    <dd>{{% md %}}Number of nodes, 1, 3 or 5. **Note: Changed from optional to computed. In order to change number of nodes, the subscription plan needs to be updated.**
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1298,7 +1298,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of nodes, 1 to 3, in the CloudAMQP instance, default set to 1. The plan chosen must support the number of nodes.
+    <dd>{{% md %}}Number of nodes, 1, 3 or 5. **Note: Changed from optional to computed. In order to change number of nodes, the subscription plan needs to be updated.**
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1444,7 +1444,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of nodes, 1 to 3, in the CloudAMQP instance, default set to 1. The plan chosen must support the number of nodes.
+    <dd>{{% md %}}Number of nodes, 1, 3 or 5. **Note: Changed from optional to computed. In order to change number of nodes, the subscription plan needs to be updated.**
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1590,7 +1590,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of nodes, 1 to 3, in the CloudAMQP instance, default set to 1. The plan chosen must support the number of nodes.
+    <dd>{{% md %}}Number of nodes, 1, 3 or 5. **Note: Changed from optional to computed. In order to change number of nodes, the subscription plan needs to be updated.**
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
