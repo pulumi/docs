@@ -34,7 +34,7 @@ So far, our users have applied the Pulumi Automation API to these scenarios:
 
 The Automation API is a new subpackage in each of Pulumi’s language-specific SDKs that provides APIs to create and manage Stacks and perform lifecycle operations like update, refresh, preview, and destroy. It is a strongly typed and safe way to use Pulumi in embedded contexts such as web servers without having to shell out to a CLI.
 
-You can define a Pulumi program as a function inside of your codebase rather than in a separate project and use methods to get and set configuration parameters programmatically. The Automation API uses a gRPC interface to execute programs that control and communicate with the core Pulumi engine. It still requires a Pulumi CLI installation, as this is how we bundle and distribute the core engine. Today it’s available in preview for [TypeScript/JavaScript](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/x/automation) and [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/x/auto), with support for [Python](https://github.com/pulumi/pulumi/compare/auto/python) and [C#](https://github.com/pulumi/pulumi/compare/auto/dotnet) under active development.
+You can define a Pulumi program as a function within your codebase rather than in a separate project and use methods to get and set configuration parameters programmatically. The Automation API uses a gRPC interface to execute programs that control and communicate with the core Pulumi engine. It still requires a Pulumi CLI installation, as this is how we bundle and distribute the core engine. Today it’s available in preview for [TypeScript/JavaScript](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/x/automation), [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/x/auto) and [Python](https://github.com/pulumi/pulumi/tree/master/sdk/python/lib/pulumi/x/automation), with support for [C#](https://github.com/pulumi/pulumi/compare/auto/dotnet) under active development.
 
 ## Platform APIs
 
@@ -42,7 +42,7 @@ For SaaS scenarios like deploying infrastructure in response to user action, rel
 
 Automation API runs inside your favorite frameworks and interacts with your other packages exactly as you’d expect. We can define custom declarative infrastructure and expose it to end-users behind a familiar REST interface:
 
-{{< chooser language "typescript,go" >}}
+{{< chooser language "typescript,go,python" >}}
 
 {{% choosable language typescript %}}
 
@@ -122,11 +122,40 @@ func createHandler(w http.ResponseWriter, req *http.Request) {
 
 {{% /choosable %}}
 
+{{% choosable language python %}}
+
+```python
+# an HTTP handler to create instances of our declarative infra
+# each request creates an S3-backed static website with dynamic content from the POST body
+@app.route("/sites", methods=["POST"])
+def create_handler():
+    """creates new sites"""
+    stack_name = request.json.get('id')
+    content = request.json.get('content')
+    try:
+        def pulumi_program():
+            return create_pulumi_program(content)
+        # create a new stack, generating our pulumi program on the fly from the POST body
+        stack = auto.create_stack(stack_name=stack_name,
+                                  project_name=project_name,
+                                  program=pulumi_program)
+        stack.set_config("aws:region", auto.ConfigValue("us-west-2"))
+        # deploy the stack, tailing the logs to stdout
+        up_res = stack.up(on_output=print)
+        return jsonify(id=stack_name, url=up_res.outputs['website_url'].value)
+    except auto.StackAlreadyExistsError:
+        return make_response(f"stack '{stack_name}' already exists", 409)
+    except Exception as exn:
+        return make_response(str(exn), 500)
+```
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
-The handlers work with with your favorite HTTP frameworks like `mux` and `express`:
+The handlers work with your favorite HTTP frameworks like `mux`, `express` and `flask`:
 
-{{< chooser language "typescript,go" >}}
+{{< chooser language "typescript,go,python" >}}
 
 {{% choosable language typescript %}}
 
@@ -178,11 +207,46 @@ func main() {
 
 {{% /choosable %}}
 
+{{% choosable language python %}}
+
+```python
+import Flask
+
+# install necessary plugins once upon boot
+ensure_plugins()
+
+# initialize our Flask app
+app = Flask(__name__)
+
+# set up our routes
+@app.route("/sites", methods=["POST"])
+def create_handler():
+    ...
+
+@app.route("/sites", methods=["GET"])
+def list_handler():
+    ...
+
+@app.route("/sites/<string:id>", methods=["GET"])
+def get_handler(id: str):
+    ...
+
+@app.route("/sites/<string:id>", methods=["UPDATE"])
+def update_handler(id: str):
+    ...
+
+@app.route("/sites/<string:id>", methods=["DELETE"])
+def delete_handler(id: str):
+    ...
+```
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 ![HTTP server demo](http.gif)
 
-Check out the full `Pulumi over HTTP` example in [TypeScript](https://github.com/pulumi/automation-api-examples/tree/main/nodejs/pulumiOverHttp-ts) and [Go](https://github.com/pulumi/automation-api-examples/tree/main/go/pulumi_over_http).
+Check out the full `Pulumi over HTTP` example in [TypeScript](https://github.com/pulumi/automation-api-examples/tree/main/nodejs/pulumiOverHttp-ts), [Go](https://github.com/pulumi/automation-api-examples/tree/main/go/pulumi_over_http) and [Python](https://github.com/pulumi/automation-api-examples/tree/main/python/pulumi_over_http).
 
 Here at Pulumi, we used Automation API as the foundation of our [Kubernetes Operator](https://github.com/pulumi/pulumi-kubernetes-operator/pull/86) that exposes Pulumi stacks as Custom Resources. See how your own platform's operators can [take advantage of the Automation API](https://github.com/pulumi/pulumi-kubernetes-operator/blob/master/pkg/controller/stack/stack_controller.go).
 
@@ -194,7 +258,7 @@ Choosing between small, decoupled units of infrastructure and a maintainable orc
 
 Like any other Pulumi program, we define our cloud resources. In this case, an AWS RDS database:
 
-{{< chooser language "typescript,go" >}}
+{{< chooser language "typescript,go,python" >}}
 
 {{% choosable language typescript %}}
 
@@ -242,11 +306,32 @@ ctx.Export("dbPass", dbPass)
 
 {{% /choosable %}}
 
+{{% choosable language python %}}
+
+```python
+cluster_instance = aws.rds.ClusterInstance(
+    "db_instance",
+    cluster_identifier=cluster.cluster_identifier,
+    instance_class=aws.rds.InstanceType.T3_SMALL,
+    engine=aws.rds.EngineType.AURORA_MYSQL,
+    engine_version="5.7.mysql_aurora.2.03.2",
+    publicly_accessible=True,
+    db_subnet_group_name=subnet_group.name
+)
+
+pulumi.export("host", cluster.endpoint)
+pulumi.export("db_name", db_name)
+pulumi.export("db_user", db_user)
+pulumi.export("db_pass", db_pass)
+```
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 But with Automation API, we can perform database migrations and preload rows in the same program:
 
-{{< chooser language "typescript,go" >}}
+{{< chooser language "typescript,go,python" >}}
 
 {{% choosable language typescript %}}
 
@@ -324,11 +409,44 @@ CREATE TABLE IF NOT EXISTS hello_pulumi(
 
 {{% /choosable %}}
 
+{{% choosable language python %}}
+
+```python
+# create (or select if one already exists) a stack that uses our inline program
+stack = auto.create_or_select_stack(stack_name=stack_name,
+                                    project_name=project_name,
+                                    program=pulumi_program)
+
+up_res = stack.up(on_output=print)
+print(f"db host url: {up_res.outputs['host'].value}")
+
+print("configuring db...")
+with connect(
+        host=up_res.outputs['host'].value,
+        user=up_res.outputs['db_user'].value,
+        password=up_res.outputs['db_pass'].value,
+        database=up_res.outputs['db_name'].value) as connection:
+    print("db configured!")
+
+    # make sure the table exists
+    print("creating table...")
+    create_table_query = """CREATE TABLE IF NOT EXISTS hello_pulumi(
+        id int(9) NOT NULL PRIMARY KEY,
+        color varchar(14) NOT NULL);
+        """
+    with connection.cursor() as cursor:
+        cursor.execute(create_table_query)
+        connection.commit()
+
+```
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 ![Database migration demo](dbmigration.gif)
 
-See the full database deployment and migration Automation API program in [TypeScript](https://github.com/pulumi/automation-api-examples/tree/main/nodejs/databaseMigration-ts) and [Go](https://github.com/pulumi/automation-api-examples/tree/main/go/database_migration).
+See the full database deployment and migration Automation API program in [TypeScript](https://github.com/pulumi/automation-api-examples/tree/main/nodejs/databaseMigration-ts), [Go](https://github.com/pulumi/automation-api-examples/tree/main/go/database_migration) and [Python](https://github.com/pulumi/automation-api-examples/tree/main/python/database_migration).
 
 ## Cloud Framework Development
 
@@ -504,17 +622,18 @@ Our VM provisioner uses Automation API, backed by Pulumi’s desired state model
 
 ## Give it a Try Today!
 
-The Automation API is your tool to tame Cloud Engineering complexity and give your team the leverage to automate your cloud infrastructure. It is completely open source and available today for TypeScript/JavaScript and Go. Want to learn more? Come hang out with us in the [#automation-api community slack channel](https://pulumi-community.slack.com/archives/C019YSXN04B). Download the latest Pulumi release and check out these resources to get started:
+The Automation API is your tool to tame Cloud Engineering complexity and give your team the leverage to automate your cloud infrastructure. It is completely open source and available today for TypeScript/JavaScript, Go and Python. Want to learn more? Come hang out with us in the [#automation-api community slack channel](https://pulumi-community.slack.com/archives/C019YSXN04B). Download the latest Pulumi release and check out these resources to get started:
 
 - [Go documentation](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/x/auto)
 - [JavaScript/TypeScript documentation](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/x/automation/)
+- [Python documentation](https://www.pulumi.com/docs/reference/pkg/python/pulumi/#module-pulumi.x.automation)  
 - [The Automation API examples repo](https://github.com/pulumi/automation-api-examples)
 - The list of [known issues](https://github.com/pulumi/pulumi/issues?q=is%3Aissue+is%3Aopen+label%3Aarea%2Fautomation-api). Please [file more](https://github.com/pulumi/pulumi/issues/new?assignees=&labels=needs-triage&template=bug_report.md&title=) as you find them!
 - [The Pulumi Kubernetes Operator](https://github.com/pulumi/pulumi-kubernetes-operator)
 - [aksctl](https://github.com/jaxxstorm/aksctl)
 - [Halloumi](https://github.com/pulumi/halloumi)
 
-Keep an eye out! [Python](https://github.com/pulumi/pulumi/compare/auto/python) and [C#](https://github.com/pulumi/pulumi/compare/auto/dotnet) support are under active development and coming soon.
+Keep an eye out! [C#](https://github.com/pulumi/pulumi/compare/auto/dotnet) support is under active development and coming soon.
 
 We'd like to give a special thank you to the community members who have consulted with us, chimed in on the [original GitHub issue](https://github.com/pulumi/pulumi/issues/3901), and have been there for the journey in [community slack](https://pulumi-community.slack.com/archives/C019YSXN04B).
 
