@@ -30,7 +30,6 @@ class MyStack : Stack
     public MyStack()
     {
         var zonesIds = Output.Create(AliCloud.Hbase.GetZones.InvokeAsync());
-        // Create an HBase instance with the first matched zone
         var hbase = new AliCloud.Hbase.Instance("hbase", new AliCloud.Hbase.InstanceArgs
         {
             ZoneId = zonesIds.Apply(zonesIds => zonesIds.Zones[0].Id),
@@ -77,7 +76,6 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 zones_ids = alicloud.hbase.get_zones()
-# Create an HBase instance with the first matched zone
 hbase = alicloud.hbase.Instance("hbase", zone_id=zones_ids.zones[0].id)
 # Other properties...
 ```
@@ -91,7 +89,6 @@ import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 const zonesIds = alicloud.hbase.getZones({});
-// Create an HBase instance with the first matched zone
 const hbase = new alicloud.hbase.Instance("hbase", {zoneId: zonesIds.then(zonesIds => zonesIds.zones[0].id)});
 // Other properties...
 ```

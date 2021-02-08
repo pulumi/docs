@@ -30,24 +30,6 @@ Explore the resources and functions of the yundun module in the AliCloud package
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.34.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Yundun.html" title="Pulumi.AliCloud.Yundun">Pulumi.AliCloud.Yundun</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/yundun?tab=doc#" title="alicloud/yundun">alicloud/yundun</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/yundun/#" title="@pulumi/alicloud/yundun">@pulumi/alicloud/yundun</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/yundun" title="pulumi_alicloud/yundun">pulumi_alicloud/yundun</a></dd>
-
+	<dd>2.35.0</dd>
 </dl>
 

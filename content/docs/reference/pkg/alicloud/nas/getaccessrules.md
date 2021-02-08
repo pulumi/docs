@@ -12,7 +12,7 @@ meta_desc: "Explore the GetAccessRules function of the nas module, including exa
 
 This data source provides AccessRule available to the user.
 
-> NOTE: Available in 1.35.0+
+> **NOTE**: Available in 1.35.0+
 
 
 {{% examples %}}
@@ -384,7 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of rule IDs, Each element set to `access_rule_id` (Each element formats as `<access_group_name>:<access rule id>` before 1.53.0).
+    <dd>{{% md %}}A list of rule IDs, Each element set to `access_rule_id` (Each element formats as `<access_group_name>:<access_rule_id>` before 1.53.0).
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -468,7 +468,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of rule IDs, Each element set to `access_rule_id` (Each element formats as `<access_group_name>:<access rule id>` before 1.53.0).
+    <dd>{{% md %}}A list of rule IDs, Each element set to `access_rule_id` (Each element formats as `<access_group_name>:<access_rule_id>` before 1.53.0).
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -552,7 +552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of rule IDs, Each element set to `access_rule_id` (Each element formats as `<access_group_name>:<access rule id>` before 1.53.0).
+    <dd>{{% md %}}A list of rule IDs, Each element set to `access_rule_id` (Each element formats as `<access_group_name>:<access_rule_id>` before 1.53.0).
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -636,7 +636,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of rule IDs, Each element set to `access_rule_id` (Each element formats as `<access_group_name>:<access rule id>` before 1.53.0).
+    <dd>{{% md %}}A list of rule IDs, Each element set to `access_rule_id` (Each element formats as `<access_group_name>:<access_rule_id>` before 1.53.0).
 {{% /md %}}</dd>
     <dt class="property-"
             title="">

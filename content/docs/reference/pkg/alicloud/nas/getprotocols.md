@@ -150,7 +150,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The file system type. Valid Values: Performance and Capacity.
+    <dd>{{% md %}}The file system type. Valid Values: `Performance` and `Capacity`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -185,7 +185,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The file system type. Valid Values: Performance and Capacity.
+    <dd>{{% md %}}The file system type. Valid Values: `Performance` and `Capacity`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -220,7 +220,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The file system type. Valid Values: Performance and Capacity.
+    <dd>{{% md %}}The file system type. Valid Values: `Performance` and `Capacity`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -255,7 +255,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The file system type. Valid Values: Performance and Capacity.
+    <dd>{{% md %}}The file system type. Valid Values: `Performance` and `Capacity`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

@@ -30,24 +30,6 @@ Explore the resources and functions of the emr module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.34.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Emr.html" title="Pulumi.AliCloud.Emr">Pulumi.AliCloud.Emr</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/emr?tab=doc#" title="alicloud/emr">alicloud/emr</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/emr/#" title="@pulumi/alicloud/emr">@pulumi/alicloud/emr</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/emr" title="pulumi_alicloud/emr">pulumi_alicloud/emr</a></dd>
-
+	<dd>2.35.0</dd>
 </dl>
 

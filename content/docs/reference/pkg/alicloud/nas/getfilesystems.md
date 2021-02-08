@@ -12,7 +12,7 @@ meta_desc: "Explore the GetFileSystems function of the nas module, including exa
 
 This data source provides FileSystems available to the user.
 
-> NOTE: Available in 1.35.0+
+> **NOTE**: Available in 1.35.0+
 
 
 {{% examples %}}
@@ -174,7 +174,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific ProtocolType.
+    <dd>{{% md %}}Filter results by a specific ProtocolType. Valid values: `NFS` and `SMB`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -184,7 +184,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific StorageType.
+    <dd>{{% md %}}Filter results by a specific StorageType. Valid values: `Capacity` and `Performance`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -229,7 +229,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific ProtocolType.
+    <dd>{{% md %}}Filter results by a specific ProtocolType. Valid values: `NFS` and `SMB`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -239,7 +239,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific StorageType.
+    <dd>{{% md %}}Filter results by a specific StorageType. Valid values: `Capacity` and `Performance`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -284,7 +284,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific ProtocolType.
+    <dd>{{% md %}}Filter results by a specific ProtocolType. Valid values: `NFS` and `SMB`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -294,7 +294,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific StorageType.
+    <dd>{{% md %}}Filter results by a specific StorageType. Valid values: `Capacity` and `Performance`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -339,7 +339,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific ProtocolType.
+    <dd>{{% md %}}Filter results by a specific ProtocolType. Valid values: `NFS` and `SMB`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -349,7 +349,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific StorageType.
+    <dd>{{% md %}}Filter results by a specific StorageType. Valid values: `Capacity` and `Performance`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -770,7 +770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific ProtocolType.
+    <dd>{{% md %}}Filter results by a specific ProtocolType. Valid values: `NFS` and `SMB`.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -790,7 +790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific StorageType.
+    <dd>{{% md %}}Filter results by a specific StorageType. Valid values: `Capacity` and `Performance`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -846,7 +846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific ProtocolType.
+    <dd>{{% md %}}Filter results by a specific ProtocolType. Valid values: `NFS` and `SMB`.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -866,7 +866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific StorageType.
+    <dd>{{% md %}}Filter results by a specific StorageType. Valid values: `Capacity` and `Performance`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -922,7 +922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific ProtocolType.
+    <dd>{{% md %}}Filter results by a specific ProtocolType. Valid values: `NFS` and `SMB`.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -942,7 +942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific StorageType.
+    <dd>{{% md %}}Filter results by a specific StorageType. Valid values: `Capacity` and `Performance`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -998,7 +998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific ProtocolType.
+    <dd>{{% md %}}Filter results by a specific ProtocolType. Valid values: `NFS` and `SMB`.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1018,7 +1018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific StorageType.
+    <dd>{{% md %}}Filter results by a specific StorageType. Valid values: `Capacity` and `Performance`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

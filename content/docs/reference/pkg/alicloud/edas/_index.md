@@ -39,24 +39,6 @@ Explore the resources and functions of the edas module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.34.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Edas.html" title="Pulumi.AliCloud.Edas">Pulumi.AliCloud.Edas</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/edas?tab=doc#" title="alicloud/edas">alicloud/edas</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/edas/#" title="@pulumi/alicloud/edas">@pulumi/alicloud/edas</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/edas" title="pulumi_alicloud/edas">pulumi_alicloud/edas</a></dd>
-
+	<dd>2.35.0</dd>
 </dl>
 

@@ -28,7 +28,7 @@ This data source provides availability instance_types for HBase that can be acce
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance_types(</span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstanceTypesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance_types(</span><span class="nx">charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstanceTypesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -54,6 +54,36 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="chargetype_csharp">
+<a href="#chargetype_csharp" style="color: inherit; text-decoration: inherit;">Charge<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The charge type of create hbase cluster instance, `PrePaid` or `PostPaid`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disktype_csharp">
+<a href="#disktype_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The disk type, `cloud_ssd`, `cloud_essd_pl1`, `cloud_efficiency`, `local_hdd_pro`, `local_ssd_pro`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="engine_csharp">
+<a href="#engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The engine name, `singlehbase`, `hbase`, `hbaseue`, `bds`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="instancetype_csharp">
 <a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
 </span>
@@ -71,12 +101,72 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="regionid_csharp">
+<a href="#regionid_csharp" style="color: inherit; text-decoration: inherit;">Region<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The dest region id, default client region.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The engine version, singlehbase/hbase=1.1/2.0, bds=1.0.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zoneid_csharp">
+<a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The zone id, belong to regionId.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="chargetype_go">
+<a href="#chargetype_go" style="color: inherit; text-decoration: inherit;">Charge<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The charge type of create hbase cluster instance, `PrePaid` or `PostPaid`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disktype_go">
+<a href="#disktype_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The disk type, `cloud_ssd`, `cloud_essd_pl1`, `cloud_efficiency`, `local_hdd_pro`, `local_ssd_pro`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="engine_go">
+<a href="#engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The engine name, `singlehbase`, `hbase`, `hbaseue`, `bds`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="instancetype_go">
@@ -96,12 +186,72 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="regionid_go">
+<a href="#regionid_go" style="color: inherit; text-decoration: inherit;">Region<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The dest region id, default client region.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The engine version, singlehbase/hbase=1.1/2.0, bds=1.0.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zoneid_go">
+<a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The zone id, belong to regionId.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="chargetype_nodejs">
+<a href="#chargetype_nodejs" style="color: inherit; text-decoration: inherit;">charge<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The charge type of create hbase cluster instance, `PrePaid` or `PostPaid`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disktype_nodejs">
+<a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The disk type, `cloud_ssd`, `cloud_essd_pl1`, `cloud_efficiency`, `local_hdd_pro`, `local_ssd_pro`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="engine_nodejs">
+<a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The engine name, `singlehbase`, `hbase`, `hbaseue`, `bds`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="instancetype_nodejs">
@@ -121,12 +271,72 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="regionid_nodejs">
+<a href="#regionid_nodejs" style="color: inherit; text-decoration: inherit;">region<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The dest region id, default client region.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The engine version, singlehbase/hbase=1.1/2.0, bds=1.0.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zoneid_nodejs">
+<a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The zone id, belong to regionId.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="charge_type_python">
+<a href="#charge_type_python" style="color: inherit; text-decoration: inherit;">charge_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The charge type of create hbase cluster instance, `PrePaid` or `PostPaid`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disk_type_python">
+<a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The disk type, `cloud_ssd`, `cloud_essd_pl1`, `cloud_efficiency`, `local_hdd_pro`, `local_ssd_pro`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="engine_python">
+<a href="#engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The engine name, `singlehbase`, `hbase`, `hbaseue`, `bds`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="instance_type_python">
@@ -146,6 +356,36 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="region_id_python">
+<a href="#region_id_python" style="color: inherit; text-decoration: inherit;">region_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The dest region id, default client region.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The engine version, singlehbase/hbase=1.1/2.0, bds=1.0.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zone_id_python">
+<a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The zone id, belong to regionId.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -161,6 +401,16 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="coreinstancetypes_csharp">
+<a href="#coreinstancetypes_csharp" style="color: inherit; text-decoration: inherit;">Core<wbr>Instance<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetypescoreinstancetype">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Hbase.<wbr>Outputs.<wbr>Get<wbr>Instance<wbr>Types<wbr>Core<wbr>Instance<wbr>Type&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.115.0+) A list of core instance types. Each element contains the following attributes:
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -183,13 +433,51 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="masterinstancetypes_csharp">
+<a href="#masterinstancetypes_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetypesmasterinstancetype">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Hbase.<wbr>Outputs.<wbr>Get<wbr>Instance<wbr>Types<wbr>Master<wbr>Instance<wbr>Type&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.115.0+) A list of master instance types. Each element contains the following attributes:
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="types_csharp">
 <a href="#types_csharp" style="color: inherit; text-decoration: inherit;">Types</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancetypestype">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Hbase.<wbr>Outputs.<wbr>Get<wbr>Instance<wbr>Types<wbr>Type&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of instance types. Each element contains the following attributes:
+    <dd>{{% md %}}(Deprecated) A list of instance types. Each element contains the following attributes:
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="chargetype_csharp">
+<a href="#chargetype_csharp" style="color: inherit; text-decoration: inherit;">Charge<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="disktype_csharp">
+<a href="#disktype_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="engine_csharp">
+<a href="#engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the engine.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -199,11 +487,40 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the instance type.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="outputfile_csharp">
 <a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="regionid_csharp">
+<a href="#regionid_csharp" style="color: inherit; text-decoration: inherit;">Region<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of the engine.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="zoneid_csharp">
+<a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -215,6 +532,16 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="coreinstancetypes_go">
+<a href="#coreinstancetypes_go" style="color: inherit; text-decoration: inherit;">Core<wbr>Instance<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetypescoreinstancetype">[]Get<wbr>Instance<wbr>Types<wbr>Core<wbr>Instance<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.115.0+) A list of core instance types. Each element contains the following attributes:
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -237,13 +564,51 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="masterinstancetypes_go">
+<a href="#masterinstancetypes_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetypesmasterinstancetype">[]Get<wbr>Instance<wbr>Types<wbr>Master<wbr>Instance<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.115.0+) A list of master instance types. Each element contains the following attributes:
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="types_go">
 <a href="#types_go" style="color: inherit; text-decoration: inherit;">Types</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancetypestype">[]Get<wbr>Instance<wbr>Types<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}A list of instance types. Each element contains the following attributes:
+    <dd>{{% md %}}(Deprecated) A list of instance types. Each element contains the following attributes:
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="chargetype_go">
+<a href="#chargetype_go" style="color: inherit; text-decoration: inherit;">Charge<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="disktype_go">
+<a href="#disktype_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="engine_go">
+<a href="#engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the engine.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -253,11 +618,40 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the instance type.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="outputfile_go">
 <a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="regionid_go">
+<a href="#regionid_go" style="color: inherit; text-decoration: inherit;">Region<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of the engine.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="zoneid_go">
+<a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -269,6 +663,16 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="coreinstancetypes_nodejs">
+<a href="#coreinstancetypes_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Instance<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetypescoreinstancetype">Get<wbr>Instance<wbr>Types<wbr>Core<wbr>Instance<wbr>Type[]</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.115.0+) A list of core instance types. Each element contains the following attributes:
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -291,13 +695,51 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="masterinstancetypes_nodejs">
+<a href="#masterinstancetypes_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Instance<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetypesmasterinstancetype">Get<wbr>Instance<wbr>Types<wbr>Master<wbr>Instance<wbr>Type[]</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.115.0+) A list of master instance types. Each element contains the following attributes:
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="types_nodejs">
 <a href="#types_nodejs" style="color: inherit; text-decoration: inherit;">types</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancetypestype">Get<wbr>Instance<wbr>Types<wbr>Type[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of instance types. Each element contains the following attributes:
+    <dd>{{% md %}}(Deprecated) A list of instance types. Each element contains the following attributes:
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="chargetype_nodejs">
+<a href="#chargetype_nodejs" style="color: inherit; text-decoration: inherit;">charge<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="disktype_nodejs">
+<a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="engine_nodejs">
+<a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the engine.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -307,11 +749,40 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the instance type.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="outputfile_nodejs">
 <a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="regionid_nodejs">
+<a href="#regionid_nodejs" style="color: inherit; text-decoration: inherit;">region<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of the engine.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="zoneid_nodejs">
+<a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -323,6 +794,16 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="core_instance_types_python">
+<a href="#core_instance_types_python" style="color: inherit; text-decoration: inherit;">core_<wbr>instance_<wbr>types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetypescoreinstancetype">Sequence[Get<wbr>Instance<wbr>Types<wbr>Core<wbr>Instance<wbr>Type]</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.115.0+) A list of core instance types. Each element contains the following attributes:
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -345,13 +826,51 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="master_instance_types_python">
+<a href="#master_instance_types_python" style="color: inherit; text-decoration: inherit;">master_<wbr>instance_<wbr>types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetypesmasterinstancetype">Sequence[Get<wbr>Instance<wbr>Types<wbr>Master<wbr>Instance<wbr>Type]</a></span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.115.0+) A list of master instance types. Each element contains the following attributes:
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="types_python">
 <a href="#types_python" style="color: inherit; text-decoration: inherit;">types</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancetypestype">Sequence[Get<wbr>Instance<wbr>Types<wbr>Type]</a></span>
     </dt>
-    <dd>{{% md %}}A list of instance types. Each element contains the following attributes:
+    <dd>{{% md %}}(Deprecated) A list of instance types. Each element contains the following attributes:
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="charge_type_python">
+<a href="#charge_type_python" style="color: inherit; text-decoration: inherit;">charge_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="disk_type_python">
+<a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="engine_python">
+<a href="#engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the engine.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -361,11 +880,40 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the instance type.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="output_file_python">
 <a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="region_id_python">
+<a href="#region_id_python" style="color: inherit; text-decoration: inherit;">region_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The version of the engine.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="zone_id_python">
+<a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -379,6 +927,562 @@ The following output properties are available:
 
 ## Supporting Types
 
+
+<h4 id="getinstancetypescoreinstancetype">Get<wbr>Instance<wbr>Types<wbr>Core<wbr>Instance<wbr>Type</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetInstanceTypesCoreInstanceType">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/hbase?tab=doc#GetInstanceTypesCoreInstanceType">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Hbase.Outputs.GetInstanceTypesCoreInstanceType.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="category_csharp">
+<a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the category, single or cluster.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="cpusize_csharp">
+<a href="#cpusize_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Cpu size of the instance type.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="engine_csharp">
+<a href="#engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The engine name, `singlehbase`, `hbase`, `hbaseue`, `bds`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="instancetype_csharp">
+<a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The hbase instance type of create hbase cluster instance.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="maxcorecount_csharp">
+<a href="#maxcorecount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Core<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Max count of the core instance nodes.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="memsize_csharp">
+<a href="#memsize_csharp" style="color: inherit; text-decoration: inherit;">Mem<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Mem size of the instance type.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="storagetype_csharp">
+<a href="#storagetype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the storage type.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The engine version, singlehbase/hbase=1.1/2.0, bds=1.0.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="zone_csharp">
+<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of zone id.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="category_go">
+<a href="#category_go" style="color: inherit; text-decoration: inherit;">Category</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the category, single or cluster.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="cpusize_go">
+<a href="#cpusize_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Cpu size of the instance type.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="engine_go">
+<a href="#engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The engine name, `singlehbase`, `hbase`, `hbaseue`, `bds`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="instancetype_go">
+<a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The hbase instance type of create hbase cluster instance.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="maxcorecount_go">
+<a href="#maxcorecount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Core<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Max count of the core instance nodes.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="memsize_go">
+<a href="#memsize_go" style="color: inherit; text-decoration: inherit;">Mem<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Mem size of the instance type.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="storagetype_go">
+<a href="#storagetype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the storage type.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The engine version, singlehbase/hbase=1.1/2.0, bds=1.0.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="zone_go">
+<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of zone id.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="category_nodejs">
+<a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the category, single or cluster.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="cpusize_nodejs">
+<a href="#cpusize_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Cpu size of the instance type.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="engine_nodejs">
+<a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The engine name, `singlehbase`, `hbase`, `hbaseue`, `bds`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="instancetype_nodejs">
+<a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The hbase instance type of create hbase cluster instance.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="maxcorecount_nodejs">
+<a href="#maxcorecount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Core<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Max count of the core instance nodes.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="memsize_nodejs">
+<a href="#memsize_nodejs" style="color: inherit; text-decoration: inherit;">mem<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Mem size of the instance type.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="storagetype_nodejs">
+<a href="#storagetype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the storage type.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The engine version, singlehbase/hbase=1.1/2.0, bds=1.0.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="zone_nodejs">
+<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of zone id.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="category_python">
+<a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the category, single or cluster.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="cpu_size_python">
+<a href="#cpu_size_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Cpu size of the instance type.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="engine_python">
+<a href="#engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The engine name, `singlehbase`, `hbase`, `hbaseue`, `bds`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="instance_type_python">
+<a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The hbase instance type of create hbase cluster instance.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="max_core_count_python">
+<a href="#max_core_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>core_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Max count of the core instance nodes.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="mem_size_python">
+<a href="#mem_size_python" style="color: inherit; text-decoration: inherit;">mem_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Mem size of the instance type.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="storage_type_python">
+<a href="#storage_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the storage type.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The engine version, singlehbase/hbase=1.1/2.0, bds=1.0.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="zone_python">
+<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of zone id.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getinstancetypesmasterinstancetype">Get<wbr>Instance<wbr>Types<wbr>Master<wbr>Instance<wbr>Type</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetInstanceTypesMasterInstanceType">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/hbase?tab=doc#GetInstanceTypesMasterInstanceType">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Hbase.Outputs.GetInstanceTypesMasterInstanceType.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cpusize_csharp">
+<a href="#cpusize_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Cpu size of the instance type.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="instancetype_csharp">
+<a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The hbase instance type of create hbase cluster instance.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="memsize_csharp">
+<a href="#memsize_csharp" style="color: inherit; text-decoration: inherit;">Mem<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Mem size of the instance type.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cpusize_go">
+<a href="#cpusize_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Cpu size of the instance type.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="instancetype_go">
+<a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The hbase instance type of create hbase cluster instance.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="memsize_go">
+<a href="#memsize_go" style="color: inherit; text-decoration: inherit;">Mem<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Mem size of the instance type.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cpusize_nodejs">
+<a href="#cpusize_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Cpu size of the instance type.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="instancetype_nodejs">
+<a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The hbase instance type of create hbase cluster instance.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="memsize_nodejs">
+<a href="#memsize_nodejs" style="color: inherit; text-decoration: inherit;">mem<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Mem size of the instance type.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cpu_size_python">
+<a href="#cpu_size_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Cpu size of the instance type.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="instance_type_python">
+<a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The hbase instance type of create hbase cluster instance.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="mem_size_python">
+<a href="#mem_size_python" style="color: inherit; text-decoration: inherit;">mem_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Mem size of the instance type.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="getinstancetypestype">Get<wbr>Instance<wbr>Types<wbr>Type</h4>
 {{% choosable language nodejs %}}

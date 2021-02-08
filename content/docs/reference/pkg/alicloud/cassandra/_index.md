@@ -31,24 +31,6 @@ Explore the resources and functions of the cassandra module in the AliCloud pack
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.34.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cassandra.html" title="Pulumi.AliCloud.Cassandra">Pulumi.AliCloud.Cassandra</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cassandra?tab=doc#" title="alicloud/cassandra">alicloud/cassandra</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cassandra/#" title="@pulumi/alicloud/cassandra">@pulumi/alicloud/cassandra</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/cassandra" title="pulumi_alicloud/cassandra">pulumi_alicloud/cassandra</a></dd>
-
+	<dd>2.35.0</dd>
 </dl>
 
