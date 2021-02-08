@@ -35,9 +35,9 @@ class MyStack : Stack
         var cert = new DigitalOcean.Certificate("cert", new DigitalOcean.CertificateArgs
         {
             Type = "custom",
-            PrivateKey = File.ReadAllText("/Users/terraform/certs/privkey.pem"),
-            LeafCertificate = File.ReadAllText("/Users/terraform/certs/cert.pem"),
-            CertificateChain = File.ReadAllText("/Users/terraform/certs/fullchain.pem"),
+            PrivateKey = File.ReadAllText("/Users/myuser/certs/privkey.pem"),
+            LeafCertificate = File.ReadAllText("/Users/myuser/certs/cert.pem"),
+            CertificateChain = File.ReadAllText("/Users/myuser/certs/fullchain.pem"),
         });
     }
 
@@ -57,9 +57,9 @@ import pulumi_digitalocean as digitalocean
 
 cert = digitalocean.Certificate("cert",
     type="custom",
-    private_key=(lambda path: open(path).read())("/Users/terraform/certs/privkey.pem"),
-    leaf_certificate=(lambda path: open(path).read())("/Users/terraform/certs/cert.pem"),
-    certificate_chain=(lambda path: open(path).read())("/Users/terraform/certs/fullchain.pem"))
+    private_key=(lambda path: open(path).read())("/Users/myuser/certs/privkey.pem"),
+    leaf_certificate=(lambda path: open(path).read())("/Users/myuser/certs/cert.pem"),
+    certificate_chain=(lambda path: open(path).read())("/Users/myuser/certs/fullchain.pem"))
 ```
 
 {{% /example %}}
@@ -73,9 +73,9 @@ import * from "fs";
 
 const cert = new digitalocean.Certificate("cert", {
     type: "custom",
-    privateKey: fs.readFileSync("/Users/terraform/certs/privkey.pem"),
-    leafCertificate: fs.readFileSync("/Users/terraform/certs/cert.pem"),
-    certificateChain: fs.readFileSync("/Users/terraform/certs/fullchain.pem"),
+    privateKey: fs.readFileSync("/Users/myuser/certs/privkey.pem"),
+    leafCertificate: fs.readFileSync("/Users/myuser/certs/cert.pem"),
+    certificateChain: fs.readFileSync("/Users/myuser/certs/fullchain.pem"),
 });
 ```
 
