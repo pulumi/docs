@@ -30,24 +30,6 @@ Explore the resources and functions of the aws module in the SignalFx package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/splunk-terraform/terraform-provider-signalfx).</dd>
 	<dt>Version</dt>
-	<dd>4.1.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Aws.html" title="Pulumi.SignalFx.Aws">Pulumi.SignalFx.Aws</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/aws?tab=doc#" title="signalfx/aws">signalfx/aws</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/aws/#" title="@pulumi/signalfx/aws">@pulumi/signalfx/aws</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_signalfx/aws" title="pulumi_signalfx/aws">pulumi_signalfx/aws</a></dd>
-
+	<dd>4.2.0</dd>
 </dl>
 

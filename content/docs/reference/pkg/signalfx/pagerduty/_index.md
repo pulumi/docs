@@ -14,6 +14,11 @@ Explore the resources and functions of the pagerduty module in the SignalFx pack
     <li><a href="integration" title="Integration"><span class="symbol resource"></span>Integration</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getintegration" title="GetIntegration"><span class="symbol function"></span>GetIntegration</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -23,24 +28,6 @@ Explore the resources and functions of the pagerduty module in the SignalFx pack
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/splunk-terraform/terraform-provider-signalfx).</dd>
 	<dt>Version</dt>
-	<dd>4.1.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.PagerDuty.html" title="Pulumi.SignalFx.PagerDuty">Pulumi.SignalFx.PagerDuty</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/pagerduty?tab=doc#" title="signalfx/pagerduty">signalfx/pagerduty</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/pagerduty/#" title="@pulumi/signalfx/pagerduty">@pulumi/signalfx/pagerduty</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_signalfx/pagerduty" title="pulumi_signalfx/pagerduty">pulumi_signalfx/pagerduty</a></dd>
-
+	<dd>4.2.0</dd>
 </dl>
 

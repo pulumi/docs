@@ -67,6 +67,7 @@ data(""cpu.total.idle"", filter=myfilters).publish()
 
 ",
             SortBy = "+host",
+            Timezone = "Europe/Paris",
         });
     }
 
@@ -119,6 +120,7 @@ func main() {
 			HideTimestamp: pulumi.Bool(true),
 			ProgramText:   pulumi.String(fmt.Sprintf("%v%v%v", "myfilters = filter(\"cluster_name\", \"prod\") and filter(\"role\", \"search\")\n", "data(\"cpu.total.idle\", filter=myfilters).publish()\n", "\n")),
 			SortBy:        pulumi.String("+host"),
+			Timezone:      pulumi.String("Europe/Paris"),
 		})
 		if err != nil {
 			return err
@@ -167,7 +169,8 @@ myheatmapchart0 = signalfx.HeatmapChart("myheatmapchart0",
 data("cpu.total.idle", filter=myfilters).publish()
 
 """,
-    sort_by="+host")
+    sort_by="+host",
+    timezone="Europe/Paris")
 ```
 
 {{% /example %}}
@@ -211,6 +214,7 @@ const myheatmapchart0 = new signalfx.HeatmapChart("myheatmapchart0", {
 data("cpu.total.idle", filter=myfilters).publish()
 `,
     sortBy: "+host",
+    timezone: "Europe/Paris",
 });
 ```
 
@@ -228,7 +232,7 @@ data("cpu.total.idle", filter=myfilters).publish()
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_signalfx/#pulumi_signalfx.HeatmapChart">HeatmapChart</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">color_range</span><span class="p">:</span> <span class="nx">Optional[HeatmapChartColorRangeArgs]</span> = None<span class="p">, </span><span class="nx">color_scales</span><span class="p">:</span> <span class="nx">Optional[Sequence[HeatmapChartColorScaleArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_sampling</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">group_bies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">hide_timestamp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">max_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">minimum_resolution</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">program_text</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">refresh_interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sort_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unit_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_signalfx/#pulumi_signalfx.HeatmapChart">HeatmapChart</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">color_range</span><span class="p">:</span> <span class="nx">Optional[HeatmapChartColorRangeArgs]</span> = None<span class="p">, </span><span class="nx">color_scales</span><span class="p">:</span> <span class="nx">Optional[Sequence[HeatmapChartColorScaleArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_sampling</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">group_bies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">hide_timestamp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">max_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">minimum_resolution</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">program_text</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">refresh_interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sort_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unit_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -521,6 +525,16 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="timezone_csharp">
+<a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Timezone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The property value is a string that denotes the geographic region associated with the time zone, (default UTC).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="unitprefix_csharp">
 <a href="#unitprefix_csharp" style="color: inherit; text-decoration: inherit;">Unit<wbr>Prefix</a>
 </span>
@@ -654,6 +668,16 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property to use when sorting the elements. Must be prepended with `+` for ascending or `-` for descending (e.g. `-foo`).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timezone_go">
+<a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Timezone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The property value is a string that denotes the geographic region associated with the time zone, (default UTC).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -793,6 +817,16 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="timezone_nodejs">
+<a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">timezone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The property value is a string that denotes the geographic region associated with the time zone, (default UTC).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="unitprefix_nodejs">
 <a href="#unitprefix_nodejs" style="color: inherit; text-decoration: inherit;">unit<wbr>Prefix</a>
 </span>
@@ -929,6 +963,16 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="timezone_python">
+<a href="#timezone_python" style="color: inherit; text-decoration: inherit;">timezone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The property value is a string that denotes the geographic region associated with the time zone, (default UTC).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="unit_prefix_python">
 <a href="#unit_prefix_python" style="color: inherit; text-decoration: inherit;">unit_<wbr>prefix</a>
 </span>
@@ -1060,7 +1104,7 @@ Get an existing HeatmapChart resource's state with the given name, ID, and optio
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">color_range</span><span class="p">:</span> <span class="nx">Optional[HeatmapChartColorRangeArgs]</span> = None<span class="p">, </span><span class="nx">color_scales</span><span class="p">:</span> <span class="nx">Optional[Sequence[HeatmapChartColorScaleArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_sampling</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">group_bies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">hide_timestamp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">max_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">minimum_resolution</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">program_text</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">refresh_interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sort_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unit_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> HeatmapChart</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">color_range</span><span class="p">:</span> <span class="nx">Optional[HeatmapChartColorRangeArgs]</span> = None<span class="p">, </span><span class="nx">color_scales</span><span class="p">:</span> <span class="nx">Optional[Sequence[HeatmapChartColorScaleArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_sampling</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">group_bies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">hide_timestamp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">max_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">minimum_resolution</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">program_text</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">refresh_interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sort_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unit_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> HeatmapChart</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1295,6 +1339,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_timezone_csharp">
+<a href="#state_timezone_csharp" style="color: inherit; text-decoration: inherit;">Timezone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The property value is a string that denotes the geographic region associated with the time zone, (default UTC).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_unitprefix_csharp">
 <a href="#state_unitprefix_csharp" style="color: inherit; text-decoration: inherit;">Unit<wbr>Prefix</a>
 </span>
@@ -1438,6 +1492,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property to use when sorting the elements. Must be prepended with `+` for ascending or `-` for descending (e.g. `-foo`).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_timezone_go">
+<a href="#state_timezone_go" style="color: inherit; text-decoration: inherit;">Timezone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The property value is a string that denotes the geographic region associated with the time zone, (default UTC).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1587,6 +1651,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_timezone_nodejs">
+<a href="#state_timezone_nodejs" style="color: inherit; text-decoration: inherit;">timezone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The property value is a string that denotes the geographic region associated with the time zone, (default UTC).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_unitprefix_nodejs">
 <a href="#state_unitprefix_nodejs" style="color: inherit; text-decoration: inherit;">unit<wbr>Prefix</a>
 </span>
@@ -1730,6 +1804,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The property to use when sorting the elements. Must be prepended with `+` for ascending or `-` for descending (e.g. `-foo`).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_timezone_python">
+<a href="#state_timezone_python" style="color: inherit; text-decoration: inherit;">timezone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The property value is a string that denotes the geographic region associated with the time zone, (default UTC).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

@@ -23,24 +23,6 @@ Explore the resources and functions of the victorops module in the SignalFx pack
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/splunk-terraform/terraform-provider-signalfx).</dd>
 	<dt>Version</dt>
-	<dd>4.1.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.VictorOps.html" title="Pulumi.SignalFx.VictorOps">Pulumi.SignalFx.VictorOps</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/victorops?tab=doc#" title="signalfx/victorops">signalfx/victorops</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/victorops/#" title="@pulumi/signalfx/victorops">@pulumi/signalfx/victorops</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_signalfx/victorops" title="pulumi_signalfx/victorops">pulumi_signalfx/victorops</a></dd>
-
+	<dd>4.2.0</dd>
 </dl>
 
