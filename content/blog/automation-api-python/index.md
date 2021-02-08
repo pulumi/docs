@@ -150,7 +150,7 @@ See the full database deployment and migration Automation API program in [Python
 
 ## Automation API Resources
 
-To get started with Automation API checkout these links and watch our video.
+To get started with Automation API check out these links and watch our video.
 
 - [Python documentation]({{< relref "/docs/reference/pkg/python/pulumi#module-pulumi.x.automation" >}})
 - [Automation API examples](https://github.com/pulumi/automation-api-examples#python-examples)
