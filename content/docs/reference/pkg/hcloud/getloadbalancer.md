@@ -322,6 +322,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}(int) Unique ID of the Load Balancer.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="ipv4_csharp">
 <a href="#ipv4_csharp" style="color: inherit; text-decoration: inherit;">Ipv4</a>
 </span>
@@ -401,16 +411,6 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}(int) Unique ID of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -443,6 +443,16 @@ The following output properties are available:
         <span class="property-type"><a href="#getloadbalanceralgorithm">[]Get<wbr>Load<wbr>Balancer<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Configuration of the algorithm the Load Balancer use.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}(int) Unique ID of the Load Balancer.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -525,16 +535,6 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}(int) Unique ID of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -567,6 +567,16 @@ The following output properties are available:
         <span class="property-type"><a href="#getloadbalanceralgorithm">Get<wbr>Load<wbr>Balancer<wbr>Algorithm[]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Configuration of the algorithm the Load Balancer use.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}(int) Unique ID of the Load Balancer.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -649,16 +659,6 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}(int) Unique ID of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -691,6 +691,16 @@ The following output properties are available:
         <span class="property-type"><a href="#getloadbalanceralgorithm">Sequence[Get<wbr>Load<wbr>Balancer<wbr>Algorithm]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Configuration of the algorithm the Load Balancer use.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}(int) Unique ID of the Load Balancer.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -770,16 +780,6 @@ The following output properties are available:
         <span class="property-type"><a href="#getloadbalancertarget">Sequence[Get<wbr>Load<wbr>Balancer<wbr>Target]</a></span>
     </dt>
     <dd>{{% md %}}(list) List of targets of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}(int) Unique ID of the Load Balancer.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
