@@ -125,7 +125,7 @@ const aRepoCollaborator = new github.RepositoryCollaborator("a_repo_collaborator
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_github/#pulumi_github.RepositoryCollaborator">RepositoryCollaborator</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">permission</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">repository</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_github/#pulumi_github.RepositoryCollaborator">RepositoryCollaborator</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">permission</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">permission_diff_suppression</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">repository</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -328,6 +328,16 @@ The RepositoryCollaborator resource accepts the following [input]({{< relref "/d
 Must be one of `pull`, `push`, `maintain`, `triage` or `admin` for organization-owned repositories.
 Must be `push` for personal repositories. Defaults to `push`.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="permissiondiffsuppression_csharp">
+<a href="#permissiondiffsuppression_csharp" style="color: inherit; text-decoration: inherit;">Permission<wbr>Diff<wbr>Suppression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Suppress plan diffs for `triage` and `maintain`.  Defaults to `false`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -365,6 +375,16 @@ Must be `push` for personal repositories. Defaults to `push`.
     <dd>{{% md %}}The permission of the outside collaborator for the repository.
 Must be one of `pull`, `push`, `maintain`, `triage` or `admin` for organization-owned repositories.
 Must be `push` for personal repositories. Defaults to `push`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="permissiondiffsuppression_go">
+<a href="#permissiondiffsuppression_go" style="color: inherit; text-decoration: inherit;">Permission<wbr>Diff<wbr>Suppression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Suppress plan diffs for `triage` and `maintain`.  Defaults to `false`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -404,6 +424,16 @@ Must be `push` for personal repositories. Defaults to `push`.
 Must be one of `pull`, `push`, `maintain`, `triage` or `admin` for organization-owned repositories.
 Must be `push` for personal repositories. Defaults to `push`.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="permissiondiffsuppression_nodejs">
+<a href="#permissiondiffsuppression_nodejs" style="color: inherit; text-decoration: inherit;">permission<wbr>Diff<wbr>Suppression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Suppress plan diffs for `triage` and `maintain`.  Defaults to `false`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -441,6 +471,16 @@ Must be `push` for personal repositories. Defaults to `push`.
     <dd>{{% md %}}The permission of the outside collaborator for the repository.
 Must be one of `pull`, `push`, `maintain`, `triage` or `admin` for organization-owned repositories.
 Must be `push` for personal repositories. Defaults to `push`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="permission_diff_suppression_python">
+<a href="#permission_diff_suppression_python" style="color: inherit; text-decoration: inherit;">permission_<wbr>diff_<wbr>suppression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Suppress plan diffs for `triage` and `maintain`.  Defaults to `false`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -565,7 +605,7 @@ Get an existing RepositoryCollaborator resource's state with the given name, ID,
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">invitation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">permission</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">repository</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> RepositoryCollaborator</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">invitation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">permission</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">permission_diff_suppression</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">repository</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> RepositoryCollaborator</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -702,6 +742,16 @@ Must be `push` for personal repositories. Defaults to `push`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_permissiondiffsuppression_csharp">
+<a href="#state_permissiondiffsuppression_csharp" style="color: inherit; text-decoration: inherit;">Permission<wbr>Diff<wbr>Suppression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Suppress plan diffs for `triage` and `maintain`.  Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_repository_csharp">
 <a href="#state_repository_csharp" style="color: inherit; text-decoration: inherit;">Repository</a>
 </span>
@@ -747,6 +797,16 @@ Must be `push` for personal repositories. Defaults to `push`.
     <dd>{{% md %}}The permission of the outside collaborator for the repository.
 Must be one of `pull`, `push`, `maintain`, `triage` or `admin` for organization-owned repositories.
 Must be `push` for personal repositories. Defaults to `push`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_permissiondiffsuppression_go">
+<a href="#state_permissiondiffsuppression_go" style="color: inherit; text-decoration: inherit;">Permission<wbr>Diff<wbr>Suppression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Suppress plan diffs for `triage` and `maintain`.  Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -798,6 +858,16 @@ Must be `push` for personal repositories. Defaults to `push`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_permissiondiffsuppression_nodejs">
+<a href="#state_permissiondiffsuppression_nodejs" style="color: inherit; text-decoration: inherit;">permission<wbr>Diff<wbr>Suppression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Suppress plan diffs for `triage` and `maintain`.  Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_repository_nodejs">
 <a href="#state_repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
 </span>
@@ -843,6 +913,16 @@ Must be `push` for personal repositories. Defaults to `push`.
     <dd>{{% md %}}The permission of the outside collaborator for the repository.
 Must be one of `pull`, `push`, `maintain`, `triage` or `admin` for organization-owned repositories.
 Must be `push` for personal repositories. Defaults to `push`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_permission_diff_suppression_python">
+<a href="#state_permission_diff_suppression_python" style="color: inherit; text-decoration: inherit;">permission_<wbr>diff_<wbr>suppression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Suppress plan diffs for `triage` and `maintain`.  Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
