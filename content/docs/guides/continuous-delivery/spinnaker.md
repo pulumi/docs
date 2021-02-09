@@ -23,7 +23,7 @@ This solution requires a version of Spinnaker that supports plugins as well as t
 * Spinnaker v1.19.4+ (version 1.23.x is recommended)
 * Halyard 1.34+
 
-**Note**: Refer to the [version compatibility table](https://github.com/pulumi/spinnaker-preconfigured-job-plugin#version-compatibility)
+For the latest compatibility information, see the [version compatibility table](https://github.com/pulumi/spinnaker-preconfigured-job-plugin#version-compatibility)
 in the plugin repository.
 
 Additionally, your Spinnaker instance should have been deployed using the [distributed installation](https://www.spinnaker.io/setup/install/environment/#distributed-installation)
@@ -44,16 +44,15 @@ The sample pipeline (shown later) below acts on a hypothetical stack: `dev`.
 * Depending on your use-case, you may want to create the Pulumi Stack ahead of time.
 * You can create a new stack in the [Pulumi Console](https://app.pulumi.com/site/new-project).
 * Alternatively, you can also run `pulumi new [template]` to create a [template project]({{< relref "/docs/reference/cli/pulumi_new" >}})
-on your machine and push it up to your VCS repo.
+on your machine and push it to your Version Control System (VCS) repository.
   
 The source code used as an [example](https://github.com/pulumi/examples/tree/master/kubernetes-ts-nginx) in this guide
-uses `TypeScript`. The example infrastructure code creates a Kubernetes `Deployment` using the `nginx` container image.
+uses TypeScript. The example infrastructure code creates a Kubernetes `Deployment` using the `nginx` container image.
 If you modify the sample app or wish to create the `Deployment` resource in a different Kubernetes cluster, follow the
 setup guide for the [Kubernetes provider](https://www.pulumi.com/docs/intro/cloud-providers/kubernetes/setup/)
 to ensure that Pulumi can access that Kubernetes cluster.
 
-> While the example shows you how to deploy a Kubernetes resource, there are many other [cloud providers](https://www.pulumi.com/docs/intro/cloud-providers/)
-> that Pulumi supports.
+The example in this topic shows you how to deploy a Kubernetes resource; however, you can use any of the other [cloud providers](https://www.pulumi.com/docs/intro/cloud-providers/) that Pulumi supports.
 
 **Note**: The names used above are purely for demonstration purposes only.
 You may choose a naming convention that best suits your organization.
@@ -78,22 +77,24 @@ See the next section about configuring secrets to learn how you can use private 
 
 To pass sensitive secrets to the Kubernetes batch job run by the plugin, define a [Kubernetes `Secret`](https://kubernetes.io/docs/concepts/configuration/secret/).
 
-⚠️ The `Secret` resource must be in the same namespace as the Pulumi stage input when you configure the pipeline.
+{{% notes "warning" %}}
+The `Secret` resource must be in the same namespace as the Pulumi stage input when you configure the pipeline.
+{{% /notes %}}
 
 Sensitive secrets such as the Pulumi Access Token, the cloud provider credentials, or even your VCS credentials
 (eg. GitHub, Bitbucket, GitLab), should be defined as key/value pairs in the `Secret` resource.
 
-If you are using the service backend, either the Pulumi-managed or the self-hosted one, you'll need to get a
-[Pulumi Access Token](https://app.pulumi.com/account/tokens) for the Pulumi account that you'll use in your pipeline.
+If you are using either the Pulumi-managed or the self-hosted [service backend]({{< relref "/docs/intro/concepts/state/" >}}), get a
+[Pulumi Access Token](https://app.pulumi.com/account/tokens) for the Pulumi account that you will use in your pipeline.
 Save the value of the token with the key `PULUMI_ACCESS_TOKEN` in your Kubernetes `Secret` resource.
 
-The `PULUMI_ACCESS_TOKEN` is optional if you don't use the Pulumi Service backend. Instead, you should make sure that
-Pulumi has the credentials to access whichever backend URL you do choose to use.
+If you do not use the Pulumi Service backend, the `PULUMI_ACCESS_TOKEN` is optional. Instead, you should make sure that Pulumi has the credentials to access whichever backend URL you do choose to use.
 
 Here's an **example** `Secret` resource applied in a Spinnaker installation.
 
-> Tip: If your Spinnaker Kubernetes cluster was created using Pulumi, then instead of writing this YAML, you could
-> deploy the [Secret](https://www.pulumi.com/docs/reference/pkg/kubernetes/core/v1/secret/) resource using Pulumi too.
+{{% notes "info" %}}
+If your Spinnaker Kubernetes cluster was created using Pulumi, then instead of writing this YAML, you could deploy the [Secret](https://www.pulumi.com/docs/reference/pkg/kubernetes/core/v1/secret/) resource using Pulumi too.
+{{% /notes %}}
 
 ```yaml
 # Defining a Secret resource in your K8s cluster is optional based on how you plan to use the Pulumi preconfigured job plugin.
@@ -126,19 +127,18 @@ To create this resource in your Spinnaker cluster, run:
 kubectl apply -f secrets.yaml
 ```
 
-You can set any environment variables required for the specific providers you plan to use in your Pulumi app.
-Learn more about [provider setup](https://www.pulumi.com/docs/intro/cloud-providers/).
-For private VCS repos, you can save the Personal Access Token used to clone your repo into the batch job container.
-Then when you configure the Stage in the Spinnaker Pipelines UI you can reference the same key names in the URL you specify.
-For example, `https://$(GIT_USERNAME):$(GIT_PAT)@github.com/owner/repo`. The env vars will automatically resolve to the
-values as per your Secret resource inside the preconfigured job container.
+You can set any environment variables required for the specific providers you plan to use in your Pulumi app. For more information, see the Setup page for a given [provider](https://www.pulumi.com/docs/intro/cloud-providers/).
 
-⚠️ Don't surround the placeholder variables with `{` and `}` unless you really are using a [pipeline expression](https://spinnaker.io/guides/user/pipeline/expressions/).
+For private VCS repos, you can save the Personal Access Token used to clone your repo into the batch job container. This means when you configure the Stage in the Spinnaker Pipelines UI, you can reference the same key names in the URL you specify. For example, the environment variables in the URL `https://$(GIT_USERNAME):$(GIT_PAT)@github.com/owner/repo` will automatically resolve to the correct values as per your Secret resource inside the preconfigured job container.
+
+{{% notes "warning" %}}
+Do not surround the placeholder variables with `{` and `}` unless you are actually using a [pipeline expression](https://spinnaker.io/guides/user/pipeline/expressions/).
+{{% /notes %}}
 
 ## Installing The Spinnaker Plugin
 
 Before you can install the plugin, you'll need to add the Pulumi plugins repository for Spinnaker to your
-Halyard configuration.
+Halyard configuration. Depending on your Spinnaker installation, you might have to run the following commands using `sudo`. 
 
 ```
 # Add the Pulumi plugins repository for Spinnaker
@@ -148,21 +148,19 @@ hal plugins repository add pulumi --url https://raw.githubusercontent.com/pulumi
 hal plugins add Pulumi.PreConfiguredJobPlugin --enabled true --version <version> --extensions pulumi.PreConfiguredJobStage
 ```
 
-> Depending on your Spinnaker installation you might have to run the above commands using `sudo`.
 
-⚠️ Starting from version 0.1.0 of the Pulumi preconfigured job plugin, there is a custom Deck UI plugin that you also must
-install. Previously, the Deck UI was auto-generated by Spinnaker and didn't require a separate installation step.
-See the [instructions](https://github.com/pulumi/spinnaker-preconfigured-job-plugin#add-the-deck-ui-plugin) on how to
-install the Deck UI plugin as well.
+{{% notes "info" %}}
+Starting with version 0.1.0 of the Pulumi preconfigured job plugin, you must also install a custom Deck UI plugin as part of the setup process. Previously, the Deck UI was auto-generated by Spinnaker and didn't require a separate installation step. For information on how to install the DeckUI plugin, see [Add the Deck UI plugin](https://github.com/pulumi/spinnaker-preconfigured-job-plugin#add-the-deck-ui-plugin) in the Pulumi plugin for Spinnaker README.
+{{% /notes %}}
 
 ```
 # Finally, apply the service updates
 hal deploy apply
 ```
 
-**Note**: Before you can access the newly-added plugin in the Deck UI, you must wait for the old `orca` Pod to be
-replaced with a new one in your cluster. This can take anywhere from a minute to a few depending on the size of your cluster.
-To check the state of the running pods you may run `kubectl -n spinnaker get pods`. This will print the pods in the
+Before you can access the newly-added plugin in the Deck UI, you must wait for the old `orca` Pod to be replaced with a new one in your cluster. This action can take a few minutes depending on the size of your cluster.
+
+To check the state of the running pods, run `kubectl -n spinnaker get pods`. This will print the pods in the
 `Spinnaker` namespace as well as the age of the pod.
 
 ## Plugin Configuration
@@ -176,8 +174,7 @@ allow you to dynamically fill in values of inputs based on the execution of prev
 
 ## Sample Pipeline (Optional)
 
-> The following steps assume that you have cloned this Kubernetes [example](https://github.com/pulumi/examples/tree/master/kubernetes-ts-nginx)
-> into your own repo.
+To follow along with this example, clone the Nginx Kubernetes [example](https://github.com/pulumi/examples/tree/master/kubernetes-ts-nginx) into your own repo.
 
 Creating a pipeline in Spinnaker is easy and offers many integration options for your GitOps workflow.
 In the sample pipeline we will show you how to add the Pulumi stage and create a Kubernetes resource.
@@ -199,13 +196,14 @@ Go back to the main Pipelines view and click on the **Start Manual Execution** l
 Once the job starts execution, you should see a **Console Output** link. Clicking it will open a modal that will show
 you the current output.
 
-**Note**: If you are running Spinnaker on your machine, it can take a while before the job starts to execute and the logs
-are visible. If you see an error about `ContainerCreating` it means the pod running the job isn't ready yet.
+{{% notes "info" %}}
+If you are running Spinnaker on your machine, it can take several minutes before the job starts to execute and the logs are visible. If you see a`ContainerCreating` error, it means the pod running the job isn't ready yet.
+{{% /notes %}}
 
 Once the pipeline is complete, assuming you have not modified the example app, the `nginx` container would have been
 deployed to the `default` namespace. Get the pod IP by running a `kubectl` command and `curl`-ing the IP to see the response:
 
-```
+```bash
 kubectl get pods -o wide
 
 curl http://<POD_IP>
@@ -218,7 +216,7 @@ curl http://<POD_IP>
 Yes! Simply pass the Pulumi CLI arg `--color always`. Now when you open the `Console Output` modal, you should see
 colors in the log output. Note that the colored logs are only visible starting with v0.2.0 of the plugin.
 
-**Can I use the plugin if my VCS repo is hosted on an enterprise git server?**
+**Can I use the plugin if my VCS repo is hosted on an enterprise Git server?**
 
 Yes. Make sure that the credentials (username and the personal access token) for the Git repo are defined in the
 Kubernetes `Secret` and use the key names as placeholders in the repo URL you specify in the pipeline stage UI.
