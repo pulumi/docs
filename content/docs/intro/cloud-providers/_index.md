@@ -30,7 +30,7 @@ aliases: ["/docs/reference/clouds/"]
 * [Hetzner Cloud]({{< relref "./hcloud" >}})
 * [Linode]({{< relref "./linode" >}})
 * [OpenStack]({{< relref "./openstack" >}})
-* [Packet.net]({{< relref "./packet" >}})
+* [Equinix Metal]({{< relref "./equinix-metal" >}})
 * [vSphere]({{< relref "./vsphere" >}})
 
 ## Infrastructure Providers
