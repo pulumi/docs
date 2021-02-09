@@ -83,7 +83,7 @@ The `Secret` resource must be in the same namespace as the Pulumi stage input wh
 Sensitive secrets such as the Pulumi Access Token, the cloud provider credentials, or even your VCS credentials
 (eg. GitHub, Bitbucket, GitLab), should be defined as key/value pairs in the `Secret` resource.
 
-If you are using either the Pulumi-managed or the self-hosted [service backend]({{< relref "/docs/intro/concepts/state/" >}}), get a
+If you are using either the Pulumi-managed or the self-hosted [service backend]({{< relref "/docs/intro/concepts/state" >}}), get a
 [Pulumi Access Token](https://app.pulumi.com/account/tokens) for the Pulumi account that you will use in your pipeline.
 Save the value of the token with the key `PULUMI_ACCESS_TOKEN` in your Kubernetes `Secret` resource.
 
