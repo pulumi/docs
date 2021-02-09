@@ -4,7 +4,7 @@ date: 2021-02-09
 meta_desc: "Combine the power of Automation API with the flexibility of Python"
 meta_image: automation_api.png
 authors:
-- komal-ali
+- sophia-parafina
 tags:
 - Automation API
 - Python
