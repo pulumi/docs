@@ -33,7 +33,7 @@ class MyStack : Stack
         // Create a new SSH key
         var @default = new DigitalOcean.SshKey("default", new DigitalOcean.SshKeyArgs
         {
-            PublicKey = File.ReadAllText("/Users/terraform/.ssh/id_rsa.pub"),
+            PublicKey = File.ReadAllText("/Users/myuser/.ssh/id_rsa.pub"),
         });
         // Create a new Droplet using the SSH key
         var web = new DigitalOcean.Droplet("web", new DigitalOcean.DropletArgs
@@ -63,7 +63,7 @@ import pulumi
 import pulumi_digitalocean as digitalocean
 
 # Create a new SSH key
-default = digitalocean.SshKey("default", public_key=(lambda path: open(path).read())("/Users/terraform/.ssh/id_rsa.pub"))
+default = digitalocean.SshKey("default", public_key=(lambda path: open(path).read())("/Users/myuser/.ssh/id_rsa.pub"))
 # Create a new Droplet using the SSH key
 web = digitalocean.Droplet("web",
     image="ubuntu-18-04-x64",
@@ -82,7 +82,7 @@ import * as digitalocean from "@pulumi/digitalocean";
 import * from "fs";
 
 // Create a new SSH key
-const _default = new digitalocean.SshKey("default", {publicKey: fs.readFileSync("/Users/terraform/.ssh/id_rsa.pub")});
+const _default = new digitalocean.SshKey("default", {publicKey: fs.readFileSync("/Users/myuser/.ssh/id_rsa.pub")});
 // Create a new Droplet using the SSH key
 const web = new digitalocean.Droplet("web", {
     image: "ubuntu-18-04-x64",

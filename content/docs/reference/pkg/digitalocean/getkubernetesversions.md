@@ -343,7 +343,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If provided, the provider will only return versions that match the string prefix. For example, `1.15.` will match all 1.15.x series releases.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -358,7 +359,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If provided, the provider will only return versions that match the string prefix. For example, `1.15.` will match all 1.15.x series releases.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -373,7 +375,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If provided, the provider will only return versions that match the string prefix. For example, `1.15.` will match all 1.15.x series releases.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -388,7 +391,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}If provided, the provider will only return versions that match the string prefix. For example, `1.15.` will match all 1.15.x series releases.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

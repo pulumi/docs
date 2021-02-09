@@ -565,6 +565,15 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required property-deprecated"
+            title="Required, Deprecated">
+        <span id="domains_csharp">
+<a href="#domains_csharp" style="color: inherit; text-decoration: inherit;">Domains</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This attribute has been replaced by `domain` which supports additional functionality.{{% /md %}}</p></dd>
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -586,15 +595,6 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="domains_csharp">
-<a href="#domains_csharp" style="color: inherit; text-decoration: inherit;">Domains</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="envs_csharp">
 <a href="#envs_csharp" style="color: inherit; text-decoration: inherit;">Envs</a>
 </span>
@@ -603,6 +603,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Describes an environment variable made available to an app competent.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="jobs_csharp">
+<a href="#jobs_csharp" style="color: inherit; text-decoration: inherit;">Jobs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecjob">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Job<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
@@ -645,6 +654,15 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required property-deprecated"
+            title="Required, Deprecated">
+        <span id="domains_go">
+<a href="#domains_go" style="color: inherit; text-decoration: inherit;">Domains</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This attribute has been replaced by `domain` which supports additional functionality.{{% /md %}}</p></dd>
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -666,15 +684,6 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="domains_go">
-<a href="#domains_go" style="color: inherit; text-decoration: inherit;">Domains</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="envs_go">
 <a href="#envs_go" style="color: inherit; text-decoration: inherit;">Envs</a>
 </span>
@@ -683,6 +692,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Describes an environment variable made available to an app competent.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="jobs_go">
+<a href="#jobs_go" style="color: inherit; text-decoration: inherit;">Jobs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecjob">[]Get<wbr>App<wbr>Spec<wbr>Job</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="region_go">
@@ -725,6 +743,15 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required property-deprecated"
+            title="Required, Deprecated">
+        <span id="domains_nodejs">
+<a href="#domains_nodejs" style="color: inherit; text-decoration: inherit;">domains</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This attribute has been replaced by `domain` which supports additional functionality.{{% /md %}}</p></dd>
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -746,15 +773,6 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="domains_nodejs">
-<a href="#domains_nodejs" style="color: inherit; text-decoration: inherit;">domains</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="envs_nodejs">
 <a href="#envs_nodejs" style="color: inherit; text-decoration: inherit;">envs</a>
 </span>
@@ -763,6 +781,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Describes an environment variable made available to an app competent.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="jobs_nodejs">
+<a href="#jobs_nodejs" style="color: inherit; text-decoration: inherit;">jobs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecjob">Get<wbr>App<wbr>Spec<wbr>Job[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
@@ -805,6 +832,15 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required property-deprecated"
+            title="Required, Deprecated">
+        <span id="domains_python">
+<a href="#domains_python" style="color: inherit; text-decoration: inherit;">domains</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This attribute has been replaced by `domain` which supports additional functionality.{{% /md %}}</p></dd>
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -826,15 +862,6 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="domains_python">
-<a href="#domains_python" style="color: inherit; text-decoration: inherit;">domains</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="envs_python">
 <a href="#envs_python" style="color: inherit; text-decoration: inherit;">envs</a>
 </span>
@@ -843,6 +870,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Describes an environment variable made available to an app competent.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="jobs_python">
+<a href="#jobs_python" style="color: inherit; text-decoration: inherit;">jobs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecjob">Sequence[Get<wbr>App<wbr>Spec<wbr>Job<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="region_python">
@@ -1398,6 +1434,1450 @@ The following output properties are available:
 </dl>
 {{% /choosable %}}
 
+<h4 id="getappspecjob">Get<wbr>App<wbr>Spec<wbr>Job</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetAppSpecJob">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#GetAppSpecJob">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.GetAppSpecJob.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the component.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="buildcommand_csharp">
+<a href="#buildcommand_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Command</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional build command to run while building this component from source.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dockerfilepath_csharp">
+<a href="#dockerfilepath_csharp" style="color: inherit; text-decoration: inherit;">Dockerfile<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The path to a Dockerfile relative to the root of the repo. If set, overrides usage of buildpacks.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="environmentslug_csharp">
+<a href="#environmentslug_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Slug</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An environment slug describing the type of this app.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="envs_csharp">
+<a href="#envs_csharp" style="color: inherit; text-decoration: inherit;">Envs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecjobenv">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Job<wbr>Env<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Describes an environment variable made available to an app competent.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="git_csharp">
+<a href="#git_csharp" style="color: inherit; text-decoration: inherit;">Git</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecjobgit">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Job<wbr>Git<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A Git repo to use as the component's source. The repository must be able to be cloned without authentication.  Only one of `git`, `github` or `gitlab`  may be set.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="github_csharp">
+<a href="#github_csharp" style="color: inherit; text-decoration: inherit;">Github</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecjobgithub">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Job<wbr>Github<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A GitHub repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/github/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gitlab_csharp">
+<a href="#gitlab_csharp" style="color: inherit; text-decoration: inherit;">Gitlab</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecjobgitlab">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Job<wbr>Gitlab<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A Gitlab repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/gitlab/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="image_csharp">
+<a href="#image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecjobimage">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Job<wbr>Image<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An image to use as the component's source. Only one of `git`, `github`, `gitlab`, or `image` may be set.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instancecount_csharp">
+<a href="#instancecount_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of instances that this component should be scaled to.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instancesizeslug_csharp">
+<a href="#instancesizeslug_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Size<wbr>Slug</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The instance size to use for this component.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kind_csharp">
+<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of job and when it will be run during the deployment process. It may be one of:
+- `UNSPECIFIED`: Default job type, will auto-complete to POST_DEPLOY kind.
+- `PRE_DEPLOY`: Indicates a job that runs before an app deployment.
+- `POST_DEPLOY`: Indicates a job that runs after an app deployment.
+- `FAILED_DEPLOY`: Indicates a job that runs after a component fails to deploy.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="runcommand_csharp">
+<a href="#runcommand_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Command</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional run command to override the component's default.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourcedir_csharp">
+<a href="#sourcedir_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Dir</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional path to the working directory to use for the build.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the component.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="buildcommand_go">
+<a href="#buildcommand_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Command</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional build command to run while building this component from source.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dockerfilepath_go">
+<a href="#dockerfilepath_go" style="color: inherit; text-decoration: inherit;">Dockerfile<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The path to a Dockerfile relative to the root of the repo. If set, overrides usage of buildpacks.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="environmentslug_go">
+<a href="#environmentslug_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Slug</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An environment slug describing the type of this app.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="envs_go">
+<a href="#envs_go" style="color: inherit; text-decoration: inherit;">Envs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecjobenv">[]Get<wbr>App<wbr>Spec<wbr>Job<wbr>Env</a></span>
+    </dt>
+    <dd>{{% md %}}Describes an environment variable made available to an app competent.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="git_go">
+<a href="#git_go" style="color: inherit; text-decoration: inherit;">Git</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecjobgit">Get<wbr>App<wbr>Spec<wbr>Job<wbr>Git</a></span>
+    </dt>
+    <dd>{{% md %}}A Git repo to use as the component's source. The repository must be able to be cloned without authentication.  Only one of `git`, `github` or `gitlab`  may be set.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="github_go">
+<a href="#github_go" style="color: inherit; text-decoration: inherit;">Github</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecjobgithub">Get<wbr>App<wbr>Spec<wbr>Job<wbr>Github</a></span>
+    </dt>
+    <dd>{{% md %}}A GitHub repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/github/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gitlab_go">
+<a href="#gitlab_go" style="color: inherit; text-decoration: inherit;">Gitlab</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecjobgitlab">Get<wbr>App<wbr>Spec<wbr>Job<wbr>Gitlab</a></span>
+    </dt>
+    <dd>{{% md %}}A Gitlab repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/gitlab/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="image_go">
+<a href="#image_go" style="color: inherit; text-decoration: inherit;">Image</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecjobimage">Get<wbr>App<wbr>Spec<wbr>Job<wbr>Image</a></span>
+    </dt>
+    <dd>{{% md %}}An image to use as the component's source. Only one of `git`, `github`, `gitlab`, or `image` may be set.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instancecount_go">
+<a href="#instancecount_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of instances that this component should be scaled to.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instancesizeslug_go">
+<a href="#instancesizeslug_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Size<wbr>Slug</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The instance size to use for this component.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kind_go">
+<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of job and when it will be run during the deployment process. It may be one of:
+- `UNSPECIFIED`: Default job type, will auto-complete to POST_DEPLOY kind.
+- `PRE_DEPLOY`: Indicates a job that runs before an app deployment.
+- `POST_DEPLOY`: Indicates a job that runs after an app deployment.
+- `FAILED_DEPLOY`: Indicates a job that runs after a component fails to deploy.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="runcommand_go">
+<a href="#runcommand_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Command</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional run command to override the component's default.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourcedir_go">
+<a href="#sourcedir_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Dir</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional path to the working directory to use for the build.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the component.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="buildcommand_nodejs">
+<a href="#buildcommand_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Command</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional build command to run while building this component from source.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dockerfilepath_nodejs">
+<a href="#dockerfilepath_nodejs" style="color: inherit; text-decoration: inherit;">dockerfile<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The path to a Dockerfile relative to the root of the repo. If set, overrides usage of buildpacks.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="environmentslug_nodejs">
+<a href="#environmentslug_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Slug</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An environment slug describing the type of this app.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="envs_nodejs">
+<a href="#envs_nodejs" style="color: inherit; text-decoration: inherit;">envs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecjobenv">Get<wbr>App<wbr>Spec<wbr>Job<wbr>Env[]</a></span>
+    </dt>
+    <dd>{{% md %}}Describes an environment variable made available to an app competent.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="git_nodejs">
+<a href="#git_nodejs" style="color: inherit; text-decoration: inherit;">git</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecjobgit">Get<wbr>App<wbr>Spec<wbr>Job<wbr>Git</a></span>
+    </dt>
+    <dd>{{% md %}}A Git repo to use as the component's source. The repository must be able to be cloned without authentication.  Only one of `git`, `github` or `gitlab`  may be set.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="github_nodejs">
+<a href="#github_nodejs" style="color: inherit; text-decoration: inherit;">github</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecjobgithub">Get<wbr>App<wbr>Spec<wbr>Job<wbr>Github</a></span>
+    </dt>
+    <dd>{{% md %}}A GitHub repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/github/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gitlab_nodejs">
+<a href="#gitlab_nodejs" style="color: inherit; text-decoration: inherit;">gitlab</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecjobgitlab">Get<wbr>App<wbr>Spec<wbr>Job<wbr>Gitlab</a></span>
+    </dt>
+    <dd>{{% md %}}A Gitlab repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/gitlab/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="image_nodejs">
+<a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecjobimage">Get<wbr>App<wbr>Spec<wbr>Job<wbr>Image</a></span>
+    </dt>
+    <dd>{{% md %}}An image to use as the component's source. Only one of `git`, `github`, `gitlab`, or `image` may be set.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instancecount_nodejs">
+<a href="#instancecount_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The amount of instances that this component should be scaled to.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instancesizeslug_nodejs">
+<a href="#instancesizeslug_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Size<wbr>Slug</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The instance size to use for this component.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kind_nodejs">
+<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of job and when it will be run during the deployment process. It may be one of:
+- `UNSPECIFIED`: Default job type, will auto-complete to POST_DEPLOY kind.
+- `PRE_DEPLOY`: Indicates a job that runs before an app deployment.
+- `POST_DEPLOY`: Indicates a job that runs after an app deployment.
+- `FAILED_DEPLOY`: Indicates a job that runs after a component fails to deploy.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="runcommand_nodejs">
+<a href="#runcommand_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Command</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional run command to override the component's default.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourcedir_nodejs">
+<a href="#sourcedir_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Dir</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional path to the working directory to use for the build.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the component.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="build_command_python">
+<a href="#build_command_python" style="color: inherit; text-decoration: inherit;">build_<wbr>command</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An optional build command to run while building this component from source.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dockerfile_path_python">
+<a href="#dockerfile_path_python" style="color: inherit; text-decoration: inherit;">dockerfile_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The path to a Dockerfile relative to the root of the repo. If set, overrides usage of buildpacks.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="environment_slug_python">
+<a href="#environment_slug_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>slug</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An environment slug describing the type of this app.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="envs_python">
+<a href="#envs_python" style="color: inherit; text-decoration: inherit;">envs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecjobenv">Sequence[Get<wbr>App<wbr>Spec<wbr>Job<wbr>Env<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Describes an environment variable made available to an app competent.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="git_python">
+<a href="#git_python" style="color: inherit; text-decoration: inherit;">git</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecjobgit">Get<wbr>App<wbr>Spec<wbr>Job<wbr>Git<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A Git repo to use as the component's source. The repository must be able to be cloned without authentication.  Only one of `git`, `github` or `gitlab`  may be set.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="github_python">
+<a href="#github_python" style="color: inherit; text-decoration: inherit;">github</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecjobgithub">Get<wbr>App<wbr>Spec<wbr>Job<wbr>Github<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A GitHub repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/github/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gitlab_python">
+<a href="#gitlab_python" style="color: inherit; text-decoration: inherit;">gitlab</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecjobgitlab">Get<wbr>App<wbr>Spec<wbr>Job<wbr>Gitlab<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A Gitlab repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/gitlab/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="image_python">
+<a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecjobimage">Get<wbr>App<wbr>Spec<wbr>Job<wbr>Image<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An image to use as the component's source. Only one of `git`, `github`, `gitlab`, or `image` may be set.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instance_count_python">
+<a href="#instance_count_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of instances that this component should be scaled to.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instance_size_slug_python">
+<a href="#instance_size_slug_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>size_<wbr>slug</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The instance size to use for this component.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kind_python">
+<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of job and when it will be run during the deployment process. It may be one of:
+- `UNSPECIFIED`: Default job type, will auto-complete to POST_DEPLOY kind.
+- `PRE_DEPLOY`: Indicates a job that runs before an app deployment.
+- `POST_DEPLOY`: Indicates a job that runs after an app deployment.
+- `FAILED_DEPLOY`: Indicates a job that runs after a component fails to deploy.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="run_command_python">
+<a href="#run_command_python" style="color: inherit; text-decoration: inherit;">run_<wbr>command</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An optional run command to override the component's default.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_dir_python">
+<a href="#source_dir_python" style="color: inherit; text-decoration: inherit;">source_<wbr>dir</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An optional path to the working directory to use for the build.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getappspecjobenv">Get<wbr>App<wbr>Spec<wbr>Job<wbr>Env</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetAppSpecJobEnv">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#GetAppSpecJobEnv">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.GetAppSpecJobEnv.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the environment variable, `GENERAL` or `SECRET`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the environment variable.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scope_csharp">
+<a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The visibility scope of the environment variable. One of `RUN_TIME`, `BUILD_TIME`, or `RUN_AND_BUILD_TIME` (default).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the environment variable.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the environment variable, `GENERAL` or `SECRET`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the environment variable.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scope_go">
+<a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The visibility scope of the environment variable. One of `RUN_TIME`, `BUILD_TIME`, or `RUN_AND_BUILD_TIME` (default).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the environment variable.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the environment variable, `GENERAL` or `SECRET`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the environment variable.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scope_nodejs">
+<a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The visibility scope of the environment variable. One of `RUN_TIME`, `BUILD_TIME`, or `RUN_AND_BUILD_TIME` (default).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the environment variable.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of the environment variable, `GENERAL` or `SECRET`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the environment variable.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scope_python">
+<a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The visibility scope of the environment variable. One of `RUN_TIME`, `BUILD_TIME`, or `RUN_AND_BUILD_TIME` (default).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The value of the environment variable.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getappspecjobgit">Get<wbr>App<wbr>Spec<wbr>Job<wbr>Git</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetAppSpecJobGit">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#GetAppSpecJobGit">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.GetAppSpecJobGit.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="branch_csharp">
+<a href="#branch_csharp" style="color: inherit; text-decoration: inherit;">Branch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the branch to use.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repocloneurl_csharp">
+<a href="#repocloneurl_csharp" style="color: inherit; text-decoration: inherit;">Repo<wbr>Clone<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The clone URL of the repo.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="branch_go">
+<a href="#branch_go" style="color: inherit; text-decoration: inherit;">Branch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the branch to use.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repocloneurl_go">
+<a href="#repocloneurl_go" style="color: inherit; text-decoration: inherit;">Repo<wbr>Clone<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The clone URL of the repo.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="branch_nodejs">
+<a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the branch to use.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repocloneurl_nodejs">
+<a href="#repocloneurl_nodejs" style="color: inherit; text-decoration: inherit;">repo<wbr>Clone<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The clone URL of the repo.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="branch_python">
+<a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the branch to use.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repo_clone_url_python">
+<a href="#repo_clone_url_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>clone_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The clone URL of the repo.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getappspecjobgithub">Get<wbr>App<wbr>Spec<wbr>Job<wbr>Github</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetAppSpecJobGithub">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#GetAppSpecJobGithub">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.GetAppSpecJobGithub.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="branch_csharp">
+<a href="#branch_csharp" style="color: inherit; text-decoration: inherit;">Branch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the branch to use.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deployonpush_csharp">
+<a href="#deployonpush_csharp" style="color: inherit; text-decoration: inherit;">Deploy<wbr>On<wbr>Push</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to automatically deploy new commits made to the repo.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repo_csharp">
+<a href="#repo_csharp" style="color: inherit; text-decoration: inherit;">Repo</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the repo in the format `owner/repo`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="branch_go">
+<a href="#branch_go" style="color: inherit; text-decoration: inherit;">Branch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the branch to use.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deployonpush_go">
+<a href="#deployonpush_go" style="color: inherit; text-decoration: inherit;">Deploy<wbr>On<wbr>Push</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to automatically deploy new commits made to the repo.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repo_go">
+<a href="#repo_go" style="color: inherit; text-decoration: inherit;">Repo</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the repo in the format `owner/repo`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="branch_nodejs">
+<a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the branch to use.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deployonpush_nodejs">
+<a href="#deployonpush_nodejs" style="color: inherit; text-decoration: inherit;">deploy<wbr>On<wbr>Push</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to automatically deploy new commits made to the repo.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repo_nodejs">
+<a href="#repo_nodejs" style="color: inherit; text-decoration: inherit;">repo</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the repo in the format `owner/repo`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="branch_python">
+<a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the branch to use.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deploy_on_push_python">
+<a href="#deploy_on_push_python" style="color: inherit; text-decoration: inherit;">deploy_<wbr>on_<wbr>push</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to automatically deploy new commits made to the repo.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repo_python">
+<a href="#repo_python" style="color: inherit; text-decoration: inherit;">repo</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the repo in the format `owner/repo`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getappspecjobgitlab">Get<wbr>App<wbr>Spec<wbr>Job<wbr>Gitlab</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetAppSpecJobGitlab">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#GetAppSpecJobGitlab">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.GetAppSpecJobGitlab.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="branch_csharp">
+<a href="#branch_csharp" style="color: inherit; text-decoration: inherit;">Branch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the branch to use.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deployonpush_csharp">
+<a href="#deployonpush_csharp" style="color: inherit; text-decoration: inherit;">Deploy<wbr>On<wbr>Push</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to automatically deploy new commits made to the repo.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repo_csharp">
+<a href="#repo_csharp" style="color: inherit; text-decoration: inherit;">Repo</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the repo in the format `owner/repo`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="branch_go">
+<a href="#branch_go" style="color: inherit; text-decoration: inherit;">Branch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the branch to use.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deployonpush_go">
+<a href="#deployonpush_go" style="color: inherit; text-decoration: inherit;">Deploy<wbr>On<wbr>Push</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to automatically deploy new commits made to the repo.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repo_go">
+<a href="#repo_go" style="color: inherit; text-decoration: inherit;">Repo</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the repo in the format `owner/repo`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="branch_nodejs">
+<a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the branch to use.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deployonpush_nodejs">
+<a href="#deployonpush_nodejs" style="color: inherit; text-decoration: inherit;">deploy<wbr>On<wbr>Push</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to automatically deploy new commits made to the repo.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repo_nodejs">
+<a href="#repo_nodejs" style="color: inherit; text-decoration: inherit;">repo</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the repo in the format `owner/repo`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="branch_python">
+<a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the branch to use.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deploy_on_push_python">
+<a href="#deploy_on_push_python" style="color: inherit; text-decoration: inherit;">deploy_<wbr>on_<wbr>push</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to automatically deploy new commits made to the repo.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repo_python">
+<a href="#repo_python" style="color: inherit; text-decoration: inherit;">repo</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the repo in the format `owner/repo`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getappspecjobimage">Get<wbr>App<wbr>Spec<wbr>Job<wbr>Image</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetAppSpecJobImage">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#GetAppSpecJobImage">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.GetAppSpecJobImage.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="registrytype_csharp">
+<a href="#registrytype_csharp" style="color: inherit; text-decoration: inherit;">Registry<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The registry type. One of `DOCR` (DigitalOcean container registry) or `DOCKER_HUB`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="repository_csharp">
+<a href="#repository_csharp" style="color: inherit; text-decoration: inherit;">Repository</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The repository name.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registry_csharp">
+<a href="#registry_csharp" style="color: inherit; text-decoration: inherit;">Registry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The registry name. Must be left empty for the `DOCR` registry type. Required for the `DOCKER_HUB` registry type.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tag_csharp">
+<a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The repository tag. Defaults to `latest` if not provided.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="registrytype_go">
+<a href="#registrytype_go" style="color: inherit; text-decoration: inherit;">Registry<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The registry type. One of `DOCR` (DigitalOcean container registry) or `DOCKER_HUB`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="repository_go">
+<a href="#repository_go" style="color: inherit; text-decoration: inherit;">Repository</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The repository name.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registry_go">
+<a href="#registry_go" style="color: inherit; text-decoration: inherit;">Registry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The registry name. Must be left empty for the `DOCR` registry type. Required for the `DOCKER_HUB` registry type.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tag_go">
+<a href="#tag_go" style="color: inherit; text-decoration: inherit;">Tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The repository tag. Defaults to `latest` if not provided.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="registrytype_nodejs">
+<a href="#registrytype_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The registry type. One of `DOCR` (DigitalOcean container registry) or `DOCKER_HUB`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="repository_nodejs">
+<a href="#repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The repository name.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registry_nodejs">
+<a href="#registry_nodejs" style="color: inherit; text-decoration: inherit;">registry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The registry name. Must be left empty for the `DOCR` registry type. Required for the `DOCKER_HUB` registry type.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tag_nodejs">
+<a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The repository tag. Defaults to `latest` if not provided.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="registry_type_python">
+<a href="#registry_type_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The registry type. One of `DOCR` (DigitalOcean container registry) or `DOCKER_HUB`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="repository_python">
+<a href="#repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The repository name.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registry_python">
+<a href="#registry_python" style="color: inherit; text-decoration: inherit;">registry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The registry name. Must be left empty for the `DOCR` registry type. Required for the `DOCKER_HUB` registry type.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tag_python">
+<a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The repository tag. Defaults to `latest` if not provided.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="getappspecservice">Get<wbr>App<wbr>Spec<wbr>Service</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetAppSpecService">output</a> API doc for this type.
@@ -1441,7 +2921,7 @@ The following output properties are available:
 <a href="#routes_csharp" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecserviceroutes">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Service<wbr>Routes<wbr>Args</a></span>
+        <span class="property-type"><a href="#getappspecserviceroute">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Service<wbr>Route<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -1502,7 +2982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappspecservicegit">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Service<wbr>Git<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A Git repo to use as component's source. Only one of `git` and `github` may be set.
+    <dd>{{% md %}}A Git repo to use as the component's source. The repository must be able to be cloned without authentication.  Only one of `git`, `github` or `gitlab`  may be set.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1512,7 +2992,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappspecservicegithub">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Service<wbr>Github<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A GitHub repo to use as component's source. Only one of `git` and `github` may be set.
+    <dd>{{% md %}}A GitHub repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/github/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1522,7 +3002,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappspecservicegitlab">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Service<wbr>Gitlab<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A Gitlab repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/gitlab/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="healthcheck_csharp">
@@ -1532,6 +3013,16 @@ The following output properties are available:
         <span class="property-type"><a href="#getappspecservicehealthcheck">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Service<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A health check to determine the availability of this component.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="image_csharp">
+<a href="#image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecserviceimage">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Service<wbr>Image<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An image to use as the component's source. Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1552,6 +3043,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance size to use for this component.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="internalports_csharp">
+<a href="#internalports_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Ports</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;int&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of ports on which this service will listen for internal traffic.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1595,7 +3096,7 @@ The following output properties are available:
 <a href="#routes_go" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecserviceroutes">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Routes</a></span>
+        <span class="property-type"><a href="#getappspecserviceroute">[]Get<wbr>App<wbr>Spec<wbr>Service<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -1656,7 +3157,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappspecservicegit">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Git</a></span>
     </dt>
-    <dd>{{% md %}}A Git repo to use as component's source. Only one of `git` and `github` may be set.
+    <dd>{{% md %}}A Git repo to use as the component's source. The repository must be able to be cloned without authentication.  Only one of `git`, `github` or `gitlab`  may be set.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1666,7 +3167,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappspecservicegithub">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Github</a></span>
     </dt>
-    <dd>{{% md %}}A GitHub repo to use as component's source. Only one of `git` and `github` may be set.
+    <dd>{{% md %}}A GitHub repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/github/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1676,7 +3177,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappspecservicegitlab">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Gitlab</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A Gitlab repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/gitlab/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="healthcheck_go">
@@ -1686,6 +3188,16 @@ The following output properties are available:
         <span class="property-type"><a href="#getappspecservicehealthcheck">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A health check to determine the availability of this component.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="image_go">
+<a href="#image_go" style="color: inherit; text-decoration: inherit;">Image</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecserviceimage">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Image</a></span>
+    </dt>
+    <dd>{{% md %}}An image to use as the component's source. Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1706,6 +3218,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance size to use for this component.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="internalports_go">
+<a href="#internalports_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Ports</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]int</span>
+    </dt>
+    <dd>{{% md %}}A list of ports on which this service will listen for internal traffic.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1749,7 +3271,7 @@ The following output properties are available:
 <a href="#routes_nodejs" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecserviceroutes">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Routes</a></span>
+        <span class="property-type"><a href="#getappspecserviceroute">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Route[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -1810,7 +3332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappspecservicegit">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Git</a></span>
     </dt>
-    <dd>{{% md %}}A Git repo to use as component's source. Only one of `git` and `github` may be set.
+    <dd>{{% md %}}A Git repo to use as the component's source. The repository must be able to be cloned without authentication.  Only one of `git`, `github` or `gitlab`  may be set.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1820,7 +3342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappspecservicegithub">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Github</a></span>
     </dt>
-    <dd>{{% md %}}A GitHub repo to use as component's source. Only one of `git` and `github` may be set.
+    <dd>{{% md %}}A GitHub repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/github/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1830,7 +3352,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappspecservicegitlab">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Gitlab</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A Gitlab repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/gitlab/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="healthcheck_nodejs">
@@ -1840,6 +3363,16 @@ The following output properties are available:
         <span class="property-type"><a href="#getappspecservicehealthcheck">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A health check to determine the availability of this component.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="image_nodejs">
+<a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecserviceimage">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Image</a></span>
+    </dt>
+    <dd>{{% md %}}An image to use as the component's source. Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1860,6 +3393,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance size to use for this component.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="internalports_nodejs">
+<a href="#internalports_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Ports</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number[]</span>
+    </dt>
+    <dd>{{% md %}}A list of ports on which this service will listen for internal traffic.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1903,7 +3446,7 @@ The following output properties are available:
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecserviceroutes">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Routes<wbr>Args</a></span>
+        <span class="property-type"><a href="#getappspecserviceroute">Sequence[Get<wbr>App<wbr>Spec<wbr>Service<wbr>Route<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -1964,7 +3507,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappspecservicegit">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Git<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A Git repo to use as component's source. Only one of `git` and `github` may be set.
+    <dd>{{% md %}}A Git repo to use as the component's source. The repository must be able to be cloned without authentication.  Only one of `git`, `github` or `gitlab`  may be set.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1974,7 +3517,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappspecservicegithub">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Github<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A GitHub repo to use as component's source. Only one of `git` and `github` may be set.
+    <dd>{{% md %}}A GitHub repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/github/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1984,7 +3527,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappspecservicegitlab">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Gitlab<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A Gitlab repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/gitlab/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="health_check_python">
@@ -1994,6 +3538,16 @@ The following output properties are available:
         <span class="property-type"><a href="#getappspecservicehealthcheck">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A health check to determine the availability of this component.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="image_python">
+<a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecserviceimage">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Image<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An image to use as the component's source. Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2014,6 +3568,16 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance size to use for this component.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="internal_ports_python">
+<a href="#internal_ports_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>ports</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[int]</span>
+    </dt>
+    <dd>{{% md %}}A list of ports on which this service will listen for internal traffic.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2938,16 +4502,214 @@ The following output properties are available:
 </dl>
 {{% /choosable %}}
 
-<h4 id="getappspecserviceroutes">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Routes</h4>
+<h4 id="getappspecserviceimage">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Image</h4>
 {{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetAppSpecServiceRoutes">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetAppSpecServiceImage">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#GetAppSpecServiceRoutes">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#GetAppSpecServiceImage">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.GetAppSpecServiceRoutes.html">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.GetAppSpecServiceImage.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="registrytype_csharp">
+<a href="#registrytype_csharp" style="color: inherit; text-decoration: inherit;">Registry<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The registry type. One of `DOCR` (DigitalOcean container registry) or `DOCKER_HUB`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="repository_csharp">
+<a href="#repository_csharp" style="color: inherit; text-decoration: inherit;">Repository</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The repository name.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registry_csharp">
+<a href="#registry_csharp" style="color: inherit; text-decoration: inherit;">Registry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The registry name. Must be left empty for the `DOCR` registry type. Required for the `DOCKER_HUB` registry type.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tag_csharp">
+<a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The repository tag. Defaults to `latest` if not provided.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="registrytype_go">
+<a href="#registrytype_go" style="color: inherit; text-decoration: inherit;">Registry<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The registry type. One of `DOCR` (DigitalOcean container registry) or `DOCKER_HUB`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="repository_go">
+<a href="#repository_go" style="color: inherit; text-decoration: inherit;">Repository</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The repository name.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registry_go">
+<a href="#registry_go" style="color: inherit; text-decoration: inherit;">Registry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The registry name. Must be left empty for the `DOCR` registry type. Required for the `DOCKER_HUB` registry type.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tag_go">
+<a href="#tag_go" style="color: inherit; text-decoration: inherit;">Tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The repository tag. Defaults to `latest` if not provided.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="registrytype_nodejs">
+<a href="#registrytype_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The registry type. One of `DOCR` (DigitalOcean container registry) or `DOCKER_HUB`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="repository_nodejs">
+<a href="#repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The repository name.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registry_nodejs">
+<a href="#registry_nodejs" style="color: inherit; text-decoration: inherit;">registry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The registry name. Must be left empty for the `DOCR` registry type. Required for the `DOCKER_HUB` registry type.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tag_nodejs">
+<a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The repository tag. Defaults to `latest` if not provided.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="registry_type_python">
+<a href="#registry_type_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The registry type. One of `DOCR` (DigitalOcean container registry) or `DOCKER_HUB`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="repository_python">
+<a href="#repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The repository name.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registry_python">
+<a href="#registry_python" style="color: inherit; text-decoration: inherit;">registry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The registry name. Must be left empty for the `DOCR` registry type. Required for the `DOCKER_HUB` registry type.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tag_python">
+<a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The repository tag. Defaults to `latest` if not provided.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getappspecserviceroute">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Route</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetAppSpecServiceRoute">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#GetAppSpecServiceRoute">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.GetAppSpecServiceRoute.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3049,7 +4811,7 @@ The following output properties are available:
 <a href="#routes_csharp" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecstaticsiteroutes">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Routes<wbr>Args</a></span>
+        <span class="property-type"><a href="#getappspecstaticsiteroute">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Route<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3120,7 +4882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappspecstaticsitegit">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Git<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A Git repo to use as component's source. Only one of `git` and `github` may be set.
+    <dd>{{% md %}}A Git repo to use as the component's source. The repository must be able to be cloned without authentication.  Only one of `git`, `github` or `gitlab`  may be set.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3130,7 +4892,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappspecstaticsitegithub">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Github<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A GitHub repo to use as component's source. Only one of `git` and `github` may be set.
+    <dd>{{% md %}}A GitHub repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/github/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3140,7 +4902,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappspecstaticsitegitlab">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Gitlab<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A Gitlab repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/gitlab/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="indexdocument_csharp">
@@ -3193,7 +4956,7 @@ The following output properties are available:
 <a href="#routes_go" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecstaticsiteroutes">Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Routes</a></span>
+        <span class="property-type"><a href="#getappspecstaticsiteroute">[]Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3264,7 +5027,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappspecstaticsitegit">Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Git</a></span>
     </dt>
-    <dd>{{% md %}}A Git repo to use as component's source. Only one of `git` and `github` may be set.
+    <dd>{{% md %}}A Git repo to use as the component's source. The repository must be able to be cloned without authentication.  Only one of `git`, `github` or `gitlab`  may be set.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3274,7 +5037,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappspecstaticsitegithub">Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Github</a></span>
     </dt>
-    <dd>{{% md %}}A GitHub repo to use as component's source. Only one of `git` and `github` may be set.
+    <dd>{{% md %}}A GitHub repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/github/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3284,7 +5047,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappspecstaticsitegitlab">Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Gitlab</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A Gitlab repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/gitlab/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="indexdocument_go">
@@ -3337,7 +5101,7 @@ The following output properties are available:
 <a href="#routes_nodejs" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecstaticsiteroutes">Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Routes</a></span>
+        <span class="property-type"><a href="#getappspecstaticsiteroute">Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Route[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3408,7 +5172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappspecstaticsitegit">Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Git</a></span>
     </dt>
-    <dd>{{% md %}}A Git repo to use as component's source. Only one of `git` and `github` may be set.
+    <dd>{{% md %}}A Git repo to use as the component's source. The repository must be able to be cloned without authentication.  Only one of `git`, `github` or `gitlab`  may be set.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3418,7 +5182,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappspecstaticsitegithub">Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Github</a></span>
     </dt>
-    <dd>{{% md %}}A GitHub repo to use as component's source. Only one of `git` and `github` may be set.
+    <dd>{{% md %}}A GitHub repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/github/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3428,7 +5192,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappspecstaticsitegitlab">Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Gitlab</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A Gitlab repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/gitlab/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="indexdocument_nodejs">
@@ -3481,7 +5246,7 @@ The following output properties are available:
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecstaticsiteroutes">Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Routes<wbr>Args</a></span>
+        <span class="property-type"><a href="#getappspecstaticsiteroute">Sequence[Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Route<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3552,7 +5317,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappspecstaticsitegit">Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Git<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A Git repo to use as component's source. Only one of `git` and `github` may be set.
+    <dd>{{% md %}}A Git repo to use as the component's source. The repository must be able to be cloned without authentication.  Only one of `git`, `github` or `gitlab`  may be set.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3562,7 +5327,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappspecstaticsitegithub">Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Github<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A GitHub repo to use as component's source. Only one of `git` and `github` may be set.
+    <dd>{{% md %}}A GitHub repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/github/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3572,7 +5337,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappspecstaticsitegitlab">Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Gitlab<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A Gitlab repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/gitlab/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="index_document_python">
@@ -4238,16 +6004,16 @@ The following output properties are available:
 </dl>
 {{% /choosable %}}
 
-<h4 id="getappspecstaticsiteroutes">Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Routes</h4>
+<h4 id="getappspecstaticsiteroute">Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Route</h4>
 {{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetAppSpecStaticSiteRoutes">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetAppSpecStaticSiteRoute">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#GetAppSpecStaticSiteRoutes">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#GetAppSpecStaticSiteRoute">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.GetAppSpecStaticSiteRoutes.html">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.GetAppSpecStaticSiteRoute.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4343,15 +6109,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="routes_csharp">
-<a href="#routes_csharp" style="color: inherit; text-decoration: inherit;">Routes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecworkerroutes">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Routes<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="buildcommand_csharp">
@@ -4400,7 +6157,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappspecworkergit">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Git<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A Git repo to use as component's source. Only one of `git` and `github` may be set.
+    <dd>{{% md %}}A Git repo to use as the component's source. The repository must be able to be cloned without authentication.  Only one of `git`, `github` or `gitlab`  may be set.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4410,7 +6167,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappspecworkergithub">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Github<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A GitHub repo to use as component's source. Only one of `git` and `github` may be set.
+    <dd>{{% md %}}A GitHub repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/github/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4420,7 +6177,18 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappspecworkergitlab">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Gitlab<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A Gitlab repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/gitlab/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="image_csharp">
+<a href="#image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecworkerimage">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Image<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An image to use as the component's source. Only one of `git`, `github`, `gitlab`, or `image` may be set.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="instancecount_csharp">
@@ -4477,15 +6245,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="routes_go">
-<a href="#routes_go" style="color: inherit; text-decoration: inherit;">Routes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecworkerroutes">Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Routes</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="buildcommand_go">
@@ -4534,7 +6293,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappspecworkergit">Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Git</a></span>
     </dt>
-    <dd>{{% md %}}A Git repo to use as component's source. Only one of `git` and `github` may be set.
+    <dd>{{% md %}}A Git repo to use as the component's source. The repository must be able to be cloned without authentication.  Only one of `git`, `github` or `gitlab`  may be set.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4544,7 +6303,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappspecworkergithub">Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Github</a></span>
     </dt>
-    <dd>{{% md %}}A GitHub repo to use as component's source. Only one of `git` and `github` may be set.
+    <dd>{{% md %}}A GitHub repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/github/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4554,7 +6313,18 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappspecworkergitlab">Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Gitlab</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A Gitlab repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/gitlab/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="image_go">
+<a href="#image_go" style="color: inherit; text-decoration: inherit;">Image</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecworkerimage">Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Image</a></span>
+    </dt>
+    <dd>{{% md %}}An image to use as the component's source. Only one of `git`, `github`, `gitlab`, or `image` may be set.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="instancecount_go">
@@ -4611,15 +6381,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="routes_nodejs">
-<a href="#routes_nodejs" style="color: inherit; text-decoration: inherit;">routes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecworkerroutes">Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Routes</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="buildcommand_nodejs">
@@ -4668,7 +6429,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappspecworkergit">Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Git</a></span>
     </dt>
-    <dd>{{% md %}}A Git repo to use as component's source. Only one of `git` and `github` may be set.
+    <dd>{{% md %}}A Git repo to use as the component's source. The repository must be able to be cloned without authentication.  Only one of `git`, `github` or `gitlab`  may be set.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4678,7 +6439,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappspecworkergithub">Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Github</a></span>
     </dt>
-    <dd>{{% md %}}A GitHub repo to use as component's source. Only one of `git` and `github` may be set.
+    <dd>{{% md %}}A GitHub repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/github/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4688,7 +6449,18 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappspecworkergitlab">Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Gitlab</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A Gitlab repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/gitlab/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="image_nodejs">
+<a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecworkerimage">Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Image</a></span>
+    </dt>
+    <dd>{{% md %}}An image to use as the component's source. Only one of `git`, `github`, `gitlab`, or `image` may be set.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="instancecount_nodejs">
@@ -4745,15 +6517,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="routes_python">
-<a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecworkerroutes">Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Routes<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="build_command_python">
@@ -4802,7 +6565,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappspecworkergit">Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Git<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A Git repo to use as component's source. Only one of `git` and `github` may be set.
+    <dd>{{% md %}}A Git repo to use as the component's source. The repository must be able to be cloned without authentication.  Only one of `git`, `github` or `gitlab`  may be set.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4812,7 +6575,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappspecworkergithub">Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Github<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A GitHub repo to use as component's source. Only one of `git` and `github` may be set.
+    <dd>{{% md %}}A GitHub repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/github/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4822,7 +6585,18 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappspecworkergitlab">Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Gitlab<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A Gitlab repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/gitlab/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="image_python">
+<a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecworkerimage">Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Image<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An image to use as the component's source. Only one of `git`, `github`, `gitlab`, or `image` may be set.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="instance_count_python">
@@ -5498,16 +7272,16 @@ The following output properties are available:
 </dl>
 {{% /choosable %}}
 
-<h4 id="getappspecworkerroutes">Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Routes</h4>
+<h4 id="getappspecworkerimage">Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Image</h4>
 {{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetAppSpecWorkerRoutes">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetAppSpecWorkerImage">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#GetAppSpecWorkerRoutes">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#GetAppSpecWorkerImage">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.GetAppSpecWorkerRoutes.html">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.GetAppSpecWorkerImage.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5515,15 +7289,45 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="path_csharp">
-<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+    <dt class="property-required"
+            title="Required">
+        <span id="registrytype_csharp">
+<a href="#registrytype_csharp" style="color: inherit; text-decoration: inherit;">Registry<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Paths must start with `/` and must be unique within the app.
+    <dd>{{% md %}}The registry type. One of `DOCR` (DigitalOcean container registry) or `DOCKER_HUB`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="repository_csharp">
+<a href="#repository_csharp" style="color: inherit; text-decoration: inherit;">Repository</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The repository name.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registry_csharp">
+<a href="#registry_csharp" style="color: inherit; text-decoration: inherit;">Registry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The registry name. Must be left empty for the `DOCR` registry type. Required for the `DOCKER_HUB` registry type.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tag_csharp">
+<a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The repository tag. Defaults to `latest` if not provided.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5531,15 +7335,45 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="path_go">
-<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+    <dt class="property-required"
+            title="Required">
+        <span id="registrytype_go">
+<a href="#registrytype_go" style="color: inherit; text-decoration: inherit;">Registry<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Paths must start with `/` and must be unique within the app.
+    <dd>{{% md %}}The registry type. One of `DOCR` (DigitalOcean container registry) or `DOCKER_HUB`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="repository_go">
+<a href="#repository_go" style="color: inherit; text-decoration: inherit;">Repository</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The repository name.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registry_go">
+<a href="#registry_go" style="color: inherit; text-decoration: inherit;">Registry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The registry name. Must be left empty for the `DOCR` registry type. Required for the `DOCKER_HUB` registry type.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tag_go">
+<a href="#tag_go" style="color: inherit; text-decoration: inherit;">Tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The repository tag. Defaults to `latest` if not provided.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5547,15 +7381,45 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="path_nodejs">
-<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+    <dt class="property-required"
+            title="Required">
+        <span id="registrytype_nodejs">
+<a href="#registrytype_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Paths must start with `/` and must be unique within the app.
+    <dd>{{% md %}}The registry type. One of `DOCR` (DigitalOcean container registry) or `DOCKER_HUB`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="repository_nodejs">
+<a href="#repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The repository name.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registry_nodejs">
+<a href="#registry_nodejs" style="color: inherit; text-decoration: inherit;">registry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The registry name. Must be left empty for the `DOCR` registry type. Required for the `DOCKER_HUB` registry type.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tag_nodejs">
+<a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The repository tag. Defaults to `latest` if not provided.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5563,15 +7427,45 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="path_python">
-<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+    <dt class="property-required"
+            title="Required">
+        <span id="registry_type_python">
+<a href="#registry_type_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Paths must start with `/` and must be unique within the app.
+    <dd>{{% md %}}The registry type. One of `DOCR` (DigitalOcean container registry) or `DOCKER_HUB`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="repository_python">
+<a href="#repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The repository name.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registry_python">
+<a href="#registry_python" style="color: inherit; text-decoration: inherit;">registry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The registry name. Must be left empty for the `DOCR` registry type. Required for the `DOCKER_HUB` registry type.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tag_python">
+<a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The repository tag. Defaults to `latest` if not provided.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

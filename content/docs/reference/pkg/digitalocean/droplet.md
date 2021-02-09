@@ -11,8 +11,7 @@ meta_desc: "Explore the Droplet resource of the DigitalOcean package, including 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a DigitalOcean Droplet resource. This can be used to create,
-modify, and delete Droplets. Droplets also support
-[provisioning](https://www.terraform.io/docs/provisioners/index.html).
+modify, and delete Droplets.
 
 {{% examples %}}
 ## Example Usage
@@ -420,7 +419,7 @@ to retrieve them.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of the IDs of each [block storage volume](https://www.terraform.io/docs/providers/do/r/volume.html) to be attached to the Droplet.
+    <dd>{{% md %}}A list of the IDs of each block storage volume to be attached to the Droplet.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -577,7 +576,7 @@ to retrieve them.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of the IDs of each [block storage volume](https://www.terraform.io/docs/providers/do/r/volume.html) to be attached to the Droplet.
+    <dd>{{% md %}}A list of the IDs of each block storage volume to be attached to the Droplet.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -734,7 +733,7 @@ to retrieve them.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of the IDs of each [block storage volume](https://www.terraform.io/docs/providers/do/r/volume.html) to be attached to the Droplet.
+    <dd>{{% md %}}A list of the IDs of each block storage volume to be attached to the Droplet.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -891,7 +890,7 @@ to retrieve them.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of the IDs of each [block storage volume](https://www.terraform.io/docs/providers/do/r/volume.html) to be attached to the Droplet.
+    <dd>{{% md %}}A list of the IDs of each block storage volume to be attached to the Droplet.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1833,7 +1832,7 @@ to retrieve them.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of the IDs of each [block storage volume](https://www.terraform.io/docs/providers/do/r/volume.html) to be attached to the Droplet.
+    <dd>{{% md %}}A list of the IDs of each block storage volume to be attached to the Droplet.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2109,7 +2108,7 @@ to retrieve them.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of the IDs of each [block storage volume](https://www.terraform.io/docs/providers/do/r/volume.html) to be attached to the Droplet.
+    <dd>{{% md %}}A list of the IDs of each block storage volume to be attached to the Droplet.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2385,7 +2384,7 @@ to retrieve them.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of the IDs of each [block storage volume](https://www.terraform.io/docs/providers/do/r/volume.html) to be attached to the Droplet.
+    <dd>{{% md %}}A list of the IDs of each block storage volume to be attached to the Droplet.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2661,7 +2660,7 @@ to retrieve them.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of the IDs of each [block storage volume](https://www.terraform.io/docs/providers/do/r/volume.html) to be attached to the Droplet.
+    <dd>{{% md %}}A list of the IDs of each block storage volume to be attached to the Droplet.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
