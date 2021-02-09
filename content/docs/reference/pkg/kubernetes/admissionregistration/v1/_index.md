@@ -27,18 +27,3 @@ Explore the resources and functions of the admissionregistration/v1 module in th
 	<dd>2.8.0</dd>
 </dl>
 
-
-
-<dl class="tabular">
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/admissionregistration/v1?tab=doc#" title="kubernetes/admissionregistration/v1">kubernetes/admissionregistration/v1</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/admissionregistration/v1/#" title="@pulumi/kubernetes/admissionregistration/v1">@pulumi/kubernetes/admissionregistration/v1</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/admissionregistration/v1" title="pulumi_kubernetes/admissionregistration/v1">pulumi_kubernetes/admissionregistration/v1</a></dd>
-
-</dl>
-

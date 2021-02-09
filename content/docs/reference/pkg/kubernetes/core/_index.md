@@ -24,18 +24,3 @@ meta_desc: ""
 	<dd>2.8.0</dd>
 </dl>
 
-
-
-<dl class="tabular">
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/core?tab=doc#" title="kubernetes/core">kubernetes/core</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/core/#" title="@pulumi/kubernetes/core">@pulumi/kubernetes/core</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/core" title="pulumi_kubernetes/core">pulumi_kubernetes/core</a></dd>
-
-</dl>
-

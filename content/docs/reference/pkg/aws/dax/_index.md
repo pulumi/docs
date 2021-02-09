@@ -28,21 +28,3 @@ Explore the resources and functions of the dax module in the AWS package.
 	<dd>3.28.0</dd>
 </dl>
 
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dax.html" title="Pulumi.Aws.Dax">Pulumi.Aws.Dax</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dax?tab=doc#" title="aws/dax">aws/dax</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/dax/#" title="@pulumi/aws/dax">@pulumi/aws/dax</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/dax" title="pulumi_aws/dax">pulumi_aws/dax</a></dd>
-
-</dl>
-

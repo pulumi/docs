@@ -94,7 +94,7 @@ const test = pulumi.output(aws.efs.getAccessPoint({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAccessPoint<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/efs/#GetAccessPointArgs">GetAccessPointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/efs/#GetAccessPointResult">GetAccessPointResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAccessPoint<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAccessPointArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAccessPointResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -104,7 +104,7 @@ const test = pulumi.output(aws.efs.getAccessPoint({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAccessPoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/efs?tab=doc#LookupAccessPointArgs">LookupAccessPointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/efs?tab=doc#LookupAccessPointResult">LookupAccessPointResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAccessPoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupAccessPointArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupAccessPointResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupAccessPoint` in the Go SDK.
 
@@ -113,7 +113,7 @@ const test = pulumi.output(aws.efs.getAccessPoint({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAccessPoint </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Efs.GetAccessPointResult.html">GetAccessPointResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Efs.GetAccessPointArgs.html">GetAccessPointArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetAccessPointResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAccessPointArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -614,16 +614,6 @@ The following output properties are available:
 
 
 <h4 id="getaccesspointposixuser">Get<wbr>Access<wbr>Point<wbr>Posix<wbr>User</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetAccessPointPosixUser">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/efs?tab=doc#GetAccessPointPosixUser">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Efs.Outputs.GetAccessPointPosixUser.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -776,16 +766,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getaccesspointrootdirectory">Get<wbr>Access<wbr>Point<wbr>Root<wbr>Directory</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetAccessPointRootDirectory">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/efs?tab=doc#GetAccessPointRootDirectory">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Efs.Outputs.GetAccessPointRootDirectory.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -894,16 +874,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getaccesspointrootdirectorycreationinfo">Get<wbr>Access<wbr>Point<wbr>Root<wbr>Directory<wbr>Creation<wbr>Info</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetAccessPointRootDirectoryCreationInfo">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/efs?tab=doc#GetAccessPointRootDirectoryCreationInfo">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Efs.Outputs.GetAccessPointRootDirectoryCreationInfo.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

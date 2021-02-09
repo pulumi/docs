@@ -738,19 +738,19 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#VirtualNode">VirtualNode</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#VirtualNodeArgs">VirtualNodeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualNode</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualNodeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/appmesh/#pulumi_aws.appmesh.VirtualNode">VirtualNode</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">mesh_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mesh_owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[VirtualNodeSpecArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualNode</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">mesh_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mesh_owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[VirtualNodeSpecArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNode">NewVirtualNode</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeArgs">VirtualNodeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNode">VirtualNode</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualNode</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualNodeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualNode</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.VirtualNode.html">VirtualNode</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.VirtualNodeArgs.html">VirtualNodeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualNode</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VirtualNodeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -771,7 +771,7 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#VirtualNodeArgs">VirtualNodeArgs</a></span>
+        <span class="property-type"><a href="#inputs">VirtualNodeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -840,7 +840,7 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeArgs">VirtualNodeArgs</a></span>
+        <span class="property-type"><a href="#inputs">VirtualNodeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -879,7 +879,7 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.VirtualNodeArgs.html">VirtualNodeArgs</a></span>
+        <span class="property-type"><a href="#inputs">VirtualNodeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -902,11 +902,11 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
 
 ## VirtualNode Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The VirtualNode resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The VirtualNode resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1369,7 +1369,7 @@ Get an existing VirtualNode resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#VirtualNodeState">VirtualNodeState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#VirtualNode">VirtualNode</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">VirtualNodeState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">VirtualNode</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1378,11 +1378,11 @@ Get an existing VirtualNode resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualNode<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeState">VirtualNodeState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNode">VirtualNode</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualNode<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">VirtualNodeState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualNode</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.VirtualNode.html">VirtualNode</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.VirtualNodeState.html">VirtualNodeState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">VirtualNode</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">VirtualNodeState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1878,18 +1878,6 @@ The following state arguments are supported:
 
 
 <h4 id="virtualnodespec">Virtual<wbr>Node<wbr>Spec</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpec">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpec">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpec.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2116,18 +2104,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualnodespecbackend">Virtual<wbr>Node<wbr>Spec<wbr>Backend</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecBackend">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecBackend">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecBackendArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecBackend.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2194,18 +2170,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualnodespecbackenddefaults">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecBackendDefaults">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecBackendDefaults">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendDefaultsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendDefaultsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecBackendDefaultsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecBackendDefaults.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2272,18 +2236,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualnodespecbackenddefaultsclientpolicy">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecBackendDefaultsClientPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecBackendDefaultsClientPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendDefaultsClientPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendDefaultsClientPolicyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecBackendDefaultsClientPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecBackendDefaultsClientPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2350,18 +2302,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualnodespecbackenddefaultsclientpolicytls">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecBackendDefaultsClientPolicyTls">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecBackendDefaultsClientPolicyTls">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendDefaultsClientPolicyTlsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendDefaultsClientPolicyTlsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecBackendDefaultsClientPolicyTls.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2504,18 +2444,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualnodespecbackenddefaultsclientpolicytlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecBackendDefaultsClientPolicyTlsValidation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecBackendDefaultsClientPolicyTlsValidation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsValidation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2582,18 +2510,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualnodespecbackenddefaultsclientpolicytlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrust">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrust">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrust.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2700,18 +2616,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustacm">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcm">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcm">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcm.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2778,18 +2682,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFile">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFile">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFile.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2856,18 +2748,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualnodespecbackendvirtualservice">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecBackendVirtualService">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecBackendVirtualService">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendVirtualServiceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendVirtualServiceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecBackendVirtualServiceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecBackendVirtualService.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2974,18 +2854,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualnodespecbackendvirtualserviceclientpolicy">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecBackendVirtualServiceClientPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecBackendVirtualServiceClientPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendVirtualServiceClientPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendVirtualServiceClientPolicyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecBackendVirtualServiceClientPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecBackendVirtualServiceClientPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3052,18 +2920,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualnodespecbackendvirtualserviceclientpolicytls">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecBackendVirtualServiceClientPolicyTls">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecBackendVirtualServiceClientPolicyTls">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendVirtualServiceClientPolicyTlsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendVirtualServiceClientPolicyTlsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecBackendVirtualServiceClientPolicyTlsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecBackendVirtualServiceClientPolicyTls.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3206,18 +3062,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualnodespecbackendvirtualserviceclientpolicytlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3284,18 +3128,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrust">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrust">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrust.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3402,18 +3234,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustacm">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustAcm">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustAcm">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustAcmArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustAcmOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustAcmArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustAcm.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3480,18 +3300,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustFile">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustFile">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustFileArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustFileOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustFileArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustFile.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3558,18 +3366,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualnodespeclistener">Virtual<wbr>Node<wbr>Spec<wbr>Listener</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListener">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListener">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListener.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3836,18 +3632,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualnodespeclistenerconnectionpool">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerConnectionPool">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerConnectionPool">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerConnectionPoolArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerConnectionPoolOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerConnectionPoolArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerConnectionPool.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4034,18 +3818,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualnodespeclistenerconnectionpoolgrpc">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Grpc</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerConnectionPoolGrpc">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerConnectionPoolGrpc">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerConnectionPoolGrpcArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerConnectionPoolGrpcOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerConnectionPoolGrpcArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerConnectionPoolGrpc.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4112,18 +3884,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualnodespeclistenerconnectionpoolhttp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerConnectionPoolHttp">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerConnectionPoolHttp">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerConnectionPoolHttpArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerConnectionPoolHttpOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerConnectionPoolHttpArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerConnectionPoolHttp.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4230,18 +3990,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualnodespeclistenerconnectionpoolhttp2">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http2</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerConnectionPoolHttp2">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerConnectionPoolHttp2">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerConnectionPoolHttp2Args">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerConnectionPoolHttp2Output">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerConnectionPoolHttp2Args.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerConnectionPoolHttp2.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4308,18 +4056,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualnodespeclistenerconnectionpooltcp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Tcp</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerConnectionPoolTcp">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerConnectionPoolTcp">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerConnectionPoolTcpArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerConnectionPoolTcpOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerConnectionPoolTcpArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerConnectionPoolTcp.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4386,18 +4122,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualnodespeclistenerhealthcheck">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerHealthCheck">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerHealthCheck">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerHealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerHealthCheckOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerHealthCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerHealthCheck.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4704,18 +4428,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualnodespeclisteneroutlierdetection">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Outlier<wbr>Detection</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerOutlierDetection">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerOutlierDetection">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerOutlierDetectionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerOutlierDetectionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerOutlierDetectionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerOutlierDetection.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4906,18 +4618,6 @@ Minimum value of `0`. Maximum value of `100`.
 {{% /choosable %}}
 
 <h4 id="virtualnodespeclisteneroutlierdetectionbaseejectionduration">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Duration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerOutlierDetectionBaseEjectionDuration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerOutlierDetectionBaseEjectionDuration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerOutlierDetectionBaseEjectionDurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerOutlierDetectionBaseEjectionDurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerOutlierDetectionBaseEjectionDurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerOutlierDetectionBaseEjectionDuration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5024,18 +4724,6 @@ Minimum value of `0`. Maximum value of `100`.
 {{% /choosable %}}
 
 <h4 id="virtualnodespeclisteneroutlierdetectioninterval">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Outlier<wbr>Detection<wbr>Interval</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerOutlierDetectionInterval">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerOutlierDetectionInterval">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerOutlierDetectionIntervalArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerOutlierDetectionIntervalOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerOutlierDetectionIntervalArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerOutlierDetectionInterval.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5142,18 +4830,6 @@ Minimum value of `0`. Maximum value of `100`.
 {{% /choosable %}}
 
 <h4 id="virtualnodespeclistenerportmapping">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerPortMapping">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerPortMapping">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerPortMappingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerPortMappingOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerPortMappingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerPortMapping.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5260,18 +4936,6 @@ Minimum value of `0`. Maximum value of `100`.
 {{% /choosable %}}
 
 <h4 id="virtualnodespeclistenertimeout">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerTimeout">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerTimeout">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerTimeoutArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerTimeout.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5458,18 +5122,6 @@ Minimum value of `0`. Maximum value of `100`.
 {{% /choosable %}}
 
 <h4 id="virtualnodespeclistenertimeoutgrpc">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Grpc</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerTimeoutGrpc">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerTimeoutGrpc">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutGrpcArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutGrpcOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerTimeoutGrpcArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerTimeoutGrpc.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5576,18 +5228,6 @@ Minimum value of `0`. Maximum value of `100`.
 {{% /choosable %}}
 
 <h4 id="virtualnodespeclistenertimeoutgrpcidle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Grpc<wbr>Idle</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerTimeoutGrpcIdle">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerTimeoutGrpcIdle">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutGrpcIdleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutGrpcIdleOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerTimeoutGrpcIdleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerTimeoutGrpcIdle.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5694,18 +5334,6 @@ Minimum value of `0`. Maximum value of `100`.
 {{% /choosable %}}
 
 <h4 id="virtualnodespeclistenertimeoutgrpcperrequest">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Grpc<wbr>Per<wbr>Request</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerTimeoutGrpcPerRequest">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerTimeoutGrpcPerRequest">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutGrpcPerRequestArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutGrpcPerRequestOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerTimeoutGrpcPerRequestArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerTimeoutGrpcPerRequest.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5812,18 +5440,6 @@ Minimum value of `0`. Maximum value of `100`.
 {{% /choosable %}}
 
 <h4 id="virtualnodespeclistenertimeouthttp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerTimeoutHttp">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerTimeoutHttp">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutHttpArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutHttpOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerTimeoutHttpArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerTimeoutHttp.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5930,18 +5546,6 @@ Minimum value of `0`. Maximum value of `100`.
 {{% /choosable %}}
 
 <h4 id="virtualnodespeclistenertimeouthttp2">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http2</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerTimeoutHttp2">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerTimeoutHttp2">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutHttp2Args">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutHttp2Output">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerTimeoutHttp2Args.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerTimeoutHttp2.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6048,18 +5652,6 @@ Minimum value of `0`. Maximum value of `100`.
 {{% /choosable %}}
 
 <h4 id="virtualnodespeclistenertimeouthttp2idle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http2Idle</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerTimeoutHttp2Idle">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerTimeoutHttp2Idle">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutHttp2IdleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutHttp2IdleOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerTimeoutHttp2IdleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerTimeoutHttp2Idle.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6166,18 +5758,6 @@ Minimum value of `0`. Maximum value of `100`.
 {{% /choosable %}}
 
 <h4 id="virtualnodespeclistenertimeouthttp2perrequest">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http2Per<wbr>Request</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerTimeoutHttp2PerRequest">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerTimeoutHttp2PerRequest">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutHttp2PerRequestArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutHttp2PerRequestOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerTimeoutHttp2PerRequestArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerTimeoutHttp2PerRequest.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6284,18 +5864,6 @@ Minimum value of `0`. Maximum value of `100`.
 {{% /choosable %}}
 
 <h4 id="virtualnodespeclistenertimeouthttpidle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http<wbr>Idle</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerTimeoutHttpIdle">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerTimeoutHttpIdle">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutHttpIdleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutHttpIdleOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerTimeoutHttpIdleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerTimeoutHttpIdle.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6402,18 +5970,6 @@ Minimum value of `0`. Maximum value of `100`.
 {{% /choosable %}}
 
 <h4 id="virtualnodespeclistenertimeouthttpperrequest">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http<wbr>Per<wbr>Request</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerTimeoutHttpPerRequest">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerTimeoutHttpPerRequest">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutHttpPerRequestArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutHttpPerRequestOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerTimeoutHttpPerRequestArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerTimeoutHttpPerRequest.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6520,18 +6076,6 @@ Minimum value of `0`. Maximum value of `100`.
 {{% /choosable %}}
 
 <h4 id="virtualnodespeclistenertimeouttcp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Tcp</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerTimeoutTcp">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerTimeoutTcp">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutTcpArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutTcpOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerTimeoutTcpArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerTimeoutTcp.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6598,18 +6142,6 @@ Minimum value of `0`. Maximum value of `100`.
 {{% /choosable %}}
 
 <h4 id="virtualnodespeclistenertimeouttcpidle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Tcp<wbr>Idle</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerTimeoutTcpIdle">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerTimeoutTcpIdle">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutTcpIdleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTimeoutTcpIdleOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerTimeoutTcpIdleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerTimeoutTcpIdle.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6716,18 +6248,6 @@ Minimum value of `0`. Maximum value of `100`.
 {{% /choosable %}}
 
 <h4 id="virtualnodespeclistenertls">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerTls">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerTls">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTlsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTlsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerTlsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerTls.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6834,18 +6354,6 @@ Minimum value of `0`. Maximum value of `100`.
 {{% /choosable %}}
 
 <h4 id="virtualnodespeclistenertlscertificate">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerTlsCertificate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerTlsCertificate">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTlsCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTlsCertificateOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerTlsCertificateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerTlsCertificate.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6952,18 +6460,6 @@ Minimum value of `0`. Maximum value of `100`.
 {{% /choosable %}}
 
 <h4 id="virtualnodespeclistenertlscertificateacm">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Acm</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerTlsCertificateAcm">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerTlsCertificateAcm">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTlsCertificateAcmArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTlsCertificateAcmOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerTlsCertificateAcmArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerTlsCertificateAcm.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7030,18 +6526,6 @@ Minimum value of `0`. Maximum value of `100`.
 {{% /choosable %}}
 
 <h4 id="virtualnodespeclistenertlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>File</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerTlsCertificateFile">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerTlsCertificateFile">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTlsCertificateFileArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerTlsCertificateFileOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecListenerTlsCertificateFileArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecListenerTlsCertificateFile.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7148,18 +6632,6 @@ Minimum value of `0`. Maximum value of `100`.
 {{% /choosable %}}
 
 <h4 id="virtualnodespeclogging">Virtual<wbr>Node<wbr>Spec<wbr>Logging</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecLogging">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecLogging">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecLoggingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecLoggingOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecLoggingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecLogging.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7226,18 +6698,6 @@ Minimum value of `0`. Maximum value of `100`.
 {{% /choosable %}}
 
 <h4 id="virtualnodespecloggingaccesslog">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecLoggingAccessLog">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecLoggingAccessLog">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecLoggingAccessLogArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecLoggingAccessLogOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecLoggingAccessLogArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecLoggingAccessLog.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7304,18 +6764,6 @@ Minimum value of `0`. Maximum value of `100`.
 {{% /choosable %}}
 
 <h4 id="virtualnodespecloggingaccesslogfile">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecLoggingAccessLogFile">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecLoggingAccessLogFile">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecLoggingAccessLogFileArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecLoggingAccessLogFileOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecLoggingAccessLogFileArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecLoggingAccessLogFile.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7382,18 +6830,6 @@ Minimum value of `0`. Maximum value of `100`.
 {{% /choosable %}}
 
 <h4 id="virtualnodespecservicediscovery">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecServiceDiscovery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecServiceDiscovery">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecServiceDiscoveryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecServiceDiscoveryOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecServiceDiscoveryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecServiceDiscovery.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7500,18 +6936,6 @@ Minimum value of `0`. Maximum value of `100`.
 {{% /choosable %}}
 
 <h4 id="virtualnodespecservicediscoveryawscloudmap">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Aws<wbr>Cloud<wbr>Map</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecServiceDiscoveryAwsCloudMap">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecServiceDiscoveryAwsCloudMap">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecServiceDiscoveryAwsCloudMapOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecServiceDiscoveryAwsCloudMap.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7662,18 +7086,6 @@ Use the `aws.servicediscovery.HttpNamespace` resource to configure a Cloud Map n
 {{% /choosable %}}
 
 <h4 id="virtualnodespecservicediscoverydns">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Dns</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecServiceDiscoveryDns">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecServiceDiscoveryDns">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecServiceDiscoveryDnsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualNodeSpecServiceDiscoveryDnsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualNodeSpecServiceDiscoveryDnsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualNodeSpecServiceDiscoveryDns.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

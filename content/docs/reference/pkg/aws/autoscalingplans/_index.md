@@ -26,21 +26,3 @@ Explore the resources and functions of the autoscalingplans module in the AWS pa
 	<dd>3.28.0</dd>
 </dl>
 
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScalingPlans.html" title="Pulumi.Aws.AutoScalingPlans">Pulumi.Aws.AutoScalingPlans</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscalingplans?tab=doc#" title="aws/autoscalingplans">aws/autoscalingplans</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/autoscalingplans/#" title="@pulumi/aws/autoscalingplans">@pulumi/aws/autoscalingplans</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/autoscalingplans" title="pulumi_aws/autoscalingplans">pulumi_aws/autoscalingplans</a></dd>
-
-</dl>
-

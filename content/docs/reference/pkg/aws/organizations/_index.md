@@ -36,21 +36,3 @@ Explore the resources and functions of the organizations module in the AWS packa
 	<dd>3.28.0</dd>
 </dl>
 
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Organizations.html" title="Pulumi.Aws.Organizations">Pulumi.Aws.Organizations</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/organizations?tab=doc#" title="aws/organizations">aws/organizations</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/organizations/#" title="@pulumi/aws/organizations">@pulumi/aws/organizations</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/organizations" title="pulumi_aws/organizations">pulumi_aws/organizations</a></dd>
-
-</dl>
-

@@ -24,18 +24,3 @@ Explore the resources and functions of the kustomize module in the Kubernetes pa
 	<dd>2.8.0</dd>
 </dl>
 
-
-
-<dl class="tabular">
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/kustomize?tab=doc#" title="kubernetes/kustomize">kubernetes/kustomize</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/kustomize/#" title="@pulumi/kubernetes/kustomize">@pulumi/kubernetes/kustomize</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/kustomize" title="pulumi_kubernetes/kustomize">pulumi_kubernetes/kustomize</a></dd>
-
-</dl>
-
