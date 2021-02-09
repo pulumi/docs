@@ -71,7 +71,7 @@ main:
     datetime: ""
     # Description of the webinar.
     description: |
-        Join our Ask the Expert session with Pulumi engineers. Come with your Pulumi-based questions - We'll be here to answer any questions that are Cloud Engineering related. Have a project you're currently working on? Bring it - we love sharing!
+        Join our Ask the Expert session with Pulumi engineers. Come with your Pulumi-based questions --- we'll be here to answer any questions that are Cloud Engineering related. Have a project you're currently working on? Bring it --- we love sharing!
 
     # The webinar presenters
     presenters:
