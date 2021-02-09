@@ -130,7 +130,7 @@ You can set any environment variables required for the specific providers you pl
 
 For private VCS repos, you can save the Personal Access Token used to clone your repo into the batch job container. This means when you configure the Stage in the Spinnaker Pipelines UI, you can reference the same key names in the URL you specify. For example, the environment variables in the URL `https://$(GIT_USERNAME):$(GIT_PAT)@github.com/owner/repo` will automatically resolve to the correct values as per your Secret resource inside the preconfigured job container.
 
-{{% notes "warning" %}}
+{{% notes type="warning" %}}
 Do not surround the placeholder variables with `{` and `}` unless you are actually using a [pipeline expression](https://spinnaker.io/guides/user/pipeline/expressions/).
 {{% /notes %}}
 
