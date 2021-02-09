@@ -11,7 +11,11 @@ meta_desc: "Explore the DeviceNetworkType resource of the Packet package, includ
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-
+<div class="note note-info" role="alert">
+    <p><i class="fas fa-info-circle pr-2"></i>
+        The Packet provider has been deprecated. The replacement resource is Equinix Metal <a href="/docs/reference/pkg/equinix-metal/devicenetworktype/">DeviceNetworkType</a>.
+    </p>
+</div>
 
 ## Create a DeviceNetworkType Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
