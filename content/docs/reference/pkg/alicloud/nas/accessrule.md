@@ -32,12 +32,13 @@ class MyStack : Stack
     {
         var fooAccessGroup = new AliCloud.Nas.AccessGroup("fooAccessGroup", new AliCloud.Nas.AccessGroupArgs
         {
-            Type = "Vpc",
+            AccessGroupName = "tf-NasConfigName",
+            AccessGroupType = "Vpc",
             Description = "tf-testAccNasConfig",
         });
         var fooAccessRule = new AliCloud.Nas.AccessRule("fooAccessRule", new AliCloud.Nas.AccessRuleArgs
         {
-            AccessGroupName = fooAccessGroup.Id,
+            AccessGroupName = fooAccessGroup.AccessGroupName,
             SourceCidrIp = "168.1.1.0/16",
             RwAccessType = "RDWR",
             UserAccessType = "no_squash",
@@ -62,14 +63,15 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		fooAccessGroup, err := nas.NewAccessGroup(ctx, "fooAccessGroup", &nas.AccessGroupArgs{
-			Type:        pulumi.String("Vpc"),
-			Description: pulumi.String("tf-testAccNasConfig"),
+			AccessGroupName: pulumi.String("tf-NasConfigName"),
+			AccessGroupType: pulumi.String("Vpc"),
+			Description:     pulumi.String("tf-testAccNasConfig"),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = nas.NewAccessRule(ctx, "fooAccessRule", &nas.AccessRuleArgs{
-			AccessGroupName: fooAccessGroup.ID(),
+			AccessGroupName: fooAccessGroup.AccessGroupName,
 			SourceCidrIp:    pulumi.String("168.1.1.0/16"),
 			RwAccessType:    pulumi.String("RDWR"),
 			UserAccessType:  pulumi.String("no_squash"),
@@ -91,10 +93,11 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 foo_access_group = alicloud.nas.AccessGroup("fooAccessGroup",
-    type="Vpc",
+    access_group_name="tf-NasConfigName",
+    access_group_type="Vpc",
     description="tf-testAccNasConfig")
 foo_access_rule = alicloud.nas.AccessRule("fooAccessRule",
-    access_group_name=foo_access_group.id,
+    access_group_name=foo_access_group.access_group_name,
     source_cidr_ip="168.1.1.0/16",
     rw_access_type="RDWR",
     user_access_type="no_squash",
@@ -110,11 +113,12 @@ import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 const fooAccessGroup = new alicloud.nas.AccessGroup("fooAccessGroup", {
-    type: "Vpc",
+    accessGroupName: "tf-NasConfigName",
+    accessGroupType: "Vpc",
     description: "tf-testAccNasConfig",
 });
 const fooAccessRule = new alicloud.nas.AccessRule("fooAccessRule", {
-    accessGroupName: fooAccessGroup.id,
+    accessGroupName: fooAccessGroup.accessGroupName,
     sourceCidrIp: "168.1.1.0/16",
     rwAccessType: "RDWR",
     userAccessType: "no_squash",
@@ -335,7 +339,7 @@ The AccessRule resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Priority level. Range: 1-100. Default value: 1.
+    <dd>{{% md %}}Priority level. Range: 1-100. Default value: `1`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -345,7 +349,7 @@ The AccessRule resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Read-write permission type: RDWR (default), RDONLY.
+    <dd>{{% md %}}Read-write permission type: `RDWR` (default), `RDONLY`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -355,7 +359,7 @@ The AccessRule resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User permission type: no_squash (default), root_squash, all_squash.
+    <dd>{{% md %}}User permission type: `no_squash` (default), `root_squash`, `all_squash`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -391,7 +395,7 @@ The AccessRule resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Priority level. Range: 1-100. Default value: 1.
+    <dd>{{% md %}}Priority level. Range: 1-100. Default value: `1`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -401,7 +405,7 @@ The AccessRule resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Read-write permission type: RDWR (default), RDONLY.
+    <dd>{{% md %}}Read-write permission type: `RDWR` (default), `RDONLY`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -411,7 +415,7 @@ The AccessRule resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User permission type: no_squash (default), root_squash, all_squash.
+    <dd>{{% md %}}User permission type: `no_squash` (default), `root_squash`, `all_squash`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -447,7 +451,7 @@ The AccessRule resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Priority level. Range: 1-100. Default value: 1.
+    <dd>{{% md %}}Priority level. Range: 1-100. Default value: `1`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -457,7 +461,7 @@ The AccessRule resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Read-write permission type: RDWR (default), RDONLY.
+    <dd>{{% md %}}Read-write permission type: `RDWR` (default), `RDONLY`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -467,7 +471,7 @@ The AccessRule resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User permission type: no_squash (default), root_squash, all_squash.
+    <dd>{{% md %}}User permission type: `no_squash` (default), `root_squash`, `all_squash`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -503,7 +507,7 @@ The AccessRule resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Priority level. Range: 1-100. Default value: 1.
+    <dd>{{% md %}}Priority level. Range: 1-100. Default value: `1`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -513,7 +517,7 @@ The AccessRule resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Read-write permission type: RDWR (default), RDONLY.
+    <dd>{{% md %}}Read-write permission type: `RDWR` (default), `RDONLY`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -523,7 +527,7 @@ The AccessRule resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}User permission type: no_squash (default), root_squash, all_squash.
+    <dd>{{% md %}}User permission type: `no_squash` (default), `root_squash`, `all_squash`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -789,7 +793,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Priority level. Range: 1-100. Default value: 1.
+    <dd>{{% md %}}Priority level. Range: 1-100. Default value: `1`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -799,7 +803,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Read-write permission type: RDWR (default), RDONLY.
+    <dd>{{% md %}}Read-write permission type: `RDWR` (default), `RDONLY`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -819,7 +823,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User permission type: no_squash (default), root_squash, all_squash.
+    <dd>{{% md %}}User permission type: `no_squash` (default), `root_squash`, `all_squash`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -855,7 +859,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Priority level. Range: 1-100. Default value: 1.
+    <dd>{{% md %}}Priority level. Range: 1-100. Default value: `1`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -865,7 +869,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Read-write permission type: RDWR (default), RDONLY.
+    <dd>{{% md %}}Read-write permission type: `RDWR` (default), `RDONLY`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -885,7 +889,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User permission type: no_squash (default), root_squash, all_squash.
+    <dd>{{% md %}}User permission type: `no_squash` (default), `root_squash`, `all_squash`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -921,7 +925,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Priority level. Range: 1-100. Default value: 1.
+    <dd>{{% md %}}Priority level. Range: 1-100. Default value: `1`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -931,7 +935,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Read-write permission type: RDWR (default), RDONLY.
+    <dd>{{% md %}}Read-write permission type: `RDWR` (default), `RDONLY`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -951,7 +955,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User permission type: no_squash (default), root_squash, all_squash.
+    <dd>{{% md %}}User permission type: `no_squash` (default), `root_squash`, `all_squash`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -987,7 +991,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Priority level. Range: 1-100. Default value: 1.
+    <dd>{{% md %}}Priority level. Range: 1-100. Default value: `1`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -997,7 +1001,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Read-write permission type: RDWR (default), RDONLY.
+    <dd>{{% md %}}Read-write permission type: `RDWR` (default), `RDONLY`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1017,7 +1021,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}User permission type: no_squash (default), root_squash, all_squash.
+    <dd>{{% md %}}User permission type: `no_squash` (default), `root_squash`, `all_squash`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

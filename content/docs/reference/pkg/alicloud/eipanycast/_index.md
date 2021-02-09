@@ -29,24 +29,6 @@ Explore the resources and functions of the eipanycast module in the AliCloud pac
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.34.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.EipAnycast.html" title="Pulumi.AliCloud.EipAnycast">Pulumi.AliCloud.EipAnycast</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eipanycast?tab=doc#" title="alicloud/eipanycast">alicloud/eipanycast</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/eipanycast/#" title="@pulumi/alicloud/eipanycast">@pulumi/alicloud/eipanycast</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/eipanycast" title="pulumi_alicloud/eipanycast">pulumi_alicloud/eipanycast</a></dd>
-
+	<dd>2.35.0</dd>
 </dl>
 

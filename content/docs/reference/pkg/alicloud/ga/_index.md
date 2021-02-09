@@ -37,24 +37,6 @@ Explore the resources and functions of the ga module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.34.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ga.html" title="Pulumi.AliCloud.Ga">Pulumi.AliCloud.Ga</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ga?tab=doc#" title="alicloud/ga">alicloud/ga</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ga/#" title="@pulumi/alicloud/ga">@pulumi/alicloud/ga</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/ga" title="pulumi_alicloud/ga">pulumi_alicloud/ga</a></dd>
-
+	<dd>2.35.0</dd>
 </dl>
 

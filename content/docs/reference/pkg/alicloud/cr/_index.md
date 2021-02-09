@@ -30,24 +30,6 @@ Explore the resources and functions of the cr module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.34.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CR.html" title="Pulumi.AliCloud.CR">Pulumi.AliCloud.CR</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cr?tab=doc#" title="alicloud/cr">alicloud/cr</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cr/#" title="@pulumi/alicloud/cr">@pulumi/alicloud/cr</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/cr" title="pulumi_alicloud/cr">pulumi_alicloud/cr</a></dd>
-
+	<dd>2.35.0</dd>
 </dl>
 

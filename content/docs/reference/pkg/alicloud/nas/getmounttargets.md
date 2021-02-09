@@ -12,7 +12,7 @@ meta_desc: "Explore the GetMountTargets function of the nas module, including ex
 
 This data source provides MountTargets available to the user.
 
-> NOTE: Available in 1.35.0+
+> **NOTE**: Available in 1.35.0+
 
 
 {{% examples %}}

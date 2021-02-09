@@ -13,11 +13,11 @@ meta_desc: "Documentation for the alicloud.nas.MountTarget resource with example
 Provides a NAS Mount Target resource.
 For information about NAS Mount Target and how to use it, see [Manage NAS Mount Targets](https://www.alibabacloud.com/help/en/doc-detail/27531.htm).
 
-> NOTE: Available in v1.34.0+.
+> **NOTE**: Available in v1.34.0+.
 
-> NOTE: Currently this resource support create a mount point in a classic network only when current region is China mainland regions.
+> **NOTE**: Currently this resource support create a mount point in a classic network only when current region is China mainland regions.
 
-> NOTE: You must grant NAS with specific RAM permissions when creating a classic mount targets,
+> **NOTE**: You must grant NAS with specific RAM permissions when creating a classic mount targets,
 and it only can be achieved by creating a classic mount target mannually.
 See [Add a mount point](https://www.alibabacloud.com/help/doc-detail/60431.htm) and [Why do I need RAM permissions to create a mount point in a classic network](https://www.alibabacloud.com/help/faq-detail/42176.htm).
 
@@ -329,16 +329,6 @@ The MountTarget resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span id="accessgroupname_csharp">
-<a href="#accessgroupname_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Group<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the permission group that applies to the mount target.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="filesystemid_csharp">
 <a href="#filesystemid_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Id</a>
 </span>
@@ -346,6 +336,16 @@ The MountTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the file system.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accessgroupname_csharp">
+<a href="#accessgroupname_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the permission group that applies to the mount target.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -385,16 +385,6 @@ The MountTarget resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span id="accessgroupname_go">
-<a href="#accessgroupname_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Group<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the permission group that applies to the mount target.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="filesystemid_go">
 <a href="#filesystemid_go" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Id</a>
 </span>
@@ -402,6 +392,16 @@ The MountTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the file system.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accessgroupname_go">
+<a href="#accessgroupname_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the permission group that applies to the mount target.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -441,16 +441,6 @@ The MountTarget resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span id="accessgroupname_nodejs">
-<a href="#accessgroupname_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Group<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the permission group that applies to the mount target.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="filesystemid_nodejs">
 <a href="#filesystemid_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Id</a>
 </span>
@@ -458,6 +448,16 @@ The MountTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the file system.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accessgroupname_nodejs">
+<a href="#accessgroupname_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the permission group that applies to the mount target.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -497,16 +497,6 @@ The MountTarget resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span id="access_group_name_python">
-<a href="#access_group_name_python" style="color: inherit; text-decoration: inherit;">access_<wbr>group_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the permission group that applies to the mount target.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="file_system_id_python">
 <a href="#file_system_id_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>id</a>
 </span>
@@ -514,6 +504,16 @@ The MountTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the file system.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="access_group_name_python">
+<a href="#access_group_name_python" style="color: inherit; text-decoration: inherit;">access_<wbr>group_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the permission group that applies to the mount target.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
