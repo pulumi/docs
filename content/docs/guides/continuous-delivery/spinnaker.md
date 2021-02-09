@@ -76,7 +76,7 @@ See the next section about configuring secrets to learn how you can use private 
 
 To pass sensitive secrets to the Kubernetes batch job run by the plugin, define a [Kubernetes `Secret`](https://kubernetes.io/docs/concepts/configuration/secret/).
 
-{{% notes "warning" %}}
+{{% notes type="warning" %}}
 The `Secret` resource must be in the same namespace as the Pulumi stage input when you configure the pipeline.
 {{% /notes %}}
 
