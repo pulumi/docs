@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
-title: "Multicloud OSS Database Deployments With Zero Downtime"
-meta_desc: "With Pulumi and Aiven, you can build multi-cloud applications using the language of your choice, the database of your choice, and the cloud of your choice."
+title: "Ask the Expert"
+meta_desc: "Join our Ask the Expert session with Pulumi engineers. Come with your Pulumi-based questions and we will happily help you get the answers you need."
 
 # A featured webinar will display first in the list.
 featured: false
@@ -34,52 +34,55 @@ block_external_search_index: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "multicloud-oss-database-deployments-with-aiven"
+url_slug: "ask-the-expert"
 
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: "Multicloud OSS Database Deployments With Zero Downtime - Pulumi and Aiven"
+    title: "Ask the Expert"
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
 
 # Webinar pages support multiple session via the 'multiple' property.
-# multiple:
-#   - datetime: 2020-02-05T10:00:00-07:00
-#     hubspot_form_id: ""
-#     gotowebinar_key: ""
+multiple:
+    - datetime: 2021-02-11T11:00:00+01:00
+      hubspot_form_id: 8e1a5894-5ec5-4ae7-b741-d75d2e020b38
+
+    - datetime: 2021-02-25T11:00:00+01:00
+      hubspot_form_id: cb663e2e-2a1e-4099-8311-1dcaa2af3b5d
+
+    - datetime: 2021-03-11T11:00:00+01:00
+      hubspot_form_id: 3ec7c538-d08a-4c94-b161-2824d41ae9c9
+
+    - datetime: 2021-03-25T11:00:00+02:00
+      hubspot_form_id: 776a238e-e34c-4ac9-9af8-4d069fd303b3
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Multicloud OSS Database Deployments With Zero Downtime - Pulumi and Aiven"
+    title: "Ask the Expert"
     # URL for embedding a URL for ungated webinars.
     youtube_url: ""
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2021-03-17T11:00:00-07:00
+    sortable_date: 2020-02-05T10:00:00-07:00
     # Duration of the webinar.
     duration: "1 hour"
     # Datetime of the webinar.
-    datetime: "March 17th, 2021"
+    datetime: ""
     # Description of the webinar.
     description: |
-        With Pulumi and Aiven, you can build robust, multi-cloud applications using the language of your choice, the open source database of your choice, and the cloud of your choice.  Join Pulumi engineer Paul Stack and Aiven solution architect Trevor Kennedy to see how easy it is to define, deploy and manage production-ready apps.
+        Join our Ask the Expert session with Pulumi engineers. Come with your Pulumi-based questions --- we'll be here to answer any questions that are Cloud Engineering related. Have a project you're currently working on? Bring it --- we love sharing!
 
     # The webinar presenters
     presenters:
         - name: Paul Stack
           role: Software Engineer, Pulumi
-        - name: Trevor Kennedy
-          role: Solutions Architect, Aiven
+        - name: Piers Karsenbarg
+          role: Customer Engineer, Pulumi
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
-        - How Pulumi infrastructure as code makes it easy to define resources across clouds.
-        - How Aiven simplifies database provisioning and management for Postgres, MySQL, Kafka, Cassandra, Elasticsearch on multiple clouds
-        - How to combine solutions so that your applications can be hosted anywhere and moved across clouds and regions with zero downtime.
-
-# The right hand side form section.
-form:
-    # HubSpot form id.
-    hubspot_form_id: b51aa29f-63e9-4935-a929-8a3b55804c92
+        - Interact with Pulumi and Cloud Engineering experts.
+        - Hear how others are developing solutions around cloud challenges.
+        - Gain advice on how to get the most out of Pulumi.
 ---

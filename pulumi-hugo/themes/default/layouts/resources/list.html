@@ -133,7 +133,7 @@
                         {{ end }}
 
                         {{ if isset $data.Params "multiple" }}
-                            {{ $link = printf "%s?date=%s" $link  (dateFormat "2006/01/02" .date)}}
+                            {{ $link = printf "%s/?date=%s" $link  (dateFormat "2006/01/02" .date)}}
                         {{ end }}
 
                         <!-- If the webinar is featured add the feature filter. -->
