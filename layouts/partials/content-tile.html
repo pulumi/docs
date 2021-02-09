@@ -4,13 +4,12 @@
     {{ $target := "_blank" }}
 
     {{ if eq .external false }}
-        {{ $href = (relref .pageContext .link) }}
+        {{ if not (isset . "multiple") }}
+            {{ $href = (relref .pageContext .link) }}
+        {{ end }}
+
         {{ $relref = "" }}
         {{ $target = "" }}
-
-        {{ if isset . "multiple" }}
-            {{ $href = .link}}
-        {{ end }}
     {{ end }}
 
     <article class="rounded shadow-md bg-white border border-gray-200 mb-10 flex flex-col mx-2 md:mx-0 content-tile">
