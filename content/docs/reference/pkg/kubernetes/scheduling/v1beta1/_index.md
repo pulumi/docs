@@ -25,18 +25,3 @@ Explore the resources and functions of the scheduling/v1beta1 module in the Kube
 	<dd>2.8.0</dd>
 </dl>
 
-
-
-<dl class="tabular">
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/scheduling/v1beta1?tab=doc#" title="kubernetes/scheduling/v1beta1">kubernetes/scheduling/v1beta1</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/scheduling/v1beta1/#" title="@pulumi/kubernetes/scheduling/v1beta1">@pulumi/kubernetes/scheduling/v1beta1</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/scheduling/v1beta1" title="pulumi_kubernetes/scheduling/v1beta1">pulumi_kubernetes/scheduling/v1beta1</a></dd>
-
-</dl>
-

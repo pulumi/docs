@@ -140,19 +140,19 @@ const serviceb = new aws.appmesh.VirtualRouter("serviceb", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#VirtualRouter">VirtualRouter</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#VirtualRouterArgs">VirtualRouterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualRouter</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualRouterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/appmesh/#pulumi_aws.appmesh.VirtualRouter">VirtualRouter</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">mesh_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mesh_owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[VirtualRouterSpecArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualRouter</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">mesh_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mesh_owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[VirtualRouterSpecArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualRouter">NewVirtualRouter</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualRouterArgs">VirtualRouterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualRouter">VirtualRouter</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualRouter</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualRouterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualRouter</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.VirtualRouter.html">VirtualRouter</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.VirtualRouterArgs.html">VirtualRouterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualRouter</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VirtualRouterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -173,7 +173,7 @@ const serviceb = new aws.appmesh.VirtualRouter("serviceb", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#VirtualRouterArgs">VirtualRouterArgs</a></span>
+        <span class="property-type"><a href="#inputs">VirtualRouterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -242,7 +242,7 @@ const serviceb = new aws.appmesh.VirtualRouter("serviceb", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualRouterArgs">VirtualRouterArgs</a></span>
+        <span class="property-type"><a href="#inputs">VirtualRouterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -281,7 +281,7 @@ const serviceb = new aws.appmesh.VirtualRouter("serviceb", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.VirtualRouterArgs.html">VirtualRouterArgs</a></span>
+        <span class="property-type"><a href="#inputs">VirtualRouterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -771,7 +771,7 @@ Get an existing VirtualRouter resource's state with the given name, ID, and opti
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#VirtualRouterState">VirtualRouterState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#VirtualRouter">VirtualRouter</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">VirtualRouterState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">VirtualRouter</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -780,11 +780,11 @@ Get an existing VirtualRouter resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualRouter<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualRouterState">VirtualRouterState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualRouter">VirtualRouter</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualRouter<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">VirtualRouterState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualRouter</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.VirtualRouter.html">VirtualRouter</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.VirtualRouterState.html">VirtualRouterState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">VirtualRouter</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">VirtualRouterState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1280,18 +1280,6 @@ The following state arguments are supported:
 
 
 <h4 id="virtualrouterspec">Virtual<wbr>Router<wbr>Spec</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualRouterSpec">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualRouterSpec">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualRouterSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualRouterSpecOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualRouterSpecArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualRouterSpec.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1362,18 +1350,6 @@ Currently only one listener is supported per virtual router.
 {{% /choosable %}}
 
 <h4 id="virtualrouterspeclistener">Virtual<wbr>Router<wbr>Spec<wbr>Listener</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualRouterSpecListener">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualRouterSpecListener">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualRouterSpecListenerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualRouterSpecListenerOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualRouterSpecListenerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualRouterSpecListener.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1440,18 +1416,6 @@ Currently only one listener is supported per virtual router.
 {{% /choosable %}}
 
 <h4 id="virtualrouterspeclistenerportmapping">Virtual<wbr>Router<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualRouterSpecListenerPortMapping">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualRouterSpecListenerPortMapping">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualRouterSpecListenerPortMappingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualRouterSpecListenerPortMappingOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualRouterSpecListenerPortMappingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualRouterSpecListenerPortMapping.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

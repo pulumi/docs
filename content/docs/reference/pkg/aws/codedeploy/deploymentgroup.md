@@ -707,19 +707,19 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("exampleDeploy
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codedeploy/#DeploymentGroup">DeploymentGroup</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codedeploy/#DeploymentGroupArgs">DeploymentGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DeploymentGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeploymentGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/codedeploy/#pulumi_aws.codedeploy.DeploymentGroup">DeploymentGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alarm_configuration</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupAlarmConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">app_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_rollback_configuration</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupAutoRollbackConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">autoscaling_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">blue_green_deployment_config</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupBlueGreenDeploymentConfigArgs]</span> = None<span class="p">, </span><span class="nx">deployment_config_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_style</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupDeploymentStyleArgs]</span> = None<span class="p">, </span><span class="nx">ec2_tag_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeploymentGroupEc2TagFilterArgs]]</span> = None<span class="p">, </span><span class="nx">ec2_tag_sets</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeploymentGroupEc2TagSetArgs]]</span> = None<span class="p">, </span><span class="nx">ecs_service</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupEcsServiceArgs]</span> = None<span class="p">, </span><span class="nx">load_balancer_info</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupLoadBalancerInfoArgs]</span> = None<span class="p">, </span><span class="nx">on_premises_instance_tag_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeploymentGroupOnPremisesInstanceTagFilterArgs]]</span> = None<span class="p">, </span><span class="nx">service_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trigger_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeploymentGroupTriggerConfigurationArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DeploymentGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alarm_configuration</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupAlarmConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">app_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_rollback_configuration</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupAutoRollbackConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">autoscaling_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">blue_green_deployment_config</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupBlueGreenDeploymentConfigArgs]</span> = None<span class="p">, </span><span class="nx">deployment_config_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_style</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupDeploymentStyleArgs]</span> = None<span class="p">, </span><span class="nx">ec2_tag_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeploymentGroupEc2TagFilterArgs]]</span> = None<span class="p">, </span><span class="nx">ec2_tag_sets</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeploymentGroupEc2TagSetArgs]]</span> = None<span class="p">, </span><span class="nx">ecs_service</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupEcsServiceArgs]</span> = None<span class="p">, </span><span class="nx">load_balancer_info</span><span class="p">:</span> <span class="nx">Optional[DeploymentGroupLoadBalancerInfoArgs]</span> = None<span class="p">, </span><span class="nx">on_premises_instance_tag_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeploymentGroupOnPremisesInstanceTagFilterArgs]]</span> = None<span class="p">, </span><span class="nx">service_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trigger_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeploymentGroupTriggerConfigurationArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroup">NewDeploymentGroup</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupArgs">DeploymentGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroup">DeploymentGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDeploymentGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DeploymentGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DeploymentGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.DeploymentGroup.html">DeploymentGroup</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.DeploymentGroupArgs.html">DeploymentGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DeploymentGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DeploymentGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -740,7 +740,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("exampleDeploy
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codedeploy/#DeploymentGroupArgs">DeploymentGroupArgs</a></span>
+        <span class="property-type"><a href="#inputs">DeploymentGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -809,7 +809,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("exampleDeploy
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupArgs">DeploymentGroupArgs</a></span>
+        <span class="property-type"><a href="#inputs">DeploymentGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -848,7 +848,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("exampleDeploy
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.DeploymentGroupArgs.html">DeploymentGroupArgs</a></span>
+        <span class="property-type"><a href="#inputs">DeploymentGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1578,7 +1578,7 @@ Get an existing DeploymentGroup resource's state with the given name, ID, and op
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codedeploy/#DeploymentGroupState">DeploymentGroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codedeploy/#DeploymentGroup">DeploymentGroup</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DeploymentGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">DeploymentGroup</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1587,11 +1587,11 @@ Get an existing DeploymentGroup resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDeploymentGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupState">DeploymentGroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroup">DeploymentGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDeploymentGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DeploymentGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DeploymentGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.DeploymentGroup.html">DeploymentGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.DeploymentGroupState.html">DeploymentGroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">DeploymentGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DeploymentGroupState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2327,18 +2327,6 @@ The following state arguments are supported:
 
 
 <h4 id="deploymentgroupalarmconfiguration">Deployment<wbr>Group<wbr>Alarm<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DeploymentGroupAlarmConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentGroupAlarmConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupAlarmConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupAlarmConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Inputs.DeploymentGroupAlarmConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupAlarmConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2493,18 +2481,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="deploymentgroupautorollbackconfiguration">Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DeploymentGroupAutoRollbackConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentGroupAutoRollbackConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupAutoRollbackConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupAutoRollbackConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Inputs.DeploymentGroupAutoRollbackConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupAutoRollbackConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2611,18 +2587,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="deploymentgroupbluegreendeploymentconfig">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DeploymentGroupBlueGreenDeploymentConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentGroupBlueGreenDeploymentConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupBlueGreenDeploymentConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupBlueGreenDeploymentConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Inputs.DeploymentGroupBlueGreenDeploymentConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupBlueGreenDeploymentConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2769,18 +2733,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="deploymentgroupbluegreendeploymentconfigdeploymentreadyoption">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Deployment<wbr>Ready<wbr>Option</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Inputs.DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2895,18 +2847,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="deploymentgroupbluegreendeploymentconfiggreenfleetprovisioningoption">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Green<wbr>Fleet<wbr>Provisioning<wbr>Option</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOption">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOption">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Inputs.DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOption.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2981,18 +2921,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="deploymentgroupbluegreendeploymentconfigterminateblueinstancesondeploymentsuccess">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccess">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccess">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Inputs.DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccess.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3107,18 +3035,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="deploymentgroupdeploymentstyle">Deployment<wbr>Group<wbr>Deployment<wbr>Style</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DeploymentGroupDeploymentStyle">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentGroupDeploymentStyle">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupDeploymentStyleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupDeploymentStyleOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Inputs.DeploymentGroupDeploymentStyleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupDeploymentStyle.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3225,18 +3141,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="deploymentgroupec2tagfilter">Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DeploymentGroupEc2TagFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentGroupEc2TagFilter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupEc2TagFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupEc2TagFilterOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Inputs.DeploymentGroupEc2TagFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupEc2TagFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3383,18 +3287,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="deploymentgroupec2tagset">Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DeploymentGroupEc2TagSet">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentGroupEc2TagSet">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupEc2TagSetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupEc2TagSetOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Inputs.DeploymentGroupEc2TagSetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupEc2TagSet.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3461,18 +3353,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="deploymentgroupec2tagsetec2tagfilter">Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Ec2Tag<wbr>Filter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DeploymentGroupEc2TagSetEc2TagFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentGroupEc2TagSetEc2TagFilter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupEc2TagSetEc2TagFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupEc2TagSetEc2TagFilterOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Inputs.DeploymentGroupEc2TagSetEc2TagFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupEc2TagSetEc2TagFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3619,18 +3499,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="deploymentgroupecsservice">Deployment<wbr>Group<wbr>Ecs<wbr>Service</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DeploymentGroupEcsService">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentGroupEcsService">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupEcsServiceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupEcsServiceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Inputs.DeploymentGroupEcsServiceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupEcsService.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3737,18 +3605,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="deploymentgrouploadbalancerinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DeploymentGroupLoadBalancerInfo">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentGroupLoadBalancerInfo">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Inputs.DeploymentGroupLoadBalancerInfoArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupLoadBalancerInfo.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3895,18 +3751,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="deploymentgrouploadbalancerinfoelbinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Elb<wbr>Info</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DeploymentGroupLoadBalancerInfoElbInfo">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentGroupLoadBalancerInfoElbInfo">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoElbInfoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoElbInfoOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Inputs.DeploymentGroupLoadBalancerInfoElbInfoArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupLoadBalancerInfoElbInfo.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3973,18 +3817,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="deploymentgrouploadbalancerinfotargetgroupinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Info</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DeploymentGroupLoadBalancerInfoTargetGroupInfo">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentGroupLoadBalancerInfoTargetGroupInfo">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoTargetGroupInfoOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Inputs.DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupLoadBalancerInfoTargetGroupInfo.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4051,18 +3883,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="deploymentgrouploadbalancerinfotargetgrouppairinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DeploymentGroupLoadBalancerInfoTargetGroupPairInfo">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentGroupLoadBalancerInfoTargetGroupPairInfo">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoTargetGroupPairInfoOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Inputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfo.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4209,18 +4029,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="deploymentgrouploadbalancerinfotargetgrouppairinfoprodtrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Prod<wbr>Traffic<wbr>Route</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRoute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRoute">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Inputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRoute.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4287,18 +4095,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="deploymentgrouploadbalancerinfotargetgrouppairinfotargetgroup">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Target<wbr>Group</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Inputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4365,18 +4161,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="deploymentgrouploadbalancerinfotargetgrouppairinfotesttrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Test<wbr>Traffic<wbr>Route</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRoute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRoute">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Inputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRoute.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4443,18 +4227,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="deploymentgrouponpremisesinstancetagfilter">Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DeploymentGroupOnPremisesInstanceTagFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentGroupOnPremisesInstanceTagFilter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupOnPremisesInstanceTagFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupOnPremisesInstanceTagFilterOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Inputs.DeploymentGroupOnPremisesInstanceTagFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupOnPremisesInstanceTagFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4601,18 +4373,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="deploymentgrouptriggerconfiguration">Deployment<wbr>Group<wbr>Trigger<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DeploymentGroupTriggerConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentGroupTriggerConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupTriggerConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codedeploy?tab=doc#DeploymentGroupTriggerConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Inputs.DeploymentGroupTriggerConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Outputs.DeploymentGroupTriggerConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

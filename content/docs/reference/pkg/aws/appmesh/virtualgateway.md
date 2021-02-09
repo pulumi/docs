@@ -311,19 +311,19 @@ const example = new aws.appmesh.VirtualGateway("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#VirtualGateway">VirtualGateway</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#VirtualGatewayArgs">VirtualGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualGateway</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/appmesh/#pulumi_aws.appmesh.VirtualGateway">VirtualGateway</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">mesh_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mesh_owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[VirtualGatewaySpecArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualGateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">mesh_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mesh_owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[VirtualGatewaySpecArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGateway">NewVirtualGateway</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewayArgs">VirtualGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGateway">VirtualGateway</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualGateway</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualGateway</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.VirtualGateway.html">VirtualGateway</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.VirtualGatewayArgs.html">VirtualGatewayArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualGateway</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VirtualGatewayArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -344,7 +344,7 @@ const example = new aws.appmesh.VirtualGateway("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#VirtualGatewayArgs">VirtualGatewayArgs</a></span>
+        <span class="property-type"><a href="#inputs">VirtualGatewayArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -413,7 +413,7 @@ const example = new aws.appmesh.VirtualGateway("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewayArgs">VirtualGatewayArgs</a></span>
+        <span class="property-type"><a href="#inputs">VirtualGatewayArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -452,7 +452,7 @@ const example = new aws.appmesh.VirtualGateway("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.VirtualGatewayArgs.html">VirtualGatewayArgs</a></span>
+        <span class="property-type"><a href="#inputs">VirtualGatewayArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -942,7 +942,7 @@ Get an existing VirtualGateway resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#VirtualGatewayState">VirtualGatewayState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#VirtualGateway">VirtualGateway</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">VirtualGatewayState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">VirtualGateway</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -951,11 +951,11 @@ Get an existing VirtualGateway resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualGateway<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewayState">VirtualGatewayState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGateway">VirtualGateway</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualGateway<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">VirtualGatewayState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualGateway</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.VirtualGateway.html">VirtualGateway</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.VirtualGatewayState.html">VirtualGatewayState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">VirtualGateway</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">VirtualGatewayState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1451,18 +1451,6 @@ The following state arguments are supported:
 
 
 <h4 id="virtualgatewayspec">Virtual<wbr>Gateway<wbr>Spec</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualGatewaySpec">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualGatewaySpec">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualGatewaySpecArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualGatewaySpec.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1609,18 +1597,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspecbackenddefaults">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualGatewaySpecBackendDefaults">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualGatewaySpecBackendDefaults">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecBackendDefaultsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecBackendDefaultsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualGatewaySpecBackendDefaultsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualGatewaySpecBackendDefaults.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1687,18 +1663,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspecbackenddefaultsclientpolicy">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualGatewaySpecBackendDefaultsClientPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualGatewaySpecBackendDefaultsClientPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecBackendDefaultsClientPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecBackendDefaultsClientPolicyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualGatewaySpecBackendDefaultsClientPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualGatewaySpecBackendDefaultsClientPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1765,18 +1729,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspecbackenddefaultsclientpolicytls">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualGatewaySpecBackendDefaultsClientPolicyTls">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualGatewaySpecBackendDefaultsClientPolicyTls">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecBackendDefaultsClientPolicyTlsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualGatewaySpecBackendDefaultsClientPolicyTls.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1919,18 +1871,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspecbackenddefaultsclientpolicytlsvalidation">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1997,18 +1937,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrust">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrust">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrust">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrust.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2115,18 +2043,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustacm">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcm">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcm">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcmOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcmArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcm.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2193,18 +2109,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustfile">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFile">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFile">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFile.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2271,18 +2175,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspeclistener">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualGatewaySpecListener">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualGatewaySpecListener">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecListenerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecListenerOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualGatewaySpecListenerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualGatewaySpecListener.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2469,18 +2361,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspeclistenerconnectionpool">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualGatewaySpecListenerConnectionPool">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualGatewaySpecListenerConnectionPool">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecListenerConnectionPoolArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecListenerConnectionPoolOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualGatewaySpecListenerConnectionPoolArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualGatewaySpecListenerConnectionPool.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2627,18 +2507,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspeclistenerconnectionpoolgrpc">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Grpc</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualGatewaySpecListenerConnectionPoolGrpc">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualGatewaySpecListenerConnectionPoolGrpc">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecListenerConnectionPoolGrpcArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecListenerConnectionPoolGrpcOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualGatewaySpecListenerConnectionPoolGrpcArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualGatewaySpecListenerConnectionPoolGrpc.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2705,18 +2573,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspeclistenerconnectionpoolhttp">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualGatewaySpecListenerConnectionPoolHttp">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualGatewaySpecListenerConnectionPoolHttp">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecListenerConnectionPoolHttpArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecListenerConnectionPoolHttpOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualGatewaySpecListenerConnectionPoolHttpArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualGatewaySpecListenerConnectionPoolHttp.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2823,18 +2679,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspeclistenerconnectionpoolhttp2">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http2</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualGatewaySpecListenerConnectionPoolHttp2">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualGatewaySpecListenerConnectionPoolHttp2">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecListenerConnectionPoolHttp2Args">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecListenerConnectionPoolHttp2Output">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualGatewaySpecListenerConnectionPoolHttp2Args.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualGatewaySpecListenerConnectionPoolHttp2.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2901,18 +2745,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspeclistenerhealthcheck">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualGatewaySpecListenerHealthCheck">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualGatewaySpecListenerHealthCheck">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecListenerHealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecListenerHealthCheckOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualGatewaySpecListenerHealthCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualGatewaySpecListenerHealthCheck.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3219,18 +3051,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspeclistenerportmapping">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualGatewaySpecListenerPortMapping">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualGatewaySpecListenerPortMapping">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecListenerPortMappingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecListenerPortMappingOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualGatewaySpecListenerPortMappingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualGatewaySpecListenerPortMapping.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3337,18 +3157,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspeclistenertls">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualGatewaySpecListenerTls">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualGatewaySpecListenerTls">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecListenerTlsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecListenerTlsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualGatewaySpecListenerTlsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualGatewaySpecListenerTls.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3455,18 +3263,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspeclistenertlscertificate">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualGatewaySpecListenerTlsCertificate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualGatewaySpecListenerTlsCertificate">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecListenerTlsCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecListenerTlsCertificateOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualGatewaySpecListenerTlsCertificateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualGatewaySpecListenerTlsCertificate.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3573,18 +3369,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspeclistenertlscertificateacm">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Acm</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualGatewaySpecListenerTlsCertificateAcm">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualGatewaySpecListenerTlsCertificateAcm">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecListenerTlsCertificateAcmArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecListenerTlsCertificateAcmOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualGatewaySpecListenerTlsCertificateAcmArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualGatewaySpecListenerTlsCertificateAcm.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3651,18 +3435,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspeclistenertlscertificatefile">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>File</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualGatewaySpecListenerTlsCertificateFile">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualGatewaySpecListenerTlsCertificateFile">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecListenerTlsCertificateFileArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecListenerTlsCertificateFileOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualGatewaySpecListenerTlsCertificateFileArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualGatewaySpecListenerTlsCertificateFile.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3769,18 +3541,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspeclogging">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualGatewaySpecLogging">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualGatewaySpecLogging">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecLoggingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecLoggingOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualGatewaySpecLoggingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualGatewaySpecLogging.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3847,18 +3607,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspecloggingaccesslog">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualGatewaySpecLoggingAccessLog">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualGatewaySpecLoggingAccessLog">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecLoggingAccessLogArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecLoggingAccessLogOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualGatewaySpecLoggingAccessLogArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualGatewaySpecLoggingAccessLog.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3925,18 +3673,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspecloggingaccesslogfile">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualGatewaySpecLoggingAccessLogFile">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualGatewaySpecLoggingAccessLogFile">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecLoggingAccessLogFileArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecLoggingAccessLogFileOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualGatewaySpecLoggingAccessLogFileArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualGatewaySpecLoggingAccessLogFile.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

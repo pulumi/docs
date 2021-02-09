@@ -20,19 +20,19 @@ DeploymentList is a list of Deployments.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/apps/v1/#DeploymentList">DeploymentList</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#DeploymentList">DeploymentList</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DeploymentList</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeploymentList</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/apps/v1/#pulumi_kubernetes.apps/v1.DeploymentList">DeploymentList</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">items</span><span class="p">:</span> <span class="nx">Optional[Sequence[_apps_v1.DeploymentArgs]]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[_meta_v1.ListMetaArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DeploymentList</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">items</span><span class="p">:</span> <span class="nx">Optional[Sequence[_apps_v1.DeploymentArgs]]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[_meta_v1.ListMetaArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#DeploymentList">NewDeploymentList</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#DeploymentListArgs">DeploymentListArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#DeploymentList">DeploymentList</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDeploymentList</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DeploymentListArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DeploymentList</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Apps.V1.DeploymentList.html">DeploymentList</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Types.Inputs.Apps.V1.DeploymentListArgs.html">DeploymentListArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DeploymentList</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DeploymentListArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -53,7 +53,7 @@ DeploymentList is a list of Deployments.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#DeploymentList">DeploymentList</a></span>
+        <span class="property-type"><a href="#inputs">DeploymentList</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -122,7 +122,7 @@ DeploymentList is a list of Deployments.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#DeploymentListArgs">DeploymentListArgs</a></span>
+        <span class="property-type"><a href="#inputs">DeploymentListArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -161,7 +161,7 @@ DeploymentList is a list of Deployments.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Types.Inputs.Apps.V1.DeploymentListArgs.html">DeploymentListArgs</a></span>
+        <span class="property-type"><a href="#inputs">DeploymentListArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -366,14 +366,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="awselasticblockstorevolumesource">AWSElastic<wbr>Block<wbr>Store<wbr>Volume<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#AWSElasticBlockStoreVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#AWSElasticBlockStoreVolumeSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#AWSElasticBlockStoreVolumeSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#AWSElasticBlockStoreVolumeSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -544,14 +536,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="affinity">Affinity</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Affinity">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Affinity">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#AffinityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#AffinityOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -686,14 +670,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="azurediskvolumesource">Azure<wbr>Disk<wbr>Volume<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#AzureDiskVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#AzureDiskVolumeSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#AzureDiskVolumeSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#AzureDiskVolumeSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -936,14 +912,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="azurefilevolumesource">Azure<wbr>File<wbr>Volume<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#AzureFileVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#AzureFileVolumeSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#AzureFileVolumeSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#AzureFileVolumeSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1078,14 +1046,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="csivolumesource">CSIVolume<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#CSIVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CSIVolumeSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#CSIVolumeSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#CSIVolumeSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1292,14 +1252,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="capabilities">Capabilities</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Capabilities">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Capabilities">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#CapabilitiesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#CapabilitiesOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1398,14 +1350,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="cephfsvolumesource">Ceph<wbr>FSVolume<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#CephFSVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CephFSVolumeSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#CephFSVolumeSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#CephFSVolumeSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1648,14 +1592,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="cindervolumesource">Cinder<wbr>Volume<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#CinderVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CinderVolumeSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#CinderVolumeSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#CinderVolumeSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1826,14 +1762,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="configmapenvsource">Config<wbr>Map<wbr>Env<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ConfigMapEnvSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ConfigMapEnvSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#ConfigMapEnvSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#ConfigMapEnvSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1932,14 +1860,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="configmapkeyselector">Config<wbr>Map<wbr>Key<wbr>Selector</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ConfigMapKeySelector">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ConfigMapKeySelector">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#ConfigMapKeySelectorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#ConfigMapKeySelectorOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2074,14 +1994,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="configmapprojection">Config<wbr>Map<wbr>Projection</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ConfigMapProjection">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ConfigMapProjection">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#ConfigMapProjectionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#ConfigMapProjectionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2216,14 +2128,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="configmapvolumesource">Config<wbr>Map<wbr>Volume<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ConfigMapVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ConfigMapVolumeSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#ConfigMapVolumeSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#ConfigMapVolumeSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2394,14 +2298,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="container">Container</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Container">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Container">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#ContainerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#ContainerOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3220,14 +3116,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="containerport">Container<wbr>Port</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ContainerPort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ContainerPort">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#ContainerPortArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#ContainerPortOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3434,14 +3322,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="deployment">Deployment</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Deployment">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Deployment">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#DeploymentTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#DeploymentTypeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3576,14 +3456,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="deploymentcondition">Deployment<wbr>Condition</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#DeploymentCondition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#DeploymentCondition">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#DeploymentConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#DeploymentConditionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3826,14 +3698,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="deploymentspec">Deployment<wbr>Spec</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#DeploymentSpec">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#DeploymentSpec">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#DeploymentSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#DeploymentSpecOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4148,14 +4012,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="deploymentstatus">Deployment<wbr>Status</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#DeploymentStatus">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#DeploymentStatus">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#DeploymentStatusArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#DeploymentStatusOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4470,14 +4326,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="deploymentstrategy">Deployment<wbr>Strategy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#DeploymentStrategy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#DeploymentStrategy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#DeploymentStrategyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#DeploymentStrategyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4576,14 +4424,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="downwardapiprojection">Downward<wbr>APIProjection</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#DownwardAPIProjection">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#DownwardAPIProjection">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#DownwardAPIProjectionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#DownwardAPIProjectionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4646,14 +4486,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="downwardapivolumefile">Downward<wbr>APIVolume<wbr>File</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#DownwardAPIVolumeFile">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#DownwardAPIVolumeFile">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#DownwardAPIVolumeFileArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#DownwardAPIVolumeFileOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4824,14 +4656,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="downwardapivolumesource">Downward<wbr>APIVolume<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#DownwardAPIVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#DownwardAPIVolumeSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#DownwardAPIVolumeSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#DownwardAPIVolumeSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4930,14 +4754,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="emptydirvolumesource">Empty<wbr>Dir<wbr>Volume<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#EmptyDirVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#EmptyDirVolumeSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#EmptyDirVolumeSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#EmptyDirVolumeSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5036,14 +4852,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="envfromsource">Env<wbr>From<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#EnvFromSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#EnvFromSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#EnvFromSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#EnvFromSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5178,14 +4986,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="envvar">Env<wbr>Var</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#EnvVar">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#EnvVar">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#EnvVarArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#EnvVarOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5320,14 +5120,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="envvarsource">Env<wbr>Var<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#EnvVarSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#EnvVarSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#EnvVarSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#EnvVarSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5498,14 +5290,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="ephemeralcontainer">Ephemeral<wbr>Container</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#EphemeralContainer">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#EphemeralContainer">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#EphemeralContainerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#EphemeralContainerOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6360,14 +6144,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="ephemeralvolumesource">Ephemeral<wbr>Volume<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#EphemeralVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#EphemeralVolumeSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#EphemeralVolumeSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#EphemeralVolumeSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6490,14 +6266,6 @@ Required, must not be nil.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="execaction">Exec<wbr>Action</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ExecAction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ExecAction">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#ExecActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#ExecActionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6560,14 +6328,6 @@ Required, must not be nil.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="fcvolumesource">FCVolume<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#FCVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#FCVolumeSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#FCVolumeSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#FCVolumeSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6774,14 +6534,6 @@ Required, must not be nil.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="flexvolumesource">Flex<wbr>Volume<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#FlexVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#FlexVolumeSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#FlexVolumeSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#FlexVolumeSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6988,14 +6740,6 @@ Required, must not be nil.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="flockervolumesource">Flocker<wbr>Volume<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#FlockerVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#FlockerVolumeSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#FlockerVolumeSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#FlockerVolumeSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7094,14 +6838,6 @@ Required, must not be nil.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="gcepersistentdiskvolumesource">GCEPersistent<wbr>Disk<wbr>Volume<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#GCEPersistentDiskVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#GCEPersistentDiskVolumeSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#GCEPersistentDiskVolumeSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#GCEPersistentDiskVolumeSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7272,14 +7008,6 @@ Required, must not be nil.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="gitrepovolumesource">Git<wbr>Repo<wbr>Volume<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#GitRepoVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#GitRepoVolumeSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#GitRepoVolumeSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#GitRepoVolumeSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7414,14 +7142,6 @@ Required, must not be nil.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="glusterfsvolumesource">Glusterfs<wbr>Volume<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#GlusterfsVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#GlusterfsVolumeSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#GlusterfsVolumeSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#GlusterfsVolumeSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7556,14 +7276,6 @@ Required, must not be nil.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="httpgetaction">HTTPGet<wbr>Action</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#HTTPGetAction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#HTTPGetAction">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#HTTPGetActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#HTTPGetActionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7770,14 +7482,6 @@ Required, must not be nil.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="httpheader">HTTPHeader</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#HTTPHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#HTTPHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#HTTPHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#HTTPHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7876,14 +7580,6 @@ Required, must not be nil.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="handler">Handler</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Handler">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Handler">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#HandlerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#HandlerOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8018,14 +7714,6 @@ Required, must not be nil.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="hostalias">Host<wbr>Alias</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#HostAlias">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#HostAlias">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#HostAliasArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#HostAliasOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8124,14 +7812,6 @@ Required, must not be nil.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="hostpathvolumesource">Host<wbr>Path<wbr>Volume<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#HostPathVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#HostPathVolumeSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#HostPathVolumeSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#HostPathVolumeSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8230,14 +7910,6 @@ Required, must not be nil.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="iscsivolumesource">ISCSIVolume<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ISCSIVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ISCSIVolumeSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#ISCSIVolumeSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#ISCSIVolumeSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8660,14 +8332,6 @@ Required, must not be nil.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="keytopath">Key<wbr>To<wbr>Path</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#KeyToPath">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#KeyToPath">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#KeyToPathArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#KeyToPathOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8802,14 +8466,6 @@ Required, must not be nil.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="labelselector">Label<wbr>Selector</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#LabelSelector">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#LabelSelector">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#LabelSelectorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#LabelSelectorOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8908,14 +8564,6 @@ Required, must not be nil.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="labelselectorrequirement">Label<wbr>Selector<wbr>Requirement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#LabelSelectorRequirement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#LabelSelectorRequirement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#LabelSelectorRequirementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#LabelSelectorRequirementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -9050,14 +8698,6 @@ Required, must not be nil.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="lifecycle">Lifecycle</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Lifecycle">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Lifecycle">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#LifecycleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#LifecycleOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -9156,14 +8796,6 @@ Required, must not be nil.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="listmeta">List<wbr>Meta</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ListMeta">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#ListMetaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#ListMetaOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -9342,14 +8974,6 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 {{% /choosable %}}
 
 <h4 id="localobjectreference">Local<wbr>Object<wbr>Reference</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#LocalObjectReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#LocalObjectReference">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#LocalObjectReferenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#LocalObjectReferenceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -9412,14 +9036,6 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 {{% /choosable %}}
 
 <h4 id="managedfieldsentry">Managed<wbr>Fields<wbr>Entry</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ManagedFieldsEntry">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ManagedFieldsEntry">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#ManagedFieldsEntryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#ManagedFieldsEntryOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -9662,14 +9278,6 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 {{% /choosable %}}
 
 <h4 id="nfsvolumesource">NFSVolume<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#NFSVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#NFSVolumeSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#NFSVolumeSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#NFSVolumeSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -9804,14 +9412,6 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 {{% /choosable %}}
 
 <h4 id="nodeaffinity">Node<wbr>Affinity</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#NodeAffinity">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#NodeAffinity">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#NodeAffinityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#NodeAffinityOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -9910,14 +9510,6 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 {{% /choosable %}}
 
 <h4 id="nodeselector">Node<wbr>Selector</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#NodeSelector">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#NodeSelector">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#NodeSelectorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#NodeSelectorOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -9980,14 +9572,6 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 {{% /choosable %}}
 
 <h4 id="nodeselectorrequirement">Node<wbr>Selector<wbr>Requirement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#NodeSelectorRequirement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#NodeSelectorRequirement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#NodeSelectorRequirementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#NodeSelectorRequirementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -10122,14 +9706,6 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 {{% /choosable %}}
 
 <h4 id="nodeselectorterm">Node<wbr>Selector<wbr>Term</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#NodeSelectorTerm">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#NodeSelectorTerm">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#NodeSelectorTermArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#NodeSelectorTermOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -10228,14 +9804,6 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 {{% /choosable %}}
 
 <h4 id="objectfieldselector">Object<wbr>Field<wbr>Selector</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectFieldSelector">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectFieldSelector">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#ObjectFieldSelectorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#ObjectFieldSelectorOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -10334,14 +9902,6 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 {{% /choosable %}}
 
 <h4 id="objectmeta">Object<wbr>Meta</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectMeta">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#ObjectMetaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#ObjectMetaOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -11008,14 +10568,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% /choosable %}}
 
 <h4 id="ownerreference">Owner<wbr>Reference</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#OwnerReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#OwnerReference">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#OwnerReferenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#OwnerReferenceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -11258,14 +10810,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% /choosable %}}
 
 <h4 id="persistentvolumeclaimspec">Persistent<wbr>Volume<wbr>Claim<wbr>Spec</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PersistentVolumeClaimSpec">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PersistentVolumeClaimSpec">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#PersistentVolumeClaimSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#PersistentVolumeClaimSpecOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -11544,14 +11088,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% /choosable %}}
 
 <h4 id="persistentvolumeclaimtemplate">Persistent<wbr>Volume<wbr>Claim<wbr>Template</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PersistentVolumeClaimTemplate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PersistentVolumeClaimTemplate">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#PersistentVolumeClaimTemplateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#PersistentVolumeClaimTemplateOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -11650,14 +11186,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% /choosable %}}
 
 <h4 id="persistentvolumeclaimvolumesource">Persistent<wbr>Volume<wbr>Claim<wbr>Volume<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PersistentVolumeClaimVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PersistentVolumeClaimVolumeSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#PersistentVolumeClaimVolumeSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#PersistentVolumeClaimVolumeSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -11756,14 +11284,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% /choosable %}}
 
 <h4 id="photonpersistentdiskvolumesource">Photon<wbr>Persistent<wbr>Disk<wbr>Volume<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PhotonPersistentDiskVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PhotonPersistentDiskVolumeSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#PhotonPersistentDiskVolumeSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#PhotonPersistentDiskVolumeSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -11862,14 +11382,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% /choosable %}}
 
 <h4 id="podaffinity">Pod<wbr>Affinity</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PodAffinity">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodAffinity">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#PodAffinityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#PodAffinityOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -11968,14 +11480,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% /choosable %}}
 
 <h4 id="podaffinityterm">Pod<wbr>Affinity<wbr>Term</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PodAffinityTerm">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodAffinityTerm">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#PodAffinityTermArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#PodAffinityTermOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -12110,14 +11614,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% /choosable %}}
 
 <h4 id="podantiaffinity">Pod<wbr>Anti<wbr>Affinity</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PodAntiAffinity">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodAntiAffinity">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#PodAntiAffinityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#PodAntiAffinityOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -12216,14 +11712,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% /choosable %}}
 
 <h4 id="poddnsconfig">Pod<wbr>DNSConfig</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PodDNSConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodDNSConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#PodDNSConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#PodDNSConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -12358,14 +11846,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% /choosable %}}
 
 <h4 id="poddnsconfigoption">Pod<wbr>DNSConfig<wbr>Option</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PodDNSConfigOption">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodDNSConfigOption">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#PodDNSConfigOptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#PodDNSConfigOptionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -12464,14 +11944,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% /choosable %}}
 
 <h4 id="podreadinessgate">Pod<wbr>Readiness<wbr>Gate</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PodReadinessGate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodReadinessGate">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#PodReadinessGateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#PodReadinessGateOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -12534,14 +12006,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% /choosable %}}
 
 <h4 id="podsecuritycontext">Pod<wbr>Security<wbr>Context</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PodSecurityContext">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodSecurityContext">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#PodSecurityContextArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#PodSecurityContextOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -12944,14 +12408,6 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 {{% /choosable %}}
 
 <h4 id="podspec">Pod<wbr>Spec</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PodSpec">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodSpec">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#PodSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#PodSpecOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -14238,14 +13694,6 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 {{% /choosable %}}
 
 <h4 id="podtemplatespec">Pod<wbr>Template<wbr>Spec</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PodTemplateSpec">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodTemplateSpec">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#PodTemplateSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#PodTemplateSpecOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -14344,14 +13792,6 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 {{% /choosable %}}
 
 <h4 id="portworxvolumesource">Portworx<wbr>Volume<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PortworxVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PortworxVolumeSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#PortworxVolumeSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#PortworxVolumeSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -14486,14 +13926,6 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 {{% /choosable %}}
 
 <h4 id="preferredschedulingterm">Preferred<wbr>Scheduling<wbr>Term</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PreferredSchedulingTerm">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PreferredSchedulingTerm">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#PreferredSchedulingTermArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#PreferredSchedulingTermOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -14592,14 +14024,6 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 {{% /choosable %}}
 
 <h4 id="probe">Probe</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Probe">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Probe">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#ProbeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#ProbeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -14914,14 +14338,6 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 {{% /choosable %}}
 
 <h4 id="projectedvolumesource">Projected<wbr>Volume<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ProjectedVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ProjectedVolumeSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#ProjectedVolumeSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#ProjectedVolumeSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -15020,14 +14436,6 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 {{% /choosable %}}
 
 <h4 id="quobytevolumesource">Quobyte<wbr>Volume<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#QuobyteVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#QuobyteVolumeSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#QuobyteVolumeSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#QuobyteVolumeSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -15270,14 +14678,6 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 {{% /choosable %}}
 
 <h4 id="rbdvolumesource">RBDVolume<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#RBDVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#RBDVolumeSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#RBDVolumeSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#RBDVolumeSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -15592,14 +14992,6 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 {{% /choosable %}}
 
 <h4 id="resourcefieldselector">Resource<wbr>Field<wbr>Selector</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ResourceFieldSelector">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ResourceFieldSelector">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#ResourceFieldSelectorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#ResourceFieldSelectorOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -15734,14 +15126,6 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 {{% /choosable %}}
 
 <h4 id="resourcerequirements">Resource<wbr>Requirements</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ResourceRequirements">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ResourceRequirements">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#ResourceRequirementsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#ResourceRequirementsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -15840,14 +15224,6 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 {{% /choosable %}}
 
 <h4 id="rollingupdatedeployment">Rolling<wbr>Update<wbr>Deployment</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#RollingUpdateDeployment">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#RollingUpdateDeployment">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#RollingUpdateDeploymentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#RollingUpdateDeploymentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -15946,14 +15322,6 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 {{% /choosable %}}
 
 <h4 id="selinuxoptions">SELinux<wbr>Options</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#SELinuxOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#SELinuxOptions">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#SELinuxOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#SELinuxOptionsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -16124,14 +15492,6 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 {{% /choosable %}}
 
 <h4 id="scaleiovolumesource">Scale<wbr>IOVolume<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ScaleIOVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ScaleIOVolumeSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#ScaleIOVolumeSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#ScaleIOVolumeSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -16518,14 +15878,6 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 {{% /choosable %}}
 
 <h4 id="seccompprofile">Seccomp<wbr>Profile</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#SeccompProfile">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#SeccompProfile">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#SeccompProfileArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#SeccompProfileOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -16632,14 +15984,6 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 {{% /choosable %}}
 
 <h4 id="secretenvsource">Secret<wbr>Env<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#SecretEnvSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#SecretEnvSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#SecretEnvSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#SecretEnvSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -16738,14 +16082,6 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 {{% /choosable %}}
 
 <h4 id="secretkeyselector">Secret<wbr>Key<wbr>Selector</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#SecretKeySelector">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#SecretKeySelector">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#SecretKeySelectorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#SecretKeySelectorOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -16880,14 +16216,6 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 {{% /choosable %}}
 
 <h4 id="secretprojection">Secret<wbr>Projection</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#SecretProjection">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#SecretProjection">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#SecretProjectionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#SecretProjectionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -17022,14 +16350,6 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 {{% /choosable %}}
 
 <h4 id="secretvolumesource">Secret<wbr>Volume<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#SecretVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#SecretVolumeSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#SecretVolumeSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#SecretVolumeSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -17200,14 +16520,6 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 {{% /choosable %}}
 
 <h4 id="securitycontext">Security<wbr>Context</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#SecurityContext">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#SecurityContext">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#SecurityContextArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#SecurityContextOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -17630,14 +16942,6 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 {{% /choosable %}}
 
 <h4 id="serviceaccounttokenprojection">Service<wbr>Account<wbr>Token<wbr>Projection</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ServiceAccountTokenProjection">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ServiceAccountTokenProjection">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#ServiceAccountTokenProjectionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#ServiceAccountTokenProjectionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -17772,14 +17076,6 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 {{% /choosable %}}
 
 <h4 id="storageosvolumesource">Storage<wbr>OSVolume<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#StorageOSVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#StorageOSVolumeSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#StorageOSVolumeSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#StorageOSVolumeSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -17986,14 +17282,6 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 {{% /choosable %}}
 
 <h4 id="sysctl">Sysctl</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Sysctl">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Sysctl">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#SysctlArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#SysctlOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -18092,14 +17380,6 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 {{% /choosable %}}
 
 <h4 id="tcpsocketaction">TCPSocket<wbr>Action</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#TCPSocketAction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#TCPSocketAction">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#TCPSocketActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#TCPSocketActionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -18198,14 +17478,6 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 {{% /choosable %}}
 
 <h4 id="toleration">Toleration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Toleration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Toleration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#TolerationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#TolerationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -18412,14 +17684,6 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 {{% /choosable %}}
 
 <h4 id="topologyspreadconstraint">Topology<wbr>Spread<wbr>Constraint</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#TopologySpreadConstraint">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#TopologySpreadConstraint">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#TopologySpreadConstraintArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#TopologySpreadConstraintOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -18602,14 +17866,6 @@ A constraint is considered "Unsatisfiable" for an incoming pod if and only if ev
 {{% /choosable %}}
 
 <h4 id="typedlocalobjectreference">Typed<wbr>Local<wbr>Object<wbr>Reference</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#TypedLocalObjectReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#TypedLocalObjectReference">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#TypedLocalObjectReferenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#TypedLocalObjectReferenceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -18744,14 +18000,6 @@ A constraint is considered "Unsatisfiable" for an incoming pod if and only if ev
 {{% /choosable %}}
 
 <h4 id="volume">Volume</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Volume">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Volume">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#VolumeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#VolumeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -19910,14 +19158,6 @@ A pod can use both types of ephemeral volumes and persistent volumes at the same
 {{% /choosable %}}
 
 <h4 id="volumedevice">Volume<wbr>Device</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#VolumeDevice">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#VolumeDevice">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#VolumeDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#VolumeDeviceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -20016,14 +19256,6 @@ A pod can use both types of ephemeral volumes and persistent volumes at the same
 {{% /choosable %}}
 
 <h4 id="volumemount">Volume<wbr>Mount</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#VolumeMount">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#VolumeMount">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#VolumeMountArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#VolumeMountOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -20266,14 +19498,6 @@ A pod can use both types of ephemeral volumes and persistent volumes at the same
 {{% /choosable %}}
 
 <h4 id="volumeprojection">Volume<wbr>Projection</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#VolumeProjection">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#VolumeProjection">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#VolumeProjectionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#VolumeProjectionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -20444,14 +19668,6 @@ A pod can use both types of ephemeral volumes and persistent volumes at the same
 {{% /choosable %}}
 
 <h4 id="vspherevirtualdiskvolumesource">Vsphere<wbr>Virtual<wbr>Disk<wbr>Volume<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#VsphereVirtualDiskVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#VsphereVirtualDiskVolumeSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#VsphereVirtualDiskVolumeSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#VsphereVirtualDiskVolumeSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -20622,14 +19838,6 @@ A pod can use both types of ephemeral volumes and persistent volumes at the same
 {{% /choosable %}}
 
 <h4 id="weightedpodaffinityterm">Weighted<wbr>Pod<wbr>Affinity<wbr>Term</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#WeightedPodAffinityTerm">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#WeightedPodAffinityTerm">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#WeightedPodAffinityTermArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#WeightedPodAffinityTermOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -20728,14 +19936,6 @@ A pod can use both types of ephemeral volumes and persistent volumes at the same
 {{% /choosable %}}
 
 <h4 id="windowssecuritycontextoptions">Windows<wbr>Security<wbr>Context<wbr>Options</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#WindowsSecurityContextOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#WindowsSecurityContextOptions">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#WindowsSecurityContextOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps/v1?tab=doc#WindowsSecurityContextOptionsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

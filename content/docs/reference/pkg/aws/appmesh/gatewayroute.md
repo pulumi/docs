@@ -172,19 +172,19 @@ const example = new aws.appmesh.GatewayRoute("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#GatewayRoute">GatewayRoute</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#GatewayRouteArgs">GatewayRouteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GatewayRoute</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GatewayRouteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/appmesh/#pulumi_aws.appmesh.GatewayRoute">GatewayRoute</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">mesh_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mesh_owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[GatewayRouteSpecArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_gateway_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GatewayRoute</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">mesh_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mesh_owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[GatewayRouteSpecArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_gateway_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRoute">NewGatewayRoute</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRouteArgs">GatewayRouteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRoute">GatewayRoute</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGatewayRoute</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GatewayRouteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GatewayRoute</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.GatewayRoute.html">GatewayRoute</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.GatewayRouteArgs.html">GatewayRouteArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GatewayRoute</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GatewayRouteArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -205,7 +205,7 @@ const example = new aws.appmesh.GatewayRoute("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#GatewayRouteArgs">GatewayRouteArgs</a></span>
+        <span class="property-type"><a href="#inputs">GatewayRouteArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -274,7 +274,7 @@ const example = new aws.appmesh.GatewayRoute("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRouteArgs">GatewayRouteArgs</a></span>
+        <span class="property-type"><a href="#inputs">GatewayRouteArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -313,7 +313,7 @@ const example = new aws.appmesh.GatewayRoute("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.GatewayRouteArgs.html">GatewayRouteArgs</a></span>
+        <span class="property-type"><a href="#inputs">GatewayRouteArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -843,7 +843,7 @@ Get an existing GatewayRoute resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#GatewayRouteState">GatewayRouteState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#GatewayRoute">GatewayRoute</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">GatewayRouteState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">GatewayRoute</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -852,11 +852,11 @@ Get an existing GatewayRoute resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGatewayRoute<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRouteState">GatewayRouteState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRoute">GatewayRoute</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGatewayRoute<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">GatewayRouteState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GatewayRoute</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.GatewayRoute.html">GatewayRoute</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.GatewayRouteState.html">GatewayRouteState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">GatewayRoute</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">GatewayRouteState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1392,18 +1392,6 @@ The following state arguments are supported:
 
 
 <h4 id="gatewayroutespec">Gateway<wbr>Route<wbr>Spec</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GatewayRouteSpec">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GatewayRouteSpec">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRouteSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRouteSpecOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.GatewayRouteSpecArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.GatewayRouteSpec.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1550,18 +1538,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="gatewayroutespecgrpcroute">Gateway<wbr>Route<wbr>Spec<wbr>Grpc<wbr>Route</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GatewayRouteSpecGrpcRoute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GatewayRouteSpecGrpcRoute">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRouteSpecGrpcRouteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRouteSpecGrpcRouteOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.GatewayRouteSpecGrpcRouteArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.GatewayRouteSpecGrpcRoute.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1668,18 +1644,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="gatewayroutespecgrpcrouteaction">Gateway<wbr>Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GatewayRouteSpecGrpcRouteAction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GatewayRouteSpecGrpcRouteAction">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRouteSpecGrpcRouteActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRouteSpecGrpcRouteActionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.GatewayRouteSpecGrpcRouteActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.GatewayRouteSpecGrpcRouteAction.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1746,18 +1710,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="gatewayroutespecgrpcrouteactiontarget">Gateway<wbr>Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action<wbr>Target</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GatewayRouteSpecGrpcRouteActionTarget">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GatewayRouteSpecGrpcRouteActionTarget">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRouteSpecGrpcRouteActionTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRouteSpecGrpcRouteActionTargetOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.GatewayRouteSpecGrpcRouteActionTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.GatewayRouteSpecGrpcRouteActionTarget.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1824,18 +1776,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="gatewayroutespecgrpcrouteactiontargetvirtualservice">Gateway<wbr>Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action<wbr>Target<wbr>Virtual<wbr>Service</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GatewayRouteSpecGrpcRouteActionTargetVirtualService">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GatewayRouteSpecGrpcRouteActionTargetVirtualService">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRouteSpecGrpcRouteActionTargetVirtualServiceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRouteSpecGrpcRouteActionTargetVirtualServiceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.GatewayRouteSpecGrpcRouteActionTargetVirtualServiceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.GatewayRouteSpecGrpcRouteActionTargetVirtualService.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1902,18 +1842,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="gatewayroutespecgrpcroutematch">Gateway<wbr>Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GatewayRouteSpecGrpcRouteMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GatewayRouteSpecGrpcRouteMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRouteSpecGrpcRouteMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRouteSpecGrpcRouteMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.GatewayRouteSpecGrpcRouteMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.GatewayRouteSpecGrpcRouteMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1980,18 +1908,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="gatewayroutespechttp2route">Gateway<wbr>Route<wbr>Spec<wbr>Http2Route</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GatewayRouteSpecHttp2Route">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GatewayRouteSpecHttp2Route">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRouteSpecHttp2RouteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRouteSpecHttp2RouteOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.GatewayRouteSpecHttp2RouteArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.GatewayRouteSpecHttp2Route.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2098,18 +2014,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="gatewayroutespechttp2routeaction">Gateway<wbr>Route<wbr>Spec<wbr>Http2Route<wbr>Action</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GatewayRouteSpecHttp2RouteAction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GatewayRouteSpecHttp2RouteAction">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRouteSpecHttp2RouteActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRouteSpecHttp2RouteActionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.GatewayRouteSpecHttp2RouteActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.GatewayRouteSpecHttp2RouteAction.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2176,18 +2080,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="gatewayroutespechttp2routeactiontarget">Gateway<wbr>Route<wbr>Spec<wbr>Http2Route<wbr>Action<wbr>Target</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GatewayRouteSpecHttp2RouteActionTarget">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GatewayRouteSpecHttp2RouteActionTarget">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRouteSpecHttp2RouteActionTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRouteSpecHttp2RouteActionTargetOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.GatewayRouteSpecHttp2RouteActionTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.GatewayRouteSpecHttp2RouteActionTarget.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2254,18 +2146,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="gatewayroutespechttp2routeactiontargetvirtualservice">Gateway<wbr>Route<wbr>Spec<wbr>Http2Route<wbr>Action<wbr>Target<wbr>Virtual<wbr>Service</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GatewayRouteSpecHttp2RouteActionTargetVirtualService">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GatewayRouteSpecHttp2RouteActionTargetVirtualService">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRouteSpecHttp2RouteActionTargetVirtualServiceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRouteSpecHttp2RouteActionTargetVirtualServiceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.GatewayRouteSpecHttp2RouteActionTargetVirtualServiceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.GatewayRouteSpecHttp2RouteActionTargetVirtualService.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2332,18 +2212,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="gatewayroutespechttp2routematch">Gateway<wbr>Route<wbr>Spec<wbr>Http2Route<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GatewayRouteSpecHttp2RouteMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GatewayRouteSpecHttp2RouteMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRouteSpecHttp2RouteMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRouteSpecHttp2RouteMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.GatewayRouteSpecHttp2RouteMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.GatewayRouteSpecHttp2RouteMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2410,18 +2278,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="gatewayroutespechttproute">Gateway<wbr>Route<wbr>Spec<wbr>Http<wbr>Route</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GatewayRouteSpecHttpRoute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GatewayRouteSpecHttpRoute">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRouteSpecHttpRouteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRouteSpecHttpRouteOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.GatewayRouteSpecHttpRouteArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.GatewayRouteSpecHttpRoute.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2528,18 +2384,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="gatewayroutespechttprouteaction">Gateway<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GatewayRouteSpecHttpRouteAction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GatewayRouteSpecHttpRouteAction">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRouteSpecHttpRouteActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRouteSpecHttpRouteActionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.GatewayRouteSpecHttpRouteActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.GatewayRouteSpecHttpRouteAction.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2606,18 +2450,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="gatewayroutespechttprouteactiontarget">Gateway<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Target</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GatewayRouteSpecHttpRouteActionTarget">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GatewayRouteSpecHttpRouteActionTarget">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRouteSpecHttpRouteActionTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRouteSpecHttpRouteActionTargetOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.GatewayRouteSpecHttpRouteActionTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.GatewayRouteSpecHttpRouteActionTarget.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2684,18 +2516,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="gatewayroutespechttprouteactiontargetvirtualservice">Gateway<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Target<wbr>Virtual<wbr>Service</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GatewayRouteSpecHttpRouteActionTargetVirtualService">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GatewayRouteSpecHttpRouteActionTargetVirtualService">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRouteSpecHttpRouteActionTargetVirtualServiceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRouteSpecHttpRouteActionTargetVirtualServiceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.GatewayRouteSpecHttpRouteActionTargetVirtualServiceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.GatewayRouteSpecHttpRouteActionTargetVirtualService.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2762,18 +2582,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="gatewayroutespechttproutematch">Gateway<wbr>Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GatewayRouteSpecHttpRouteMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GatewayRouteSpecHttpRouteMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRouteSpecHttpRouteMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#GatewayRouteSpecHttpRouteMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.GatewayRouteSpecHttpRouteMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.GatewayRouteSpecHttpRouteMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

@@ -21,7 +21,7 @@ Retrieve information about an EKS Cluster.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCluster<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/eks/#GetClusterArgs">GetClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/eks/#GetClusterResult">GetClusterResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCluster<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetClusterResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -31,7 +31,7 @@ Retrieve information about an EKS Cluster.
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/eks?tab=doc#LookupClusterArgs">LookupClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/eks?tab=doc#LookupClusterResult">LookupClusterResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupClusterResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupCluster` in the Go SDK.
 
@@ -40,7 +40,7 @@ Retrieve information about an EKS Cluster.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCluster </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.GetClusterResult.html">GetClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.GetClusterArgs.html">GetClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -789,16 +789,6 @@ The following output properties are available:
 
 
 <h4 id="getclustercertificateauthority">Get<wbr>Cluster<wbr>Certificate<wbr>Authority</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetClusterCertificateAuthority">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/eks?tab=doc#GetClusterCertificateAuthority">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.Outputs.GetClusterCertificateAuthority.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -867,16 +857,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusteridentity">Get<wbr>Cluster<wbr>Identity</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetClusterIdentity">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/eks?tab=doc#GetClusterIdentity">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.Outputs.GetClusterIdentity.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -945,16 +925,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusteridentityoidc">Get<wbr>Cluster<wbr>Identity<wbr>Oidc</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetClusterIdentityOidc">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/eks?tab=doc#GetClusterIdentityOidc">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.Outputs.GetClusterIdentityOidc.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1023,16 +993,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterkubernetesnetworkconfig">Get<wbr>Cluster<wbr>Kubernetes<wbr>Network<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetClusterKubernetesNetworkConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/eks?tab=doc#GetClusterKubernetesNetworkConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.Outputs.GetClusterKubernetesNetworkConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1101,16 +1061,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclustervpcconfig">Get<wbr>Cluster<wbr>Vpc<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetClusterVpcConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/eks?tab=doc#GetClusterVpcConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.Outputs.GetClusterVpcConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

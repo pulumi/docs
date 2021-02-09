@@ -422,19 +422,19 @@ const example = new aws.wafv2.RuleGroup("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafv2/#RuleGroup">RuleGroup</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafv2/#RuleGroupArgs">RuleGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RuleGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RuleGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/wafv2/#pulumi_aws.wafv2.RuleGroup">RuleGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[RuleGroupRuleArgs]]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">visibility_config</span><span class="p">:</span> <span class="nx">Optional[RuleGroupVisibilityConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RuleGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[RuleGroupRuleArgs]]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">visibility_config</span><span class="p">:</span> <span class="nx">Optional[RuleGroupVisibilityConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroup">NewRuleGroup</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupArgs">RuleGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroup">RuleGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRuleGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RuleGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RuleGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.RuleGroup.html">RuleGroup</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.RuleGroupArgs.html">RuleGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RuleGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RuleGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -455,7 +455,7 @@ const example = new aws.wafv2.RuleGroup("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafv2/#RuleGroupArgs">RuleGroupArgs</a></span>
+        <span class="property-type"><a href="#inputs">RuleGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -524,7 +524,7 @@ const example = new aws.wafv2.RuleGroup("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupArgs">RuleGroupArgs</a></span>
+        <span class="property-type"><a href="#inputs">RuleGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -563,7 +563,7 @@ const example = new aws.wafv2.RuleGroup("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.RuleGroupArgs.html">RuleGroupArgs</a></span>
+        <span class="property-type"><a href="#inputs">RuleGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1049,7 +1049,7 @@ Get an existing RuleGroup resource's state with the given name, ID, and optional
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafv2/#RuleGroupState">RuleGroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafv2/#RuleGroup">RuleGroup</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">RuleGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">RuleGroup</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1058,11 +1058,11 @@ Get an existing RuleGroup resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRuleGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupState">RuleGroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroup">RuleGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRuleGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">RuleGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RuleGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.RuleGroup.html">RuleGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.RuleGroupState.html">RuleGroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">RuleGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">RuleGroupState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1554,18 +1554,6 @@ The following state arguments are supported:
 
 
 <h4 id="rulegrouprule">Rule<wbr>Group<wbr>Rule</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRule">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRule.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1792,18 +1780,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegroupruleaction">Rule<wbr>Group<wbr>Rule<wbr>Action</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleAction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleAction">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleActionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleAction.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1950,18 +1926,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2388,18 +2352,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2466,18 +2418,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2904,18 +2844,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementandstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementAndStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementAndStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementAndStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementAndStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2982,18 +2910,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementandstatementstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementAndStatementStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementAndStatementStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3300,18 +3216,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementandstatementstatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementByteMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementByteMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementByteMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementByteMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementByteMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementByteMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3498,18 +3402,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementandstatementstatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementByteMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementByteMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementByteMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementByteMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementByteMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementByteMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3816,18 +3708,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementandstatementstatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3894,18 +3774,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementandstatementstatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3972,18 +3840,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementandstatementstatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementByteMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementByteMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementByteMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementByteMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementByteMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementByteMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4090,18 +3946,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementandstatementstatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementGeoMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementGeoMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementGeoMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementGeoMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementGeoMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementGeoMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4208,18 +4052,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementandstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4326,18 +4158,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementandstatementstatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementIpSetReferenceStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementIpSetReferenceStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementIpSetReferenceStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementIpSetReferenceStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementIpSetReferenceStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementIpSetReferenceStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4444,18 +4264,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementandstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4602,18 +4410,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementandstatementstatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4760,18 +4556,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5078,18 +4862,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5156,18 +4928,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5234,18 +4994,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementandstatementstatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5352,18 +5100,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementandstatementstatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSizeConstraintStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSizeConstraintStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSizeConstraintStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSizeConstraintStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementSizeConstraintStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementSizeConstraintStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5550,18 +5286,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementandstatementstatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5868,18 +5592,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5946,18 +5658,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6024,18 +5724,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementandstatementstatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSizeConstraintStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSizeConstraintStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSizeConstraintStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSizeConstraintStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementSizeConstraintStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementSizeConstraintStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6142,18 +5830,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementandstatementstatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6260,18 +5936,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementandstatementstatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6578,18 +6242,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementandstatementstatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6656,18 +6308,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementandstatementstatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6734,18 +6374,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementandstatementstatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6852,18 +6480,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementandstatementstatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementXssMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementXssMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementXssMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementXssMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementXssMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementXssMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6970,18 +6586,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementandstatementstatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementXssMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementXssMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementXssMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementXssMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementXssMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementXssMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7288,18 +6892,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementandstatementstatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7366,18 +6958,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementandstatementstatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7444,18 +7024,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementandstatementstatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementXssMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementAndStatementStatementXssMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementXssMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementAndStatementStatementXssMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementXssMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementXssMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7562,18 +7130,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementByteMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementByteMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementByteMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementByteMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementByteMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementByteMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7760,18 +7316,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8078,18 +7622,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8156,18 +7688,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8234,18 +7754,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementByteMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementByteMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementByteMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementByteMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementByteMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementByteMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8352,18 +7860,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementGeoMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementGeoMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementGeoMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementGeoMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementGeoMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementGeoMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8470,18 +7966,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementGeoMatchStatementForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementGeoMatchStatementForwardedIpConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementGeoMatchStatementForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementGeoMatchStatementForwardedIpConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementGeoMatchStatementForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementGeoMatchStatementForwardedIpConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8588,18 +8072,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementIpSetReferenceStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementIpSetReferenceStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementIpSetReferenceStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementIpSetReferenceStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementIpSetReferenceStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementIpSetReferenceStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8706,18 +8178,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8864,18 +8324,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementnotstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementNotStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementNotStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementNotStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementNotStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8942,18 +8390,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementnotstatementstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementNotStatementStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementNotStatementStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -9260,18 +8696,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementnotstatementstatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementByteMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementByteMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementByteMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementByteMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementByteMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementByteMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -9458,18 +8882,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementnotstatementstatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -9776,18 +9188,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementnotstatementstatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -9854,18 +9254,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementnotstatementstatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -9932,18 +9320,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementnotstatementstatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementByteMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementByteMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementByteMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementByteMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementByteMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementByteMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -10050,18 +9426,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementnotstatementstatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementGeoMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementGeoMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementGeoMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementGeoMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementGeoMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementGeoMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -10168,18 +9532,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementnotstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -10286,18 +9638,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementnotstatementstatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementIpSetReferenceStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementIpSetReferenceStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementIpSetReferenceStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementIpSetReferenceStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementIpSetReferenceStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementIpSetReferenceStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -10404,18 +9744,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementnotstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -10562,18 +9890,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementnotstatementstatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementRegexPatternSetReferenceStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementRegexPatternSetReferenceStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementRegexPatternSetReferenceStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementRegexPatternSetReferenceStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementRegexPatternSetReferenceStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementRegexPatternSetReferenceStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -10720,18 +10036,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -11038,18 +10342,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -11116,18 +10408,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -11194,18 +10474,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementnotstatementstatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementRegexPatternSetReferenceStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementRegexPatternSetReferenceStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementRegexPatternSetReferenceStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementRegexPatternSetReferenceStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementRegexPatternSetReferenceStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementRegexPatternSetReferenceStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -11312,18 +10580,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementnotstatementstatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSizeConstraintStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSizeConstraintStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSizeConstraintStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSizeConstraintStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementSizeConstraintStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementSizeConstraintStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -11510,18 +10766,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -11828,18 +11072,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -11906,18 +11138,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -11984,18 +11204,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementnotstatementstatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSizeConstraintStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSizeConstraintStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSizeConstraintStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSizeConstraintStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementSizeConstraintStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementSizeConstraintStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -12102,18 +11310,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementnotstatementstatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -12220,18 +11416,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementnotstatementstatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -12538,18 +11722,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -12616,18 +11788,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -12694,18 +11854,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementnotstatementstatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -12812,18 +11960,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementnotstatementstatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementXssMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementXssMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementXssMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementXssMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementXssMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementXssMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -12930,18 +12066,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementnotstatementstatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementXssMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementXssMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementXssMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementXssMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementXssMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementXssMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -13248,18 +12372,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementnotstatementstatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -13326,18 +12438,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementnotstatementstatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -13404,18 +12504,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementnotstatementstatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementXssMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementNotStatementStatementXssMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementXssMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementNotStatementStatementXssMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementXssMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementXssMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -13522,18 +12610,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementorstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementOrStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementOrStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementOrStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementOrStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -13600,18 +12676,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementorstatementstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementOrStatementStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementOrStatementStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -13918,18 +12982,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementorstatementstatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementByteMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementByteMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementByteMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementByteMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementByteMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementByteMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -14116,18 +13168,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementorstatementstatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementByteMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementByteMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementByteMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementByteMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementByteMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementByteMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -14434,18 +13474,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementorstatementstatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -14512,18 +13540,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementorstatementstatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -14590,18 +13606,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementorstatementstatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementByteMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementByteMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementByteMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementByteMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementByteMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementByteMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -14708,18 +13712,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementorstatementstatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementGeoMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementGeoMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementGeoMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementGeoMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementGeoMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementGeoMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -14826,18 +13818,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementorstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -14944,18 +13924,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementorstatementstatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementIpSetReferenceStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementIpSetReferenceStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementIpSetReferenceStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementIpSetReferenceStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementIpSetReferenceStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementIpSetReferenceStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -15062,18 +14030,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementorstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -15220,18 +14176,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementorstatementstatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -15378,18 +14322,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -15696,18 +14628,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -15774,18 +14694,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -15852,18 +14760,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementorstatementstatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -15970,18 +14866,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementorstatementstatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSizeConstraintStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSizeConstraintStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSizeConstraintStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSizeConstraintStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementSizeConstraintStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementSizeConstraintStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -16168,18 +15052,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementorstatementstatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -16486,18 +15358,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -16564,18 +15424,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -16642,18 +15490,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementorstatementstatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSizeConstraintStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSizeConstraintStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSizeConstraintStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSizeConstraintStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementSizeConstraintStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementSizeConstraintStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -16760,18 +15596,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementorstatementstatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -16878,18 +15702,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementorstatementstatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -17196,18 +16008,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementorstatementstatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -17274,18 +16074,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementorstatementstatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -17352,18 +16140,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementorstatementstatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -17470,18 +16246,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementorstatementstatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -17588,18 +16352,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementorstatementstatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -17906,18 +16658,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementorstatementstatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -17984,18 +16724,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementorstatementstatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -18062,18 +16790,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementorstatementstatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementOrStatementStatementXssMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -18180,18 +16896,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementRegexPatternSetReferenceStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementRegexPatternSetReferenceStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementRegexPatternSetReferenceStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementRegexPatternSetReferenceStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementRegexPatternSetReferenceStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementRegexPatternSetReferenceStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -18338,18 +17042,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -18656,18 +17348,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -18734,18 +17414,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -18812,18 +17480,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -18930,18 +17586,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementSizeConstraintStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementSizeConstraintStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementSizeConstraintStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -19128,18 +17772,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -19446,18 +18078,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -19524,18 +18144,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -19602,18 +18210,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -19720,18 +18316,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementSqliMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementSqliMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementSqliMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementSqliMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementSqliMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementSqliMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -19838,18 +18422,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementSqliMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementSqliMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementSqliMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -20156,18 +18728,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -20234,18 +18794,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -20312,18 +18860,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementSqliMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementSqliMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementSqliMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementSqliMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementSqliMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementSqliMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -20430,18 +18966,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementXssMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementXssMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementXssMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementXssMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementXssMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementXssMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -20548,18 +19072,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -20866,18 +19378,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -20944,18 +19444,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -21022,18 +19510,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementandstatementstatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementAndStatementStatementXssMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementAndStatementStatementXssMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementXssMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementAndStatementStatementXssMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementAndStatementStatementXssMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementAndStatementStatementXssMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -21140,18 +19616,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementByteMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementByteMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementByteMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementByteMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementByteMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementByteMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -21338,18 +19802,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementByteMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementByteMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementByteMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementByteMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementByteMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementByteMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -21656,18 +20108,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementByteMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementByteMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementByteMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementByteMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementByteMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementByteMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -21734,18 +20174,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementByteMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementByteMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementByteMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementByteMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementByteMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementByteMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -21812,18 +20240,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementByteMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementByteMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementByteMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementByteMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementByteMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementByteMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -21930,18 +20346,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementGeoMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementGeoMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementGeoMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementGeoMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementGeoMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementGeoMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -22048,18 +20452,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementGeoMatchStatementForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementGeoMatchStatementForwardedIpConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementGeoMatchStatementForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementGeoMatchStatementForwardedIpConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementGeoMatchStatementForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementGeoMatchStatementForwardedIpConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -22166,18 +20558,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementIpSetReferenceStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementIpSetReferenceStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementIpSetReferenceStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementIpSetReferenceStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementIpSetReferenceStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementIpSetReferenceStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -22284,18 +20664,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementIpSetReferenceStatementIpSetForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementIpSetReferenceStatementIpSetForwardedIpConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementIpSetReferenceStatementIpSetForwardedIpConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementIpSetReferenceStatementIpSetForwardedIpConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -22442,18 +20810,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -22520,18 +20876,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -22958,18 +21302,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementandstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementAndStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementAndStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementAndStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementAndStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -23036,18 +21368,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementandstatementstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementAndStatementStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementAndStatementStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -23354,18 +21674,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementandstatementstatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementByteMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementByteMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementByteMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -23552,18 +21860,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementandstatementstatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -23870,18 +22166,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementandstatementstatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -23948,18 +22232,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementandstatementstatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -24026,18 +22298,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementandstatementstatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -24144,18 +22404,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementandstatementstatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementGeoMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementGeoMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementGeoMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementGeoMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementGeoMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementGeoMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -24262,18 +22510,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementandstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -24380,18 +22616,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementandstatementstatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementIpSetReferenceStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementIpSetReferenceStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementIpSetReferenceStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementIpSetReferenceStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementIpSetReferenceStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementIpSetReferenceStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -24498,18 +22722,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementandstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -24656,18 +22868,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementandstatementstatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -24814,18 +23014,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -25132,18 +23320,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -25210,18 +23386,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -25288,18 +23452,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementandstatementstatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -25406,18 +23558,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementandstatementstatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -25604,18 +23744,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementandstatementstatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -25922,18 +24050,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -26000,18 +24116,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -26078,18 +24182,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementandstatementstatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementSizeConstraintStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -26196,18 +24288,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementandstatementstatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -26314,18 +24394,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementandstatementstatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -26632,18 +24700,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementandstatementstatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -26710,18 +24766,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementandstatementstatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -26788,18 +24832,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementandstatementstatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -26906,18 +24938,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementandstatementstatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementXssMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementXssMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementXssMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementXssMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementXssMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementXssMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -27024,18 +25044,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementandstatementstatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementXssMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementXssMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementXssMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementXssMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementXssMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementXssMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -27342,18 +25350,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementandstatementstatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -27420,18 +25416,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementandstatementstatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -27498,18 +25482,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementandstatementstatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementXssMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementAndStatementStatementXssMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementXssMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementAndStatementStatementXssMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementXssMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementXssMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -27616,18 +25588,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementByteMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementByteMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementByteMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementByteMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementByteMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementByteMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -27814,18 +25774,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementByteMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementByteMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementByteMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementByteMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementByteMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementByteMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -28132,18 +26080,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementByteMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementByteMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementByteMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementByteMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementByteMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementByteMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -28210,18 +26146,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -28288,18 +26212,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementByteMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementByteMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementByteMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementByteMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementByteMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementByteMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -28406,18 +26318,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementGeoMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementGeoMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementGeoMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementGeoMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementGeoMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementGeoMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -28524,18 +26424,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementGeoMatchStatementForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementGeoMatchStatementForwardedIpConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementGeoMatchStatementForwardedIpConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementGeoMatchStatementForwardedIpConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -28642,18 +26530,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementIpSetReferenceStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementIpSetReferenceStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementIpSetReferenceStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementIpSetReferenceStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementIpSetReferenceStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementIpSetReferenceStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -28760,18 +26636,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -28918,18 +26782,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementnotstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementNotStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementNotStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementNotStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementNotStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -28996,18 +26848,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementnotstatementstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementNotStatementStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementNotStatementStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -29314,18 +27154,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementnotstatementstatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -29512,18 +27340,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementnotstatementstatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -29830,18 +27646,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementnotstatementstatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -29908,18 +27712,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementnotstatementstatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -29986,18 +27778,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementnotstatementstatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -30104,18 +27884,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementnotstatementstatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementGeoMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementGeoMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementGeoMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementGeoMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementGeoMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementGeoMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -30222,18 +27990,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementnotstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -30340,18 +28096,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementnotstatementstatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementIpSetReferenceStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementIpSetReferenceStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementIpSetReferenceStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementIpSetReferenceStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementIpSetReferenceStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementIpSetReferenceStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -30458,18 +28202,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementnotstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -30616,18 +28348,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementnotstatementstatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -30774,18 +28494,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -31092,18 +28800,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -31170,18 +28866,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -31248,18 +28932,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementnotstatementstatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -31366,18 +29038,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementnotstatementstatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -31564,18 +29224,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -31882,18 +29530,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -31960,18 +29596,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -32038,18 +29662,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementnotstatementstatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -32156,18 +29768,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementnotstatementstatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -32274,18 +29874,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementnotstatementstatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -32592,18 +30180,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -32670,18 +30246,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -32748,18 +30312,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementnotstatementstatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -32866,18 +30418,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementnotstatementstatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -32984,18 +30524,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementnotstatementstatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -33302,18 +30830,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementnotstatementstatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -33380,18 +30896,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementnotstatementstatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -33458,18 +30962,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementnotstatementstatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -33576,18 +31068,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementorstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementOrStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementOrStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementOrStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementOrStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -33654,18 +31134,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementorstatementstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementOrStatementStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementOrStatementStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -33972,18 +31440,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementorstatementstatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -34170,18 +31626,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementorstatementstatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -34488,18 +31932,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementorstatementstatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -34566,18 +31998,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementorstatementstatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -34644,18 +32064,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementorstatementstatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -34762,18 +32170,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementorstatementstatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementGeoMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementGeoMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementGeoMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementGeoMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementGeoMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementGeoMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -34880,18 +32276,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementorstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -34998,18 +32382,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementorstatementstatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementIpSetReferenceStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementIpSetReferenceStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementIpSetReferenceStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementIpSetReferenceStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementIpSetReferenceStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementIpSetReferenceStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -35116,18 +32488,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementorstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -35274,18 +32634,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementorstatementstatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -35432,18 +32780,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -35750,18 +33086,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -35828,18 +33152,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -35906,18 +33218,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementorstatementstatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -36024,18 +33324,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementorstatementstatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSizeConstraintStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSizeConstraintStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSizeConstraintStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSizeConstraintStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementSizeConstraintStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementSizeConstraintStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -36222,18 +33510,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementorstatementstatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -36540,18 +33816,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -36618,18 +33882,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -36696,18 +33948,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementorstatementstatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSizeConstraintStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSizeConstraintStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSizeConstraintStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSizeConstraintStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementSizeConstraintStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementSizeConstraintStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -36814,18 +34054,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementorstatementstatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -36932,18 +34160,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementorstatementstatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -37250,18 +34466,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementorstatementstatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -37328,18 +34532,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementorstatementstatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -37406,18 +34598,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementorstatementstatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -37524,18 +34704,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementorstatementstatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementXssMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementXssMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementXssMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementXssMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementXssMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementXssMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -37642,18 +34810,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementorstatementstatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementXssMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementXssMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementXssMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementXssMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementXssMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementXssMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -37960,18 +35116,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementorstatementstatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -38038,18 +35182,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementorstatementstatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -38116,18 +35248,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementorstatementstatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementXssMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementOrStatementStatementXssMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementXssMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementOrStatementStatementXssMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementXssMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementXssMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -38234,18 +35354,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -38392,18 +35500,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -38710,18 +35806,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -38788,18 +35872,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -38866,18 +35938,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -38984,18 +36044,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementSizeConstraintStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementSizeConstraintStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementSizeConstraintStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -39182,18 +36230,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -39500,18 +36536,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -39578,18 +36602,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -39656,18 +36668,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -39774,18 +36774,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementSqliMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementSqliMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementSqliMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementSqliMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementSqliMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementSqliMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -39892,18 +36880,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -40210,18 +37186,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -40288,18 +37252,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -40366,18 +37318,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementSqliMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementSqliMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementSqliMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementSqliMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementSqliMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementSqliMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -40484,18 +37424,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementXssMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementXssMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementXssMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementXssMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementXssMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementXssMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -40602,18 +37530,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -40920,18 +37836,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -40998,18 +37902,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -41076,18 +37968,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementnotstatementstatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementNotStatementStatementXssMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementNotStatementStatementXssMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementXssMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementNotStatementStatementXssMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementNotStatementStatementXssMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementNotStatementStatementXssMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -41194,18 +38074,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -41272,18 +38140,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -41710,18 +38566,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementandstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementAndStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementAndStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementAndStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementAndStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -41788,18 +38632,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementandstatementstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementAndStatementStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementAndStatementStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -42106,18 +38938,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementandstatementstatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementByteMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementByteMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementByteMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -42304,18 +39124,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementandstatementstatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -42622,18 +39430,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementandstatementstatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -42700,18 +39496,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementandstatementstatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -42778,18 +39562,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementandstatementstatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -42896,18 +39668,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementandstatementstatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementGeoMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementGeoMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementGeoMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementGeoMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementGeoMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementGeoMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -43014,18 +39774,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementandstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -43132,18 +39880,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementandstatementstatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementIpSetReferenceStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementIpSetReferenceStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementIpSetReferenceStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementIpSetReferenceStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementIpSetReferenceStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementIpSetReferenceStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -43250,18 +39986,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementandstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -43408,18 +40132,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementandstatementstatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -43566,18 +40278,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -43884,18 +40584,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -43962,18 +40650,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementandstatementstatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -44040,18 +40716,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementandstatementstatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -44158,18 +40822,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementandstatementstatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSizeConstraintStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSizeConstraintStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSizeConstraintStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSizeConstraintStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementSizeConstraintStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementSizeConstraintStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -44356,18 +41008,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementandstatementstatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -44674,18 +41314,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -44752,18 +41380,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementandstatementstatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -44830,18 +41446,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementandstatementstatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSizeConstraintStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSizeConstraintStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSizeConstraintStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSizeConstraintStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementSizeConstraintStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementSizeConstraintStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -44948,18 +41552,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementandstatementstatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -45066,18 +41658,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementandstatementstatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -45384,18 +41964,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementandstatementstatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -45462,18 +42030,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementandstatementstatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -45540,18 +42096,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementandstatementstatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -45658,18 +42202,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementandstatementstatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -45776,18 +42308,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementandstatementstatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -46094,18 +42614,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementandstatementstatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -46172,18 +42680,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementandstatementstatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -46250,18 +42746,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementandstatementstatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>And<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -46368,18 +42852,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementByteMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementByteMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementByteMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementByteMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementByteMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementByteMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -46566,18 +43038,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -46884,18 +43344,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -46962,18 +43410,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -47040,18 +43476,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementByteMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementByteMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementByteMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementByteMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementByteMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementByteMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -47158,18 +43582,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementGeoMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementGeoMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementGeoMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementGeoMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementGeoMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementGeoMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -47276,18 +43688,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementGeoMatchStatementForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementGeoMatchStatementForwardedIpConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementGeoMatchStatementForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementGeoMatchStatementForwardedIpConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementGeoMatchStatementForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementGeoMatchStatementForwardedIpConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -47394,18 +43794,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementIpSetReferenceStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementIpSetReferenceStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementIpSetReferenceStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementIpSetReferenceStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementIpSetReferenceStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementIpSetReferenceStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -47512,18 +43900,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -47670,18 +44046,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementnotstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementNotStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementNotStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementNotStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementNotStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -47748,18 +44112,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementnotstatementstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementNotStatementStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementNotStatementStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -48066,18 +44418,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementnotstatementstatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementByteMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementByteMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementByteMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementByteMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementByteMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementByteMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -48264,18 +44604,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementnotstatementstatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementByteMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementByteMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementByteMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementByteMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementByteMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementByteMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -48582,18 +44910,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementnotstatementstatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -48660,18 +44976,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementnotstatementstatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -48738,18 +45042,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementnotstatementstatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementByteMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementByteMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementByteMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementByteMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementByteMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementByteMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -48856,18 +45148,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementnotstatementstatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementGeoMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementGeoMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementGeoMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementGeoMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementGeoMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementGeoMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -48974,18 +45254,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementnotstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -49092,18 +45360,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementnotstatementstatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -49210,18 +45466,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementnotstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -49368,18 +45612,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementnotstatementstatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -49526,18 +45758,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -49844,18 +46064,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -49922,18 +46130,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementnotstatementstatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -50000,18 +46196,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementnotstatementstatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -50118,18 +46302,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementnotstatementstatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -50316,18 +46488,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -50634,18 +46794,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -50712,18 +46860,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementnotstatementstatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -50790,18 +46926,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementnotstatementstatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -50908,18 +47032,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementnotstatementstatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -51026,18 +47138,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementnotstatementstatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -51344,18 +47444,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -51422,18 +47510,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementnotstatementstatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -51500,18 +47576,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementnotstatementstatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -51618,18 +47682,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementnotstatementstatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementXssMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementXssMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementXssMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementXssMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementXssMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementXssMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -51736,18 +47788,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementnotstatementstatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementXssMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementXssMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementXssMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementXssMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementXssMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementXssMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -52054,18 +48094,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementnotstatementstatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -52132,18 +48160,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementnotstatementstatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -52210,18 +48226,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementnotstatementstatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Not<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementXssMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementNotStatementStatementXssMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementXssMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementNotStatementStatementXssMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementXssMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementXssMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -52328,18 +48332,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementorstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementOrStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementOrStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementOrStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementOrStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -52406,18 +48398,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementorstatementstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementOrStatementStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementOrStatementStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -52724,18 +48704,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementorstatementstatementbytematchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementByteMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementByteMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementByteMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementByteMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementByteMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementByteMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -52922,18 +48890,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementorstatementstatementbytematchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementByteMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementByteMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementByteMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementByteMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementByteMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementByteMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -53240,18 +49196,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementorstatementstatementbytematchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -53318,18 +49262,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementorstatementstatementbytematchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -53396,18 +49328,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementorstatementstatementbytematchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Byte<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementByteMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementByteMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementByteMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementByteMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementByteMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementByteMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -53514,18 +49434,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementorstatementstatementgeomatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementGeoMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementGeoMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementGeoMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementGeoMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementGeoMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementGeoMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -53632,18 +49540,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementorstatementstatementgeomatchstatementforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Geo<wbr>Match<wbr>Statement<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -53750,18 +49646,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementorstatementstatementipsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementIpSetReferenceStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementIpSetReferenceStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementIpSetReferenceStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementIpSetReferenceStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementIpSetReferenceStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementIpSetReferenceStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -53868,18 +49752,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementorstatementstatementipsetreferencestatementipsetforwardedipconfig">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Ip<wbr>Set<wbr>Reference<wbr>Statement<wbr>Ip<wbr>Set<wbr>Forwarded<wbr>Ip<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -54026,18 +49898,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementorstatementstatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementRegexPatternSetReferenceStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementRegexPatternSetReferenceStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementRegexPatternSetReferenceStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementRegexPatternSetReferenceStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementRegexPatternSetReferenceStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementRegexPatternSetReferenceStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -54184,18 +50044,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -54502,18 +50350,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -54580,18 +50416,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementorstatementstatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -54658,18 +50482,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementorstatementstatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementRegexPatternSetReferenceStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementRegexPatternSetReferenceStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementRegexPatternSetReferenceStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementRegexPatternSetReferenceStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementRegexPatternSetReferenceStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementRegexPatternSetReferenceStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -54776,18 +50588,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementorstatementstatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -54974,18 +50774,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementorstatementstatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -55292,18 +51080,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -55370,18 +51146,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementorstatementstatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -55448,18 +51212,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementorstatementstatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -55566,18 +51318,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementorstatementstatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -55684,18 +51424,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementorstatementstatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -56002,18 +51730,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementorstatementstatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -56080,18 +51796,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementorstatementstatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -56158,18 +51862,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementorstatementstatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -56276,18 +51968,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementorstatementstatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -56394,18 +52074,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementorstatementstatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -56712,18 +52380,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementorstatementstatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -56790,18 +52446,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementorstatementstatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -56868,18 +52512,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementorstatementstatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -56986,18 +52618,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -57144,18 +52764,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -57462,18 +53070,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -57540,18 +53136,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -57618,18 +53202,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -57736,18 +53308,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementSizeConstraintStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementSizeConstraintStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementSizeConstraintStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementSizeConstraintStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementSizeConstraintStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementSizeConstraintStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -57934,18 +53494,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementSizeConstraintStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementSizeConstraintStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementSizeConstraintStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementSizeConstraintStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementSizeConstraintStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementSizeConstraintStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -58252,18 +53800,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -58330,18 +53866,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -58408,18 +53932,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementSizeConstraintStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementSizeConstraintStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementSizeConstraintStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementSizeConstraintStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementSizeConstraintStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementSizeConstraintStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -58526,18 +54038,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementSqliMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementSqliMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementSqliMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementSqliMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementSqliMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementSqliMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -58644,18 +54144,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementSqliMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementSqliMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementSqliMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementSqliMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementSqliMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementSqliMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -58962,18 +54450,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -59040,18 +54516,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -59118,18 +54582,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementSqliMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementSqliMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementSqliMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementSqliMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementSqliMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementSqliMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -59236,18 +54688,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementXssMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementXssMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementXssMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementXssMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementXssMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementXssMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -59354,18 +54794,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementXssMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementXssMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementXssMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementXssMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementXssMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementXssMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -59672,18 +55100,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementXssMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementXssMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementXssMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementXssMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementXssMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementXssMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -59750,18 +55166,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -59828,18 +55232,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementorstatementstatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Or<wbr>Statement<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementOrStatementStatementXssMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementOrStatementStatementXssMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementXssMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementOrStatementStatementXssMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementOrStatementStatementXssMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementOrStatementStatementXssMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -59946,18 +55338,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementregexpatternsetreferencestatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementRegexPatternSetReferenceStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementRegexPatternSetReferenceStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementRegexPatternSetReferenceStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementRegexPatternSetReferenceStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementRegexPatternSetReferenceStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementRegexPatternSetReferenceStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -60104,18 +55484,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementregexpatternsetreferencestatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -60422,18 +55790,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementregexpatternsetreferencestatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -60500,18 +55856,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementregexpatternsetreferencestatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -60578,18 +55922,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementregexpatternsetreferencestatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Regex<wbr>Pattern<wbr>Set<wbr>Reference<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementRegexPatternSetReferenceStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementRegexPatternSetReferenceStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementRegexPatternSetReferenceStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementRegexPatternSetReferenceStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementRegexPatternSetReferenceStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementRegexPatternSetReferenceStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -60696,18 +56028,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementsizeconstraintstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementSizeConstraintStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementSizeConstraintStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementSizeConstraintStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementSizeConstraintStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementSizeConstraintStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementSizeConstraintStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -60894,18 +56214,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementsizeconstraintstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementSizeConstraintStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementSizeConstraintStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementSizeConstraintStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementSizeConstraintStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementSizeConstraintStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementSizeConstraintStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -61212,18 +56520,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementsizeconstraintstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementSizeConstraintStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementSizeConstraintStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementSizeConstraintStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementSizeConstraintStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementSizeConstraintStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementSizeConstraintStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -61290,18 +56586,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementsizeconstraintstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementSizeConstraintStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementSizeConstraintStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementSizeConstraintStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -61368,18 +56652,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementsizeconstraintstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Size<wbr>Constraint<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementSizeConstraintStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementSizeConstraintStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementSizeConstraintStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementSizeConstraintStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementSizeConstraintStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementSizeConstraintStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -61486,18 +56758,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementsqlimatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementSqliMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementSqliMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementSqliMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementSqliMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementSqliMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementSqliMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -61604,18 +56864,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementsqlimatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementSqliMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementSqliMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementSqliMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementSqliMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementSqliMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementSqliMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -61922,18 +57170,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementsqlimatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementSqliMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementSqliMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementSqliMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementSqliMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementSqliMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementSqliMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -62000,18 +57236,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementsqlimatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementSqliMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementSqliMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementSqliMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementSqliMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -62078,18 +57302,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementsqlimatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Sqli<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementSqliMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementSqliMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementSqliMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementSqliMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementSqliMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementSqliMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -62196,18 +57408,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementxssmatchstatement">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementXssMatchStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementXssMatchStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementXssMatchStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementXssMatchStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementXssMatchStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementXssMatchStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -62314,18 +57514,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementxssmatchstatementfieldtomatch">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementXssMatchStatementFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementXssMatchStatementFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementXssMatchStatementFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementXssMatchStatementFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementXssMatchStatementFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementXssMatchStatementFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -62632,18 +57820,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementxssmatchstatementfieldtomatchsingleheader">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementXssMatchStatementFieldToMatchSingleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementXssMatchStatementFieldToMatchSingleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementXssMatchStatementFieldToMatchSingleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementXssMatchStatementFieldToMatchSingleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementXssMatchStatementFieldToMatchSingleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementXssMatchStatementFieldToMatchSingleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -62710,18 +57886,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementxssmatchstatementfieldtomatchsinglequeryargument">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Field<wbr>To<wbr>Match<wbr>Single<wbr>Query<wbr>Argument</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementXssMatchStatementFieldToMatchSingleQueryArgument">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementXssMatchStatementFieldToMatchSingleQueryArgument">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementXssMatchStatementFieldToMatchSingleQueryArgumentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementXssMatchStatementFieldToMatchSingleQueryArgument.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -62788,18 +57952,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulestatementxssmatchstatementtexttransformation">Rule<wbr>Group<wbr>Rule<wbr>Statement<wbr>Xss<wbr>Match<wbr>Statement<wbr>Text<wbr>Transformation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleStatementXssMatchStatementTextTransformation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleStatementXssMatchStatementTextTransformation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementXssMatchStatementTextTransformationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleStatementXssMatchStatementTextTransformationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleStatementXssMatchStatementTextTransformationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleStatementXssMatchStatementTextTransformation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -62906,18 +58058,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulevisibilityconfig">Rule<wbr>Group<wbr>Rule<wbr>Visibility<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleVisibilityConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleVisibilityConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleVisibilityConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupRuleVisibilityConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupRuleVisibilityConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupRuleVisibilityConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -63064,18 +58204,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegroupvisibilityconfig">Rule<wbr>Group<wbr>Visibility<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupVisibilityConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupVisibilityConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupVisibilityConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#RuleGroupVisibilityConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Inputs.RuleGroupVisibilityConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.Outputs.RuleGroupVisibilityConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

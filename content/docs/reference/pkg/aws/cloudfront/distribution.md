@@ -631,19 +631,19 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudfront/#Distribution">Distribution</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudfront/#DistributionArgs">DistributionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Distribution</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DistributionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cloudfront/#pulumi_aws.cloudfront.Distribution">Distribution</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aliases</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_error_responses</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionCustomErrorResponseArgs]]</span> = None<span class="p">, </span><span class="nx">default_cache_behavior</span><span class="p">:</span> <span class="nx">Optional[DistributionDefaultCacheBehaviorArgs]</span> = None<span class="p">, </span><span class="nx">default_root_object</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">http_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_ipv6_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">logging_config</span><span class="p">:</span> <span class="nx">Optional[DistributionLoggingConfigArgs]</span> = None<span class="p">, </span><span class="nx">ordered_cache_behaviors</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionOrderedCacheBehaviorArgs]]</span> = None<span class="p">, </span><span class="nx">origin_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionOriginGroupArgs]]</span> = None<span class="p">, </span><span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionOriginArgs]]</span> = None<span class="p">, </span><span class="nx">price_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restrictions</span><span class="p">:</span> <span class="nx">Optional[DistributionRestrictionsArgs]</span> = None<span class="p">, </span><span class="nx">retain_on_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">viewer_certificate</span><span class="p">:</span> <span class="nx">Optional[DistributionViewerCertificateArgs]</span> = None<span class="p">, </span><span class="nx">wait_for_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">web_acl_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Distribution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aliases</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_error_responses</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionCustomErrorResponseArgs]]</span> = None<span class="p">, </span><span class="nx">default_cache_behavior</span><span class="p">:</span> <span class="nx">Optional[DistributionDefaultCacheBehaviorArgs]</span> = None<span class="p">, </span><span class="nx">default_root_object</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">http_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_ipv6_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">logging_config</span><span class="p">:</span> <span class="nx">Optional[DistributionLoggingConfigArgs]</span> = None<span class="p">, </span><span class="nx">ordered_cache_behaviors</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionOrderedCacheBehaviorArgs]]</span> = None<span class="p">, </span><span class="nx">origin_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionOriginGroupArgs]]</span> = None<span class="p">, </span><span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionOriginArgs]]</span> = None<span class="p">, </span><span class="nx">price_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restrictions</span><span class="p">:</span> <span class="nx">Optional[DistributionRestrictionsArgs]</span> = None<span class="p">, </span><span class="nx">retain_on_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">viewer_certificate</span><span class="p">:</span> <span class="nx">Optional[DistributionViewerCertificateArgs]</span> = None<span class="p">, </span><span class="nx">wait_for_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">web_acl_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#Distribution">NewDistribution</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionArgs">DistributionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#Distribution">Distribution</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDistribution</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DistributionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Distribution</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Distribution.html">Distribution</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.DistributionArgs.html">DistributionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Distribution</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DistributionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -664,7 +664,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudfront/#DistributionArgs">DistributionArgs</a></span>
+        <span class="property-type"><a href="#inputs">DistributionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -733,7 +733,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionArgs">DistributionArgs</a></span>
+        <span class="property-type"><a href="#inputs">DistributionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -772,7 +772,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.DistributionArgs.html">DistributionArgs</a></span>
+        <span class="property-type"><a href="#inputs">DistributionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -2166,7 +2166,7 @@ Get an existing Distribution resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudfront/#DistributionState">DistributionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudfront/#Distribution">Distribution</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DistributionState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Distribution</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2175,11 +2175,11 @@ Get an existing Distribution resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDistribution<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionState">DistributionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#Distribution">Distribution</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDistribution<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DistributionState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Distribution</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Distribution.html">Distribution</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.DistributionState.html">DistributionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Distribution</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DistributionState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3579,18 +3579,6 @@ credentials configuring this argument must have `waf:GetWebACL` permissions assi
 
 
 <h4 id="distributioncustomerrorresponse">Distribution<wbr>Custom<wbr>Error<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionCustomErrorResponse">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionCustomErrorResponse">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionCustomErrorResponseArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionCustomErrorResponseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionCustomErrorResponseArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionCustomErrorResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3797,18 +3785,6 @@ example, `/custom_404.html`).
 {{% /choosable %}}
 
 <h4 id="distributiondefaultcachebehavior">Distribution<wbr>Default<wbr>Cache<wbr>Behavior</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionDefaultCacheBehavior">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionDefaultCacheBehavior">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionDefaultCacheBehaviorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionDefaultCacheBehavior.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4483,18 +4459,6 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
 {{% /choosable %}}
 
 <h4 id="distributiondefaultcachebehaviorforwardedvalues">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionDefaultCacheBehaviorForwardedValues">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionDefaultCacheBehaviorForwardedValues">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorForwardedValuesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorForwardedValuesOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionDefaultCacheBehaviorForwardedValuesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionDefaultCacheBehaviorForwardedValues.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4709,18 +4673,6 @@ value of `true` for `query_string`, all query string keys are cached.
 {{% /choosable %}}
 
 <h4 id="distributiondefaultcachebehaviorforwardedvaluescookies">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionDefaultCacheBehaviorForwardedValuesCookies">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionDefaultCacheBehaviorForwardedValuesCookies">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorForwardedValuesCookiesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorForwardedValuesCookiesOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionDefaultCacheBehaviorForwardedValuesCookiesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionDefaultCacheBehaviorForwardedValuesCookies.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4847,18 +4799,6 @@ your origin.
 {{% /choosable %}}
 
 <h4 id="distributiondefaultcachebehaviorlambdafunctionassociation">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionDefaultCacheBehaviorLambdaFunctionAssociation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionDefaultCacheBehaviorLambdaFunctionAssociation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorLambdaFunctionAssociationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorLambdaFunctionAssociationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionDefaultCacheBehaviorLambdaFunctionAssociationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionDefaultCacheBehaviorLambdaFunctionAssociation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5013,18 +4953,6 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 {{% /choosable %}}
 
 <h4 id="distributionloggingconfig">Distribution<wbr>Logging<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionLoggingConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionLoggingConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionLoggingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionLoggingConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionLoggingConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionLoggingConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5183,18 +5111,6 @@ to the access log filenames for this distribution, for example, `myprefix/`.
 {{% /choosable %}}
 
 <h4 id="distributionorderedcachebehavior">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOrderedCacheBehavior">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOrderedCacheBehavior">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionOrderedCacheBehaviorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionOrderedCacheBehavior.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5913,18 +5829,6 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
 {{% /choosable %}}
 
 <h4 id="distributionorderedcachebehaviorforwardedvalues">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOrderedCacheBehaviorForwardedValues">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOrderedCacheBehaviorForwardedValues">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorForwardedValuesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorForwardedValuesOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionOrderedCacheBehaviorForwardedValuesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionOrderedCacheBehaviorForwardedValues.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6139,18 +6043,6 @@ value of `true` for `query_string`, all query string keys are cached.
 {{% /choosable %}}
 
 <h4 id="distributionorderedcachebehaviorforwardedvaluescookies">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOrderedCacheBehaviorForwardedValuesCookies">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOrderedCacheBehaviorForwardedValuesCookies">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorForwardedValuesCookiesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorForwardedValuesCookiesOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionOrderedCacheBehaviorForwardedValuesCookiesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionOrderedCacheBehaviorForwardedValuesCookies.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6277,18 +6169,6 @@ your origin.
 {{% /choosable %}}
 
 <h4 id="distributionorderedcachebehaviorlambdafunctionassociation">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOrderedCacheBehaviorLambdaFunctionAssociation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOrderedCacheBehaviorLambdaFunctionAssociation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorLambdaFunctionAssociationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorLambdaFunctionAssociationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionOrderedCacheBehaviorLambdaFunctionAssociationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionOrderedCacheBehaviorLambdaFunctionAssociation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6443,18 +6323,6 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 {{% /choosable %}}
 
 <h4 id="distributionorigin">Distribution<wbr>Origin</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOrigin">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOrigin">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOriginArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOriginOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionOriginArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionOrigin.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6757,18 +6625,6 @@ configuration information. If a custom origin is required, use
 {{% /choosable %}}
 
 <h4 id="distributionorigincustomheader">Distribution<wbr>Origin<wbr>Custom<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOriginCustomHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOriginCustomHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOriginCustomHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOriginCustomHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionOriginCustomHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionOriginCustomHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6867,18 +6723,6 @@ configuration information. If a custom origin is required, use
 {{% /choosable %}}
 
 <h4 id="distributionorigincustomoriginconfig">Distribution<wbr>Origin<wbr>Custom<wbr>Origin<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOriginCustomOriginConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOriginCustomOriginConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOriginCustomOriginConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOriginCustomOriginConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionOriginCustomOriginConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionOriginCustomOriginConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7157,18 +7001,6 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 {{% /choosable %}}
 
 <h4 id="distributionorigingroup">Distribution<wbr>Origin<wbr>Group</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOriginGroup">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOriginGroup">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOriginGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOriginGroupOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionOriginGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionOriginGroup.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7315,18 +7147,6 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 {{% /choosable %}}
 
 <h4 id="distributionorigingroupfailovercriteria">Distribution<wbr>Origin<wbr>Group<wbr>Failover<wbr>Criteria</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOriginGroupFailoverCriteria">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOriginGroupFailoverCriteria">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOriginGroupFailoverCriteriaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOriginGroupFailoverCriteriaOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionOriginGroupFailoverCriteriaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionOriginGroupFailoverCriteria.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7393,18 +7213,6 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 {{% /choosable %}}
 
 <h4 id="distributionorigingroupmember">Distribution<wbr>Origin<wbr>Group<wbr>Member</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOriginGroupMember">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOriginGroupMember">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOriginGroupMemberArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOriginGroupMemberOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionOriginGroupMemberArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionOriginGroupMember.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7471,18 +7279,6 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 {{% /choosable %}}
 
 <h4 id="distributionorigins3originconfig">Distribution<wbr>Origin<wbr>S3Origin<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOriginS3OriginConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOriginS3OriginConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOriginS3OriginConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOriginS3OriginConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionOriginS3OriginConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionOriginS3OriginConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7553,18 +7349,6 @@ identity][5] to associate with the origin.
 {{% /choosable %}}
 
 <h4 id="distributionrestrictions">Distribution<wbr>Restrictions</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionRestrictions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionRestrictions">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionRestrictionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionRestrictionsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionRestrictionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionRestrictions.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7627,18 +7411,6 @@ identity][5] to associate with the origin.
 {{% /choosable %}}
 
 <h4 id="distributionrestrictionsgeorestriction">Distribution<wbr>Restrictions<wbr>Geo<wbr>Restriction</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionRestrictionsGeoRestriction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionRestrictionsGeoRestriction">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionRestrictionsGeoRestrictionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionRestrictionsGeoRestrictionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionRestrictionsGeoRestrictionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionRestrictionsGeoRestriction.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7761,18 +7533,6 @@ distribute your content (`blacklist`).
 {{% /choosable %}}
 
 <h4 id="distributiontrustedsigner">Distribution<wbr>Trusted<wbr>Signer</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionTrustedSigner">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionTrustedSignerOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionTrustedSigner.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7883,18 +7643,6 @@ user requests for content.
 {{% /choosable %}}
 
 <h4 id="distributiontrustedsigneritem">Distribution<wbr>Trusted<wbr>Signer<wbr>Item</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionTrustedSignerItem">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionTrustedSignerItemOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionTrustedSignerItem.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8001,18 +7749,6 @@ user requests for content.
 {{% /choosable %}}
 
 <h4 id="distributionviewercertificate">Distribution<wbr>Viewer<wbr>Certificate</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionViewerCertificate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionViewerCertificate">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionViewerCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionViewerCertificateOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionViewerCertificateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionViewerCertificate.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

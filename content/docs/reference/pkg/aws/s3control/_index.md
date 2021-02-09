@@ -28,21 +28,3 @@ Explore the resources and functions of the s3control module in the AWS package.
 	<dd>3.28.0</dd>
 </dl>
 
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3Control.html" title="Pulumi.Aws.S3Control">Pulumi.Aws.S3Control</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3control?tab=doc#" title="aws/s3control">aws/s3control</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/s3control/#" title="@pulumi/aws/s3control">@pulumi/aws/s3control</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/s3control" title="pulumi_aws/s3control">pulumi_aws/s3control</a></dd>
-
-</dl>
-

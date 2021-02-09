@@ -2093,19 +2093,19 @@ const cluster = new aws.emr.Cluster("cluster", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/emr/#Cluster">Cluster</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/emr/#ClusterArgs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/emr/#pulumi_aws.emr.Cluster">Cluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_info</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">applications</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">autoscaling_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bootstrap_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterBootstrapActionArgs]]</span> = None<span class="p">, </span><span class="nx">configurations</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configurations_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">core_instance_fleet</span><span class="p">:</span> <span class="nx">Optional[ClusterCoreInstanceFleetArgs]</span> = None<span class="p">, </span><span class="nx">core_instance_group</span><span class="p">:</span> <span class="nx">Optional[ClusterCoreInstanceGroupArgs]</span> = None<span class="p">, </span><span class="nx">custom_ami_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ebs_root_volume_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ec2_attributes</span><span class="p">:</span> <span class="nx">Optional[ClusterEc2AttributesArgs]</span> = None<span class="p">, </span><span class="nx">keep_job_flow_alive_when_no_steps</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kerberos_attributes</span><span class="p">:</span> <span class="nx">Optional[ClusterKerberosAttributesArgs]</span> = None<span class="p">, </span><span class="nx">log_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_instance_fleet</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterInstanceFleetArgs]</span> = None<span class="p">, </span><span class="nx">master_instance_group</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterInstanceGroupArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_down_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">step_concurrency_level</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">steps</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterStepArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">visible_to_all_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_info</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">applications</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">autoscaling_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bootstrap_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterBootstrapActionArgs]]</span> = None<span class="p">, </span><span class="nx">configurations</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configurations_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">core_instance_fleet</span><span class="p">:</span> <span class="nx">Optional[ClusterCoreInstanceFleetArgs]</span> = None<span class="p">, </span><span class="nx">core_instance_group</span><span class="p">:</span> <span class="nx">Optional[ClusterCoreInstanceGroupArgs]</span> = None<span class="p">, </span><span class="nx">custom_ami_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ebs_root_volume_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ec2_attributes</span><span class="p">:</span> <span class="nx">Optional[ClusterEc2AttributesArgs]</span> = None<span class="p">, </span><span class="nx">keep_job_flow_alive_when_no_steps</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kerberos_attributes</span><span class="p">:</span> <span class="nx">Optional[ClusterKerberosAttributesArgs]</span> = None<span class="p">, </span><span class="nx">log_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_instance_fleet</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterInstanceFleetArgs]</span> = None<span class="p">, </span><span class="nx">master_instance_group</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterInstanceGroupArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_down_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">step_concurrency_level</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">steps</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterStepArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">visible_to_all_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#Cluster">NewCluster</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterArgs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Cluster.html">Cluster</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.ClusterArgs.html">ClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2126,7 +2126,7 @@ const cluster = new aws.emr.Cluster("cluster", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/emr/#ClusterArgs">ClusterArgs</a></span>
+        <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -2195,7 +2195,7 @@ const cluster = new aws.emr.Cluster("cluster", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterArgs">ClusterArgs</a></span>
+        <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -2234,7 +2234,7 @@ const cluster = new aws.emr.Cluster("cluster", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.ClusterArgs.html">ClusterArgs</a></span>
+        <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -3520,7 +3520,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/emr/#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/emr/#Cluster">Cluster</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Cluster</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3529,11 +3529,11 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Cluster.html">Cluster</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.ClusterState.html">ClusterState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Cluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ClusterState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4825,18 +4825,6 @@ The following state arguments are supported:
 
 
 <h4 id="clusterbootstrapaction">Cluster<wbr>Bootstrap<wbr>Action</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterBootstrapAction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterBootstrapAction">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterBootstrapActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterBootstrapActionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterBootstrapActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterBootstrapAction.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4983,18 +4971,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustercoreinstancefleet">Cluster<wbr>Core<wbr>Instance<wbr>Fleet</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterCoreInstanceFleet">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterCoreInstanceFleet">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterCoreInstanceFleetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterCoreInstanceFleetOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterCoreInstanceFleetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterCoreInstanceFleet.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5333,18 +5309,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustercoreinstancefleetinstancetypeconfig">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterCoreInstanceFleetInstanceTypeConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterCoreInstanceFleetInstanceTypeConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterCoreInstanceFleetInstanceTypeConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterCoreInstanceFleetInstanceTypeConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterCoreInstanceFleetInstanceTypeConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterCoreInstanceFleetInstanceTypeConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5611,18 +5575,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustercoreinstancefleetinstancetypeconfigconfiguration">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterCoreInstanceFleetInstanceTypeConfigConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterCoreInstanceFleetInstanceTypeConfigConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterCoreInstanceFleetInstanceTypeConfigConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterCoreInstanceFleetInstanceTypeConfigConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterCoreInstanceFleetInstanceTypeConfigConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterCoreInstanceFleetInstanceTypeConfigConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5729,18 +5681,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustercoreinstancefleetinstancetypeconfigebsconfig">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterCoreInstanceFleetInstanceTypeConfigEbsConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterCoreInstanceFleetInstanceTypeConfigEbsConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterCoreInstanceFleetInstanceTypeConfigEbsConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterCoreInstanceFleetInstanceTypeConfigEbsConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterCoreInstanceFleetInstanceTypeConfigEbsConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterCoreInstanceFleetInstanceTypeConfigEbsConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5927,18 +5867,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustercoreinstancefleetlaunchspecifications">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterCoreInstanceFleetLaunchSpecifications">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterCoreInstanceFleetLaunchSpecifications">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterCoreInstanceFleetLaunchSpecificationsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterCoreInstanceFleetLaunchSpecificationsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterCoreInstanceFleetLaunchSpecificationsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterCoreInstanceFleetLaunchSpecifications.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6045,18 +5973,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustercoreinstancefleetlaunchspecificationsondemandspecification">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecification">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecification">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecification.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6123,18 +6039,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustercoreinstancefleetlaunchspecificationsspotspecification">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecification">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecification">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecification.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6321,18 +6225,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustercoreinstancegroup">Cluster<wbr>Core<wbr>Instance<wbr>Group</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterCoreInstanceGroup">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterCoreInstanceGroup">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterCoreInstanceGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterCoreInstanceGroupOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterCoreInstanceGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterCoreInstanceGroup.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6639,18 +6531,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustercoreinstancegroupebsconfig">Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterCoreInstanceGroupEbsConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterCoreInstanceGroupEbsConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterCoreInstanceGroupEbsConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterCoreInstanceGroupEbsConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterCoreInstanceGroupEbsConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterCoreInstanceGroupEbsConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6837,18 +6717,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clusterec2attributes">Cluster<wbr>Ec2Attributes</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterEc2Attributes">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterEc2Attributes">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterEc2AttributesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterEc2AttributesOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterEc2AttributesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterEc2Attributes.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7195,18 +7063,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clusterkerberosattributes">Cluster<wbr>Kerberos<wbr>Attributes</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterKerberosAttributes">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterKerberosAttributes">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterKerberosAttributesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterKerberosAttributesOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterKerberosAttributesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterKerberosAttributes.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7433,18 +7289,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustermasterinstancefleet">Cluster<wbr>Master<wbr>Instance<wbr>Fleet</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterMasterInstanceFleet">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterMasterInstanceFleet">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterMasterInstanceFleetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterMasterInstanceFleetOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterMasterInstanceFleetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterMasterInstanceFleet.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7783,18 +7627,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustermasterinstancefleetinstancetypeconfig">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterMasterInstanceFleetInstanceTypeConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterMasterInstanceFleetInstanceTypeConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterMasterInstanceFleetInstanceTypeConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterMasterInstanceFleetInstanceTypeConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterMasterInstanceFleetInstanceTypeConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterMasterInstanceFleetInstanceTypeConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8061,18 +7893,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustermasterinstancefleetinstancetypeconfigconfiguration">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterMasterInstanceFleetInstanceTypeConfigConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterMasterInstanceFleetInstanceTypeConfigConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterMasterInstanceFleetInstanceTypeConfigConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterMasterInstanceFleetInstanceTypeConfigConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterMasterInstanceFleetInstanceTypeConfigConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterMasterInstanceFleetInstanceTypeConfigConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8179,18 +7999,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustermasterinstancefleetinstancetypeconfigebsconfig">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterMasterInstanceFleetInstanceTypeConfigEbsConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterMasterInstanceFleetInstanceTypeConfigEbsConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterMasterInstanceFleetInstanceTypeConfigEbsConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterMasterInstanceFleetInstanceTypeConfigEbsConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterMasterInstanceFleetInstanceTypeConfigEbsConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterMasterInstanceFleetInstanceTypeConfigEbsConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8377,18 +8185,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustermasterinstancefleetlaunchspecifications">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterMasterInstanceFleetLaunchSpecifications">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterMasterInstanceFleetLaunchSpecifications">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterMasterInstanceFleetLaunchSpecificationsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterMasterInstanceFleetLaunchSpecificationsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterMasterInstanceFleetLaunchSpecificationsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterMasterInstanceFleetLaunchSpecifications.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8495,18 +8291,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustermasterinstancefleetlaunchspecificationsondemandspecification">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecification">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecification">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecificationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecification.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8573,18 +8357,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustermasterinstancefleetlaunchspecificationsspotspecification">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecification">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecification">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecificationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecification.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8771,18 +8543,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustermasterinstancegroup">Cluster<wbr>Master<wbr>Instance<wbr>Group</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterMasterInstanceGroup">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterMasterInstanceGroup">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterMasterInstanceGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterMasterInstanceGroupOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterMasterInstanceGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterMasterInstanceGroup.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -9049,18 +8809,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustermasterinstancegroupebsconfig">Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterMasterInstanceGroupEbsConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterMasterInstanceGroupEbsConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterMasterInstanceGroupEbsConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterMasterInstanceGroupEbsConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterMasterInstanceGroupEbsConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterMasterInstanceGroupEbsConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -9247,18 +8995,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clusterstep">Cluster<wbr>Step</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterStep">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterStep">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterStepArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterStepOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterStepArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterStep.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -9405,18 +9141,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clusterstephadoopjarstep">Cluster<wbr>Step<wbr>Hadoop<wbr>Jar<wbr>Step</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterStepHadoopJarStep">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterStepHadoopJarStep">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterStepHadoopJarStepArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterStepHadoopJarStepOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterStepHadoopJarStepArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterStepHadoopJarStep.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

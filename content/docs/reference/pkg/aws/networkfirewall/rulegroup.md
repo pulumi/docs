@@ -991,19 +991,19 @@ const example = new aws.networkfirewall.RuleGroup("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/networkfirewall/#RuleGroup">RuleGroup</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/networkfirewall/#RuleGroupArgs">RuleGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RuleGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RuleGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/networkfirewall/#pulumi_aws.networkfirewall.RuleGroup">RuleGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_group</span><span class="p">:</span> <span class="nx">Optional[RuleGroupRuleGroupArgs]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RuleGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_group</span><span class="p">:</span> <span class="nx">Optional[RuleGroupRuleGroupArgs]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroup">NewRuleGroup</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupArgs">RuleGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroup">RuleGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRuleGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RuleGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RuleGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.RuleGroup.html">RuleGroup</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.RuleGroupArgs.html">RuleGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RuleGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RuleGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1024,7 +1024,7 @@ const example = new aws.networkfirewall.RuleGroup("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/networkfirewall/#RuleGroupArgs">RuleGroupArgs</a></span>
+        <span class="property-type"><a href="#inputs">RuleGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1093,7 +1093,7 @@ const example = new aws.networkfirewall.RuleGroup("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupArgs">RuleGroupArgs</a></span>
+        <span class="property-type"><a href="#inputs">RuleGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1132,7 +1132,7 @@ const example = new aws.networkfirewall.RuleGroup("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.RuleGroupArgs.html">RuleGroupArgs</a></span>
+        <span class="property-type"><a href="#inputs">RuleGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1622,7 +1622,7 @@ Get an existing RuleGroup resource's state with the given name, ID, and optional
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/networkfirewall/#RuleGroupState">RuleGroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/networkfirewall/#RuleGroup">RuleGroup</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">RuleGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">RuleGroup</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1631,11 +1631,11 @@ Get an existing RuleGroup resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRuleGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupState">RuleGroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroup">RuleGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRuleGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">RuleGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RuleGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.RuleGroup.html">RuleGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.RuleGroupState.html">RuleGroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">RuleGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">RuleGroupState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2131,18 +2131,6 @@ The following state arguments are supported:
 
 
 <h4 id="rulegrouprulegroup">Rule<wbr>Group<wbr>Rule<wbr>Group</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleGroup">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleGroup">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroup.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2249,18 +2237,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulegrouprulevariables">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleGroupRuleVariables">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleGroupRuleVariables">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRuleVariablesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRuleVariablesOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRuleVariablesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRuleVariables.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2367,18 +2343,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulegrouprulevariablesipset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Ip<wbr>Set</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleGroupRuleVariablesIpSet">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleGroupRuleVariablesIpSet">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRuleVariablesIpSetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRuleVariablesIpSetOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRuleVariablesIpSetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRuleVariablesIpSet.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2485,18 +2449,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulegrouprulevariablesipsetipset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Ip<wbr>Set<wbr>Ip<wbr>Set</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleGroupRuleVariablesIpSetIpSet">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleGroupRuleVariablesIpSetIpSet">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRuleVariablesIpSetIpSetOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRuleVariablesIpSetIpSet.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2563,18 +2515,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulegrouprulevariablesportset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Port<wbr>Set</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleGroupRuleVariablesPortSet">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleGroupRuleVariablesPortSet">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRuleVariablesPortSetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRuleVariablesPortSetOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRuleVariablesPortSetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRuleVariablesPortSet.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2681,18 +2621,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulegrouprulevariablesportsetportset">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Port<wbr>Set<wbr>Port<wbr>Set</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleGroupRuleVariablesPortSetPortSet">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleGroupRuleVariablesPortSetPortSet">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRuleVariablesPortSetPortSetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRuleVariablesPortSetPortSetOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRuleVariablesPortSetPortSetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRuleVariablesPortSetPortSet.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2759,18 +2687,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulegrouprulessource">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleGroupRulesSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleGroupRulesSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRulesSource.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2957,18 +2873,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulegrouprulessourcerulessourcelist">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Rules<wbr>Source<wbr>List</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleGroupRulesSourceRulesSourceList">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleGroupRulesSourceRulesSourceList">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceRulesSourceListArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceRulesSourceListOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceRulesSourceListArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRulesSourceRulesSourceList.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3115,18 +3019,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulegrouprulessourcestatefulrule">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleGroupRulesSourceStatefulRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleGroupRulesSourceStatefulRule">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatefulRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatefulRuleOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceStatefulRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRulesSourceStatefulRule.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3273,18 +3165,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulegrouprulessourcestatefulruleheader">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleGroupRulesSourceStatefulRuleHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleGroupRulesSourceStatefulRuleHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatefulRuleHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRulesSourceStatefulRuleHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3551,18 +3431,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="rulegrouprulegrouprulessourcestatefulruleruleoption">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateful<wbr>Rule<wbr>Rule<wbr>Option</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleGroupRulesSourceStatefulRuleRuleOption">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleGroupRulesSourceStatefulRuleRuleOption">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRulesSourceStatefulRuleRuleOption.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3673,18 +3541,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 {{% /choosable %}}
 
 <h4 id="rulegrouprulegrouprulessourcestatelessrulesandcustomactions">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActions">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActions.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3791,18 +3647,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 {{% /choosable %}}
 
 <h4 id="rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomaction">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomAction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomAction">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomAction.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3909,18 +3753,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 {{% /choosable %}}
 
 <h4 id="rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinition">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinition">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinition.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3987,18 +3819,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 {{% /choosable %}}
 
 <h4 id="rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinitionpublishmetricaction">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricAction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricAction">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricAction.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4065,18 +3885,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 {{% /choosable %}}
 
 <h4 id="rulegrouprulegrouprulessourcestatelessrulesandcustomactionscustomactionactiondefinitionpublishmetricactiondimension">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Dimension</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimension">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimension">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimensionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimensionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimensionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimension.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4143,18 +3951,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 {{% /choosable %}}
 
 <h4 id="rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessrule">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRule">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRule.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4261,18 +4057,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 {{% /choosable %}}
 
 <h4 id="rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinition">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinition">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinition.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4379,18 +4163,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 {{% /choosable %}}
 
 <h4 id="rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributes">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributes">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributes">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributes.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4657,18 +4429,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 {{% /choosable %}}
 
 <h4 id="rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributesdestination">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Destination</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestination">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestination">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestination.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4735,18 +4495,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 {{% /choosable %}}
 
 <h4 id="rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributesdestinationport">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Destination<wbr>Port</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPort">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPort.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4853,18 +4601,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 {{% /choosable %}}
 
 <h4 id="rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributessource">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSource.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4931,18 +4667,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 {{% /choosable %}}
 
 <h4 id="rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributessourceport">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Source<wbr>Port</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePort">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePort.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5049,18 +4773,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 {{% /choosable %}}
 
 <h4 id="rulegrouprulegrouprulessourcestatelessrulesandcustomactionsstatelessruleruledefinitionmatchattributestcpflag">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rules<wbr>Source<wbr>Stateless<wbr>Rules<wbr>And<wbr>Custom<wbr>Actions<wbr>Stateless<wbr>Rule<wbr>Rule<wbr>Definition<wbr>Match<wbr>Attributes<wbr>Tcp<wbr>Flag</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlag">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlag">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlag.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

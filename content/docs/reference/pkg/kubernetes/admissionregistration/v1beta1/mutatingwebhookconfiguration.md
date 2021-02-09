@@ -20,19 +20,19 @@ MutatingWebhookConfiguration describes the configuration of and admission webhoo
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/admissionregistration/v1beta1/#MutatingWebhookConfiguration">MutatingWebhookConfiguration</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#MutatingWebhookConfiguration">MutatingWebhookConfiguration</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MutatingWebhookConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">MutatingWebhookConfiguration</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/admissionregistration/v1beta1/#pulumi_kubernetes.admissionregistration/v1beta1.MutatingWebhookConfiguration">MutatingWebhookConfiguration</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[_meta_v1.ObjectMetaArgs]</span> = None<span class="p">, </span><span class="nx">webhooks</span><span class="p">:</span> <span class="nx">Optional[Sequence[_admissionregistration_k8s_io_v1beta1.MutatingWebhookArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MutatingWebhookConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[_meta_v1.ObjectMetaArgs]</span> = None<span class="p">, </span><span class="nx">webhooks</span><span class="p">:</span> <span class="nx">Optional[Sequence[_admissionregistration_k8s_io_v1beta1.MutatingWebhookArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/admissionregistration/v1beta1?tab=doc#MutatingWebhookConfiguration">NewMutatingWebhookConfiguration</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/admissionregistration/v1beta1?tab=doc#MutatingWebhookConfigurationArgs">MutatingWebhookConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/admissionregistration/v1beta1?tab=doc#MutatingWebhookConfiguration">MutatingWebhookConfiguration</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMutatingWebhookConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">MutatingWebhookConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MutatingWebhookConfiguration</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.AdmissionRegistration.V1Beta1.MutatingWebhookConfiguration.html">MutatingWebhookConfiguration</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Types.Inputs.AdmissionRegistration.V1Beta1.MutatingWebhookConfigurationArgs.html">MutatingWebhookConfigurationArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MutatingWebhookConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">MutatingWebhookConfigurationArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -53,7 +53,7 @@ MutatingWebhookConfiguration describes the configuration of and admission webhoo
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#MutatingWebhookConfiguration">MutatingWebhookConfiguration</a></span>
+        <span class="property-type"><a href="#inputs">MutatingWebhookConfiguration</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -122,7 +122,7 @@ MutatingWebhookConfiguration describes the configuration of and admission webhoo
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/admissionregistration/v1beta1?tab=doc#MutatingWebhookConfigurationArgs">MutatingWebhookConfigurationArgs</a></span>
+        <span class="property-type"><a href="#inputs">MutatingWebhookConfigurationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -161,7 +161,7 @@ MutatingWebhookConfiguration describes the configuration of and admission webhoo
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Types.Inputs.AdmissionRegistration.V1Beta1.MutatingWebhookConfigurationArgs.html">MutatingWebhookConfigurationArgs</a></span>
+        <span class="property-type"><a href="#inputs">MutatingWebhookConfigurationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -366,14 +366,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="labelselector">Label<wbr>Selector</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#LabelSelector">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#LabelSelector">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/admissionregistration/v1beta1?tab=doc#LabelSelectorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/admissionregistration/v1beta1?tab=doc#LabelSelectorOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -472,14 +464,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="labelselectorrequirement">Label<wbr>Selector<wbr>Requirement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#LabelSelectorRequirement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#LabelSelectorRequirement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/admissionregistration/v1beta1?tab=doc#LabelSelectorRequirementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/admissionregistration/v1beta1?tab=doc#LabelSelectorRequirementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -614,14 +598,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="managedfieldsentry">Managed<wbr>Fields<wbr>Entry</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ManagedFieldsEntry">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ManagedFieldsEntry">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/admissionregistration/v1beta1?tab=doc#ManagedFieldsEntryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/admissionregistration/v1beta1?tab=doc#ManagedFieldsEntryOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -864,14 +840,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="mutatingwebhook">Mutating<wbr>Webhook</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#MutatingWebhook">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#MutatingWebhook">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/admissionregistration/v1beta1?tab=doc#MutatingWebhookArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/admissionregistration/v1beta1?tab=doc#MutatingWebhookOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1462,14 +1430,6 @@ Defaults to "Never".{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="objectmeta">Object<wbr>Meta</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectMeta">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/admissionregistration/v1beta1?tab=doc#ObjectMetaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/admissionregistration/v1beta1?tab=doc#ObjectMetaOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2136,14 +2096,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% /choosable %}}
 
 <h4 id="ownerreference">Owner<wbr>Reference</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#OwnerReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#OwnerReference">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/admissionregistration/v1beta1?tab=doc#OwnerReferenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/admissionregistration/v1beta1?tab=doc#OwnerReferenceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2386,14 +2338,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% /choosable %}}
 
 <h4 id="rulewithoperations">Rule<wbr>With<wbr>Operations</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#RuleWithOperations">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#RuleWithOperations">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/admissionregistration/v1beta1?tab=doc#RuleWithOperationsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/admissionregistration/v1beta1?tab=doc#RuleWithOperationsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2624,14 +2568,6 @@ Depending on the enclosing object, subresources might not be allowed. Required.{
 {{% /choosable %}}
 
 <h4 id="servicereference">Service<wbr>Reference</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ServiceReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ServiceReference">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/admissionregistration/v1beta1?tab=doc#ServiceReferenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/admissionregistration/v1beta1?tab=doc#ServiceReferenceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2802,14 +2738,6 @@ Depending on the enclosing object, subresources might not be allowed. Required.{
 {{% /choosable %}}
 
 <h4 id="webhookclientconfig">Webhook<wbr>Client<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#WebhookClientConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#WebhookClientConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/admissionregistration/v1beta1?tab=doc#WebhookClientConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/admissionregistration/v1beta1?tab=doc#WebhookClientConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

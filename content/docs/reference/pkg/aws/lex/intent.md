@@ -436,19 +436,19 @@ const orderFlowersIntent = new aws.lex.Intent("order_flowers_intent", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lex/#Intent">Intent</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lex/#IntentArgs">IntentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Intent</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/lex/#pulumi_aws.lex.Intent">Intent</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">conclusion_statement</span><span class="p">:</span> <span class="nx">Optional[IntentConclusionStatementArgs]</span> = None<span class="p">, </span><span class="nx">confirmation_prompt</span><span class="p">:</span> <span class="nx">Optional[IntentConfirmationPromptArgs]</span> = None<span class="p">, </span><span class="nx">create_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dialog_code_hook</span><span class="p">:</span> <span class="nx">Optional[IntentDialogCodeHookArgs]</span> = None<span class="p">, </span><span class="nx">follow_up_prompt</span><span class="p">:</span> <span class="nx">Optional[IntentFollowUpPromptArgs]</span> = None<span class="p">, </span><span class="nx">fulfillment_activity</span><span class="p">:</span> <span class="nx">Optional[IntentFulfillmentActivityArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent_intent_signature</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rejection_statement</span><span class="p">:</span> <span class="nx">Optional[IntentRejectionStatementArgs]</span> = None<span class="p">, </span><span class="nx">sample_utterances</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">slots</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntentSlotArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Intent</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">conclusion_statement</span><span class="p">:</span> <span class="nx">Optional[IntentConclusionStatementArgs]</span> = None<span class="p">, </span><span class="nx">confirmation_prompt</span><span class="p">:</span> <span class="nx">Optional[IntentConfirmationPromptArgs]</span> = None<span class="p">, </span><span class="nx">create_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dialog_code_hook</span><span class="p">:</span> <span class="nx">Optional[IntentDialogCodeHookArgs]</span> = None<span class="p">, </span><span class="nx">follow_up_prompt</span><span class="p">:</span> <span class="nx">Optional[IntentFollowUpPromptArgs]</span> = None<span class="p">, </span><span class="nx">fulfillment_activity</span><span class="p">:</span> <span class="nx">Optional[IntentFulfillmentActivityArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent_intent_signature</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rejection_statement</span><span class="p">:</span> <span class="nx">Optional[IntentRejectionStatementArgs]</span> = None<span class="p">, </span><span class="nx">sample_utterances</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">slots</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntentSlotArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#Intent">NewIntent</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentArgs">IntentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#Intent">Intent</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntent</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IntentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Intent</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Intent.html">Intent</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.IntentArgs.html">IntentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Intent</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IntentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -469,7 +469,7 @@ const orderFlowersIntent = new aws.lex.Intent("order_flowers_intent", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lex/#IntentArgs">IntentArgs</a></span>
+        <span class="property-type"><a href="#inputs">IntentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -538,7 +538,7 @@ const orderFlowersIntent = new aws.lex.Intent("order_flowers_intent", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentArgs">IntentArgs</a></span>
+        <span class="property-type"><a href="#inputs">IntentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -577,7 +577,7 @@ const orderFlowersIntent = new aws.lex.Intent("order_flowers_intent", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.IntentArgs.html">IntentArgs</a></span>
+        <span class="property-type"><a href="#inputs">IntentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1475,7 +1475,7 @@ Get an existing Intent resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lex/#IntentState">IntentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lex/#Intent">Intent</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">IntentState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Intent</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1484,11 +1484,11 @@ Get an existing Intent resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntent<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentState">IntentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#Intent">Intent</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntent<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">IntentState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Intent</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Intent.html">Intent</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.IntentState.html">IntentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Intent</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">IntentState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2392,18 +2392,6 @@ from the user using prompts defined in the slots. Attributes are documented unde
 
 
 <h4 id="intentconclusionstatement">Intent<wbr>Conclusion<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IntentConclusionStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IntentConclusionStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentConclusionStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentConclusionStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Inputs.IntentConclusionStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Outputs.IntentConclusionStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2526,18 +2514,6 @@ slot values into the response card. For more information, see
 {{% /choosable %}}
 
 <h4 id="intentconclusionstatementmessage">Intent<wbr>Conclusion<wbr>Statement<wbr>Message</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IntentConclusionStatementMessage">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IntentConclusionStatementMessage">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentConclusionStatementMessageArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentConclusionStatementMessageOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Inputs.IntentConclusionStatementMessageArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Outputs.IntentConclusionStatementMessage.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2688,18 +2664,6 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 {{% /choosable %}}
 
 <h4 id="intentconfirmationprompt">Intent<wbr>Confirmation<wbr>Prompt</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IntentConfirmationPrompt">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IntentConfirmationPrompt">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentConfirmationPromptArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentConfirmationPromptOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Inputs.IntentConfirmationPromptArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Outputs.IntentConfirmationPrompt.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2862,18 +2826,6 @@ slot values into the response card. For more information, see
 {{% /choosable %}}
 
 <h4 id="intentconfirmationpromptmessage">Intent<wbr>Confirmation<wbr>Prompt<wbr>Message</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IntentConfirmationPromptMessage">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IntentConfirmationPromptMessage">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentConfirmationPromptMessageArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentConfirmationPromptMessageOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Inputs.IntentConfirmationPromptMessageArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Outputs.IntentConfirmationPromptMessage.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3024,18 +2976,6 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 {{% /choosable %}}
 
 <h4 id="intentdialogcodehook">Intent<wbr>Dialog<wbr>Code<wbr>Hook</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IntentDialogCodeHook">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IntentDialogCodeHook">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentDialogCodeHookArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentDialogCodeHookOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Inputs.IntentDialogCodeHookArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Outputs.IntentDialogCodeHook.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3150,18 +3090,6 @@ to invoke your Lambda function. For more information, see
 {{% /choosable %}}
 
 <h4 id="intentfollowupprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IntentFollowUpPrompt">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IntentFollowUpPrompt">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentFollowUpPromptArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentFollowUpPromptOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Inputs.IntentFollowUpPromptArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Outputs.IntentFollowUpPrompt.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3276,18 +3204,6 @@ documented below under statement.
 {{% /choosable %}}
 
 <h4 id="intentfollowuppromptprompt">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Prompt</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IntentFollowUpPromptPrompt">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IntentFollowUpPromptPrompt">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentFollowUpPromptPromptArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentFollowUpPromptPromptOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Inputs.IntentFollowUpPromptPromptArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Outputs.IntentFollowUpPromptPrompt.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3450,18 +3366,6 @@ slot values into the response card. For more information, see
 {{% /choosable %}}
 
 <h4 id="intentfollowuppromptpromptmessage">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Prompt<wbr>Message</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IntentFollowUpPromptPromptMessage">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IntentFollowUpPromptPromptMessage">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentFollowUpPromptPromptMessageArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentFollowUpPromptPromptMessageOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Inputs.IntentFollowUpPromptPromptMessageArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Outputs.IntentFollowUpPromptPromptMessage.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3612,18 +3516,6 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 {{% /choosable %}}
 
 <h4 id="intentfollowuppromptrejectionstatement">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IntentFollowUpPromptRejectionStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IntentFollowUpPromptRejectionStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentFollowUpPromptRejectionStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentFollowUpPromptRejectionStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Inputs.IntentFollowUpPromptRejectionStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Outputs.IntentFollowUpPromptRejectionStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3746,18 +3638,6 @@ slot values into the response card. For more information, see
 {{% /choosable %}}
 
 <h4 id="intentfollowuppromptrejectionstatementmessage">Intent<wbr>Follow<wbr>Up<wbr>Prompt<wbr>Rejection<wbr>Statement<wbr>Message</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IntentFollowUpPromptRejectionStatementMessage">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IntentFollowUpPromptRejectionStatementMessage">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentFollowUpPromptRejectionStatementMessageArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentFollowUpPromptRejectionStatementMessageOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Inputs.IntentFollowUpPromptRejectionStatementMessageArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Outputs.IntentFollowUpPromptRejectionStatementMessage.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3908,18 +3788,6 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 {{% /choosable %}}
 
 <h4 id="intentfulfillmentactivity">Intent<wbr>Fulfillment<wbr>Activity</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IntentFulfillmentActivity">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IntentFulfillmentActivity">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentFulfillmentActivityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentFulfillmentActivityOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Inputs.IntentFulfillmentActivityArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Outputs.IntentFulfillmentActivity.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4034,18 +3902,6 @@ Required if type is CodeHook. Attributes are documented under code_hook.
 {{% /choosable %}}
 
 <h4 id="intentfulfillmentactivitycodehook">Intent<wbr>Fulfillment<wbr>Activity<wbr>Code<wbr>Hook</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IntentFulfillmentActivityCodeHook">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IntentFulfillmentActivityCodeHook">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentFulfillmentActivityCodeHookArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentFulfillmentActivityCodeHookOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Inputs.IntentFulfillmentActivityCodeHookArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Outputs.IntentFulfillmentActivityCodeHook.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4160,18 +4016,6 @@ to invoke your Lambda function. For more information, see
 {{% /choosable %}}
 
 <h4 id="intentrejectionstatement">Intent<wbr>Rejection<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IntentRejectionStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IntentRejectionStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentRejectionStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentRejectionStatementOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Inputs.IntentRejectionStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Outputs.IntentRejectionStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4294,18 +4138,6 @@ slot values into the response card. For more information, see
 {{% /choosable %}}
 
 <h4 id="intentrejectionstatementmessage">Intent<wbr>Rejection<wbr>Statement<wbr>Message</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IntentRejectionStatementMessage">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IntentRejectionStatementMessage">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentRejectionStatementMessageArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentRejectionStatementMessageOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Inputs.IntentRejectionStatementMessageArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Outputs.IntentRejectionStatementMessage.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4456,18 +4288,6 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 {{% /choosable %}}
 
 <h4 id="intentslot">Intent<wbr>Slot</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IntentSlot">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IntentSlot">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentSlotArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentSlotOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Inputs.IntentSlotArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Outputs.IntentSlot.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4890,18 +4710,6 @@ from the user. Attributes are documented under prompt.
 {{% /choosable %}}
 
 <h4 id="intentslotvalueelicitationprompt">Intent<wbr>Slot<wbr>Value<wbr>Elicitation<wbr>Prompt</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IntentSlotValueElicitationPrompt">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IntentSlotValueElicitationPrompt">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentSlotValueElicitationPromptArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentSlotValueElicitationPromptOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Inputs.IntentSlotValueElicitationPromptArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Outputs.IntentSlotValueElicitationPrompt.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5064,18 +4872,6 @@ slot values into the response card. For more information, see
 {{% /choosable %}}
 
 <h4 id="intentslotvalueelicitationpromptmessage">Intent<wbr>Slot<wbr>Value<wbr>Elicitation<wbr>Prompt<wbr>Message</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IntentSlotValueElicitationPromptMessage">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IntentSlotValueElicitationPromptMessage">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentSlotValueElicitationPromptMessageArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lex?tab=doc#IntentSlotValueElicitationPromptMessageOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Inputs.IntentSlotValueElicitationPromptMessageArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lex.Outputs.IntentSlotValueElicitationPromptMessage.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

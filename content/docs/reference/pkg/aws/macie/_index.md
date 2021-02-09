@@ -27,21 +27,3 @@ Explore the resources and functions of the macie module in the AWS package.
 	<dd>3.28.0</dd>
 </dl>
 
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Macie.html" title="Pulumi.Aws.Macie">Pulumi.Aws.Macie</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/macie?tab=doc#" title="aws/macie">aws/macie</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/macie/#" title="@pulumi/aws/macie">@pulumi/aws/macie</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/macie" title="pulumi_aws/macie">pulumi_aws/macie</a></dd>
-
-</dl>
-
