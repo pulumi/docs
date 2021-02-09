@@ -179,7 +179,7 @@ In the sample pipeline we will show you how to add the Pulumi stage and create a
 
 1. Create a new Pipeline and click the **Add Stage** button. This will allow you to pick from a list of available stages,
   including the Pulumi stage which you would have added above.
-1. Configure the inputs for the Pulumi stage accordingly. 
+1. Configure the inputs for the Pulumi stage accordingly.
    As previously mentioned in this guide, you can use [pipeline expressions](https://www.spinnaker.io/guides/user/pipeline/expressions/)
    for your stage inputs.
 1. Set the value of the **Command** input to `preview`.
