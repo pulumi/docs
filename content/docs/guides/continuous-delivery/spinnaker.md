@@ -201,7 +201,7 @@ you the current output.
 If you are running Spinnaker on your machine, it can take several minutes before the job starts to execute and the logs are visible. If you see a`ContainerCreating` error, it means the pod running the job isn't ready yet.
     {{% /notes %}}
 
-1. Once the pipeline is complete, assuming you have not modified the example app, the `nginx` container would have been
+Once the pipeline is complete, assuming you have not modified the example app, the `nginx` container would have been
 deployed to the `default` namespace. Get the pod IP by running a `kubectl` command and `curl`-ing the IP to see the response:
 
 ```bash
