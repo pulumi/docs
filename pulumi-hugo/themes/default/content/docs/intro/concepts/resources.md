@@ -956,7 +956,7 @@ var db = new Database("db", new DatabaseArgs(),
 
 #### provider
 
-The `provider` option sets a provider for the resource. For more information, see [Providers]){{< relref "#providers" >}}. The default is to inherit this value from the parent resource, and to use the ambient provider specified by Pulumi configuration for resources without a parent.
+The `provider` option sets a provider for the resource. For more information, see [Providers]({{< relref "#providers" >}}). The default is to inherit this value from the parent resource, and to use the ambient provider specified by Pulumi configuration for resources without a parent.
 
 {{< chooser language "javascript,typescript,python,go,csharp" >}}
 
