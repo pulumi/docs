@@ -7,6 +7,7 @@ menu:
   userguides:
     parent: tutorials
     identifier: tutorials-gcp
+    weight: 3
 
 aliases: ["/docs/reference/tutorials/gcp/"]
 ---

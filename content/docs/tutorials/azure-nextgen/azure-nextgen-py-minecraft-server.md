@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Minecraft Server Using an Azure Virtual Machine | Python"
 h1: "Minecraft Server Using an Azure Virtual Machine"
 linktitle: "Minecraft Server Using an Azure Virtual Machine"
 no_edit_this_page: true

@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Azure App Service Running Docker Containers on Linux | TypeScript"
 h1: "Azure App Service Running Docker Containers on Linux"
 linktitle: "Azure App Service Running Docker Containers on Linux"
 no_edit_this_page: true
@@ -9,11 +9,11 @@ no_edit_this_page: true
 <!-- To change it, please see https://github.com/pulumi/docs/tree/master/tools/mktutorial. -->
 
 <p class="mb-4 flex">
-    <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/azure-nextgen-go-appservice-docker" target="_blank">
+    <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/azure-nextgen-ts-appservice-docker" target="_blank">
         <span><i class="fab fa-github pr-2"></i> View Code</span>
     </a>
 
-    <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/azure-nextgen-go-appservice-docker" target="_blank">
+    <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/azure-nextgen-ts-appservice-docker" target="_blank">
         <img src="https://get.pulumi.com/new/button.svg" alt="Deploy">
     </a>
 </p>
@@ -39,7 +39,13 @@ The example shows two scenarios:
     ```
     $ az login
     ```
-   
+
+1.  Restore NPM dependencies:
+
+    ```
+    $ npm install
+    ```
+    
 1. Set the Azure region location to use:
     
     ```
@@ -61,17 +67,17 @@ The example shows two scenarios:
     Duration: 56s
     ```
 
-1.  Check the deployed website endpoint:
+1.  Check the deployed endpoints:
 
     ```
-    $ pulumi stack output helloEndpoint
+    $ pulumi stack output HelloEndpoint
     http://hello-app-91dfea.azurewebsites.net/hello
-    $ curl "$(pulumi stack output helloEndpoint)"
+    $ curl "$(pulumi stack output HelloEndpoint)"
     Hello, world!
 
-    $ pulumi stack output getStartedEndpoint
+    $ pulumi stack output GetStartedEndpoint
     http://get-started-15da13.azurewebsites.net
-    $ curl "$(pulumi stack output getStartedEndpoint)"
+    $ curl "$(pulumi stack output GetStartedEndpoint)"
     <html>
     <body>
     <h1>Your custom docker image is running in Azure App Service!</h1>

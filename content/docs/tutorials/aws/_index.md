@@ -6,6 +6,7 @@ menu:
   userguides:
     parent: tutorials
     identifier: tutorials-aws
+    weight: 1
 
 aliases: ["/docs/reference/tutorials/aws/"]
 ---

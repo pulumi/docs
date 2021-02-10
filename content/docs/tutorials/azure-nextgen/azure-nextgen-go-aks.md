@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Azure Kubernetes Service (AKS) Cluster using Azure Next Generation Provider | Go"
 h1: "Azure Kubernetes Service (AKS) Cluster using Azure Next Generation Provider"
 linktitle: "Azure Kubernetes Service (AKS) Cluster using Azure Next Generation Provider"
 no_edit_this_page: true
@@ -9,11 +9,11 @@ no_edit_this_page: true
 <!-- To change it, please see https://github.com/pulumi/docs/tree/master/tools/mktutorial. -->
 
 <p class="mb-4 flex">
-    <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/azure-nextgen-py-aks" target="_blank">
+    <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/azure-nextgen-go-aks" target="_blank">
         <span><i class="fab fa-github pr-2"></i> View Code</span>
     </a>
 
-    <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/azure-nextgen-py-aks" target="_blank">
+    <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/azure-nextgen-go-aks" target="_blank">
         <img src="https://get.pulumi.com/new/button.svg" alt="Deploy">
     </a>
 </p>
@@ -28,8 +28,7 @@ To deploy your infrastructure, follow the below steps.
 ### Prerequisites
 
 1. [Install Pulumi](https://www.pulumi.com/docs/get-started/install/)
-2. [Install Python 3.6 or higher](https://www.python.org/downloads/)
-3. [Configure Azure Credentials](https://www.pulumi.com/docs/intro/cloud-providers/azure/setup/)
+1. [Configure Azure Credentials](https://www.pulumi.com/docs/intro/cloud-providers/azure/setup/)
 
 ### Steps
 
@@ -38,21 +37,10 @@ After cloning this repo, from this working directory, run these commands:
 1. Create a new stack, which is an isolated deployment target for this example:
 
     ```bash
-    $ pulumi stack init
+    $ pulumi stack init dev
     ```
 
-1. Create a Python virtualenv, activate it, and install dependencies:
-
-    This installs the dependent packages [needed](https://www.pulumi.com/docs/intro/concepts/how-pulumi-works/) for our Pulumi program.
-
-    ```bash
-    $ python3 -m venv venv
-    $ source venv/bin/activate
-    $ pip3 install -r requirements.txt
-    ```
-
-1. Initiate pulumi to stand up the cluster
-
+1. Stand up the cluster by invoking pulumi
     ```bash
     $ pulumi up
     ```
@@ -60,7 +48,7 @@ After cloning this repo, from this working directory, run these commands:
 1. After 3-4 minutes, your cluster will be ready, and the kubeconfig YAML you'll use to connect to the cluster will be available as an output. You can save this kubeconfig to a file like so:
 
     ```bash
-    $ pulumi stack output kubeconfig > kubeconfig.yaml
+    $ pulumi stack output kubeconfig --show-secrets > kubeconfig.yaml
     ```
 
     Once you have this file in hand, you can interact with your new cluster as usual via `kubectl`:

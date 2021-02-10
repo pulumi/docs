@@ -7,6 +7,7 @@ menu:
   userguides:
     parent: tutorials
     identifier: tutorials-kubernetes
+    weight: 4
 
 aliases: ["/docs/reference/tutorials/kubernetes/"]
 ---

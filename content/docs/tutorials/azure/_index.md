@@ -7,6 +7,7 @@ menu:
   userguides:
     parent: tutorials
     identifier: tutorials-azure
+    weight: 5
 
 aliases: ["/docs/reference/tutorials/azure/"]
 ---

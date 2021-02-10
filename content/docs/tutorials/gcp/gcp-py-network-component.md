@@ -19,7 +19,7 @@ no_edit_this_page: true
 </p>
 
 
-This example uses `pulumi.ComponentResource` as described [here](https://www.pulumi.com/docs/intro/concepts/programming-model/#components) 
+This example uses `pulumi.ComponentResource` as described [here](https://www.pulumi.com/docs/intro/concepts/resources/#components) 
 to create a Google Cloud Network and instance.
 
 The use of `pulumi.ComponentResource` demonstrates how multiple low-level resources 
