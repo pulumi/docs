@@ -10,15 +10,15 @@
 {{ define "main" }}
     <section id="backgrounds" class="container mx-auto">
         {{ range .Params.backgrounds }}
-            <div class="flex flex-col lg:flex-row my-12">
-                <div class="w-full lg:w-5/12 p-4 px-16">
+            <div class="flex flex-col lg:flex-row my-4 lg:my-12">
+                <div class="w-full mb-12 order-last lg:order-first lg:mb-0 lg:w-5/12 p-4 px-16">
                     <p class="text-2xl font-bold">{{ .name }}</p>
                     <p class="mb-12">{{ .description }}</p>
                     <a href="{{ .image }}" class="btn btn-lg" download>
                         Download
                     </a>
                 </div>
-                <div class="w-full lg:w-7/12">
+                <div class="w-full order-first lg:order-last lg:w-7/12">
                     <img src="{{ .image }}" alt="{{ .name }}" />
                 </div>
             </div>

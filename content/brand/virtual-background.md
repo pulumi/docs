@@ -8,28 +8,43 @@ meta_desc: This page contains a collection of virtual backgrounds featuring the 
 hero:
     title: Virtual Backgrounds
     description: |
-        Video calls have become an important part of many of our lives lately and we've noticed that after a while video calls can become somewhat monotonous. While we can't help you with the content of a video call, we can help make sure you've got some exciting virtual backgrounds, that will surely make you the talk of your company at your next virtual happy hour.
+        Video calls have become an important part of many of our lives and we've noticed that lately they’ve become somewhat monotonous. While we can't help you with the content of your video call, we can make sure you've got some exciting virtual backgrounds that will surely make you the talk of the company at your next virtual happy hour.
 
 backgrounds:
+    - name: This Is Fine
+      image: /images/virtual-backgrounds/this-is-fine-pulumipus.jpg
+      description: |
+        For those days when nothing seems to be going right and every time you try and "fix" something you are just starting another fire. Fear not, the Pulumipus is here to comfort you and your co-workers — this is fine.
+
     - name: Maximum Chill
       image: /images/virtual-backgrounds/maximum-chill-pulumipus.jpg
       description: |
-         Life is hard and sometimes we just have to let everyone know that it is time to relax and take a load off. Whether you've had an intense week of work or your child has been asking you for 72 hours straight when the pandemic will be over, this background let's everyone know you're ready hit the beach and not have a care in the world.
+         Life is hard and sometimes we just have to let everyone know that it’s time to relax and take a load off. Whether you've had an intense week of work or your kid has been asking you for 72 hours straight when the pandemic will be over, this background lets everyone know you're mentally ready to hit the beach and leave your cares behind.
+
+    - name: The Suit
+      image: /images/virtual-backgrounds/the-suit-pulumi.png
+      description: |
+         Virtual backgrounds are the wardrobe of the remote working world. While it's fun to have silly backgrounds, some calls are going to be more important than others and your virtual background needs to rise to that occasion. The subtle blurring of the foyer in the Pulumi Office provides the perfect vibe to let everyone know that today you mean business.
 
     - name: Shred the Gnar
       image: /images/virtual-backgrounds/shred-the-gnar-pulumipus.jpg
       description: |
-        Everyone has those days where they just wake up ready to attack the world and do as much good as they possibly. If you wake up in the morning ready to "shred the gnar" that is life, then this background is for you. Let all your co-workers know that today is that day you are finally going to finish that thing you've been saying your going to finish for the last 6 months.
+        Everyone has those super productive days where you wake up ready to attack the world. If you woke up this morning ready to "shred the gnar,” then this background is for you. Let all your co-workers know that today is that day. It’s your day. And you are finally going to finish that thing you've been saying you’ll finish for the last 6 months.
+
+    - name: On Cloud Nine
+      image: /images/virtual-backgrounds/cloud-nine-pulumipus.jpg
+      description: |
+        Have you ever thought, “Wow I am so happy right now. I wish I had a virtual background to express how happy I am right now.” Well you’re in luck because now you do. The image of the Pulumipus gracefully flying around the city is the perfect way to express that you’re “on cloud nine.”
 
     - name: Robot Repair
       image: /images/virtual-backgrounds/robot-repair-pulumipus.png
       description: |
-        Regardless of where you fall on love/hate spectrum of robots we can all agree of one thing, they require maintenance. And this background represents that exactly. Use this as your background on the days your doing those important maintenance tasks no one ever thanks you for, but prevents your organization from collapsing entirely.
+        Regardless of where you fall on the love/hate spectrum of robots we can all agree on one thing – they require maintenance. This background is for the days you spend grinding away on those important maintenance tasks that no one ever thanks you for, but which prevent your organization from collapsing entirely.
 
-    - name: This Is Fine
-      image: /images/virtual-backgrounds/this-is-fine-pulumipus.jpg
+    - name: Bring The Cheer
+      image: /images/virtual-backgrounds/bring-the-cheer-pulumipus.jpg
       description: |
-        For those days where nothing seems to go right and every time you try and "fix" something you are just starting another "fire." The Pulumipus is here to comfort you and your co-workers with its cold almost emotionless stare.
+        We might be biased but Pike’s Place Market in Seattle is one of the most elegant and cheerful places to be spending your Christmas season. You’re sure to brighten up the spirits of everyone on the call when you arrive with this background.
 
     - name: To The Moon
       image: /images/virtual-backgrounds/to-the-moon-pulumipus.jpg
