@@ -29,16 +29,16 @@ From VMs to Serverless to Containers, our collection of tutorials below represen
     </div>
     <div class="w-1/2 border-solid ml-4 border-t-2 border-gray-200">
         <p>
-            <a href="{{< relref "azure" >}}"><img class="h-10" src="/logos/tech/azure.svg" alt="Azure"></a>
+            <a href="{{< relref "azure-nextgen" >}}"><img class="h-10" src="/logos/tech/azure.svg" alt="Azure"></a>
         </p>
         <ul class="p2 ml-2">
-            <li><a href="{{< relref "azure/container-webserver" >}}">Azure Container Instances</a></li>
-            <li><a href="{{< relref "azure/azure-ts-webserver" >}}">Azure Virtual Machine</a></li>
-            <li><a href="{{< relref "azure/azure-ts-serverless-url-shortener-global" >}}">CosmosDB and Functions</a></li>
-            <li><a href="{{< relref "azure/azure-ts-appservice-springboot" >}}">Azure App Service</a></li>
+            <li><a href="{{< relref "azure-nextgen/azure-nextgen-cs-aci" >}}">Azure Container Instances</a></li>
+            <li><a href="{{< relref "azure-nextgen/azure-nextgen-cs-aks" >}}">Azure Kubernetes Service</a></li>
+            <li><a href="{{< relref "azure-nextgen/azure-nextgen-cs-appservice-docker" >}}">Azure App Service</a></li>
+            <li><a href="{{< relref "azure-nextgen/azure-nextgen-ts-webserver" >}}">Azure Virtual Machine</a></li>
         </ul>
         <p class="mt-6">
-            <a class="btn btn-secondary" href="{{< relref "azure" >}}">VIEW MORE</a>
+            <a class="btn btn-secondary" href="{{< relref "azure-nextgen" >}}">VIEW MORE</a>
         </p>
     </div>
 </div>
