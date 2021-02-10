@@ -74,8 +74,11 @@
     {{ if .IsHome }}
         <title>{{ .Site.Title }}</title>
     {{ else if .Params.title_tag }}
+        <!-- Using the title frontmatter value to override the default title string that Swiftype pulls in. -->
+        <meta class="swiftype" name="title" data-type="string" content="{{ .Params.title_tag }}" />
         <title>{{ .Params.title_tag }} | Pulumi</title>
     {{ else if .Title }}
+        <meta class="swiftype" name="title" data-type="string" content="{{ .Title }}" />
         <title>{{ .Title }} | Pulumi</title>
     {{ else if not (or .Params.redirect_to .Params.private) }}
         <!--
