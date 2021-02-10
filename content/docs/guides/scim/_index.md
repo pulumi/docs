@@ -14,3 +14,4 @@ The [Pulumi Console](https://app.pulumi.com) supports System for Cross-domain Id
 To leverage SCIM between Pulumi and your SAML 2.0 identity provider, refer to one of our example guides:
 
 - [Configuring Okta]({{< relref "/docs/guides/scim/okta" >}})
+- [Configuring Azure AD]({{< relref "/docs/guides/scim/azuread" >}})
