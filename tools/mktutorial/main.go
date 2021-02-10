@@ -30,7 +30,7 @@ import (
 )
 
 // clouds contains an index of the clouds for which we want to publish tutorials.
-var clouds = []string{"aws", "azure", "gcp", "kubernetes"}
+var clouds = []string{"aws", "azure", "azure-nextgen", "gcp", "kubernetes"}
 
 func main() {
 	// Parse and validate the args.
@@ -114,18 +114,19 @@ func gatherTutorials(root string) ([]tutorial, error) {
 
 		// Each tutorial directory follows a convention: <cloud>-<language>-<short-name>. Parse it.
 		// Warn and ignore any that don't follow this convention (ideally we'd fix them).
-		var parts []string
-		for i, rem := 0, file.Name(); i < 2; i++ {
-			dashIx := strings.Index(rem, "-")
-			if dashIx == -1 {
-				break
-			}
-			parts = append(parts, rem[:dashIx])
-			rem = rem[dashIx+1:]
-		}
-		if len(parts) != 2 || parts[0] == "" || parts[1] == "" {
+		parts := strings.Split(file.Name(), "-")
+
+		if len(parts) < 2 || parts[0] == "" || parts[1] == "" {
 			warn("malformed tutorial name; expected <cloud>-<language>-<short-name>, got '%s'", name)
 			continue
+		}
+
+		// Assign the parts of the tutorial name to variables.
+		cloud := parts[0]
+		language := parts[1]
+		if parts[1] == "nextgen" && len(parts) >= 3 {
+			cloud = fmt.Sprintf("%s-%s", parts[0], parts[1])
+			language = parts[2]
 		}
 
 		// Now that we've got the cloud and language, parse the contents to get extra metadata.
@@ -167,10 +168,6 @@ func gatherTutorials(root string) ([]tutorial, error) {
 			continue
 		}
 		h1 = strings.TrimSpace(h1)
-
-		// Assign the parts of the tutorial name to variables.
-		cloud := parts[0]
-		language := parts[1]
 
 		// Add the language to the page title to avoid duplicate titles.
 		var title string
