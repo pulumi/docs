@@ -46,7 +46,7 @@ If you are not yet ready to enable provisioning for Groups, disable that.
 
 ![mappings](/images/docs/guides/scim/azuread/mappings.png)
 
-### Adjust Attribute Mappings
+### Adjust User Attribute Mappings
 
 Update the mapping for the **userName** attribute to be sourced from **mailNickname** instead of **userPrincipalName**. If you are not already there, click on **Provision Azure Active Directory _Users_** from the **Mappings** expansion panel, then click on the corresponding attribute mapping as shown below.
 
@@ -63,13 +63,13 @@ Delete all attributes **except** for the following using the **Delete** button:
 * userName
 * active
 * displayName
-* emails[type eq "work"]
+* emails[type eq "work"].value
 * name.givenName
 * name.familyName
 
 ### Set The Emails Attribute To Required
 
-In the Mappings editor, scroll-down and click the **Show advanced options** checkbox and then the **Edit attribute list for customappsso** link.
+In the user attribute mappings editor, scroll-down and click the **Show advanced options** checkbox and then the **Edit attribute list for customappsso** link.
 
 ![advanced options](/images/docs/guides/scim/azuread/advanced_options.png)
 
@@ -78,6 +78,17 @@ Check the **required** checkbox for the **emails** attribute, and click **Save**
 ![email required](/images/docs/guides/scim/azuread/email_required.png)
 
 We are now done with the Mappings configuration. Click the **Save** and close the child windows (blades) until you get back to the main **Provisioning** window where you can see the **Provisioning Status** drop-down.
+
+## Enable Group Provisioning
+
+To enable provisioning of Azure AD groups to Pulumi Service, click the **Edit Provisioning** button if you are not already
+editing the provisioning setup. Then click the **Provision Azure Active Directory Groups** setting under the **Mappings**
+expansion panel and switch the **Enabled** setting to **Yes**.
+
+### Update Group Attribute Mappings
+
+Scroll-down to the Attribute Mappings section while you are editing the group provisioning setup and remove the mapping
+between `objectId` and `externalId`. Click **Save** once you are done.
 
 ## Enable Provisioning
 
