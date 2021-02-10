@@ -23,24 +23,6 @@ Explore the resources and functions of the vpcaccess module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>4.10.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.VpcAccess.html" title="Pulumi.Gcp.VpcAccess">Pulumi.Gcp.VpcAccess</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/vpcaccess?tab=doc#" title="gcp/vpcaccess">gcp/vpcaccess</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/vpcaccess/#" title="@pulumi/gcp/vpcaccess">@pulumi/gcp/vpcaccess</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/vpcaccess" title="pulumi_gcp/vpcaccess">pulumi_gcp/vpcaccess</a></dd>
-
+	<dd>4.11.0</dd>
 </dl>
 

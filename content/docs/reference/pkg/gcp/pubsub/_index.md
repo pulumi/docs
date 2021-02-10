@@ -37,24 +37,6 @@ Explore the resources and functions of the pubsub module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>4.10.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.html" title="Pulumi.Gcp.PubSub">Pulumi.Gcp.PubSub</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/pubsub?tab=doc#" title="gcp/pubsub">gcp/pubsub</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/pubsub/#" title="@pulumi/gcp/pubsub">@pulumi/gcp/pubsub</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/pubsub" title="pulumi_gcp/pubsub">pulumi_gcp/pubsub</a></dd>
-
+	<dd>4.11.0</dd>
 </dl>
 

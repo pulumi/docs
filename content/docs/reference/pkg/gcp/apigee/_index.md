@@ -23,24 +23,6 @@ Explore the resources and functions of the apigee module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>4.10.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Apigee.html" title="Pulumi.Gcp.Apigee">Pulumi.Gcp.Apigee</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/apigee?tab=doc#" title="gcp/apigee">gcp/apigee</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/apigee/#" title="@pulumi/gcp/apigee">@pulumi/gcp/apigee</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/apigee" title="pulumi_gcp/apigee">pulumi_gcp/apigee</a></dd>
-
+	<dd>4.11.0</dd>
 </dl>
 

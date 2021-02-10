@@ -135,7 +135,7 @@ export const nodePools = myCluster.then(myCluster => myCluster.nodePools);
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCluster<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/container/#GetClusterArgs">GetClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/container/#GetClusterResult">GetClusterResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCluster<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetClusterResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -145,7 +145,7 @@ export const nodePools = myCluster.then(myCluster => myCluster.nodePools);
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#LookupClusterArgs">LookupClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#LookupClusterResult">LookupClusterResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupClusterResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupCluster` in the Go SDK.
 
@@ -154,7 +154,7 @@ export const nodePools = myCluster.then(myCluster => myCluster.nodePools);
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCluster </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.GetClusterResult.html">GetClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.GetClusterArgs.html">GetClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -2307,16 +2307,6 @@ The following output properties are available:
 
 
 <h4 id="getclusteraddonsconfig">Get<wbr>Cluster<wbr>Addons<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterAddonsConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterAddonsConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterAddonsConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2669,16 +2659,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusteraddonsconfigcloudrunconfig">Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Cloudrun<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterAddonsConfigCloudrunConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterAddonsConfigCloudrunConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterAddonsConfigCloudrunConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2779,16 +2759,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusteraddonsconfigconfigconnectorconfig">Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Config<wbr>Connector<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterAddonsConfigConfigConnectorConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterAddonsConfigConfigConnectorConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterAddonsConfigConfigConnectorConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2853,16 +2823,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusteraddonsconfigdnscacheconfig">Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Dns<wbr>Cache<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterAddonsConfigDnsCacheConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterAddonsConfigDnsCacheConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterAddonsConfigDnsCacheConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2927,16 +2887,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusteraddonsconfiggcepersistentdiskcsidriverconfig">Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Gce<wbr>Persistent<wbr>Disk<wbr>Csi<wbr>Driver<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3001,16 +2951,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusteraddonsconfighorizontalpodautoscaling">Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Horizontal<wbr>Pod<wbr>Autoscaling</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterAddonsConfigHorizontalPodAutoscaling">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterAddonsConfigHorizontalPodAutoscaling">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterAddonsConfigHorizontalPodAutoscaling.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3075,16 +3015,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusteraddonsconfighttploadbalancing">Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Http<wbr>Load<wbr>Balancing</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterAddonsConfigHttpLoadBalancing">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterAddonsConfigHttpLoadBalancing">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterAddonsConfigHttpLoadBalancing.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3149,16 +3079,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusteraddonsconfigistioconfig">Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Istio<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterAddonsConfigIstioConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterAddonsConfigIstioConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterAddonsConfigIstioConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3259,16 +3179,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusteraddonsconfigkalmconfig">Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Kalm<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterAddonsConfigKalmConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterAddonsConfigKalmConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterAddonsConfigKalmConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3333,16 +3243,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusteraddonsconfignetworkpolicyconfig">Get<wbr>Cluster<wbr>Addons<wbr>Config<wbr>Network<wbr>Policy<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterAddonsConfigNetworkPolicyConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterAddonsConfigNetworkPolicyConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterAddonsConfigNetworkPolicyConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3407,16 +3307,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterauthenticatorgroupsconfig">Get<wbr>Cluster<wbr>Authenticator<wbr>Groups<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterAuthenticatorGroupsConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterAuthenticatorGroupsConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterAuthenticatorGroupsConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3481,16 +3371,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterclusterautoscaling">Get<wbr>Cluster<wbr>Cluster<wbr>Autoscaling</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterClusterAutoscaling">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterClusterAutoscaling">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterClusterAutoscaling.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3663,16 +3543,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterclusterautoscalingautoprovisioningdefault">Get<wbr>Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Auto<wbr>Provisioning<wbr>Default</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterClusterAutoscalingAutoProvisioningDefault">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterClusterAutoscalingAutoProvisioningDefault">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterClusterAutoscalingAutoProvisioningDefault.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3809,16 +3679,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterclusterautoscalingresourcelimit">Get<wbr>Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Resource<wbr>Limit</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterClusterAutoscalingResourceLimit">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterClusterAutoscalingResourceLimit">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterClusterAutoscalingResourceLimit.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3955,16 +3815,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterclustertelemetry">Get<wbr>Cluster<wbr>Cluster<wbr>Telemetry</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterClusterTelemetry">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterClusterTelemetry">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterClusterTelemetry.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -4029,16 +3879,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterconfidentialnode">Get<wbr>Cluster<wbr>Confidential<wbr>Node</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterConfidentialNode">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterConfidentialNode">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterConfidentialNode.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -4103,16 +3943,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterdatabaseencryption">Get<wbr>Cluster<wbr>Database<wbr>Encryption</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterDatabaseEncryption">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterDatabaseEncryption">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterDatabaseEncryption.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -4213,16 +4043,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterdefaultsnatstatus">Get<wbr>Cluster<wbr>Default<wbr>Snat<wbr>Status</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterDefaultSnatStatus">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterDefaultSnatStatus">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterDefaultSnatStatus.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -4287,16 +4107,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusteripallocationpolicy">Get<wbr>Cluster<wbr>Ip<wbr>Allocation<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterIpAllocationPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterIpAllocationPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterIpAllocationPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -4469,16 +4279,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclustermaintenancepolicy">Get<wbr>Cluster<wbr>Maintenance<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterMaintenancePolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterMaintenancePolicy">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterMaintenancePolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -4615,16 +4415,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclustermaintenancepolicydailymaintenancewindow">Get<wbr>Cluster<wbr>Maintenance<wbr>Policy<wbr>Daily<wbr>Maintenance<wbr>Window</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterMaintenancePolicyDailyMaintenanceWindow">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterMaintenancePolicyDailyMaintenanceWindow">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterMaintenancePolicyDailyMaintenanceWindow.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -4725,16 +4515,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclustermaintenancepolicymaintenanceexclusion">Get<wbr>Cluster<wbr>Maintenance<wbr>Policy<wbr>Maintenance<wbr>Exclusion</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterMaintenancePolicyMaintenanceExclusion">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterMaintenancePolicyMaintenanceExclusion">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterMaintenancePolicyMaintenanceExclusion.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -4871,16 +4651,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclustermaintenancepolicyrecurringwindow">Get<wbr>Cluster<wbr>Maintenance<wbr>Policy<wbr>Recurring<wbr>Window</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterMaintenancePolicyRecurringWindow">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterMaintenancePolicyRecurringWindow">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterMaintenancePolicyRecurringWindow.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -5017,16 +4787,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclustermasterauth">Get<wbr>Cluster<wbr>Master<wbr>Auth</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterMasterAuth">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterMasterAuth">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterMasterAuth.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -5271,16 +5031,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclustermasterauthclientcertificateconfig">Get<wbr>Cluster<wbr>Master<wbr>Auth<wbr>Client<wbr>Certificate<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterMasterAuthClientCertificateConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterMasterAuthClientCertificateConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterMasterAuthClientCertificateConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -5345,16 +5095,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclustermasterauthorizednetworksconfig">Get<wbr>Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterMasterAuthorizedNetworksConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterMasterAuthorizedNetworksConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterMasterAuthorizedNetworksConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -5419,16 +5159,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclustermasterauthorizednetworksconfigcidrblock">Get<wbr>Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Cidr<wbr>Block</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterMasterAuthorizedNetworksConfigCidrBlock">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterMasterAuthorizedNetworksConfigCidrBlock">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterMasterAuthorizedNetworksConfigCidrBlock.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -5529,16 +5259,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusternetworkpolicy">Get<wbr>Cluster<wbr>Network<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNetworkPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterNetworkPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterNetworkPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -5639,16 +5359,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusternodeconfig">Get<wbr>Cluster<wbr>Node<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodeConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterNodeConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterNodeConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -6397,16 +6107,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusternodeconfigguestaccelerator">Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodeConfigGuestAccelerator">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterNodeConfigGuestAccelerator">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterNodeConfigGuestAccelerator.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -6507,16 +6207,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusternodeconfigkubeletconfig">Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodeConfigKubeletConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterNodeConfigKubeletConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterNodeConfigKubeletConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -6653,16 +6343,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusternodeconfiglinuxnodeconfig">Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodeConfigLinuxNodeConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterNodeConfigLinuxNodeConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterNodeConfigLinuxNodeConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -6727,16 +6407,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusternodeconfigsandboxconfig">Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodeConfigSandboxConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterNodeConfigSandboxConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterNodeConfigSandboxConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -6801,16 +6471,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusternodeconfigshieldedinstanceconfig">Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodeConfigShieldedInstanceConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterNodeConfigShieldedInstanceConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterNodeConfigShieldedInstanceConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -6911,16 +6571,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusternodeconfigtaint">Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Taint</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodeConfigTaint">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterNodeConfigTaint">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterNodeConfigTaint.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -7057,16 +6707,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusternodeconfigworkloadmetadataconfig">Get<wbr>Cluster<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodeConfigWorkloadMetadataConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterNodeConfigWorkloadMetadataConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterNodeConfigWorkloadMetadataConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -7131,16 +6771,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusternodepool">Get<wbr>Cluster<wbr>Node<wbr>Pool</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodePool">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterNodePool">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterNodePool.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -7605,16 +7235,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusternodepoolautoscaling">Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Autoscaling</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodePoolAutoscaling">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterNodePoolAutoscaling">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterNodePoolAutoscaling.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -7715,16 +7335,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusternodepoolmanagement">Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Management</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodePoolManagement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterNodePoolManagement">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterNodePoolManagement.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -7825,16 +7435,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusternodepoolnodeconfig">Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodePoolNodeConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterNodePoolNodeConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterNodePoolNodeConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -8583,16 +8183,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusternodepoolnodeconfigguestaccelerator">Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodePoolNodeConfigGuestAccelerator">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterNodePoolNodeConfigGuestAccelerator">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterNodePoolNodeConfigGuestAccelerator.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -8693,16 +8283,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusternodepoolnodeconfigkubeletconfig">Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodePoolNodeConfigKubeletConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterNodePoolNodeConfigKubeletConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterNodePoolNodeConfigKubeletConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -8839,16 +8419,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusternodepoolnodeconfiglinuxnodeconfig">Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodePoolNodeConfigLinuxNodeConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterNodePoolNodeConfigLinuxNodeConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterNodePoolNodeConfigLinuxNodeConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -8913,16 +8483,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusternodepoolnodeconfigsandboxconfig">Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodePoolNodeConfigSandboxConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterNodePoolNodeConfigSandboxConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterNodePoolNodeConfigSandboxConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -8987,16 +8547,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusternodepoolnodeconfigshieldedinstanceconfig">Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodePoolNodeConfigShieldedInstanceConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterNodePoolNodeConfigShieldedInstanceConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterNodePoolNodeConfigShieldedInstanceConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -9097,16 +8647,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusternodepoolnodeconfigtaint">Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodePoolNodeConfigTaint">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterNodePoolNodeConfigTaint">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterNodePoolNodeConfigTaint.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -9243,16 +8783,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusternodepoolnodeconfigworkloadmetadataconfig">Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodePoolNodeConfigWorkloadMetadataConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterNodePoolNodeConfigWorkloadMetadataConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterNodePoolNodeConfigWorkloadMetadataConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -9317,16 +8847,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusternodepoolupgradesetting">Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Setting</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNodePoolUpgradeSetting">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterNodePoolUpgradeSetting">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterNodePoolUpgradeSetting.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -9427,16 +8947,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusternotificationconfig">Get<wbr>Cluster<wbr>Notification<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNotificationConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterNotificationConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterNotificationConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -9501,16 +9011,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusternotificationconfigpubsub">Get<wbr>Cluster<wbr>Notification<wbr>Config<wbr>Pubsub</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterNotificationConfigPubsub">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterNotificationConfigPubsub">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterNotificationConfigPubsub.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -9611,16 +9111,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterpodsecuritypolicyconfig">Get<wbr>Cluster<wbr>Pod<wbr>Security<wbr>Policy<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterPodSecurityPolicyConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterPodSecurityPolicyConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterPodSecurityPolicyConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -9685,16 +9175,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterprivateclusterconfig">Get<wbr>Cluster<wbr>Private<wbr>Cluster<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterPrivateClusterConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterPrivateClusterConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterPrivateClusterConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -9975,16 +9455,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterprivateclusterconfigmasterglobalaccessconfig">Get<wbr>Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterPrivateClusterConfigMasterGlobalAccessConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterPrivateClusterConfigMasterGlobalAccessConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterPrivateClusterConfigMasterGlobalAccessConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -10049,16 +9519,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterreleasechannel">Get<wbr>Cluster<wbr>Release<wbr>Channel</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterReleaseChannel">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterReleaseChannel">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterReleaseChannel.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -10123,16 +9583,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterresourceusageexportconfig">Get<wbr>Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterResourceUsageExportConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterResourceUsageExportConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterResourceUsageExportConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -10269,16 +9719,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterresourceusageexportconfigbigquerydestination">Get<wbr>Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config<wbr>Bigquery<wbr>Destination</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterResourceUsageExportConfigBigqueryDestination">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterResourceUsageExportConfigBigqueryDestination">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterResourceUsageExportConfigBigqueryDestination.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -10343,16 +9783,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterverticalpodautoscaling">Get<wbr>Cluster<wbr>Vertical<wbr>Pod<wbr>Autoscaling</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterVerticalPodAutoscaling">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterVerticalPodAutoscaling">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterVerticalPodAutoscaling.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -10417,16 +9847,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterworkloadidentityconfig">Get<wbr>Cluster<wbr>Workload<wbr>Identity<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetClusterWorkloadIdentityConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container?tab=doc#GetClusterWorkloadIdentityConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Container.Outputs.GetClusterWorkloadIdentityConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

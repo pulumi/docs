@@ -33,24 +33,6 @@ Explore the resources and functions of the cloudrun module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>4.10.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.html" title="Pulumi.Gcp.CloudRun">Pulumi.Gcp.CloudRun</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudrun?tab=doc#" title="gcp/cloudrun">gcp/cloudrun</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudrun/#" title="@pulumi/gcp/cloudrun">@pulumi/gcp/cloudrun</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/cloudrun" title="pulumi_gcp/cloudrun">pulumi_gcp/cloudrun</a></dd>
-
+	<dd>4.11.0</dd>
 </dl>
 

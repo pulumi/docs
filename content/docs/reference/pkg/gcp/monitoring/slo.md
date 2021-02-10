@@ -297,19 +297,19 @@ const requestBasedSlo = new gcp.monitoring.Slo("requestBasedSlo", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#Slo">Slo</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#SloArgs">SloArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Slo</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SloArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/monitoring/#pulumi_gcp.monitoring.Slo">Slo</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">basic_sli</span><span class="p">:</span> <span class="nx">Optional[SloBasicSliArgs]</span> = None<span class="p">, </span><span class="nx">calendar_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">goal</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_based_sli</span><span class="p">:</span> <span class="nx">Optional[SloRequestBasedSliArgs]</span> = None<span class="p">, </span><span class="nx">rolling_period_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slo_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">windows_based_sli</span><span class="p">:</span> <span class="nx">Optional[SloWindowsBasedSliArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Slo</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">basic_sli</span><span class="p">:</span> <span class="nx">Optional[SloBasicSliArgs]</span> = None<span class="p">, </span><span class="nx">calendar_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">goal</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_based_sli</span><span class="p">:</span> <span class="nx">Optional[SloRequestBasedSliArgs]</span> = None<span class="p">, </span><span class="nx">rolling_period_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slo_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">windows_based_sli</span><span class="p">:</span> <span class="nx">Optional[SloWindowsBasedSliArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#Slo">NewSlo</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloArgs">SloArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#Slo">Slo</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSlo</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SloArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Slo</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Slo.html">Slo</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.SloArgs.html">SloArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Slo</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SloArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -330,7 +330,7 @@ const requestBasedSlo = new gcp.monitoring.Slo("requestBasedSlo", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#SloArgs">SloArgs</a></span>
+        <span class="property-type"><a href="#inputs">SloArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -399,7 +399,7 @@ const requestBasedSlo = new gcp.monitoring.Slo("requestBasedSlo", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloArgs">SloArgs</a></span>
+        <span class="property-type"><a href="#inputs">SloArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -438,7 +438,7 @@ const requestBasedSlo = new gcp.monitoring.Slo("requestBasedSlo", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.SloArgs.html">SloArgs</a></span>
+        <span class="property-type"><a href="#inputs">SloArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -461,11 +461,11 @@ const requestBasedSlo = new gcp.monitoring.Slo("requestBasedSlo", {
 
 ## Slo Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Slo resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Slo resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1116,7 +1116,7 @@ Get an existing Slo resource's state with the given name, ID, and optional extra
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#SloState">SloState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#Slo">Slo</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">SloState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Slo</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1125,11 +1125,11 @@ Get an existing Slo resource's state with the given name, ID, and optional extra
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSlo<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloState">SloState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#Slo">Slo</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSlo<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">SloState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Slo</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Slo.html">Slo</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.SloState.html">SloState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Slo</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">SloState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1813,24 +1813,23 @@ Structure is documented below.
 
 
 <h4 id="slobasicsli">Slo<wbr>Basic<wbr>Sli</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SloBasicSli">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SloBasicSli">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloBasicSliArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloBasicSliOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.SloBasicSliArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.SloBasicSli.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="availability_csharp">
+<a href="#availability_csharp" style="color: inherit; text-decoration: inherit;">Availability</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slobasicsliavailability">Slo<wbr>Basic<wbr>Sli<wbr>Availability<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Availability based SLI, dervied from count of requests made to this service that return successfully.
+Structure is documented below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="latency_csharp">
 <a href="#latency_csharp" style="color: inherit; text-decoration: inherit;">Latency</a>
 </span>
@@ -1891,8 +1890,19 @@ field will result in an error.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="availability_go">
+<a href="#availability_go" style="color: inherit; text-decoration: inherit;">Availability</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slobasicsliavailability">Slo<wbr>Basic<wbr>Sli<wbr>Availability</a></span>
+    </dt>
+    <dd>{{% md %}}Availability based SLI, dervied from count of requests made to this service that return successfully.
+Structure is documented below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="latency_go">
 <a href="#latency_go" style="color: inherit; text-decoration: inherit;">Latency</a>
 </span>
@@ -1953,8 +1963,19 @@ field will result in an error.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="availability_nodejs">
+<a href="#availability_nodejs" style="color: inherit; text-decoration: inherit;">availability</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slobasicsliavailability">Slo<wbr>Basic<wbr>Sli<wbr>Availability</a></span>
+    </dt>
+    <dd>{{% md %}}Availability based SLI, dervied from count of requests made to this service that return successfully.
+Structure is documented below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="latency_nodejs">
 <a href="#latency_nodejs" style="color: inherit; text-decoration: inherit;">latency</a>
 </span>
@@ -2015,8 +2036,19 @@ field will result in an error.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="availability_python">
+<a href="#availability_python" style="color: inherit; text-decoration: inherit;">availability</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#slobasicsliavailability">Slo<wbr>Basic<wbr>Sli<wbr>Availability<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Availability based SLI, dervied from count of requests made to this service that return successfully.
+Structure is documented below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="latency_python">
 <a href="#latency_python" style="color: inherit; text-decoration: inherit;">latency</a>
 </span>
@@ -2074,19 +2106,73 @@ field will result in an error.
 </dl>
 {{% /choosable %}}
 
-<h4 id="slobasicslilatency">Slo<wbr>Basic<wbr>Sli<wbr>Latency</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SloBasicSliLatency">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SloBasicSliLatency">output</a> API doc for this type.
+<h4 id="slobasicsliavailability">Slo<wbr>Basic<wbr>Sli<wbr>Availability</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether an availability SLI is enabled or not. Must be set to `true. Defaults to `true`.
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloBasicSliLatencyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloBasicSliLatencyOutput">output</a> API doc for this type.
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether an availability SLI is enabled or not. Must be set to `true. Defaults to `true`.
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.SloBasicSliLatencyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.SloBasicSliLatency.html">output</a> API doc for this type.
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether an availability SLI is enabled or not. Must be set to `true. Defaults to `true`.
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether an availability SLI is enabled or not. Must be set to `true. Defaults to `true`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="slobasicslilatency">Slo<wbr>Basic<wbr>Sli<wbr>Latency</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2161,18 +2247,6 @@ this service that return in no more than threshold.
 {{% /choosable %}}
 
 <h4 id="slorequestbasedsli">Slo<wbr>Request<wbr>Based<wbr>Sli</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SloRequestBasedSli">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SloRequestBasedSli">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloRequestBasedSliArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloRequestBasedSliOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.SloRequestBasedSliArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.SloRequestBasedSli.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2319,18 +2393,6 @@ Structure is documented below.
 {{% /choosable %}}
 
 <h4 id="slorequestbasedslidistributioncut">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SloRequestBasedSliDistributionCut">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SloRequestBasedSliDistributionCut">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloRequestBasedSliDistributionCutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloRequestBasedSliDistributionCutOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.SloRequestBasedSliDistributionCutArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.SloRequestBasedSliDistributionCut.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2473,18 +2535,6 @@ Structure is documented below.
 {{% /choosable %}}
 
 <h4 id="slorequestbasedslidistributioncutrange">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut<wbr>Range</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SloRequestBasedSliDistributionCutRange">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SloRequestBasedSliDistributionCutRange">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloRequestBasedSliDistributionCutRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloRequestBasedSliDistributionCutRangeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.SloRequestBasedSliDistributionCutRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.SloRequestBasedSliDistributionCutRange.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2607,18 +2657,6 @@ will be set to "-infinity", defining an open range
 {{% /choosable %}}
 
 <h4 id="slorequestbasedsligoodtotalratio">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SloRequestBasedSliGoodTotalRatio">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SloRequestBasedSliGoodTotalRatio">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloRequestBasedSliGoodTotalRatioArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloRequestBasedSliGoodTotalRatioOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.SloRequestBasedSliGoodTotalRatioArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.SloRequestBasedSliGoodTotalRatio.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2833,18 +2871,6 @@ must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 {{% /choosable %}}
 
 <h4 id="slowindowsbasedsli">Slo<wbr>Windows<wbr>Based<wbr>Sli</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SloWindowsBasedSli">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SloWindowsBasedSli">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloWindowsBasedSliArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloWindowsBasedSliOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.SloWindowsBasedSliArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.SloWindowsBasedSli.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3167,18 +3193,6 @@ integer fraction of a day and at least 60s.
 {{% /choosable %}}
 
 <h4 id="slowindowsbasedsligoodtotalratiothreshold">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SloWindowsBasedSliGoodTotalRatioThreshold">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SloWindowsBasedSliGoodTotalRatioThreshold">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloWindowsBasedSliGoodTotalRatioThresholdArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloWindowsBasedSliGoodTotalRatioThresholdOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.SloWindowsBasedSliGoodTotalRatioThresholdArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.SloWindowsBasedSliGoodTotalRatioThreshold.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3341,18 +3355,6 @@ this service that return in no more than threshold.
 {{% /choosable %}}
 
 <h4 id="slowindowsbasedsligoodtotalratiothresholdbasicsliperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3603,18 +3605,6 @@ field will result in an error.
 {{% /choosable %}}
 
 <h4 id="slowindowsbasedsligoodtotalratiothresholdbasicsliperformancelatency">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Latency</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3689,18 +3679,6 @@ this service that return in no more than threshold.
 {{% /choosable %}}
 
 <h4 id="slowindowsbasedsligoodtotalratiothresholdperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SloWindowsBasedSliGoodTotalRatioThresholdPerformance">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SloWindowsBasedSliGoodTotalRatioThresholdPerformance">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloWindowsBasedSliGoodTotalRatioThresholdPerformanceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloWindowsBasedSliGoodTotalRatioThresholdPerformanceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformance.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3847,18 +3825,6 @@ Structure is documented below.
 {{% /choosable %}}
 
 <h4 id="slowindowsbasedsligoodtotalratiothresholdperformancedistributioncut">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4001,18 +3967,6 @@ Structure is documented below.
 {{% /choosable %}}
 
 <h4 id="slowindowsbasedsligoodtotalratiothresholdperformancedistributioncutrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut<wbr>Range</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4135,18 +4089,6 @@ will be set to "-infinity", defining an open range
 {{% /choosable %}}
 
 <h4 id="slowindowsbasedsligoodtotalratiothresholdperformancegoodtotalratio">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Good<wbr>Total<wbr>Ratio</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4361,18 +4303,6 @@ must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 {{% /choosable %}}
 
 <h4 id="slowindowsbasedslimetricmeaninrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SloWindowsBasedSliMetricMeanInRange">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SloWindowsBasedSliMetricMeanInRange">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloWindowsBasedSliMetricMeanInRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloWindowsBasedSliMetricMeanInRangeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.SloWindowsBasedSliMetricMeanInRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.SloWindowsBasedSliMetricMeanInRange.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4527,18 +4457,6 @@ Summed value `X` should satisfy
 {{% /choosable %}}
 
 <h4 id="slowindowsbasedslimetricmeaninrangerange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range<wbr>Range</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SloWindowsBasedSliMetricMeanInRangeRange">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SloWindowsBasedSliMetricMeanInRangeRange">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloWindowsBasedSliMetricMeanInRangeRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloWindowsBasedSliMetricMeanInRangeRangeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.SloWindowsBasedSliMetricMeanInRangeRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.SloWindowsBasedSliMetricMeanInRangeRange.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4661,18 +4579,6 @@ will be set to "-infinity", defining an open range
 {{% /choosable %}}
 
 <h4 id="slowindowsbasedslimetricsuminrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SloWindowsBasedSliMetricSumInRange">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SloWindowsBasedSliMetricSumInRange">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloWindowsBasedSliMetricSumInRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloWindowsBasedSliMetricSumInRangeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.SloWindowsBasedSliMetricSumInRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.SloWindowsBasedSliMetricSumInRange.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4827,18 +4733,6 @@ Summed value `X` should satisfy
 {{% /choosable %}}
 
 <h4 id="slowindowsbasedslimetricsuminrangerange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range<wbr>Range</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SloWindowsBasedSliMetricSumInRangeRange">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SloWindowsBasedSliMetricSumInRangeRange">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloWindowsBasedSliMetricSumInRangeRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#SloWindowsBasedSliMetricSumInRangeRangeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.SloWindowsBasedSliMetricSumInRangeRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.SloWindowsBasedSliMetricSumInRangeRange.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

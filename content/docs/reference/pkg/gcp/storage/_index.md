@@ -45,24 +45,6 @@ Explore the resources and functions of the storage module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>4.10.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.html" title="Pulumi.Gcp.Storage">Pulumi.Gcp.Storage</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage?tab=doc#" title="gcp/storage">gcp/storage</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/storage/#" title="@pulumi/gcp/storage">@pulumi/gcp/storage</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/storage" title="pulumi_gcp/storage">pulumi_gcp/storage</a></dd>
-
+	<dd>4.11.0</dd>
 </dl>
 

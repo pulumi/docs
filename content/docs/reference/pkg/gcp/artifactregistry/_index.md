@@ -26,24 +26,6 @@ Explore the resources and functions of the artifactregistry module in the GCP pa
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>4.10.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ArtifactRegistry.html" title="Pulumi.Gcp.ArtifactRegistry">Pulumi.Gcp.ArtifactRegistry</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/artifactregistry?tab=doc#" title="gcp/artifactregistry">gcp/artifactregistry</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/artifactregistry/#" title="@pulumi/gcp/artifactregistry">@pulumi/gcp/artifactregistry</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/artifactregistry" title="pulumi_gcp/artifactregistry">pulumi_gcp/artifactregistry</a></dd>
-
+	<dd>4.11.0</dd>
 </dl>
 

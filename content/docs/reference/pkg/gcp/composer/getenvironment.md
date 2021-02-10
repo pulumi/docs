@@ -21,7 +21,7 @@ Provides access to Cloud Composer environment configuration in a region for a gi
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getEnvironment<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/composer/#GetEnvironmentArgs">GetEnvironmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/composer/#GetEnvironmentResult">GetEnvironmentResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getEnvironment<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetEnvironmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetEnvironmentResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -31,7 +31,7 @@ Provides access to Cloud Composer environment configuration in a region for a gi
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupEnvironment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#LookupEnvironmentArgs">LookupEnvironmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#LookupEnvironmentResult">LookupEnvironmentResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupEnvironment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupEnvironmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupEnvironmentResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupEnvironment` in the Go SDK.
 
@@ -40,7 +40,7 @@ Provides access to Cloud Composer environment configuration in a region for a gi
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetEnvironment </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.GetEnvironmentResult.html">GetEnvironmentResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.GetEnvironmentArgs.html">GetEnvironmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetEnvironmentResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetEnvironmentArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -457,16 +457,6 @@ The following output properties are available:
 
 
 <h4 id="getenvironmentconfig">Get<wbr>Environment<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetEnvironmentConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#GetEnvironmentConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.GetEnvironmentConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -855,16 +845,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getenvironmentconfigdatabaseconfig">Get<wbr>Environment<wbr>Config<wbr>Database<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetEnvironmentConfigDatabaseConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#GetEnvironmentConfigDatabaseConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.GetEnvironmentConfigDatabaseConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -929,16 +909,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getenvironmentconfignodeconfig">Get<wbr>Environment<wbr>Config<wbr>Node<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetEnvironmentConfigNodeConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#GetEnvironmentConfigNodeConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.GetEnvironmentConfigNodeConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1291,16 +1261,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getenvironmentconfignodeconfigipallocationpolicy">Get<wbr>Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Ip<wbr>Allocation<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetEnvironmentConfigNodeConfigIpAllocationPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#GetEnvironmentConfigNodeConfigIpAllocationPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.GetEnvironmentConfigNodeConfigIpAllocationPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1509,16 +1469,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getenvironmentconfigprivateenvironmentconfig">Get<wbr>Environment<wbr>Config<wbr>Private<wbr>Environment<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetEnvironmentConfigPrivateEnvironmentConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#GetEnvironmentConfigPrivateEnvironmentConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.GetEnvironmentConfigPrivateEnvironmentConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1691,16 +1641,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getenvironmentconfigsoftwareconfig">Get<wbr>Environment<wbr>Config<wbr>Software<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetEnvironmentConfigSoftwareConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#GetEnvironmentConfigSoftwareConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.GetEnvironmentConfigSoftwareConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1909,16 +1849,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getenvironmentconfigwebserverconfig">Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetEnvironmentConfigWebServerConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#GetEnvironmentConfigWebServerConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.GetEnvironmentConfigWebServerConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1983,16 +1913,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getenvironmentconfigwebservernetworkaccesscontrol">Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetEnvironmentConfigWebServerNetworkAccessControl">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#GetEnvironmentConfigWebServerNetworkAccessControl">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.GetEnvironmentConfigWebServerNetworkAccessControl.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2057,16 +1977,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getenvironmentconfigwebservernetworkaccesscontrolallowediprange">Get<wbr>Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Allowed<wbr>Ip<wbr>Range</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/composer?tab=doc#GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Composer.Outputs.GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
