@@ -44,7 +44,7 @@ The following tutorials highlight the Azure platform using complete end-to-end s
             </a>
         </p>
     </div>
-    <div class="w-1/2 border-solid border-t-2 border-gray-200">
+    <div class="w-1/2 border-solid ml-4 border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4">
             <i class="fas fa-globe pr-2"></i>
             <a href="{{< relref "azure-nextgen-cs-aks" >}}" style="color: #4387c7">
@@ -72,7 +72,7 @@ The following tutorials highlight the Azure platform using complete end-to-end s
 </div>
 
 <div class="md:flex flex-row mt-6 mb-6">
-    <div class="w-1/2 border-solid ml-4 border-t-2 border-gray-200">
+    <div class="w-1/2 border-solid border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4">
             <i class="fas fa-boxes pr-2"></i>
             <a href="{{< relref "azure-nextgen-cs-appservice-docker" >}}" style="color: #4387c7">
