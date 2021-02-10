@@ -94,7 +94,7 @@ const example = pulumi.output(aws.cloudfront.getOriginRequestPolicy({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getOriginRequestPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudfront/#GetOriginRequestPolicyArgs">GetOriginRequestPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudfront/#GetOriginRequestPolicyResult">GetOriginRequestPolicyResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getOriginRequestPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetOriginRequestPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetOriginRequestPolicyResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -104,7 +104,7 @@ const example = pulumi.output(aws.cloudfront.getOriginRequestPolicy({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupOriginRequestPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#LookupOriginRequestPolicyArgs">LookupOriginRequestPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#LookupOriginRequestPolicyResult">LookupOriginRequestPolicyResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupOriginRequestPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupOriginRequestPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupOriginRequestPolicyResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupOriginRequestPolicy` in the Go SDK.
 
@@ -113,7 +113,7 @@ const example = pulumi.output(aws.cloudfront.getOriginRequestPolicy({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetOriginRequestPolicy </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cloudfront.GetOriginRequestPolicyResult.html">GetOriginRequestPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.GetOriginRequestPolicyArgs.html">GetOriginRequestPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetOriginRequestPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetOriginRequestPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -538,16 +538,6 @@ The following output properties are available:
 
 
 <h4 id="getoriginrequestpolicycookiesconfig">Get<wbr>Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetOriginRequestPolicyCookiesConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#GetOriginRequestPolicyCookiesConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.GetOriginRequestPolicyCookiesConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -648,16 +638,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getoriginrequestpolicycookiesconfigcookie">Get<wbr>Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config<wbr>Cookie</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetOriginRequestPolicyCookiesConfigCookie">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#GetOriginRequestPolicyCookiesConfigCookie">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.GetOriginRequestPolicyCookiesConfigCookie.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -722,16 +702,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getoriginrequestpolicyheadersconfig">Get<wbr>Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetOriginRequestPolicyHeadersConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#GetOriginRequestPolicyHeadersConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.GetOriginRequestPolicyHeadersConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -832,16 +802,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getoriginrequestpolicyheadersconfigheader">Get<wbr>Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetOriginRequestPolicyHeadersConfigHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#GetOriginRequestPolicyHeadersConfigHeader">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.GetOriginRequestPolicyHeadersConfigHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -906,16 +866,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getoriginrequestpolicyquerystringsconfig">Get<wbr>Origin<wbr>Request<wbr>Policy<wbr>Query<wbr>Strings<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetOriginRequestPolicyQueryStringsConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#GetOriginRequestPolicyQueryStringsConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.GetOriginRequestPolicyQueryStringsConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1016,16 +966,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getoriginrequestpolicyquerystringsconfigquerystring">Get<wbr>Origin<wbr>Request<wbr>Policy<wbr>Query<wbr>Strings<wbr>Config<wbr>Query<wbr>String</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetOriginRequestPolicyQueryStringsConfigQueryString">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#GetOriginRequestPolicyQueryStringsConfigQueryString">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.GetOriginRequestPolicyQueryStringsConfigQueryString.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
