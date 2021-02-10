@@ -31,9 +31,6 @@ Resources:
     ~ 1 to update
     2 unchanged
 
-Outputs:
-  ~ ConnectionString: "DefaultEndpointsProtocol=https;AccountName=storage1b3018e9;AccountKey=...;EndpointSuffix=core.windows.net" => output<string>
-
 Do you want to perform this update?
   yes
 > no
@@ -53,7 +50,7 @@ Updating (dev):
  ~   └─ azure:storage:Account  storage                  updated     [diff: ~tags]
 
 Outputs:
-     connectionString: "DefaultEndpointsProtocol=https;AccountName=storage1b3018e9;AccountKey=...;EndpointSuffix=core.windows.net"
+    connectionString: "[secret]"
 
 Resources:
     ~ 1 updated

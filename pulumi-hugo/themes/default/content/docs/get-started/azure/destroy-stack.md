@@ -30,6 +30,9 @@ Previewing destroy (dev):
  -   ├─ azure:storage:Account     storage                  delete
  -   └─ azure:core:ResourceGroup  resourceGroup            delete
 
+Outputs:
+  - connectionString: "[secret]"
+
 Resources:
     - 3 to delete
 
@@ -40,6 +43,9 @@ Destroying (dev):
  -   pulumi:pulumi:Stack          quickstart-dev           deleted
  -   ├─ azure:storage:Account     storage                  deleted
  -   └─ azure:core:ResourceGroup  resourceGroup            deleted
+
+Outputs:
+  - connectionString: "[secret]"
 
 Resources:
     - 3 deleted
