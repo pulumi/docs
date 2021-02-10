@@ -30,24 +30,6 @@ Explore the resources and functions of the Agent module in the Azure DevOps pack
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azuredevops` Terraform Provider](https://github.com/microsoft/terraform-provider-azuredevops).</dd>
 	<dt>Version</dt>
-	<dd>1.2.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureDevOps/Pulumi.AzureDevOps.Agent.html" title="Pulumi.AzureDevOps.Agent">Pulumi.AzureDevOps.Agent</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops/agent?tab=doc#" title="azuredevops/agent">azuredevops/agent</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azuredevops/Agent/#" title="@pulumi/azuredevops/agent">@pulumi/azuredevops/agent</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azuredevops/agent" title="pulumi_azuredevops/agent">pulumi_azuredevops/agent</a></dd>
-
+	<dd>1.2.1</dd>
 </dl>
 

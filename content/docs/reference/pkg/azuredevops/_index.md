@@ -48,6 +48,7 @@ A Pulumi package for creating and managing Azure DevOps.
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="queue" title="Queue"><span class="symbol resource"></span>Queue</a></li>
     <li><a href="resourceauthorization" title="ResourceAuthorization"><span class="symbol resource"></span>ResourceAuthorization</a></li>
+    <li><a href="serviceendpointartifactory" title="ServiceEndpointArtifactory"><span class="symbol resource"></span>ServiceEndpointArtifactory</a></li>
     <li><a href="serviceendpointaws" title="ServiceEndpointAws"><span class="symbol resource"></span>ServiceEndpointAws</a></li>
     <li><a href="serviceendpointazureecr" title="ServiceEndpointAzureEcr"><span class="symbol resource"></span>ServiceEndpointAzureEcr</a></li>
     <li><a href="serviceendpointazurerm" title="ServiceEndpointAzureRM"><span class="symbol resource"></span>ServiceEndpointAzureRM</a></li>
@@ -56,6 +57,7 @@ A Pulumi package for creating and managing Azure DevOps.
     <li><a href="serviceendpointgithub" title="ServiceEndpointGitHub"><span class="symbol resource"></span>ServiceEndpointGitHub</a></li>
     <li><a href="serviceendpointkubernetes" title="ServiceEndpointKubernetes"><span class="symbol resource"></span>ServiceEndpointKubernetes</a></li>
     <li><a href="serviceendpointpipeline" title="ServiceEndpointPipeline"><span class="symbol resource"></span>ServiceEndpointPipeline</a></li>
+    <li><a href="serviceendpointsonarqube" title="ServiceEndpointSonarQube"><span class="symbol resource"></span>ServiceEndpointSonarQube</a></li>
     <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
     <li><a href="variablegroup" title="VariableGroup"><span class="symbol resource"></span>VariableGroup</a></li>
     <li><a href="workitemquerypermissions" title="WorkItemQueryPermissions"><span class="symbol resource"></span>WorkItemQueryPermissions</a></li>
@@ -86,24 +88,6 @@ A Pulumi package for creating and managing Azure DevOps.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azuredevops` Terraform Provider](https://github.com/microsoft/terraform-provider-azuredevops).</dd>
 	<dt>Version</dt>
-	<dd>1.2.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureDevOps/Pulumi.AzureDevOps.html" title="Pulumi.AzureDevOps">Pulumi.AzureDevOps</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops/?tab=doc#" title="azuredevops">azuredevops</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azuredevops/#" title="@pulumi/azuredevops">@pulumi/azuredevops</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azuredevops" title="pulumi_azuredevops">pulumi_azuredevops</a></dd>
-
+	<dd>1.2.1</dd>
 </dl>
 
