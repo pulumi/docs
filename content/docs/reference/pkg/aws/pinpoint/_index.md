@@ -36,21 +36,3 @@ Explore the resources and functions of the pinpoint module in the AWS package.
 	<dd>3.28.0</dd>
 </dl>
 
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Pinpoint.html" title="Pulumi.Aws.Pinpoint">Pulumi.Aws.Pinpoint</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/pinpoint?tab=doc#" title="aws/pinpoint">aws/pinpoint</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/pinpoint/#" title="@pulumi/aws/pinpoint">@pulumi/aws/pinpoint</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/pinpoint" title="pulumi_aws/pinpoint">pulumi_aws/pinpoint</a></dd>
-
-</dl>
-

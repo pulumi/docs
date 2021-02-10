@@ -28,21 +28,3 @@ Explore the resources and functions of the athena module in the AWS package.
 	<dd>3.28.0</dd>
 </dl>
 
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Athena.html" title="Pulumi.Aws.Athena">Pulumi.Aws.Athena</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/athena?tab=doc#" title="aws/athena">aws/athena</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/athena/#" title="@pulumi/aws/athena">@pulumi/aws/athena</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/athena" title="pulumi_aws/athena">pulumi_aws/athena</a></dd>
-
-</dl>
-

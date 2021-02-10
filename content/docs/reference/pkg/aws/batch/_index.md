@@ -34,21 +34,3 @@ Explore the resources and functions of the batch module in the AWS package.
 	<dd>3.28.0</dd>
 </dl>
 
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.html" title="Pulumi.Aws.Batch">Pulumi.Aws.Batch</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/batch?tab=doc#" title="aws/batch">aws/batch</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/batch/#" title="@pulumi/aws/batch">@pulumi/aws/batch</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/batch" title="pulumi_aws/batch">pulumi_aws/batch</a></dd>
-
-</dl>
-
