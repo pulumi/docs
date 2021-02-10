@@ -53,6 +53,7 @@ jobs:
           repository: ${{ github.event.client_payload.repo }}
           ref: ${{ env.PROVIDER_VERSION }}
           path: ${{ env.PROVIDER_NAME }}
+          token: ${{ env.GITHUB_TOKEN }}
       - name: Install pulumictl
         uses: jaxxstorm/action-install-gh-release@v1.1.0
         with:
