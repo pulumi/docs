@@ -49,7 +49,7 @@ Updating (dev):
  +   └─ azure:storage:Account     storage         created
 
 Outputs:
-    connectionString: "DefaultEndpointsProtocol=https;AccountName=storage1b3018e9;AccountKey=...;EndpointSuffix=core.windows.net"
+    connectionString: "[secret]"
 
 Resources:
     + 3 created
