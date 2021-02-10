@@ -23,24 +23,6 @@ Explore the resources and functions of the networkmanagement module in the GCP p
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>4.10.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.NetworkManagement.html" title="Pulumi.Gcp.NetworkManagement">Pulumi.Gcp.NetworkManagement</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/networkmanagement?tab=doc#" title="gcp/networkmanagement">gcp/networkmanagement</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/networkmanagement/#" title="@pulumi/gcp/networkmanagement">@pulumi/gcp/networkmanagement</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/networkmanagement" title="pulumi_gcp/networkmanagement">pulumi_gcp/networkmanagement</a></dd>
-
+	<dd>4.11.0</dd>
 </dl>
 

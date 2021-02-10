@@ -15,6 +15,7 @@ Explore the resources and functions of the certificateauthority module in the GC
     <li><a href="authorityiambinding" title="AuthorityIamBinding"><span class="symbol resource"></span>AuthorityIamBinding</a></li>
     <li><a href="authorityiammember" title="AuthorityIamMember"><span class="symbol resource"></span>AuthorityIamMember</a></li>
     <li><a href="authorityiampolicy" title="AuthorityIamPolicy"><span class="symbol resource"></span>AuthorityIamPolicy</a></li>
+    <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -26,24 +27,6 @@ Explore the resources and functions of the certificateauthority module in the GC
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>4.10.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CertificateAuthority.html" title="Pulumi.Gcp.CertificateAuthority">Pulumi.Gcp.CertificateAuthority</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/certificateauthority?tab=doc#" title="gcp/certificateauthority">gcp/certificateauthority</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/certificateauthority/#" title="@pulumi/gcp/certificateauthority">@pulumi/gcp/certificateauthority</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/certificateauthority" title="pulumi_gcp/certificateauthority">pulumi_gcp/certificateauthority</a></dd>
-
+	<dd>4.11.0</dd>
 </dl>
 

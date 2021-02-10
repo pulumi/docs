@@ -94,7 +94,7 @@ const qa = pulumi.output(gcp.sql.getDatabaseInstance({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDatabaseInstance<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/sql/#GetDatabaseInstanceArgs">GetDatabaseInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/sql/#GetDatabaseInstanceResult">GetDatabaseInstanceResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDatabaseInstance<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDatabaseInstanceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDatabaseInstanceResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -104,7 +104,7 @@ const qa = pulumi.output(gcp.sql.getDatabaseInstance({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDatabaseInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql?tab=doc#LookupDatabaseInstanceArgs">LookupDatabaseInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql?tab=doc#LookupDatabaseInstanceResult">LookupDatabaseInstanceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDatabaseInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDatabaseInstanceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupDatabaseInstanceResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupDatabaseInstance` in the Go SDK.
 
@@ -113,7 +113,7 @@ const qa = pulumi.output(gcp.sql.getDatabaseInstance({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDatabaseInstance </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.GetDatabaseInstanceResult.html">GetDatabaseInstanceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.GetDatabaseInstanceArgs.html">GetDatabaseInstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetDatabaseInstanceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDatabaseInstanceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -238,6 +238,15 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="clones_csharp">
+<a href="#clones_csharp" style="color: inherit; text-decoration: inherit;">Clones</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdatabaseinstanceclone">List&lt;Get<wbr>Database<wbr>Instance<wbr>Clone&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="connectionname_csharp">
@@ -443,6 +452,15 @@ configuration is detailed below.
 
     <dt class="property-"
             title="">
+        <span id="clones_go">
+<a href="#clones_go" style="color: inherit; text-decoration: inherit;">Clones</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdatabaseinstanceclone">[]Get<wbr>Database<wbr>Instance<wbr>Clone</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="connectionname_go">
 <a href="#connectionname_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Name</a>
 </span>
@@ -646,6 +664,15 @@ configuration is detailed below.
 
     <dt class="property-"
             title="">
+        <span id="clones_nodejs">
+<a href="#clones_nodejs" style="color: inherit; text-decoration: inherit;">clones</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdatabaseinstanceclone">Get<wbr>Database<wbr>Instance<wbr>Clone[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="connectionname_nodejs">
 <a href="#connectionname_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Name</a>
 </span>
@@ -847,6 +874,15 @@ configuration is detailed below.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="clones_python">
+<a href="#clones_python" style="color: inherit; text-decoration: inherit;">clones</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdatabaseinstanceclone">Sequence[Get<wbr>Database<wbr>Instance<wbr>Clone]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="connection_name_python">
@@ -1053,17 +1089,107 @@ configuration is detailed below.
 ## Supporting Types
 
 
-<h4 id="getdatabaseinstanceipaddress">Get<wbr>Database<wbr>Instance<wbr>Ip<wbr>Address</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetDatabaseInstanceIpAddress">output</a> API doc for this type.
+<h4 id="getdatabaseinstanceclone">Get<wbr>Database<wbr>Instance<wbr>Clone</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="pointintime_csharp">
+<a href="#pointintime_csharp" style="color: inherit; text-decoration: inherit;">Point<wbr>In<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="sourceinstancename_csharp">
+<a href="#sourceinstancename_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Instance<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql?tab=doc#GetDatabaseInstanceIpAddress">output</a> API doc for this type.
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="pointintime_go">
+<a href="#pointintime_go" style="color: inherit; text-decoration: inherit;">Point<wbr>In<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="sourceinstancename_go">
+<a href="#sourceinstancename_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Instance<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Outputs.GetDatabaseInstanceIpAddress.html">output</a> API doc for this type.
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="pointintime_nodejs">
+<a href="#pointintime_nodejs" style="color: inherit; text-decoration: inherit;">point<wbr>In<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="sourceinstancename_nodejs">
+<a href="#sourceinstancename_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Instance<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="point_in_time_python">
+<a href="#point_in_time_python" style="color: inherit; text-decoration: inherit;">point_<wbr>in_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="source_instance_name_python">
+<a href="#source_instance_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>instance_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getdatabaseinstanceipaddress">Get<wbr>Database<wbr>Instance<wbr>Ip<wbr>Address</h4>
 
 
 
@@ -1200,16 +1326,6 @@ configuration is detailed below.
 {{% /choosable %}}
 
 <h4 id="getdatabaseinstancereplicaconfiguration">Get<wbr>Database<wbr>Instance<wbr>Replica<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetDatabaseInstanceReplicaConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql?tab=doc#GetDatabaseInstanceReplicaConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Outputs.GetDatabaseInstanceReplicaConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1234,7 +1350,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}PEM representation of the slave's x509 certificate.
+    <dd>{{% md %}}PEM representation of the replica's x509 certificate.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1244,7 +1360,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}PEM representation of the slave's private key.
+    <dd>{{% md %}}PEM representation of the replica's private key.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1264,7 +1380,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path to a SQL file in GCS from which slave instances are created.
+    <dd>{{% md %}}Path to a SQL file in GCS from which replica instances are created.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1349,7 +1465,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}PEM representation of the slave's x509 certificate.
+    <dd>{{% md %}}PEM representation of the replica's x509 certificate.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1359,7 +1475,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}PEM representation of the slave's private key.
+    <dd>{{% md %}}PEM representation of the replica's private key.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1379,7 +1495,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path to a SQL file in GCS from which slave instances are created.
+    <dd>{{% md %}}Path to a SQL file in GCS from which replica instances are created.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1464,7 +1580,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}PEM representation of the slave's x509 certificate.
+    <dd>{{% md %}}PEM representation of the replica's x509 certificate.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1474,7 +1590,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}PEM representation of the slave's private key.
+    <dd>{{% md %}}PEM representation of the replica's private key.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1494,7 +1610,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path to a SQL file in GCS from which slave instances are created.
+    <dd>{{% md %}}Path to a SQL file in GCS from which replica instances are created.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1579,7 +1695,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}PEM representation of the slave's x509 certificate.
+    <dd>{{% md %}}PEM representation of the replica's x509 certificate.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1589,7 +1705,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}PEM representation of the slave's private key.
+    <dd>{{% md %}}PEM representation of the replica's private key.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1609,7 +1725,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Path to a SQL file in GCS from which slave instances are created.
+    <dd>{{% md %}}Path to a SQL file in GCS from which replica instances are created.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1674,16 +1790,6 @@ configuration is detailed below.
 {{% /choosable %}}
 
 <h4 id="getdatabaseinstancerestorebackupcontext">Get<wbr>Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetDatabaseInstanceRestoreBackupContext">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql?tab=doc#GetDatabaseInstanceRestoreBackupContext">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Outputs.GetDatabaseInstanceRestoreBackupContext.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1824,16 +1930,6 @@ configuration is detailed below.
 {{% /choosable %}}
 
 <h4 id="getdatabaseinstanceservercacert">Get<wbr>Database<wbr>Instance<wbr>Server<wbr>Ca<wbr>Cert</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetDatabaseInstanceServerCaCert">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql?tab=doc#GetDatabaseInstanceServerCaCert">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Outputs.GetDatabaseInstanceServerCaCert.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2050,16 +2146,6 @@ formatted date time string indicating when this whitelist expires.
 {{% /choosable %}}
 
 <h4 id="getdatabaseinstancesetting">Get<wbr>Database<wbr>Instance<wbr>Setting</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetDatabaseInstanceSetting">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql?tab=doc#GetDatabaseInstanceSetting">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Outputs.GetDatabaseInstanceSetting.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2772,16 +2858,6 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 {{% /choosable %}}
 
 <h4 id="getdatabaseinstancesettingbackupconfiguration">Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Backup<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetDatabaseInstanceSettingBackupConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql?tab=doc#GetDatabaseInstanceSettingBackupConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Outputs.GetDatabaseInstanceSettingBackupConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3002,16 +3078,6 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 {{% /choosable %}}
 
 <h4 id="getdatabaseinstancesettingdatabaseflag">Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Database<wbr>Flag</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetDatabaseInstanceSettingDatabaseFlag">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql?tab=doc#GetDatabaseInstanceSettingDatabaseFlag">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Outputs.GetDatabaseInstanceSettingDatabaseFlag.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3120,16 +3186,6 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 {{% /choosable %}}
 
 <h4 id="getdatabaseinstancesettingipconfiguration">Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Ip<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetDatabaseInstanceSettingIpConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql?tab=doc#GetDatabaseInstanceSettingIpConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Outputs.GetDatabaseInstanceSettingIpConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3314,16 +3370,6 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 {{% /choosable %}}
 
 <h4 id="getdatabaseinstancesettingipconfigurationauthorizednetwork">Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Ip<wbr>Configuration<wbr>Authorized<wbr>Network</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql?tab=doc#GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Outputs.GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3476,16 +3522,6 @@ formatted date time string indicating when this whitelist expires.
 {{% /choosable %}}
 
 <h4 id="getdatabaseinstancesettinglocationpreference">Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Location<wbr>Preference</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetDatabaseInstanceSettingLocationPreference">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql?tab=doc#GetDatabaseInstanceSettingLocationPreference">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Outputs.GetDatabaseInstanceSettingLocationPreference.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3594,16 +3630,6 @@ formatted date time string indicating when this whitelist expires.
 {{% /choosable %}}
 
 <h4 id="getdatabaseinstancesettingmaintenancewindow">Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Maintenance<wbr>Window</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetDatabaseInstanceSettingMaintenanceWindow">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql?tab=doc#GetDatabaseInstanceSettingMaintenanceWindow">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Outputs.GetDatabaseInstanceSettingMaintenanceWindow.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

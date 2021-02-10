@@ -32,24 +32,6 @@ Explore the resources and functions of the secretmanager module in the GCP packa
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>4.10.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.SecretManager.html" title="Pulumi.Gcp.SecretManager">Pulumi.Gcp.SecretManager</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/secretmanager?tab=doc#" title="gcp/secretmanager">gcp/secretmanager</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/secretmanager/#" title="@pulumi/gcp/secretmanager">@pulumi/gcp/secretmanager</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/secretmanager" title="pulumi_gcp/secretmanager">pulumi_gcp/secretmanager</a></dd>
-
+	<dd>4.11.0</dd>
 </dl>
 
