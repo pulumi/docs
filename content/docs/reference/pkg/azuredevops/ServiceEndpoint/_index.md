@@ -27,24 +27,6 @@ Explore the resources and functions of the ServiceEndpoint module in the Azure D
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azuredevops` Terraform Provider](https://github.com/microsoft/terraform-provider-azuredevops).</dd>
 	<dt>Version</dt>
-	<dd>1.2.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureDevOps/Pulumi.AzureDevOps.ServiceEndpoint.html" title="Pulumi.AzureDevOps.ServiceEndpoint">Pulumi.AzureDevOps.ServiceEndpoint</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops/serviceendpoint?tab=doc#" title="azuredevops/serviceendpoint">azuredevops/serviceendpoint</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azuredevops/ServiceEndpoint/#" title="@pulumi/azuredevops/serviceendpoint">@pulumi/azuredevops/serviceendpoint</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azuredevops/serviceendpoint" title="pulumi_azuredevops/serviceendpoint">pulumi_azuredevops/serviceendpoint</a></dd>
-
+	<dd>1.2.1</dd>
 </dl>
 

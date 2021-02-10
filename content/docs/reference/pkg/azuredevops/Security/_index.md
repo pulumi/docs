@@ -23,24 +23,6 @@ Explore the resources and functions of the Security module in the Azure DevOps p
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azuredevops` Terraform Provider](https://github.com/microsoft/terraform-provider-azuredevops).</dd>
 	<dt>Version</dt>
-	<dd>1.2.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureDevOps/Pulumi.AzureDevOps.Security.html" title="Pulumi.AzureDevOps.Security">Pulumi.AzureDevOps.Security</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops/security?tab=doc#" title="azuredevops/security">azuredevops/security</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azuredevops/Security/#" title="@pulumi/azuredevops/security">@pulumi/azuredevops/security</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azuredevops/security" title="pulumi_azuredevops/security">pulumi_azuredevops/security</a></dd>
-
+	<dd>1.2.1</dd>
 </dl>
 

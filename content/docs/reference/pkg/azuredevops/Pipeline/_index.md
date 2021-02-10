@@ -23,24 +23,6 @@ Explore the resources and functions of the Pipeline module in the Azure DevOps p
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azuredevops` Terraform Provider](https://github.com/microsoft/terraform-provider-azuredevops).</dd>
 	<dt>Version</dt>
-	<dd>1.2.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureDevOps/Pulumi.AzureDevOps.Pipeline.html" title="Pulumi.AzureDevOps.Pipeline">Pulumi.AzureDevOps.Pipeline</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops/pipeline?tab=doc#" title="azuredevops/pipeline">azuredevops/pipeline</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azuredevops/Pipeline/#" title="@pulumi/azuredevops/pipeline">@pulumi/azuredevops/pipeline</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azuredevops/pipeline" title="pulumi_azuredevops/pipeline">pulumi_azuredevops/pipeline</a></dd>
-
+	<dd>1.2.1</dd>
 </dl>
 

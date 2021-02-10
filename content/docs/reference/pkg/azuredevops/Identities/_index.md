@@ -30,24 +30,6 @@ Explore the resources and functions of the Identities module in the Azure DevOps
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azuredevops` Terraform Provider](https://github.com/microsoft/terraform-provider-azuredevops).</dd>
 	<dt>Version</dt>
-	<dd>1.2.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureDevOps/Pulumi.AzureDevOps.Identities.html" title="Pulumi.AzureDevOps.Identities">Pulumi.AzureDevOps.Identities</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops/identities?tab=doc#" title="azuredevops/identities">azuredevops/identities</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azuredevops/Identities/#" title="@pulumi/azuredevops/identities">@pulumi/azuredevops/identities</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azuredevops/identities" title="pulumi_azuredevops/identities">pulumi_azuredevops/identities</a></dd>
-
+	<dd>1.2.1</dd>
 </dl>
 
