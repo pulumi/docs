@@ -146,7 +146,7 @@ There are three types of `Archive` objects:
 
 ```javascript
 let fileArchive = new pulumi.asset.FileArchive("./file.zip");
-let remoteArchive = new pulumi.asset.RemoteArhcive("http://contoso.com/file.zip");
+let remoteArchive = new pulumi.asset.RemoteArchive("http://contoso.com/file.zip");
 let assetArchive = new pulumi.asset.AssetArchive({
     "file": new pulumi.asset.StringAsset("Hello, world!"),
     "folder": new pulumi.asset.FileArchive("./folder"),
@@ -158,7 +158,7 @@ let assetArchive = new pulumi.asset.AssetArchive({
 
 ```typescript
 let fileArchive = new pulumi.asset.FileArchive("./file.zip");
-let remoteArchive = new pulumi.asset.RemoteArhcive("http://contoso.com/file.zip");
+let remoteArchive = new pulumi.asset.RemoteArchive("http://contoso.com/file.zip");
 let assetArchive = new pulumi.asset.AssetArchive({
     "file": new pulumi.asset.StringAsset("Hello, world!"),
     "folder": new pulumi.asset.FileArchive("./folder"),
@@ -170,7 +170,7 @@ let assetArchive = new pulumi.asset.AssetArchive({
 
 ```python
 file_archive = pulumi.FileArchive("./file.zip")
-remote_archive = pulumi.RemoteArhcive("http://contoso.com/file.zip")
+remote_archive = pulumi.RemoteArchive("http://contoso.com/file.zip")
 asset_archive = pulumiAssetArchive({
     "file": pulumi.StringAsset("Hello, world!"),
     "folder": pulumi.FileArchive("./folder")
@@ -182,7 +182,7 @@ asset_archive = pulumiAssetArchive({
 
 ```go
 fileArchive := pulumi.NewFileArchive("./file.zip")
-remoteArchive := pulumi.NewRemoteArhcive("http://contoso.com/file.zip")
+remoteArchive := pulumi.NewRemoteArchive("http://contoso.com/file.zip")
 assetArchive := pulumi.NewAssetArchive(map[string]interface{}{
     "file": pulumi.NewStringAsset("Hello, world!"),
     "folder": pulumi.NewFileArchive("./folder"),
@@ -196,7 +196,7 @@ assetArchive := pulumi.NewAssetArchive(map[string]interface{}{
 using Pulumi;
 
 var fileArchive = new FileArchive("./file.zip");
-var remoteArchive = new RemoteArhcive("http://contoso.com/file.zip");
+var remoteArchive = new RemoteArchive("http://contoso.com/file.zip");
 var assetArchive = new AssetArchive(new Dictionary<string, string>
 {
     { "file", new StringAsset("Hello, world!") },
