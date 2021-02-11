@@ -33,7 +33,7 @@ GitHub identity.
 To edit your profile information, navigate to **Profile Settings** by clicking
 on your avatar and selecting **Settings**. The **Profile** tab is displayed by default.
 
-<img class="shadow-2xl lg:max-w-xl" src="/images/docs/reference/service/user-profile-page.png" alt="Pulumi GitHub App">
+![User-profile page](/images/docs/reference/service/user-profile-page.png)
 
 From this tab, you can:
 
@@ -66,7 +66,7 @@ This tab lets you manage the [access tokens](https://en.wikipedia.org/wiki/Acces
 
 When you run [`pulumi login`]({{< relref "/docs/reference/cli/pulumi_login" >}}) from the command line, you will be prompted for an access token. Once obtained, the access token logs you into the Pulumi Console and lets you interact with the Pulumi service and manage your stacks.
 
-<img class="shadow-2xl lg:max-w-xl" src="/images/docs/reference/service/access-tokens.png" alt="Pulumi GitHub App">
+![Access tokens](/images/docs/reference/service/access-tokens.png)
 
 You can create additional access tokens on this tab by clicking **New Access Token**. Similarly, you may remove an unused token by highlighting it on the list and clicking "Remove access token".
 
