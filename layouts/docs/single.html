@@ -10,8 +10,9 @@
                 {{ else if and (ne .Title "") (not .Params.notitle) }}
                     <h1>{{ .Title }}</h1>
                 {{ end }}
-
-                {{ .Content }}
+                <section data-swiftype-index="true">
+                    {{ .Content }}
+                </section>
             </div>
 
             <div class="md:w-3/12 md:pl-8 mt-2">
