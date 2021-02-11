@@ -6,6 +6,9 @@ sectionPagesMenu = "main"
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 
+ignoreFiles = [ "content/docs/reference/pkg/*" ]
+refLinksErrorLevel = "WARNING"
+
 # We always generate the robots.txt file. But based on the environment
 # built, it may disallow crawling.
 enableRobotsTXT = true
