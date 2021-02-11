@@ -8,7 +8,7 @@ meta_desc: This page contains a collection of virtual backgrounds featuring the 
 hero:
     title: Virtual Backgrounds
     description: |
-        Video calls have become an important part of many of our lives and we've noticed that lately they’ve become somewhat monotonous. While we can't help you with the content of your video call, we can make sure you've got some exciting virtual backgrounds that will surely make you the talk of the company at your next virtual happy hour.
+        Video calls have become an important part of many of our lives and we've noticed that lately they’ve become somewhat monotonous. While we can't help you with the content of your video call, we can make sure you have the best virtual background.
 
 backgrounds:
     - name: This Is Fine
@@ -32,7 +32,7 @@ backgrounds:
         Everyone has those super productive days where you wake up ready to attack the world. If you woke up this morning ready to "shred the gnar,” then this background is for you. Let all your co-workers know that today is that day. It’s your day. And you are finally going to finish that thing you've been saying you’ll finish for the last 6 months.
 
     - name: On Cloud Nine
-      image: /images/virtual-backgrounds/cloud-nine-pulumipus.jpg
+      image: /images/virtual-backgrounds/cloud-nine-pulumipus.png
       description: |
         Have you ever thought, “Wow I am so happy right now. I wish I had a virtual background to express how happy I am right now.” Well you’re in luck because now you do. The image of the Pulumipus gracefully flying around the city is the perfect way to express that you’re “on cloud nine.”
 
@@ -44,7 +44,7 @@ backgrounds:
     - name: Bring The Cheer
       image: /images/virtual-backgrounds/bring-the-cheer-pulumipus.jpg
       description: |
-        We might be biased but Pike’s Place Market in Seattle is one of the most elegant and cheerful places to be spending your Christmas season. You’re sure to brighten up the spirits of everyone on the call when you arrive with this background.
+        We might be biased but Pike’s Place Market in Seattle is one of the most elegant and cheerful places to be spending the winter season. You’re sure to brighten up the spirits of everyone on the call when you arrive with this background.
 
     - name: To The Moon
       image: /images/virtual-backgrounds/to-the-moon-pulumipus.jpg

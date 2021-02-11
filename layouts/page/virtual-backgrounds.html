@@ -1,6 +1,6 @@
 {{ define "hero" }}
     <header>
-        <div class="container mx-auto p-4 text-center flex-col m-24 mb-12">
+        <div class="container mx-auto p-4 text-center m-24 mb-12 max-w-5xl">
             <h1 class="text-5xl">{{ .Params.hero.title }}</h1>
             <p class="mt-10 text-2xl">{{ .Params.hero.description }}</p>
         </div>
@@ -11,8 +11,8 @@
     <section id="backgrounds" class="container mx-auto">
         {{ range .Params.backgrounds }}
             <div class="flex flex-col lg:flex-row my-4 lg:my-12">
-                <div class="w-full mb-12 order-last lg:order-first lg:mb-0 lg:w-5/12 p-4 px-16">
-                    <p class="text-2xl font-bold">{{ .name }}</p>
+                <div class="w-full mb-12 order-last lg:order-first lg:mb-0 lg:w-5/12 p-4 lg:px-16">
+                    <h2 class="text-2xl font-bold">{{ .name }}</h2>
                     <p class="mb-12">{{ .description }}</p>
                     <a href="{{ .image }}" class="btn btn-lg" download>
                         Download
@@ -27,7 +27,7 @@
 
     <section id="get-started" class="bg-gray-100 py-16 px-4 lg:px-0">
         <div class="container mx-auto max-w-5xl md:flex my-8 align-top justify-center text-center">
-            <div class="md:w3-/12 mr-4">
+            <div class="mr-4">
                 <h2>Get Started with Pulumi</h2>
                 <p class="text-lg">
                     Use Pulumi's open source SDK to create, deploy, and manage infrastructure on any cloud.
@@ -35,7 +35,7 @@
             </div>
         </div>
         <div class="container mx-auto max-w-5xl">
-            <div class="flex flex-row max-w-full">
+            <div class="flex max-w-full">
                 <a id="get-started-aws" class="btn bg-white border border-gray-300 hover:bg-white hover:border-gray-400 p-5 mb-5 flex justify-center w-1/2 mr-4"
                     href="{{ relref . "/docs/get-started/aws" }}" track-click>
                     <img class="h-10" src="/logos/tech/aws.svg" alt="AWS">
