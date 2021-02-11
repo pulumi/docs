@@ -22,7 +22,7 @@ backgrounds:
          Life is hard and sometimes we just have to let everyone know that it’s time to relax and take a load off. Whether you've had an intense week of work or your kid has been asking you for 72 hours straight when the pandemic will be over, this background lets everyone know you're mentally ready to hit the beach and leave your cares behind.
 
     - name: The Suit
-      image: /images/virtual-backgrounds/the-suit-pulumi.png
+      image: /images/virtual-backgrounds/the-suit-pulumipus.jpg
       description: |
          Virtual backgrounds are the wardrobe of the remote working world. While it's fun to have silly backgrounds, some calls are going to be more important than others and your virtual background needs to rise to that occasion. The subtle blurring of the foyer in the Pulumi Office provides the perfect vibe to let everyone know that today you mean business.
 
@@ -32,12 +32,12 @@ backgrounds:
         Everyone has those super productive days where you wake up ready to attack the world. If you woke up this morning ready to "shred the gnar,” then this background is for you. Let all your co-workers know that today is that day. It’s your day. And you are finally going to finish that thing you've been saying you’ll finish for the last 6 months.
 
     - name: On Cloud Nine
-      image: /images/virtual-backgrounds/cloud-nine-pulumipus.png
+      image: /images/virtual-backgrounds/cloud-nine-pulumipus.jpg
       description: |
         Have you ever thought, “Wow I am so happy right now. I wish I had a virtual background to express how happy I am right now.” Well you’re in luck because now you do. The image of the Pulumipus gracefully flying around the city is the perfect way to express that you’re “on cloud nine.”
 
     - name: Robot Repair
-      image: /images/virtual-backgrounds/robot-repair-pulumipus.png
+      image: /images/virtual-backgrounds/robot-repair-pulumipus.jpg
       description: |
         Regardless of where you fall on the love/hate spectrum of robots we can all agree on one thing – they require maintenance. This background is for the days you spend grinding away on those important maintenance tasks that no one ever thanks you for, but which prevent your organization from collapsing entirely.
 
