@@ -9,7 +9,7 @@ menu:
 
 aliases: 
   - "/docs/reference/clouds/packet/"
-  - "/intro/cloud-providers/packet/"
+  - "/docs/intro/cloud-providers/packet/"
 ---
 
 <img src="/logos/tech/equinix-metal.svg" align="right" class="h-16 px-8 pb-4">

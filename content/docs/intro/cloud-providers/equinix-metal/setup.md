@@ -2,7 +2,7 @@
 title: Equinix Metal Setup
 meta_desc: This page provides an overview of how to setup the Equinix Metal SDK to manage and provision resources.
 aliases: 
-   - "/intro/cloud-providers/packet/setup/"
+   - "/docs/intro/cloud-providers/packet/setup/"
    - "/docs/reference/clouds/packet/setup/"
 
 ---
