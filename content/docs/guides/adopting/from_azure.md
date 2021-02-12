@@ -39,11 +39,11 @@ const storageAccountName = deployment.properties.outputs["storageAccountName"].v
 
 // Create a blob for our own deployment.
 const blob = new storage.Blob("myBlob", {
-    resourceGroupName: "myrg", 
+    resourceGroupName: "myrg",
     accountName: storageAccountName,
     blobName: "zip",
     containerName: new storage.BlobContainer("myStorageContainer", {
-        resourceGroupName: "myrg", 
+        resourceGroupName: "myrg",
         accountName: storageAccountName,
         containerName: "files",
     }).name,
@@ -68,11 +68,11 @@ storage_account_name = deployment.properties.outputs['storageAccountName'].value
 
 # Create a blob for our own deployment.
 blob = storage.Blob('myBlob',
-    resource_group_name='myrg', 
+    resource_group_name='myrg',
     account_name=storage_account_name,
     blob_name='zip',
     container_name=storage.BlobContainer('myStorageContainer',
-        resource_group_name='myrg', 
+        resource_group_name='myrg',
         account_name=storage_account_name,
         container_name='files'
     ).name,
@@ -187,7 +187,7 @@ Notice that the ID is of the format: `/subscriptions/<YOUR-SUBSCRIPTION-ID>/reso
 
 ## Converting Stacks and Resources
 
-Let's say you want to migrate from ARM to Pulumi and that simply co-existing side-by-side as shown above isn't sufficient. 
+Let's say you want to migrate from ARM to Pulumi and that simply co-existing side-by-side as shown above isn't sufficient.
 
 Let's see how to actually migrate your ARM-managed resources fully to Pulumi. This requires rewriting the ARM template JSON as your favorite programming language code, either entirely, or one resource at a time. Because you can query deployment outputs and provide parameters in code, you can more easily intermingle ARM-managed resources alongside Pulumi ones. Cyclic dependencies, of course, cannot be expressed, since the entire ARM deployment is seen as one opaque resource to Pulumi.
 
@@ -448,9 +448,9 @@ While running `pulumi up` with the code above, you will likely see a warning
 
 ```
   Type                                     Name                 Plan   Info
-  pulumi:pulumi:Stack                      proj-dev             
+  pulumi:pulumi:Stack                      proj-dev
  =└─ azure-nextgen:storage/StorageAccount  storagecreatedbyarm  import [diff: -accessTier,enableHttpsTrafficOnly,encryption,networkRuleSet
- 
+
 Diagnostics:
   azure-nextgen:storage:StorageAccount (storagecreatedbyarm):
     warning: inputs to import do not match the existing resource; importing this resource will fail
