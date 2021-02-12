@@ -21,21 +21,6 @@ meta_desc: ""
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.8.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/auditregistration?tab=doc#" title="kubernetes/auditregistration">kubernetes/auditregistration</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/auditregistration/#" title="@pulumi/kubernetes/auditregistration">@pulumi/kubernetes/auditregistration</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/auditregistration" title="pulumi_kubernetes/auditregistration">pulumi_kubernetes/auditregistration</a></dd>
-
+	<dd>2.8.1</dd>
 </dl>
 
