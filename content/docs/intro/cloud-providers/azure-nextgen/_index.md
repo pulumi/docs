@@ -4,7 +4,7 @@ meta_desc: The Azure Next Gen provider for Pulumi can be used to provision any o
 menu:
   intro:
     parent: cloud-providers
-    identifier: clouds-azure
+    identifier: clouds-azure-nextgen
     weight: 1
 ---
 
