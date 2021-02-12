@@ -60,7 +60,7 @@ The Azure provider is open source and available in the [pulumi/pulumi-azure](htt
 
 ## Configuration
 
-The Azure provider accepts the following configuration settings.  These can be provided to the default Azure provider via `pulumi config set azure:<option>`, or passed to the constructor of `new azure.Provider` to construct a specific instance of the Azure provider.
+The Azure provider accepts the following configuration settings.  These can be provided to the default Azure provider via `pulumi config set azure:<option>`, or passed to the constructor of [Provider]({{< relref "/docs/reference/pkg/azure/provider" >}}) to construct a specific instance of the Azure provider.
 
 * `environment`: (Required) The cloud environment to use. It can also be sourced from the ARM_ENVIRONMENT environment variable. Supported values are: `public` (default), `usgovernment`, `german`, `china`.
 * `location`: (Optional) The location to use. ResourceGroups will consult this property for a default location, if one was not supplied explicitly.

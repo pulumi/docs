@@ -30,18 +30,12 @@ Simply login to the Azure CLI and Pulumi will automatically use your credentials
 
 ```bash
 $ az login
-To sign in, use a web browser to open the page https://aka.ms/devicelogin and enter the code XXXFAKEXXX to authenticate.
+The default web browser has been opened at https://login.microsoftonline.com/common/oauth2/authorize. Please continue 
+the login in the web browser. If no web browser is available or if the web browser fails to open, use device code flow 
+with `az login --use-device-code`.
 ```
 
 Do as instructed to login.  After completed, `az login` will return and you are ready to go.
-
-For most cases `az login` should suffice, but in certain scenarios such as
-working with AKS you may hit issues with Bearer tokens not being refreshed
-during an operation. To work around this, login using the device code flag:
-
-```bash
-$ az login --use-device-code
-```
 
 > **Note:** If you're using Government, China, or German Clouds, you'll need to configure the Azure CLI to work
 > with that cloud.  Do so by running `az cloud set --name <Cloud>`, where `<Cloud>` is one of `AzureUSGovernment`,

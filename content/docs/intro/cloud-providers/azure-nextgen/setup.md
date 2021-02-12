@@ -30,18 +30,12 @@ Simply login to the Azure CLI and Pulumi will automatically use your credentials
 
 ```bash
 $ az login
-To sign in, use a web browser to open the page https://aka.ms/devicelogin and enter the code XXXFAKEXXX to authenticate.
+The default web browser has been opened at https://login.microsoftonline.com/common/oauth2/authorize. Please continue 
+the login in the web browser. If no web browser is available or if the web browser fails to open, use device code flow 
+with `az login --use-device-code`.
 ```
 
 Do as instructed to login.  After completed, `az login` will return and you are ready to go.
-
-For most cases `az login` should suffice, but in certain scenarios such as
-working with AKS you may hit issues with Bearer tokens not being refreshed
-during an operation. To work around this, login using the device code flag:
-
-```bash
-$ az login --use-device-code
-```
 
 > **Note:** If you're using Government, China, or German Clouds, you'll need to configure the Azure CLI to work
 > with that cloud.  Do so by running `az cloud set --name <Cloud>`, where `<Cloud>` is one of `AzureUSGovernment`,
@@ -75,10 +69,10 @@ Once obtained, there are two ways to communicate your authorization tokens to Pu
 2. Set them using configuration
 
     ```bash
-    $ pulumi config set azure:clientId <clientID>
-    $ pulumi config set azure:clientSecret <clientSecret> --secret
-    $ pulumi config set azure:tenantId <tenantID>
-    $ pulumi config set azure:subscriptionId <subscriptionId>
+    $ pulumi config set azure-nextgen:clientId <clientID>
+    $ pulumi config set azure-nextgen:clientSecret <clientSecret> --secret
+    $ pulumi config set azure-nextgen:tenantId <tenantID>
+    $ pulumi config set azure-nextgen:subscriptionId <subscriptionId>
     ```
 
 ### Creating a Service Principal
@@ -132,10 +126,10 @@ $ export ARM_SUBSCRIPTION_ID="ZZZZZZZZ-ZZZZ-ZZZZ-ZZZZ-ZZZZZZZZZZZZ"
 Or configuration variables, if you prefer that they be stored alongside your Pulumi stack for easy multi-user access:
 
 ```bash
-$ pulumi config set azure:clientId "WWWWWWWW-WWWW-WWWW-WWWW-WWWWWWWWWWWW"
-$ pulumi config set azure:clientSecret "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" --secret
-$ pulumi config set azure:tenantId "YYYYYYYY-YYYY-YYYY-YYYY-YYYYYYYYYYYY"
-$ pulumi config set azure:subscriptionId "ZZZZZZZZ-ZZZZ-ZZZZ-ZZZZ-ZZZZZZZZZZZZ"
+$ pulumi config set azure-nextgen:clientId "WWWWWWWW-WWWW-WWWW-WWWW-WWWWWWWWWWWW"
+$ pulumi config set azure-nextgen:clientSecret "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" --secret
+$ pulumi config set azure-nextgen:tenantId "YYYYYYYY-YYYY-YYYY-YYYY-YYYYYYYYYYYY"
+$ pulumi config set azure-nextgen:subscriptionId "ZZZZZZZZ-ZZZZ-ZZZZ-ZZZZ-ZZZZZZZZZZZZ"
 ```
 
 Remember to pass `--secret` when setting `clientSecret` so that it is properly encrypted.

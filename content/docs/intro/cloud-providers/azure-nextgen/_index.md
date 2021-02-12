@@ -61,7 +61,7 @@ The Azure Next Gen provider is open source and available in the [pulumi/pulumi-a
 
 ## Configuration
 
-The Azure provider accepts the following configuration settings.  These can be provided to the default Azure provider via `pulumi config set azure:<option>`, or passed to the constructor of `new azure.Provider` to construct a specific instance of the Azure provider.
+The Azure provider accepts the following configuration settings.  These can be provided to the default Azure provider via `pulumi config set azure-nextgen:<option>`, or passed to the constructor of [Provider]({{< relref "/docs/reference/pkg/azure-nextgen/provider" >}}) to construct a specific instance of the Azure provider.
 
 * `auxiliaryTenantIds`: (Optional)
 * `clientCertificatePassword`: (Optional) The password associated with the Client Certificate. For use when authenticating as a Service Principal using a Client Certificate.
@@ -69,7 +69,7 @@ The Azure provider accepts the following configuration settings.  These can be p
 * `clientId`: (Optional) The Client ID which should be used.
 * `clientSecret`: (Optional) The Client Secret which should be used. For use When authenticating as a Service Principal using a Client Secret.
 * `disablePulumiPartnerId`: (Optional) This will disable the Pulumi Partner ID which is used if a custom partnerId isn’t specified.
-* `environment`: (Required) The Cloud Environment which should be used. Possible values are public, usgovernment, german, and china. Defaults to public.
+* `environment`: (Optional) The Cloud Environment which should be used. Possible values are public, usgovernment, german, and china. Defaults to public.
 * `msiEndpoint`: (Optional) The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected automatically.
 * `partnerId`: (Optional) A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution.
 * `subscriptionId`: (Optional) The Subscription ID which should be used.
