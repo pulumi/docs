@@ -87,6 +87,7 @@ function getChecker(scope, brokenLinks) {
             requestMethod,
             filterLevel,
             excludeInternalLinks: true,
+            excludeLinksToSamePage: true,
             excludedKeywords: [
                 ...getDefaultExcludedKeywords(),
                 "https://www*"
@@ -101,6 +102,7 @@ function getChecker(scope, brokenLinks) {
         const opts = {
             requestMethod,
             filterLevel,
+            excludeLinksToSamePage: true,
             excludedKeywords: getDefaultExcludedKeywords(),
         };
 
