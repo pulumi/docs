@@ -66,12 +66,6 @@ img = "/logos/press/awards/ema-top-3.png"
 url = "https://www.ematop3.com/serverless.html"
 
 [[awards]]
-title = "DevOps Company of the Year Nominee"
-featured = true
-img = "/logos/press/awards/computing-devops-2019.png"
-url = "https://events.computing.co.uk/devopsexcellence/static/2019-shortlist"
-
-[[awards]]
 title = "Best open source software of 2019"
 featured = true
 img = "/logos/press/awards/bossie-2019.png"
