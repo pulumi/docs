@@ -1,15 +1,15 @@
 ---
-title: Packet.net Setup
-meta_desc: This page provides an overview of how to setup the Packet.net SDK to manage and provision resources.
+title: Equinix Metal Setup
+meta_desc: This page provides an overview of how to setup the Equinix Metal SDK to manage and provision resources.
 aliases: ["/docs/reference/clouds/packet/setup/"]
 ---
 
-The [Pulumi Packet provider]({{< relref "./" >}}) uses the Packet.net SDK to manage and provision resources.
+The [Pulumi Equinix Metal provider]({{< relref "./" >}}) uses the Equinix Metal SDK to manage and provision resources.
 
-> Pulumi relies on the Packet.net SDK to authenticate requests from your computer to Packet.net. Your credentials are never sent
+> Pulumi relies on the Equinix Metal SDK to authenticate requests from your computer to Equinix Metal. Your credentials are never sent
 > to pulumi.com.
 
-The [Pulumi Packet.net Provider]({{< relref "./" >}}) needs to be configured with Packet.net credentials
+The [Pulumi Equinix Metal Provider]({{< relref "./" >}}) needs to be configured with Equinix Metal credentials
 before it can be used to create resources.
 
 ### Configuring Credentials
