@@ -283,7 +283,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The profile for API operations. If not set, the default profile created with `aws configure` will be used.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `AWS_PROFILE`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
@@ -293,7 +293,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where AWS operations will take place. Examples are us-east-1, us-west-2, etc.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variables: `AWS_REGION`, `AWS_DEFAULT_REGION`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="s3forcepathstyle_csharp">
@@ -478,7 +478,7 @@ not public (yet).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The profile for API operations. If not set, the default profile created with `aws configure` will be used.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `AWS_PROFILE`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="region_go">
@@ -488,7 +488,7 @@ not public (yet).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where AWS operations will take place. Examples are us-east-1, us-west-2, etc.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variables: `AWS_REGION`, `AWS_DEFAULT_REGION`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="s3forcepathstyle_go">
@@ -673,7 +673,7 @@ not public (yet).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The profile for API operations. If not set, the default profile created with `aws configure` will be used.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `AWS_PROFILE`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
@@ -683,7 +683,7 @@ not public (yet).
         <span class="property-type">Region</span>
     </dt>
     <dd>{{% md %}}The region where AWS operations will take place. Examples are us-east-1, us-west-2, etc.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variables: `AWS_REGION`, `AWS_DEFAULT_REGION`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="s3forcepathstyle_nodejs">
@@ -868,7 +868,7 @@ not public (yet).
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The profile for API operations. If not set, the default profile created with `aws configure` will be used.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `AWS_PROFILE`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="region_python">
@@ -878,7 +878,7 @@ not public (yet).
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region where AWS operations will take place. Examples are us-east-1, us-west-2, etc.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variables: `AWS_REGION`, `AWS_DEFAULT_REGION`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="s3_force_path_style_python">
