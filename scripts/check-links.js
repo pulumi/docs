@@ -87,7 +87,6 @@ function getChecker(scope, brokenLinks) {
             requestMethod,
             filterLevel,
             excludeInternalLinks: true,
-            excludeLinksToSamePage: true,
             excludedKeywords: [
                 ...getDefaultExcludedKeywords(),
                 "https://www*"
@@ -102,7 +101,6 @@ function getChecker(scope, brokenLinks) {
         const opts = {
             requestMethod,
             filterLevel,
-            excludeLinksToSamePage: true,
             excludedKeywords: getDefaultExcludedKeywords(),
         };
 
@@ -117,7 +115,6 @@ function getChecker(scope, brokenLinks) {
 function getDefaultHandlers(brokenLinks) {
     return {
         link: (result) => {
-            console.log({ result });
             try {
                 onLink(result, brokenLinks);
             }
@@ -126,11 +123,9 @@ function getDefaultHandlers(brokenLinks) {
             }
         },
         error: (error) => {
-            console.log({ error });
             fail(error);
         },
         page: (error, pageURL) => {
-            console.log({ error, pageURL });
             try {
                 onPage(error, pageURL, brokenLinks);
             }
@@ -267,6 +262,7 @@ function getDefaultExcludedKeywords() {
         "https://codepen.io",
         "https://twitter.com",
         "https://t.co",
+        "https://www.akamai.com/",
     ];
 }
 
