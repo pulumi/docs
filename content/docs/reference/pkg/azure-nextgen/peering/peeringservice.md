@@ -293,15 +293,6 @@ The PeeringService resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="peeringservicename_csharp">
 <a href="#peeringservicename_csharp" style="color: inherit; text-decoration: inherit;">Peering<wbr>Service<wbr>Name</a>
 </span>
@@ -318,6 +309,15 @@ The PeeringService resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="peeringservicelocation_csharp">
@@ -362,15 +362,6 @@ The PeeringService resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="peeringservicename_go">
 <a href="#peeringservicename_go" style="color: inherit; text-decoration: inherit;">Peering<wbr>Service<wbr>Name</a>
 </span>
@@ -387,6 +378,15 @@ The PeeringService resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="peeringservicelocation_go">
@@ -431,15 +431,6 @@ The PeeringService resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="peeringservicename_nodejs">
 <a href="#peeringservicename_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Service<wbr>Name</a>
 </span>
@@ -456,6 +447,15 @@ The PeeringService resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="peeringservicelocation_nodejs">
@@ -500,15 +500,6 @@ The PeeringService resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="peering_service_name_python">
 <a href="#peering_service_name_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>service_<wbr>name</a>
 </span>
@@ -525,6 +516,15 @@ The PeeringService resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="peering_service_location_python">

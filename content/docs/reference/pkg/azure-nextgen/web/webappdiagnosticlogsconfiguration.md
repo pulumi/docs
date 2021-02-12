@@ -2503,7 +2503,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_csharp">
@@ -2563,7 +2563,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_go">
@@ -2623,7 +2623,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_nodejs">
@@ -2683,7 +2683,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_python">

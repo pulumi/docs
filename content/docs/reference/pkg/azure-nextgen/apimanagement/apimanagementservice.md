@@ -1011,15 +1011,6 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="publisheremail_csharp">
 <a href="#publisheremail_csharp" style="color: inherit; text-decoration: inherit;">Publisher<wbr>Email</a>
 </span>
@@ -1137,6 +1128,15 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}Managed service identity of the Api Management service.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="notificationsenderemail_csharp">
 <a href="#notificationsenderemail_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Sender<wbr>Email</a>
 </span>
@@ -1177,15 +1177,6 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="publisheremail_go">
@@ -1305,6 +1296,15 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}Managed service identity of the Api Management service.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="notificationsenderemail_go">
 <a href="#notificationsenderemail_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Sender<wbr>Email</a>
 </span>
@@ -1345,15 +1345,6 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="publisheremail_nodejs">
@@ -1473,6 +1464,15 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}Managed service identity of the Api Management service.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="notificationsenderemail_nodejs">
 <a href="#notificationsenderemail_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Sender<wbr>Email</a>
 </span>
@@ -1513,15 +1513,6 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="publisher_email_python">
@@ -1639,6 +1630,15 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="#apimanagementserviceidentity">Api<wbr>Management<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed service identity of the Api Management service.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="notification_sender_email_python">

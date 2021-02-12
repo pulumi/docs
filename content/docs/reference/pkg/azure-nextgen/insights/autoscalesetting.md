@@ -689,15 +689,6 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}The autoscale setting name.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="profiles_csharp">
 <a href="#profiles_csharp" style="color: inherit; text-decoration: inherit;">Profiles</a>
 </span>
@@ -723,6 +714,15 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is 'true'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -776,15 +776,6 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}The autoscale setting name.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="profiles_go">
 <a href="#profiles_go" style="color: inherit; text-decoration: inherit;">Profiles</a>
 </span>
@@ -810,6 +801,15 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is 'true'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -863,15 +863,6 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}The autoscale setting name.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="profiles_nodejs">
 <a href="#profiles_nodejs" style="color: inherit; text-decoration: inherit;">profiles</a>
 </span>
@@ -897,6 +888,15 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is 'true'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -950,15 +950,6 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}The autoscale setting name.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="profiles_python">
 <a href="#profiles_python" style="color: inherit; text-decoration: inherit;">profiles</a>
 </span>
@@ -984,6 +975,15 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is 'true'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">

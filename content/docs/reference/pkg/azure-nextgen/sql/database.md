@@ -1395,15 +1395,6 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}The name of the database to be operated on (updated or created).{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -1483,6 +1474,15 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the elastic pool the database is in. If elasticPoolName and requestedServiceObjectiveName are both updated, the value of requestedServiceObjectiveName is ignored. Not supported for DataWarehouse edition.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxsizebytes_csharp">
@@ -1612,15 +1612,6 @@ Get-AzSqlServerServiceObjective -Location <location>
     <dd>{{% md %}}The name of the database to be operated on (updated or created).{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -1700,6 +1691,15 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the elastic pool the database is in. If elasticPoolName and requestedServiceObjectiveName are both updated, the value of requestedServiceObjectiveName is ignored. Not supported for DataWarehouse edition.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxsizebytes_go">
@@ -1829,15 +1829,6 @@ Get-AzSqlServerServiceObjective -Location <location>
     <dd>{{% md %}}The name of the database to be operated on (updated or created).{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
@@ -1917,6 +1908,15 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the elastic pool the database is in. If elasticPoolName and requestedServiceObjectiveName are both updated, the value of requestedServiceObjectiveName is ignored. Not supported for DataWarehouse edition.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxsizebytes_nodejs">
@@ -2046,15 +2046,6 @@ Get-AzSqlServerServiceObjective -Location <location>
     <dd>{{% md %}}The name of the database to be operated on (updated or created).{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
@@ -2134,6 +2125,15 @@ Get-AzSqlServerServiceObjective -Location <location>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the elastic pool the database is in. If elasticPoolName and requestedServiceObjectiveName are both updated, the value of requestedServiceObjectiveName is ignored. Not supported for DataWarehouse edition.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="max_size_bytes_python">

@@ -336,15 +336,6 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -370,6 +361,15 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#customrpactionroutedefinition">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Custom<wbr>Providers.<wbr>Inputs.<wbr>Custom<wbr>RPAction<wbr>Route<wbr>Definition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of actions that the custom resource provider implements.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="resourcetypes_csharp">
@@ -405,15 +405,6 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -439,6 +430,15 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#customrpactionroutedefinition">[]Custom<wbr>RPAction<wbr>Route<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}A list of actions that the custom resource provider implements.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="resourcetypes_go">
@@ -474,15 +474,6 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
@@ -508,6 +499,15 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#customrpactionroutedefinition">Custom<wbr>RPAction<wbr>Route<wbr>Definition[]</a></span>
     </dt>
     <dd>{{% md %}}A list of actions that the custom resource provider implements.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="resourcetypes_nodejs">
@@ -543,15 +543,6 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
 
     <dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
@@ -577,6 +568,15 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#customrpactionroutedefinition">Sequence[Custom<wbr>RPAction<wbr>Route<wbr>Definition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of actions that the custom resource provider implements.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="resource_types_python">

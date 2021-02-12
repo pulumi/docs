@@ -319,15 +319,6 @@ The Machine resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -364,6 +355,15 @@ The Machine resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="locationdata_csharp">
 <a href="#locationdata_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Data</a>
 </span>
@@ -395,15 +395,6 @@ The Machine resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -442,6 +433,15 @@ The Machine resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="locationdata_go">
 <a href="#locationdata_go" style="color: inherit; text-decoration: inherit;">Location<wbr>Data</a>
 </span>
@@ -473,15 +473,6 @@ The Machine resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -520,6 +511,15 @@ The Machine resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="locationdata_nodejs">
 <a href="#locationdata_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Data</a>
 </span>
@@ -551,15 +551,6 @@ The Machine resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -596,6 +587,15 @@ The Machine resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#machineidentity">Machine<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="location_data_python">

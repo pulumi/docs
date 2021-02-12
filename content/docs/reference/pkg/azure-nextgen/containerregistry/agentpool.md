@@ -323,15 +323,6 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}The name of the agent pool.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="registryname_csharp">
 <a href="#registryname_csharp" style="color: inherit; text-decoration: inherit;">Registry<wbr>Name</a>
 </span>
@@ -357,6 +348,15 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The count of agent machine{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="os_csharp">
@@ -410,15 +410,6 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}The name of the agent pool.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="registryname_go">
 <a href="#registryname_go" style="color: inherit; text-decoration: inherit;">Registry<wbr>Name</a>
 </span>
@@ -444,6 +435,15 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The count of agent machine{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="os_go">
@@ -497,15 +497,6 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}The name of the agent pool.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="registryname_nodejs">
 <a href="#registryname_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Name</a>
 </span>
@@ -531,6 +522,15 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The count of agent machine{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="os_nodejs">
@@ -584,15 +584,6 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}The name of the agent pool.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="registry_name_python">
 <a href="#registry_name_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>name</a>
 </span>
@@ -618,6 +609,15 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The count of agent machine{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="os_python">

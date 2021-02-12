@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.compute.DedicatedHost resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Specifies information about the Dedicated host.
-Latest API Version: 2020-06-01.
+Latest API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -337,15 +337,6 @@ The DedicatedHost resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}The name of the dedicated host .{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -380,6 +371,15 @@ The DedicatedHost resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#dedicatedhostlicensetypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Dedicated<wbr>Host<wbr>License<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Specifies the software license type that will be applied to the VMs deployed on the dedicated host. <br><br> Possible values are: <br><br> **None** <br><br> **Windows_Server_Hybrid** <br><br> **Windows_Server_Perpetual** <br><br> Default: **None**{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="platformfaultdomain_csharp">
@@ -424,15 +424,6 @@ The DedicatedHost resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}The name of the dedicated host .{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -467,6 +458,15 @@ The DedicatedHost resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#dedicatedhostlicensetypes">Dedicated<wbr>Host<wbr>License<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Specifies the software license type that will be applied to the VMs deployed on the dedicated host. <br><br> Possible values are: <br><br> **None** <br><br> **Windows_Server_Hybrid** <br><br> **Windows_Server_Perpetual** <br><br> Default: **None**{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="platformfaultdomain_go">
@@ -511,15 +511,6 @@ The DedicatedHost resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}The name of the dedicated host .{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
@@ -554,6 +545,15 @@ The DedicatedHost resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#dedicatedhostlicensetypes">Dedicated<wbr>Host<wbr>License<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Specifies the software license type that will be applied to the VMs deployed on the dedicated host. <br><br> Possible values are: <br><br> **None** <br><br> **Windows_Server_Hybrid** <br><br> **Windows_Server_Perpetual** <br><br> Default: **None**{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="platformfaultdomain_nodejs">
@@ -598,15 +598,6 @@ The DedicatedHost resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}The name of the dedicated host .{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
@@ -641,6 +632,15 @@ The DedicatedHost resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#dedicatedhostlicensetypes">Dedicated<wbr>Host<wbr>License<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Specifies the software license type that will be applied to the VMs deployed on the dedicated host. <br><br> Possible values are: <br><br> **None** <br><br> **Windows_Server_Hybrid** <br><br> **Windows_Server_Perpetual** <br><br> Default: **None**{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="platform_fault_domain_python">

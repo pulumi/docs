@@ -688,15 +688,6 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="policyname_csharp">
 <a href="#policyname_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
 </span>
@@ -742,6 +733,15 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Gets a unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="managedrules_csharp">
 <a href="#managedrules_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Rules</a>
 </span>
@@ -782,15 +782,6 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="policyname_go">
@@ -838,6 +829,15 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Gets a unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="managedrules_go">
 <a href="#managedrules_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Rules</a>
 </span>
@@ -878,15 +878,6 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="policyname_nodejs">
@@ -934,6 +925,15 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Gets a unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="managedrules_nodejs">
 <a href="#managedrules_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Rules</a>
 </span>
@@ -974,15 +974,6 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="policy_name_python">
@@ -1028,6 +1019,15 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets a unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="managed_rules_python">

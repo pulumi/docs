@@ -292,15 +292,6 @@ The Network resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="networkresourcename_csharp">
 <a href="#networkresourcename_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Resource<wbr>Name</a>
 </span>
@@ -328,6 +319,15 @@ The Network resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Azure resource group name{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -341,15 +341,6 @@ The Network resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="networkresourcename_go">
@@ -379,6 +370,15 @@ The Network resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Azure resource group name{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -392,15 +392,6 @@ The Network resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="networkresourcename_nodejs">
@@ -430,6 +421,15 @@ The Network resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Azure resource group name{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -443,15 +443,6 @@ The Network resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="network_resource_name_python">
@@ -479,6 +470,15 @@ The Network resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure resource group name{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">

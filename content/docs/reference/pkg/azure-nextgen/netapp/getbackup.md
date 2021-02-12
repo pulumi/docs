@@ -292,6 +292,15 @@ The following output properties are available:
     <dd>{{% md %}}The creation date of the backup{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="failurereason_csharp">
+<a href="#failurereason_csharp" style="color: inherit; text-decoration: inherit;">Failure<wbr>Reason</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Failure reason{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -386,6 +395,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the backup{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="failurereason_go">
+<a href="#failurereason_go" style="color: inherit; text-decoration: inherit;">Failure<wbr>Reason</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Failure reason{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -484,6 +502,15 @@ The following output properties are available:
     <dd>{{% md %}}The creation date of the backup{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="failurereason_nodejs">
+<a href="#failurereason_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Reason</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Failure reason{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -578,6 +605,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The creation date of the backup{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="failure_reason_python">
+<a href="#failure_reason_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>reason</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Failure reason{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_python">

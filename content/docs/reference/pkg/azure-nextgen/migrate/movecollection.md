@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.migrate.MoveCollection resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Define the move collection.
+Latest API Version: 2021-01-01.
 
 
 

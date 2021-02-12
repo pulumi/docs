@@ -205,15 +205,6 @@ The ManagedHostingEnvironment resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -385,6 +376,15 @@ The ManagedHostingEnvironment resource accepts the following [input]({{< relref 
     <dd>{{% md %}}Result of the last deployment action on this hostingEnvironment (App Service Environment){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="maximumnumberofmachines_csharp">
 <a href="#maximumnumberofmachines_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Number<wbr>Of<wbr>Machines</a>
 </span>
@@ -543,15 +543,6 @@ The ManagedHostingEnvironment resource accepts the following [input]({{< relref 
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -725,6 +716,15 @@ The ManagedHostingEnvironment resource accepts the following [input]({{< relref 
     <dd>{{% md %}}Result of the last deployment action on this hostingEnvironment (App Service Environment){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="maximumnumberofmachines_go">
 <a href="#maximumnumberofmachines_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Number<wbr>Of<wbr>Machines</a>
 </span>
@@ -883,15 +883,6 @@ The ManagedHostingEnvironment resource accepts the following [input]({{< relref 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -1065,6 +1056,15 @@ The ManagedHostingEnvironment resource accepts the following [input]({{< relref 
     <dd>{{% md %}}Result of the last deployment action on this hostingEnvironment (App Service Environment){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="maximumnumberofmachines_nodejs">
 <a href="#maximumnumberofmachines_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Number<wbr>Of<wbr>Machines</a>
 </span>
@@ -1223,15 +1223,6 @@ The ManagedHostingEnvironment resource accepts the following [input]({{< relref 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -1403,6 +1394,15 @@ The ManagedHostingEnvironment resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Result of the last deployment action on this hostingEnvironment (App Service Environment){{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maximum_number_of_machines_python">

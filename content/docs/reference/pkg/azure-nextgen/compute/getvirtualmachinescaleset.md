@@ -238,6 +238,15 @@ The following output properties are available:
     <dd>{{% md %}}When Overprovision is enabled, extensions are launched only on the requested number of VMs which are finally kept. This property will hence ensure that the extensions do not run on the extra overprovisioned VMs.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="extendedlocation_csharp">
+<a href="#extendedlocation_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Extended<wbr>Location<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of the Virtual Machine Scale Set.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="hostgroup_csharp">
 <a href="#hostgroup_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Group</a>
 </span>
@@ -254,6 +263,15 @@ The following output properties are available:
         <span class="property-type"><a href="#virtualmachinescalesetidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the virtual machine scale set, if configured.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="orchestrationmode_csharp">
+<a href="#orchestrationmode_csharp" style="color: inherit; text-decoration: inherit;">Orchestration<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the orchestration mode for the virtual machine scale set.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="overprovision_csharp">
@@ -451,6 +469,15 @@ The following output properties are available:
     <dd>{{% md %}}When Overprovision is enabled, extensions are launched only on the requested number of VMs which are finally kept. This property will hence ensure that the extensions do not run on the extra overprovisioned VMs.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="extendedlocation_go">
+<a href="#extendedlocation_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of the Virtual Machine Scale Set.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="hostgroup_go">
 <a href="#hostgroup_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Group</a>
 </span>
@@ -467,6 +494,15 @@ The following output properties are available:
         <span class="property-type"><a href="#virtualmachinescalesetidentityresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the virtual machine scale set, if configured.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="orchestrationmode_go">
+<a href="#orchestrationmode_go" style="color: inherit; text-decoration: inherit;">Orchestration<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the orchestration mode for the virtual machine scale set.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="overprovision_go">
@@ -664,6 +700,15 @@ The following output properties are available:
     <dd>{{% md %}}When Overprovision is enabled, extensions are launched only on the requested number of VMs which are finally kept. This property will hence ensure that the extensions do not run on the extra overprovisioned VMs.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="extendedlocation_nodejs">
+<a href="#extendedlocation_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of the Virtual Machine Scale Set.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="hostgroup_nodejs">
 <a href="#hostgroup_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Group</a>
 </span>
@@ -680,6 +725,15 @@ The following output properties are available:
         <span class="property-type"><a href="#virtualmachinescalesetidentityresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the virtual machine scale set, if configured.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="orchestrationmode_nodejs">
+<a href="#orchestrationmode_nodejs" style="color: inherit; text-decoration: inherit;">orchestration<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the orchestration mode for the virtual machine scale set.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="overprovision_nodejs">
@@ -877,6 +931,15 @@ The following output properties are available:
     <dd>{{% md %}}When Overprovision is enabled, extensions are launched only on the requested number of VMs which are finally kept. This property will hence ensure that the extensions do not run on the extra overprovisioned VMs.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="extended_location_python">
+<a href="#extended_location_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of the Virtual Machine Scale Set.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="host_group_python">
 <a href="#host_group_python" style="color: inherit; text-decoration: inherit;">host_<wbr>group</a>
 </span>
@@ -893,6 +956,15 @@ The following output properties are available:
         <span class="property-type"><a href="#virtualmachinescalesetidentityresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the virtual machine scale set, if configured.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="orchestration_mode_python">
+<a href="#orchestration_mode_python" style="color: inherit; text-decoration: inherit;">orchestration_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the orchestration mode for the virtual machine scale set.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="overprovision_python">
@@ -1932,6 +2004,109 @@ The following output properties are available:
 </dl>
 {{% /choosable %}}
 
+<h4 id="extendedlocationresponse">Extended<wbr>Location<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="imagereferenceresponse">Image<wbr>Reference<wbr>Response</h4>
 
 
@@ -2200,6 +2375,15 @@ The following output properties are available:
     <dd>{{% md %}}Specifies whether password authentication should be disabled.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="patchsettings_csharp">
+<a href="#patchsettings_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linuxpatchsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Linux<wbr>Patch<wbr>Settings<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Linux.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="provisionvmagent_csharp">
 <a href="#provisionvmagent_csharp" style="color: inherit; text-decoration: inherit;">Provision<wbr>VMAgent</a>
 </span>
@@ -2231,6 +2415,15 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether password authentication should be disabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="patchsettings_go">
+<a href="#patchsettings_go" style="color: inherit; text-decoration: inherit;">Patch<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linuxpatchsettingsresponse">Linux<wbr>Patch<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Linux.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="provisionvmagent_go">
@@ -2266,6 +2459,15 @@ The following output properties are available:
     <dd>{{% md %}}Specifies whether password authentication should be disabled.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="patchsettings_nodejs">
+<a href="#patchsettings_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linuxpatchsettingsresponse">Linux<wbr>Patch<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Linux.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="provisionvmagent_nodejs">
 <a href="#provisionvmagent_nodejs" style="color: inherit; text-decoration: inherit;">provision<wbr>VMAgent</a>
 </span>
@@ -2299,6 +2501,15 @@ The following output properties are available:
     <dd>{{% md %}}Specifies whether password authentication should be disabled.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="patch_settings_python">
+<a href="#patch_settings_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linuxpatchsettingsresponse">Linux<wbr>Patch<wbr>Settings<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Linux.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="provision_vm_agent_python">
 <a href="#provision_vm_agent_python" style="color: inherit; text-decoration: inherit;">provision_<wbr>vm_<wbr>agent</a>
 </span>
@@ -2318,7 +2529,7 @@ The following output properties are available:
 </dl>
 {{% /choosable %}}
 
-<h4 id="patchsettingsresponse">Patch<wbr>Settings<wbr>Response</h4>
+<h4 id="linuxpatchsettingsresponse">Linux<wbr>Patch<wbr>Settings<wbr>Response</h4>
 
 
 
@@ -2336,7 +2547,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the mode of in-guest patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - The virtual machine's default patching configuration is used. <br /><br /> **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2351,7 +2562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the mode of in-guest patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - The virtual machine's default patching configuration is used. <br /><br /> **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2366,7 +2577,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the mode of in-guest patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - The virtual machine's default patching configuration is used. <br /><br /> **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2381,7 +2592,110 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the mode of in-guest patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - The virtual machine's default patching configuration is used. <br /><br /> **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="patchsettingsresponse">Patch<wbr>Settings<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablehotpatching_csharp">
+<a href="#enablehotpatching_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Hotpatching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables customers to patch their Azure VMs without requiring a reboot. For enableHotpatching, the 'provisionVMAgent' must be set to true and 'patchMode' must be set to 'AutomaticByPlatform'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="patchmode_csharp">
+<a href="#patchmode_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablehotpatching_go">
+<a href="#enablehotpatching_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Hotpatching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables customers to patch their Azure VMs without requiring a reboot. For enableHotpatching, the 'provisionVMAgent' must be set to true and 'patchMode' must be set to 'AutomaticByPlatform'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="patchmode_go">
+<a href="#patchmode_go" style="color: inherit; text-decoration: inherit;">Patch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablehotpatching_nodejs">
+<a href="#enablehotpatching_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Hotpatching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enables customers to patch their Azure VMs without requiring a reboot. For enableHotpatching, the 'provisionVMAgent' must be set to true and 'patchMode' must be set to 'AutomaticByPlatform'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="patchmode_nodejs">
+<a href="#patchmode_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_hotpatching_python">
+<a href="#enable_hotpatching_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>hotpatching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables customers to patch their Azure VMs without requiring a reboot. For enableHotpatching, the 'provisionVMAgent' must be set to true and 'patchMode' must be set to 'AutomaticByPlatform'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="patch_mode_python">
+<a href="#patch_mode_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2572,6 +2886,15 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enablecrosszoneupgrade_csharp">
+<a href="#enablecrosszoneupgrade_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Cross<wbr>Zone<wbr>Upgrade</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Allow VMSS to ignore AZ boundaries when constructing upgrade batches. Take into consideration the Update Domain and maxBatchInstancePercent to determine the batch size.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="maxbatchinstancepercent_csharp">
 <a href="#maxbatchinstancepercent_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Batch<wbr>Instance<wbr>Percent</a>
 </span>
@@ -2606,12 +2929,30 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 format. The default value is 0 seconds (PT0S).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="prioritizeunhealthyinstances_csharp">
+<a href="#prioritizeunhealthyinstances_csharp" style="color: inherit; text-decoration: inherit;">Prioritize<wbr>Unhealthy<wbr>Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Upgrade all unhealthy instances in a scale set before any healthy instances.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablecrosszoneupgrade_go">
+<a href="#enablecrosszoneupgrade_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Cross<wbr>Zone<wbr>Upgrade</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Allow VMSS to ignore AZ boundaries when constructing upgrade batches. Take into consideration the Update Domain and maxBatchInstancePercent to determine the batch size.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxbatchinstancepercent_go">
@@ -2648,12 +2989,30 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 format. The default value is 0 seconds (PT0S).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="prioritizeunhealthyinstances_go">
+<a href="#prioritizeunhealthyinstances_go" style="color: inherit; text-decoration: inherit;">Prioritize<wbr>Unhealthy<wbr>Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Upgrade all unhealthy instances in a scale set before any healthy instances.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablecrosszoneupgrade_nodejs">
+<a href="#enablecrosszoneupgrade_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Cross<wbr>Zone<wbr>Upgrade</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Allow VMSS to ignore AZ boundaries when constructing upgrade batches. Take into consideration the Update Domain and maxBatchInstancePercent to determine the batch size.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxbatchinstancepercent_nodejs">
@@ -2690,12 +3049,30 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 format. The default value is 0 seconds (PT0S).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="prioritizeunhealthyinstances_nodejs">
+<a href="#prioritizeunhealthyinstances_nodejs" style="color: inherit; text-decoration: inherit;">prioritize<wbr>Unhealthy<wbr>Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Upgrade all unhealthy instances in a scale set before any healthy instances.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_cross_zone_upgrade_python">
+<a href="#enable_cross_zone_upgrade_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>cross_<wbr>zone_<wbr>upgrade</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Allow VMSS to ignore AZ boundaries when constructing upgrade batches. Take into consideration the Update Domain and maxBatchInstancePercent to determine the batch size.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="max_batch_instance_percent_python">
@@ -2732,6 +3109,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 format. The default value is 0 seconds (PT0S).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="prioritize_unhealthy_instances_python">
+<a href="#prioritize_unhealthy_instances_python" style="color: inherit; text-decoration: inherit;">prioritize_<wbr>unhealthy_<wbr>instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Upgrade all unhealthy instances in a scale set before any healthy instances.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2888,6 +3274,24 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This property can be used by user in the request to enable or disable the Host Encryption for the virtual machine or virtual machine scale set. This will enable the encryption for all the disks including Resource/Temp disk at host itself. <br><br> Default: The Encryption at host will be disabled unless this property is set to true for the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securitytype_csharp">
+<a href="#securitytype_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the SecurityType of the virtual machine. It is set as TrustedLaunch to enable UefiSettings. <br><br> Default: UefiSettings will not be enabled unless this property is set as TrustedLaunch.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uefisettings_csharp">
+<a href="#uefisettings_csharp" style="color: inherit; text-decoration: inherit;">Uefi<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#uefisettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Uefi<wbr>Settings<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the security settings like secure boot and vTPM used while creating the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2903,6 +3307,24 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This property can be used by user in the request to enable or disable the Host Encryption for the virtual machine or virtual machine scale set. This will enable the encryption for all the disks including Resource/Temp disk at host itself. <br><br> Default: The Encryption at host will be disabled unless this property is set to true for the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securitytype_go">
+<a href="#securitytype_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the SecurityType of the virtual machine. It is set as TrustedLaunch to enable UefiSettings. <br><br> Default: UefiSettings will not be enabled unless this property is set as TrustedLaunch.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uefisettings_go">
+<a href="#uefisettings_go" style="color: inherit; text-decoration: inherit;">Uefi<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#uefisettingsresponse">Uefi<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the security settings like secure boot and vTPM used while creating the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2918,6 +3340,24 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This property can be used by user in the request to enable or disable the Host Encryption for the virtual machine or virtual machine scale set. This will enable the encryption for all the disks including Resource/Temp disk at host itself. <br><br> Default: The Encryption at host will be disabled unless this property is set to true for the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securitytype_nodejs">
+<a href="#securitytype_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the SecurityType of the virtual machine. It is set as TrustedLaunch to enable UefiSettings. <br><br> Default: UefiSettings will not be enabled unless this property is set as TrustedLaunch.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uefisettings_nodejs">
+<a href="#uefisettings_nodejs" style="color: inherit; text-decoration: inherit;">uefi<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#uefisettingsresponse">Uefi<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the security settings like secure boot and vTPM used while creating the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2933,6 +3373,24 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This property can be used by user in the request to enable or disable the Host Encryption for the virtual machine or virtual machine scale set. This will enable the encryption for all the disks including Resource/Temp disk at host itself. <br><br> Default: The Encryption at host will be disabled unless this property is set to true for the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="security_type_python">
+<a href="#security_type_python" style="color: inherit; text-decoration: inherit;">security_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the SecurityType of the virtual machine. It is set as TrustedLaunch to enable UefiSettings. <br><br> Default: UefiSettings will not be enabled unless this property is set as TrustedLaunch.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uefi_settings_python">
+<a href="#uefi_settings_python" style="color: inherit; text-decoration: inherit;">uefi_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#uefisettingsresponse">Uefi<wbr>Settings<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the security settings like secure boot and vTPM used while creating the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3412,6 +3870,109 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Configurable length of time a Virtual Machine being deleted will have to potentially approve the Terminate Scheduled Event before the event is auto approved (timed out). The configuration must be specified in ISO 8601 format, the default value is 5 minutes (PT5M){{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="uefisettingsresponse">Uefi<wbr>Settings<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securebootenabled_csharp">
+<a href="#securebootenabled_csharp" style="color: inherit; text-decoration: inherit;">Secure<wbr>Boot<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether secure boot should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vtpmenabled_csharp">
+<a href="#vtpmenabled_csharp" style="color: inherit; text-decoration: inherit;">VTpm<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether vTPM should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securebootenabled_go">
+<a href="#securebootenabled_go" style="color: inherit; text-decoration: inherit;">Secure<wbr>Boot<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether secure boot should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vtpmenabled_go">
+<a href="#vtpmenabled_go" style="color: inherit; text-decoration: inherit;">VTpm<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether vTPM should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securebootenabled_nodejs">
+<a href="#securebootenabled_nodejs" style="color: inherit; text-decoration: inherit;">secure<wbr>Boot<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether secure boot should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vtpmenabled_nodejs">
+<a href="#vtpmenabled_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>Tpm<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether vTPM should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secure_boot_enabled_python">
+<a href="#secure_boot_enabled_python" style="color: inherit; text-decoration: inherit;">secure_<wbr>boot_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether secure boot should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="v_tpm_enabled_python">
+<a href="#v_tpm_enabled_python" style="color: inherit; text-decoration: inherit;">v_<wbr>tpm_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether vTPM should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -7908,7 +8469,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Patch<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies settings related to in-guest patching (KBs).{{% /md %}}</dd>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Windows.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="provisionvmagent_csharp">
@@ -7968,7 +8529,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchsettingsresponse">Patch<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies settings related to in-guest patching (KBs).{{% /md %}}</dd>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Windows.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="provisionvmagent_go">
@@ -8028,7 +8589,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchsettingsresponse">Patch<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies settings related to in-guest patching (KBs).{{% /md %}}</dd>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Windows.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="provisionvmagent_nodejs">
@@ -8088,7 +8649,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchsettingsresponse">Patch<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies settings related to in-guest patching (KBs).{{% /md %}}</dd>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Windows.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="provision_vm_agent_python">

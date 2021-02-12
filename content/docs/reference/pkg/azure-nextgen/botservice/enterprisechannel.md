@@ -1332,7 +1332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#enterprisechannelstate">Enterprise<wbr>Channel<wbr>State</a></span>
+        <span class="property-type">string | <a href="#enterprisechannelstate">Enterprise<wbr>Channel<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}The current state of the Enterprise Channel.{{% /md %}}</dd>
 </dl>

@@ -173,6 +173,15 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="notebookaccesskeys_csharp">
+<a href="#notebookaccesskeys_csharp" style="color: inherit; text-decoration: inherit;">Notebook<wbr>Access<wbr>Keys</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#listnotebookkeysresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Outputs.<wbr>List<wbr>Notebook<wbr>Keys<wbr>Result<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="userstoragekey_csharp">
 <a href="#userstoragekey_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Storage<wbr>Key</a>
 </span>
@@ -187,15 +196,6 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="notebookaccesskeys_csharp">
-<a href="#notebookaccesskeys_csharp" style="color: inherit; text-decoration: inherit;">Notebook<wbr>Access<wbr>Keys</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notebooklistcredentialsresultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Outputs.<wbr>Notebook<wbr>List<wbr>Credentials<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -224,6 +224,15 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="notebookaccesskeys_go">
+<a href="#notebookaccesskeys_go" style="color: inherit; text-decoration: inherit;">Notebook<wbr>Access<wbr>Keys</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#listnotebookkeysresultresponse">List<wbr>Notebook<wbr>Keys<wbr>Result<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="userstoragekey_go">
 <a href="#userstoragekey_go" style="color: inherit; text-decoration: inherit;">User<wbr>Storage<wbr>Key</a>
 </span>
@@ -238,15 +247,6 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="notebookaccesskeys_go">
-<a href="#notebookaccesskeys_go" style="color: inherit; text-decoration: inherit;">Notebook<wbr>Access<wbr>Keys</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notebooklistcredentialsresultresponse">Notebook<wbr>List<wbr>Credentials<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -275,6 +275,15 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="notebookaccesskeys_nodejs">
+<a href="#notebookaccesskeys_nodejs" style="color: inherit; text-decoration: inherit;">notebook<wbr>Access<wbr>Keys</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#listnotebookkeysresultresponse">List<wbr>Notebook<wbr>Keys<wbr>Result<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="userstoragekey_nodejs">
 <a href="#userstoragekey_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Storage<wbr>Key</a>
 </span>
@@ -289,15 +298,6 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="notebookaccesskeys_nodejs">
-<a href="#notebookaccesskeys_nodejs" style="color: inherit; text-decoration: inherit;">notebook<wbr>Access<wbr>Keys</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notebooklistcredentialsresultresponse">Notebook<wbr>List<wbr>Credentials<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -326,6 +326,15 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="notebook_access_keys_python">
+<a href="#notebook_access_keys_python" style="color: inherit; text-decoration: inherit;">notebook_<wbr>access_<wbr>keys</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#listnotebookkeysresultresponse">List<wbr>Notebook<wbr>Keys<wbr>Result<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="user_storage_key_python">
 <a href="#user_storage_key_python" style="color: inherit; text-decoration: inherit;">user_<wbr>storage_<wbr>key</a>
 </span>
@@ -342,15 +351,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="notebook_access_keys_python">
-<a href="#notebook_access_keys_python" style="color: inherit; text-decoration: inherit;">notebook_<wbr>access_<wbr>keys</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notebooklistcredentialsresultresponse">Notebook<wbr>List<wbr>Credentials<wbr>Result<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -360,7 +360,7 @@ The following output properties are available:
 ## Supporting Types
 
 
-<h4 id="notebooklistcredentialsresultresponse">Notebook<wbr>List<wbr>Credentials<wbr>Result<wbr>Response</h4>
+<h4 id="listnotebookkeysresultresponse">List<wbr>Notebook<wbr>Keys<wbr>Result<wbr>Response</h4>
 
 
 
@@ -370,8 +370,8 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="primaryaccesskey_csharp">
 <a href="#primaryaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Access<wbr>Key</a>
 </span>
@@ -379,8 +379,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="secondaryaccesskey_csharp">
 <a href="#secondaryaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Access<wbr>Key</a>
 </span>
@@ -394,8 +394,8 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="primaryaccesskey_go">
 <a href="#primaryaccesskey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Access<wbr>Key</a>
 </span>
@@ -403,8 +403,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="secondaryaccesskey_go">
 <a href="#secondaryaccesskey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Access<wbr>Key</a>
 </span>
@@ -418,8 +418,8 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="primaryaccesskey_nodejs">
 <a href="#primaryaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Access<wbr>Key</a>
 </span>
@@ -427,8 +427,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="secondaryaccesskey_nodejs">
 <a href="#secondaryaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Access<wbr>Key</a>
 </span>
@@ -442,8 +442,8 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="primary_access_key_python">
 <a href="#primary_access_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>access_<wbr>key</a>
 </span>
@@ -451,8 +451,8 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="secondary_access_key_python">
 <a href="#secondary_access_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>access_<wbr>key</a>
 </span>

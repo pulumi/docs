@@ -166,6 +166,15 @@ The following output properties are available:
     <dd>{{% md %}}The contact details.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="currentstatus_csharp">
+<a href="#currentstatus_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#orderstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>Order<wbr>Status<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Current status of the order.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="deliverytrackinginfo_csharp">
 <a href="#deliverytrackinginfo_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Tracking<wbr>Info</a>
 </span>
@@ -229,15 +238,6 @@ The following output properties are available:
     <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="currentstatus_csharp">
-<a href="#currentstatus_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orderstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>Order<wbr>Status<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Current status of the order.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="shipmenttype_csharp">
 <a href="#shipmenttype_csharp" style="color: inherit; text-decoration: inherit;">Shipment<wbr>Type</a>
 </span>
@@ -269,6 +269,15 @@ The following output properties are available:
         <span class="property-type"><a href="#contactdetailsresponse">Contact<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The contact details.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="currentstatus_go">
+<a href="#currentstatus_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#orderstatusresponse">Order<wbr>Status<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Current status of the order.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="deliverytrackinginfo_go">
@@ -334,15 +343,6 @@ The following output properties are available:
     <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="currentstatus_go">
-<a href="#currentstatus_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orderstatusresponse">Order<wbr>Status<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Current status of the order.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="shipmenttype_go">
 <a href="#shipmenttype_go" style="color: inherit; text-decoration: inherit;">Shipment<wbr>Type</a>
 </span>
@@ -374,6 +374,15 @@ The following output properties are available:
         <span class="property-type"><a href="#contactdetailsresponse">Contact<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The contact details.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="currentstatus_nodejs">
+<a href="#currentstatus_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#orderstatusresponse">Order<wbr>Status<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Current status of the order.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="deliverytrackinginfo_nodejs">
@@ -439,15 +448,6 @@ The following output properties are available:
     <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="currentstatus_nodejs">
-<a href="#currentstatus_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orderstatusresponse">Order<wbr>Status<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Current status of the order.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="shipmenttype_nodejs">
 <a href="#shipmenttype_nodejs" style="color: inherit; text-decoration: inherit;">shipment<wbr>Type</a>
 </span>
@@ -479,6 +479,15 @@ The following output properties are available:
         <span class="property-type"><a href="#contactdetailsresponse">Contact<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The contact details.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="current_status_python">
+<a href="#current_status_python" style="color: inherit; text-decoration: inherit;">current_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#orderstatusresponse">Order<wbr>Status<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Current status of the order.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="delivery_tracking_info_python">
@@ -542,15 +551,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="current_status_python">
-<a href="#current_status_python" style="color: inherit; text-decoration: inherit;">current_<wbr>status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orderstatusresponse">Order<wbr>Status<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Current status of the order.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="shipment_type_python">

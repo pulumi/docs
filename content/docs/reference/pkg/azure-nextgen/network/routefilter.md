@@ -341,15 +341,6 @@ The RouteFilter resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -377,6 +368,15 @@ The RouteFilter resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
@@ -399,15 +399,6 @@ The RouteFilter resource accepts the following [input]({{< relref "/docs/intro/c
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
@@ -437,6 +428,15 @@ The RouteFilter resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
@@ -459,15 +459,6 @@ The RouteFilter resource accepts the following [input]({{< relref "/docs/intro/c
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
@@ -497,6 +488,15 @@ The RouteFilter resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
@@ -519,15 +519,6 @@ The RouteFilter resource accepts the following [input]({{< relref "/docs/intro/c
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
@@ -555,6 +546,15 @@ The RouteFilter resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="rules_python">
@@ -3508,7 +3508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routefilterruletype_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Filter<wbr>Rule<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#routefilterruletype">Route<wbr>Filter<wbr>Rule<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#routefilterruletype">Route<wbr>Filter<wbr>Rule<wbr>Type<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}The rule type of the rule.{{% /md %}}</dd>
     <dt class="property-optional"

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.compute.VirtualMachineScaleSetEx
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Describes a Virtual Machine Scale Set Extension.
-Latest API Version: 2020-06-01.
+Latest API Version: 2020-12-01.
 ## Import
 
 An existing resource can be imported using its type token, name, and identifier, e.g.

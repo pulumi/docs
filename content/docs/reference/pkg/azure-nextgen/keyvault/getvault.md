@@ -1011,6 +1011,15 @@ The following output properties are available:
     <dd>{{% md %}}Provisioning state of the private endpoint connection.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Id of private endpoint connection.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="privateendpoint_csharp">
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
@@ -1042,6 +1051,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the private endpoint connection.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Id of private endpoint connection.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="privateendpoint_go">
@@ -1077,6 +1095,15 @@ The following output properties are available:
     <dd>{{% md %}}Provisioning state of the private endpoint connection.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Id of private endpoint connection.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="privateendpoint_nodejs">
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
@@ -1108,6 +1135,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the private endpoint connection.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Id of private endpoint connection.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="private_endpoint_python">
@@ -2028,6 +2064,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignoremissingvnetserviceendpoint_csharp">
+<a href="#ignoremissingvnetserviceendpoint_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2043,6 +2088,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignoremissingvnetserviceendpoint_go">
+<a href="#ignoremissingvnetserviceendpoint_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2058,6 +2112,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignoremissingvnetserviceendpoint_nodejs">
+<a href="#ignoremissingvnetserviceendpoint_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2073,6 +2136,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignore_missing_vnet_service_endpoint_python">
+<a href="#ignore_missing_vnet_service_endpoint_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>missing_<wbr>vnet_<wbr>service_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

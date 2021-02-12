@@ -324,15 +324,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The name of the Log Analytics cluster.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -387,6 +378,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The associated key properties.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
@@ -418,15 +418,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Log Analytics cluster.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
@@ -483,6 +474,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The associated key properties.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
@@ -514,15 +514,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Log Analytics cluster.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
@@ -579,6 +570,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The associated key properties.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
@@ -610,15 +610,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Log Analytics cluster.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
@@ -673,6 +664,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#keyvaultproperties">Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The associated key properties.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="sku_python">
@@ -1640,7 +1640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Operational<wbr>Insights.<wbr>Identity<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.{{% /md %}}</dd>
+    <dd>{{% md %}}Type of managed service identity.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_csharp">
@@ -1664,7 +1664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitytype">Identity<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.{{% /md %}}</dd>
+    <dd>{{% md %}}Type of managed service identity.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_go">
@@ -1688,7 +1688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitytype">Identity<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.{{% /md %}}</dd>
+    <dd>{{% md %}}Type of managed service identity.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_nodejs">
@@ -1712,7 +1712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitytype">Identity<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.{{% /md %}}</dd>
+    <dd>{{% md %}}Type of managed service identity.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="user_assigned_identities_python">
@@ -1756,7 +1756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.{{% /md %}}</dd>
+    <dd>{{% md %}}Type of managed service identity.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_csharp">
@@ -1798,7 +1798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.{{% /md %}}</dd>
+    <dd>{{% md %}}Type of managed service identity.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_go">
@@ -1840,7 +1840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.{{% /md %}}</dd>
+    <dd>{{% md %}}Type of managed service identity.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_nodejs">
@@ -1882,7 +1882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.{{% /md %}}</dd>
+    <dd>{{% md %}}Type of managed service identity.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="user_assigned_identities_python">

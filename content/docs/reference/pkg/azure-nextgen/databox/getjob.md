@@ -2917,7 +2917,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_csharp">
-<a href="#expecteddatasizeinterabytes_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+<a href="#expecteddatasizeinterabytes_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -3076,7 +3076,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_go">
-<a href="#expecteddatasizeinterabytes_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+<a href="#expecteddatasizeinterabytes_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -3235,7 +3235,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_nodejs">
-<a href="#expecteddatasizeinterabytes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+<a href="#expecteddatasizeinterabytes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
@@ -3393,8 +3393,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="expected_data_size_in_terabytes_python">
-<a href="#expected_data_size_in_terabytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>terabytes</a>
+        <span id="expected_data_size_in_tera_bytes_python">
+<a href="#expected_data_size_in_tera_bytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>tera_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -3699,7 +3699,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_csharp">
-<a href="#expecteddatasizeinterabytes_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+<a href="#expecteddatasizeinterabytes_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -3840,7 +3840,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_go">
-<a href="#expecteddatasizeinterabytes_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+<a href="#expecteddatasizeinterabytes_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -3981,7 +3981,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_nodejs">
-<a href="#expecteddatasizeinterabytes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+<a href="#expecteddatasizeinterabytes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
@@ -4121,8 +4121,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dd>{{% md %}}Set Device password for unlocking Databox Heavy. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="expected_data_size_in_terabytes_python">
-<a href="#expected_data_size_in_terabytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>terabytes</a>
+        <span id="expected_data_size_in_tera_bytes_python">
+<a href="#expected_data_size_in_tera_bytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>tera_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -4270,7 +4270,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_csharp">
-<a href="#expecteddatasizeinterabytes_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+<a href="#expecteddatasizeinterabytes_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -4411,7 +4411,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_go">
-<a href="#expecteddatasizeinterabytes_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+<a href="#expecteddatasizeinterabytes_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -4552,7 +4552,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_nodejs">
-<a href="#expecteddatasizeinterabytes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+<a href="#expecteddatasizeinterabytes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
@@ -4692,8 +4692,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dd>{{% md %}}Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="expected_data_size_in_terabytes_python">
-<a href="#expected_data_size_in_terabytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>terabytes</a>
+        <span id="expected_data_size_in_tera_bytes_python">
+<a href="#expected_data_size_in_tera_bytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>tera_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>

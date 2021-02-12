@@ -312,15 +312,6 @@ The ContainerService resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}Properties of Linux VMs.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="masterprofile_csharp">
 <a href="#masterprofile_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Profile</a>
 </span>
@@ -355,6 +346,15 @@ The ContainerService resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#containerservicediagnosticsprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Diagnostics<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the diagnostic agent.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="orchestratorprofile_csharp">
@@ -426,15 +426,6 @@ The ContainerService resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}Properties of Linux VMs.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="masterprofile_go">
 <a href="#masterprofile_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Profile</a>
 </span>
@@ -469,6 +460,15 @@ The ContainerService resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#containerservicediagnosticsprofile">Container<wbr>Service<wbr>Diagnostics<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Properties of the diagnostic agent.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="orchestratorprofile_go">
@@ -540,15 +540,6 @@ The ContainerService resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}Properties of Linux VMs.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="masterprofile_nodejs">
 <a href="#masterprofile_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Profile</a>
 </span>
@@ -583,6 +574,15 @@ The ContainerService resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#containerservicediagnosticsprofile">Container<wbr>Service<wbr>Diagnostics<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Properties of the diagnostic agent.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="orchestratorprofile_nodejs">
@@ -654,15 +654,6 @@ The ContainerService resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}Properties of Linux VMs.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="master_profile_python">
 <a href="#master_profile_python" style="color: inherit; text-decoration: inherit;">master_<wbr>profile</a>
 </span>
@@ -697,6 +688,15 @@ The ContainerService resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#containerservicediagnosticsprofile">Container<wbr>Service<wbr>Diagnostics<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the diagnostic agent.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="orchestrator_profile_python">

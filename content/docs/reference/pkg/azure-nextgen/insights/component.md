@@ -423,15 +423,6 @@ The Component resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}The kind of application that this component refers to, used to customize UI. This value is a freeform string, values should typically be one of the following: web, ios, other, store, java, phone.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -495,6 +486,15 @@ The Component resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}Indicates the flow of the ingestion.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="requestsource_csharp">
 <a href="#requestsource_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Source</a>
 </span>
@@ -553,15 +553,6 @@ The Component resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of application that this component refers to, used to customize UI. This value is a freeform string, values should typically be one of the following: web, ios, other, store, java, phone.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
@@ -627,6 +618,15 @@ The Component resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}Indicates the flow of the ingestion.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="requestsource_go">
 <a href="#requestsource_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Source</a>
 </span>
@@ -685,15 +685,6 @@ The Component resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of application that this component refers to, used to customize UI. This value is a freeform string, values should typically be one of the following: web, ios, other, store, java, phone.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
@@ -759,6 +750,15 @@ The Component resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}Indicates the flow of the ingestion.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="requestsource_nodejs">
 <a href="#requestsource_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Source</a>
 </span>
@@ -817,15 +817,6 @@ The Component resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The kind of application that this component refers to, used to customize UI. This value is a freeform string, values should typically be one of the following: web, ios, other, store, java, phone.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
@@ -889,6 +880,15 @@ The Component resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str | <a href="#ingestionmode">Ingestion<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Indicates the flow of the ingestion.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="request_source_python">

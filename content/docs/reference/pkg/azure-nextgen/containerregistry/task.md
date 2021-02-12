@@ -1176,15 +1176,6 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="platform_csharp">
 <a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
 </span>
@@ -1257,6 +1248,15 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
@@ -1297,15 +1297,6 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="platform_go">
@@ -1380,6 +1371,15 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
@@ -1420,15 +1420,6 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="platform_nodejs">
@@ -1503,6 +1494,15 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
@@ -1543,15 +1543,6 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="platform_python">
@@ -1624,6 +1615,15 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="status_python">

@@ -515,15 +515,6 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Disk source information. CreationData information cannot be changed after the disk has been created.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -605,6 +596,15 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="networkaccesspolicy_csharp">
 <a href="#networkaccesspolicy_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Access<wbr>Policy</a>
 </span>
@@ -663,15 +663,6 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#creationdata">Creation<wbr>Data</a></span>
     </dt>
     <dd>{{% md %}}Disk source information. CreationData information cannot be changed after the disk has been created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
@@ -755,6 +746,15 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="networkaccesspolicy_go">
 <a href="#networkaccesspolicy_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Access<wbr>Policy</a>
 </span>
@@ -813,15 +813,6 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#creationdata">Creation<wbr>Data</a></span>
     </dt>
     <dd>{{% md %}}Disk source information. CreationData information cannot be changed after the disk has been created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
@@ -905,6 +896,15 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="networkaccesspolicy_nodejs">
 <a href="#networkaccesspolicy_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Access<wbr>Policy</a>
 </span>
@@ -963,15 +963,6 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#creationdata">Creation<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Disk source information. CreationData information cannot be changed after the disk has been created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
@@ -1053,6 +1044,15 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="network_access_policy_python">

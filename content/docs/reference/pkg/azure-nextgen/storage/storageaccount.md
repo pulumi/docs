@@ -434,15 +434,6 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Required. Indicates the type of storage account.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -551,6 +542,15 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Allow large file shares if sets to Enabled. It cannot be disabled once it is enabled.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="minimumtlsversion_csharp">
 <a href="#minimumtlsversion_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Tls<wbr>Version</a>
 </span>
@@ -609,15 +609,6 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string | <a href="#kind">Kind</a></span>
     </dt>
     <dd>{{% md %}}Required. Indicates the type of storage account.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
@@ -728,6 +719,15 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Allow large file shares if sets to Enabled. It cannot be disabled once it is enabled.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="minimumtlsversion_go">
 <a href="#minimumtlsversion_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Tls<wbr>Version</a>
 </span>
@@ -786,15 +786,6 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string | <a href="#kind">Kind</a></span>
     </dt>
     <dd>{{% md %}}Required. Indicates the type of storage account.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
@@ -905,6 +896,15 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Allow large file shares if sets to Enabled. It cannot be disabled once it is enabled.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="minimumtlsversion_nodejs">
 <a href="#minimumtlsversion_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Tls<wbr>Version</a>
 </span>
@@ -963,15 +963,6 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str | <a href="#kind">Kind</a></span>
     </dt>
     <dd>{{% md %}}Required. Indicates the type of storage account.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
@@ -1080,6 +1071,15 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str | <a href="#largefilesharesstate">Large<wbr>File<wbr>Shares<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Allow large file shares if sets to Enabled. It cannot be disabled once it is enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="minimum_tls_version_python">

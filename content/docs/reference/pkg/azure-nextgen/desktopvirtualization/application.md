@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var application = new AzureNextGen.DesktopVirtualization.V20201110Preview.Application("application", new AzureNextGen.DesktopVirtualization.V20201110Preview.ApplicationArgs
+        var application = new AzureNextGen.DesktopVirtualization.V20210114Preview.Application("application", new AzureNextGen.DesktopVirtualization.V20210114Preview.ApplicationArgs
         {
             ApplicationGroupName = "applicationGroup1",
             ApplicationName = "application1",
@@ -54,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	desktopvirtualization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/desktopvirtualization/v20201110preview"
+	desktopvirtualization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/desktopvirtualization/v20210114preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -90,7 +90,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-application = azure_nextgen.desktopvirtualization.v20201110preview.Application("application",
+application = azure_nextgen.desktopvirtualization.v20210114preview.Application("application",
     application_group_name="applicationGroup1",
     application_name="application1",
     command_line_arguments="arguments",
@@ -113,7 +113,7 @@ application = azure_nextgen.desktopvirtualization.v20201110preview.Application("
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const application = new azure_nextgen.desktopvirtualization.v20201110preview.Application("application", {
+const application = new azure_nextgen.desktopvirtualization.v20210114preview.Application("application", {
     applicationGroupName: "applicationGroup1",
     applicationName: "application1",
     commandLineArguments: "arguments",
@@ -1149,7 +1149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:desktopvirtualization/v20201110preview:Application applicationGroup1/application1 /subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/applicationGroups/applicationGroup1/applications/application1 
+$ pulumi import azure-nextgen:desktopvirtualization/v20210114preview:Application applicationGroup1/application1 /subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/applicationGroups/applicationGroup1/applications/application1 
 ```
 
 

@@ -34,7 +34,7 @@ Explore the resources and functions of the hybridcompute module in the Azure Nex
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.6.0</dd>
+	<dd>0.6.1</dd>
 </dl>
 
 

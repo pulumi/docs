@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.synapse.Key resource with exampl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A workspace key
+Latest API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var key = new AzureNextGen.Synapse.V20190601Preview.Key("key", new AzureNextGen.Synapse.V20190601Preview.KeyArgs
+        var key = new AzureNextGen.Synapse.Latest.Key("key", new AzureNextGen.Synapse.Latest.KeyArgs
         {
             IsActiveCMK = true,
             KeyName = "somekey",
@@ -48,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse/v20190601preview"
+	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -78,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-key = azure_nextgen.synapse.v20190601preview.Key("key",
+key = azure_nextgen.synapse.latest.Key("key",
     is_active_cmk=True,
     key_name="somekey",
     key_vault_url="https://vault.azure.net/keys/somesecret",
@@ -95,7 +96,7 @@ key = azure_nextgen.synapse.v20190601preview.Key("key",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const key = new azure_nextgen.synapse.v20190601preview.Key("key", {
+const key = new azure_nextgen.synapse.latest.Key("key", {
     isActiveCMK: true,
     keyName: "somekey",
     keyVaultUrl: "https://vault.azure.net/keys/somesecret",
@@ -641,7 +642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:synapse/v20190601preview:Key somekey /subscriptions/01234567-89ab-4def-0123-456789abcdef/resourceGroups/ExampleResourceGroup/providers/Microsoft.Synapse/workspaces/ExampleWorkspace/keys/somekey 
+$ pulumi import azure-nextgen:synapse/latest:Key somekey /subscriptions/01234567-89ab-4def-0123-456789abcdef/resourceGroups/ExampleResourceGroup/providers/Microsoft.Synapse/workspaces/ExampleWorkspace/keys/somekey 
 ```
 
 

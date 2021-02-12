@@ -857,15 +857,6 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The kind of the peering.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="peeringname_csharp">
 <a href="#peeringname_csharp" style="color: inherit; text-decoration: inherit;">Peering<wbr>Name</a>
 </span>
@@ -911,6 +902,15 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The properties that define an exchange peering.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="peeringlocation_csharp">
 <a href="#peeringlocation_csharp" style="color: inherit; text-decoration: inherit;">Peering<wbr>Location</a>
 </span>
@@ -942,15 +942,6 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string | <a href="#kind">Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of the peering.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="peeringname_go">
@@ -998,6 +989,15 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The properties that define an exchange peering.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="peeringlocation_go">
 <a href="#peeringlocation_go" style="color: inherit; text-decoration: inherit;">Peering<wbr>Location</a>
 </span>
@@ -1029,15 +1029,6 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string | <a href="#kind">Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of the peering.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="peeringname_nodejs">
@@ -1085,6 +1076,15 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The properties that define an exchange peering.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="peeringlocation_nodejs">
 <a href="#peeringlocation_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Location</a>
 </span>
@@ -1116,15 +1116,6 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str | <a href="#kind">Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of the peering.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="peering_name_python">
@@ -1170,6 +1161,15 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#peeringpropertiesexchange">Peering<wbr>Properties<wbr>Exchange<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that define an exchange peering.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="peering_location_python">

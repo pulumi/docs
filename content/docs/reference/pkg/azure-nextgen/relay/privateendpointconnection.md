@@ -318,15 +318,6 @@ The PrivateEndpointConnection resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="namespacename_csharp">
 <a href="#namespacename_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Name</a>
 </span>
@@ -352,6 +343,15 @@ The PrivateEndpointConnection resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="privateendpoint_csharp">
@@ -387,15 +387,6 @@ The PrivateEndpointConnection resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="namespacename_go">
 <a href="#namespacename_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Name</a>
 </span>
@@ -421,6 +412,15 @@ The PrivateEndpointConnection resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="privateendpoint_go">
@@ -456,15 +456,6 @@ The PrivateEndpointConnection resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="namespacename_nodejs">
 <a href="#namespacename_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Name</a>
 </span>
@@ -490,6 +481,15 @@ The PrivateEndpointConnection resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="privateendpoint_nodejs">
@@ -525,15 +525,6 @@ The PrivateEndpointConnection resource accepts the following [input]({{< relref 
 
     <dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="namespace_name_python">
 <a href="#namespace_name_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>name</a>
 </span>
@@ -559,6 +550,15 @@ The PrivateEndpointConnection resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="private_endpoint_python">

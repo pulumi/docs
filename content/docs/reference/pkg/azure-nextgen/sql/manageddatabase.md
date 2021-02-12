@@ -805,15 +805,6 @@ The ManagedDatabase resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}The name of the database.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="managedinstancename_csharp">
 <a href="#managedinstancename_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Instance<wbr>Name</a>
 </span>
@@ -875,6 +866,15 @@ The ManagedDatabase resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last backup file name for restore of this managed database.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="longtermretentionbackupresourceid_csharp">
@@ -964,15 +964,6 @@ The ManagedDatabase resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}The name of the database.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="managedinstancename_go">
 <a href="#managedinstancename_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Instance<wbr>Name</a>
 </span>
@@ -1034,6 +1025,15 @@ The ManagedDatabase resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last backup file name for restore of this managed database.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="longtermretentionbackupresourceid_go">
@@ -1123,15 +1123,6 @@ The ManagedDatabase resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}The name of the database.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="managedinstancename_nodejs">
 <a href="#managedinstancename_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Instance<wbr>Name</a>
 </span>
@@ -1193,6 +1184,15 @@ The ManagedDatabase resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last backup file name for restore of this managed database.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="longtermretentionbackupresourceid_nodejs">
@@ -1282,15 +1282,6 @@ The ManagedDatabase resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}The name of the database.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="managed_instance_name_python">
 <a href="#managed_instance_name_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>instance_<wbr>name</a>
 </span>
@@ -1352,6 +1343,15 @@ The ManagedDatabase resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last backup file name for restore of this managed database.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="long_term_retention_backup_resource_id_python">
@@ -1861,7 +1861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:sql/v20200801preview:ManagedDatabase testdb1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/managedInstances/testsvr/databases/testdb1 
+$ pulumi import azure-nextgen:sql/v20200801preview:ManagedDatabase testdb2 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/managedInstances/testsvr/databases/testdb2 
 ```
 
 

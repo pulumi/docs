@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var applicationGroup = new AzureNextGen.DesktopVirtualization.V20201110Preview.ApplicationGroup("applicationGroup", new AzureNextGen.DesktopVirtualization.V20201110Preview.ApplicationGroupArgs
+        var applicationGroup = new AzureNextGen.DesktopVirtualization.V20210114Preview.ApplicationGroup("applicationGroup", new AzureNextGen.DesktopVirtualization.V20210114Preview.ApplicationGroupArgs
         {
             ApplicationGroupName = "applicationGroup1",
             ApplicationGroupType = "RemoteApp",
@@ -55,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	desktopvirtualization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/desktopvirtualization/v20201110preview"
+	desktopvirtualization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/desktopvirtualization/v20210114preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -91,7 +91,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-application_group = azure_nextgen.desktopvirtualization.v20201110preview.ApplicationGroup("applicationGroup",
+application_group = azure_nextgen.desktopvirtualization.v20210114preview.ApplicationGroup("applicationGroup",
     application_group_name="applicationGroup1",
     application_group_type="RemoteApp",
     description="des1",
@@ -114,7 +114,7 @@ application_group = azure_nextgen.desktopvirtualization.v20201110preview.Applica
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const applicationGroup = new azure_nextgen.desktopvirtualization.v20201110preview.ApplicationGroup("applicationGroup", {
+const applicationGroup = new azure_nextgen.desktopvirtualization.v20210114preview.ApplicationGroup("applicationGroup", {
     applicationGroupName: "applicationGroup1",
     applicationGroupType: "RemoteApp",
     description: "des1",
@@ -344,15 +344,6 @@ The ApplicationGroup resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}HostPool arm path of ApplicationGroup.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -378,6 +369,15 @@ The ApplicationGroup resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of ApplicationGroup.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -422,15 +422,6 @@ The ApplicationGroup resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}HostPool arm path of ApplicationGroup.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -456,6 +447,15 @@ The ApplicationGroup resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of ApplicationGroup.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -500,15 +500,6 @@ The ApplicationGroup resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}HostPool arm path of ApplicationGroup.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
@@ -534,6 +525,15 @@ The ApplicationGroup resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of ApplicationGroup.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -578,15 +578,6 @@ The ApplicationGroup resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}HostPool arm path of ApplicationGroup.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
@@ -612,6 +603,15 @@ The ApplicationGroup resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Friendly name of ApplicationGroup.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -852,7 +852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:desktopvirtualization/v20201110preview:ApplicationGroup applicationGroup1 /subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/applicationGroups/applicationGroup1 
+$ pulumi import azure-nextgen:desktopvirtualization/v20210114preview:ApplicationGroup applicationGroup1 /subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/applicationGroups/applicationGroup1 
 ```
 
 

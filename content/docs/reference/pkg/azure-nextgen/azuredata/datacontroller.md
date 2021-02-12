@@ -323,15 +323,6 @@ The DataController resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="onpremiseproperty_csharp">
 <a href="#onpremiseproperty_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Premise<wbr>Property</a>
 </span>
@@ -368,6 +359,15 @@ The DataController resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Last uploaded date from on premise cluster. Defaults to current date time{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -390,15 +390,6 @@ The DataController resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="onpremiseproperty_go">
@@ -437,6 +428,15 @@ The DataController resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Last uploaded date from on premise cluster. Defaults to current date time{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -459,15 +459,6 @@ The DataController resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="onpremiseproperty_nodejs">
@@ -506,6 +497,15 @@ The DataController resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Last uploaded date from on premise cluster. Defaults to current date time{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -528,15 +528,6 @@ The DataController resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="on_premise_property_python">
@@ -573,6 +564,15 @@ The DataController resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last uploaded date from on premise cluster. Defaults to current date time{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">

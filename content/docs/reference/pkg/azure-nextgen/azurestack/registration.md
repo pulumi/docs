@@ -289,15 +289,6 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#location">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Stack.<wbr>Location</a></span>
-    </dt>
-    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="registrationname_csharp">
 <a href="#registrationname_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Name</a>
 </span>
@@ -323,21 +314,21 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#location">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Stack.<wbr>Location</a></span>
+    </dt>
+    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#location">Location</a></span>
-    </dt>
-    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="registrationname_go">
@@ -365,21 +356,21 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#location">Location</a></span>
+    </dt>
+    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#location">Location</a></span>
-    </dt>
-    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="registrationname_nodejs">
@@ -407,21 +398,21 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#location">Location</a></span>
+    </dt>
+    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#location">Location</a></span>
-    </dt>
-    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="registration_name_python">
@@ -449,6 +440,15 @@ The Registration resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#location">Location</a></span>
+    </dt>
+    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.netapp.SnapshotPolicy resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Snapshot policy information
-Latest API Version: 2020-09-01.
+Latest API Version: 2020-11-01.
 
 {{% examples %}}
 ## Example Usage
@@ -386,15 +386,6 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -440,6 +431,15 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Schedule for hourly snapshots{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="monthlyschedule_csharp">
 <a href="#monthlyschedule_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Schedule</a>
 </span>
@@ -480,15 +480,6 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
@@ -536,6 +527,15 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Schedule for hourly snapshots{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="monthlyschedule_go">
 <a href="#monthlyschedule_go" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Schedule</a>
 </span>
@@ -576,15 +576,6 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
@@ -632,6 +623,15 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Schedule for hourly snapshots{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="monthlyschedule_nodejs">
 <a href="#monthlyschedule_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Schedule</a>
 </span>
@@ -672,15 +672,6 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
@@ -726,6 +717,15 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#hourlyschedule">Hourly<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule for hourly snapshots{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="monthly_schedule_python">

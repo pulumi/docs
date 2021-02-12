@@ -306,15 +306,6 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="owneremail_csharp">
 <a href="#owneremail_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>Email</a>
 </span>
@@ -360,6 +351,15 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}The key vault identifier used for encrypted workspaces.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -373,15 +373,6 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="owneremail_go">
@@ -429,6 +420,15 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}The key vault identifier used for encrypted workspaces.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -442,15 +442,6 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="owneremail_nodejs">
@@ -498,6 +489,15 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}The key vault identifier used for encrypted workspaces.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -511,15 +511,6 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="owner_email_python">
@@ -565,6 +556,15 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key vault identifier used for encrypted workspaces.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">

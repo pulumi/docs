@@ -1247,7 +1247,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.{{% /md %}}</dd>
+    <dd>{{% md %}}Type of managed service identity.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_csharp">
@@ -1289,7 +1289,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.{{% /md %}}</dd>
+    <dd>{{% md %}}Type of managed service identity.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_go">
@@ -1331,7 +1331,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.{{% /md %}}</dd>
+    <dd>{{% md %}}Type of managed service identity.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_nodejs">
@@ -1373,7 +1373,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.{{% /md %}}</dd>
+    <dd>{{% md %}}Type of managed service identity.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="user_assigned_identities_python">

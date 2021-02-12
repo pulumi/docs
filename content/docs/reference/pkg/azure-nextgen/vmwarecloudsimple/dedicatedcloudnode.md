@@ -349,15 +349,6 @@ The DedicatedCloudNode resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}SKU's id{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Azure region{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -401,6 +392,15 @@ The DedicatedCloudNode resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Azure region{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
@@ -454,15 +454,6 @@ The DedicatedCloudNode resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}SKU's id{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Azure region{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -506,6 +497,15 @@ The DedicatedCloudNode resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Azure region{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="sku_go">
@@ -559,15 +559,6 @@ The DedicatedCloudNode resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}SKU's id{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Azure region{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -611,6 +602,15 @@ The DedicatedCloudNode resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Azure region{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
@@ -664,15 +664,6 @@ The DedicatedCloudNode resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}SKU's id{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Azure region{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -716,6 +707,15 @@ The DedicatedCloudNode resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Azure region{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="sku_python">

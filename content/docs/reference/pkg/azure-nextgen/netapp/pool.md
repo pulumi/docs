@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.netapp.Pool resource with exampl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Capacity pool resource
-Latest API Version: 2020-09-01.
+Latest API Version: 2020-11-01.
 
 {{% examples %}}
 ## Example Usage
@@ -310,15 +310,6 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="poolname_csharp">
 <a href="#poolname_csharp" style="color: inherit; text-decoration: inherit;">Pool<wbr>Name</a>
 </span>
@@ -355,6 +346,15 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="qostype_csharp">
 <a href="#qostype_csharp" style="color: inherit; text-decoration: inherit;">Qos<wbr>Type</a>
 </span>
@@ -386,15 +386,6 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="poolname_go">
@@ -433,6 +424,15 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="qostype_go">
 <a href="#qostype_go" style="color: inherit; text-decoration: inherit;">Qos<wbr>Type</a>
 </span>
@@ -464,15 +464,6 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="poolname_nodejs">
@@ -511,6 +502,15 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="qostype_nodejs">
 <a href="#qostype_nodejs" style="color: inherit; text-decoration: inherit;">qos<wbr>Type</a>
 </span>
@@ -542,15 +542,6 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="pool_name_python">
@@ -587,6 +578,15 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="qos_type_python">

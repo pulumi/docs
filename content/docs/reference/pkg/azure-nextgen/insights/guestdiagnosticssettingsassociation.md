@@ -310,15 +310,6 @@ The GuestDiagnosticsSettingsAssociation resource accepts the following [input]({
     <dd>{{% md %}}The guest diagnostic settings name.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourceuri_csharp">
 <a href="#resourceuri_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Uri</a>
 </span>
@@ -326,6 +317,15 @@ The GuestDiagnosticsSettingsAssociation resource accepts the following [input]({
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified ID of the resource, including the resource name and resource type.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -361,15 +361,6 @@ The GuestDiagnosticsSettingsAssociation resource accepts the following [input]({
     <dd>{{% md %}}The guest diagnostic settings name.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourceuri_go">
 <a href="#resourceuri_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Uri</a>
 </span>
@@ -377,6 +368,15 @@ The GuestDiagnosticsSettingsAssociation resource accepts the following [input]({
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified ID of the resource, including the resource name and resource type.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -412,15 +412,6 @@ The GuestDiagnosticsSettingsAssociation resource accepts the following [input]({
     <dd>{{% md %}}The guest diagnostic settings name.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourceuri_nodejs">
 <a href="#resourceuri_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Uri</a>
 </span>
@@ -428,6 +419,15 @@ The GuestDiagnosticsSettingsAssociation resource accepts the following [input]({
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified ID of the resource, including the resource name and resource type.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -463,15 +463,6 @@ The GuestDiagnosticsSettingsAssociation resource accepts the following [input]({
     <dd>{{% md %}}The guest diagnostic settings name.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resource_uri_python">
 <a href="#resource_uri_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>uri</a>
 </span>
@@ -479,6 +470,15 @@ The GuestDiagnosticsSettingsAssociation resource accepts the following [input]({
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully qualified ID of the resource, including the resource name and resource type.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">

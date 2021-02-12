@@ -814,15 +814,6 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
     <dd>{{% md %}}The name of the image Template{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -857,6 +848,15 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the properties used to describe the customization steps of the image, like Image source etc{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -910,15 +910,6 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
     <dd>{{% md %}}The name of the image Template{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -953,6 +944,15 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-type">[]interface{}</span>
     </dt>
     <dd>{{% md %}}Specifies the properties used to describe the customization steps of the image, like Image source etc{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -1006,15 +1006,6 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
     <dd>{{% md %}}The name of the image Template{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
@@ -1049,6 +1040,15 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-type">Image<wbr>Template<wbr>File<wbr>Customizer | Image<wbr>Template<wbr>Power<wbr>Shell<wbr>Customizer | Image<wbr>Template<wbr>Restart<wbr>Customizer | Image<wbr>Template<wbr>Shell<wbr>Customizer | Image<wbr>Template<wbr>Windows<wbr>Update<wbr>Customizer[]</span>
     </dt>
     <dd>{{% md %}}Specifies the properties used to describe the customization steps of the image, like Image source etc{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -1102,15 +1102,6 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
     <dd>{{% md %}}The name of the image Template{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
@@ -1145,6 +1136,15 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-type">Sequence[Union[Image<wbr>Template<wbr>File<wbr>Customizer<wbr>Args, Image<wbr>Template<wbr>Power<wbr>Shell<wbr>Customizer<wbr>Args, Image<wbr>Template<wbr>Restart<wbr>Customizer<wbr>Args, Image<wbr>Template<wbr>Shell<wbr>Customizer<wbr>Args, Image<wbr>Template<wbr>Windows<wbr>Update<wbr>Customizer<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Specifies the properties used to describe the customization steps of the image, like Image source etc{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">

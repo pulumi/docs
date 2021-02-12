@@ -602,15 +602,6 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location the resource resides in.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
@@ -647,6 +638,15 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}The Azure Active Directory identity of the server.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location the resource resides in.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
@@ -669,15 +669,6 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location the resource resides in.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="properties_go">
@@ -716,6 +707,15 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}The Azure Active Directory identity of the server.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location the resource resides in.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
@@ -738,15 +738,6 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location the resource resides in.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="properties_nodejs">
@@ -785,6 +776,15 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}The Azure Active Directory identity of the server.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location the resource resides in.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
@@ -807,15 +807,6 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The location the resource resides in.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="properties_python">
@@ -852,6 +843,15 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory identity of the server.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The location the resource resides in.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="sku_python">

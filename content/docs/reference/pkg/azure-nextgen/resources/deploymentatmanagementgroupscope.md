@@ -333,15 +333,6 @@ The DeploymentAtManagementGroupScope resource accepts the following [input]({{< 
     <dd>{{% md %}}The management group ID.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location to store the deployment data.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
@@ -349,6 +340,15 @@ The DeploymentAtManagementGroupScope resource accepts the following [input]({{< 
         <span class="property-type"><a href="#deploymentproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Inputs.<wbr>Deployment<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The deployment properties.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location to store the deployment data.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -384,15 +384,6 @@ The DeploymentAtManagementGroupScope resource accepts the following [input]({{< 
     <dd>{{% md %}}The management group ID.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location to store the deployment data.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
@@ -400,6 +391,15 @@ The DeploymentAtManagementGroupScope resource accepts the following [input]({{< 
         <span class="property-type"><a href="#deploymentproperties">Deployment<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The deployment properties.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location to store the deployment data.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -435,15 +435,6 @@ The DeploymentAtManagementGroupScope resource accepts the following [input]({{< 
     <dd>{{% md %}}The management group ID.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location to store the deployment data.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
@@ -451,6 +442,15 @@ The DeploymentAtManagementGroupScope resource accepts the following [input]({{< 
         <span class="property-type"><a href="#deploymentproperties">Deployment<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The deployment properties.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location to store the deployment data.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -486,15 +486,6 @@ The DeploymentAtManagementGroupScope resource accepts the following [input]({{< 
     <dd>{{% md %}}The management group ID.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The location to store the deployment data.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
@@ -502,6 +493,15 @@ The DeploymentAtManagementGroupScope resource accepts the following [input]({{< 
         <span class="property-type"><a href="#deploymentproperties">Deployment<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The deployment properties.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The location to store the deployment data.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">

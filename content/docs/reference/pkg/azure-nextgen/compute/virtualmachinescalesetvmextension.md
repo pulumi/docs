@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.compute.VirtualMachineScaleSetVM
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Describes a VMSS VM Extension.
-Latest API Version: 2020-06-01.
+Latest API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage

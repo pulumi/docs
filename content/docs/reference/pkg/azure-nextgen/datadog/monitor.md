@@ -287,15 +287,6 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="monitorname_csharp">
 <a href="#monitorname_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Name</a>
 </span>
@@ -319,6 +310,15 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identityproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog.<wbr>Inputs.<wbr>Identity<wbr>Properties<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -356,15 +356,6 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="monitorname_go">
 <a href="#monitorname_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Name</a>
 </span>
@@ -388,6 +379,15 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -425,15 +425,6 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="monitorname_nodejs">
 <a href="#monitorname_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Name</a>
 </span>
@@ -457,6 +448,15 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -494,15 +494,6 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="monitor_name_python">
 <a href="#monitor_name_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>name</a>
 </span>
@@ -526,6 +517,15 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"

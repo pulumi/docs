@@ -912,15 +912,6 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}Managed identity for this blueprint assignment.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of this blueprint assignment.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
@@ -975,6 +966,15 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}One-liner string explain this resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of this blueprint assignment.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="locks_csharp">
 <a href="#locks_csharp" style="color: inherit; text-decoration: inherit;">Locks</a>
 </span>
@@ -1015,15 +1015,6 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}Managed identity for this blueprint assignment.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of this blueprint assignment.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="parameters_go">
@@ -1080,6 +1071,15 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}One-liner string explain this resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of this blueprint assignment.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="locks_go">
 <a href="#locks_go" style="color: inherit; text-decoration: inherit;">Locks</a>
 </span>
@@ -1120,15 +1120,6 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}Managed identity for this blueprint assignment.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of this blueprint assignment.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="parameters_nodejs">
@@ -1185,6 +1176,15 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}One-liner string explain this resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of this blueprint assignment.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="locks_nodejs">
 <a href="#locks_nodejs" style="color: inherit; text-decoration: inherit;">locks</a>
 </span>
@@ -1225,15 +1225,6 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed identity for this blueprint assignment.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The location of this blueprint assignment.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="parameters_python">
@@ -1288,6 +1279,15 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One-liner string explain this resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The location of this blueprint assignment.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="locks_python">

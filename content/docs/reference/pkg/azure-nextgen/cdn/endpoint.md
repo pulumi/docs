@@ -627,15 +627,6 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Name of the endpoint under the profile which is unique globally.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="origins_csharp">
 <a href="#origins_csharp" style="color: inherit; text-decoration: inherit;">Origins</a>
 </span>
@@ -724,6 +715,15 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether HTTPS traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="optimizationtype_csharp">
@@ -822,15 +822,6 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Name of the endpoint under the profile which is unique globally.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="origins_go">
 <a href="#origins_go" style="color: inherit; text-decoration: inherit;">Origins</a>
 </span>
@@ -919,6 +910,15 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether HTTPS traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="optimizationtype_go">
@@ -1017,15 +1017,6 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Name of the endpoint under the profile which is unique globally.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="origins_nodejs">
 <a href="#origins_nodejs" style="color: inherit; text-decoration: inherit;">origins</a>
 </span>
@@ -1114,6 +1105,15 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether HTTPS traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="optimizationtype_nodejs">
@@ -1212,15 +1212,6 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Name of the endpoint under the profile which is unique globally.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="origins_python">
 <a href="#origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
 </span>
@@ -1309,6 +1300,15 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether HTTPS traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="optimization_type_python">

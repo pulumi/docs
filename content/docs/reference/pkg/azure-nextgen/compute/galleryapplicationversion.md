@@ -397,15 +397,6 @@ The GalleryApplicationVersion resource accepts the following [input]({{< relref 
     <dd>{{% md %}}The name of the Shared Application Gallery in which the Application Definition resides.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="publishingprofile_csharp">
 <a href="#publishingprofile_csharp" style="color: inherit; text-decoration: inherit;">Publishing<wbr>Profile</a>
 </span>
@@ -422,6 +413,15 @@ The GalleryApplicationVersion resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -466,15 +466,6 @@ The GalleryApplicationVersion resource accepts the following [input]({{< relref 
     <dd>{{% md %}}The name of the Shared Application Gallery in which the Application Definition resides.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="publishingprofile_go">
 <a href="#publishingprofile_go" style="color: inherit; text-decoration: inherit;">Publishing<wbr>Profile</a>
 </span>
@@ -491,6 +482,15 @@ The GalleryApplicationVersion resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -535,15 +535,6 @@ The GalleryApplicationVersion resource accepts the following [input]({{< relref 
     <dd>{{% md %}}The name of the Shared Application Gallery in which the Application Definition resides.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="publishingprofile_nodejs">
 <a href="#publishingprofile_nodejs" style="color: inherit; text-decoration: inherit;">publishing<wbr>Profile</a>
 </span>
@@ -560,6 +551,15 @@ The GalleryApplicationVersion resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -604,15 +604,6 @@ The GalleryApplicationVersion resource accepts the following [input]({{< relref 
     <dd>{{% md %}}The name of the Shared Application Gallery in which the Application Definition resides.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="publishing_profile_python">
 <a href="#publishing_profile_python" style="color: inherit; text-decoration: inherit;">publishing_<wbr>profile</a>
 </span>
@@ -629,6 +620,15 @@ The GalleryApplicationVersion resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">

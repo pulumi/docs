@@ -298,15 +298,6 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="profilename_csharp">
 <a href="#profilename_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Name</a>
 </span>
@@ -334,6 +325,15 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The pricing tier (defines a CDN provider, feature list and rate) of the CDN profile.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -347,15 +347,6 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="profilename_go">
@@ -385,6 +376,15 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The pricing tier (defines a CDN provider, feature list and rate) of the CDN profile.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -398,15 +398,6 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="profilename_nodejs">
@@ -436,6 +427,15 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The pricing tier (defines a CDN provider, feature list and rate) of the CDN profile.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -449,15 +449,6 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="profile_name_python">
@@ -485,6 +476,15 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The pricing tier (defines a CDN provider, feature list and rate) of the CDN profile.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">

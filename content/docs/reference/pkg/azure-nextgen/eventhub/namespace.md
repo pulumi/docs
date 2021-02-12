@@ -319,15 +319,6 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="namespacename_csharp">
 <a href="#namespacename_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Name</a>
 </span>
@@ -364,6 +355,15 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}Value that indicates whether Kafka is enabled for eventhub namespace.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="maximumthroughputunits_csharp">
 <a href="#maximumthroughputunits_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Throughput<wbr>Units</a>
 </span>
@@ -395,15 +395,6 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="namespacename_go">
@@ -442,6 +433,15 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}Value that indicates whether Kafka is enabled for eventhub namespace.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="maximumthroughputunits_go">
 <a href="#maximumthroughputunits_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Throughput<wbr>Units</a>
 </span>
@@ -473,15 +473,6 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="namespacename_nodejs">
@@ -520,6 +511,15 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}Value that indicates whether Kafka is enabled for eventhub namespace.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="maximumthroughputunits_nodejs">
 <a href="#maximumthroughputunits_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Throughput<wbr>Units</a>
 </span>
@@ -551,15 +551,6 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="namespace_name_python">
@@ -596,6 +587,15 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Value that indicates whether Kafka is enabled for eventhub namespace.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maximum_throughput_units_python">

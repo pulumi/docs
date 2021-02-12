@@ -1392,15 +1392,6 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}The name of the managed disk that is being created. The name can't be changed after the disk is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The maximum name length is 80 characters.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -1509,6 +1500,15 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}The hypervisor generation of the Virtual Machine. Applicable to OS disks only.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="maxshares_csharp">
 <a href="#maxshares_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Shares</a>
 </span>
@@ -1603,15 +1603,6 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the managed disk that is being created. The name can't be changed after the disk is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The maximum name length is 80 characters.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
@@ -1722,6 +1713,15 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}The hypervisor generation of the Virtual Machine. Applicable to OS disks only.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="maxshares_go">
 <a href="#maxshares_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Shares</a>
 </span>
@@ -1816,15 +1816,6 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the managed disk that is being created. The name can't be changed after the disk is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The maximum name length is 80 characters.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
@@ -1935,6 +1926,15 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}The hypervisor generation of the Virtual Machine. Applicable to OS disks only.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="maxshares_nodejs">
 <a href="#maxshares_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Shares</a>
 </span>
@@ -2029,15 +2029,6 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the managed disk that is being created. The name can't be changed after the disk is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The maximum name length is 80 characters.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
@@ -2146,6 +2137,15 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str | <a href="#hypervgeneration">Hyper<wbr>VGeneration</a></span>
     </dt>
     <dd>{{% md %}}The hypervisor generation of the Virtual Machine. Applicable to OS disks only.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="max_shares_python">

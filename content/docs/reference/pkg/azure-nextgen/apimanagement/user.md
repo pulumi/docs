@@ -536,7 +536,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#userstate">User<wbr>State</a></span>
+        <span class="property-type">string | <a href="#userstate">User<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.{{% /md %}}</dd>
 </dl>

@@ -293,15 +293,6 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The name of the ADP account.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -309,6 +300,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -335,15 +335,6 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The name of the ADP account.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -351,6 +342,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -377,15 +377,6 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The name of the ADP account.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
@@ -393,6 +384,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -419,15 +419,6 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The name of the ADP account.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
@@ -435,6 +426,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -744,7 +744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_csharp">
@@ -804,7 +804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_go">
@@ -864,7 +864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_nodejs">
@@ -924,7 +924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_python">

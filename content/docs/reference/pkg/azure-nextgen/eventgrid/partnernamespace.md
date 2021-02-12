@@ -305,15 +305,6 @@ The PartnerNamespace resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="partnernamespacename_csharp">
 <a href="#partnernamespacename_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Namespace<wbr>Name</a>
 </span>
@@ -330,6 +321,15 @@ The PartnerNamespace resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="partnerregistrationfullyqualifiedid_csharp">
@@ -357,15 +357,6 @@ The PartnerNamespace resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="partnernamespacename_go">
 <a href="#partnernamespacename_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Namespace<wbr>Name</a>
 </span>
@@ -382,6 +373,15 @@ The PartnerNamespace resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="partnerregistrationfullyqualifiedid_go">
@@ -409,15 +409,6 @@ The PartnerNamespace resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="partnernamespacename_nodejs">
 <a href="#partnernamespacename_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Namespace<wbr>Name</a>
 </span>
@@ -434,6 +425,15 @@ The PartnerNamespace resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="partnerregistrationfullyqualifiedid_nodejs">
@@ -461,15 +461,6 @@ The PartnerNamespace resource accepts the following [input]({{< relref "/docs/in
 
     <dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="partner_namespace_name_python">
 <a href="#partner_namespace_name_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>namespace_<wbr>name</a>
 </span>
@@ -486,6 +477,15 @@ The PartnerNamespace resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="partner_registration_fully_qualified_id_python">

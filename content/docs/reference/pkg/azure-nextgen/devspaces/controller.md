@@ -313,15 +313,6 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Region where the Azure resource is located.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -367,6 +358,15 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}Resource ID of the target container host{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Region where the Azure resource is located.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -380,15 +380,6 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Region where the Azure resource is located.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -436,6 +427,15 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}Resource ID of the target container host{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Region where the Azure resource is located.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -449,15 +449,6 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Region where the Azure resource is located.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -505,6 +496,15 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}Resource ID of the target container host{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Region where the Azure resource is located.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -518,15 +518,6 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Region where the Azure resource is located.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -572,6 +563,15 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID of the target container host{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Region where the Azure resource is located.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">

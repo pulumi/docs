@@ -8638,15 +8638,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="mlpipelineid_csharp">
-<a href="#mlpipelineid_csharp" style="color: inherit; text-decoration: inherit;">Ml<wbr>Pipeline<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">object</span>
-    </dt>
-    <dd>{{% md %}}ID of the published Azure ML pipeline. Type: string (or Expression with resultType string).{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -8663,6 +8654,15 @@ The following output properties are available:
         <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}Whether to continue execution of other steps in the PipelineRun if a step fails. This information will be passed in the continueOnStepFailure property of the published pipeline execution request. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datapathassignments_csharp">
+<a href="#datapathassignments_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Path<wbr>Assignments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Dictionary used for changing data path assignments without retraining. Values will be passed in the dataPathAssignments property of the published pipeline execution request. Type: object with key value pairs (or Expression with resultType object).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dependson_csharp">
@@ -8710,6 +8710,24 @@ The following output properties are available:
     <dd>{{% md %}}The parent Azure ML Service pipeline run id. This information will be passed in the ParentRunId property of the published pipeline execution request. Type: string (or Expression with resultType string).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="mlpipelineendpointid_csharp">
+<a href="#mlpipelineendpointid_csharp" style="color: inherit; text-decoration: inherit;">Ml<wbr>Pipeline<wbr>Endpoint<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}ID of the published Azure ML pipeline endpoint. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mlpipelineid_csharp">
+<a href="#mlpipelineid_csharp" style="color: inherit; text-decoration: inherit;">Ml<wbr>Pipeline<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}ID of the published Azure ML pipeline. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="mlpipelineparameters_csharp">
 <a href="#mlpipelineparameters_csharp" style="color: inherit; text-decoration: inherit;">Ml<wbr>Pipeline<wbr>Parameters</a>
 </span>
@@ -8735,21 +8753,21 @@ The following output properties are available:
         <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Version of the published Azure ML pipeline endpoint. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="mlpipelineid_go">
-<a href="#mlpipelineid_go" style="color: inherit; text-decoration: inherit;">Ml<wbr>Pipeline<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}ID of the published Azure ML pipeline. Type: string (or Expression with resultType string).{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -8768,6 +8786,15 @@ The following output properties are available:
         <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}Whether to continue execution of other steps in the PipelineRun if a step fails. This information will be passed in the continueOnStepFailure property of the published pipeline execution request. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datapathassignments_go">
+<a href="#datapathassignments_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Path<wbr>Assignments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Dictionary used for changing data path assignments without retraining. Values will be passed in the dataPathAssignments property of the published pipeline execution request. Type: object with key value pairs (or Expression with resultType object).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dependson_go">
@@ -8815,6 +8842,24 @@ The following output properties are available:
     <dd>{{% md %}}The parent Azure ML Service pipeline run id. This information will be passed in the ParentRunId property of the published pipeline execution request. Type: string (or Expression with resultType string).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="mlpipelineendpointid_go">
+<a href="#mlpipelineendpointid_go" style="color: inherit; text-decoration: inherit;">Ml<wbr>Pipeline<wbr>Endpoint<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}ID of the published Azure ML pipeline endpoint. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mlpipelineid_go">
+<a href="#mlpipelineid_go" style="color: inherit; text-decoration: inherit;">Ml<wbr>Pipeline<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}ID of the published Azure ML pipeline. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="mlpipelineparameters_go">
 <a href="#mlpipelineparameters_go" style="color: inherit; text-decoration: inherit;">Ml<wbr>Pipeline<wbr>Parameters</a>
 </span>
@@ -8840,21 +8885,21 @@ The following output properties are available:
         <span class="property-type"><a href="#userpropertyresponse">[]User<wbr>Property<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Version of the published Azure ML pipeline endpoint. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="mlpipelineid_nodejs">
-<a href="#mlpipelineid_nodejs" style="color: inherit; text-decoration: inherit;">ml<wbr>Pipeline<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">any</span>
-    </dt>
-    <dd>{{% md %}}ID of the published Azure ML pipeline. Type: string (or Expression with resultType string).{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -8873,6 +8918,15 @@ The following output properties are available:
         <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}Whether to continue execution of other steps in the PipelineRun if a step fails. This information will be passed in the continueOnStepFailure property of the published pipeline execution request. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datapathassignments_nodejs">
+<a href="#datapathassignments_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Path<wbr>Assignments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Dictionary used for changing data path assignments without retraining. Values will be passed in the dataPathAssignments property of the published pipeline execution request. Type: object with key value pairs (or Expression with resultType object).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dependson_nodejs">
@@ -8920,6 +8974,24 @@ The following output properties are available:
     <dd>{{% md %}}The parent Azure ML Service pipeline run id. This information will be passed in the ParentRunId property of the published pipeline execution request. Type: string (or Expression with resultType string).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="mlpipelineendpointid_nodejs">
+<a href="#mlpipelineendpointid_nodejs" style="color: inherit; text-decoration: inherit;">ml<wbr>Pipeline<wbr>Endpoint<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}ID of the published Azure ML pipeline endpoint. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mlpipelineid_nodejs">
+<a href="#mlpipelineid_nodejs" style="color: inherit; text-decoration: inherit;">ml<wbr>Pipeline<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}ID of the published Azure ML pipeline. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="mlpipelineparameters_nodejs">
 <a href="#mlpipelineparameters_nodejs" style="color: inherit; text-decoration: inherit;">ml<wbr>Pipeline<wbr>Parameters</a>
 </span>
@@ -8945,21 +9017,21 @@ The following output properties are available:
         <span class="property-type"><a href="#userpropertyresponse">User<wbr>Property<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Version of the published Azure ML pipeline endpoint. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="ml_pipeline_id_python">
-<a href="#ml_pipeline_id_python" style="color: inherit; text-decoration: inherit;">ml_<wbr>pipeline_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
-    </dt>
-    <dd>{{% md %}}ID of the published Azure ML pipeline. Type: string (or Expression with resultType string).{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -8978,6 +9050,15 @@ The following output properties are available:
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Whether to continue execution of other steps in the PipelineRun if a step fails. This information will be passed in the continueOnStepFailure property of the published pipeline execution request. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="data_path_assignments_python">
+<a href="#data_path_assignments_python" style="color: inherit; text-decoration: inherit;">data_<wbr>path_<wbr>assignments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Dictionary used for changing data path assignments without retraining. Values will be passed in the dataPathAssignments property of the published pipeline execution request. Type: object with key value pairs (or Expression with resultType object).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="depends_on_python">
@@ -9025,6 +9106,24 @@ The following output properties are available:
     <dd>{{% md %}}The parent Azure ML Service pipeline run id. This information will be passed in the ParentRunId property of the published pipeline execution request. Type: string (or Expression with resultType string).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="ml_pipeline_endpoint_id_python">
+<a href="#ml_pipeline_endpoint_id_python" style="color: inherit; text-decoration: inherit;">ml_<wbr>pipeline_<wbr>endpoint_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}ID of the published Azure ML pipeline endpoint. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ml_pipeline_id_python">
+<a href="#ml_pipeline_id_python" style="color: inherit; text-decoration: inherit;">ml_<wbr>pipeline_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}ID of the published Azure ML pipeline. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="ml_pipeline_parameters_python">
 <a href="#ml_pipeline_parameters_python" style="color: inherit; text-decoration: inherit;">ml_<wbr>pipeline_<wbr>parameters</a>
 </span>
@@ -9050,6 +9149,15 @@ The following output properties are available:
         <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Version of the published Azure ML pipeline endpoint. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -61650,7 +61758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Web activity authentication (Basic/ClientCertificate/MSI){{% /md %}}</dd>
+    <dd>{{% md %}}Web activity authentication (Basic/ClientCertificate/MSI/ServicePrincipal){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
@@ -61659,7 +61767,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Password for the PFX file or basic authentication.{{% /md %}}</dd>
+    <dd>{{% md %}}Password for the PFX file or basic authentication / Secret when used for ServicePrincipal{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="pfx_csharp">
@@ -61668,7 +61776,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Base64-encoded contents of a PFX file.{{% /md %}}</dd>
+    <dd>{{% md %}}Base64-encoded contents of a PFX file or Certificate when used for ServicePrincipal{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="resource_csharp">
@@ -61680,13 +61788,22 @@ The following output properties are available:
     <dd>{{% md %}}Resource for which Azure Auth token will be requested when using MSI Authentication.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="usertenant_csharp">
+<a href="#usertenant_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Tenant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}TenantId for which Azure Auth token will be requested when using ServicePrincipal Authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Web activity authentication user name for basic authentication.{{% /md %}}</dd>
+    <dd>{{% md %}}Web activity authentication user name for basic authentication or ClientID when used for ServicePrincipal{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -61701,7 +61818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Web activity authentication (Basic/ClientCertificate/MSI){{% /md %}}</dd>
+    <dd>{{% md %}}Web activity authentication (Basic/ClientCertificate/MSI/ServicePrincipal){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="password_go">
@@ -61710,7 +61827,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Password for the PFX file or basic authentication.{{% /md %}}</dd>
+    <dd>{{% md %}}Password for the PFX file or basic authentication / Secret when used for ServicePrincipal{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="pfx_go">
@@ -61719,7 +61836,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Base64-encoded contents of a PFX file.{{% /md %}}</dd>
+    <dd>{{% md %}}Base64-encoded contents of a PFX file or Certificate when used for ServicePrincipal{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="resource_go">
@@ -61731,13 +61848,22 @@ The following output properties are available:
     <dd>{{% md %}}Resource for which Azure Auth token will be requested when using MSI Authentication.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="usertenant_go">
+<a href="#usertenant_go" style="color: inherit; text-decoration: inherit;">User<wbr>Tenant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}TenantId for which Azure Auth token will be requested when using ServicePrincipal Authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Web activity authentication user name for basic authentication.{{% /md %}}</dd>
+    <dd>{{% md %}}Web activity authentication user name for basic authentication or ClientID when used for ServicePrincipal{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -61752,7 +61878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Web activity authentication (Basic/ClientCertificate/MSI){{% /md %}}</dd>
+    <dd>{{% md %}}Web activity authentication (Basic/ClientCertificate/MSI/ServicePrincipal){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
@@ -61761,7 +61887,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Password for the PFX file or basic authentication.{{% /md %}}</dd>
+    <dd>{{% md %}}Password for the PFX file or basic authentication / Secret when used for ServicePrincipal{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="pfx_nodejs">
@@ -61770,7 +61896,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Base64-encoded contents of a PFX file.{{% /md %}}</dd>
+    <dd>{{% md %}}Base64-encoded contents of a PFX file or Certificate when used for ServicePrincipal{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="resource_nodejs">
@@ -61782,13 +61908,22 @@ The following output properties are available:
     <dd>{{% md %}}Resource for which Azure Auth token will be requested when using MSI Authentication.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="usertenant_nodejs">
+<a href="#usertenant_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Tenant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}TenantId for which Azure Auth token will be requested when using ServicePrincipal Authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Web activity authentication user name for basic authentication.{{% /md %}}</dd>
+    <dd>{{% md %}}Web activity authentication user name for basic authentication or ClientID when used for ServicePrincipal{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -61803,7 +61938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Web activity authentication (Basic/ClientCertificate/MSI){{% /md %}}</dd>
+    <dd>{{% md %}}Web activity authentication (Basic/ClientCertificate/MSI/ServicePrincipal){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="password_python">
@@ -61812,7 +61947,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Password for the PFX file or basic authentication.{{% /md %}}</dd>
+    <dd>{{% md %}}Password for the PFX file or basic authentication / Secret when used for ServicePrincipal{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="pfx_python">
@@ -61821,7 +61956,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Base64-encoded contents of a PFX file.{{% /md %}}</dd>
+    <dd>{{% md %}}Base64-encoded contents of a PFX file or Certificate when used for ServicePrincipal{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="resource_python">
@@ -61833,13 +61968,22 @@ The following output properties are available:
     <dd>{{% md %}}Resource for which Azure Auth token will be requested when using MSI Authentication.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="user_tenant_python">
+<a href="#user_tenant_python" style="color: inherit; text-decoration: inherit;">user_<wbr>tenant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}TenantId for which Azure Auth token will be requested when using ServicePrincipal Authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Web activity authentication user name for basic authentication.{{% /md %}}</dd>
+    <dd>{{% md %}}Web activity authentication user name for basic authentication or ClientID when used for ServicePrincipal{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

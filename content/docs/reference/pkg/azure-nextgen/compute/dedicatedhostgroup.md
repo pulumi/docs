@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.compute.DedicatedHostGroup resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Specifies information about the dedicated host group that the dedicated hosts should be assigned to. <br><br> Currently, a dedicated host can only be added to a dedicated host group at creation time. An existing dedicated host cannot be added to another dedicated host group.
-Latest API Version: 2020-06-01.
+Latest API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -324,15 +324,6 @@ The DedicatedHostGroup resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}The name of the dedicated host group.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="platformfaultdomaincount_csharp">
 <a href="#platformfaultdomaincount_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Fault<wbr>Domain<wbr>Count</a>
 </span>
@@ -349,6 +340,15 @@ The DedicatedHostGroup resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="supportautomaticplacement_csharp">
@@ -393,15 +393,6 @@ The DedicatedHostGroup resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}The name of the dedicated host group.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="platformfaultdomaincount_go">
 <a href="#platformfaultdomaincount_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Fault<wbr>Domain<wbr>Count</a>
 </span>
@@ -418,6 +409,15 @@ The DedicatedHostGroup resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="supportautomaticplacement_go">
@@ -462,15 +462,6 @@ The DedicatedHostGroup resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}The name of the dedicated host group.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="platformfaultdomaincount_nodejs">
 <a href="#platformfaultdomaincount_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Fault<wbr>Domain<wbr>Count</a>
 </span>
@@ -487,6 +478,15 @@ The DedicatedHostGroup resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="supportautomaticplacement_nodejs">
@@ -531,15 +531,6 @@ The DedicatedHostGroup resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}The name of the dedicated host group.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="platform_fault_domain_count_python">
 <a href="#platform_fault_domain_count_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>fault_<wbr>domain_<wbr>count</a>
 </span>
@@ -556,6 +547,15 @@ The DedicatedHostGroup resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="support_automatic_placement_python">

@@ -358,15 +358,6 @@ The DedicatedHsm resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The supported Azure location where the dedicated HSM should be created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -392,6 +383,15 @@ The DedicatedHsm resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hardware<wbr>Security<wbr>Modules.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SKU details{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The supported Azure location where the dedicated HSM should be created.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="networkprofile_csharp">
@@ -436,15 +436,6 @@ The DedicatedHsm resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The supported Azure location where the dedicated HSM should be created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -470,6 +461,15 @@ The DedicatedHsm resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#sku">Sku</a></span>
     </dt>
     <dd>{{% md %}}SKU details{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The supported Azure location where the dedicated HSM should be created.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="networkprofile_go">
@@ -514,15 +514,6 @@ The DedicatedHsm resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The supported Azure location where the dedicated HSM should be created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -548,6 +539,15 @@ The DedicatedHsm resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#sku">Sku</a></span>
     </dt>
     <dd>{{% md %}}SKU details{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The supported Azure location where the dedicated HSM should be created.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="networkprofile_nodejs">
@@ -592,15 +592,6 @@ The DedicatedHsm resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The supported Azure location where the dedicated HSM should be created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -626,6 +617,15 @@ The DedicatedHsm resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SKU details{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The supported Azure location where the dedicated HSM should be created.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="network_profile_python">

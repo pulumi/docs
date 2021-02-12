@@ -237,7 +237,7 @@ The StorageAccountStaticWebsite resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The webpage that Azure Storage serves for requests to the root of a website or any subfolder. For example, 'index.html'. The value is case-sensitive.{{% /md %}}</dd>
+    <dd>{{% md %}}The webpage that Azure Storage serves for requests to the root of a website or any sub-folder. For example, 'index.html'. The value is case-sensitive.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -279,7 +279,7 @@ The StorageAccountStaticWebsite resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The webpage that Azure Storage serves for requests to the root of a website or any subfolder. For example, 'index.html'. The value is case-sensitive.{{% /md %}}</dd>
+    <dd>{{% md %}}The webpage that Azure Storage serves for requests to the root of a website or any sub-folder. For example, 'index.html'. The value is case-sensitive.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -321,7 +321,7 @@ The StorageAccountStaticWebsite resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The webpage that Azure Storage serves for requests to the root of a website or any subfolder. For example, 'index.html'. The value is case-sensitive.{{% /md %}}</dd>
+    <dd>{{% md %}}The webpage that Azure Storage serves for requests to the root of a website or any sub-folder. For example, 'index.html'. The value is case-sensitive.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -363,7 +363,7 @@ The StorageAccountStaticWebsite resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The webpage that Azure Storage serves for requests to the root of a website or any subfolder. For example, 'index.html'. The value is case-sensitive.{{% /md %}}</dd>
+    <dd>{{% md %}}The webpage that Azure Storage serves for requests to the root of a website or any sub-folder. For example, 'index.html'. The value is case-sensitive.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

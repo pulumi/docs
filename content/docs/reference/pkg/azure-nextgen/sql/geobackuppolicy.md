@@ -384,7 +384,7 @@ The GeoBackupPolicy resource accepts the following [input]({{< relref "/docs/int
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#geobackuppolicystate">Geo<wbr>Backup<wbr>Policy<wbr>State</a></span>
+        <span class="property-type"><a href="#geobackuppolicystate">Geo<wbr>Backup<wbr>Policy<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}The state of the geo backup policy.{{% /md %}}</dd>
 </dl>

@@ -311,15 +311,6 @@ The Manager resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The geo location of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="managername_csharp">
 <a href="#managername_csharp" style="color: inherit; text-decoration: inherit;">Manager<wbr>Name</a>
 </span>
@@ -356,6 +347,15 @@ The Manager resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The etag of the manager.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The geo location of the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
@@ -387,15 +387,6 @@ The Manager resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The geo location of the resource.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="managername_go">
@@ -434,6 +425,15 @@ The Manager resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The etag of the manager.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The geo location of the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
@@ -465,15 +465,6 @@ The Manager resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The geo location of the resource.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="managername_nodejs">
@@ -512,6 +503,15 @@ The Manager resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The etag of the manager.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The geo location of the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
@@ -543,15 +543,6 @@ The Manager resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The geo location of the resource.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="manager_name_python">
@@ -588,6 +579,15 @@ The Manager resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The etag of the manager.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The geo location of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="provisioning_state_python">

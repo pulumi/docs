@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.compute.ProximityPlacementGroup 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Specifies information about the proximity placement group.
-Latest API Version: 2020-06-01.
+Latest API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -289,15 +289,6 @@ The ProximityPlacementGroup resource accepts the following [input]({{< relref "/
 
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="proximityplacementgroupname_csharp">
 <a href="#proximityplacementgroupname_csharp" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group<wbr>Name</a>
 </span>
@@ -325,6 +316,15 @@ The ProximityPlacementGroup resource accepts the following [input]({{< relref "/
     <dd>{{% md %}}Describes colocation status of the Proximity Placement Group.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="proximityplacementgrouptype_csharp">
 <a href="#proximityplacementgrouptype_csharp" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group<wbr>Type</a>
 </span>
@@ -347,15 +347,6 @@ The ProximityPlacementGroup resource accepts the following [input]({{< relref "/
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="proximityplacementgroupname_go">
@@ -385,6 +376,15 @@ The ProximityPlacementGroup resource accepts the following [input]({{< relref "/
     <dd>{{% md %}}Describes colocation status of the Proximity Placement Group.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="proximityplacementgrouptype_go">
 <a href="#proximityplacementgrouptype_go" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group<wbr>Type</a>
 </span>
@@ -407,15 +407,6 @@ The ProximityPlacementGroup resource accepts the following [input]({{< relref "/
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="proximityplacementgroupname_nodejs">
@@ -445,6 +436,15 @@ The ProximityPlacementGroup resource accepts the following [input]({{< relref "/
     <dd>{{% md %}}Describes colocation status of the Proximity Placement Group.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="proximityplacementgrouptype_nodejs">
 <a href="#proximityplacementgrouptype_nodejs" style="color: inherit; text-decoration: inherit;">proximity<wbr>Placement<wbr>Group<wbr>Type</a>
 </span>
@@ -467,15 +467,6 @@ The ProximityPlacementGroup resource accepts the following [input]({{< relref "/
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="proximity_placement_group_name_python">
@@ -503,6 +494,15 @@ The ProximityPlacementGroup resource accepts the following [input]({{< relref "/
         <span class="property-type"><a href="#instanceviewstatus">Instance<wbr>View<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes colocation status of the Proximity Placement Group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="proximity_placement_group_type_python">

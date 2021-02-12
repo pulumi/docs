@@ -1887,7 +1887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#workflowstate">Workflow<wbr>State</a></span>
+        <span class="property-type">string | <a href="#workflowstate">Workflow<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}The integration service environment state.{{% /md %}}</dd>
 </dl>

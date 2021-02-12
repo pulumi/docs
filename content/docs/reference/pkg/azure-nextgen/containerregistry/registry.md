@@ -315,15 +315,6 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="registryname_csharp">
 <a href="#registryname_csharp" style="color: inherit; text-decoration: inherit;">Registry<wbr>Name</a>
 </span>
@@ -358,6 +349,15 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The value that indicates whether the admin user is enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="networkruleset_csharp">
@@ -402,15 +402,6 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="registryname_go">
 <a href="#registryname_go" style="color: inherit; text-decoration: inherit;">Registry<wbr>Name</a>
 </span>
@@ -445,6 +436,15 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The value that indicates whether the admin user is enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="networkruleset_go">
@@ -489,15 +489,6 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="registryname_nodejs">
 <a href="#registryname_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Name</a>
 </span>
@@ -532,6 +523,15 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The value that indicates whether the admin user is enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="networkruleset_nodejs">
@@ -576,15 +576,6 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="registry_name_python">
 <a href="#registry_name_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>name</a>
 </span>
@@ -619,6 +610,15 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The value that indicates whether the admin user is enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="network_rule_set_python">

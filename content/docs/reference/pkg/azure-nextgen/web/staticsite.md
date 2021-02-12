@@ -335,15 +335,6 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Location.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -389,6 +380,15 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="repositorytoken_csharp">
 <a href="#repositorytoken_csharp" style="color: inherit; text-decoration: inherit;">Repository<wbr>Token</a>
 </span>
@@ -429,15 +429,6 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Location.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -485,6 +476,15 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="repositorytoken_go">
 <a href="#repositorytoken_go" style="color: inherit; text-decoration: inherit;">Repository<wbr>Token</a>
 </span>
@@ -525,15 +525,6 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Location.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -581,6 +572,15 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="repositorytoken_nodejs">
 <a href="#repositorytoken_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Token</a>
 </span>
@@ -621,15 +621,6 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Location.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -675,6 +666,15 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource Location.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="repository_token_python">
@@ -2479,7 +2479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_csharp">
@@ -2539,7 +2539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_go">
@@ -2599,7 +2599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_nodejs">
@@ -2659,7 +2659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_python">

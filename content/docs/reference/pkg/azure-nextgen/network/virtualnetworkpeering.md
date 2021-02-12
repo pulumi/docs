@@ -513,7 +513,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
 <a href="#peeringstate_go" style="color: inherit; text-decoration: inherit;">Peering<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#virtualnetworkpeeringstate">Virtual<wbr>Network<wbr>Peering<wbr>State</a></span>
+        <span class="property-type">string | <a href="#virtualnetworkpeeringstate">Virtual<wbr>Network<wbr>Peering<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}The status of the virtual network peering.{{% /md %}}</dd>
     <dt class="property-optional"

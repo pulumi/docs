@@ -349,15 +349,6 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -403,6 +394,15 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}This enables publishing using custom event schemas. An InputSchemaMapping can be specified to map various properties of a source schema to various required properties of the EventGridEvent schema.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="privateendpointconnections_csharp">
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
@@ -435,15 +435,6 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
@@ -491,6 +482,15 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
     <dd>{{% md %}}This enables publishing using custom event schemas. An InputSchemaMapping can be specified to map various properties of a source schema to various required properties of the EventGridEvent schema.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="privateendpointconnections_go">
 <a href="#privateendpointconnections_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
@@ -523,15 +523,6 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
@@ -579,6 +570,15 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
     <dd>{{% md %}}This enables publishing using custom event schemas. An InputSchemaMapping can be specified to map various properties of a source schema to various required properties of the EventGridEvent schema.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="privateendpointconnections_nodejs">
 <a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
 </span>
@@ -611,15 +611,6 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
@@ -665,6 +656,15 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
         <span class="property-type"><a href="#jsoninputschemamapping">Json<wbr>Input<wbr>Schema<wbr>Mapping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This enables publishing using custom event schemas. An InputSchemaMapping can be specified to map various properties of a source schema to various required properties of the EventGridEvent schema.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="private_endpoint_connections_python">

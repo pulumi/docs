@@ -468,15 +468,6 @@ The DigitalTwin resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -502,6 +493,15 @@ The DigitalTwin resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#digitaltwinsidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Digital<wbr>Twins.<wbr>Inputs.<wbr>Digital<wbr>Twins<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managed identity for the DigitalTwinsInstance.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="privateendpointconnections_csharp">
@@ -537,15 +537,6 @@ The DigitalTwin resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -571,6 +562,15 @@ The DigitalTwin resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#digitaltwinsidentity">Digital<wbr>Twins<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}The managed identity for the DigitalTwinsInstance.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="privateendpointconnections_go">
@@ -606,15 +606,6 @@ The DigitalTwin resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
@@ -640,6 +631,15 @@ The DigitalTwin resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#digitaltwinsidentity">Digital<wbr>Twins<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}The managed identity for the DigitalTwinsInstance.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="privateendpointconnections_nodejs">
@@ -675,15 +675,6 @@ The DigitalTwin resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
@@ -709,6 +700,15 @@ The DigitalTwin resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#digitaltwinsidentity">Digital<wbr>Twins<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managed identity for the DigitalTwinsInstance.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="private_endpoint_connections_python">

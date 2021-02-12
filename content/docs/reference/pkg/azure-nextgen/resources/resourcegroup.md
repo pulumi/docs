@@ -281,15 +281,6 @@ The ResourceGroup resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource group. It cannot be changed after the resource group has been created. It must be one of the supported Azure locations.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -297,6 +288,15 @@ The ResourceGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group to create or update. Can include alphanumeric, underscore, parentheses, hyphen, period (except at end), and Unicode characters that match the allowed characters.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource group. It cannot be changed after the resource group has been created. It must be one of the supported Azure locations.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="managedby_csharp">
@@ -323,15 +323,6 @@ The ResourceGroup resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource group. It cannot be changed after the resource group has been created. It must be one of the supported Azure locations.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -339,6 +330,15 @@ The ResourceGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group to create or update. Can include alphanumeric, underscore, parentheses, hyphen, period (except at end), and Unicode characters that match the allowed characters.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource group. It cannot be changed after the resource group has been created. It must be one of the supported Azure locations.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="managedby_go">
@@ -365,15 +365,6 @@ The ResourceGroup resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource group. It cannot be changed after the resource group has been created. It must be one of the supported Azure locations.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
@@ -381,6 +372,15 @@ The ResourceGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group to create or update. Can include alphanumeric, underscore, parentheses, hyphen, period (except at end), and Unicode characters that match the allowed characters.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource group. It cannot be changed after the resource group has been created. It must be one of the supported Azure locations.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="managedby_nodejs">
@@ -407,15 +407,6 @@ The ResourceGroup resource accepts the following [input]({{< relref "/docs/intro
 
     <dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource group. It cannot be changed after the resource group has been created. It must be one of the supported Azure locations.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
@@ -423,6 +414,15 @@ The ResourceGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group to create or update. Can include alphanumeric, underscore, parentheses, hyphen, period (except at end), and Unicode characters that match the allowed characters.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource group. It cannot be changed after the resource group has been created. It must be one of the supported Azure locations.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="managed_by_python">
