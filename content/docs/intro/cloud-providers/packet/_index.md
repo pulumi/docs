@@ -1,6 +1,6 @@
 ---
-title: Packet.net
-meta_desc: This page provides an overview of the Packet.net provider for Pulumi.
+title: Equinix Metal
+meta_desc: This page provides an overview of the Equinix Metal provider for Pulumi.
 menu:
   intro:
     parent: cloud-providers
@@ -10,16 +10,14 @@ menu:
 aliases: ["/docs/reference/clouds/packet/"]
 ---
 
-<img src="/logos/tech/packet.svg" align="right" class="h-16 px-8 pb-4">
+The Equinix Metal provider for Pulumi can be used to provision any of the cloud resources available in [Equinix Metal](https://metal.equinix.com/).
+The Equinix Metal provider must be configured with credentials to deploy and update resources in Packet.
 
-The Packet.net provider for Pulumi can be used to provision any of the cloud resources available in [Packet.net](https://www.packet.com).
-The Packet.net provider must be configured with credentials to deploy and update resources in Packet.
-
-See the [full API documentation]({{< relref "/docs/reference/pkg/packet" >}}) for complete details of the available Packet.net provider APIs.
+See the [full API documentation]({{< relref "/docs/reference/pkg/packet" >}}) for complete details of the available Equinix Metal provider APIs.
 
 ## Setup
 
-The Packet.net provider supports several options for providing access to Packet.net credentials.  See [Packet setup page]({{< relref "/docs/intro/cloud-providers/packet/setup" >}}) for details.
+The Equinix Metal provider supports several options for providing access to Equinix Metal credentials.  See [Equinix Metal setup page]({{< relref "/docs/intro/cloud-providers/packet/setup" >}}) for details.
 
 ## Example
 
@@ -28,9 +26,9 @@ The Packet.net provider supports several options for providing access to Packet.
 {{% choosable language javascript %}}
 
 ```javascript
-const packet = require("@pulumi/packet")
+const equinixmetal = require("@pulumi/equinix-metal")
 
-const packet = new packet.Project("my-project", {
+const equinixmetal = new equinixmetal.Project("my-project", {
   name: "DevelopmentEnvironment"
 });
 ```
@@ -39,9 +37,9 @@ const packet = new packet.Project("my-project", {
 {{% choosable language typescript %}}
 
 ```typescript
-import * as packet from "@pulumi/packet";
+import * as equinixmetal from "@pulumi/equinix-metal";
 
-const project = new packet.Project("my-project", {
+const project = new equinixmetal.Project("my-project", {
   name: "DevelopmentEnvironment"
 });
 ```
@@ -50,8 +48,8 @@ const project = new packet.Project("my-project", {
 {{% choosable language python %}}
 
 ```python
-import pulumi_packet as packet
-project = packet.Project("my-project",
+import pulumi_equinix-metal as equinixmetal
+project = equinixmetal.Project("my-project",
   name='DevelopmentEnvironment'
 )
 ```
@@ -79,27 +77,6 @@ func main() {
 }
 ```
 
-{{% /choosable %}}
-{{% choosable language csharp %}}
-
-```csharp
-using System.Threading.Tasks;
-using Pulumi;
-using Pulumi.Packet;
-
-class Program
-{
-    static Task Main() =>
-        Deployment.Run(() => {
-            var project = new Packet.Project("my-project", new Packet.ProjectArgs
-            {
-                Name = "DevelopmentEnvironment"
-            });
-        });
-}
-```
-
-{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -107,9 +84,11 @@ class Program
 
 The following packages are available in packager managers:
 
-* JavaScript/TypeScript: [`@pulumi/packet`](https://www.npmjs.com/package/@pulumi/packet)
-* Python: [`pulumi-packet`](https://pypi.org/project/pulumi-packet/)
-* Go: [`github.com/pulumi/pulumi-packet/sdk/go/packet`](https://github.com/pulumi/pulumi-packet)
-* .NET: [`Pulumi.Packet`](https://www.nuget.org/packages/Pulumi.Packet)
+* JavaScript/TypeScript: [`@pulumi/packet`](https://github.com/pulumi/pulumi-equinix-metal)
+* Python: [`pulumi-packet`](https://github.com/pulumi/pulumi-equinix-metal)
+* Go: [`github.com/pulumi/pulumi-packet/sdk/go/packet`](https://github.com/pulumi/pulumi-equinix-metal)
+* .NET: [`Pulumi.EquinixMetal`](https://github.com/pulumi/pulumi-equinix-metal)
 
-The Packet.net provider is open source and available in the [pulumi/pulumi-packet](https://github.com/pulumi/pulumi-packet) repo.
+PLEASE NOTE: The pulumi-packet provider has been renamed to pulumi-equinix-metal. The existing pulumi-packet provider will no longer have any new updates published to it.
+
+The Equinix Metal provider is open source and available in the [pulumi/pulumi-equinix-metal](https://github.com/pulumi/pulumi-equinix-metal) repo.
