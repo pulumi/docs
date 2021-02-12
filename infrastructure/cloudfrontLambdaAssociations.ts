@@ -188,11 +188,13 @@ function pythonSDKRedirect(uri: string): string | undefined {
 }
 
 function dotnetSDKRedirect(uri: string): string | undefined {
-    const pattern = new URLPattern("/docs/reference/pkg/dotnet/Pulumi.(:provider)/Pulumi.(:providerAgain)(.(:service)).html");
+    const pattern = new URLPattern(
+        "/docs/reference/pkg/dotnet/Pulumi.:provider/Pulumi.:providerRepeated(.:service)(.*).html"
+    );
     const match = pattern.match(uri);
 
     if (match && match.provider) {
-        if (match.service) {
+        if (match.service && !match.service.match(/Types|Config/)) {
             // tslint:disable-next-line:max-line-length
             return `/docs/reference/pkg/${match.provider.toLowerCase()}/${match.service.toLowerCase()}/?language=csharp`;
         }
@@ -200,7 +202,7 @@ function dotnetSDKRedirect(uri: string): string | undefined {
 
     // If the URI matches /dotnet/anything-else, we'll just direct you to the GitHub repo.
     } else if (uri.startsWith("/docs/reference/pkg/dotnet/")) {
-        return "https://github.com/pulumi/pulumi/tree/master/sdk/dotnet";
+        return "/docs/reference/pkg";
     }
 
     return undefined;
