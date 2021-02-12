@@ -8852,7 +8852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protecteditemstate">Protected<wbr>Item<wbr>State</a></span>
+        <span class="property-type">string | <a href="#protecteditemstate">Protected<wbr>Item<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Backup state of the backed up item.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -18302,7 +18302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protecteditemstate">Protected<wbr>Item<wbr>State</a></span>
+        <span class="property-type">string | <a href="#protecteditemstate">Protected<wbr>Item<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Protection state of the backup engine{{% /md %}}</dd>
     <dt class="property-optional"

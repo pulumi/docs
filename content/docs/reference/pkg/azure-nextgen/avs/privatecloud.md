@@ -319,15 +319,6 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="managementcluster_csharp">
 <a href="#managementcluster_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Cluster</a>
 </span>
@@ -391,6 +382,15 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}Connectivity to internet is enabled or disabled{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="nsxtpassword_csharp">
 <a href="#nsxtpassword_csharp" style="color: inherit; text-decoration: inherit;">Nsxt<wbr>Password</a>
 </span>
@@ -422,15 +422,6 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="managementcluster_go">
@@ -496,6 +487,15 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}Connectivity to internet is enabled or disabled{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="nsxtpassword_go">
 <a href="#nsxtpassword_go" style="color: inherit; text-decoration: inherit;">Nsxt<wbr>Password</a>
 </span>
@@ -527,15 +527,6 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="managementcluster_nodejs">
@@ -601,6 +592,15 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}Connectivity to internet is enabled or disabled{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="nsxtpassword_nodejs">
 <a href="#nsxtpassword_nodejs" style="color: inherit; text-decoration: inherit;">nsxt<wbr>Password</a>
 </span>
@@ -632,15 +632,6 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="management_cluster_python">
@@ -704,6 +695,15 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str | <a href="#internetenum">Internet<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Connectivity to internet is enabled or disabled{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="nsxt_password_python">

@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.synapse.Workspace resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A workspace
+Latest API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -26,32 +27,32 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspace = new AzureNextGen.Synapse.V20190601Preview.Workspace("workspace", new AzureNextGen.Synapse.V20190601Preview.WorkspaceArgs
+        var workspace = new AzureNextGen.Synapse.Latest.Workspace("workspace", new AzureNextGen.Synapse.Latest.WorkspaceArgs
         {
-            DefaultDataLakeStorage = new AzureNextGen.Synapse.V20190601Preview.Inputs.DataLakeStorageAccountDetailsArgs
+            DefaultDataLakeStorage = new AzureNextGen.Synapse.Latest.Inputs.DataLakeStorageAccountDetailsArgs
             {
                 AccountUrl = "https://accountname.dfs.core.windows.net",
                 Filesystem = "default",
             },
-            Encryption = new AzureNextGen.Synapse.V20190601Preview.Inputs.EncryptionDetailsArgs
+            Encryption = new AzureNextGen.Synapse.Latest.Inputs.EncryptionDetailsArgs
             {
-                Cmk = new AzureNextGen.Synapse.V20190601Preview.Inputs.CustomerManagedKeyDetailsArgs
+                Cmk = new AzureNextGen.Synapse.Latest.Inputs.CustomerManagedKeyDetailsArgs
                 {
-                    Key = new AzureNextGen.Synapse.V20190601Preview.Inputs.WorkspaceKeyDetailsArgs
+                    Key = new AzureNextGen.Synapse.Latest.Inputs.WorkspaceKeyDetailsArgs
                     {
                         KeyVaultUrl = "https://vault.azure.net/keys/key1",
                         Name = "default",
                     },
                 },
             },
-            Identity = new AzureNextGen.Synapse.V20190601Preview.Inputs.ManagedIdentityArgs
+            Identity = new AzureNextGen.Synapse.Latest.Inputs.ManagedIdentityArgs
             {
                 Type = "SystemAssigned",
             },
             Location = "East US",
             ManagedResourceGroupName = "workspaceManagedResourceGroupUnique",
             ManagedVirtualNetwork = "default",
-            ManagedVirtualNetworkSettings = new AzureNextGen.Synapse.V20190601Preview.Inputs.ManagedVirtualNetworkSettingsArgs
+            ManagedVirtualNetworkSettings = new AzureNextGen.Synapse.Latest.Inputs.ManagedVirtualNetworkSettingsArgs
             {
                 AllowedAadTenantIdsForLinking = 
                 {
@@ -60,7 +61,7 @@ class MyStack : Stack
                 LinkedAccessCheckOnTargetResource = false,
                 PreventDataExfiltration = false,
             },
-            PurviewConfiguration = new AzureNextGen.Synapse.V20190601Preview.Inputs.PurviewConfigurationArgs
+            PurviewConfiguration = new AzureNextGen.Synapse.Latest.Inputs.PurviewConfigurationArgs
             {
                 PurviewResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.ProjectPurview/accounts/accountname1",
             },
@@ -72,7 +73,7 @@ class MyStack : Stack
                 { "key", "value" },
             },
             WorkspaceName = "workspace1",
-            WorkspaceRepositoryConfiguration = new AzureNextGen.Synapse.V20190601Preview.Inputs.WorkspaceRepositoryConfigurationArgs
+            WorkspaceRepositoryConfiguration = new AzureNextGen.Synapse.Latest.Inputs.WorkspaceRepositoryConfigurationArgs
             {
                 AccountName = "mygithubaccount",
                 CollaborationBranch = "master",
@@ -97,7 +98,7 @@ class MyStack : Stack
 package main
 
 import (
-	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse/v20190601preview"
+	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -166,31 +167,31 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace = azure_nextgen.synapse.v20190601preview.Workspace("workspace",
-    default_data_lake_storage=azure_nextgen.synapse.v20190601preview.DataLakeStorageAccountDetailsArgs(
+workspace = azure_nextgen.synapse.latest.Workspace("workspace",
+    default_data_lake_storage=azure_nextgen.synapse.latest.DataLakeStorageAccountDetailsArgs(
         account_url="https://accountname.dfs.core.windows.net",
         filesystem="default",
     ),
-    encryption=azure_nextgen.synapse.v20190601preview.EncryptionDetailsArgs(
-        cmk=azure_nextgen.synapse.v20190601preview.CustomerManagedKeyDetailsArgs(
-            key=azure_nextgen.synapse.v20190601preview.WorkspaceKeyDetailsArgs(
+    encryption=azure_nextgen.synapse.latest.EncryptionDetailsArgs(
+        cmk=azure_nextgen.synapse.latest.CustomerManagedKeyDetailsArgs(
+            key=azure_nextgen.synapse.latest.WorkspaceKeyDetailsArgs(
                 key_vault_url="https://vault.azure.net/keys/key1",
                 name="default",
             ),
         ),
     ),
-    identity=azure_nextgen.synapse.v20190601preview.ManagedIdentityArgs(
+    identity=azure_nextgen.synapse.latest.ManagedIdentityArgs(
         type="SystemAssigned",
     ),
     location="East US",
     managed_resource_group_name="workspaceManagedResourceGroupUnique",
     managed_virtual_network="default",
-    managed_virtual_network_settings=azure_nextgen.synapse.v20190601preview.ManagedVirtualNetworkSettingsArgs(
+    managed_virtual_network_settings=azure_nextgen.synapse.latest.ManagedVirtualNetworkSettingsArgs(
         allowed_aad_tenant_ids_for_linking=["740239CE-A25B-485B-86A0-262F29F6EBDB"],
         linked_access_check_on_target_resource=False,
         prevent_data_exfiltration=False,
     ),
-    purview_configuration=azure_nextgen.synapse.v20190601preview.PurviewConfigurationArgs(
+    purview_configuration=azure_nextgen.synapse.latest.PurviewConfigurationArgs(
         purview_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.ProjectPurview/accounts/accountname1",
     ),
     resource_group_name="resourceGroup1",
@@ -200,7 +201,7 @@ workspace = azure_nextgen.synapse.v20190601preview.Workspace("workspace",
         "key": "value",
     },
     workspace_name="workspace1",
-    workspace_repository_configuration=azure_nextgen.synapse.v20190601preview.WorkspaceRepositoryConfigurationArgs(
+    workspace_repository_configuration=azure_nextgen.synapse.latest.WorkspaceRepositoryConfigurationArgs(
         account_name="mygithubaccount",
         collaboration_branch="master",
         host_name="",
@@ -220,7 +221,7 @@ workspace = azure_nextgen.synapse.v20190601preview.Workspace("workspace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workspace = new azure_nextgen.synapse.v20190601preview.Workspace("workspace", {
+const workspace = new azure_nextgen.synapse.latest.Workspace("workspace", {
     defaultDataLakeStorage: {
         accountUrl: "https://accountname.dfs.core.windows.net",
         filesystem: "default",
@@ -454,15 +455,6 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -515,6 +507,15 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#managedidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Managed<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identity of the workspace{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="managedresourcegroupname_csharp">
@@ -613,15 +614,6 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -674,6 +666,15 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#managedidentity">Managed<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}Identity of the workspace{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="managedresourcegroupname_go">
@@ -772,15 +773,6 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
@@ -833,6 +825,15 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#managedidentity">Managed<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}Identity of the workspace{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="managedresourcegroupname_nodejs">
@@ -931,15 +932,6 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
@@ -992,6 +984,15 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#managedidentity">Managed<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identity of the workspace{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="managed_resource_group_name_python">
@@ -4143,7 +4144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:synapse/v20190601preview:Workspace workspace1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.Synapse/workspaces/workspace1 
+$ pulumi import azure-nextgen:synapse/latest:Workspace workspace1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.Synapse/workspaces/workspace1 
 ```
 
 

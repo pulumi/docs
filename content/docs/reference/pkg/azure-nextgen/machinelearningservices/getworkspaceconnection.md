@@ -254,6 +254,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value details of the workspace connection.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="valueformat_csharp">
+<a href="#valueformat_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}format for the workspace connection value{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -323,6 +332,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value details of the workspace connection.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="valueformat_go">
+<a href="#valueformat_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}format for the workspace connection value{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -392,6 +410,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value details of the workspace connection.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="valueformat_nodejs">
+<a href="#valueformat_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}format for the workspace connection value{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -461,6 +488,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value details of the workspace connection.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="value_format_python">
+<a href="#value_format_python" style="color: inherit; text-decoration: inherit;">value_<wbr>format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}format for the workspace connection value{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

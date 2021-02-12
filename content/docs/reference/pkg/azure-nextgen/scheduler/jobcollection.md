@@ -614,7 +614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcollectionstate">Job<wbr>Collection<wbr>State</a></span>
+        <span class="property-type"><a href="#jobcollectionstate">Job<wbr>Collection<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the state.{{% /md %}}</dd>
 </dl>

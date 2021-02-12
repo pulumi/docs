@@ -265,6 +265,15 @@ The following output properties are available:
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="eventtime_csharp">
+<a href="#eventtime_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The bookmark event time{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="incidentinfo_csharp">
 <a href="#incidentinfo_csharp" style="color: inherit; text-decoration: inherit;">Incident<wbr>Info</a>
 </span>
@@ -292,6 +301,15 @@ The following output properties are available:
     <dd>{{% md %}}The notes of the bookmark{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="queryendtime_csharp">
+<a href="#queryendtime_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>End<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The end time for the query{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="queryresult_csharp">
 <a href="#queryresult_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Result</a>
 </span>
@@ -299,6 +317,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The query result of the bookmark.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="querystarttime_csharp">
+<a href="#querystarttime_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Start<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The start time for the query{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="updated_csharp">
@@ -397,6 +424,15 @@ The following output properties are available:
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="eventtime_go">
+<a href="#eventtime_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The bookmark event time{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="incidentinfo_go">
 <a href="#incidentinfo_go" style="color: inherit; text-decoration: inherit;">Incident<wbr>Info</a>
 </span>
@@ -424,6 +460,15 @@ The following output properties are available:
     <dd>{{% md %}}The notes of the bookmark{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="queryendtime_go">
+<a href="#queryendtime_go" style="color: inherit; text-decoration: inherit;">Query<wbr>End<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The end time for the query{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="queryresult_go">
 <a href="#queryresult_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Result</a>
 </span>
@@ -431,6 +476,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The query result of the bookmark.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="querystarttime_go">
+<a href="#querystarttime_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Start<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The start time for the query{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="updated_go">
@@ -529,6 +583,15 @@ The following output properties are available:
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="eventtime_nodejs">
+<a href="#eventtime_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The bookmark event time{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="incidentinfo_nodejs">
 <a href="#incidentinfo_nodejs" style="color: inherit; text-decoration: inherit;">incident<wbr>Info</a>
 </span>
@@ -556,6 +619,15 @@ The following output properties are available:
     <dd>{{% md %}}The notes of the bookmark{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="queryendtime_nodejs">
+<a href="#queryendtime_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>End<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The end time for the query{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="queryresult_nodejs">
 <a href="#queryresult_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Result</a>
 </span>
@@ -563,6 +635,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The query result of the bookmark.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="querystarttime_nodejs">
+<a href="#querystarttime_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Start<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The start time for the query{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="updated_nodejs">
@@ -661,6 +742,15 @@ The following output properties are available:
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="event_time_python">
+<a href="#event_time_python" style="color: inherit; text-decoration: inherit;">event_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The bookmark event time{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="incident_info_python">
 <a href="#incident_info_python" style="color: inherit; text-decoration: inherit;">incident_<wbr>info</a>
 </span>
@@ -688,6 +778,15 @@ The following output properties are available:
     <dd>{{% md %}}The notes of the bookmark{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="query_end_time_python">
+<a href="#query_end_time_python" style="color: inherit; text-decoration: inherit;">query_<wbr>end_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The end time for the query{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="query_result_python">
 <a href="#query_result_python" style="color: inherit; text-decoration: inherit;">query_<wbr>result</a>
 </span>
@@ -695,6 +794,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The query result of the bookmark.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="query_start_time_python">
+<a href="#query_start_time_python" style="color: inherit; text-decoration: inherit;">query_<wbr>start_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The start time for the query{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="updated_python">
@@ -732,8 +840,8 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="incidentid_csharp">
 <a href="#incidentid_csharp" style="color: inherit; text-decoration: inherit;">Incident<wbr>Id</a>
 </span>
@@ -741,8 +849,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Incident Id{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="relationname_csharp">
 <a href="#relationname_csharp" style="color: inherit; text-decoration: inherit;">Relation<wbr>Name</a>
 </span>
@@ -750,8 +858,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Relation Name{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="severity_csharp">
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span>
@@ -759,8 +867,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The severity of the incident{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="title_csharp">
 <a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
 </span>
@@ -774,8 +882,8 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="incidentid_go">
 <a href="#incidentid_go" style="color: inherit; text-decoration: inherit;">Incident<wbr>Id</a>
 </span>
@@ -783,8 +891,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Incident Id{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="relationname_go">
 <a href="#relationname_go" style="color: inherit; text-decoration: inherit;">Relation<wbr>Name</a>
 </span>
@@ -792,8 +900,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Relation Name{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="severity_go">
 <a href="#severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span>
@@ -801,8 +909,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The severity of the incident{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="title_go">
 <a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
 </span>
@@ -816,8 +924,8 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="incidentid_nodejs">
 <a href="#incidentid_nodejs" style="color: inherit; text-decoration: inherit;">incident<wbr>Id</a>
 </span>
@@ -825,8 +933,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Incident Id{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="relationname_nodejs">
 <a href="#relationname_nodejs" style="color: inherit; text-decoration: inherit;">relation<wbr>Name</a>
 </span>
@@ -834,8 +942,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Relation Name{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="severity_nodejs">
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
@@ -843,8 +951,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The severity of the incident{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="title_nodejs">
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
@@ -858,8 +966,8 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="incident_id_python">
 <a href="#incident_id_python" style="color: inherit; text-decoration: inherit;">incident_<wbr>id</a>
 </span>
@@ -867,8 +975,8 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Incident Id{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="relation_name_python">
 <a href="#relation_name_python" style="color: inherit; text-decoration: inherit;">relation_<wbr>name</a>
 </span>
@@ -876,8 +984,8 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Relation Name{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="severity_python">
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
@@ -885,8 +993,8 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The severity of the incident{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="title_python">
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>

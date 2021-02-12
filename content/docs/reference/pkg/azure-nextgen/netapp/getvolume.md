@@ -274,6 +274,15 @@ The following output properties are available:
     <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="mounttargets_csharp">
+<a href="#mounttargets_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Targets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mounttargetpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Outputs.<wbr>Mount<wbr>Target<wbr>Properties<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of mount targets{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -337,6 +346,15 @@ The following output properties are available:
     <dd>{{% md %}}DataProtection type volumes include an object containing details of the replication{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="encryptionkeysource_csharp">
+<a href="#encryptionkeysource_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Encryption Key Source. Possible values are: 'Microsoft.NetApp'{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="exportpolicy_csharp">
 <a href="#exportpolicy_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Policy</a>
 </span>
@@ -364,22 +382,13 @@ The following output properties are available:
     <dd>{{% md %}}Describe if a volume is KerberosEnabled. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="mounttargets_csharp">
-<a href="#mounttargets_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Targets</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mounttargetpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Outputs.<wbr>Mount<wbr>Target<wbr>Properties<wbr>Response&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}List of mount targets{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="protocoltypes_csharp">
 <a href="#protocoltypes_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Set of protocol types{{% /md %}}</dd>
+    <dd>{{% md %}}Set of protocol types, default NFSv3, CIFS fro SMB protocol{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="securitystyle_csharp">
@@ -388,7 +397,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The security style of volume{{% /md %}}</dd>
+    <dd>{{% md %}}The security style of volume, default unix, defaults to ntfs for dual protocol or CIFS protocol{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="servicelevel_csharp">
@@ -424,7 +433,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If enabled (true) the volume will contain a read-only .snapshot directory which provides access to each of the volume's snapshots (default to true).{{% /md %}}</dd>
+    <dd>{{% md %}}If enabled (true) the volume will contain a read-only snapshot directory which provides access to each of the volume's snapshots (default to true).{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="snapshotid_csharp">
@@ -514,6 +523,15 @@ The following output properties are available:
     <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="mounttargets_go">
+<a href="#mounttargets_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Targets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mounttargetpropertiesresponse">[]Mount<wbr>Target<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of mount targets{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -577,6 +595,15 @@ The following output properties are available:
     <dd>{{% md %}}DataProtection type volumes include an object containing details of the replication{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="encryptionkeysource_go">
+<a href="#encryptionkeysource_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Encryption Key Source. Possible values are: 'Microsoft.NetApp'{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="exportpolicy_go">
 <a href="#exportpolicy_go" style="color: inherit; text-decoration: inherit;">Export<wbr>Policy</a>
 </span>
@@ -604,22 +631,13 @@ The following output properties are available:
     <dd>{{% md %}}Describe if a volume is KerberosEnabled. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="mounttargets_go">
-<a href="#mounttargets_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Targets</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mounttargetpropertiesresponse">[]Mount<wbr>Target<wbr>Properties<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}List of mount targets{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="protocoltypes_go">
 <a href="#protocoltypes_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Set of protocol types{{% /md %}}</dd>
+    <dd>{{% md %}}Set of protocol types, default NFSv3, CIFS fro SMB protocol{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="securitystyle_go">
@@ -628,7 +646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The security style of volume{{% /md %}}</dd>
+    <dd>{{% md %}}The security style of volume, default unix, defaults to ntfs for dual protocol or CIFS protocol{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="servicelevel_go">
@@ -664,7 +682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If enabled (true) the volume will contain a read-only .snapshot directory which provides access to each of the volume's snapshots (default to true).{{% /md %}}</dd>
+    <dd>{{% md %}}If enabled (true) the volume will contain a read-only snapshot directory which provides access to each of the volume's snapshots (default to true).{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="snapshotid_go">
@@ -754,6 +772,15 @@ The following output properties are available:
     <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="mounttargets_nodejs">
+<a href="#mounttargets_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Targets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mounttargetpropertiesresponse">Mount<wbr>Target<wbr>Properties<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of mount targets{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -817,6 +844,15 @@ The following output properties are available:
     <dd>{{% md %}}DataProtection type volumes include an object containing details of the replication{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="encryptionkeysource_nodejs">
+<a href="#encryptionkeysource_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Encryption Key Source. Possible values are: 'Microsoft.NetApp'{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="exportpolicy_nodejs">
 <a href="#exportpolicy_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Policy</a>
 </span>
@@ -844,22 +880,13 @@ The following output properties are available:
     <dd>{{% md %}}Describe if a volume is KerberosEnabled. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="mounttargets_nodejs">
-<a href="#mounttargets_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Targets</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mounttargetpropertiesresponse">Mount<wbr>Target<wbr>Properties<wbr>Response[]</a></span>
-    </dt>
-    <dd>{{% md %}}List of mount targets{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="protocoltypes_nodejs">
 <a href="#protocoltypes_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Set of protocol types{{% /md %}}</dd>
+    <dd>{{% md %}}Set of protocol types, default NFSv3, CIFS fro SMB protocol{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="securitystyle_nodejs">
@@ -868,7 +895,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The security style of volume{{% /md %}}</dd>
+    <dd>{{% md %}}The security style of volume, default unix, defaults to ntfs for dual protocol or CIFS protocol{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="servicelevel_nodejs">
@@ -904,7 +931,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If enabled (true) the volume will contain a read-only .snapshot directory which provides access to each of the volume's snapshots (default to true).{{% /md %}}</dd>
+    <dd>{{% md %}}If enabled (true) the volume will contain a read-only snapshot directory which provides access to each of the volume's snapshots (default to true).{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="snapshotid_nodejs">
@@ -994,6 +1021,15 @@ The following output properties are available:
     <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="mount_targets_python">
+<a href="#mount_targets_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>targets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mounttargetpropertiesresponse">Sequence[Mount<wbr>Target<wbr>Properties<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}List of mount targets{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1057,6 +1093,15 @@ The following output properties are available:
     <dd>{{% md %}}DataProtection type volumes include an object containing details of the replication{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="encryption_key_source_python">
+<a href="#encryption_key_source_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key_<wbr>source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Encryption Key Source. Possible values are: 'Microsoft.NetApp'{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="export_policy_python">
 <a href="#export_policy_python" style="color: inherit; text-decoration: inherit;">export_<wbr>policy</a>
 </span>
@@ -1084,22 +1129,13 @@ The following output properties are available:
     <dd>{{% md %}}Describe if a volume is KerberosEnabled. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="mount_targets_python">
-<a href="#mount_targets_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>targets</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mounttargetpropertiesresponse">Sequence[Mount<wbr>Target<wbr>Properties<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}List of mount targets{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="protocol_types_python">
 <a href="#protocol_types_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Set of protocol types{{% /md %}}</dd>
+    <dd>{{% md %}}Set of protocol types, default NFSv3, CIFS fro SMB protocol{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="security_style_python">
@@ -1108,7 +1144,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The security style of volume{{% /md %}}</dd>
+    <dd>{{% md %}}The security style of volume, default unix, defaults to ntfs for dual protocol or CIFS protocol{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="service_level_python">
@@ -1144,7 +1180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If enabled (true) the volume will contain a read-only .snapshot directory which provides access to each of the volume's snapshots (default to true).{{% /md %}}</dd>
+    <dd>{{% md %}}If enabled (true) the volume will contain a read-only snapshot directory which provides access to each of the volume's snapshots (default to true).{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="snapshot_id_python">

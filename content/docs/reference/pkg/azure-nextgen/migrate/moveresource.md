@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.migrate.MoveResource resource wi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Defines the move resource.
+Latest API Version: 2021-01-01.
 
 
 

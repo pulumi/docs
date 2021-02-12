@@ -10404,7 +10404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_go" style="color: inherit; text-decoration: inherit;">Inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioninput">[]Function<wbr>Input</a></span>
+        <span class="property-type"><a href="#functioninput">[]Function<wbr>Input<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10413,7 +10413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_go" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionoutput">Function<wbr>Output</a></span>
+        <span class="property-type"><a href="#functionoutput">Function<wbr>Output<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The output of the function.{{% /md %}}</dd>
 </dl>

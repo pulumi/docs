@@ -338,15 +338,6 @@ The PartnerRegistration resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="partnerregistrationname_csharp">
 <a href="#partnerregistrationname_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Registration<wbr>Name</a>
 </span>
@@ -384,6 +375,15 @@ for creating the partner registration.{{% /md %}}</dd>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The extension of the customer service URI of the publisher.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="logouri_csharp">
@@ -496,15 +496,6 @@ integration on an event source.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="partnerregistrationname_go">
 <a href="#partnerregistrationname_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Registration<wbr>Name</a>
 </span>
@@ -542,6 +533,15 @@ for creating the partner registration.{{% /md %}}</dd>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The extension of the customer service URI of the publisher.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="logouri_go">
@@ -654,15 +654,6 @@ integration on an event source.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="partnerregistrationname_nodejs">
 <a href="#partnerregistrationname_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Registration<wbr>Name</a>
 </span>
@@ -700,6 +691,15 @@ for creating the partner registration.{{% /md %}}</dd>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The extension of the customer service URI of the publisher.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="logouri_nodejs">
@@ -812,15 +812,6 @@ integration on an event source.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="partner_registration_name_python">
 <a href="#partner_registration_name_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>registration_<wbr>name</a>
 </span>
@@ -858,6 +849,15 @@ for creating the partner registration.{{% /md %}}</dd>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The extension of the customer service URI of the publisher.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="logo_uri_python">

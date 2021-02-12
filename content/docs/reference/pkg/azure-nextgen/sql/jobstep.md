@@ -697,7 +697,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#output_go" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstepoutput">Job<wbr>Step<wbr>Output</a></span>
+        <span class="property-type"><a href="#jobstepoutput">Job<wbr>Step<wbr>Output<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Output destination properties of the job step.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1963,7 +1963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#jobstepoutputtype">Job<wbr>Step<wbr>Output<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#jobstepoutputtype">Job<wbr>Step<wbr>Output<wbr>Type<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}The output destination type.{{% /md %}}</dd>
 </dl>

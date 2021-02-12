@@ -1838,7 +1838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#expressroutecircuitpeeringstate">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>State</a></span>
+        <span class="property-type">string | <a href="#expressroutecircuitpeeringstate">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}The state of peering.{{% /md %}}</dd>
 </dl>
@@ -2281,7 +2281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:ExpressRouteCrossConnectionPeering AzurePrivatePeering /subscriptions/subid/resourceGroups/CrossConnection-SiliconValley/providers/Microsoft.Network/expressRouteCrossConnections/<circuitServiceKey>/peerings/AzurePrivatePeering 
+$ pulumi import azure-nextgen:network/latest:ExpressRouteCrossConnectionPeering AzurePrivatePeering /subscriptions/subid/resourceGroups/CrossConnection-Boydton1DC/providers/Microsoft.Network/expressRouteCrossConnections/<circuitServiceKey>/peerings/AzurePrivatePeering 
 ```
 
 

@@ -11,6 +11,7 @@ Explore the resources and functions of the storage module in the Azure NextGen p
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="blob" title="Blob"><span class="symbol resource"></span>Blob</a></li>
     <li><a href="blobcontainer" title="BlobContainer"><span class="symbol resource"></span>BlobContainer</a></li>
     <li><a href="blobcontainerimmutabilitypolicy" title="BlobContainerImmutabilityPolicy"><span class="symbol resource"></span>BlobContainerImmutabilityPolicy</a></li>
     <li><a href="blobinventorypolicy" title="BlobInventoryPolicy"><span class="symbol resource"></span>BlobInventoryPolicy</a></li>
@@ -56,7 +57,7 @@ Explore the resources and functions of the storage module in the Azure NextGen p
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.6.0</dd>
+	<dd>0.6.1</dd>
 </dl>
 
 

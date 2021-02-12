@@ -6787,6 +6787,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The storage account name.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="targetvmsize_csharp">
+<a href="#targetvmsize_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Vm<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target VM size.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="usemanageddisks_csharp">
 <a href="#usemanageddisks_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Managed<wbr>Disks</a>
 </span>
@@ -6944,6 +6953,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage account name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetvmsize_go">
+<a href="#targetvmsize_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Vm<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target VM size.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="usemanageddisks_go">
@@ -7105,6 +7123,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The storage account name.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="targetvmsize_nodejs">
+<a href="#targetvmsize_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Vm<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target VM size.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="usemanageddisks_nodejs">
 <a href="#usemanageddisks_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Managed<wbr>Disks</a>
 </span>
@@ -7262,6 +7289,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The storage account name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_vm_size_python">
+<a href="#target_vm_size_python" style="color: inherit; text-decoration: inherit;">target_<wbr>vm_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The target VM size.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="use_managed_disks_python">
@@ -9738,6 +9774,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The proximity placement group ARM Id.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetvmsize_csharp">
+<a href="#targetvmsize_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Vm<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target VM size.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -9915,6 +9960,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The proximity placement group ARM Id.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetvmsize_go">
+<a href="#targetvmsize_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Vm<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target VM size.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -10092,6 +10146,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The proximity placement group ARM Id.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetvmsize_nodejs">
+<a href="#targetvmsize_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Vm<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target VM size.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -10269,6 +10332,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The proximity placement group ARM Id.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_vm_size_python">
+<a href="#target_vm_size_python" style="color: inherit; text-decoration: inherit;">target_<wbr>vm_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The target VM size.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

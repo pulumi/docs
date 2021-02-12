@@ -908,15 +908,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The name of the cluster resource.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Azure resource location.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="managementendpoint_csharp">
 <a href="#managementendpoint_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Endpoint</a>
 </span>
@@ -1043,6 +1034,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The list of custom fabric settings to configure the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Azure resource location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="reliabilitylevel_csharp">
 <a href="#reliabilitylevel_csharp" style="color: inherit; text-decoration: inherit;">Reliability<wbr>Level</a>
 </span>
@@ -1130,15 +1130,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster resource.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Azure resource location.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="managementendpoint_go">
@@ -1267,6 +1258,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The list of custom fabric settings to configure the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Azure resource location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="reliabilitylevel_go">
 <a href="#reliabilitylevel_go" style="color: inherit; text-decoration: inherit;">Reliability<wbr>Level</a>
 </span>
@@ -1354,15 +1354,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster resource.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Azure resource location.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="managementendpoint_nodejs">
@@ -1491,6 +1482,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The list of custom fabric settings to configure the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Azure resource location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="reliabilitylevel_nodejs">
 <a href="#reliabilitylevel_nodejs" style="color: inherit; text-decoration: inherit;">reliability<wbr>Level</a>
 </span>
@@ -1578,15 +1578,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the cluster resource.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Azure resource location.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="management_endpoint_python">
@@ -1713,6 +1704,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#settingssectiondescription">Sequence[Settings<wbr>Section<wbr>Description<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of custom fabric settings to configure the cluster.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Azure resource location.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="reliability_level_python">

@@ -1077,15 +1077,6 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
     <dd>{{% md %}}The name of the job Resource within the specified resource group. job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -1149,6 +1140,15 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
     <dd>{{% md %}}Msi identity of the resource{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -1171,15 +1171,6 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the job Resource within the specified resource group. job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
@@ -1245,6 +1236,15 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
     <dd>{{% md %}}Msi identity of the resource{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -1267,15 +1267,6 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the job Resource within the specified resource group. job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
@@ -1341,6 +1332,15 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
     <dd>{{% md %}}Msi identity of the resource{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -1363,15 +1363,6 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the job Resource within the specified resource group. job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
@@ -1435,6 +1426,15 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Msi identity of the resource{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -4371,7 +4371,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_csharp">
-<a href="#expecteddatasizeinterabytes_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+<a href="#expecteddatasizeinterabytes_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -4458,7 +4458,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_go">
-<a href="#expecteddatasizeinterabytes_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+<a href="#expecteddatasizeinterabytes_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -4545,7 +4545,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_nodejs">
-<a href="#expecteddatasizeinterabytes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+<a href="#expecteddatasizeinterabytes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
@@ -4631,8 +4631,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="expected_data_size_in_terabytes_python">
-<a href="#expected_data_size_in_terabytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>terabytes</a>
+        <span id="expected_data_size_in_tera_bytes_python">
+<a href="#expected_data_size_in_tera_bytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>tera_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -4793,7 +4793,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_csharp">
-<a href="#expecteddatasizeinterabytes_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+<a href="#expecteddatasizeinterabytes_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -4952,7 +4952,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_go">
-<a href="#expecteddatasizeinterabytes_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+<a href="#expecteddatasizeinterabytes_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -5111,7 +5111,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_nodejs">
-<a href="#expecteddatasizeinterabytes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+<a href="#expecteddatasizeinterabytes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
@@ -5269,8 +5269,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="expected_data_size_in_terabytes_python">
-<a href="#expected_data_size_in_terabytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>terabytes</a>
+        <span id="expected_data_size_in_tera_bytes_python">
+<a href="#expected_data_size_in_tera_bytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>tera_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -5502,7 +5502,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_csharp">
-<a href="#expecteddatasizeinterabytes_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+<a href="#expecteddatasizeinterabytes_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -5580,7 +5580,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_go">
-<a href="#expecteddatasizeinterabytes_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+<a href="#expecteddatasizeinterabytes_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -5658,7 +5658,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_nodejs">
-<a href="#expecteddatasizeinterabytes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+<a href="#expecteddatasizeinterabytes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
@@ -5735,8 +5735,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dd>{{% md %}}Set Device password for unlocking Databox Heavy. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="expected_data_size_in_terabytes_python">
-<a href="#expected_data_size_in_terabytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>terabytes</a>
+        <span id="expected_data_size_in_tera_bytes_python">
+<a href="#expected_data_size_in_tera_bytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>tera_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -5879,7 +5879,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_csharp">
-<a href="#expecteddatasizeinterabytes_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+<a href="#expecteddatasizeinterabytes_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -6020,7 +6020,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_go">
-<a href="#expecteddatasizeinterabytes_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+<a href="#expecteddatasizeinterabytes_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -6161,7 +6161,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_nodejs">
-<a href="#expecteddatasizeinterabytes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+<a href="#expecteddatasizeinterabytes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
@@ -6301,8 +6301,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dd>{{% md %}}Set Device password for unlocking Databox Heavy. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="expected_data_size_in_terabytes_python">
-<a href="#expected_data_size_in_terabytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>terabytes</a>
+        <span id="expected_data_size_in_tera_bytes_python">
+<a href="#expected_data_size_in_tera_bytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>tera_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -6382,7 +6382,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_csharp">
-<a href="#expecteddatasizeinterabytes_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+<a href="#expecteddatasizeinterabytes_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -6460,7 +6460,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_go">
-<a href="#expecteddatasizeinterabytes_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+<a href="#expecteddatasizeinterabytes_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -6538,7 +6538,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_nodejs">
-<a href="#expecteddatasizeinterabytes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+<a href="#expecteddatasizeinterabytes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
@@ -6615,8 +6615,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dd>{{% md %}}Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="expected_data_size_in_terabytes_python">
-<a href="#expected_data_size_in_terabytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>terabytes</a>
+        <span id="expected_data_size_in_tera_bytes_python">
+<a href="#expected_data_size_in_tera_bytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>tera_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -6759,7 +6759,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_csharp">
-<a href="#expecteddatasizeinterabytes_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+<a href="#expecteddatasizeinterabytes_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -6900,7 +6900,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_go">
-<a href="#expecteddatasizeinterabytes_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+<a href="#expecteddatasizeinterabytes_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -7041,7 +7041,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_nodejs">
-<a href="#expecteddatasizeinterabytes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+<a href="#expecteddatasizeinterabytes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
@@ -7181,8 +7181,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dd>{{% md %}}Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="expected_data_size_in_terabytes_python">
-<a href="#expected_data_size_in_terabytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>terabytes</a>
+        <span id="expected_data_size_in_tera_bytes_python">
+<a href="#expected_data_size_in_tera_bytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>tera_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>

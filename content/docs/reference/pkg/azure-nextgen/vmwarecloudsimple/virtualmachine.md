@@ -392,15 +392,6 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}The amount of memory{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Azure region{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="numberofcores_csharp">
 <a href="#numberofcores_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Cores</a>
 </span>
@@ -462,6 +453,15 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Expose Guest OS or not{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Azure region{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="nics_csharp">
@@ -542,15 +542,6 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}The amount of memory{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Azure region{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="numberofcores_go">
 <a href="#numberofcores_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Cores</a>
 </span>
@@ -612,6 +603,15 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Expose Guest OS or not{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Azure region{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="nics_go">
@@ -692,15 +692,6 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}The amount of memory{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Azure region{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="numberofcores_nodejs">
 <a href="#numberofcores_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Cores</a>
 </span>
@@ -762,6 +753,15 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Expose Guest OS or not{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Azure region{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="nics_nodejs">
@@ -842,15 +842,6 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}The amount of memory{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Azure region{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="number_of_cores_python">
 <a href="#number_of_cores_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>cores</a>
 </span>
@@ -912,6 +903,15 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Expose Guest OS or not{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Azure region{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="nics_python">

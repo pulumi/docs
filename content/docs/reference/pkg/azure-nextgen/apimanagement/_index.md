@@ -36,6 +36,7 @@ Explore the resources and functions of the apimanagement module in the Azure Nex
     <li><a href="emailtemplate" title="EmailTemplate"><span class="symbol resource"></span>EmailTemplate</a></li>
     <li><a href="gateway" title="Gateway"><span class="symbol resource"></span>Gateway</a></li>
     <li><a href="gatewayapientitytag" title="GatewayApiEntityTag"><span class="symbol resource"></span>GatewayApiEntityTag</a></li>
+    <li><a href="gatewaycertificateauthority" title="GatewayCertificateAuthority"><span class="symbol resource"></span>GatewayCertificateAuthority</a></li>
     <li><a href="gatewayhostnameconfiguration" title="GatewayHostnameConfiguration"><span class="symbol resource"></span>GatewayHostnameConfiguration</a></li>
     <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
     <li><a href="groupuser" title="GroupUser"><span class="symbol resource"></span>GroupUser</a></li>
@@ -84,6 +85,7 @@ Explore the resources and functions of the apimanagement module in the Azure Nex
     <li><a href="getdiagnostic" title="GetDiagnostic"><span class="symbol function"></span>GetDiagnostic</a></li>
     <li><a href="getemailtemplate" title="GetEmailTemplate"><span class="symbol function"></span>GetEmailTemplate</a></li>
     <li><a href="getgateway" title="GetGateway"><span class="symbol function"></span>GetGateway</a></li>
+    <li><a href="getgatewaycertificateauthority" title="GetGatewayCertificateAuthority"><span class="symbol function"></span>GetGatewayCertificateAuthority</a></li>
     <li><a href="getgatewayhostnameconfiguration" title="GetGatewayHostnameConfiguration"><span class="symbol function"></span>GetGatewayHostnameConfiguration</a></li>
     <li><a href="getgroup" title="GetGroup"><span class="symbol function"></span>GetGroup</a></li>
     <li><a href="getidentityprovider" title="GetIdentityProvider"><span class="symbol function"></span>GetIdentityProvider</a></li>
@@ -118,7 +120,7 @@ Explore the resources and functions of the apimanagement module in the Azure Nex
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.6.0</dd>
+	<dd>0.6.1</dd>
 </dl>
 
 

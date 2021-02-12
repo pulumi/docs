@@ -256,6 +256,15 @@ The following output properties are available:
     <dd>{{% md %}}Service properties{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="systemdata_csharp">
+<a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Read only system data{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -332,6 +341,15 @@ The following output properties are available:
         <span class="property-type"><a href="#aciserviceresponseresponse">ACIService<wbr>Response<wbr>Response</a> | <a href="#aksserviceresponseresponse">AKSService<wbr>Response<wbr>Response</a> | <a href="#aksvariantresponseresponse">AKSVariant<wbr>Response<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Service properties{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="systemdata_go">
+<a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Read only system data{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="type_go">
@@ -412,6 +430,15 @@ The following output properties are available:
     <dd>{{% md %}}Service properties{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="systemdata_nodejs">
+<a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Read only system data{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -488,6 +515,15 @@ The following output properties are available:
         <span class="property-type"><a href="#aciserviceresponseresponse">ACIService<wbr>Response<wbr>Response</a> | <a href="#aksserviceresponseresponse">AKSService<wbr>Response<wbr>Response</a> | <a href="#aksvariantresponseresponse">AKSVariant<wbr>Response<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Service properties{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="system_data_python">
+<a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Read only system data{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="type_python">
@@ -2041,31 +2077,13 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="code_csharp">
-<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
+        <span id="error_csharp">
+<a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#errorresponseresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Response<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Error code.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="details_csharp">
-<a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="message_csharp">
-<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Error message.{{% /md %}}</dd>
+    <dd>{{% md %}}The error response.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2074,31 +2092,13 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="code_go">
-<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
+        <span id="error_go">
+<a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Error code.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="details_go">
-<a href="#details_go" style="color: inherit; text-decoration: inherit;">Details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">[]Error<wbr>Detail<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="message_go">
-<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Error message.{{% /md %}}</dd>
+    <dd>{{% md %}}The error response.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2107,31 +2107,13 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="code_nodejs">
-<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
+        <span id="error_nodejs">
+<a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Error code.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="details_nodejs">
-<a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response[]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="message_nodejs">
-<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Error message.{{% /md %}}</dd>
+    <dd>{{% md %}}The error response.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2140,31 +2122,13 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="code_python">
-<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
+        <span id="error_python">
+<a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Error code.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="details_python">
-<a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Sequence[Error<wbr>Detail<wbr>Response<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="message_python">
-<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Error message.{{% /md %}}</dd>
+    <dd>{{% md %}}The error response.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4527,7 +4491,18 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The number of CPU cores on the container.{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum amount of CPU cores to be used by the container. More info:
+https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpulimit_csharp">
+<a href="#cpulimit_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}The maximum amount of CPU cores allowed to be used by the container. More info:
+https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="fpga_csharp">
@@ -4554,7 +4529,18 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The amount of memory on the container in GB.{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum amount of memory (in GB) to be used by the container. More info:
+https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="memoryingblimit_csharp">
+<a href="#memoryingblimit_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>In<wbr>GBLimit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}The maximum amount of memory (in GB) allowed to be used by the container. More info:
+https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4569,7 +4555,18 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The number of CPU cores on the container.{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum amount of CPU cores to be used by the container. More info:
+https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpulimit_go">
+<a href="#cpulimit_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}The maximum amount of CPU cores allowed to be used by the container. More info:
+https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="fpga_go">
@@ -4596,7 +4593,18 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The amount of memory on the container in GB.{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum amount of memory (in GB) to be used by the container. More info:
+https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="memoryingblimit_go">
+<a href="#memoryingblimit_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>In<wbr>GBLimit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}The maximum amount of memory (in GB) allowed to be used by the container. More info:
+https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4611,7 +4619,18 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of CPU cores on the container.{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum amount of CPU cores to be used by the container. More info:
+https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpulimit_nodejs">
+<a href="#cpulimit_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum amount of CPU cores allowed to be used by the container. More info:
+https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="fpga_nodejs">
@@ -4638,7 +4657,18 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The amount of memory on the container in GB.{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum amount of memory (in GB) to be used by the container. More info:
+https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="memoryingblimit_nodejs">
+<a href="#memoryingblimit_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>In<wbr>GBLimit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum amount of memory (in GB) allowed to be used by the container. More info:
+https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4653,7 +4683,18 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The number of CPU cores on the container.{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum amount of CPU cores to be used by the container. More info:
+https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpu_limit_python">
+<a href="#cpu_limit_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The maximum amount of CPU cores allowed to be used by the container. More info:
+https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="fpga_python">
@@ -4680,7 +4721,18 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The amount of memory on the container in GB.{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum amount of memory (in GB) to be used by the container. More info:
+https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="memory_in_gb_limit_python">
+<a href="#memory_in_gb_limit_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>in_<wbr>gb_<wbr>limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The maximum amount of memory (in GB) allowed to be used by the container. More info:
+https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5300,6 +5352,145 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Error code.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Error message.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="errorresponseresponse">Error<wbr>Response<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="code_csharp">
+<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Error code.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="details_csharp">
+<a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#errordetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Error message.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="code_go">
+<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Error code.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="details_go">
+<a href="#details_go" style="color: inherit; text-decoration: inherit;">Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#errordetailresponse">[]Error<wbr>Detail<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Error message.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="code_nodejs">
+<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Error code.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="details_nodejs">
+<a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Error message.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="code_python">
+<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Error code.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="details_python">
+<a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#errordetailresponse">Sequence[Error<wbr>Detail<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="message_python">
@@ -7474,31 +7665,13 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="code_csharp">
-<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
+        <span id="error_csharp">
+<a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#errorresponseresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Response<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Error code.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="details_csharp">
-<a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="message_csharp">
-<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Error message.{{% /md %}}</dd>
+    <dd>{{% md %}}The error response.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -7507,31 +7680,13 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="code_go">
-<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
+        <span id="error_go">
+<a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Error code.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="details_go">
-<a href="#details_go" style="color: inherit; text-decoration: inherit;">Details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">[]Error<wbr>Detail<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="message_go">
-<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Error message.{{% /md %}}</dd>
+    <dd>{{% md %}}The error response.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -7540,31 +7695,13 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="code_nodejs">
-<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
+        <span id="error_nodejs">
+<a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Error code.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="details_nodejs">
-<a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response[]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="message_nodejs">
-<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Error message.{{% /md %}}</dd>
+    <dd>{{% md %}}The error response.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -7573,31 +7710,13 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="code_python">
-<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
+        <span id="error_python">
+<a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Error code.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="details_python">
-<a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Sequence[Error<wbr>Detail<wbr>Response<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="message_python">
-<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Error message.{{% /md %}}</dd>
+    <dd>{{% md %}}The error response.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -7840,6 +7959,253 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdat_csharp">
+<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdby_csharp">
+<a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_csharp">
+<a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_csharp">
+<a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_csharp">
+<a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_csharp">
+<a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdat_go">
+<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdby_go">
+<a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_go">
+<a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_go">
+<a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_go">
+<a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_go">
+<a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdat_nodejs">
+<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdby_nodejs">
+<a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_nodejs">
+<a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_nodejs">
+<a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_nodejs">
+<a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_nodejs">
+<a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="created_at_python">
+<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="created_by_python">
+<a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="created_by_type_python">
+<a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_at_python">
+<a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_by_python">
+<a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_by_type_python">
+<a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

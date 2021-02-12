@@ -310,15 +310,6 @@ The AFDEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Name of the endpoint under the profile which is unique globally.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="profilename_csharp">
 <a href="#profilename_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Name</a>
 </span>
@@ -344,6 +335,15 @@ The AFDEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string | <a href="#enabledstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cdn.<wbr>Enabled<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="originresponsetimeoutseconds_csharp">
@@ -379,15 +379,6 @@ The AFDEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Name of the endpoint under the profile which is unique globally.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="profilename_go">
 <a href="#profilename_go" style="color: inherit; text-decoration: inherit;">Profile<wbr>Name</a>
 </span>
@@ -413,6 +404,15 @@ The AFDEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string | <a href="#enabledstate">Enabled<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="originresponsetimeoutseconds_go">
@@ -448,15 +448,6 @@ The AFDEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Name of the endpoint under the profile which is unique globally.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="profilename_nodejs">
 <a href="#profilename_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Name</a>
 </span>
@@ -482,6 +473,15 @@ The AFDEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string | <a href="#enabledstate">Enabled<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="originresponsetimeoutseconds_nodejs">
@@ -517,15 +517,6 @@ The AFDEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Name of the endpoint under the profile which is unique globally.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="profile_name_python">
 <a href="#profile_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>name</a>
 </span>
@@ -551,6 +542,15 @@ The AFDEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str | <a href="#enabledstate">Enabled<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="origin_response_timeout_seconds_python">

@@ -625,15 +625,6 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -688,6 +679,15 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}The flag which indicates whether the Log Search rule is enabled. Value should be true or false{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="schedule_csharp">
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
@@ -719,15 +719,6 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#alertingaction">Alerting<wbr>Action</a> | <a href="#logtometricaction">Log<wbr>To<wbr>Metric<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
@@ -784,6 +775,15 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}The flag which indicates whether the Log Search rule is enabled. Value should be true or false{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="schedule_go">
 <a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
@@ -815,15 +815,6 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#alertingaction">Alerting<wbr>Action</a> | <a href="#logtometricaction">Log<wbr>To<wbr>Metric<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
@@ -880,6 +871,15 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}The flag which indicates whether the Log Search rule is enabled. Value should be true or false{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="schedule_nodejs">
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
@@ -911,15 +911,6 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#alertingaction">Alerting<wbr>Action<wbr>Args</a> | <a href="#logtometricaction">Log<wbr>To<wbr>Metric<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
@@ -976,6 +967,15 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}The flag which indicates whether the Log Search rule is enabled. Value should be true or false{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="schedule_python">
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
@@ -1007,6 +1007,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="createdwithapiversion_csharp">
+<a href="#createdwithapiversion_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>With<wbr>Api<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The api-version used when creating this alert rule{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
 </span>
@@ -1023,6 +1032,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="islegacyloganalyticsrule_csharp">
+<a href="#islegacyloganalyticsrule_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Legacy<wbr>Log<wbr>Analytics<wbr>Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}True if alert rule is legacy Log Analytic rule{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="kind_csharp">
@@ -1076,6 +1094,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="createdwithapiversion_go">
+<a href="#createdwithapiversion_go" style="color: inherit; text-decoration: inherit;">Created<wbr>With<wbr>Api<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The api-version used when creating this alert rule{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
 </span>
@@ -1092,6 +1119,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="islegacyloganalyticsrule_go">
+<a href="#islegacyloganalyticsrule_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Legacy<wbr>Log<wbr>Analytics<wbr>Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}True if alert rule is legacy Log Analytic rule{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="kind_go">
@@ -1145,6 +1181,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="createdwithapiversion_nodejs">
+<a href="#createdwithapiversion_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>With<wbr>Api<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The api-version used when creating this alert rule{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
@@ -1161,6 +1206,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="islegacyloganalyticsrule_nodejs">
+<a href="#islegacyloganalyticsrule_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Legacy<wbr>Log<wbr>Analytics<wbr>Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}True if alert rule is legacy Log Analytic rule{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="kind_nodejs">
@@ -1214,6 +1268,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="created_with_api_version_python">
+<a href="#created_with_api_version_python" style="color: inherit; text-decoration: inherit;">created_<wbr>with_<wbr>api_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The api-version used when creating this alert rule{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
@@ -1230,6 +1293,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="is_legacy_log_analytics_rule_python">
+<a href="#is_legacy_log_analytics_rule_python" style="color: inherit; text-decoration: inherit;">is_<wbr>legacy_<wbr>log_<wbr>analytics_<wbr>rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}True if alert rule is legacy Log Analytic rule{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="kind_python">

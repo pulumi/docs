@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.machinelearningservices.MachineL
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Machine Learning compute object wrapped into ARM resource envelope.
-Latest API Version: 2020-08-01.
+Latest API Version: 2021-01-01.
 
 {{% examples %}}
 ## Example Usage
@@ -102,26 +102,25 @@ class MyStack : Stack
         var machineLearningCompute = new AzureNextGen.MachineLearningServices.Latest.MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices.Latest.MachineLearningComputeArgs
         {
             ComputeName = "compute123",
-            Identity = new AzureNextGen.MachineLearningServices.Latest.Inputs.IdentityArgs
-            {
-                Type = "SystemAssigned,UserAssigned",
-                UserAssignedIdentities = 
-                {
-                    { "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity-name",  },
-                },
-            },
             Location = "eastus",
             Properties = 
             {
                 { "computeType", "AmlCompute" },
                 { "properties", 
                 {
+                    { "enableNodePublicIp", true },
+                    { "isolatedNetwork", false },
+                    { "osType", "Windows" },
                     { "remoteLoginPortPublicAccess", "NotSpecified" },
                     { "scaleSettings", new AzureNextGen.MachineLearningServices.Latest.Inputs.ScaleSettingsArgs
                     {
                         MaxNodeCount = 1,
                         MinNodeCount = 0,
                         NodeIdleTimeBeforeScaleDown = "PT5M",
+                    } },
+                    { "virtualMachineImage", new AzureNextGen.MachineLearningServices.Latest.Inputs.VirtualMachineImageArgs
+                    {
+                        Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Compute/galleries/myImageGallery/images/myImageDefinition/versions/0.0.1",
                     } },
                     { "vmPriority", "Dedicated" },
                     { "vmSize", "STANDARD_NC6" },
@@ -150,21 +149,21 @@ import pulumi_azure_nextgen as azure_nextgen
 
 machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
-    identity=azure_nextgen.machinelearningservices.latest.IdentityArgs(
-        type="SystemAssigned,UserAssigned",
-        user_assigned_identities={
-            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity-name": {},
-        },
-    ),
     location="eastus",
     properties={
         "computeType": "AmlCompute",
         "properties": {
+            "enableNodePublicIp": True,
+            "isolatedNetwork": False,
+            "osType": "Windows",
             "remoteLoginPortPublicAccess": "NotSpecified",
             "scaleSettings": azure_nextgen.machinelearningservices.latest.ScaleSettingsArgs(
                 max_node_count=1,
                 min_node_count=0,
                 node_idle_time_before_scale_down="PT5M",
+            ),
+            "virtualMachineImage": azure_nextgen.machinelearningservices.latest.VirtualMachineImageArgs(
+                id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Compute/galleries/myImageGallery/images/myImageDefinition/versions/0.0.1",
             ),
             "vmPriority": "Dedicated",
             "vmSize": "STANDARD_NC6",
@@ -185,203 +184,23 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
     computeName: "compute123",
-    identity: {
-        type: "SystemAssigned,UserAssigned",
-        userAssignedIdentities: {
-            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity-name": {},
-        },
-    },
     location: "eastus",
     properties: {
         computeType: "AmlCompute",
         properties: {
+            enableNodePublicIp: true,
+            isolatedNetwork: false,
+            osType: "Windows",
             remoteLoginPortPublicAccess: "NotSpecified",
             scaleSettings: {
                 maxNodeCount: 1,
                 minNodeCount: 0,
                 nodeIdleTimeBeforeScaleDown: "PT5M",
             },
+            virtualMachineImage: {
+                id: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Compute/galleries/myImageGallery/images/myImageDefinition/versions/0.0.1",
+            },
             vmPriority: "Dedicated",
-            vmSize: "STANDARD_NC6",
-        },
-    },
-    resourceGroupName: "testrg123",
-    workspaceName: "workspaces123",
-});
-
-```
-
-{{% /example %}}
-
-### Create a ComputeInstance Compute
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureNextGen = Pulumi.AzureNextGen;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var machineLearningCompute = new AzureNextGen.MachineLearningServices.Latest.MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices.Latest.MachineLearningComputeArgs
-        {
-            ComputeName = "compute123",
-            Location = "eastus",
-            Properties = 
-            {
-                { "computeType", "ComputeInstance" },
-                { "properties", 
-                {
-                    { "applicationSharingPolicy", "Personal" },
-                    { "sshSettings", new AzureNextGen.MachineLearningServices.Latest.Inputs.ComputeInstanceSshSettingsArgs
-                    {
-                        SshPublicAccess = "Disabled",
-                    } },
-                    { "subnet", "test-subnet-resource-id" },
-                    { "vmSize", "STANDARD_NC6" },
-                } },
-            },
-            ResourceGroupName = "testrg123",
-            WorkspaceName = "workspaces123",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azure_nextgen as azure_nextgen
-
-machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
-    compute_name="compute123",
-    location="eastus",
-    properties={
-        "computeType": "ComputeInstance",
-        "properties": {
-            "applicationSharingPolicy": "Personal",
-            "sshSettings": azure_nextgen.machinelearningservices.latest.ComputeInstanceSshSettingsArgs(
-                ssh_public_access="Disabled",
-            ),
-            "subnet": "test-subnet-resource-id",
-            "vmSize": "STANDARD_NC6",
-        },
-    },
-    resource_group_name="testrg123",
-    workspace_name="workspaces123")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure-nextgen";
-
-const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
-    computeName: "compute123",
-    location: "eastus",
-    properties: {
-        computeType: "ComputeInstance",
-        properties: {
-            applicationSharingPolicy: "Personal",
-            sshSettings: {
-                sshPublicAccess: "Disabled",
-            },
-            subnet: "test-subnet-resource-id",
-            vmSize: "STANDARD_NC6",
-        },
-    },
-    resourceGroupName: "testrg123",
-    workspaceName: "workspaces123",
-});
-
-```
-
-{{% /example %}}
-
-### Create a ComputeInstance Compute with minimal inputs
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureNextGen = Pulumi.AzureNextGen;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var machineLearningCompute = new AzureNextGen.MachineLearningServices.Latest.MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices.Latest.MachineLearningComputeArgs
-        {
-            ComputeName = "compute123",
-            Location = "eastus",
-            Properties = 
-            {
-                { "computeType", "ComputeInstance" },
-                { "properties", 
-                {
-                    { "vmSize", "STANDARD_NC6" },
-                } },
-            },
-            ResourceGroupName = "testrg123",
-            WorkspaceName = "workspaces123",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azure_nextgen as azure_nextgen
-
-machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
-    compute_name="compute123",
-    location="eastus",
-    properties={
-        "computeType": "ComputeInstance",
-        "properties": {
-            "vmSize": "STANDARD_NC6",
-        },
-    },
-    resource_group_name="testrg123",
-    workspace_name="workspaces123")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure-nextgen";
-
-const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
-    computeName: "compute123",
-    location: "eastus",
-    properties: {
-        computeType: "ComputeInstance",
-        properties: {
             vmSize: "STANDARD_NC6",
         },
     },
@@ -456,6 +275,209 @@ const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.
     location: "eastus",
     properties: {
         computeType: "DataFactory",
+    },
+    resourceGroupName: "testrg123",
+    workspaceName: "workspaces123",
+});
+
+```
+
+{{% /example %}}
+
+### Create an ComputeInstance Compute
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var machineLearningCompute = new AzureNextGen.MachineLearningServices.Latest.MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices.Latest.MachineLearningComputeArgs
+        {
+            ComputeName = "compute123",
+            Location = "eastus",
+            Properties = 
+            {
+                { "computeType", "ComputeInstance" },
+                { "properties", 
+                {
+                    { "applicationSharingPolicy", "Personal" },
+                    { "computeInstanceAuthorizationType", "personal" },
+                    { "personalComputeInstanceSettings", new AzureNextGen.MachineLearningServices.Latest.Inputs.PersonalComputeInstanceSettingsArgs
+                    {
+                        AssignedUser = new AzureNextGen.MachineLearningServices.Latest.Inputs.AssignedUserArgs
+                        {
+                            ObjectId = "00000000-0000-0000-0000-000000000000",
+                            TenantId = "00000000-0000-0000-0000-000000000000",
+                        },
+                    } },
+                    { "sshSettings", new AzureNextGen.MachineLearningServices.Latest.Inputs.ComputeInstanceSshSettingsArgs
+                    {
+                        SshPublicAccess = "Disabled",
+                    } },
+                    { "subnet", "test-subnet-resource-id" },
+                    { "vmSize", "STANDARD_NC6" },
+                } },
+            },
+            ResourceGroupName = "testrg123",
+            WorkspaceName = "workspaces123",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
+    compute_name="compute123",
+    location="eastus",
+    properties={
+        "computeType": "ComputeInstance",
+        "properties": {
+            "applicationSharingPolicy": "Personal",
+            "computeInstanceAuthorizationType": "personal",
+            "personalComputeInstanceSettings": azure_nextgen.machinelearningservices.latest.PersonalComputeInstanceSettingsArgs(
+                assigned_user=azure_nextgen.machinelearningservices.latest.AssignedUserArgs(
+                    object_id="00000000-0000-0000-0000-000000000000",
+                    tenant_id="00000000-0000-0000-0000-000000000000",
+                ),
+            ),
+            "sshSettings": azure_nextgen.machinelearningservices.latest.ComputeInstanceSshSettingsArgs(
+                ssh_public_access="Disabled",
+            ),
+            "subnet": "test-subnet-resource-id",
+            "vmSize": "STANDARD_NC6",
+        },
+    },
+    resource_group_name="testrg123",
+    workspace_name="workspaces123")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
+    computeName: "compute123",
+    location: "eastus",
+    properties: {
+        computeType: "ComputeInstance",
+        properties: {
+            applicationSharingPolicy: "Personal",
+            computeInstanceAuthorizationType: "personal",
+            personalComputeInstanceSettings: {
+                assignedUser: {
+                    objectId: "00000000-0000-0000-0000-000000000000",
+                    tenantId: "00000000-0000-0000-0000-000000000000",
+                },
+            },
+            sshSettings: {
+                sshPublicAccess: "Disabled",
+            },
+            subnet: "test-subnet-resource-id",
+            vmSize: "STANDARD_NC6",
+        },
+    },
+    resourceGroupName: "testrg123",
+    workspaceName: "workspaces123",
+});
+
+```
+
+{{% /example %}}
+
+### Create an ComputeInstance Compute with minimal inputs
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var machineLearningCompute = new AzureNextGen.MachineLearningServices.Latest.MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices.Latest.MachineLearningComputeArgs
+        {
+            ComputeName = "compute123",
+            Location = "eastus",
+            Properties = 
+            {
+                { "computeType", "ComputeInstance" },
+                { "properties", 
+                {
+                    { "vmSize", "STANDARD_NC6" },
+                } },
+            },
+            ResourceGroupName = "testrg123",
+            WorkspaceName = "workspaces123",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
+    compute_name="compute123",
+    location="eastus",
+    properties={
+        "computeType": "ComputeInstance",
+        "properties": {
+            "vmSize": "STANDARD_NC6",
+        },
+    },
+    resource_group_name="testrg123",
+    workspace_name="workspaces123")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
+    computeName: "compute123",
+    location: "eastus",
+    properties: {
+        computeType: "ComputeInstance",
+        properties: {
+            vmSize: "STANDARD_NC6",
+        },
     },
     resourceGroupName: "testrg123",
     workspaceName: "workspaces123",
@@ -566,24 +588,17 @@ class MyStack : Stack
         var machineLearningCompute = new AzureNextGen.MachineLearningServices.Latest.MachineLearningCompute("machineLearningCompute", new AzureNextGen.MachineLearningServices.Latest.MachineLearningComputeArgs
         {
             ComputeName = "compute123",
-            Identity = new AzureNextGen.MachineLearningServices.Latest.Inputs.IdentityArgs
-            {
-                Type = "SystemAssigned,UserAssigned",
-                UserAssignedIdentities = 
-                {
-                    { "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity-name",  },
-                },
-            },
             Location = "eastus",
             Properties = 
             {
                 { "computeType", "AmlCompute" },
+                { "description", "some compute" },
                 { "properties", 
                 {
                     { "scaleSettings", new AzureNextGen.MachineLearningServices.Latest.Inputs.ScaleSettingsArgs
                     {
-                        MaxNodeCount = 1,
-                        MinNodeCount = 0,
+                        MaxNodeCount = 4,
+                        MinNodeCount = 4,
                         NodeIdleTimeBeforeScaleDown = "PT5M",
                     } },
                 } },
@@ -611,19 +626,14 @@ import pulumi_azure_nextgen as azure_nextgen
 
 machine_learning_compute = azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute",
     compute_name="compute123",
-    identity=azure_nextgen.machinelearningservices.latest.IdentityArgs(
-        type="SystemAssigned,UserAssigned",
-        user_assigned_identities={
-            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity-name": {},
-        },
-    ),
     location="eastus",
     properties={
         "computeType": "AmlCompute",
+        "description": "some compute",
         "properties": {
             "scaleSettings": azure_nextgen.machinelearningservices.latest.ScaleSettingsArgs(
-                max_node_count=1,
-                min_node_count=0,
+                max_node_count=4,
+                min_node_count=4,
                 node_idle_time_before_scale_down="PT5M",
             ),
         },
@@ -643,19 +653,14 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const machineLearningCompute = new azure_nextgen.machinelearningservices.latest.MachineLearningCompute("machineLearningCompute", {
     computeName: "compute123",
-    identity: {
-        type: "SystemAssigned,UserAssigned",
-        userAssignedIdentities: {
-            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity-name": {},
-        },
-    },
     location: "eastus",
     properties: {
         computeType: "AmlCompute",
+        description: "some compute",
         properties: {
             scaleSettings: {
-                maxNodeCount: 1,
-                minNodeCount: 0,
+                maxNodeCount: 4,
+                minNodeCount: 4,
                 nodeIdleTimeBeforeScaleDown: "PT5M",
             },
         },
@@ -1190,6 +1195,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="systemdata_csharp">
+<a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Read only system data{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -1221,6 +1235,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="systemdata_go">
+<a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Read only system data{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="type_go">
@@ -1256,6 +1279,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="systemdata_nodejs">
+<a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Read only system data{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -1287,6 +1319,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="system_data_python">
+<a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Read only system data{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="type_python">
@@ -1496,7 +1537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dt class="property-optional"
             title="Optional">
         <span id="agentvmsize_csharp">
-<a href="#agentvmsize_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>VMSize</a>
+<a href="#agentvmsize_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1520,6 +1561,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cluster full qualified domain name{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clusterpurpose_csharp">
+<a href="#clusterpurpose_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Purpose</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#clusterpurpose">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Cluster<wbr>Purpose</a></span>
+    </dt>
+    <dd>{{% md %}}Intended usage of the cluster{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="sslconfiguration_csharp">
@@ -1547,7 +1597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dt class="property-optional"
             title="Optional">
         <span id="agentvmsize_go">
-<a href="#agentvmsize_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>VMSize</a>
+<a href="#agentvmsize_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1571,6 +1621,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cluster full qualified domain name{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clusterpurpose_go">
+<a href="#clusterpurpose_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Purpose</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#clusterpurpose">Cluster<wbr>Purpose</a></span>
+    </dt>
+    <dd>{{% md %}}Intended usage of the cluster{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="sslconfiguration_go">
@@ -1598,7 +1657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dt class="property-optional"
             title="Optional">
         <span id="agentvmsize_nodejs">
-<a href="#agentvmsize_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>VMSize</a>
+<a href="#agentvmsize_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1622,6 +1681,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cluster full qualified domain name{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clusterpurpose_nodejs">
+<a href="#clusterpurpose_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Purpose</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#clusterpurpose">Cluster<wbr>Purpose</a></span>
+    </dt>
+    <dd>{{% md %}}Intended usage of the cluster{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="sslconfiguration_nodejs">
@@ -1675,6 +1743,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Cluster full qualified domain name{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="cluster_purpose_python">
+<a href="#cluster_purpose_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>purpose</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#clusterpurpose">Cluster<wbr>Purpose</a></span>
+    </dt>
+    <dd>{{% md %}}Intended usage of the cluster{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="ssl_configuration_python">
 <a href="#ssl_configuration_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>configuration</a>
 </span>
@@ -1692,15 +1769,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="createdon_csharp">
-<a href="#createdon_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="isattachedcompute_csharp">
 <a href="#isattachedcompute_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Attached<wbr>Compute</a>
 </span>
@@ -1708,15 +1776,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="modifiedon_csharp">
-<a href="#modifiedon_csharp" style="color: inherit; text-decoration: inherit;">Modified<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was last modified.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provisioningerrors_csharp">
@@ -1779,15 +1838,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="createdon_go">
-<a href="#createdon_go" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="isattachedcompute_go">
 <a href="#isattachedcompute_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Attached<wbr>Compute</a>
 </span>
@@ -1795,15 +1845,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="modifiedon_go">
-<a href="#modifiedon_go" style="color: inherit; text-decoration: inherit;">Modified<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was last modified.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provisioningerrors_go">
@@ -1866,15 +1907,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="createdon_nodejs">
-<a href="#createdon_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="isattachedcompute_nodejs">
 <a href="#isattachedcompute_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Attached<wbr>Compute</a>
 </span>
@@ -1882,15 +1914,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="modifiedon_nodejs">
-<a href="#modifiedon_nodejs" style="color: inherit; text-decoration: inherit;">modified<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was last modified.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provisioningerrors_nodejs">
@@ -1953,15 +1976,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="created_on_python">
-<a href="#created_on_python" style="color: inherit; text-decoration: inherit;">created_<wbr>on</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="is_attached_compute_python">
 <a href="#is_attached_compute_python" style="color: inherit; text-decoration: inherit;">is_<wbr>attached_<wbr>compute</a>
 </span>
@@ -1969,15 +1983,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="modified_on_python">
-<a href="#modified_on_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>on</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was last modified.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provisioning_errors_python">
@@ -2061,7 +2066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dt class="property-optional"
             title="Optional">
         <span id="agentvmsize_csharp">
-<a href="#agentvmsize_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>VMSize</a>
+<a href="#agentvmsize_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2085,6 +2090,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cluster full qualified domain name{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clusterpurpose_csharp">
+<a href="#clusterpurpose_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Purpose</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Intended usage of the cluster{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="sslconfiguration_csharp">
@@ -2121,7 +2135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dt class="property-optional"
             title="Optional">
         <span id="agentvmsize_go">
-<a href="#agentvmsize_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>VMSize</a>
+<a href="#agentvmsize_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2145,6 +2159,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cluster full qualified domain name{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clusterpurpose_go">
+<a href="#clusterpurpose_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Purpose</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Intended usage of the cluster{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="sslconfiguration_go">
@@ -2181,7 +2204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dt class="property-optional"
             title="Optional">
         <span id="agentvmsize_nodejs">
-<a href="#agentvmsize_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>VMSize</a>
+<a href="#agentvmsize_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2205,6 +2228,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cluster full qualified domain name{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clusterpurpose_nodejs">
+<a href="#clusterpurpose_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Purpose</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Intended usage of the cluster{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="sslconfiguration_nodejs">
@@ -2265,6 +2297,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cluster full qualified domain name{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cluster_purpose_python">
+<a href="#cluster_purpose_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>purpose</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Intended usage of the cluster{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ssl_configuration_python">
@@ -2794,6 +2835,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enablenodepublicip_csharp">
+<a href="#enablenodepublicip_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable node public IP address provisioning. Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isolatednetwork_csharp">
+<a href="#isolatednetwork_csharp" style="color: inherit; text-decoration: inherit;">Isolated<wbr>Network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Network is isolated or not{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ostype_csharp">
+<a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#ostype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Os<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Compute OS Type{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="remoteloginportpublicaccess_csharp">
 <a href="#remoteloginportpublicaccess_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Login<wbr>Port<wbr>Public<wbr>Access</a>
 </span>
@@ -2830,6 +2898,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Credentials for an administrator user account that will be created on each compute node.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="virtualmachineimage_csharp">
+<a href="#virtualmachineimage_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Image</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachineimage">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Image<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Virtual Machine image for AML Compute - windows only{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="vmpriority_csharp">
 <a href="#vmpriority_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Priority</a>
 </span>
@@ -2852,6 +2929,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablenodepublicip_go">
+<a href="#enablenodepublicip_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable node public IP address provisioning. Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isolatednetwork_go">
+<a href="#isolatednetwork_go" style="color: inherit; text-decoration: inherit;">Isolated<wbr>Network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Network is isolated or not{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ostype_go">
+<a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#ostype">Os<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Compute OS Type{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="remoteloginportpublicaccess_go">
@@ -2890,6 +2994,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Credentials for an administrator user account that will be created on each compute node.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="virtualmachineimage_go">
+<a href="#virtualmachineimage_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Image</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachineimage">Virtual<wbr>Machine<wbr>Image</a></span>
+    </dt>
+    <dd>{{% md %}}Virtual Machine image for AML Compute - windows only{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="vmpriority_go">
 <a href="#vmpriority_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Priority</a>
 </span>
@@ -2912,6 +3025,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablenodepublicip_nodejs">
+<a href="#enablenodepublicip_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Node<wbr>Public<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable node public IP address provisioning. Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isolatednetwork_nodejs">
+<a href="#isolatednetwork_nodejs" style="color: inherit; text-decoration: inherit;">isolated<wbr>Network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Network is isolated or not{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ostype_nodejs">
+<a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#ostype">Os<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Compute OS Type{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="remoteloginportpublicaccess_nodejs">
@@ -2950,6 +3090,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Credentials for an administrator user account that will be created on each compute node.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="virtualmachineimage_nodejs">
+<a href="#virtualmachineimage_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Image</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachineimage">Virtual<wbr>Machine<wbr>Image</a></span>
+    </dt>
+    <dd>{{% md %}}Virtual Machine image for AML Compute - windows only{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="vmpriority_nodejs">
 <a href="#vmpriority_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Priority</a>
 </span>
@@ -2972,6 +3121,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_node_public_ip_python">
+<a href="#enable_node_public_ip_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>node_<wbr>public_<wbr>ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable node public IP address provisioning. Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isolated_network_python">
+<a href="#isolated_network_python" style="color: inherit; text-decoration: inherit;">isolated_<wbr>network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Network is isolated or not{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="os_type_python">
+<a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#ostype">Os<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Compute OS Type{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="remote_login_port_public_access_python">
@@ -3010,6 +3186,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Credentials for an administrator user account that will be created on each compute node.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="virtual_machine_image_python">
+<a href="#virtual_machine_image_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>image</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachineimage">Virtual<wbr>Machine<wbr>Image<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Virtual Machine image for AML Compute - windows only{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="vm_priority_python">
 <a href="#vm_priority_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>priority</a>
 </span>
@@ -3036,15 +3221,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="createdon_csharp">
-<a href="#createdon_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="isattachedcompute_csharp">
 <a href="#isattachedcompute_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Attached<wbr>Compute</a>
 </span>
@@ -3052,15 +3228,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="modifiedon_csharp">
-<a href="#modifiedon_csharp" style="color: inherit; text-decoration: inherit;">Modified<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was last modified.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provisioningerrors_csharp">
@@ -3123,15 +3290,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="createdon_go">
-<a href="#createdon_go" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="isattachedcompute_go">
 <a href="#isattachedcompute_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Attached<wbr>Compute</a>
 </span>
@@ -3139,15 +3297,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="modifiedon_go">
-<a href="#modifiedon_go" style="color: inherit; text-decoration: inherit;">Modified<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was last modified.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provisioningerrors_go">
@@ -3210,15 +3359,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="createdon_nodejs">
-<a href="#createdon_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="isattachedcompute_nodejs">
 <a href="#isattachedcompute_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Attached<wbr>Compute</a>
 </span>
@@ -3226,15 +3366,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="modifiedon_nodejs">
-<a href="#modifiedon_nodejs" style="color: inherit; text-decoration: inherit;">modified<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was last modified.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provisioningerrors_nodejs">
@@ -3297,15 +3428,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="created_on_python">
-<a href="#created_on_python" style="color: inherit; text-decoration: inherit;">created_<wbr>on</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="is_attached_compute_python">
 <a href="#is_attached_compute_python" style="color: inherit; text-decoration: inherit;">is_<wbr>attached_<wbr>compute</a>
 </span>
@@ -3313,15 +3435,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="modified_on_python">
-<a href="#modified_on_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>on</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was last modified.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provisioning_errors_python">
@@ -3440,6 +3553,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The target number of compute nodes for the compute. If the allocationState is resizing, this property denotes the target node count for the ongoing resize operation. If the allocationState is steady, this property denotes the target node count for the previous resize operation.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enablenodepublicip_csharp">
+<a href="#enablenodepublicip_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable node public IP address provisioning. Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isolatednetwork_csharp">
+<a href="#isolatednetwork_csharp" style="color: inherit; text-decoration: inherit;">Isolated<wbr>Network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Network is isolated or not{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ostype_csharp">
+<a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Compute OS Type{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="remoteloginportpublicaccess_csharp">
 <a href="#remoteloginportpublicaccess_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Login<wbr>Port<wbr>Public<wbr>Access</a>
 </span>
@@ -3474,6 +3614,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#useraccountcredentialsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Account<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Credentials for an administrator user account that will be created on each compute node.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachineimage_csharp">
+<a href="#virtualmachineimage_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Image</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachineimageresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Image<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Virtual Machine image for AML Compute - windows only{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="vmpriority_csharp">
@@ -3554,6 +3703,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The target number of compute nodes for the compute. If the allocationState is resizing, this property denotes the target node count for the ongoing resize operation. If the allocationState is steady, this property denotes the target node count for the previous resize operation.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enablenodepublicip_go">
+<a href="#enablenodepublicip_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable node public IP address provisioning. Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isolatednetwork_go">
+<a href="#isolatednetwork_go" style="color: inherit; text-decoration: inherit;">Isolated<wbr>Network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Network is isolated or not{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ostype_go">
+<a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Compute OS Type{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="remoteloginportpublicaccess_go">
 <a href="#remoteloginportpublicaccess_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Login<wbr>Port<wbr>Public<wbr>Access</a>
 </span>
@@ -3588,6 +3764,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#useraccountcredentialsresponse">User<wbr>Account<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Credentials for an administrator user account that will be created on each compute node.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachineimage_go">
+<a href="#virtualmachineimage_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Image</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachineimageresponse">Virtual<wbr>Machine<wbr>Image<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Virtual Machine image for AML Compute - windows only{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="vmpriority_go">
@@ -3668,6 +3853,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The target number of compute nodes for the compute. If the allocationState is resizing, this property denotes the target node count for the ongoing resize operation. If the allocationState is steady, this property denotes the target node count for the previous resize operation.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enablenodepublicip_nodejs">
+<a href="#enablenodepublicip_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Node<wbr>Public<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable node public IP address provisioning. Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isolatednetwork_nodejs">
+<a href="#isolatednetwork_nodejs" style="color: inherit; text-decoration: inherit;">isolated<wbr>Network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Network is isolated or not{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ostype_nodejs">
+<a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Compute OS Type{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="remoteloginportpublicaccess_nodejs">
 <a href="#remoteloginportpublicaccess_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Login<wbr>Port<wbr>Public<wbr>Access</a>
 </span>
@@ -3702,6 +3914,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#useraccountcredentialsresponse">User<wbr>Account<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Credentials for an administrator user account that will be created on each compute node.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachineimage_nodejs">
+<a href="#virtualmachineimage_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Image</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachineimageresponse">Virtual<wbr>Machine<wbr>Image<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Virtual Machine image for AML Compute - windows only{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="vmpriority_nodejs">
@@ -3782,6 +4003,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The target number of compute nodes for the compute. If the allocationState is resizing, this property denotes the target node count for the ongoing resize operation. If the allocationState is steady, this property denotes the target node count for the previous resize operation.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enable_node_public_ip_python">
+<a href="#enable_node_public_ip_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>node_<wbr>public_<wbr>ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable node public IP address provisioning. Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isolated_network_python">
+<a href="#isolated_network_python" style="color: inherit; text-decoration: inherit;">isolated_<wbr>network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Network is isolated or not{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="os_type_python">
+<a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Compute OS Type{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="remote_login_port_public_access_python">
 <a href="#remote_login_port_public_access_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>login_<wbr>port_<wbr>public_<wbr>access</a>
 </span>
@@ -3816,6 +4064,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#useraccountcredentialsresponse">User<wbr>Account<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Credentials for an administrator user account that will be created on each compute node.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtual_machine_image_python">
+<a href="#virtual_machine_image_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>image</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachineimageresponse">Virtual<wbr>Machine<wbr>Image<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Virtual Machine image for AML Compute - windows only{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="vm_priority_python">
@@ -3872,6 +4129,248 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Personal</dd>
     <dt>SHARED</dt>
     <dd>Shared</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="assigneduser">Assigned<wbr>User</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="objectid_csharp">
+<a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User’s AAD Object Id.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User’s AAD Tenant Id.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="objectid_go">
+<a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User’s AAD Object Id.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User’s AAD Tenant Id.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="objectid_nodejs">
+<a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User’s AAD Object Id.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User’s AAD Tenant Id.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="object_id_python">
+<a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}User’s AAD Object Id.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}User’s AAD Tenant Id.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="assigneduserresponse">Assigned<wbr>User<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="objectid_csharp">
+<a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User’s AAD Object Id.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User’s AAD Tenant Id.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="objectid_go">
+<a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User’s AAD Object Id.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User’s AAD Tenant Id.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="objectid_nodejs">
+<a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User’s AAD Object Id.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User’s AAD Tenant Id.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="object_id_python">
+<a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}User’s AAD Object Id.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}User’s AAD Tenant Id.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="clusterpurpose">Cluster<wbr>Purpose</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Fast<wbr>Prod</dt>
+    <dd>FastProd</dd>
+    <dt>Dense<wbr>Prod</dt>
+    <dd>DenseProd</dd>
+    <dt>Dev<wbr>Test</dt>
+    <dd>DevTest</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Cluster<wbr>Purpose<wbr>Fast<wbr>Prod</dt>
+    <dd>FastProd</dd>
+    <dt>Cluster<wbr>Purpose<wbr>Dense<wbr>Prod</dt>
+    <dd>DenseProd</dd>
+    <dt>Cluster<wbr>Purpose<wbr>Dev<wbr>Test</dt>
+    <dd>DevTest</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Fast<wbr>Prod</dt>
+    <dd>FastProd</dd>
+    <dt>Dense<wbr>Prod</dt>
+    <dd>DenseProd</dd>
+    <dt>Dev<wbr>Test</dt>
+    <dd>DevTest</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>FAST_PROD</dt>
+    <dd>FastProd</dd>
+    <dt>DENSE_PROD</dt>
+    <dd>DenseProd</dd>
+    <dt>DEV_TEST</dt>
+    <dd>DevTest</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4140,6 +4639,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application' endpoint URI.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="computeinstanceauthorizationtype">Compute<wbr>Instance<wbr>Authorization<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Personal</dt>
+    <dd>personal</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Compute<wbr>Instance<wbr>Authorization<wbr>Type<wbr>Personal</dt>
+    <dd>personal</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Personal</dt>
+    <dd>personal</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>PERSONAL</dt>
+    <dd>personal</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4525,6 +5054,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="computeinstanceauthorizationtype_csharp">
+<a href="#computeinstanceauthorizationtype_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Instance<wbr>Authorization<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#computeinstanceauthorizationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Compute<wbr>Instance<wbr>Authorization<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The Compute Instance Authorization type. Available values are personal (default).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="personalcomputeinstancesettings_csharp">
+<a href="#personalcomputeinstancesettings_csharp" style="color: inherit; text-decoration: inherit;">Personal<wbr>Compute<wbr>Instance<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#personalcomputeinstancesettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Personal<wbr>Compute<wbr>Instance<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for a personal compute instance.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="setupscripts_csharp">
+<a href="#setupscripts_csharp" style="color: inherit; text-decoration: inherit;">Setup<wbr>Scripts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#setupscripts">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Setup<wbr>Scripts<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Details of customized scripts to execute for setting up the cluster.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sshsettings_csharp">
 <a href="#sshsettings_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Settings</a>
 </span>
@@ -4565,6 +5121,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string | <a href="#applicationsharingpolicy">Application<wbr>Sharing<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="computeinstanceauthorizationtype_go">
+<a href="#computeinstanceauthorizationtype_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Instance<wbr>Authorization<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#computeinstanceauthorizationtype">Compute<wbr>Instance<wbr>Authorization<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The Compute Instance Authorization type. Available values are personal (default).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="personalcomputeinstancesettings_go">
+<a href="#personalcomputeinstancesettings_go" style="color: inherit; text-decoration: inherit;">Personal<wbr>Compute<wbr>Instance<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#personalcomputeinstancesettings">Personal<wbr>Compute<wbr>Instance<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for a personal compute instance.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="setupscripts_go">
+<a href="#setupscripts_go" style="color: inherit; text-decoration: inherit;">Setup<wbr>Scripts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#setupscripts">Setup<wbr>Scripts</a></span>
+    </dt>
+    <dd>{{% md %}}Details of customized scripts to execute for setting up the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="sshsettings_go">
@@ -4609,6 +5192,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="computeinstanceauthorizationtype_nodejs">
+<a href="#computeinstanceauthorizationtype_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Instance<wbr>Authorization<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#computeinstanceauthorizationtype">Compute<wbr>Instance<wbr>Authorization<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The Compute Instance Authorization type. Available values are personal (default).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="personalcomputeinstancesettings_nodejs">
+<a href="#personalcomputeinstancesettings_nodejs" style="color: inherit; text-decoration: inherit;">personal<wbr>Compute<wbr>Instance<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#personalcomputeinstancesettings">Personal<wbr>Compute<wbr>Instance<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for a personal compute instance.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="setupscripts_nodejs">
+<a href="#setupscripts_nodejs" style="color: inherit; text-decoration: inherit;">setup<wbr>Scripts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#setupscripts">Setup<wbr>Scripts</a></span>
+    </dt>
+    <dd>{{% md %}}Details of customized scripts to execute for setting up the cluster.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sshsettings_nodejs">
 <a href="#sshsettings_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Settings</a>
 </span>
@@ -4651,6 +5261,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="compute_instance_authorization_type_python">
+<a href="#compute_instance_authorization_type_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>instance_<wbr>authorization_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#computeinstanceauthorizationtype">Compute<wbr>Instance<wbr>Authorization<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The Compute Instance Authorization type. Available values are personal (default).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="personal_compute_instance_settings_python">
+<a href="#personal_compute_instance_settings_python" style="color: inherit; text-decoration: inherit;">personal_<wbr>compute_<wbr>instance_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#personalcomputeinstancesettings">Personal<wbr>Compute<wbr>Instance<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for a personal compute instance.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="setup_scripts_python">
+<a href="#setup_scripts_python" style="color: inherit; text-decoration: inherit;">setup_<wbr>scripts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#setupscripts">Setup<wbr>Scripts<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Details of customized scripts to execute for setting up the cluster.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="ssh_settings_python">
 <a href="#ssh_settings_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>settings</a>
 </span>
@@ -4686,15 +5323,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="createdon_csharp">
-<a href="#createdon_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="isattachedcompute_csharp">
 <a href="#isattachedcompute_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Attached<wbr>Compute</a>
 </span>
@@ -4702,15 +5330,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="modifiedon_csharp">
-<a href="#modifiedon_csharp" style="color: inherit; text-decoration: inherit;">Modified<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was last modified.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provisioningerrors_csharp">
@@ -4773,15 +5392,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="createdon_go">
-<a href="#createdon_go" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="isattachedcompute_go">
 <a href="#isattachedcompute_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Attached<wbr>Compute</a>
 </span>
@@ -4789,15 +5399,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="modifiedon_go">
-<a href="#modifiedon_go" style="color: inherit; text-decoration: inherit;">Modified<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was last modified.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provisioningerrors_go">
@@ -4860,15 +5461,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="createdon_nodejs">
-<a href="#createdon_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="isattachedcompute_nodejs">
 <a href="#isattachedcompute_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Attached<wbr>Compute</a>
 </span>
@@ -4876,15 +5468,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="modifiedon_nodejs">
-<a href="#modifiedon_nodejs" style="color: inherit; text-decoration: inherit;">modified<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was last modified.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provisioningerrors_nodejs">
@@ -4947,15 +5530,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="created_on_python">
-<a href="#created_on_python" style="color: inherit; text-decoration: inherit;">created_<wbr>on</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="is_attached_compute_python">
 <a href="#is_attached_compute_python" style="color: inherit; text-decoration: inherit;">is_<wbr>attached_<wbr>compute</a>
 </span>
@@ -4963,15 +5537,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="modified_on_python">
-<a href="#modified_on_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>on</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was last modified.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provisioning_errors_python">
@@ -5099,6 +5664,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="computeinstanceauthorizationtype_csharp">
+<a href="#computeinstanceauthorizationtype_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Instance<wbr>Authorization<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Compute Instance Authorization type. Available values are personal (default).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="personalcomputeinstancesettings_csharp">
+<a href="#personalcomputeinstancesettings_csharp" style="color: inherit; text-decoration: inherit;">Personal<wbr>Compute<wbr>Instance<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#personalcomputeinstancesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Personal<wbr>Compute<wbr>Instance<wbr>Settings<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for a personal compute instance.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="setupscripts_csharp">
+<a href="#setupscripts_csharp" style="color: inherit; text-decoration: inherit;">Setup<wbr>Scripts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#setupscriptsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Setup<wbr>Scripts<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Details of customized scripts to execute for setting up the cluster.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sshsettings_csharp">
 <a href="#sshsettings_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Settings</a>
 </span>
@@ -5193,6 +5785,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="computeinstanceauthorizationtype_go">
+<a href="#computeinstanceauthorizationtype_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Instance<wbr>Authorization<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Compute Instance Authorization type. Available values are personal (default).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="personalcomputeinstancesettings_go">
+<a href="#personalcomputeinstancesettings_go" style="color: inherit; text-decoration: inherit;">Personal<wbr>Compute<wbr>Instance<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#personalcomputeinstancesettingsresponse">Personal<wbr>Compute<wbr>Instance<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for a personal compute instance.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="setupscripts_go">
+<a href="#setupscripts_go" style="color: inherit; text-decoration: inherit;">Setup<wbr>Scripts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#setupscriptsresponse">Setup<wbr>Scripts<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Details of customized scripts to execute for setting up the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="sshsettings_go">
@@ -5291,6 +5910,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="computeinstanceauthorizationtype_nodejs">
+<a href="#computeinstanceauthorizationtype_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Instance<wbr>Authorization<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Compute Instance Authorization type. Available values are personal (default).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="personalcomputeinstancesettings_nodejs">
+<a href="#personalcomputeinstancesettings_nodejs" style="color: inherit; text-decoration: inherit;">personal<wbr>Compute<wbr>Instance<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#personalcomputeinstancesettingsresponse">Personal<wbr>Compute<wbr>Instance<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for a personal compute instance.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="setupscripts_nodejs">
+<a href="#setupscripts_nodejs" style="color: inherit; text-decoration: inherit;">setup<wbr>Scripts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#setupscriptsresponse">Setup<wbr>Scripts<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Details of customized scripts to execute for setting up the cluster.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sshsettings_nodejs">
 <a href="#sshsettings_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Settings</a>
 </span>
@@ -5385,6 +6031,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="compute_instance_authorization_type_python">
+<a href="#compute_instance_authorization_type_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>instance_<wbr>authorization_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Compute Instance Authorization type. Available values are personal (default).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="personal_compute_instance_settings_python">
+<a href="#personal_compute_instance_settings_python" style="color: inherit; text-decoration: inherit;">personal_<wbr>compute_<wbr>instance_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#personalcomputeinstancesettingsresponse">Personal<wbr>Compute<wbr>Instance<wbr>Settings<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Settings for a personal compute instance.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="setup_scripts_python">
+<a href="#setup_scripts_python" style="color: inherit; text-decoration: inherit;">setup_<wbr>scripts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#setupscriptsresponse">Setup<wbr>Scripts<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Details of customized scripts to execute for setting up the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ssh_settings_python">
@@ -5824,15 +6497,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="createdon_csharp">
-<a href="#createdon_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="isattachedcompute_csharp">
 <a href="#isattachedcompute_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Attached<wbr>Compute</a>
 </span>
@@ -5840,15 +6504,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="modifiedon_csharp">
-<a href="#modifiedon_csharp" style="color: inherit; text-decoration: inherit;">Modified<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was last modified.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provisioningerrors_csharp">
@@ -5902,15 +6557,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="createdon_go">
-<a href="#createdon_go" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="isattachedcompute_go">
 <a href="#isattachedcompute_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Attached<wbr>Compute</a>
 </span>
@@ -5918,15 +6564,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="modifiedon_go">
-<a href="#modifiedon_go" style="color: inherit; text-decoration: inherit;">Modified<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was last modified.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provisioningerrors_go">
@@ -5980,15 +6617,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="createdon_nodejs">
-<a href="#createdon_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="isattachedcompute_nodejs">
 <a href="#isattachedcompute_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Attached<wbr>Compute</a>
 </span>
@@ -5996,15 +6624,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="modifiedon_nodejs">
-<a href="#modifiedon_nodejs" style="color: inherit; text-decoration: inherit;">modified<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was last modified.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provisioningerrors_nodejs">
@@ -6058,15 +6677,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="created_on_python">
-<a href="#created_on_python" style="color: inherit; text-decoration: inherit;">created_<wbr>on</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="is_attached_compute_python">
 <a href="#is_attached_compute_python" style="color: inherit; text-decoration: inherit;">is_<wbr>attached_<wbr>compute</a>
 </span>
@@ -6074,15 +6684,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="modified_on_python">
-<a href="#modified_on_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>on</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was last modified.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provisioning_errors_python">
@@ -6370,15 +6971,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="createdon_csharp">
-<a href="#createdon_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="isattachedcompute_csharp">
 <a href="#isattachedcompute_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Attached<wbr>Compute</a>
 </span>
@@ -6386,15 +6978,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="modifiedon_csharp">
-<a href="#modifiedon_csharp" style="color: inherit; text-decoration: inherit;">Modified<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was last modified.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provisioningerrors_csharp">
@@ -6457,15 +7040,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="createdon_go">
-<a href="#createdon_go" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="isattachedcompute_go">
 <a href="#isattachedcompute_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Attached<wbr>Compute</a>
 </span>
@@ -6473,15 +7047,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="modifiedon_go">
-<a href="#modifiedon_go" style="color: inherit; text-decoration: inherit;">Modified<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was last modified.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provisioningerrors_go">
@@ -6544,15 +7109,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="createdon_nodejs">
-<a href="#createdon_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="isattachedcompute_nodejs">
 <a href="#isattachedcompute_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Attached<wbr>Compute</a>
 </span>
@@ -6560,15 +7116,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="modifiedon_nodejs">
-<a href="#modifiedon_nodejs" style="color: inherit; text-decoration: inherit;">modified<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was last modified.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provisioningerrors_nodejs">
@@ -6631,15 +7178,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="created_on_python">
-<a href="#created_on_python" style="color: inherit; text-decoration: inherit;">created_<wbr>on</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="is_attached_compute_python">
 <a href="#is_attached_compute_python" style="color: inherit; text-decoration: inherit;">is_<wbr>attached_<wbr>compute</a>
 </span>
@@ -6647,15 +7185,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="modified_on_python">
-<a href="#modified_on_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>on</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was last modified.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provisioning_errors_python">
@@ -6959,6 +7488,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Databricks access token{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workspaceurl_csharp">
+<a href="#workspaceurl_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Workspace Url{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6974,6 +7512,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Databricks access token{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workspaceurl_go">
+<a href="#workspaceurl_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Workspace Url{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6989,6 +7536,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Databricks access token{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workspaceurl_nodejs">
+<a href="#workspaceurl_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Workspace Url{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -7004,6 +7560,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Databricks access token{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workspace_url_python">
+<a href="#workspace_url_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Workspace Url{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -7014,15 +7579,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="createdon_csharp">
-<a href="#createdon_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="isattachedcompute_csharp">
 <a href="#isattachedcompute_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Attached<wbr>Compute</a>
 </span>
@@ -7030,15 +7586,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="modifiedon_csharp">
-<a href="#modifiedon_csharp" style="color: inherit; text-decoration: inherit;">Modified<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was last modified.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provisioningerrors_csharp">
@@ -7101,15 +7648,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="createdon_go">
-<a href="#createdon_go" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="isattachedcompute_go">
 <a href="#isattachedcompute_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Attached<wbr>Compute</a>
 </span>
@@ -7117,15 +7655,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="modifiedon_go">
-<a href="#modifiedon_go" style="color: inherit; text-decoration: inherit;">Modified<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was last modified.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provisioningerrors_go">
@@ -7188,15 +7717,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="createdon_nodejs">
-<a href="#createdon_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="isattachedcompute_nodejs">
 <a href="#isattachedcompute_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Attached<wbr>Compute</a>
 </span>
@@ -7204,15 +7724,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="modifiedon_nodejs">
-<a href="#modifiedon_nodejs" style="color: inherit; text-decoration: inherit;">modified<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was last modified.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provisioningerrors_nodejs">
@@ -7275,15 +7786,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="created_on_python">
-<a href="#created_on_python" style="color: inherit; text-decoration: inherit;">created_<wbr>on</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="is_attached_compute_python">
 <a href="#is_attached_compute_python" style="color: inherit; text-decoration: inherit;">is_<wbr>attached_<wbr>compute</a>
 </span>
@@ -7291,15 +7793,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="modified_on_python">
-<a href="#modified_on_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>on</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was last modified.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provisioning_errors_python">
@@ -7371,6 +7864,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Databricks access token{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workspaceurl_csharp">
+<a href="#workspaceurl_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Workspace Url{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -7386,6 +7888,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Databricks access token{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workspaceurl_go">
+<a href="#workspaceurl_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Workspace Url{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -7401,6 +7912,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Databricks access token{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workspaceurl_nodejs">
+<a href="#workspaceurl_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Workspace Url{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -7416,6 +7936,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Databricks access token{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workspace_url_python">
+<a href="#workspace_url_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Workspace Url{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -7962,15 +8491,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="createdon_csharp">
-<a href="#createdon_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="isattachedcompute_csharp">
 <a href="#isattachedcompute_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Attached<wbr>Compute</a>
 </span>
@@ -7978,15 +8498,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="modifiedon_csharp">
-<a href="#modifiedon_csharp" style="color: inherit; text-decoration: inherit;">Modified<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was last modified.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provisioningerrors_csharp">
@@ -8049,15 +8560,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="createdon_go">
-<a href="#createdon_go" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="isattachedcompute_go">
 <a href="#isattachedcompute_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Attached<wbr>Compute</a>
 </span>
@@ -8065,15 +8567,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="modifiedon_go">
-<a href="#modifiedon_go" style="color: inherit; text-decoration: inherit;">Modified<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was last modified.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provisioningerrors_go">
@@ -8136,15 +8629,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="createdon_nodejs">
-<a href="#createdon_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="isattachedcompute_nodejs">
 <a href="#isattachedcompute_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Attached<wbr>Compute</a>
 </span>
@@ -8152,15 +8636,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="modifiedon_nodejs">
-<a href="#modifiedon_nodejs" style="color: inherit; text-decoration: inherit;">modified<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was last modified.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provisioningerrors_nodejs">
@@ -8223,15 +8698,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="created_on_python">
-<a href="#created_on_python" style="color: inherit; text-decoration: inherit;">created_<wbr>on</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="is_attached_compute_python">
 <a href="#is_attached_compute_python" style="color: inherit; text-decoration: inherit;">is_<wbr>attached_<wbr>compute</a>
 </span>
@@ -8239,15 +8705,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="modified_on_python">
-<a href="#modified_on_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>on</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was last modified.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provisioning_errors_python">
@@ -8444,8 +8901,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -8461,15 +8918,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
+    <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -8485,15 +8942,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
+    <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -8509,15 +8966,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
+    <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -8533,7 +8990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
+    <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8560,8 +9017,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -8575,9 +9032,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
+    <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8602,8 +9059,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -8617,9 +9074,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities</span>
+        <span class="property-type">map[string]User<wbr>Assigned<wbr>Identity<wbr>Response</span>
     </dt>
-    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
+    <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8644,8 +9101,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -8659,9 +9116,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities}</span>
+        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response}</span>
     </dt>
-    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
+    <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8686,8 +9143,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -8701,107 +9158,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]</span>
     </dt>
-    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="identityresponseuserassignedidentities">Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="clientid_csharp">
-<a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="principalid_csharp">
-<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="clientid_go">
-<a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="principalid_go">
-<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="clientid_nodejs">
-<a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="principalid_nodejs">
-<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="client_id_python">
-<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="principal_id_python">
-<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
+    <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -9109,6 +9468,168 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </dl>
 {{% /choosable %}}
 
+<h4 id="ostype">Os<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Linux</dt>
+    <dd>Linux</dd>
+    <dt>Windows</dt>
+    <dd>Windows</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Os<wbr>Type<wbr>Linux</dt>
+    <dd>Linux</dd>
+    <dt>Os<wbr>Type<wbr>Windows</dt>
+    <dd>Windows</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Linux</dt>
+    <dd>Linux</dd>
+    <dt>Windows</dt>
+    <dd>Windows</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>LINUX</dt>
+    <dd>Linux</dd>
+    <dt>WINDOWS</dt>
+    <dd>Windows</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="personalcomputeinstancesettings">Personal<wbr>Compute<wbr>Instance<wbr>Settings</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="assigneduser_csharp">
+<a href="#assigneduser_csharp" style="color: inherit; text-decoration: inherit;">Assigned<wbr>User</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#assigneduser">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Assigned<wbr>User<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A user explicitly assigned to a personal compute instance.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="assigneduser_go">
+<a href="#assigneduser_go" style="color: inherit; text-decoration: inherit;">Assigned<wbr>User</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#assigneduser">Assigned<wbr>User</a></span>
+    </dt>
+    <dd>{{% md %}}A user explicitly assigned to a personal compute instance.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="assigneduser_nodejs">
+<a href="#assigneduser_nodejs" style="color: inherit; text-decoration: inherit;">assigned<wbr>User</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#assigneduser">Assigned<wbr>User</a></span>
+    </dt>
+    <dd>{{% md %}}A user explicitly assigned to a personal compute instance.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="assigned_user_python">
+<a href="#assigned_user_python" style="color: inherit; text-decoration: inherit;">assigned_<wbr>user</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#assigneduser">Assigned<wbr>User<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A user explicitly assigned to a personal compute instance.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="personalcomputeinstancesettingsresponse">Personal<wbr>Compute<wbr>Instance<wbr>Settings<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="assigneduser_csharp">
+<a href="#assigneduser_csharp" style="color: inherit; text-decoration: inherit;">Assigned<wbr>User</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#assigneduserresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Assigned<wbr>User<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A user explicitly assigned to a personal compute instance.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="assigneduser_go">
+<a href="#assigneduser_go" style="color: inherit; text-decoration: inherit;">Assigned<wbr>User</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#assigneduserresponse">Assigned<wbr>User<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A user explicitly assigned to a personal compute instance.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="assigneduser_nodejs">
+<a href="#assigneduser_nodejs" style="color: inherit; text-decoration: inherit;">assigned<wbr>User</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#assigneduserresponse">Assigned<wbr>User<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A user explicitly assigned to a personal compute instance.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="assigned_user_python">
+<a href="#assigned_user_python" style="color: inherit; text-decoration: inherit;">assigned_<wbr>user</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#assigneduserresponse">Assigned<wbr>User<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A user explicitly assigned to a personal compute instance.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="remoteloginportpublicaccess">Remote<wbr>Login<wbr>Port<wbr>Public<wbr>Access</h4>
 
 {{% choosable language csharp %}}
@@ -9285,10 +9806,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular">
     <dt>System<wbr>Assigned</dt>
     <dd>SystemAssigned</dd>
-    <dt>User<wbr>Assigned</dt>
-    <dd>UserAssigned</dd>
     <dt>System<wbr>Assigned_User<wbr>Assigned</dt>
     <dd>SystemAssigned,UserAssigned</dd>
+    <dt>User<wbr>Assigned</dt>
+    <dd>UserAssigned</dd>
     <dt>None</dt>
     <dd>None</dd>
 </dl>
@@ -9298,10 +9819,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular">
     <dt>Resource<wbr>Identity<wbr>Type<wbr>System<wbr>Assigned</dt>
     <dd>SystemAssigned</dd>
-    <dt>Resource<wbr>Identity<wbr>Type<wbr>User<wbr>Assigned</dt>
-    <dd>UserAssigned</dd>
     <dt>Resource<wbr>Identity<wbr>Type_System<wbr>Assigned_User<wbr>Assigned</dt>
     <dd>SystemAssigned,UserAssigned</dd>
+    <dt>Resource<wbr>Identity<wbr>Type<wbr>User<wbr>Assigned</dt>
+    <dd>UserAssigned</dd>
     <dt>Resource<wbr>Identity<wbr>Type<wbr>None</dt>
     <dd>None</dd>
 </dl>
@@ -9311,10 +9832,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular">
     <dt>System<wbr>Assigned</dt>
     <dd>SystemAssigned</dd>
-    <dt>User<wbr>Assigned</dt>
-    <dd>UserAssigned</dd>
     <dt>System<wbr>Assigned_User<wbr>Assigned</dt>
     <dd>SystemAssigned,UserAssigned</dd>
+    <dt>User<wbr>Assigned</dt>
+    <dd>UserAssigned</dd>
     <dt>None</dt>
     <dd>None</dd>
 </dl>
@@ -9324,10 +9845,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular">
     <dt>SYSTEM_ASSIGNED</dt>
     <dd>SystemAssigned</dd>
-    <dt>USER_ASSIGNED</dt>
-    <dd>UserAssigned</dd>
     <dt>SYSTEM_ASSIGNED_USER_ASSIGNED</dt>
     <dd>SystemAssigned,UserAssigned</dd>
+    <dt>USER_ASSIGNED</dt>
+    <dd>UserAssigned</dd>
     <dt>NONE</dt>
     <dd>None</dd>
 </dl>
@@ -9364,7 +9885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Node Idle Time before scaling down amlCompute{{% /md %}}</dd>
+    <dd>{{% md %}}Node Idle Time before scaling down amlCompute. This string needs to be in the RFC Format.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -9397,7 +9918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Node Idle Time before scaling down amlCompute{{% /md %}}</dd>
+    <dd>{{% md %}}Node Idle Time before scaling down amlCompute. This string needs to be in the RFC Format.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -9430,7 +9951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Node Idle Time before scaling down amlCompute{{% /md %}}</dd>
+    <dd>{{% md %}}Node Idle Time before scaling down amlCompute. This string needs to be in the RFC Format.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -9463,7 +9984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Node Idle Time before scaling down amlCompute{{% /md %}}</dd>
+    <dd>{{% md %}}Node Idle Time before scaling down amlCompute. This string needs to be in the RFC Format.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -9498,7 +10019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Node Idle Time before scaling down amlCompute{{% /md %}}</dd>
+    <dd>{{% md %}}Node Idle Time before scaling down amlCompute. This string needs to be in the RFC Format.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -9531,7 +10052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Node Idle Time before scaling down amlCompute{{% /md %}}</dd>
+    <dd>{{% md %}}Node Idle Time before scaling down amlCompute. This string needs to be in the RFC Format.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -9564,7 +10085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Node Idle Time before scaling down amlCompute{{% /md %}}</dd>
+    <dd>{{% md %}}Node Idle Time before scaling down amlCompute. This string needs to be in the RFC Format.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -9597,7 +10118,667 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Node Idle Time before scaling down amlCompute{{% /md %}}</dd>
+    <dd>{{% md %}}Node Idle Time before scaling down amlCompute. This string needs to be in the RFC Format.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="scriptreference">Script<wbr>Reference</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scriptarguments_csharp">
+<a href="#scriptarguments_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Arguments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional command line arguments passed to the script to run.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scriptdata_csharp">
+<a href="#scriptdata_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of scripts in the mounted volume.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scriptsource_csharp">
+<a href="#scriptsource_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The storage source of the script: inline, workspace.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_csharp">
+<a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional time period passed to timeout command.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scriptarguments_go">
+<a href="#scriptarguments_go" style="color: inherit; text-decoration: inherit;">Script<wbr>Arguments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional command line arguments passed to the script to run.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scriptdata_go">
+<a href="#scriptdata_go" style="color: inherit; text-decoration: inherit;">Script<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of scripts in the mounted volume.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scriptsource_go">
+<a href="#scriptsource_go" style="color: inherit; text-decoration: inherit;">Script<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The storage source of the script: inline, workspace.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_go">
+<a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional time period passed to timeout command.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scriptarguments_nodejs">
+<a href="#scriptarguments_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Arguments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional command line arguments passed to the script to run.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scriptdata_nodejs">
+<a href="#scriptdata_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of scripts in the mounted volume.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scriptsource_nodejs">
+<a href="#scriptsource_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The storage source of the script: inline, workspace.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_nodejs">
+<a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional time period passed to timeout command.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="script_arguments_python">
+<a href="#script_arguments_python" style="color: inherit; text-decoration: inherit;">script_<wbr>arguments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Optional command line arguments passed to the script to run.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="script_data_python">
+<a href="#script_data_python" style="color: inherit; text-decoration: inherit;">script_<wbr>data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The location of scripts in the mounted volume.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="script_source_python">
+<a href="#script_source_python" style="color: inherit; text-decoration: inherit;">script_<wbr>source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The storage source of the script: inline, workspace.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_python">
+<a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Optional time period passed to timeout command.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="scriptreferenceresponse">Script<wbr>Reference<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scriptarguments_csharp">
+<a href="#scriptarguments_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Arguments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional command line arguments passed to the script to run.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scriptdata_csharp">
+<a href="#scriptdata_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of scripts in the mounted volume.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scriptsource_csharp">
+<a href="#scriptsource_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The storage source of the script: inline, workspace.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_csharp">
+<a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional time period passed to timeout command.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scriptarguments_go">
+<a href="#scriptarguments_go" style="color: inherit; text-decoration: inherit;">Script<wbr>Arguments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional command line arguments passed to the script to run.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scriptdata_go">
+<a href="#scriptdata_go" style="color: inherit; text-decoration: inherit;">Script<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of scripts in the mounted volume.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scriptsource_go">
+<a href="#scriptsource_go" style="color: inherit; text-decoration: inherit;">Script<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The storage source of the script: inline, workspace.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_go">
+<a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional time period passed to timeout command.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scriptarguments_nodejs">
+<a href="#scriptarguments_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Arguments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional command line arguments passed to the script to run.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scriptdata_nodejs">
+<a href="#scriptdata_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of scripts in the mounted volume.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scriptsource_nodejs">
+<a href="#scriptsource_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The storage source of the script: inline, workspace.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_nodejs">
+<a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional time period passed to timeout command.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="script_arguments_python">
+<a href="#script_arguments_python" style="color: inherit; text-decoration: inherit;">script_<wbr>arguments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Optional command line arguments passed to the script to run.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="script_data_python">
+<a href="#script_data_python" style="color: inherit; text-decoration: inherit;">script_<wbr>data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The location of scripts in the mounted volume.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="script_source_python">
+<a href="#script_source_python" style="color: inherit; text-decoration: inherit;">script_<wbr>source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The storage source of the script: inline, workspace.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_python">
+<a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Optional time period passed to timeout command.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="scriptstoexecute">Scripts<wbr>To<wbr>Execute</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="creationscript_csharp">
+<a href="#creationscript_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scriptreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Script<wbr>Reference<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Script that's run only once during provision of the compute.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="startupscript_csharp">
+<a href="#startupscript_csharp" style="color: inherit; text-decoration: inherit;">Startup<wbr>Script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scriptreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Script<wbr>Reference<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Script that's run every time the machine starts.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="creationscript_go">
+<a href="#creationscript_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scriptreference">Script<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Script that's run only once during provision of the compute.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="startupscript_go">
+<a href="#startupscript_go" style="color: inherit; text-decoration: inherit;">Startup<wbr>Script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scriptreference">Script<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Script that's run every time the machine starts.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="creationscript_nodejs">
+<a href="#creationscript_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scriptreference">Script<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Script that's run only once during provision of the compute.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="startupscript_nodejs">
+<a href="#startupscript_nodejs" style="color: inherit; text-decoration: inherit;">startup<wbr>Script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scriptreference">Script<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Script that's run every time the machine starts.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="creation_script_python">
+<a href="#creation_script_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scriptreference">Script<wbr>Reference<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Script that's run only once during provision of the compute.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="startup_script_python">
+<a href="#startup_script_python" style="color: inherit; text-decoration: inherit;">startup_<wbr>script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scriptreference">Script<wbr>Reference<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Script that's run every time the machine starts.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="scriptstoexecuteresponse">Scripts<wbr>To<wbr>Execute<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="creationscript_csharp">
+<a href="#creationscript_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scriptreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Script<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Script that's run only once during provision of the compute.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="startupscript_csharp">
+<a href="#startupscript_csharp" style="color: inherit; text-decoration: inherit;">Startup<wbr>Script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scriptreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Script<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Script that's run every time the machine starts.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="creationscript_go">
+<a href="#creationscript_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scriptreferenceresponse">Script<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Script that's run only once during provision of the compute.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="startupscript_go">
+<a href="#startupscript_go" style="color: inherit; text-decoration: inherit;">Startup<wbr>Script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scriptreferenceresponse">Script<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Script that's run every time the machine starts.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="creationscript_nodejs">
+<a href="#creationscript_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scriptreferenceresponse">Script<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Script that's run only once during provision of the compute.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="startupscript_nodejs">
+<a href="#startupscript_nodejs" style="color: inherit; text-decoration: inherit;">startup<wbr>Script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scriptreferenceresponse">Script<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Script that's run every time the machine starts.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="creation_script_python">
+<a href="#creation_script_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scriptreferenceresponse">Script<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Script that's run only once during provision of the compute.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="startup_script_python">
+<a href="#startup_script_python" style="color: inherit; text-decoration: inherit;">startup_<wbr>script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scriptreferenceresponse">Script<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Script that's run every time the machine starts.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="setupscripts">Setup<wbr>Scripts</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scripts_csharp">
+<a href="#scripts_csharp" style="color: inherit; text-decoration: inherit;">Scripts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scriptstoexecute">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Scripts<wbr>To<wbr>Execute<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Customized setup scripts{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scripts_go">
+<a href="#scripts_go" style="color: inherit; text-decoration: inherit;">Scripts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scriptstoexecute">Scripts<wbr>To<wbr>Execute</a></span>
+    </dt>
+    <dd>{{% md %}}Customized setup scripts{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scripts_nodejs">
+<a href="#scripts_nodejs" style="color: inherit; text-decoration: inherit;">scripts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scriptstoexecute">Scripts<wbr>To<wbr>Execute</a></span>
+    </dt>
+    <dd>{{% md %}}Customized setup scripts{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scripts_python">
+<a href="#scripts_python" style="color: inherit; text-decoration: inherit;">scripts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scriptstoexecute">Scripts<wbr>To<wbr>Execute<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Customized setup scripts{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="setupscriptsresponse">Setup<wbr>Scripts<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scripts_csharp">
+<a href="#scripts_csharp" style="color: inherit; text-decoration: inherit;">Scripts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scriptstoexecuteresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Scripts<wbr>To<wbr>Execute<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Customized setup scripts{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scripts_go">
+<a href="#scripts_go" style="color: inherit; text-decoration: inherit;">Scripts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scriptstoexecuteresponse">Scripts<wbr>To<wbr>Execute<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Customized setup scripts{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scripts_nodejs">
+<a href="#scripts_nodejs" style="color: inherit; text-decoration: inherit;">scripts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scriptstoexecuteresponse">Scripts<wbr>To<wbr>Execute<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Customized setup scripts{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scripts_python">
+<a href="#scripts_python" style="color: inherit; text-decoration: inherit;">scripts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scriptstoexecuteresponse">Scripts<wbr>To<wbr>Execute<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Customized setup scripts{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -10175,6 +11356,248 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </dl>
 {{% /choosable %}}
 
+<h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdat_csharp">
+<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdby_csharp">
+<a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_csharp">
+<a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_csharp">
+<a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_csharp">
+<a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_csharp">
+<a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdat_go">
+<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdby_go">
+<a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_go">
+<a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_go">
+<a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_go">
+<a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_go">
+<a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdat_nodejs">
+<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdby_nodejs">
+<a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_nodejs">
+<a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_nodejs">
+<a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_nodejs">
+<a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_nodejs">
+<a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="created_at_python">
+<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="created_by_python">
+<a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="created_by_type_python">
+<a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_at_python">
+<a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_by_python">
+<a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_by_type_python">
+<a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="systemserviceresponse">System<wbr>Service<wbr>Response</h4>
 
 {{% choosable language csharp %}}
@@ -10577,6 +12000,140 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </dl>
 {{% /choosable %}}
 
+<h4 id="userassignedidentityresponse">User<wbr>Assigned<wbr>Identity<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clientid_csharp">
+<a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The clientId(aka appId) of the user assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal ID of the user assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clientid_go">
+<a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The clientId(aka appId) of the user assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal ID of the user assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clientid_nodejs">
+<a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The clientId(aka appId) of the user assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal ID of the user assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="client_id_python">
+<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The clientId(aka appId) of the user assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The principal ID of the user assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="virtualmachine">Virtual<wbr>Machine</h4>
 
 {{% choosable language csharp %}}
@@ -10744,6 +12301,130 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="virtualmachineimage">Virtual<wbr>Machine<wbr>Image</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Virtual Machine image path{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Virtual Machine image path{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Virtual Machine image path{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Virtual Machine image path{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="virtualmachineimageresponse">Virtual<wbr>Machine<wbr>Image<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Virtual Machine image path{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Virtual Machine image path{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Virtual Machine image path{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Virtual Machine image path{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -10924,15 +12605,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="createdon_csharp">
-<a href="#createdon_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="isattachedcompute_csharp">
 <a href="#isattachedcompute_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Attached<wbr>Compute</a>
 </span>
@@ -10940,15 +12612,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="modifiedon_csharp">
-<a href="#modifiedon_csharp" style="color: inherit; text-decoration: inherit;">Modified<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was last modified.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provisioningerrors_csharp">
@@ -11011,15 +12674,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="createdon_go">
-<a href="#createdon_go" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="isattachedcompute_go">
 <a href="#isattachedcompute_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Attached<wbr>Compute</a>
 </span>
@@ -11027,15 +12681,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="modifiedon_go">
-<a href="#modifiedon_go" style="color: inherit; text-decoration: inherit;">Modified<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was last modified.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provisioningerrors_go">
@@ -11098,15 +12743,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="createdon_nodejs">
-<a href="#createdon_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="isattachedcompute_nodejs">
 <a href="#isattachedcompute_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Attached<wbr>Compute</a>
 </span>
@@ -11114,15 +12750,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="modifiedon_nodejs">
-<a href="#modifiedon_nodejs" style="color: inherit; text-decoration: inherit;">modified<wbr>On</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was last modified.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provisioningerrors_nodejs">
@@ -11185,15 +12812,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="created_on_python">
-<a href="#created_on_python" style="color: inherit; text-decoration: inherit;">created_<wbr>on</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was created.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="is_attached_compute_python">
 <a href="#is_attached_compute_python" style="color: inherit; text-decoration: inherit;">is_<wbr>attached_<wbr>compute</a>
 </span>
@@ -11201,15 +12819,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="modified_on_python">
-<a href="#modified_on_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>on</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The date and time when the compute was last modified.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provisioning_errors_python">

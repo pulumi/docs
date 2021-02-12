@@ -617,7 +617,7 @@ The Workflow resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#workflowstate">Workflow<wbr>State</a></span>
+        <span class="property-type">string | <a href="#workflowstate">Workflow<wbr>State<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}The state.{{% /md %}}</dd>
     <dt class="property-optional"

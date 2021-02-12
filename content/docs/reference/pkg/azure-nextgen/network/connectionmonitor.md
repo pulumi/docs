@@ -958,7 +958,7 @@ The ConnectionMonitor resource accepts the following [input]({{< relref "/docs/i
 <a href="#outputs_go" style="color: inherit; text-decoration: inherit;">Outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitoroutput">[]Connection<wbr>Monitor<wbr>Output</a></span>
+        <span class="property-type"><a href="#connectionmonitoroutput">[]Connection<wbr>Monitor<wbr>Output<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}List of connection monitor outputs.{{% /md %}}</dd>
     <dt class="property-optional"
