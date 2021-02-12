@@ -30,8 +30,8 @@ Simply login to the Azure CLI and Pulumi will automatically use your credentials
 
 ```bash
 $ az login
-The default web browser has been opened at https://login.microsoftonline.com/common/oauth2/authorize. Please continue 
-the login in the web browser. If no web browser is available or if the web browser fails to open, use device code flow 
+The default web browser has been opened at https://login.microsoftonline.com/common/oauth2/authorize. Please continue
+the login in the web browser. If no web browser is available or if the web browser fails to open, use device code flow
 with `az login --use-device-code`.
 ```
 
