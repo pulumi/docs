@@ -1,8 +1,8 @@
 
 ---
-title: "GetPolicyDocument"
-title_tag: "Function GetPolicyDocument | Module iam | Package AWS"
-meta_desc: "Explore the GetPolicyDocument function of the iam module, including examples, input properties, output properties, and supporting types. Generates an IAM policy document in JSON format."
+title: "getPolicyDocument"
+title_tag: "aws.iam.getPolicyDocument"
+meta_desc: "Documentation for the aws.iam.getPolicyDocument function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -944,7 +944,7 @@ func main() {
 
 
 
-## Using GetPolicyDocument {#using}
+## Using getPolicyDocument {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -961,6 +961,8 @@ func main() {
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicyDocument<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetPolicyDocumentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetPolicyDocumentResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetPolicyDocument` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -1231,7 +1233,7 @@ configuring one *statement* to be included in the policy document.
 
 
 
-## GetPolicyDocument Result {#result}
+## getPolicyDocument Result {#result}
 
 The following output properties are available:
 

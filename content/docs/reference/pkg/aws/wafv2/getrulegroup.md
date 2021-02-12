@@ -1,8 +1,8 @@
 
 ---
-title: "GetRuleGroup"
-title_tag: "Function GetRuleGroup | Module wafv2 | Package AWS"
-meta_desc: "Explore the GetRuleGroup function of the wafv2 module, including examples, input properties, output properties, and supporting types. Retrieves the summary of a WAFv2 Rule Group."
+title: "getRuleGroup"
+title_tag: "aws.wafv2.getRuleGroup"
+meta_desc: "Documentation for the aws.wafv2.getRuleGroup function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -92,7 +92,7 @@ const example = pulumi.output(aws.wafv2.getRuleGroup({
 {{% /examples %}}
 
 
-## Using GetRuleGroup {#using}
+## Using getRuleGroup {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -233,7 +233,7 @@ The following arguments are supported:
 
 
 
-## GetRuleGroup Result {#result}
+## getRuleGroup Result {#result}
 
 The following output properties are available:
 

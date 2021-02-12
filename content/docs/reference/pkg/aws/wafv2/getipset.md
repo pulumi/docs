@@ -1,8 +1,8 @@
 
 ---
-title: "GetIpSet"
-title_tag: "Function GetIpSet | Module wafv2 | Package AWS"
-meta_desc: "Explore the GetIpSet function of the wafv2 module, including examples, input properties, output properties, and supporting types. Retrieves the summary of a WAFv2 IP Set."
+title: "getIpSet"
+title_tag: "aws.wafv2.getIpSet"
+meta_desc: "Documentation for the aws.wafv2.getIpSet function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -92,7 +92,7 @@ const example = pulumi.output(aws.wafv2.getIpSet({
 {{% /examples %}}
 
 
-## Using GetIpSet {#using}
+## Using getIpSet {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -233,7 +233,7 @@ The following arguments are supported:
 
 
 
-## GetIpSet Result {#result}
+## getIpSet Result {#result}
 
 The following output properties are available:
 

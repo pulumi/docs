@@ -1,8 +1,8 @@
 
 ---
-title: "GetResourceShare"
-title_tag: "Function GetResourceShare | Module ram | Package AWS"
-meta_desc: "Explore the GetResourceShare function of the ram module, including examples, input properties, output properties, and supporting types. `aws.ram.ResourceShare` Retrieve information about a RAM Resource Share."
+title: "getResourceShare"
+title_tag: "aws.ram.getResourceShare"
+meta_desc: "Documentation for the aws.ram.getResourceShare function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -175,7 +175,7 @@ const example = pulumi.output(aws.ram.getResourceShare({
 {{% /examples %}}
 
 
-## Using GetResourceShare {#using}
+## Using getResourceShare {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -396,7 +396,7 @@ The following arguments are supported:
 
 
 
-## GetResourceShare Result {#result}
+## getResourceShare Result {#result}
 
 The following output properties are available:
 

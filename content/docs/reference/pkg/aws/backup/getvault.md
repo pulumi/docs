@@ -1,8 +1,8 @@
 
 ---
-title: "GetVault"
-title_tag: "Function GetVault | Module backup | Package AWS"
-meta_desc: "Explore the GetVault function of the backup module, including examples, input properties, output properties, and supporting types. Use this data source to get information on an existing backup vault."
+title: "getVault"
+title_tag: "aws.backup.getVault"
+meta_desc: "Documentation for the aws.backup.getVault function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const example = pulumi.output(aws.backup.getVault({
 {{% /examples %}}
 
 
-## Using GetVault {#using}
+## Using getVault {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -229,7 +229,7 @@ The following arguments are supported:
 
 
 
-## GetVault Result {#result}
+## getVault Result {#result}
 
 The following output properties are available:
 

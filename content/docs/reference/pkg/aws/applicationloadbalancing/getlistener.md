@@ -1,8 +1,8 @@
 
 ---
-title: "GetListener"
-title_tag: "Function GetListener | Module applicationloadbalancing | Package AWS"
-meta_desc: "Explore the GetListener function of the applicationloadbalancing module, including examples, input properties, output properties, and supporting types. &gt; **Note:** `aws.alb.Listener` is known as `aws.lb.Listener`. The functionality is identical."
+title: "getListener"
+title_tag: "aws.applicationloadbalancing.getListener"
+meta_desc: "Documentation for the aws.applicationloadbalancing.getListener function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -140,7 +140,7 @@ const selected443 = selected.then(selected => aws.lb.getListener({
 {{% /examples %}}
 
 
-## Using GetListener {#using}
+## Using getListener {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -321,7 +321,7 @@ The following arguments are supported:
 
 
 
-## GetListener Result {#result}
+## getListener Result {#result}
 
 The following output properties are available:
 

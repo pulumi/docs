@@ -25,18 +25,3 @@ Explore the resources and functions of the events/v1 module in the Kubernetes pa
 	<dd>2.8.0</dd>
 </dl>
 
-
-
-<dl class="tabular">
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/events/v1?tab=doc#" title="kubernetes/events/v1">kubernetes/events/v1</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/events/v1/#" title="@pulumi/kubernetes/events/v1">@pulumi/kubernetes/events/v1</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/events/v1" title="pulumi_kubernetes/events/v1">pulumi_kubernetes/events/v1</a></dd>
-
-</dl>
-

@@ -1,8 +1,8 @@
 
 ---
-title: "GetSecret"
-title_tag: "Function GetSecret | Module kms | Package AWS"
-meta_desc: "Explore the GetSecret function of the kms module, including examples, input properties, output properties, and supporting types. "
+title: "getSecret"
+title_tag: "aws.kms.getSecret"
+meta_desc: "Documentation for the aws.kms.getSecret function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,7 +13,7 @@ meta_desc: "Explore the GetSecret function of the kms module, including examples
 
 
 
-## Using GetSecret {#using}
+## Using getSecret {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -30,6 +30,8 @@ meta_desc: "Explore the GetSecret function of the kms module, including examples
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecret<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetSecretArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetSecretResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetSecret` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -108,7 +110,7 @@ The following arguments are supported:
 
 
 
-## GetSecret Result {#result}
+## getSecret Result {#result}
 
 The following output properties are available:
 

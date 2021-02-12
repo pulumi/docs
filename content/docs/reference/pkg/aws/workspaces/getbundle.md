@@ -1,8 +1,8 @@
 
 ---
-title: "GetBundle"
-title_tag: "Function GetBundle | Module workspaces | Package AWS"
-meta_desc: "Explore the GetBundle function of the workspaces module, including examples, input properties, output properties, and supporting types. Retrieve information about an AWS WorkSpaces bundle."
+title: "getBundle"
+title_tag: "aws.workspaces.getBundle"
+meta_desc: "Documentation for the aws.workspaces.getBundle function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -163,7 +163,7 @@ const example = pulumi.output(aws.workspaces.getBundle({
 {{% /examples %}}
 
 
-## Using GetBundle {#using}
+## Using getBundle {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -180,6 +180,8 @@ const example = pulumi.output(aws.workspaces.getBundle({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBundle<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetBundleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetBundleResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetBundle` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -342,7 +344,7 @@ The following arguments are supported:
 
 
 
-## GetBundle Result {#result}
+## getBundle Result {#result}
 
 The following output properties are available:
 

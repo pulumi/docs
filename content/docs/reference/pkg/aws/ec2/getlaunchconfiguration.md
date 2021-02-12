@@ -1,8 +1,8 @@
 
 ---
-title: "GetLaunchConfiguration"
-title_tag: "Function GetLaunchConfiguration | Module ec2 | Package AWS"
-meta_desc: "Explore the GetLaunchConfiguration function of the ec2 module, including examples, input properties, output properties, and supporting types. Provides information about a Launch Configuration."
+title: "getLaunchConfiguration"
+title_tag: "aws.ec2.getLaunchConfiguration"
+meta_desc: "Documentation for the aws.ec2.getLaunchConfiguration function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const ubuntu = pulumi.output(aws.ec2.getLaunchConfiguration({
 {{% /examples %}}
 
 
-## Using GetLaunchConfiguration {#using}
+## Using getLaunchConfiguration {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## GetLaunchConfiguration Result {#result}
+## getLaunchConfiguration Result {#result}
 
 The following output properties are available:
 

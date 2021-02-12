@@ -1,8 +1,8 @@
 
 ---
-title: "GetPolicy"
-title_tag: "Function GetPolicy | Module iam | Package AWS"
-meta_desc: "Explore the GetPolicy function of the iam module, including examples, input properties, output properties, and supporting types. This data source can be used to fetch information about a specific"
+title: "getPolicy"
+title_tag: "aws.iam.getPolicy"
+meta_desc: "Documentation for the aws.iam.getPolicy function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -89,7 +89,7 @@ const example = pulumi.output(aws.iam.getPolicy({
 {{% /examples %}}
 
 
-## Using GetPolicy {#using}
+## Using getPolicy {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -190,7 +190,7 @@ The following arguments are supported:
 
 
 
-## GetPolicy Result {#result}
+## getPolicy Result {#result}
 
 The following output properties are available:
 

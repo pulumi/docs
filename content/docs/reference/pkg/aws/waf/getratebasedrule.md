@@ -1,8 +1,8 @@
 
 ---
-title: "GetRateBasedRule"
-title_tag: "Function GetRateBasedRule | Module waf | Package AWS"
-meta_desc: "Explore the GetRateBasedRule function of the waf module, including examples, input properties, output properties, and supporting types. `aws.waf.RateBasedRule` Retrieves a WAF Rate Based Rule Resource Id."
+title: "getRateBasedRule"
+title_tag: "aws.waf.getRateBasedRule"
+meta_desc: "Documentation for the aws.waf.getRateBasedRule function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,7 +88,7 @@ const example = pulumi.output(aws.waf.getRateBasedRule({
 {{% /examples %}}
 
 
-## Using GetRateBasedRule {#using}
+## Using getRateBasedRule {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## GetRateBasedRule Result {#result}
+## getRateBasedRule Result {#result}
 
 The following output properties are available:
 
