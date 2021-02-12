@@ -45,7 +45,7 @@ class MyStack : Stack
             },
             ConsistencyPolicy = new AzureNextGen.DocumentDB.Latest.Inputs.ConsistencyPolicyArgs
             {
-                DefaultConsistencyLevel = DefaultConsistencyLevel.BoundedStaleness,
+                DefaultConsistencyLevel = AzureNextGen.DocumentDB.Latest.DefaultConsistencyLevel.BoundedStaleness,
                 MaxIntervalInSeconds = 10,
                 MaxStalenessPrefix = 200,
             },
@@ -56,7 +56,7 @@ class MyStack : Stack
                     AllowedOrigins = "https://test",
                 },
             },
-            DatabaseAccountOfferType = DatabaseAccountOfferType.Standard,
+            DatabaseAccountOfferType = AzureNextGen.DocumentDB.Latest.DatabaseAccountOfferType.Standard,
             EnableAnalyticalStorage = true,
             EnableFreeTier = false,
             IpRules = 
