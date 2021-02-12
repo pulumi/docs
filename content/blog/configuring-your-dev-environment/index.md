@@ -61,7 +61,7 @@ Make sure that [`Get-ExecutionPolicy`](https://docs.microsoft.com/en-us/powershe
 
 If the command returns `Restricted`, we can use `Bypass` to install Chocolatey with the following command:
 
-```cmd
+```
 > Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 ```
 
