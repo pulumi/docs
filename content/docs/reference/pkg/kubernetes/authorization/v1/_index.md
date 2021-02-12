@@ -24,21 +24,6 @@ Explore the resources and functions of the authorization/v1 module in the Kubern
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.8.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/authorization/v1?tab=doc#" title="kubernetes/authorization/v1">kubernetes/authorization/v1</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/authorization/v1/#" title="@pulumi/kubernetes/authorization/v1">@pulumi/kubernetes/authorization/v1</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/authorization/v1" title="pulumi_kubernetes/authorization/v1">pulumi_kubernetes/authorization/v1</a></dd>
-
+	<dd>2.8.1</dd>
 </dl>
 
