@@ -68,7 +68,7 @@ module.exports = {
             ],
 
             // Whitelist custom parent selectors and their children.
-            whitelistPatterns: [/^fa-/, /^hs-/, /^highlight$/, /^pagination$/, /^code-/, /^copy-/, /^carousel/, /^bg-/, /BambooHR-/],
+            whitelistPatterns: [/^fa-/, /^hs-/, /^highlight$/, /^pagination$/, /^code-/, /^copy-/, /^carousel/, /^bg-/, /^st-/],
             whitelistPatternsChildren: [
                 /^hs-/,
                 /^highlight$/,
@@ -76,6 +76,7 @@ module.exports = {
                 /^code-/,
                 /^copy-/,
                 /^carousel/,
+                /^st-/,
 
                 // Whitelist our web components along with any of their descendent selectors.
                 /^pulumi-chooser/,

@@ -1,0 +1,34 @@
+.st-default-search-input {
+    display: block !important;
+    width: 100% !important;
+    font-size: .875rem !important;
+    padding: .75rem !important;
+    padding-left: 2rem !important;
+    border-radius: .25rem !important;
+    border-color: #cbd5e0 !important;
+    font-family: "Open Sans" !important;
+    background: none !important;
+
+    @include transition;
+
+    &:focus {
+        border-color: #52a6da !important; /* border-blue-500 */
+    }
+}
+
+.st-default-autocomplete {
+    z-index: 40 !important; /* z-40 */
+
+    .st-query-present {
+        .st-ui-result {
+            .st-ui-type-heading {
+                font-size: 0.75rem !important;  /* text-xs */
+                color: #4387c7 !important; /* text-blue-600 */
+                margin-bottom: 4px !important;
+            }
+            .st-ui-type-detail {
+                color: #4a5568 !important; /* text-gray-600 */
+            }
+        }
+    }
+}
