@@ -686,19 +686,19 @@ const testAction = new opsgenie.IntegrationAction("testAction", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/#IntegrationAction">IntegrationAction</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/#IntegrationActionArgs">IntegrationActionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IntegrationAction</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationActionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_opsgenie/#pulumi_opsgenie.IntegrationAction">IntegrationAction</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acknowledges</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntegrationActionAcknowledgeArgs]]</span> = None<span class="p">, </span><span class="nx">add_notes</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntegrationActionAddNoteArgs]]</span> = None<span class="p">, </span><span class="nx">closes</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntegrationActionCloseArgs]]</span> = None<span class="p">, </span><span class="nx">creates</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntegrationActionCreateArgs]]</span> = None<span class="p">, </span><span class="nx">ignores</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntegrationActionIgnoreArgs]]</span> = None<span class="p">, </span><span class="nx">integration_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IntegrationAction</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acknowledges</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntegrationActionAcknowledgeArgs]]</span> = None<span class="p">, </span><span class="nx">add_notes</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntegrationActionAddNoteArgs]]</span> = None<span class="p">, </span><span class="nx">closes</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntegrationActionCloseArgs]]</span> = None<span class="p">, </span><span class="nx">creates</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntegrationActionCreateArgs]]</span> = None<span class="p">, </span><span class="nx">ignores</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntegrationActionIgnoreArgs]]</span> = None<span class="p">, </span><span class="nx">integration_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationAction">NewIntegrationAction</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationActionArgs">IntegrationActionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationAction">IntegrationAction</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationAction</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IntegrationActionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationAction</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.IntegrationAction.html">IntegrationAction</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.IntegrationActionArgs.html">IntegrationActionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IntegrationAction</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IntegrationActionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -719,7 +719,7 @@ const testAction = new opsgenie.IntegrationAction("testAction", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/#IntegrationActionArgs">IntegrationActionArgs</a></span>
+        <span class="property-type"><a href="#inputs">IntegrationActionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -788,7 +788,7 @@ const testAction = new opsgenie.IntegrationAction("testAction", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationActionArgs">IntegrationActionArgs</a></span>
+        <span class="property-type"><a href="#inputs">IntegrationActionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -827,7 +827,7 @@ const testAction = new opsgenie.IntegrationAction("testAction", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.IntegrationActionArgs.html">IntegrationActionArgs</a></span>
+        <span class="property-type"><a href="#inputs">IntegrationActionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -850,11 +850,11 @@ const testAction = new opsgenie.IntegrationAction("testAction", {
 
 ## IntegrationAction Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The IntegrationAction resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The IntegrationAction resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1177,7 +1177,7 @@ Get an existing IntegrationAction resource's state with the given name, ID, and 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/#IntegrationActionState">IntegrationActionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/#IntegrationAction">IntegrationAction</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">IntegrationActionState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">IntegrationAction</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1186,11 +1186,11 @@ Get an existing IntegrationAction resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntegrationAction<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationActionState">IntegrationActionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationAction">IntegrationAction</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntegrationAction<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">IntegrationActionState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationAction</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.IntegrationAction.html">IntegrationAction</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie..IntegrationActionState.html">IntegrationActionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">IntegrationAction</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">IntegrationActionState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1546,18 +1546,6 @@ The following state arguments are supported:
 
 
 <h4 id="integrationactionacknowledge">Integration<wbr>Action<wbr>Acknowledge</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/input/#IntegrationActionAcknowledge">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/output/#IntegrationActionAcknowledge">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationActionAcknowledgeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationActionAcknowledgeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Inputs.IntegrationActionAcknowledgeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Outputs.IntegrationActionAcknowledge.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1876,18 +1864,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="integrationactionacknowledgefilter">Integration<wbr>Action<wbr>Acknowledge<wbr>Filter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/input/#IntegrationActionAcknowledgeFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/output/#IntegrationActionAcknowledgeFilter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationActionAcknowledgeFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationActionAcknowledgeFilterOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Inputs.IntegrationActionAcknowledgeFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Outputs.IntegrationActionAcknowledgeFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1990,18 +1966,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="integrationactionacknowledgefiltercondition">Integration<wbr>Action<wbr>Acknowledge<wbr>Filter<wbr>Condition</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/input/#IntegrationActionAcknowledgeFilterCondition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/output/#IntegrationActionAcknowledgeFilterCondition">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationActionAcknowledgeFilterConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationActionAcknowledgeFilterConditionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Inputs.IntegrationActionAcknowledgeFilterConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Outputs.IntegrationActionAcknowledgeFilterCondition.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2248,18 +2212,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="integrationactionaddnote">Integration<wbr>Action<wbr>Add<wbr>Note</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/input/#IntegrationActionAddNote">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/output/#IntegrationActionAddNote">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationActionAddNoteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationActionAddNoteOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Inputs.IntegrationActionAddNoteArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Outputs.IntegrationActionAddNote.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2578,18 +2530,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="integrationactionaddnotefilter">Integration<wbr>Action<wbr>Add<wbr>Note<wbr>Filter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/input/#IntegrationActionAddNoteFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/output/#IntegrationActionAddNoteFilter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationActionAddNoteFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationActionAddNoteFilterOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Inputs.IntegrationActionAddNoteFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Outputs.IntegrationActionAddNoteFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2692,18 +2632,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="integrationactionaddnotefiltercondition">Integration<wbr>Action<wbr>Add<wbr>Note<wbr>Filter<wbr>Condition</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/input/#IntegrationActionAddNoteFilterCondition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/output/#IntegrationActionAddNoteFilterCondition">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationActionAddNoteFilterConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationActionAddNoteFilterConditionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Inputs.IntegrationActionAddNoteFilterConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Outputs.IntegrationActionAddNoteFilterCondition.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2950,18 +2878,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="integrationactionclose">Integration<wbr>Action<wbr>Close</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/input/#IntegrationActionClose">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/output/#IntegrationActionClose">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationActionCloseArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationActionCloseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Inputs.IntegrationActionCloseArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Outputs.IntegrationActionClose.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3280,18 +3196,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="integrationactionclosefilter">Integration<wbr>Action<wbr>Close<wbr>Filter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/input/#IntegrationActionCloseFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/output/#IntegrationActionCloseFilter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationActionCloseFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationActionCloseFilterOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Inputs.IntegrationActionCloseFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Outputs.IntegrationActionCloseFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3394,18 +3298,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="integrationactionclosefiltercondition">Integration<wbr>Action<wbr>Close<wbr>Filter<wbr>Condition</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/input/#IntegrationActionCloseFilterCondition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/output/#IntegrationActionCloseFilterCondition">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationActionCloseFilterConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationActionCloseFilterConditionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Inputs.IntegrationActionCloseFilterConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Outputs.IntegrationActionCloseFilterCondition.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3652,18 +3544,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="integrationactioncreate">Integration<wbr>Action<wbr>Create</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/input/#IntegrationActionCreate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/output/#IntegrationActionCreate">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationActionCreateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationActionCreateOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Inputs.IntegrationActionCreateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Outputs.IntegrationActionCreate.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4602,18 +4482,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="integrationactioncreatefilter">Integration<wbr>Action<wbr>Create<wbr>Filter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/input/#IntegrationActionCreateFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/output/#IntegrationActionCreateFilter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationActionCreateFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationActionCreateFilterOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Inputs.IntegrationActionCreateFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Outputs.IntegrationActionCreateFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4716,18 +4584,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="integrationactioncreatefiltercondition">Integration<wbr>Action<wbr>Create<wbr>Filter<wbr>Condition</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/input/#IntegrationActionCreateFilterCondition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/output/#IntegrationActionCreateFilterCondition">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationActionCreateFilterConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationActionCreateFilterConditionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Inputs.IntegrationActionCreateFilterConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Outputs.IntegrationActionCreateFilterCondition.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4974,18 +4830,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="integrationactioncreateresponder">Integration<wbr>Action<wbr>Create<wbr>Responder</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/input/#IntegrationActionCreateResponder">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/output/#IntegrationActionCreateResponder">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationActionCreateResponderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationActionCreateResponderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Inputs.IntegrationActionCreateResponderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Outputs.IntegrationActionCreateResponder.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5092,18 +4936,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="integrationactionignore">Integration<wbr>Action<wbr>Ignore</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/input/#IntegrationActionIgnore">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/output/#IntegrationActionIgnore">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationActionIgnoreArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationActionIgnoreOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Inputs.IntegrationActionIgnoreArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Outputs.IntegrationActionIgnore.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5302,18 +5134,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="integrationactionignorefilter">Integration<wbr>Action<wbr>Ignore<wbr>Filter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/input/#IntegrationActionIgnoreFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/output/#IntegrationActionIgnoreFilter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationActionIgnoreFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationActionIgnoreFilterOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Inputs.IntegrationActionIgnoreFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Outputs.IntegrationActionIgnoreFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5416,18 +5236,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="integrationactionignorefiltercondition">Integration<wbr>Action<wbr>Ignore<wbr>Filter<wbr>Condition</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/input/#IntegrationActionIgnoreFilterCondition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/types/output/#IntegrationActionIgnoreFilterCondition">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationActionIgnoreFilterConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#IntegrationActionIgnoreFilterConditionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Inputs.IntegrationActionIgnoreFilterConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.Outputs.IntegrationActionIgnoreFilterCondition.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
