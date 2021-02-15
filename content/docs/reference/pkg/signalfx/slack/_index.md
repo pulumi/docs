@@ -23,6 +23,6 @@ Explore the resources and functions of the slack module in the SignalFx package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/splunk-terraform/terraform-provider-signalfx).</dd>
 	<dt>Version</dt>
-	<dd>4.2.0</dd>
+	<dd>4.3.0</dd>
 </dl>
 
