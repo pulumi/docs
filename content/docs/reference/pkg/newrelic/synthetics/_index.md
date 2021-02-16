@@ -34,6 +34,6 @@ Explore the resources and functions of the synthetics module in the New Relic pa
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`newrelic` Terraform Provider](https://github.com/newrelic/terraform-provider-newrelic).</dd>
 	<dt>Version</dt>
-	<dd>3.13.0</dd>
+	<dd>3.13.1</dd>
 </dl>
 
