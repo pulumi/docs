@@ -138,6 +138,8 @@ func main() {
 
 {{% example csharp %}}
 ```csharp
+using System.Collections.Generic;
+using System.Text.Json;
 using Pulumi;
 using Aws = Pulumi.Aws;
 
@@ -147,21 +149,24 @@ class MyStack : Stack
     {
         var testRole = new Aws.Iam.Role("testRole", new Aws.Iam.RoleArgs
         {
-            AssumeRolePolicy = @"{
-  ""Version"": ""2012-10-17"",
-  ""Statement"": [
-    {
-      ""Action"": ""sts:AssumeRole"",
-      ""Principal"": {
-        ""Service"": ""ec2.amazonaws.com""
-      },
-      ""Effect"": ""Allow"",
-      ""Sid"": """"
-    }
-  ]
-}
-
-",
+            AssumeRolePolicy = JsonSerializer.Serialize(new Dictionary<string, object?>
+            {
+                { "Version", "2012-10-17" },
+                { "Statement", new[]
+                    {
+                        new Dictionary<string, object?>
+                        {
+                            { "Action", "sts:AssumeRole" },
+                            { "Effect", "Allow" },
+                            { "Sid", "" },
+                            { "Principal", new Dictionary<string, object?>
+                            {
+                                { "Service", "ec2.amazonaws.com" },
+                            } },
+                        },
+                    }
+                 },
+            }),
             Tags = 
             {
                 { "tag-key", "tag-value" },
@@ -179,7 +184,7 @@ class MyStack : Stack
 package main
 
 import (
-	"fmt"
+	"encoding/json"
 
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
@@ -187,8 +192,25 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		tmpJSON0, err := json.Marshal(map[string]interface{}{
+			"Version": "2012-10-17",
+			"Statement": []map[string]interface{}{
+				map[string]interface{}{
+					"Action": "sts:AssumeRole",
+					"Effect": "Allow",
+					"Sid":    "",
+					"Principal": map[string]interface{}{
+						"Service": "ec2.amazonaws.com",
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		json0 := string(tmpJSON0)
 		_, err := iam.NewRole(ctx, "testRole", &iam.RoleArgs{
-			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"ec2.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n", "\n")),
+			AssumeRolePolicy: pulumi.String(json0),
 			Tags: pulumi.StringMap{
 				"tag-key": pulumi.String("tag-value"),
 			},
@@ -206,24 +228,21 @@ func main() {
 {{% example python %}}
 ```python
 import pulumi
+import json
 import pulumi_aws as aws
 
 test_role = aws.iam.Role("testRole",
-    assume_role_policy="""{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": "sts:AssumeRole",
-      "Principal": {
-        "Service": "ec2.amazonaws.com"
-      },
-      "Effect": "Allow",
-      "Sid": ""
-    }
-  ]
-}
-
-""",
+    assume_role_policy=json.dumps({
+        "Version": "2012-10-17",
+        "Statement": [{
+            "Action": "sts:AssumeRole",
+            "Effect": "Allow",
+            "Sid": "",
+            "Principal": {
+                "Service": "ec2.amazonaws.com",
+            },
+        }],
+    }),
     tags={
         "tag-key": "tag-value",
     })
@@ -237,21 +256,18 @@ test_role = aws.iam.Role("testRole",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const testRole = new aws.iam.Role("test_role", {
-    assumeRolePolicy: `{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": "sts:AssumeRole",
-      "Principal": {
-        "Service": "ec2.amazonaws.com"
-      },
-      "Effect": "Allow",
-      "Sid": ""
-    }
-  ]
-}
-`,
+const testRole = new aws.iam.Role("testRole", {
+    assumeRolePolicy: JSON.stringify({
+        Version: "2012-10-17",
+        Statement: [{
+            Action: "sts:AssumeRole",
+            Effect: "Allow",
+            Sid: "",
+            Principal: {
+                Service: "ec2.amazonaws.com",
+            },
+        }],
+    }),
     tags: {
         "tag-key": "tag-value",
     },

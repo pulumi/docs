@@ -19,6 +19,8 @@ Attaches a policy to an S3 bucket resource.
 ### Basic Usage
 {{% example csharp %}}
 ```csharp
+using System.Collections.Generic;
+using System.Text.Json;
 using Pulumi;
 using Aws = Pulumi.Aws;
 
@@ -32,23 +34,40 @@ class MyStack : Stack
         var bucketPolicy = new Aws.S3.BucketPolicy("bucketPolicy", new Aws.S3.BucketPolicyArgs
         {
             Bucket = bucket.Id,
-            Policy = @"{
-  ""Version"": ""2012-10-17"",
-  ""Id"": ""MYBUCKETPOLICY"",
-  ""Statement"": [
-    {
-      ""Sid"": ""IPAllow"",
-      ""Effect"": ""Deny"",
-      ""Principal"": ""*"",
-      ""Action"": ""s3:*"",
-      ""Resource"": ""arn:aws:s3:::my_tf_test_bucket/*"",
-      ""Condition"": {
-         ""IpAddress"": {""aws:SourceIp"": ""8.8.8.8/32""}
-      }
-    }
-  ]
-}
-",
+            Policy = Output.Tuple(bucket.Arn, bucket.Arn).Apply(values =>
+            {
+                var bucketArn = values.Item1;
+                var bucketArn1 = values.Item2;
+                return JsonSerializer.Serialize(new Dictionary<string, object?>
+                {
+                    { "Version", "2012-10-17" },
+                    { "Id", "MYBUCKETPOLICY" },
+                    { "Statement", new[]
+                        {
+                            new Dictionary<string, object?>
+                            {
+                                { "Sid", "IPAllow" },
+                                { "Effect", "Deny" },
+                                { "Principal", "*" },
+                                { "Action", "s3:*" },
+                                { "Resource", new[]
+                                    {
+                                        bucketArn,
+                                        $"{bucketArn1}/*",
+                                    }
+                                 },
+                                { "Condition", new Dictionary<string, object?>
+                                {
+                                    { "IPAddress", new Dictionary<string, object?>
+                                    {
+                                        { "aws:SourceIp", "8.8.8.8/32" },
+                                    } },
+                                } },
+                            },
+                        }
+                     },
+                });
+            }),
         });
     }
 
@@ -62,6 +81,7 @@ class MyStack : Stack
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
@@ -76,7 +96,37 @@ func main() {
 		}
 		_, err = s3.NewBucketPolicy(ctx, "bucketPolicy", &s3.BucketPolicyArgs{
 			Bucket: bucket.ID(),
-			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Id\": \"MYBUCKETPOLICY\",\n", "  \"Statement\": [\n", "    {\n", "      \"Sid\": \"IPAllow\",\n", "      \"Effect\": \"Deny\",\n", "      \"Principal\": \"*\",\n", "      \"Action\": \"s3:*\",\n", "      \"Resource\": \"arn:aws:s3:::my_tf_test_bucket/*\",\n", "      \"Condition\": {\n", "         \"IpAddress\": {\"aws:SourceIp\": \"8.8.8.8/32\"}\n", "      }\n", "    }\n", "  ]\n", "}\n")),
+			Policy: pulumi.All(bucket.Arn, bucket.Arn).ApplyT(func(_args []interface{}) (pulumi.String, error) {
+				bucketArn := _args[0].(string)
+				bucketArn1 := _args[1].(string)
+				var _zero pulumi.String
+				tmpJSON0, err := json.Marshal(map[string]interface{}{
+					"Version": "2012-10-17",
+					"Id":      "MYBUCKETPOLICY",
+					"Statement": []map[string]interface{}{
+						map[string]interface{}{
+							"Sid":       "IPAllow",
+							"Effect":    "Deny",
+							"Principal": "*",
+							"Action":    "s3:*",
+							"Resource": []string{
+								bucketArn,
+								fmt.Sprintf("%v%v", bucketArn1, "/*"),
+							},
+							"Condition": map[string]interface{}{
+								"IPAddress": map[string]interface{}{
+									"aws:SourceIp": "8.8.8.8/32",
+								},
+							},
+						},
+					},
+				})
+				if err != nil {
+					return _zero, err
+				}
+				json0 := string(tmpJSON0)
+				return pulumi.String(json0), nil
+			}).(pulumi.StringOutput),
 		})
 		if err != nil {
 			return err
@@ -91,28 +141,31 @@ func main() {
 {{% example python %}}
 ```python
 import pulumi
+import json
 import pulumi_aws as aws
 
 bucket = aws.s3.Bucket("bucket")
 bucket_policy = aws.s3.BucketPolicy("bucketPolicy",
     bucket=bucket.id,
-    policy="""{
-  "Version": "2012-10-17",
-  "Id": "MYBUCKETPOLICY",
-  "Statement": [
-    {
-      "Sid": "IPAllow",
-      "Effect": "Deny",
-      "Principal": "*",
-      "Action": "s3:*",
-      "Resource": "arn:aws:s3:::my_tf_test_bucket/*",
-      "Condition": {
-         "IpAddress": {"aws:SourceIp": "8.8.8.8/32"}
-      }
-    }
-  ]
-}
-""")
+    policy=pulumi.Output.all(bucket.arn, bucket.arn).apply(lambda bucketArn, bucketArn1: json.dumps({
+        "Version": "2012-10-17",
+        "Id": "MYBUCKETPOLICY",
+        "Statement": [{
+            "Sid": "IPAllow",
+            "Effect": "Deny",
+            "Principal": "*",
+            "Action": "s3:*",
+            "Resource": [
+                bucket_arn,
+                f"{bucket_arn1}/*",
+            ],
+            "Condition": {
+                "IPAddress": {
+                    "aws:SourceIp": "8.8.8.8/32",
+                },
+            },
+        }],
+    })))
 ```
 
 {{% /example %}}
@@ -126,23 +179,25 @@ import * as aws from "@pulumi/aws";
 const bucket = new aws.s3.Bucket("bucket", {});
 const bucketPolicy = new aws.s3.BucketPolicy("bucketPolicy", {
     bucket: bucket.id,
-    policy: `{
-  "Version": "2012-10-17",
-  "Id": "MYBUCKETPOLICY",
-  "Statement": [
-    {
-      "Sid": "IPAllow",
-      "Effect": "Deny",
-      "Principal": "*",
-      "Action": "s3:*",
-      "Resource": "arn:aws:s3:::my_tf_test_bucket/*",
-      "Condition": {
-         "IpAddress": {"aws:SourceIp": "8.8.8.8/32"}
-      }
-    }
-  ]
-}
-`,
+    policy: pulumi.all([bucket.arn, bucket.arn]).apply(([bucketArn, bucketArn1]) => JSON.stringify({
+        Version: "2012-10-17",
+        Id: "MYBUCKETPOLICY",
+        Statement: [{
+            Sid: "IPAllow",
+            Effect: "Deny",
+            Principal: "*",
+            Action: "s3:*",
+            Resource: [
+                bucketArn,
+                `${bucketArn1}/*`,
+            ],
+            Condition: {
+                IPAddress: {
+                    "aws:SourceIp": "8.8.8.8/32",
+                },
+            },
+        }],
+    })),
 });
 ```
 
@@ -349,7 +404,7 @@ The BucketPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string | string</span>
     </dt>
-    <dd>{{% md %}}The text of the policy.
+    <dd>{{% md %}}The text of the policy. Note: Bucket policies are limited to 20 KB in size.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -375,7 +430,7 @@ The BucketPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string | string</span>
     </dt>
-    <dd>{{% md %}}The text of the policy.
+    <dd>{{% md %}}The text of the policy. Note: Bucket policies are limited to 20 KB in size.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -401,7 +456,7 @@ The BucketPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string | Policy<wbr>Document</span>
     </dt>
-    <dd>{{% md %}}The text of the policy.
+    <dd>{{% md %}}The text of the policy. Note: Bucket policies are limited to 20 KB in size.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -427,7 +482,7 @@ The BucketPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str | str</span>
     </dt>
-    <dd>{{% md %}}The text of the policy.
+    <dd>{{% md %}}The text of the policy. Note: Bucket policies are limited to 20 KB in size.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -643,7 +698,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | string</span>
     </dt>
-    <dd>{{% md %}}The text of the policy.
+    <dd>{{% md %}}The text of the policy. Note: Bucket policies are limited to 20 KB in size.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -669,7 +724,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | string</span>
     </dt>
-    <dd>{{% md %}}The text of the policy.
+    <dd>{{% md %}}The text of the policy. Note: Bucket policies are limited to 20 KB in size.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -695,7 +750,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | Policy<wbr>Document</span>
     </dt>
-    <dd>{{% md %}}The text of the policy.
+    <dd>{{% md %}}The text of the policy. Note: Bucket policies are limited to 20 KB in size.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -721,7 +776,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str | str</span>
     </dt>
-    <dd>{{% md %}}The text of the policy.
+    <dd>{{% md %}}The text of the policy. Note: Bucket policies are limited to 20 KB in size.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

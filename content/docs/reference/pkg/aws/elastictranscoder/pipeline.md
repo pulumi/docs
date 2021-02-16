@@ -745,7 +745,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ARN of the Elastictranscoder pipeline.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -769,7 +770,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ARN of the Elastictranscoder pipeline.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -793,7 +795,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ARN of the Elastictranscoder pipeline.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -817,7 +820,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ARN of the Elastictranscoder pipeline.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -964,7 +968,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ARN of the Elastictranscoder pipeline.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_awskmskeyarn_csharp">
@@ -1079,7 +1084,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ARN of the Elastictranscoder pipeline.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_awskmskeyarn_go">
@@ -1194,7 +1200,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ARN of the Elastictranscoder pipeline.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_awskmskeyarn_nodejs">
@@ -1309,7 +1316,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ARN of the Elastictranscoder pipeline.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_aws_kms_key_arn_python">
@@ -1445,7 +1453,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon S3 storage class, Standard or ReducedRedundancy, that you want Elastic Transcoder to assign to the files and playlists that it stores in your Amazon S3 bucket.
+    <dd>{{% md %}}The Amazon S3 storage class, `Standard` or `ReducedRedundancy`, that you want Elastic Transcoder to assign to the files and playlists that it stores in your Amazon S3 bucket.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1471,7 +1479,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon S3 storage class, Standard or ReducedRedundancy, that you want Elastic Transcoder to assign to the files and playlists that it stores in your Amazon S3 bucket.
+    <dd>{{% md %}}The Amazon S3 storage class, `Standard` or `ReducedRedundancy`, that you want Elastic Transcoder to assign to the files and playlists that it stores in your Amazon S3 bucket.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1497,7 +1505,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon S3 storage class, Standard or ReducedRedundancy, that you want Elastic Transcoder to assign to the files and playlists that it stores in your Amazon S3 bucket.
+    <dd>{{% md %}}The Amazon S3 storage class, `Standard` or `ReducedRedundancy`, that you want Elastic Transcoder to assign to the files and playlists that it stores in your Amazon S3 bucket.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1523,7 +1531,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon S3 storage class, Standard or ReducedRedundancy, that you want Elastic Transcoder to assign to the files and playlists that it stores in your Amazon S3 bucket.
+    <dd>{{% md %}}The Amazon S3 storage class, `Standard` or `ReducedRedundancy`, that you want Elastic Transcoder to assign to the files and playlists that it stores in your Amazon S3 bucket.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1541,7 +1549,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The permission that you want to give to the AWS user that you specified in `content_config_permissions.grantee`
+    <dd>{{% md %}}The permission that you want to give to the AWS user that you specified in `content_config_permissions.grantee`. Valid values are `Read`, `ReadAcp`, `WriteAcp` or `FullControl`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1577,7 +1585,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The permission that you want to give to the AWS user that you specified in `content_config_permissions.grantee`
+    <dd>{{% md %}}The permission that you want to give to the AWS user that you specified in `content_config_permissions.grantee`. Valid values are `Read`, `ReadAcp`, `WriteAcp` or `FullControl`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1613,7 +1621,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The permission that you want to give to the AWS user that you specified in `content_config_permissions.grantee`
+    <dd>{{% md %}}The permission that you want to give to the AWS user that you specified in `content_config_permissions.grantee`. Valid values are `Read`, `ReadAcp`, `WriteAcp` or `FullControl`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1649,7 +1657,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The permission that you want to give to the AWS user that you specified in `content_config_permissions.grantee`
+    <dd>{{% md %}}The permission that you want to give to the AWS user that you specified in `content_config_permissions.grantee`. Valid values are `Read`, `ReadAcp`, `WriteAcp` or `FullControl`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1979,7 +1987,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The permission that you want to give to the AWS user that you specified in `thumbnail_config_permissions.grantee`.
+    <dd>{{% md %}}The permission that you want to give to the AWS user that you specified in `thumbnail_config_permissions.grantee`. Valid values are `Read`, `ReadAcp`, `WriteAcp` or `FullControl`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1999,7 +2007,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specify the type of value that appears in the `thumbnail_config_permissions.grantee` object.
+    <dd>{{% md %}}Specify the type of value that appears in the `thumbnail_config_permissions.grantee` object. Valid values are `Canonical`, `Email` or `Group`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2015,7 +2023,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The permission that you want to give to the AWS user that you specified in `thumbnail_config_permissions.grantee`.
+    <dd>{{% md %}}The permission that you want to give to the AWS user that you specified in `thumbnail_config_permissions.grantee`. Valid values are `Read`, `ReadAcp`, `WriteAcp` or `FullControl`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2035,7 +2043,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specify the type of value that appears in the `thumbnail_config_permissions.grantee` object.
+    <dd>{{% md %}}Specify the type of value that appears in the `thumbnail_config_permissions.grantee` object. Valid values are `Canonical`, `Email` or `Group`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2051,7 +2059,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The permission that you want to give to the AWS user that you specified in `thumbnail_config_permissions.grantee`.
+    <dd>{{% md %}}The permission that you want to give to the AWS user that you specified in `thumbnail_config_permissions.grantee`. Valid values are `Read`, `ReadAcp`, `WriteAcp` or `FullControl`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2071,7 +2079,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specify the type of value that appears in the `thumbnail_config_permissions.grantee` object.
+    <dd>{{% md %}}Specify the type of value that appears in the `thumbnail_config_permissions.grantee` object. Valid values are `Canonical`, `Email` or `Group`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2087,7 +2095,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The permission that you want to give to the AWS user that you specified in `thumbnail_config_permissions.grantee`.
+    <dd>{{% md %}}The permission that you want to give to the AWS user that you specified in `thumbnail_config_permissions.grantee`. Valid values are `Read`, `ReadAcp`, `WriteAcp` or `FullControl`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2107,7 +2115,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specify the type of value that appears in the `thumbnail_config_permissions.grantee` object.
+    <dd>{{% md %}}Specify the type of value that appears in the `thumbnail_config_permissions.grantee` object. Valid values are `Canonical`, `Email` or `Group`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

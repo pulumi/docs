@@ -19,6 +19,8 @@ Provides an IoT policy.
 
 {{% example csharp %}}
 ```csharp
+using System.Collections.Generic;
+using System.Text.Json;
 using Pulumi;
 using Aws = Pulumi.Aws;
 
@@ -28,20 +30,24 @@ class MyStack : Stack
     {
         var pubsub = new Aws.Iot.Policy("pubsub", new Aws.Iot.PolicyArgs
         {
-            Policy = @"{
-  ""Version"": ""2012-10-17"",
-  ""Statement"": [
-    {
-      ""Action"": [
-        ""iot:*""
-      ],
-      ""Effect"": ""Allow"",
-      ""Resource"": ""*""
-    }
-  ]
-}
-
-",
+            Policy = JsonSerializer.Serialize(new Dictionary<string, object?>
+            {
+                { "Version", "2012-10-17" },
+                { "Statement", new[]
+                    {
+                        new Dictionary<string, object?>
+                        {
+                            { "Action", new[]
+                                {
+                                    "iot:*",
+                                }
+                             },
+                            { "Effect", "Allow" },
+                            { "Resource", "*" },
+                        },
+                    }
+                 },
+            }),
         });
     }
 
@@ -55,7 +61,7 @@ class MyStack : Stack
 package main
 
 import (
-	"fmt"
+	"encoding/json"
 
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
@@ -63,8 +69,24 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		tmpJSON0, err := json.Marshal(map[string]interface{}{
+			"Version": "2012-10-17",
+			"Statement": []map[string]interface{}{
+				map[string]interface{}{
+					"Action": []string{
+						"iot:*",
+					},
+					"Effect":   "Allow",
+					"Resource": "*",
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		json0 := string(tmpJSON0)
 		_, err := iot.NewPolicy(ctx, "pubsub", &iot.PolicyArgs{
-			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\n", "        \"iot:*\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": \"*\"\n", "    }\n", "  ]\n", "}\n", "\n")),
+			Policy: pulumi.String(json0),
 		})
 		if err != nil {
 			return err
@@ -79,22 +101,17 @@ func main() {
 {{% example python %}}
 ```python
 import pulumi
+import json
 import pulumi_aws as aws
 
-pubsub = aws.iot.Policy("pubsub", policy="""{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": [
-        "iot:*"
-      ],
-      "Effect": "Allow",
-      "Resource": "*"
-    }
-  ]
-}
-
-""")
+pubsub = aws.iot.Policy("pubsub", policy=json.dumps({
+    "Version": "2012-10-17",
+    "Statement": [{
+        "Action": ["iot:*"],
+        "Effect": "Allow",
+        "Resource": "*",
+    }],
+}))
 ```
 
 {{% /example %}}
@@ -105,21 +122,14 @@ pubsub = aws.iot.Policy("pubsub", policy="""{
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const pubsub = new aws.iot.Policy("pubsub", {
-    policy: `{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": [
-        "iot:*"
-      ],
-      "Effect": "Allow",
-      "Resource": "*"
-    }
-  ]
-}
-`,
-});
+const pubsub = new aws.iot.Policy("pubsub", {policy: JSON.stringify({
+    Version: "2012-10-17",
+    Statement: [{
+        Action: ["iot:*"],
+        Effect: "Allow",
+        Resource: "*",
+    }],
+})});
 ```
 
 {{% /example %}}

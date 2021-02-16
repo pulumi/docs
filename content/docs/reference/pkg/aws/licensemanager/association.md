@@ -14,6 +14,168 @@ Provides a License Manager association.
 
 > **Note:** License configurations can also be associated with launch templates by specifying the `license_specifications` block for an `aws.ec2.LaunchTemplate`.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleAmi = Output.Create(Aws.GetAmi.InvokeAsync(new Aws.GetAmiArgs
+        {
+            MostRecent = true,
+            Owners = 
+            {
+                "amazon",
+            },
+            Filters = 
+            {
+                new Aws.Inputs.GetAmiFilterArgs
+                {
+                    Name = "name",
+                    Values = 
+                    {
+                        "amzn-ami-vpc-nat*",
+                    },
+                },
+            },
+        }));
+        var exampleInstance = new Aws.Ec2.Instance("exampleInstance", new Aws.Ec2.InstanceArgs
+        {
+            Ami = exampleAmi.Apply(exampleAmi => exampleAmi.Id),
+            InstanceType = "t2.micro",
+        });
+        var exampleLicenseConfiguration = new Aws.LicenseManager.LicenseConfiguration("exampleLicenseConfiguration", new Aws.LicenseManager.LicenseConfigurationArgs
+        {
+            LicenseCountingType = "Instance",
+        });
+        var exampleAssociation = new Aws.LicenseManager.Association("exampleAssociation", new Aws.LicenseManager.AssociationArgs
+        {
+            LicenseConfigurationArn = exampleLicenseConfiguration.Arn,
+            ResourceArn = exampleInstance.Arn,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/licensemanager"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := true
+		exampleAmi, err := aws.GetAmi(ctx, &aws.GetAmiArgs{
+			MostRecent: &opt0,
+			Owners: []string{
+				"amazon",
+			},
+			Filters: []aws.GetAmiFilter{
+				aws.GetAmiFilter{
+					Name: "name",
+					Values: []string{
+						"amzn-ami-vpc-nat*",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		exampleInstance, err := ec2.NewInstance(ctx, "exampleInstance", &ec2.InstanceArgs{
+			Ami:          pulumi.String(exampleAmi.Id),
+			InstanceType: pulumi.String("t2.micro"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleLicenseConfiguration, err := licensemanager.NewLicenseConfiguration(ctx, "exampleLicenseConfiguration", &licensemanager.LicenseConfigurationArgs{
+			LicenseCountingType: pulumi.String("Instance"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = licensemanager.NewAssociation(ctx, "exampleAssociation", &licensemanager.AssociationArgs{
+			LicenseConfigurationArn: exampleLicenseConfiguration.Arn,
+			ResourceArn:             exampleInstance.Arn,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_ami = aws.get_ami(most_recent=True,
+    owners=["amazon"],
+    filters=[aws.GetAmiFilterArgs(
+        name="name",
+        values=["amzn-ami-vpc-nat*"],
+    )])
+example_instance = aws.ec2.Instance("exampleInstance",
+    ami=example_ami.id,
+    instance_type="t2.micro")
+example_license_configuration = aws.licensemanager.LicenseConfiguration("exampleLicenseConfiguration", license_counting_type="Instance")
+example_association = aws.licensemanager.Association("exampleAssociation",
+    license_configuration_arn=example_license_configuration.arn,
+    resource_arn=example_instance.arn)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleAmi = aws.getAmi({
+    mostRecent: true,
+    owners: ["amazon"],
+    filters: [{
+        name: "name",
+        values: ["amzn-ami-vpc-nat*"],
+    }],
+});
+const exampleInstance = new aws.ec2.Instance("exampleInstance", {
+    ami: exampleAmi.then(exampleAmi => exampleAmi.id),
+    instanceType: "t2.micro",
+});
+const exampleLicenseConfiguration = new aws.licensemanager.LicenseConfiguration("exampleLicenseConfiguration", {licenseCountingType: "Instance"});
+const exampleAssociation = new aws.licensemanager.Association("exampleAssociation", {
+    licenseConfigurationArn: exampleLicenseConfiguration.arn,
+    resourceArn: exampleInstance.arn,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Association Resource {#create}

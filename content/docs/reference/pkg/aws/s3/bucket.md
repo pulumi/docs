@@ -12,7 +12,7 @@ meta_desc: "Documentation for the aws.s3.Bucket resource with examples, input pr
 
 Provides a S3 bucket resource.
 
-> This functionality is for managing S3 in an AWS Partition. To manage [S3 on Outposts](https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html), see the [`aws.s3control.Bucket` resource](https://www.terraform.io/docs/providers/aws/r/s3control_bucket.html).
+> This functionality is for managing S3 in an AWS Partition. To manage [S3 on Outposts](https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html), see the [`aws.s3control.Bucket`](https://www.terraform.io/docs/providers/aws/r/s3control_bucket.html) resource.
 
 {{% examples %}}
 ## Example Usage
@@ -4658,7 +4658,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}On a versioned bucket (versioning-enabled or versioning-suspended bucket), you can add this element in the lifecycle configuration to direct Amazon S3 to delete expired object delete markers.
+    <dd>{{% md %}}On a versioned bucket (versioning-enabled or versioning-suspended bucket), you can add this element in the lifecycle configuration to direct Amazon S3 to delete expired object delete markers. This cannot be specified with Days or Date in a Lifecycle Expiration Policy.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4694,7 +4694,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}On a versioned bucket (versioning-enabled or versioning-suspended bucket), you can add this element in the lifecycle configuration to direct Amazon S3 to delete expired object delete markers.
+    <dd>{{% md %}}On a versioned bucket (versioning-enabled or versioning-suspended bucket), you can add this element in the lifecycle configuration to direct Amazon S3 to delete expired object delete markers. This cannot be specified with Days or Date in a Lifecycle Expiration Policy.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4730,7 +4730,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}On a versioned bucket (versioning-enabled or versioning-suspended bucket), you can add this element in the lifecycle configuration to direct Amazon S3 to delete expired object delete markers.
+    <dd>{{% md %}}On a versioned bucket (versioning-enabled or versioning-suspended bucket), you can add this element in the lifecycle configuration to direct Amazon S3 to delete expired object delete markers. This cannot be specified with Days or Date in a Lifecycle Expiration Policy.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4766,7 +4766,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}On a versioned bucket (versioning-enabled or versioning-suspended bucket), you can add this element in the lifecycle configuration to direct Amazon S3 to delete expired object delete markers.
+    <dd>{{% md %}}On a versioned bucket (versioning-enabled or versioning-suspended bucket), you can add this element in the lifecycle configuration to direct Amazon S3 to delete expired object delete markers. This cannot be specified with Days or Date in a Lifecycle Expiration Policy.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

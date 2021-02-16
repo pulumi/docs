@@ -333,7 +333,7 @@ The InstanceProfile resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The profile's name. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}Name of the instance profile. If omitted, this provider will assign a random, unique name. Conflicts with `name_prefix`. Can be a string of characters consisting of upper and lowercase alphanumeric characters and these special characters: `_`, `+`, `=`, `,`, `.`, `@`, `-`. Spaces are not allowed.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -353,7 +353,7 @@ The InstanceProfile resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path in which to create the profile.
+    <dd>{{% md %}}Path to the instance profile. For more information about paths, see [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) in the IAM User Guide. Can be a string of characters consisting of either a forward slash (`/`) by itself or a string that must begin and end with forward slashes. Can include any ASCII character from the ! (\u0021) through the DEL character (\u007F), including most punctuation characters, digits, and upper and lowercase letters.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -363,7 +363,7 @@ The InstanceProfile resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string | string</span>
     </dt>
-    <dd>{{% md %}}The role name to include in the profile.
+    <dd>{{% md %}}Name of the role to add to the profile.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -379,7 +379,7 @@ The InstanceProfile resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The profile's name. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}Name of the instance profile. If omitted, this provider will assign a random, unique name. Conflicts with `name_prefix`. Can be a string of characters consisting of upper and lowercase alphanumeric characters and these special characters: `_`, `+`, `=`, `,`, `.`, `@`, `-`. Spaces are not allowed.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -399,7 +399,7 @@ The InstanceProfile resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path in which to create the profile.
+    <dd>{{% md %}}Path to the instance profile. For more information about paths, see [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) in the IAM User Guide. Can be a string of characters consisting of either a forward slash (`/`) by itself or a string that must begin and end with forward slashes. Can include any ASCII character from the ! (\u0021) through the DEL character (\u007F), including most punctuation characters, digits, and upper and lowercase letters.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -409,7 +409,7 @@ The InstanceProfile resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string | string</span>
     </dt>
-    <dd>{{% md %}}The role name to include in the profile.
+    <dd>{{% md %}}Name of the role to add to the profile.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -425,7 +425,7 @@ The InstanceProfile resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The profile's name. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}Name of the instance profile. If omitted, this provider will assign a random, unique name. Conflicts with `name_prefix`. Can be a string of characters consisting of upper and lowercase alphanumeric characters and these special characters: `_`, `+`, `=`, `,`, `.`, `@`, `-`. Spaces are not allowed.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -445,7 +445,7 @@ The InstanceProfile resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path in which to create the profile.
+    <dd>{{% md %}}Path to the instance profile. For more information about paths, see [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) in the IAM User Guide. Can be a string of characters consisting of either a forward slash (`/`) by itself or a string that must begin and end with forward slashes. Can include any ASCII character from the ! (\u0021) through the DEL character (\u007F), including most punctuation characters, digits, and upper and lowercase letters.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -455,7 +455,7 @@ The InstanceProfile resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string | Role</span>
     </dt>
-    <dd>{{% md %}}The role name to include in the profile.
+    <dd>{{% md %}}Name of the role to add to the profile.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -471,7 +471,7 @@ The InstanceProfile resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The profile's name. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}Name of the instance profile. If omitted, this provider will assign a random, unique name. Conflicts with `name_prefix`. Can be a string of characters consisting of upper and lowercase alphanumeric characters and these special characters: `_`, `+`, `=`, `,`, `.`, `@`, `-`. Spaces are not allowed.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -491,7 +491,7 @@ The InstanceProfile resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Path in which to create the profile.
+    <dd>{{% md %}}Path to the instance profile. For more information about paths, see [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) in the IAM User Guide. Can be a string of characters consisting of either a forward slash (`/`) by itself or a string that must begin and end with forward slashes. Can include any ASCII character from the ! (\u0021) through the DEL character (\u007F), including most punctuation characters, digits, and upper and lowercase letters.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -501,7 +501,7 @@ The InstanceProfile resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str | str</span>
     </dt>
-    <dd>{{% md %}}The role name to include in the profile.
+    <dd>{{% md %}}Name of the role to add to the profile.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -524,7 +524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN assigned by AWS to the instance profile.
+    <dd>{{% md %}}ARN assigned by AWS to the instance profile.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -534,7 +534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation timestamp of the instance profile.
+    <dd>{{% md %}}Creation timestamp of the instance profile.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -553,7 +553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The [unique ID][1] assigned by AWS.
+    <dd>{{% md %}}[Unique ID][1] assigned by AWS.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -569,7 +569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN assigned by AWS to the instance profile.
+    <dd>{{% md %}}ARN assigned by AWS to the instance profile.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -579,7 +579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation timestamp of the instance profile.
+    <dd>{{% md %}}Creation timestamp of the instance profile.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -598,7 +598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The [unique ID][1] assigned by AWS.
+    <dd>{{% md %}}[Unique ID][1] assigned by AWS.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -614,7 +614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN assigned by AWS to the instance profile.
+    <dd>{{% md %}}ARN assigned by AWS to the instance profile.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -624,7 +624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation timestamp of the instance profile.
+    <dd>{{% md %}}Creation timestamp of the instance profile.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -643,7 +643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The [unique ID][1] assigned by AWS.
+    <dd>{{% md %}}[Unique ID][1] assigned by AWS.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -659,7 +659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN assigned by AWS to the instance profile.
+    <dd>{{% md %}}ARN assigned by AWS to the instance profile.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -669,7 +669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The creation timestamp of the instance profile.
+    <dd>{{% md %}}Creation timestamp of the instance profile.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -688,7 +688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The [unique ID][1] assigned by AWS.
+    <dd>{{% md %}}[Unique ID][1] assigned by AWS.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -827,7 +827,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN assigned by AWS to the instance profile.
+    <dd>{{% md %}}ARN assigned by AWS to the instance profile.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -837,7 +837,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation timestamp of the instance profile.
+    <dd>{{% md %}}Creation timestamp of the instance profile.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -847,7 +847,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The profile's name. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}Name of the instance profile. If omitted, this provider will assign a random, unique name. Conflicts with `name_prefix`. Can be a string of characters consisting of upper and lowercase alphanumeric characters and these special characters: `_`, `+`, `=`, `,`, `.`, `@`, `-`. Spaces are not allowed.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -867,7 +867,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path in which to create the profile.
+    <dd>{{% md %}}Path to the instance profile. For more information about paths, see [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) in the IAM User Guide. Can be a string of characters consisting of either a forward slash (`/`) by itself or a string that must begin and end with forward slashes. Can include any ASCII character from the ! (\u0021) through the DEL character (\u007F), including most punctuation characters, digits, and upper and lowercase letters.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -877,7 +877,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | string</span>
     </dt>
-    <dd>{{% md %}}The role name to include in the profile.
+    <dd>{{% md %}}Name of the role to add to the profile.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -887,7 +887,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The [unique ID][1] assigned by AWS.
+    <dd>{{% md %}}[Unique ID][1] assigned by AWS.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -903,7 +903,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN assigned by AWS to the instance profile.
+    <dd>{{% md %}}ARN assigned by AWS to the instance profile.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -913,7 +913,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation timestamp of the instance profile.
+    <dd>{{% md %}}Creation timestamp of the instance profile.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -923,7 +923,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The profile's name. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}Name of the instance profile. If omitted, this provider will assign a random, unique name. Conflicts with `name_prefix`. Can be a string of characters consisting of upper and lowercase alphanumeric characters and these special characters: `_`, `+`, `=`, `,`, `.`, `@`, `-`. Spaces are not allowed.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -943,7 +943,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path in which to create the profile.
+    <dd>{{% md %}}Path to the instance profile. For more information about paths, see [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) in the IAM User Guide. Can be a string of characters consisting of either a forward slash (`/`) by itself or a string that must begin and end with forward slashes. Can include any ASCII character from the ! (\u0021) through the DEL character (\u007F), including most punctuation characters, digits, and upper and lowercase letters.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -953,7 +953,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | string</span>
     </dt>
-    <dd>{{% md %}}The role name to include in the profile.
+    <dd>{{% md %}}Name of the role to add to the profile.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -963,7 +963,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The [unique ID][1] assigned by AWS.
+    <dd>{{% md %}}[Unique ID][1] assigned by AWS.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -979,7 +979,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN assigned by AWS to the instance profile.
+    <dd>{{% md %}}ARN assigned by AWS to the instance profile.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -989,7 +989,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation timestamp of the instance profile.
+    <dd>{{% md %}}Creation timestamp of the instance profile.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -999,7 +999,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The profile's name. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}Name of the instance profile. If omitted, this provider will assign a random, unique name. Conflicts with `name_prefix`. Can be a string of characters consisting of upper and lowercase alphanumeric characters and these special characters: `_`, `+`, `=`, `,`, `.`, `@`, `-`. Spaces are not allowed.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1019,7 +1019,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path in which to create the profile.
+    <dd>{{% md %}}Path to the instance profile. For more information about paths, see [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) in the IAM User Guide. Can be a string of characters consisting of either a forward slash (`/`) by itself or a string that must begin and end with forward slashes. Can include any ASCII character from the ! (\u0021) through the DEL character (\u007F), including most punctuation characters, digits, and upper and lowercase letters.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1029,7 +1029,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | Role</span>
     </dt>
-    <dd>{{% md %}}The role name to include in the profile.
+    <dd>{{% md %}}Name of the role to add to the profile.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1039,7 +1039,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The [unique ID][1] assigned by AWS.
+    <dd>{{% md %}}[Unique ID][1] assigned by AWS.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1055,7 +1055,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN assigned by AWS to the instance profile.
+    <dd>{{% md %}}ARN assigned by AWS to the instance profile.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1065,7 +1065,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The creation timestamp of the instance profile.
+    <dd>{{% md %}}Creation timestamp of the instance profile.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1075,7 +1075,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The profile's name. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}Name of the instance profile. If omitted, this provider will assign a random, unique name. Conflicts with `name_prefix`. Can be a string of characters consisting of upper and lowercase alphanumeric characters and these special characters: `_`, `+`, `=`, `,`, `.`, `@`, `-`. Spaces are not allowed.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1095,7 +1095,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Path in which to create the profile.
+    <dd>{{% md %}}Path to the instance profile. For more information about paths, see [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) in the IAM User Guide. Can be a string of characters consisting of either a forward slash (`/`) by itself or a string that must begin and end with forward slashes. Can include any ASCII character from the ! (\u0021) through the DEL character (\u007F), including most punctuation characters, digits, and upper and lowercase letters.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1105,7 +1105,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str | str</span>
     </dt>
-    <dd>{{% md %}}The role name to include in the profile.
+    <dd>{{% md %}}Name of the role to add to the profile.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1115,7 +1115,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The [unique ID][1] assigned by AWS.
+    <dd>{{% md %}}[Unique ID][1] assigned by AWS.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

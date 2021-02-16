@@ -369,6 +369,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="devicename_csharp">
+<a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) A name for the customer gateway device.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -440,6 +450,16 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) The gateway's Border Gateway Protocol (BGP) Autonomous System Number (ASN).
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="devicename_go">
+<a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) A name for the customer gateway device.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -517,6 +537,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="devicename_nodejs">
+<a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) A name for the customer gateway device.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -588,6 +618,16 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) The gateway's Border Gateway Protocol (BGP) Autonomous System Number (ASN).
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="device_name_python">
+<a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Optional) A name for the customer gateway device.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">

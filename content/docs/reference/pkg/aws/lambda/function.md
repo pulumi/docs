@@ -209,7 +209,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IAM role attached to the Lambda Function. This governs both who / what can invoke your Lambda Function, as well as what resources our Lambda Function has access to. See [Lambda Permission Model](https://docs.aws.amazon.com/lambda/latest/dg/intro-permission-model.html) for more details.
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the function's execution role. The role provides the function's identity and access to AWS services and resources.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -219,7 +219,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">Archive</span>
     </dt>
-    <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options and `image_uri` cannot be used.
+    <dd>{{% md %}}Path to the function's deployment package within the local filesystem. Conflicts with `image_uri`, `s3_bucket`, `s3_key`, and `s3_object_version`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -229,7 +229,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) for a Code Signing Configuration.
+    <dd>{{% md %}}To enable code signing for this function, specify the ARN of a code-signing configuration. A code-signing configuration includes a set of signing profiles, which define the trusted publishers for this function.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -239,7 +239,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Nested block to configure the function's *dead letter queue*. See details below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -259,7 +259,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Lambda environment's configuration settings. Fields documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -269,7 +269,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The connection settings for an EFS file system. Fields documented below. Before creating or updating Lambda functions with `file_system_config`, EFS mount targets much be in available lifecycle state. Use `depends_on` to explicitly declare this dependency. See [Using Amazon EFS with Lambda](https://docs.aws.amazon.com/lambda/latest/dg/services-efs.html).
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -279,7 +279,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The function [entrypoint](https://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events-create-test-function.html) in your code.
+    <dd>{{% md %}}Function [entrypoint](https://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events-create-test-function.html) in your code.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -289,7 +289,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionimageconfig">Function<wbr>Image<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Lambda OCI image configurations. Fields documented below. See [Using container images with Lambda](https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html)
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -299,7 +299,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ECR image URI containing the function's deployment package. Conflicts with `filename`, `s3_bucket`, `s3_key`, and `s3_object_version`.
+    <dd>{{% md %}}ECR image URI containing the function's deployment package. Conflicts with `filename`, `s3_bucket`, `s3_key`, and `s3_object_version`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -309,8 +309,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Optional) The ARN for the KMS encryption key.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="layers_csharp">
@@ -339,7 +338,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique name for your Lambda Function.
+    <dd>{{% md %}}Unique name for your Lambda Function.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -349,7 +348,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Lambda deployment package type. Valid values are `Zip` and `Image`. Defaults to `Zip`.
+    <dd>{{% md %}}Lambda deployment package type. Valid values are `Zip` and `Image`. Defaults to `Zip`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -369,7 +368,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
+    <dd>{{% md %}}Amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -379,7 +378,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#runtime">Pulumi.<wbr>Aws.<wbr>Lambda.<wbr>Runtime</a></span>
     </dt>
-    <dd>{{% md %}}See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
+    <dd>{{% md %}}Identifier of the function's runtime. See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -389,7 +388,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The S3 bucket location containing the function's deployment package. Conflicts with `filename` and `image_uri`. This bucket must reside in the same AWS region where you are creating the Lambda function.
+    <dd>{{% md %}}S3 bucket location containing the function's deployment package. Conflicts with `filename` and `image_uri`. This bucket must reside in the same AWS region where you are creating the Lambda function.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -399,7 +398,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The S3 key of an object containing the function's deployment package. Conflicts with `filename` and `image_uri`.
+    <dd>{{% md %}}S3 key of an object containing the function's deployment package. Conflicts with `filename` and `image_uri`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -409,7 +408,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object version containing the function's deployment package. Conflicts with `filename` and `image_uri`.
+    <dd>{{% md %}}Object version containing the function's deployment package. Conflicts with `filename` and `image_uri`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -419,8 +418,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base64-encoded representation of raw SHA-256 sum of the zip file, provided either via `filename` or `s3_*` parameters.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -429,7 +427,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the object.
+    <dd>{{% md %}}Map of tags to assign to the object.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -439,7 +437,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html)
+    <dd>{{% md %}}Amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -449,7 +447,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration block. Detailed below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="vpcconfig_csharp">
@@ -458,7 +457,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Provide this to allow your function to access your VPC. Fields documented below. See [Lambda in VPC](http://docs.aws.amazon.com/lambda/latest/dg/vpc.html)
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -474,7 +473,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IAM role attached to the Lambda Function. This governs both who / what can invoke your Lambda Function, as well as what resources our Lambda Function has access to. See [Lambda Permission Model](https://docs.aws.amazon.com/lambda/latest/dg/intro-permission-model.html) for more details.
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the function's execution role. The role provides the function's identity and access to AWS services and resources.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -484,7 +483,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">pulumi.<wbr>Archive</span>
     </dt>
-    <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options and `image_uri` cannot be used.
+    <dd>{{% md %}}Path to the function's deployment package within the local filesystem. Conflicts with `image_uri`, `s3_bucket`, `s3_key`, and `s3_object_version`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -494,7 +493,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) for a Code Signing Configuration.
+    <dd>{{% md %}}To enable code signing for this function, specify the ARN of a code-signing configuration. A code-signing configuration includes a set of signing profiles, which define the trusted publishers for this function.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -504,7 +503,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Nested block to configure the function's *dead letter queue*. See details below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -524,7 +523,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment</a></span>
     </dt>
-    <dd>{{% md %}}The Lambda environment's configuration settings. Fields documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -534,7 +533,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The connection settings for an EFS file system. Fields documented below. Before creating or updating Lambda functions with `file_system_config`, EFS mount targets much be in available lifecycle state. Use `depends_on` to explicitly declare this dependency. See [Using Amazon EFS with Lambda](https://docs.aws.amazon.com/lambda/latest/dg/services-efs.html).
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -544,7 +543,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The function [entrypoint](https://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events-create-test-function.html) in your code.
+    <dd>{{% md %}}Function [entrypoint](https://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events-create-test-function.html) in your code.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -554,7 +553,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionimageconfig">Function<wbr>Image<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The Lambda OCI image configurations. Fields documented below. See [Using container images with Lambda](https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html)
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -564,7 +563,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ECR image URI containing the function's deployment package. Conflicts with `filename`, `s3_bucket`, `s3_key`, and `s3_object_version`.
+    <dd>{{% md %}}ECR image URI containing the function's deployment package. Conflicts with `filename`, `s3_bucket`, `s3_key`, and `s3_object_version`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -574,8 +573,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Optional) The ARN for the KMS encryption key.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="layers_go">
@@ -604,7 +602,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique name for your Lambda Function.
+    <dd>{{% md %}}Unique name for your Lambda Function.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -614,7 +612,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Lambda deployment package type. Valid values are `Zip` and `Image`. Defaults to `Zip`.
+    <dd>{{% md %}}Lambda deployment package type. Valid values are `Zip` and `Image`. Defaults to `Zip`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -634,7 +632,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
+    <dd>{{% md %}}Amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -644,7 +642,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#runtime">Runtime</a></span>
     </dt>
-    <dd>{{% md %}}See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
+    <dd>{{% md %}}Identifier of the function's runtime. See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -654,7 +652,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The S3 bucket location containing the function's deployment package. Conflicts with `filename` and `image_uri`. This bucket must reside in the same AWS region where you are creating the Lambda function.
+    <dd>{{% md %}}S3 bucket location containing the function's deployment package. Conflicts with `filename` and `image_uri`. This bucket must reside in the same AWS region where you are creating the Lambda function.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -664,7 +662,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The S3 key of an object containing the function's deployment package. Conflicts with `filename` and `image_uri`.
+    <dd>{{% md %}}S3 key of an object containing the function's deployment package. Conflicts with `filename` and `image_uri`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -674,7 +672,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object version containing the function's deployment package. Conflicts with `filename` and `image_uri`.
+    <dd>{{% md %}}Object version containing the function's deployment package. Conflicts with `filename` and `image_uri`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -684,8 +682,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base64-encoded representation of raw SHA-256 sum of the zip file, provided either via `filename` or `s3_*` parameters.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -694,7 +691,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the object.
+    <dd>{{% md %}}Map of tags to assign to the object.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -704,7 +701,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html)
+    <dd>{{% md %}}Amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -714,7 +711,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration block. Detailed below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="vpcconfig_go">
@@ -723,7 +721,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Provide this to allow your function to access your VPC. Fields documented below. See [Lambda in VPC](http://docs.aws.amazon.com/lambda/latest/dg/vpc.html)
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -739,7 +737,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">ARN</span>
     </dt>
-    <dd>{{% md %}}IAM role attached to the Lambda Function. This governs both who / what can invoke your Lambda Function, as well as what resources our Lambda Function has access to. See [Lambda Permission Model](https://docs.aws.amazon.com/lambda/latest/dg/intro-permission-model.html) for more details.
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the function's execution role. The role provides the function's identity and access to AWS services and resources.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -749,7 +747,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">pulumi.asset.<wbr>Archive</span>
     </dt>
-    <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options and `image_uri` cannot be used.
+    <dd>{{% md %}}Path to the function's deployment package within the local filesystem. Conflicts with `image_uri`, `s3_bucket`, `s3_key`, and `s3_object_version`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -759,7 +757,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) for a Code Signing Configuration.
+    <dd>{{% md %}}To enable code signing for this function, specify the ARN of a code-signing configuration. A code-signing configuration includes a set of signing profiles, which define the trusted publishers for this function.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -769,7 +767,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Nested block to configure the function's *dead letter queue*. See details below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -789,7 +787,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment</a></span>
     </dt>
-    <dd>{{% md %}}The Lambda environment's configuration settings. Fields documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -799,7 +797,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The connection settings for an EFS file system. Fields documented below. Before creating or updating Lambda functions with `file_system_config`, EFS mount targets much be in available lifecycle state. Use `depends_on` to explicitly declare this dependency. See [Using Amazon EFS with Lambda](https://docs.aws.amazon.com/lambda/latest/dg/services-efs.html).
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -809,7 +807,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The function [entrypoint](https://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events-create-test-function.html) in your code.
+    <dd>{{% md %}}Function [entrypoint](https://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events-create-test-function.html) in your code.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -819,7 +817,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionimageconfig">Function<wbr>Image<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The Lambda OCI image configurations. Fields documented below. See [Using container images with Lambda](https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html)
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -829,7 +827,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ECR image URI containing the function's deployment package. Conflicts with `filename`, `s3_bucket`, `s3_key`, and `s3_object_version`.
+    <dd>{{% md %}}ECR image URI containing the function's deployment package. Conflicts with `filename`, `s3_bucket`, `s3_key`, and `s3_object_version`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -839,8 +837,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Optional) The ARN for the KMS encryption key.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="layers_nodejs">
@@ -869,7 +866,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique name for your Lambda Function.
+    <dd>{{% md %}}Unique name for your Lambda Function.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -879,7 +876,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Lambda deployment package type. Valid values are `Zip` and `Image`. Defaults to `Zip`.
+    <dd>{{% md %}}Lambda deployment package type. Valid values are `Zip` and `Image`. Defaults to `Zip`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -899,7 +896,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
+    <dd>{{% md %}}Amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -909,7 +906,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#runtime">Runtime</a></span>
     </dt>
-    <dd>{{% md %}}See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
+    <dd>{{% md %}}Identifier of the function's runtime. See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -919,7 +916,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The S3 bucket location containing the function's deployment package. Conflicts with `filename` and `image_uri`. This bucket must reside in the same AWS region where you are creating the Lambda function.
+    <dd>{{% md %}}S3 bucket location containing the function's deployment package. Conflicts with `filename` and `image_uri`. This bucket must reside in the same AWS region where you are creating the Lambda function.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -929,7 +926,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The S3 key of an object containing the function's deployment package. Conflicts with `filename` and `image_uri`.
+    <dd>{{% md %}}S3 key of an object containing the function's deployment package. Conflicts with `filename` and `image_uri`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -939,7 +936,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object version containing the function's deployment package. Conflicts with `filename` and `image_uri`.
+    <dd>{{% md %}}Object version containing the function's deployment package. Conflicts with `filename` and `image_uri`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -949,8 +946,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base64-encoded representation of raw SHA-256 sum of the zip file, provided either via `filename` or `s3_*` parameters.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -959,7 +955,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the object.
+    <dd>{{% md %}}Map of tags to assign to the object.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -969,7 +965,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html)
+    <dd>{{% md %}}Amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -979,7 +975,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration block. Detailed below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="vpcconfig_nodejs">
@@ -988,7 +985,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Provide this to allow your function to access your VPC. Fields documented below. See [Lambda in VPC](http://docs.aws.amazon.com/lambda/latest/dg/vpc.html)
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1004,7 +1001,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}IAM role attached to the Lambda Function. This governs both who / what can invoke your Lambda Function, as well as what resources our Lambda Function has access to. See [Lambda Permission Model](https://docs.aws.amazon.com/lambda/latest/dg/intro-permission-model.html) for more details.
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the function's execution role. The role provides the function's identity and access to AWS services and resources.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1014,7 +1011,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">pulumi.<wbr>Archive</span>
     </dt>
-    <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options and `image_uri` cannot be used.
+    <dd>{{% md %}}Path to the function's deployment package within the local filesystem. Conflicts with `image_uri`, `s3_bucket`, `s3_key`, and `s3_object_version`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1024,7 +1021,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) for a Code Signing Configuration.
+    <dd>{{% md %}}To enable code signing for this function, specify the ARN of a code-signing configuration. A code-signing configuration includes a set of signing profiles, which define the trusted publishers for this function.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1034,7 +1031,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Nested block to configure the function's *dead letter queue*. See details below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1054,7 +1051,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Lambda environment's configuration settings. Fields documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1064,7 +1061,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The connection settings for an EFS file system. Fields documented below. Before creating or updating Lambda functions with `file_system_config`, EFS mount targets much be in available lifecycle state. Use `depends_on` to explicitly declare this dependency. See [Using Amazon EFS with Lambda](https://docs.aws.amazon.com/lambda/latest/dg/services-efs.html).
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1074,7 +1071,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The function [entrypoint](https://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events-create-test-function.html) in your code.
+    <dd>{{% md %}}Function [entrypoint](https://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events-create-test-function.html) in your code.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1084,7 +1081,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionimageconfig">Function<wbr>Image<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Lambda OCI image configurations. Fields documented below. See [Using container images with Lambda](https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html)
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1094,7 +1091,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ECR image URI containing the function's deployment package. Conflicts with `filename`, `s3_bucket`, `s3_key`, and `s3_object_version`.
+    <dd>{{% md %}}ECR image URI containing the function's deployment package. Conflicts with `filename`, `s3_bucket`, `s3_key`, and `s3_object_version`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1104,8 +1101,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Optional) The ARN for the KMS encryption key.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="layers_python">
@@ -1134,7 +1130,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A unique name for your Lambda Function.
+    <dd>{{% md %}}Unique name for your Lambda Function.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1144,7 +1140,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Lambda deployment package type. Valid values are `Zip` and `Image`. Defaults to `Zip`.
+    <dd>{{% md %}}Lambda deployment package type. Valid values are `Zip` and `Image`. Defaults to `Zip`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1164,7 +1160,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
+    <dd>{{% md %}}Amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1174,7 +1170,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#runtime">Runtime</a></span>
     </dt>
-    <dd>{{% md %}}See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
+    <dd>{{% md %}}Identifier of the function's runtime. See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1184,7 +1180,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The S3 bucket location containing the function's deployment package. Conflicts with `filename` and `image_uri`. This bucket must reside in the same AWS region where you are creating the Lambda function.
+    <dd>{{% md %}}S3 bucket location containing the function's deployment package. Conflicts with `filename` and `image_uri`. This bucket must reside in the same AWS region where you are creating the Lambda function.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1194,7 +1190,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The S3 key of an object containing the function's deployment package. Conflicts with `filename` and `image_uri`.
+    <dd>{{% md %}}S3 key of an object containing the function's deployment package. Conflicts with `filename` and `image_uri`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1204,7 +1200,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The object version containing the function's deployment package. Conflicts with `filename` and `image_uri`.
+    <dd>{{% md %}}Object version containing the function's deployment package. Conflicts with `filename` and `image_uri`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1214,8 +1210,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Base64-encoded representation of raw SHA-256 sum of the zip file, provided either via `filename` or `s3_*` parameters.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -1224,7 +1219,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the object.
+    <dd>{{% md %}}Map of tags to assign to the object.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1234,7 +1229,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html)
+    <dd>{{% md %}}Amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1244,7 +1239,8 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration block. Detailed below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="vpc_config_python">
@@ -1253,7 +1249,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Provide this to allow your function to access your VPC. Fields documented below. See [Lambda in VPC](http://docs.aws.amazon.com/lambda/latest/dg/vpc.html)
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1276,7 +1272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1295,7 +1291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`
+    <dd>{{% md %}}ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1305,7 +1301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date this resource was last modified.
+    <dd>{{% md %}}Date this resource was last modified.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1315,8 +1311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) identifying your Lambda Function Version
-(if versioning is enabled via `publish = true`).
+    <dd>{{% md %}}ARN identifying your Lambda Function Version (if versioning is enabled via `publish = true`).
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1326,7 +1321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of a signing job.
+    <dd>{{% md %}}ARN of the signing job.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1336,7 +1331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) for a signing profile version.
+    <dd>{{% md %}}ARN of the signing profile version.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1346,7 +1341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The size in bytes of the function .zip file.
+    <dd>{{% md %}}Size in bytes of the function .zip file.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1357,6 +1352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Latest published version of your Lambda Function.
+* `vpc_config.vpc_id` - ID of the VPC.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1372,7 +1368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1391,7 +1387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`
+    <dd>{{% md %}}ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1401,7 +1397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date this resource was last modified.
+    <dd>{{% md %}}Date this resource was last modified.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1411,8 +1407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) identifying your Lambda Function Version
-(if versioning is enabled via `publish = true`).
+    <dd>{{% md %}}ARN identifying your Lambda Function Version (if versioning is enabled via `publish = true`).
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1422,7 +1417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of a signing job.
+    <dd>{{% md %}}ARN of the signing job.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1432,7 +1427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) for a signing profile version.
+    <dd>{{% md %}}ARN of the signing profile version.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1442,7 +1437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The size in bytes of the function .zip file.
+    <dd>{{% md %}}Size in bytes of the function .zip file.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1453,6 +1448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Latest published version of your Lambda Function.
+* `vpc_config.vpc_id` - ID of the VPC.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1468,7 +1464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1487,7 +1483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`
+    <dd>{{% md %}}ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1497,7 +1493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date this resource was last modified.
+    <dd>{{% md %}}Date this resource was last modified.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1507,8 +1503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) identifying your Lambda Function Version
-(if versioning is enabled via `publish = true`).
+    <dd>{{% md %}}ARN identifying your Lambda Function Version (if versioning is enabled via `publish = true`).
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1518,7 +1513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of a signing job.
+    <dd>{{% md %}}ARN of the signing job.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1528,7 +1523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) for a signing profile version.
+    <dd>{{% md %}}ARN of the signing profile version.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1538,7 +1533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The size in bytes of the function .zip file.
+    <dd>{{% md %}}Size in bytes of the function .zip file.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1549,6 +1544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Latest published version of your Lambda Function.
+* `vpc_config.vpc_id` - ID of the VPC.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1564,7 +1560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1583,7 +1579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`
+    <dd>{{% md %}}ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1593,7 +1589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The date this resource was last modified.
+    <dd>{{% md %}}Date this resource was last modified.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1603,8 +1599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) identifying your Lambda Function Version
-(if versioning is enabled via `publish = true`).
+    <dd>{{% md %}}ARN identifying your Lambda Function Version (if versioning is enabled via `publish = true`).
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1614,7 +1609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of a signing job.
+    <dd>{{% md %}}ARN of the signing job.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1624,7 +1619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) for a signing profile version.
+    <dd>{{% md %}}ARN of the signing profile version.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1634,7 +1629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The size in bytes of the function .zip file.
+    <dd>{{% md %}}Size in bytes of the function .zip file.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1645,6 +1640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Latest published version of your Lambda Function.
+* `vpc_config.vpc_id` - ID of the VPC.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1783,7 +1779,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1793,7 +1789,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Archive</span>
     </dt>
-    <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options and `image_uri` cannot be used.
+    <dd>{{% md %}}Path to the function's deployment package within the local filesystem. Conflicts with `image_uri`, `s3_bucket`, `s3_key`, and `s3_object_version`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1803,7 +1799,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) for a Code Signing Configuration.
+    <dd>{{% md %}}To enable code signing for this function, specify the ARN of a code-signing configuration. A code-signing configuration includes a set of signing profiles, which define the trusted publishers for this function.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1813,7 +1809,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Nested block to configure the function's *dead letter queue*. See details below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1833,7 +1829,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Lambda environment's configuration settings. Fields documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1843,7 +1839,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The connection settings for an EFS file system. Fields documented below. Before creating or updating Lambda functions with `file_system_config`, EFS mount targets much be in available lifecycle state. Use `depends_on` to explicitly declare this dependency. See [Using Amazon EFS with Lambda](https://docs.aws.amazon.com/lambda/latest/dg/services-efs.html).
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1853,7 +1849,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The function [entrypoint](https://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events-create-test-function.html) in your code.
+    <dd>{{% md %}}Function [entrypoint](https://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events-create-test-function.html) in your code.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1863,7 +1859,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionimageconfig">Function<wbr>Image<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Lambda OCI image configurations. Fields documented below. See [Using container images with Lambda](https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html)
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1873,7 +1869,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ECR image URI containing the function's deployment package. Conflicts with `filename`, `s3_bucket`, `s3_key`, and `s3_object_version`.
+    <dd>{{% md %}}ECR image URI containing the function's deployment package. Conflicts with `filename`, `s3_bucket`, `s3_key`, and `s3_object_version`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1883,7 +1879,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`
+    <dd>{{% md %}}ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1893,8 +1889,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Optional) The ARN for the KMS encryption key.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_lastmodified_csharp">
@@ -1903,7 +1898,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date this resource was last modified.
+    <dd>{{% md %}}Date this resource was last modified.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1933,7 +1928,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique name for your Lambda Function.
+    <dd>{{% md %}}Unique name for your Lambda Function.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1943,7 +1938,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Lambda deployment package type. Valid values are `Zip` and `Image`. Defaults to `Zip`.
+    <dd>{{% md %}}Lambda deployment package type. Valid values are `Zip` and `Image`. Defaults to `Zip`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1963,8 +1958,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) identifying your Lambda Function Version
-(if versioning is enabled via `publish = true`).
+    <dd>{{% md %}}ARN identifying your Lambda Function Version (if versioning is enabled via `publish = true`).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1974,7 +1968,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
+    <dd>{{% md %}}Amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1984,7 +1978,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IAM role attached to the Lambda Function. This governs both who / what can invoke your Lambda Function, as well as what resources our Lambda Function has access to. See [Lambda Permission Model](https://docs.aws.amazon.com/lambda/latest/dg/intro-permission-model.html) for more details.
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the function's execution role. The role provides the function's identity and access to AWS services and resources.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1994,7 +1988,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#runtime">Pulumi.<wbr>Aws.<wbr>Lambda.<wbr>Runtime</a></span>
     </dt>
-    <dd>{{% md %}}See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
+    <dd>{{% md %}}Identifier of the function's runtime. See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2004,7 +1998,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The S3 bucket location containing the function's deployment package. Conflicts with `filename` and `image_uri`. This bucket must reside in the same AWS region where you are creating the Lambda function.
+    <dd>{{% md %}}S3 bucket location containing the function's deployment package. Conflicts with `filename` and `image_uri`. This bucket must reside in the same AWS region where you are creating the Lambda function.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2014,7 +2008,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The S3 key of an object containing the function's deployment package. Conflicts with `filename` and `image_uri`.
+    <dd>{{% md %}}S3 key of an object containing the function's deployment package. Conflicts with `filename` and `image_uri`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2024,7 +2018,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object version containing the function's deployment package. Conflicts with `filename` and `image_uri`.
+    <dd>{{% md %}}Object version containing the function's deployment package. Conflicts with `filename` and `image_uri`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2034,7 +2028,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of a signing job.
+    <dd>{{% md %}}ARN of the signing job.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2044,7 +2038,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) for a signing profile version.
+    <dd>{{% md %}}ARN of the signing profile version.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2054,8 +2048,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base64-encoded representation of raw SHA-256 sum of the zip file, provided either via `filename` or `s3_*` parameters.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_sourcecodesize_csharp">
@@ -2064,7 +2057,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The size in bytes of the function .zip file.
+    <dd>{{% md %}}Size in bytes of the function .zip file.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2074,7 +2067,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the object.
+    <dd>{{% md %}}Map of tags to assign to the object.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2084,7 +2077,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html)
+    <dd>{{% md %}}Amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2094,7 +2087,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration block. Detailed below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_version_csharp">
@@ -2104,6 +2098,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Latest published version of your Lambda Function.
+* `vpc_config.vpc_id` - ID of the VPC.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2113,7 +2108,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Provide this to allow your function to access your VPC. Fields documented below. See [Lambda in VPC](http://docs.aws.amazon.com/lambda/latest/dg/vpc.html)
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2129,7 +2124,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2139,7 +2134,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">pulumi.<wbr>Archive</span>
     </dt>
-    <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options and `image_uri` cannot be used.
+    <dd>{{% md %}}Path to the function's deployment package within the local filesystem. Conflicts with `image_uri`, `s3_bucket`, `s3_key`, and `s3_object_version`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2149,7 +2144,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) for a Code Signing Configuration.
+    <dd>{{% md %}}To enable code signing for this function, specify the ARN of a code-signing configuration. A code-signing configuration includes a set of signing profiles, which define the trusted publishers for this function.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2159,7 +2154,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Nested block to configure the function's *dead letter queue*. See details below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2179,7 +2174,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment</a></span>
     </dt>
-    <dd>{{% md %}}The Lambda environment's configuration settings. Fields documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2189,7 +2184,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The connection settings for an EFS file system. Fields documented below. Before creating or updating Lambda functions with `file_system_config`, EFS mount targets much be in available lifecycle state. Use `depends_on` to explicitly declare this dependency. See [Using Amazon EFS with Lambda](https://docs.aws.amazon.com/lambda/latest/dg/services-efs.html).
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2199,7 +2194,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The function [entrypoint](https://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events-create-test-function.html) in your code.
+    <dd>{{% md %}}Function [entrypoint](https://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events-create-test-function.html) in your code.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2209,7 +2204,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionimageconfig">Function<wbr>Image<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The Lambda OCI image configurations. Fields documented below. See [Using container images with Lambda](https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html)
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2219,7 +2214,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ECR image URI containing the function's deployment package. Conflicts with `filename`, `s3_bucket`, `s3_key`, and `s3_object_version`.
+    <dd>{{% md %}}ECR image URI containing the function's deployment package. Conflicts with `filename`, `s3_bucket`, `s3_key`, and `s3_object_version`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2229,7 +2224,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`
+    <dd>{{% md %}}ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2239,8 +2234,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Optional) The ARN for the KMS encryption key.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_lastmodified_go">
@@ -2249,7 +2243,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date this resource was last modified.
+    <dd>{{% md %}}Date this resource was last modified.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2279,7 +2273,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique name for your Lambda Function.
+    <dd>{{% md %}}Unique name for your Lambda Function.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2289,7 +2283,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Lambda deployment package type. Valid values are `Zip` and `Image`. Defaults to `Zip`.
+    <dd>{{% md %}}Lambda deployment package type. Valid values are `Zip` and `Image`. Defaults to `Zip`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2309,8 +2303,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) identifying your Lambda Function Version
-(if versioning is enabled via `publish = true`).
+    <dd>{{% md %}}ARN identifying your Lambda Function Version (if versioning is enabled via `publish = true`).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2320,7 +2313,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
+    <dd>{{% md %}}Amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2330,7 +2323,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IAM role attached to the Lambda Function. This governs both who / what can invoke your Lambda Function, as well as what resources our Lambda Function has access to. See [Lambda Permission Model](https://docs.aws.amazon.com/lambda/latest/dg/intro-permission-model.html) for more details.
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the function's execution role. The role provides the function's identity and access to AWS services and resources.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2340,7 +2333,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#runtime">Runtime</a></span>
     </dt>
-    <dd>{{% md %}}See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
+    <dd>{{% md %}}Identifier of the function's runtime. See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2350,7 +2343,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The S3 bucket location containing the function's deployment package. Conflicts with `filename` and `image_uri`. This bucket must reside in the same AWS region where you are creating the Lambda function.
+    <dd>{{% md %}}S3 bucket location containing the function's deployment package. Conflicts with `filename` and `image_uri`. This bucket must reside in the same AWS region where you are creating the Lambda function.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2360,7 +2353,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The S3 key of an object containing the function's deployment package. Conflicts with `filename` and `image_uri`.
+    <dd>{{% md %}}S3 key of an object containing the function's deployment package. Conflicts with `filename` and `image_uri`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2370,7 +2363,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object version containing the function's deployment package. Conflicts with `filename` and `image_uri`.
+    <dd>{{% md %}}Object version containing the function's deployment package. Conflicts with `filename` and `image_uri`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2380,7 +2373,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of a signing job.
+    <dd>{{% md %}}ARN of the signing job.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2390,7 +2383,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) for a signing profile version.
+    <dd>{{% md %}}ARN of the signing profile version.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2400,8 +2393,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base64-encoded representation of raw SHA-256 sum of the zip file, provided either via `filename` or `s3_*` parameters.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_sourcecodesize_go">
@@ -2410,7 +2402,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The size in bytes of the function .zip file.
+    <dd>{{% md %}}Size in bytes of the function .zip file.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2420,7 +2412,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the object.
+    <dd>{{% md %}}Map of tags to assign to the object.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2430,7 +2422,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html)
+    <dd>{{% md %}}Amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2440,7 +2432,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration block. Detailed below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_version_go">
@@ -2450,6 +2443,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Latest published version of your Lambda Function.
+* `vpc_config.vpc_id` - ID of the VPC.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2459,7 +2453,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Provide this to allow your function to access your VPC. Fields documented below. See [Lambda in VPC](http://docs.aws.amazon.com/lambda/latest/dg/vpc.html)
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2475,7 +2469,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2485,7 +2479,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">pulumi.asset.<wbr>Archive</span>
     </dt>
-    <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options and `image_uri` cannot be used.
+    <dd>{{% md %}}Path to the function's deployment package within the local filesystem. Conflicts with `image_uri`, `s3_bucket`, `s3_key`, and `s3_object_version`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2495,7 +2489,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) for a Code Signing Configuration.
+    <dd>{{% md %}}To enable code signing for this function, specify the ARN of a code-signing configuration. A code-signing configuration includes a set of signing profiles, which define the trusted publishers for this function.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2505,7 +2499,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Nested block to configure the function's *dead letter queue*. See details below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2525,7 +2519,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment</a></span>
     </dt>
-    <dd>{{% md %}}The Lambda environment's configuration settings. Fields documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2535,7 +2529,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The connection settings for an EFS file system. Fields documented below. Before creating or updating Lambda functions with `file_system_config`, EFS mount targets much be in available lifecycle state. Use `depends_on` to explicitly declare this dependency. See [Using Amazon EFS with Lambda](https://docs.aws.amazon.com/lambda/latest/dg/services-efs.html).
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2545,7 +2539,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The function [entrypoint](https://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events-create-test-function.html) in your code.
+    <dd>{{% md %}}Function [entrypoint](https://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events-create-test-function.html) in your code.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2555,7 +2549,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionimageconfig">Function<wbr>Image<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The Lambda OCI image configurations. Fields documented below. See [Using container images with Lambda](https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html)
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2565,7 +2559,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ECR image URI containing the function's deployment package. Conflicts with `filename`, `s3_bucket`, `s3_key`, and `s3_object_version`.
+    <dd>{{% md %}}ECR image URI containing the function's deployment package. Conflicts with `filename`, `s3_bucket`, `s3_key`, and `s3_object_version`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2575,7 +2569,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`
+    <dd>{{% md %}}ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2585,8 +2579,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Optional) The ARN for the KMS encryption key.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_lastmodified_nodejs">
@@ -2595,7 +2588,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date this resource was last modified.
+    <dd>{{% md %}}Date this resource was last modified.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2625,7 +2618,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique name for your Lambda Function.
+    <dd>{{% md %}}Unique name for your Lambda Function.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2635,7 +2628,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Lambda deployment package type. Valid values are `Zip` and `Image`. Defaults to `Zip`.
+    <dd>{{% md %}}Lambda deployment package type. Valid values are `Zip` and `Image`. Defaults to `Zip`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2655,8 +2648,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) identifying your Lambda Function Version
-(if versioning is enabled via `publish = true`).
+    <dd>{{% md %}}ARN identifying your Lambda Function Version (if versioning is enabled via `publish = true`).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2666,7 +2658,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
+    <dd>{{% md %}}Amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2676,7 +2668,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">ARN</span>
     </dt>
-    <dd>{{% md %}}IAM role attached to the Lambda Function. This governs both who / what can invoke your Lambda Function, as well as what resources our Lambda Function has access to. See [Lambda Permission Model](https://docs.aws.amazon.com/lambda/latest/dg/intro-permission-model.html) for more details.
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the function's execution role. The role provides the function's identity and access to AWS services and resources.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2686,7 +2678,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#runtime">Runtime</a></span>
     </dt>
-    <dd>{{% md %}}See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
+    <dd>{{% md %}}Identifier of the function's runtime. See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2696,7 +2688,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The S3 bucket location containing the function's deployment package. Conflicts with `filename` and `image_uri`. This bucket must reside in the same AWS region where you are creating the Lambda function.
+    <dd>{{% md %}}S3 bucket location containing the function's deployment package. Conflicts with `filename` and `image_uri`. This bucket must reside in the same AWS region where you are creating the Lambda function.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2706,7 +2698,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The S3 key of an object containing the function's deployment package. Conflicts with `filename` and `image_uri`.
+    <dd>{{% md %}}S3 key of an object containing the function's deployment package. Conflicts with `filename` and `image_uri`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2716,7 +2708,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object version containing the function's deployment package. Conflicts with `filename` and `image_uri`.
+    <dd>{{% md %}}Object version containing the function's deployment package. Conflicts with `filename` and `image_uri`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2726,7 +2718,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of a signing job.
+    <dd>{{% md %}}ARN of the signing job.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2736,7 +2728,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) for a signing profile version.
+    <dd>{{% md %}}ARN of the signing profile version.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2746,8 +2738,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base64-encoded representation of raw SHA-256 sum of the zip file, provided either via `filename` or `s3_*` parameters.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_sourcecodesize_nodejs">
@@ -2756,7 +2747,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The size in bytes of the function .zip file.
+    <dd>{{% md %}}Size in bytes of the function .zip file.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2766,7 +2757,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the object.
+    <dd>{{% md %}}Map of tags to assign to the object.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2776,7 +2767,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html)
+    <dd>{{% md %}}Amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2786,7 +2777,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration block. Detailed below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_version_nodejs">
@@ -2796,6 +2788,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Latest published version of your Lambda Function.
+* `vpc_config.vpc_id` - ID of the VPC.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2805,7 +2798,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Provide this to allow your function to access your VPC. Fields documented below. See [Lambda in VPC](http://docs.aws.amazon.com/lambda/latest/dg/vpc.html)
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2821,7 +2814,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2831,7 +2824,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">pulumi.<wbr>Archive</span>
     </dt>
-    <dd>{{% md %}}The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options and `image_uri` cannot be used.
+    <dd>{{% md %}}Path to the function's deployment package within the local filesystem. Conflicts with `image_uri`, `s3_bucket`, `s3_key`, and `s3_object_version`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2841,7 +2834,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) for a Code Signing Configuration.
+    <dd>{{% md %}}To enable code signing for this function, specify the ARN of a code-signing configuration. A code-signing configuration includes a set of signing profiles, which define the trusted publishers for this function.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2851,7 +2844,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Nested block to configure the function's *dead letter queue*. See details below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2871,7 +2864,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Lambda environment's configuration settings. Fields documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2881,7 +2874,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The connection settings for an EFS file system. Fields documented below. Before creating or updating Lambda functions with `file_system_config`, EFS mount targets much be in available lifecycle state. Use `depends_on` to explicitly declare this dependency. See [Using Amazon EFS with Lambda](https://docs.aws.amazon.com/lambda/latest/dg/services-efs.html).
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2891,7 +2884,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The function [entrypoint](https://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events-create-test-function.html) in your code.
+    <dd>{{% md %}}Function [entrypoint](https://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events-create-test-function.html) in your code.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2901,7 +2894,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionimageconfig">Function<wbr>Image<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Lambda OCI image configurations. Fields documented below. See [Using container images with Lambda](https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html)
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2911,7 +2904,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ECR image URI containing the function's deployment package. Conflicts with `filename`, `s3_bucket`, `s3_key`, and `s3_object_version`.
+    <dd>{{% md %}}ECR image URI containing the function's deployment package. Conflicts with `filename`, `s3_bucket`, `s3_key`, and `s3_object_version`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2921,7 +2914,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`
+    <dd>{{% md %}}ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2931,8 +2924,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Optional) The ARN for the KMS encryption key.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_last_modified_python">
@@ -2941,7 +2933,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The date this resource was last modified.
+    <dd>{{% md %}}Date this resource was last modified.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2971,7 +2963,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A unique name for your Lambda Function.
+    <dd>{{% md %}}Unique name for your Lambda Function.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2981,7 +2973,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Lambda deployment package type. Valid values are `Zip` and `Image`. Defaults to `Zip`.
+    <dd>{{% md %}}Lambda deployment package type. Valid values are `Zip` and `Image`. Defaults to `Zip`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3001,8 +2993,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) identifying your Lambda Function Version
-(if versioning is enabled via `publish = true`).
+    <dd>{{% md %}}ARN identifying your Lambda Function Version (if versioning is enabled via `publish = true`).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3012,7 +3003,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
+    <dd>{{% md %}}Amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3022,7 +3013,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}IAM role attached to the Lambda Function. This governs both who / what can invoke your Lambda Function, as well as what resources our Lambda Function has access to. See [Lambda Permission Model](https://docs.aws.amazon.com/lambda/latest/dg/intro-permission-model.html) for more details.
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the function's execution role. The role provides the function's identity and access to AWS services and resources.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3032,7 +3023,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#runtime">Runtime</a></span>
     </dt>
-    <dd>{{% md %}}See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
+    <dd>{{% md %}}Identifier of the function's runtime. See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3042,7 +3033,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The S3 bucket location containing the function's deployment package. Conflicts with `filename` and `image_uri`. This bucket must reside in the same AWS region where you are creating the Lambda function.
+    <dd>{{% md %}}S3 bucket location containing the function's deployment package. Conflicts with `filename` and `image_uri`. This bucket must reside in the same AWS region where you are creating the Lambda function.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3052,7 +3043,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The S3 key of an object containing the function's deployment package. Conflicts with `filename` and `image_uri`.
+    <dd>{{% md %}}S3 key of an object containing the function's deployment package. Conflicts with `filename` and `image_uri`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3062,7 +3053,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The object version containing the function's deployment package. Conflicts with `filename` and `image_uri`.
+    <dd>{{% md %}}Object version containing the function's deployment package. Conflicts with `filename` and `image_uri`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3072,7 +3063,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of a signing job.
+    <dd>{{% md %}}ARN of the signing job.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3082,7 +3073,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) for a signing profile version.
+    <dd>{{% md %}}ARN of the signing profile version.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3092,8 +3083,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Base64-encoded representation of raw SHA-256 sum of the zip file, provided either via `filename` or `s3_*` parameters.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_source_code_size_python">
@@ -3102,7 +3092,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The size in bytes of the function .zip file.
+    <dd>{{% md %}}Size in bytes of the function .zip file.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3112,7 +3102,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the object.
+    <dd>{{% md %}}Map of tags to assign to the object.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3122,7 +3112,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html)
+    <dd>{{% md %}}Amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3132,7 +3122,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Configuration block. Detailed below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_version_python">
@@ -3142,6 +3133,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Latest published version of your Lambda Function.
+* `vpc_config.vpc_id` - ID of the VPC.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3151,7 +3143,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Provide this to allow your function to access your VPC. Fields documented below. See [Lambda in VPC](http://docs.aws.amazon.com/lambda/latest/dg/vpc.html)
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3178,10 +3170,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of an SNS topic or SQS queue to notify when an invocation fails. If this
-option is used, the function's IAM role must be granted suitable access to write to the target object,
-which means allowing either the `sns:Publish` or `sqs:SendMessage` action on this ARN, depending on
-which service is targeted.
+    <dd>{{% md %}}ARN of an SNS topic or SQS queue to notify when an invocation fails. If this option is used, the function's IAM role must be granted suitable access to write to the target object, which means allowing either the `sns:Publish` or `sqs:SendMessage` action on this ARN, depending on which service is targeted.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3197,10 +3186,7 @@ which service is targeted.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of an SNS topic or SQS queue to notify when an invocation fails. If this
-option is used, the function's IAM role must be granted suitable access to write to the target object,
-which means allowing either the `sns:Publish` or `sqs:SendMessage` action on this ARN, depending on
-which service is targeted.
+    <dd>{{% md %}}ARN of an SNS topic or SQS queue to notify when an invocation fails. If this option is used, the function's IAM role must be granted suitable access to write to the target object, which means allowing either the `sns:Publish` or `sqs:SendMessage` action on this ARN, depending on which service is targeted.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3216,10 +3202,7 @@ which service is targeted.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of an SNS topic or SQS queue to notify when an invocation fails. If this
-option is used, the function's IAM role must be granted suitable access to write to the target object,
-which means allowing either the `sns:Publish` or `sqs:SendMessage` action on this ARN, depending on
-which service is targeted.
+    <dd>{{% md %}}ARN of an SNS topic or SQS queue to notify when an invocation fails. If this option is used, the function's IAM role must be granted suitable access to write to the target object, which means allowing either the `sns:Publish` or `sqs:SendMessage` action on this ARN, depending on which service is targeted.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3235,10 +3218,7 @@ which service is targeted.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN of an SNS topic or SQS queue to notify when an invocation fails. If this
-option is used, the function's IAM role must be granted suitable access to write to the target object,
-which means allowing either the `sns:Publish` or `sqs:SendMessage` action on this ARN, depending on
-which service is targeted.
+    <dd>{{% md %}}ARN of an SNS topic or SQS queue to notify when an invocation fails. If this option is used, the function's IAM role must be granted suitable access to write to the target object, which means allowing either the `sns:Publish` or `sqs:SendMessage` action on this ARN, depending on which service is targeted.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3256,7 +3236,7 @@ which service is targeted.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map that defines environment variables for the Lambda function.
+    <dd>{{% md %}}Map of environment variables that are accessible from the function code during execution.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3272,7 +3252,7 @@ which service is targeted.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map that defines environment variables for the Lambda function.
+    <dd>{{% md %}}Map of environment variables that are accessible from the function code during execution.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3288,7 +3268,7 @@ which service is targeted.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map that defines environment variables for the Lambda function.
+    <dd>{{% md %}}Map of environment variables that are accessible from the function code during execution.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3304,7 +3284,7 @@ which service is targeted.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map that defines environment variables for the Lambda function.
+    <dd>{{% md %}}Map of environment variables that are accessible from the function code during execution.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3322,7 +3302,7 @@ which service is targeted.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3332,7 +3312,7 @@ which service is targeted.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path where the function can access the file system, starting with /mnt/.
+    <dd>{{% md %}}Path where the function can access the file system, starting with /mnt/.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3348,7 +3328,7 @@ which service is targeted.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3358,7 +3338,7 @@ which service is targeted.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path where the function can access the file system, starting with /mnt/.
+    <dd>{{% md %}}Path where the function can access the file system, starting with /mnt/.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3374,7 +3354,7 @@ which service is targeted.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3384,7 +3364,7 @@ which service is targeted.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path where the function can access the file system, starting with /mnt/.
+    <dd>{{% md %}}Path where the function can access the file system, starting with /mnt/.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3400,7 +3380,7 @@ which service is targeted.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3410,7 +3390,7 @@ which service is targeted.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The path where the function can access the file system, starting with /mnt/.
+    <dd>{{% md %}}Path where the function can access the file system, starting with /mnt/.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3428,7 +3408,7 @@ which service is targeted.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The CMD for the docker image.
+    <dd>{{% md %}}Parameters that you want to pass in with `entry_point`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3438,7 +3418,7 @@ which service is targeted.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The ENTRYPOINT for the docker image.
+    <dd>{{% md %}}Entry point to your application, which is typically the location of the runtime executable.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3448,7 +3428,7 @@ which service is targeted.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The working directory for the docker image.
+    <dd>{{% md %}}Working directory.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3464,7 +3444,7 @@ which service is targeted.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The CMD for the docker image.
+    <dd>{{% md %}}Parameters that you want to pass in with `entry_point`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3474,7 +3454,7 @@ which service is targeted.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The ENTRYPOINT for the docker image.
+    <dd>{{% md %}}Entry point to your application, which is typically the location of the runtime executable.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3484,7 +3464,7 @@ which service is targeted.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The working directory for the docker image.
+    <dd>{{% md %}}Working directory.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3500,7 +3480,7 @@ which service is targeted.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The CMD for the docker image.
+    <dd>{{% md %}}Parameters that you want to pass in with `entry_point`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3510,7 +3490,7 @@ which service is targeted.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The ENTRYPOINT for the docker image.
+    <dd>{{% md %}}Entry point to your application, which is typically the location of the runtime executable.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3520,7 +3500,7 @@ which service is targeted.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The working directory for the docker image.
+    <dd>{{% md %}}Working directory.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3536,7 +3516,7 @@ which service is targeted.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The CMD for the docker image.
+    <dd>{{% md %}}Parameters that you want to pass in with `entry_point`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3546,7 +3526,7 @@ which service is targeted.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The ENTRYPOINT for the docker image.
+    <dd>{{% md %}}Entry point to your application, which is typically the location of the runtime executable.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3556,7 +3536,7 @@ which service is targeted.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The working directory for the docker image.
+    <dd>{{% md %}}Working directory.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3574,11 +3554,7 @@ which service is targeted.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Can be either `PassThrough` or `Active`. If PassThrough, Lambda will only trace
-the request from an upstream service if it contains a tracing header with
-"sampled=1". If Active, Lambda will respect any tracing header it receives
-from an upstream service. If no tracing header is received, Lambda will call
-X-Ray for a tracing decision.
+    <dd>{{% md %}}Whether to to sample and trace a subset of incoming requests with AWS X-Ray. Valid values are `PassThrough` and `Active`. If `PassThrough`, Lambda will only trace the request from an upstream service if it contains a tracing header with "sampled=1". If `Active`, Lambda will respect any tracing header it receives from an upstream service. If no tracing header is received, Lambda will call X-Ray for a tracing decision.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3594,11 +3570,7 @@ X-Ray for a tracing decision.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Can be either `PassThrough` or `Active`. If PassThrough, Lambda will only trace
-the request from an upstream service if it contains a tracing header with
-"sampled=1". If Active, Lambda will respect any tracing header it receives
-from an upstream service. If no tracing header is received, Lambda will call
-X-Ray for a tracing decision.
+    <dd>{{% md %}}Whether to to sample and trace a subset of incoming requests with AWS X-Ray. Valid values are `PassThrough` and `Active`. If `PassThrough`, Lambda will only trace the request from an upstream service if it contains a tracing header with "sampled=1". If `Active`, Lambda will respect any tracing header it receives from an upstream service. If no tracing header is received, Lambda will call X-Ray for a tracing decision.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3614,11 +3586,7 @@ X-Ray for a tracing decision.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Can be either `PassThrough` or `Active`. If PassThrough, Lambda will only trace
-the request from an upstream service if it contains a tracing header with
-"sampled=1". If Active, Lambda will respect any tracing header it receives
-from an upstream service. If no tracing header is received, Lambda will call
-X-Ray for a tracing decision.
+    <dd>{{% md %}}Whether to to sample and trace a subset of incoming requests with AWS X-Ray. Valid values are `PassThrough` and `Active`. If `PassThrough`, Lambda will only trace the request from an upstream service if it contains a tracing header with "sampled=1". If `Active`, Lambda will respect any tracing header it receives from an upstream service. If no tracing header is received, Lambda will call X-Ray for a tracing decision.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3634,11 +3602,7 @@ X-Ray for a tracing decision.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Can be either `PassThrough` or `Active`. If PassThrough, Lambda will only trace
-the request from an upstream service if it contains a tracing header with
-"sampled=1". If Active, Lambda will respect any tracing header it receives
-from an upstream service. If no tracing header is received, Lambda will call
-X-Ray for a tracing decision.
+    <dd>{{% md %}}Whether to to sample and trace a subset of incoming requests with AWS X-Ray. Valid values are `PassThrough` and `Active`. If `PassThrough`, Lambda will only trace the request from an upstream service if it contains a tracing header with "sampled=1". If `Active`, Lambda will respect any tracing header it receives from an upstream service. If no tracing header is received, Lambda will call X-Ray for a tracing decision.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3656,7 +3620,7 @@ X-Ray for a tracing decision.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of security group IDs associated with the Lambda function.
+    <dd>{{% md %}}List of security group IDs associated with the Lambda function.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3666,7 +3630,7 @@ X-Ray for a tracing decision.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of subnet IDs associated with the Lambda function.
+    <dd>{{% md %}}List of subnet IDs associated with the Lambda function.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3691,7 +3655,7 @@ X-Ray for a tracing decision.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of security group IDs associated with the Lambda function.
+    <dd>{{% md %}}List of security group IDs associated with the Lambda function.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3701,7 +3665,7 @@ X-Ray for a tracing decision.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of subnet IDs associated with the Lambda function.
+    <dd>{{% md %}}List of subnet IDs associated with the Lambda function.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3726,7 +3690,7 @@ X-Ray for a tracing decision.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of security group IDs associated with the Lambda function.
+    <dd>{{% md %}}List of security group IDs associated with the Lambda function.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3736,7 +3700,7 @@ X-Ray for a tracing decision.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of subnet IDs associated with the Lambda function.
+    <dd>{{% md %}}List of subnet IDs associated with the Lambda function.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3761,7 +3725,7 @@ X-Ray for a tracing decision.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of security group IDs associated with the Lambda function.
+    <dd>{{% md %}}List of security group IDs associated with the Lambda function.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3771,7 +3735,7 @@ X-Ray for a tracing decision.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of subnet IDs associated with the Lambda function.
+    <dd>{{% md %}}List of subnet IDs associated with the Lambda function.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

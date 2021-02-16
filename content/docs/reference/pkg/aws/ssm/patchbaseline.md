@@ -105,7 +105,7 @@ const production = new aws.ssm.PatchBaseline("production", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PatchBaseline</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">approval_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[PatchBaselineApprovalRuleArgs]]</span> = None<span class="p">, </span><span class="nx">approved_patches</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">approved_patches_compliance_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">global_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[PatchBaselineGlobalFilterArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operating_system</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rejected_patches</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PatchBaseline</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">approval_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[PatchBaselineApprovalRuleArgs]]</span> = None<span class="p">, </span><span class="nx">approved_patches</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">approved_patches_compliance_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">approved_patches_enable_non_security</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">global_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[PatchBaselineGlobalFilterArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operating_system</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rejected_patches</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">rejected_patches_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[PatchBaselineSourceArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -308,6 +308,16 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="approvedpatchesenablenonsecurity_csharp">
+<a href="#approvedpatchesenablenonsecurity_csharp" style="color: inherit; text-decoration: inherit;">Approved<wbr>Patches<wbr>Enable<wbr>Non<wbr>Security</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the list of approved patches includes non-security updates that should be applied to the instances. Applies to Linux instances only.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -334,7 +344,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the patch baseline.
+    <dd>{{% md %}}The name specified to identify the patch source.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -355,6 +365,26 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of rejected patches.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rejectedpatchesaction_csharp">
+<a href="#rejectedpatchesaction_csharp" style="color: inherit; text-decoration: inherit;">Rejected<wbr>Patches<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action for Patch Manager to take on patches included in the `rejected_patches` list. Allow values are `ALLOW_AS_DEPENDENCY` and `BLOCK`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sources_csharp">
+<a href="#sources_csharp" style="color: inherit; text-decoration: inherit;">Sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#patchbaselinesource">List&lt;Patch<wbr>Baseline<wbr>Source<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block(s) with alternate sources for patches. Applies to Linux instances only. Documented below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -404,6 +434,16 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="approvedpatchesenablenonsecurity_go">
+<a href="#approvedpatchesenablenonsecurity_go" style="color: inherit; text-decoration: inherit;">Approved<wbr>Patches<wbr>Enable<wbr>Non<wbr>Security</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the list of approved patches includes non-security updates that should be applied to the instances. Applies to Linux instances only.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -430,7 +470,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the patch baseline.
+    <dd>{{% md %}}The name specified to identify the patch source.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -451,6 +491,26 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of rejected patches.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rejectedpatchesaction_go">
+<a href="#rejectedpatchesaction_go" style="color: inherit; text-decoration: inherit;">Rejected<wbr>Patches<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action for Patch Manager to take on patches included in the `rejected_patches` list. Allow values are `ALLOW_AS_DEPENDENCY` and `BLOCK`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sources_go">
+<a href="#sources_go" style="color: inherit; text-decoration: inherit;">Sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#patchbaselinesource">[]Patch<wbr>Baseline<wbr>Source</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block(s) with alternate sources for patches. Applies to Linux instances only. Documented below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -500,6 +560,16 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="approvedpatchesenablenonsecurity_nodejs">
+<a href="#approvedpatchesenablenonsecurity_nodejs" style="color: inherit; text-decoration: inherit;">approved<wbr>Patches<wbr>Enable<wbr>Non<wbr>Security</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the list of approved patches includes non-security updates that should be applied to the instances. Applies to Linux instances only.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -526,7 +596,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the patch baseline.
+    <dd>{{% md %}}The name specified to identify the patch source.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -547,6 +617,26 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of rejected patches.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rejectedpatchesaction_nodejs">
+<a href="#rejectedpatchesaction_nodejs" style="color: inherit; text-decoration: inherit;">rejected<wbr>Patches<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action for Patch Manager to take on patches included in the `rejected_patches` list. Allow values are `ALLOW_AS_DEPENDENCY` and `BLOCK`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sources_nodejs">
+<a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#patchbaselinesource">Patch<wbr>Baseline<wbr>Source[]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block(s) with alternate sources for patches. Applies to Linux instances only. Documented below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -596,6 +686,16 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="approved_patches_enable_non_security_python">
+<a href="#approved_patches_enable_non_security_python" style="color: inherit; text-decoration: inherit;">approved_<wbr>patches_<wbr>enable_<wbr>non_<wbr>security</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the list of approved patches includes non-security updates that should be applied to the instances. Applies to Linux instances only.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -622,7 +722,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the patch baseline.
+    <dd>{{% md %}}The name specified to identify the patch source.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -643,6 +743,26 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of rejected patches.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rejected_patches_action_python">
+<a href="#rejected_patches_action_python" style="color: inherit; text-decoration: inherit;">rejected_<wbr>patches_<wbr>action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The action for Patch Manager to take on patches included in the `rejected_patches` list. Allow values are `ALLOW_AS_DEPENDENCY` and `BLOCK`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sources_python">
+<a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#patchbaselinesource">Sequence[Patch<wbr>Baseline<wbr>Source<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block(s) with alternate sources for patches. Applies to Linux instances only. Documented below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -669,6 +789,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the patch baseline.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -682,6 +812,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the patch baseline.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -699,6 +839,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the patch baseline.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -712,6 +862,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the patch baseline.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -737,7 +897,7 @@ Get an existing PatchBaseline resource's state with the given name, ID, and opti
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">approval_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[PatchBaselineApprovalRuleArgs]]</span> = None<span class="p">, </span><span class="nx">approved_patches</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">approved_patches_compliance_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">global_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[PatchBaselineGlobalFilterArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operating_system</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rejected_patches</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> PatchBaseline</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">approval_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[PatchBaselineApprovalRuleArgs]]</span> = None<span class="p">, </span><span class="nx">approved_patches</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">approved_patches_compliance_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">approved_patches_enable_non_security</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">global_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[PatchBaselineGlobalFilterArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operating_system</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rejected_patches</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">rejected_patches_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[PatchBaselineSourceArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> PatchBaseline</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -882,6 +1042,26 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_approvedpatchesenablenonsecurity_csharp">
+<a href="#state_approvedpatchesenablenonsecurity_csharp" style="color: inherit; text-decoration: inherit;">Approved<wbr>Patches<wbr>Enable<wbr>Non<wbr>Security</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the list of approved patches includes non-security updates that should be applied to the instances. Applies to Linux instances only.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_arn_csharp">
+<a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the patch baseline.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -908,7 +1088,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the patch baseline.
+    <dd>{{% md %}}The name specified to identify the patch source.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -929,6 +1109,26 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of rejected patches.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_rejectedpatchesaction_csharp">
+<a href="#state_rejectedpatchesaction_csharp" style="color: inherit; text-decoration: inherit;">Rejected<wbr>Patches<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action for Patch Manager to take on patches included in the `rejected_patches` list. Allow values are `ALLOW_AS_DEPENDENCY` and `BLOCK`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_sources_csharp">
+<a href="#state_sources_csharp" style="color: inherit; text-decoration: inherit;">Sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#patchbaselinesource">List&lt;Patch<wbr>Baseline<wbr>Source<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block(s) with alternate sources for patches. Applies to Linux instances only. Documented below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -978,6 +1178,26 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_approvedpatchesenablenonsecurity_go">
+<a href="#state_approvedpatchesenablenonsecurity_go" style="color: inherit; text-decoration: inherit;">Approved<wbr>Patches<wbr>Enable<wbr>Non<wbr>Security</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the list of approved patches includes non-security updates that should be applied to the instances. Applies to Linux instances only.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_arn_go">
+<a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the patch baseline.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -1004,7 +1224,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the patch baseline.
+    <dd>{{% md %}}The name specified to identify the patch source.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1025,6 +1245,26 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of rejected patches.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_rejectedpatchesaction_go">
+<a href="#state_rejectedpatchesaction_go" style="color: inherit; text-decoration: inherit;">Rejected<wbr>Patches<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action for Patch Manager to take on patches included in the `rejected_patches` list. Allow values are `ALLOW_AS_DEPENDENCY` and `BLOCK`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_sources_go">
+<a href="#state_sources_go" style="color: inherit; text-decoration: inherit;">Sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#patchbaselinesource">[]Patch<wbr>Baseline<wbr>Source</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block(s) with alternate sources for patches. Applies to Linux instances only. Documented below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1074,6 +1314,26 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_approvedpatchesenablenonsecurity_nodejs">
+<a href="#state_approvedpatchesenablenonsecurity_nodejs" style="color: inherit; text-decoration: inherit;">approved<wbr>Patches<wbr>Enable<wbr>Non<wbr>Security</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the list of approved patches includes non-security updates that should be applied to the instances. Applies to Linux instances only.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_arn_nodejs">
+<a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the patch baseline.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -1100,7 +1360,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the patch baseline.
+    <dd>{{% md %}}The name specified to identify the patch source.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1121,6 +1381,26 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of rejected patches.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_rejectedpatchesaction_nodejs">
+<a href="#state_rejectedpatchesaction_nodejs" style="color: inherit; text-decoration: inherit;">rejected<wbr>Patches<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action for Patch Manager to take on patches included in the `rejected_patches` list. Allow values are `ALLOW_AS_DEPENDENCY` and `BLOCK`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_sources_nodejs">
+<a href="#state_sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#patchbaselinesource">Patch<wbr>Baseline<wbr>Source[]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block(s) with alternate sources for patches. Applies to Linux instances only. Documented below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1170,6 +1450,26 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_approved_patches_enable_non_security_python">
+<a href="#state_approved_patches_enable_non_security_python" style="color: inherit; text-decoration: inherit;">approved_<wbr>patches_<wbr>enable_<wbr>non_<wbr>security</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the list of approved patches includes non-security updates that should be applied to the instances. Applies to Linux instances only.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_arn_python">
+<a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the patch baseline.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -1196,7 +1496,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the patch baseline.
+    <dd>{{% md %}}The name specified to identify the patch source.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1217,6 +1517,26 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of rejected patches.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_rejected_patches_action_python">
+<a href="#state_rejected_patches_action_python" style="color: inherit; text-decoration: inherit;">rejected_<wbr>patches_<wbr>action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The action for Patch Manager to take on patches included in the `rejected_patches` list. Allow values are `ALLOW_AS_DEPENDENCY` and `BLOCK`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_sources_python">
+<a href="#state_sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#patchbaselinesource">Sequence[Patch<wbr>Baseline<wbr>Source<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block(s) with alternate sources for patches. Applies to Linux instances only. Documented below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1247,16 +1567,6 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="approveafterdays_csharp">
-<a href="#approveafterdays_csharp" style="color: inherit; text-decoration: inherit;">Approve<wbr>After<wbr>Days</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The number of days after the release date of each patch matched by the rule the patch is marked as approved in the patch baseline. Valid Range: 0 to 100.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="patchfilters_csharp">
 <a href="#patchfilters_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Filters</a>
 </span>
@@ -1264,6 +1574,26 @@ The following state arguments are supported:
         <span class="property-type"><a href="#patchbaselineapprovalrulepatchfilter">List&lt;Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Patch<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The patch filter group that defines the criteria for the rule. Up to 5 patch filters can be specified per approval rule using Key/Value pairs. Valid Keys are `PATCH_SET | PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`. Valid combinations of these Keys and the `operating_system` value can be found in the [SSM DescribePatchProperties API Reference](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_DescribePatchProperties.html). Valid Values are exact values for the patch property given as the key, or a wildcard `*`, which matches all values.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="approveafterdays_csharp">
+<a href="#approveafterdays_csharp" style="color: inherit; text-decoration: inherit;">Approve<wbr>After<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of days after the release date of each patch matched by the rule the patch is marked as approved in the patch baseline. Valid Range: 0 to 100. Conflicts with `approve_until_date`
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="approveuntildate_csharp">
+<a href="#approveuntildate_csharp" style="color: inherit; text-decoration: inherit;">Approve<wbr>Until<wbr>Date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cutoff date for auto approval of released patches. Any patches released on or before this date are installed automatically. Date is formatted as `YYYY-MM-DD`. Conflicts with `approve_after_days`
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1293,16 +1623,6 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="approveafterdays_go">
-<a href="#approveafterdays_go" style="color: inherit; text-decoration: inherit;">Approve<wbr>After<wbr>Days</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The number of days after the release date of each patch matched by the rule the patch is marked as approved in the patch baseline. Valid Range: 0 to 100.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="patchfilters_go">
 <a href="#patchfilters_go" style="color: inherit; text-decoration: inherit;">Patch<wbr>Filters</a>
 </span>
@@ -1310,6 +1630,26 @@ The following state arguments are supported:
         <span class="property-type"><a href="#patchbaselineapprovalrulepatchfilter">[]Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Patch<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}The patch filter group that defines the criteria for the rule. Up to 5 patch filters can be specified per approval rule using Key/Value pairs. Valid Keys are `PATCH_SET | PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`. Valid combinations of these Keys and the `operating_system` value can be found in the [SSM DescribePatchProperties API Reference](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_DescribePatchProperties.html). Valid Values are exact values for the patch property given as the key, or a wildcard `*`, which matches all values.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="approveafterdays_go">
+<a href="#approveafterdays_go" style="color: inherit; text-decoration: inherit;">Approve<wbr>After<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of days after the release date of each patch matched by the rule the patch is marked as approved in the patch baseline. Valid Range: 0 to 100. Conflicts with `approve_until_date`
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="approveuntildate_go">
+<a href="#approveuntildate_go" style="color: inherit; text-decoration: inherit;">Approve<wbr>Until<wbr>Date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cutoff date for auto approval of released patches. Any patches released on or before this date are installed automatically. Date is formatted as `YYYY-MM-DD`. Conflicts with `approve_after_days`
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1339,16 +1679,6 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="approveafterdays_nodejs">
-<a href="#approveafterdays_nodejs" style="color: inherit; text-decoration: inherit;">approve<wbr>After<wbr>Days</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The number of days after the release date of each patch matched by the rule the patch is marked as approved in the patch baseline. Valid Range: 0 to 100.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="patchfilters_nodejs">
 <a href="#patchfilters_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Filters</a>
 </span>
@@ -1356,6 +1686,26 @@ The following state arguments are supported:
         <span class="property-type"><a href="#patchbaselineapprovalrulepatchfilter">Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Patch<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}The patch filter group that defines the criteria for the rule. Up to 5 patch filters can be specified per approval rule using Key/Value pairs. Valid Keys are `PATCH_SET | PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`. Valid combinations of these Keys and the `operating_system` value can be found in the [SSM DescribePatchProperties API Reference](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_DescribePatchProperties.html). Valid Values are exact values for the patch property given as the key, or a wildcard `*`, which matches all values.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="approveafterdays_nodejs">
+<a href="#approveafterdays_nodejs" style="color: inherit; text-decoration: inherit;">approve<wbr>After<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of days after the release date of each patch matched by the rule the patch is marked as approved in the patch baseline. Valid Range: 0 to 100. Conflicts with `approve_until_date`
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="approveuntildate_nodejs">
+<a href="#approveuntildate_nodejs" style="color: inherit; text-decoration: inherit;">approve<wbr>Until<wbr>Date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cutoff date for auto approval of released patches. Any patches released on or before this date are installed automatically. Date is formatted as `YYYY-MM-DD`. Conflicts with `approve_after_days`
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1385,16 +1735,6 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="approve_after_days_python">
-<a href="#approve_after_days_python" style="color: inherit; text-decoration: inherit;">approve_<wbr>after_<wbr>days</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The number of days after the release date of each patch matched by the rule the patch is marked as approved in the patch baseline. Valid Range: 0 to 100.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="patch_filters_python">
 <a href="#patch_filters_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>filters</a>
 </span>
@@ -1402,6 +1742,26 @@ The following state arguments are supported:
         <span class="property-type"><a href="#patchbaselineapprovalrulepatchfilter">Sequence[Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Patch<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The patch filter group that defines the criteria for the rule. Up to 5 patch filters can be specified per approval rule using Key/Value pairs. Valid Keys are `PATCH_SET | PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`. Valid combinations of these Keys and the `operating_system` value can be found in the [SSM DescribePatchProperties API Reference](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_DescribePatchProperties.html). Valid Values are exact values for the patch property given as the key, or a wildcard `*`, which matches all values.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="approve_after_days_python">
+<a href="#approve_after_days_python" style="color: inherit; text-decoration: inherit;">approve_<wbr>after_<wbr>days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of days after the release date of each patch matched by the rule the patch is marked as approved in the patch baseline. Valid Range: 0 to 100. Conflicts with `approve_until_date`
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="approve_until_date_python">
+<a href="#approve_until_date_python" style="color: inherit; text-decoration: inherit;">approve_<wbr>until_<wbr>date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The cutoff date for auto approval of released patches. Any patches released on or before this date are installed automatically. Date is formatted as `YYYY-MM-DD`. Conflicts with `approve_after_days`
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1619,6 +1979,152 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="patchbaselinesource">Patch<wbr>Baseline<wbr>Source</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="configuration_csharp">
+<a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the yum repo configuration. For information about other options available for your yum repository configuration, see the [`dnf.conf` documentation](https://man7.org/linux/man-pages/man5/dnf.conf.5.html)
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name specified to identify the patch source.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="products_csharp">
+<a href="#products_csharp" style="color: inherit; text-decoration: inherit;">Products</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The specific operating system versions a patch repository applies to, such as `"Ubuntu16.04"`, `"AmazonLinux2016.09"`, `"RedhatEnterpriseLinux7.2"` or `"Suse12.7"`. For lists of supported product values, see [PatchFilter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PatchFilter.html).
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="configuration_go">
+<a href="#configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the yum repo configuration. For information about other options available for your yum repository configuration, see the [`dnf.conf` documentation](https://man7.org/linux/man-pages/man5/dnf.conf.5.html)
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name specified to identify the patch source.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="products_go">
+<a href="#products_go" style="color: inherit; text-decoration: inherit;">Products</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The specific operating system versions a patch repository applies to, such as `"Ubuntu16.04"`, `"AmazonLinux2016.09"`, `"RedhatEnterpriseLinux7.2"` or `"Suse12.7"`. For lists of supported product values, see [PatchFilter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PatchFilter.html).
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="configuration_nodejs">
+<a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the yum repo configuration. For information about other options available for your yum repository configuration, see the [`dnf.conf` documentation](https://man7.org/linux/man-pages/man5/dnf.conf.5.html)
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name specified to identify the patch source.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="products_nodejs">
+<a href="#products_nodejs" style="color: inherit; text-decoration: inherit;">products</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The specific operating system versions a patch repository applies to, such as `"Ubuntu16.04"`, `"AmazonLinux2016.09"`, `"RedhatEnterpriseLinux7.2"` or `"Suse12.7"`. For lists of supported product values, see [PatchFilter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PatchFilter.html).
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="configuration_python">
+<a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The value of the yum repo configuration. For information about other options available for your yum repository configuration, see the [`dnf.conf` documentation](https://man7.org/linux/man-pages/man5/dnf.conf.5.html)
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name specified to identify the patch source.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="products_python">
+<a href="#products_python" style="color: inherit; text-decoration: inherit;">products</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The specific operating system versions a patch repository applies to, such as `"Ubuntu16.04"`, `"AmazonLinux2016.09"`, `"RedhatEnterpriseLinux7.2"` or `"Suse12.7"`. For lists of supported product values, see [PatchFilter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PatchFilter.html).
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 ## Import

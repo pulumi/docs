@@ -17,7 +17,6 @@ This resource is for additional certificates and does not replace the default ce
 
 > **Note:** `aws.alb.ListenerCertificate` is known as `aws.lb.ListenerCertificate`. The functionality is identical.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -712,6 +711,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Listener Certificates can be imported using their id, e.g.
+
+```sh
+ $ pulumi import aws:elasticloadbalancingv2/listenerCertificate:ListenerCertificate example arn:aws:elasticloadbalancing:us-west-2:123456789012:listener/app/test/8e4497da625e2d8a/9ab28ade35828f96/67b3d2d36dd7c26b_arn:aws:iam::123456789012:server-certificate/tf-acc-test-6453083910015726063
+```
 
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the aws.apigatewayv2.Route resource with examples,
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Manages an Amazon API Gateway Version 2 route.
-More information can be found in the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html).
+More information can be found in the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html) for [WebSocket](https://docs.aws.amazon.com/apigateway/latest/developerguide/websocket-api-develop-routes.html) and [HTTP](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-routes.html) APIs.
 
 {{% examples %}}
 ## Example Usage
@@ -27,9 +27,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var example = new Aws.ApiGatewayV2.Route("example", new Aws.ApiGatewayV2.RouteArgs
+        var exampleApi = new Aws.ApiGatewayV2.Api("exampleApi", new Aws.ApiGatewayV2.ApiArgs
         {
-            ApiId = aws_apigatewayv2_api.Example.Id,
+            ProtocolType = "WEBSOCKET",
+            RouteSelectionExpression = "$request.body.action",
+        });
+        var exampleRoute = new Aws.ApiGatewayV2.Route("exampleRoute", new Aws.ApiGatewayV2.RouteArgs
+        {
+            ApiId = exampleApi.Id,
             RouteKey = "$default",
         });
     }
@@ -52,8 +57,15 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := apigatewayv2.NewRoute(ctx, "example", &apigatewayv2.RouteArgs{
-			ApiId:    pulumi.Any(aws_apigatewayv2_api.Example.Id),
+		exampleApi, err := apigatewayv2.NewApi(ctx, "exampleApi", &apigatewayv2.ApiArgs{
+			ProtocolType:             pulumi.String("WEBSOCKET"),
+			RouteSelectionExpression: pulumi.String(fmt.Sprintf("%v%v", "$", "request.body.action")),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = apigatewayv2.NewRoute(ctx, "exampleRoute", &apigatewayv2.RouteArgs{
+			ApiId:    exampleApi.ID(),
 			RouteKey: pulumi.String(fmt.Sprintf("%v%v", "$", "default")),
 		})
 		if err != nil {
@@ -71,8 +83,11 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-example = aws.apigatewayv2.Route("example",
-    api_id=aws_apigatewayv2_api["example"]["id"],
+example_api = aws.apigatewayv2.Api("exampleApi",
+    protocol_type="WEBSOCKET",
+    route_selection_expression="$request.body.action")
+example_route = aws.apigatewayv2.Route("exampleRoute",
+    api_id=example_api.id,
     route_key="$default")
 ```
 
@@ -84,9 +99,133 @@ example = aws.apigatewayv2.Route("example",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = new aws.apigatewayv2.Route("example", {
-    apiId: aws_apigatewayv2_api.example.id,
+const exampleApi = new aws.apigatewayv2.Api("exampleApi", {
+    protocolType: "WEBSOCKET",
+    routeSelectionExpression: `$request.body.action`,
+});
+const exampleRoute = new aws.apigatewayv2.Route("exampleRoute", {
+    apiId: exampleApi.id,
     routeKey: `$default`,
+});
+```
+
+{{% /example %}}
+
+### HTTP Proxy Integration
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleApi = new Aws.ApiGatewayV2.Api("exampleApi", new Aws.ApiGatewayV2.ApiArgs
+        {
+            ProtocolType = "HTTP",
+        });
+        var exampleIntegration = new Aws.ApiGatewayV2.Integration("exampleIntegration", new Aws.ApiGatewayV2.IntegrationArgs
+        {
+            ApiId = exampleApi.Id,
+            IntegrationType = "HTTP_PROXY",
+            IntegrationMethod = "ANY",
+            IntegrationUri = "https://example.com/{proxy}",
+        });
+        var exampleRoute = new Aws.ApiGatewayV2.Route("exampleRoute", new Aws.ApiGatewayV2.RouteArgs
+        {
+            ApiId = exampleApi.Id,
+            RouteKey = "ANY /example/{proxy+}",
+            Target = exampleIntegration.Id.Apply(id => $"integrations/{id}"),
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigatewayv2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleApi, err := apigatewayv2.NewApi(ctx, "exampleApi", &apigatewayv2.ApiArgs{
+			ProtocolType: pulumi.String("HTTP"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleIntegration, err := apigatewayv2.NewIntegration(ctx, "exampleIntegration", &apigatewayv2.IntegrationArgs{
+			ApiId:             exampleApi.ID(),
+			IntegrationType:   pulumi.String("HTTP_PROXY"),
+			IntegrationMethod: pulumi.String("ANY"),
+			IntegrationUri:    pulumi.String("https://example.com/{proxy}"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = apigatewayv2.NewRoute(ctx, "exampleRoute", &apigatewayv2.RouteArgs{
+			ApiId:    exampleApi.ID(),
+			RouteKey: pulumi.String("ANY /example/{proxy+}"),
+			Target: exampleIntegration.ID().ApplyT(func(id string) (string, error) {
+				return fmt.Sprintf("%v%v", "integrations/", id), nil
+			}).(pulumi.StringOutput),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_api = aws.apigatewayv2.Api("exampleApi", protocol_type="HTTP")
+example_integration = aws.apigatewayv2.Integration("exampleIntegration",
+    api_id=example_api.id,
+    integration_type="HTTP_PROXY",
+    integration_method="ANY",
+    integration_uri="https://example.com/{proxy}")
+example_route = aws.apigatewayv2.Route("exampleRoute",
+    api_id=example_api.id,
+    route_key="ANY /example/{proxy+}",
+    target=example_integration.id.apply(lambda id: f"integrations/{id}"))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleApi = new aws.apigatewayv2.Api("exampleApi", {protocolType: "HTTP"});
+const exampleIntegration = new aws.apigatewayv2.Integration("exampleIntegration", {
+    apiId: exampleApi.id,
+    integrationType: "HTTP_PROXY",
+    integrationMethod: "ANY",
+    integrationUri: "https://example.com/{proxy}",
+});
+const exampleRoute = new aws.apigatewayv2.Route("exampleRoute", {
+    apiId: exampleApi.id,
+    routeKey: "ANY /example/{proxy+}",
+    target: pulumi.interpolate`integrations/${exampleIntegration.id}`,
 });
 ```
 
@@ -303,7 +442,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean whether an API key is required for the route. Defaults to `false`.
+    <dd>{{% md %}}Boolean whether an API key is required for the route. Defaults to `false`. Supported only for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -325,7 +464,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}The authorization type for the route.
 For WebSocket APIs, valid values are `NONE` for open access, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer.
-For HTTP APIs, valid values are `NONE` for open access, or `JWT` for using JSON Web Tokens.
+For HTTP APIs, valid values are `NONE` for open access, `JWT` for using JSON Web Tokens, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer.
 Defaults to `NONE`.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -336,7 +475,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Authorizer` resource to be associated with this route, if the authorizationType is `CUSTOM`.
+    <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Authorizer` resource to be associated with this route.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -346,7 +485,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route.
+    <dd>{{% md %}}The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route. Supported only for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -366,7 +505,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The request models for the route.
+    <dd>{{% md %}}The request models for the route. Supported only for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -376,7 +515,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The [route response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-response-selection-expressions) for the route.
+    <dd>{{% md %}}The [route response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-response-selection-expressions) for the route. Supported only for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -386,7 +525,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target for the route. Must be between 1 and 128 characters in length.
+    <dd>{{% md %}}The target for the route, of the form `integrations/`*`IntegrationID`*, where *`IntegrationID`* is the identifier of an `aws.apigatewayv2.Integration` resource.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -422,7 +561,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean whether an API key is required for the route. Defaults to `false`.
+    <dd>{{% md %}}Boolean whether an API key is required for the route. Defaults to `false`. Supported only for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -444,7 +583,7 @@ Defaults to `NONE`.
     </dt>
     <dd>{{% md %}}The authorization type for the route.
 For WebSocket APIs, valid values are `NONE` for open access, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer.
-For HTTP APIs, valid values are `NONE` for open access, or `JWT` for using JSON Web Tokens.
+For HTTP APIs, valid values are `NONE` for open access, `JWT` for using JSON Web Tokens, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer.
 Defaults to `NONE`.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -455,7 +594,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Authorizer` resource to be associated with this route, if the authorizationType is `CUSTOM`.
+    <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Authorizer` resource to be associated with this route.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -465,7 +604,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route.
+    <dd>{{% md %}}The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route. Supported only for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -485,7 +624,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The request models for the route.
+    <dd>{{% md %}}The request models for the route. Supported only for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -495,7 +634,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The [route response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-response-selection-expressions) for the route.
+    <dd>{{% md %}}The [route response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-response-selection-expressions) for the route. Supported only for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -505,7 +644,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target for the route. Must be between 1 and 128 characters in length.
+    <dd>{{% md %}}The target for the route, of the form `integrations/`*`IntegrationID`*, where *`IntegrationID`* is the identifier of an `aws.apigatewayv2.Integration` resource.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -541,7 +680,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Boolean whether an API key is required for the route. Defaults to `false`.
+    <dd>{{% md %}}Boolean whether an API key is required for the route. Defaults to `false`. Supported only for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -563,7 +702,7 @@ Defaults to `NONE`.
     </dt>
     <dd>{{% md %}}The authorization type for the route.
 For WebSocket APIs, valid values are `NONE` for open access, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer.
-For HTTP APIs, valid values are `NONE` for open access, or `JWT` for using JSON Web Tokens.
+For HTTP APIs, valid values are `NONE` for open access, `JWT` for using JSON Web Tokens, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer.
 Defaults to `NONE`.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -574,7 +713,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Authorizer` resource to be associated with this route, if the authorizationType is `CUSTOM`.
+    <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Authorizer` resource to be associated with this route.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -584,7 +723,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route.
+    <dd>{{% md %}}The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route. Supported only for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -604,7 +743,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The request models for the route.
+    <dd>{{% md %}}The request models for the route. Supported only for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -614,7 +753,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The [route response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-response-selection-expressions) for the route.
+    <dd>{{% md %}}The [route response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-response-selection-expressions) for the route. Supported only for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -624,7 +763,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target for the route. Must be between 1 and 128 characters in length.
+    <dd>{{% md %}}The target for the route, of the form `integrations/`*`IntegrationID`*, where *`IntegrationID`* is the identifier of an `aws.apigatewayv2.Integration` resource.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -660,7 +799,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean whether an API key is required for the route. Defaults to `false`.
+    <dd>{{% md %}}Boolean whether an API key is required for the route. Defaults to `false`. Supported only for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -682,7 +821,7 @@ Defaults to `NONE`.
     </dt>
     <dd>{{% md %}}The authorization type for the route.
 For WebSocket APIs, valid values are `NONE` for open access, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer.
-For HTTP APIs, valid values are `NONE` for open access, or `JWT` for using JSON Web Tokens.
+For HTTP APIs, valid values are `NONE` for open access, `JWT` for using JSON Web Tokens, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer.
 Defaults to `NONE`.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -693,7 +832,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Authorizer` resource to be associated with this route, if the authorizationType is `CUSTOM`.
+    <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Authorizer` resource to be associated with this route.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -703,7 +842,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route.
+    <dd>{{% md %}}The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route. Supported only for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -723,7 +862,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The request models for the route.
+    <dd>{{% md %}}The request models for the route. Supported only for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -733,7 +872,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The [route response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-response-selection-expressions) for the route.
+    <dd>{{% md %}}The [route response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-response-selection-expressions) for the route. Supported only for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -743,7 +882,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The target for the route. Must be between 1 and 128 characters in length.
+    <dd>{{% md %}}The target for the route, of the form `integrations/`*`IntegrationID`*, where *`IntegrationID`* is the identifier of an `aws.apigatewayv2.Integration` resource.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -959,7 +1098,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean whether an API key is required for the route. Defaults to `false`.
+    <dd>{{% md %}}Boolean whether an API key is required for the route. Defaults to `false`. Supported only for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -981,7 +1120,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The authorization type for the route.
 For WebSocket APIs, valid values are `NONE` for open access, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer.
-For HTTP APIs, valid values are `NONE` for open access, or `JWT` for using JSON Web Tokens.
+For HTTP APIs, valid values are `NONE` for open access, `JWT` for using JSON Web Tokens, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer.
 Defaults to `NONE`.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -992,7 +1131,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Authorizer` resource to be associated with this route, if the authorizationType is `CUSTOM`.
+    <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Authorizer` resource to be associated with this route.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1002,7 +1141,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route.
+    <dd>{{% md %}}The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route. Supported only for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1022,7 +1161,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The request models for the route.
+    <dd>{{% md %}}The request models for the route. Supported only for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1042,7 +1181,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The [route response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-response-selection-expressions) for the route.
+    <dd>{{% md %}}The [route response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-response-selection-expressions) for the route. Supported only for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1052,7 +1191,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target for the route. Must be between 1 and 128 characters in length.
+    <dd>{{% md %}}The target for the route, of the form `integrations/`*`IntegrationID`*, where *`IntegrationID`* is the identifier of an `aws.apigatewayv2.Integration` resource.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1078,7 +1217,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean whether an API key is required for the route. Defaults to `false`.
+    <dd>{{% md %}}Boolean whether an API key is required for the route. Defaults to `false`. Supported only for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1100,7 +1239,7 @@ Defaults to `NONE`.
     </dt>
     <dd>{{% md %}}The authorization type for the route.
 For WebSocket APIs, valid values are `NONE` for open access, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer.
-For HTTP APIs, valid values are `NONE` for open access, or `JWT` for using JSON Web Tokens.
+For HTTP APIs, valid values are `NONE` for open access, `JWT` for using JSON Web Tokens, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer.
 Defaults to `NONE`.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -1111,7 +1250,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Authorizer` resource to be associated with this route, if the authorizationType is `CUSTOM`.
+    <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Authorizer` resource to be associated with this route.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1121,7 +1260,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route.
+    <dd>{{% md %}}The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route. Supported only for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1141,7 +1280,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The request models for the route.
+    <dd>{{% md %}}The request models for the route. Supported only for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1161,7 +1300,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The [route response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-response-selection-expressions) for the route.
+    <dd>{{% md %}}The [route response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-response-selection-expressions) for the route. Supported only for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1171,7 +1310,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target for the route. Must be between 1 and 128 characters in length.
+    <dd>{{% md %}}The target for the route, of the form `integrations/`*`IntegrationID`*, where *`IntegrationID`* is the identifier of an `aws.apigatewayv2.Integration` resource.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1197,7 +1336,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Boolean whether an API key is required for the route. Defaults to `false`.
+    <dd>{{% md %}}Boolean whether an API key is required for the route. Defaults to `false`. Supported only for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1219,7 +1358,7 @@ Defaults to `NONE`.
     </dt>
     <dd>{{% md %}}The authorization type for the route.
 For WebSocket APIs, valid values are `NONE` for open access, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer.
-For HTTP APIs, valid values are `NONE` for open access, or `JWT` for using JSON Web Tokens.
+For HTTP APIs, valid values are `NONE` for open access, `JWT` for using JSON Web Tokens, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer.
 Defaults to `NONE`.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -1230,7 +1369,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Authorizer` resource to be associated with this route, if the authorizationType is `CUSTOM`.
+    <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Authorizer` resource to be associated with this route.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1240,7 +1379,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route.
+    <dd>{{% md %}}The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route. Supported only for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1260,7 +1399,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The request models for the route.
+    <dd>{{% md %}}The request models for the route. Supported only for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1280,7 +1419,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The [route response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-response-selection-expressions) for the route.
+    <dd>{{% md %}}The [route response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-response-selection-expressions) for the route. Supported only for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1290,7 +1429,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target for the route. Must be between 1 and 128 characters in length.
+    <dd>{{% md %}}The target for the route, of the form `integrations/`*`IntegrationID`*, where *`IntegrationID`* is the identifier of an `aws.apigatewayv2.Integration` resource.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1316,7 +1455,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean whether an API key is required for the route. Defaults to `false`.
+    <dd>{{% md %}}Boolean whether an API key is required for the route. Defaults to `false`. Supported only for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1338,7 +1477,7 @@ Defaults to `NONE`.
     </dt>
     <dd>{{% md %}}The authorization type for the route.
 For WebSocket APIs, valid values are `NONE` for open access, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer.
-For HTTP APIs, valid values are `NONE` for open access, or `JWT` for using JSON Web Tokens.
+For HTTP APIs, valid values are `NONE` for open access, `JWT` for using JSON Web Tokens, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer.
 Defaults to `NONE`.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -1349,7 +1488,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Authorizer` resource to be associated with this route, if the authorizationType is `CUSTOM`.
+    <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Authorizer` resource to be associated with this route.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1359,7 +1498,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route.
+    <dd>{{% md %}}The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route. Supported only for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1379,7 +1518,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The request models for the route.
+    <dd>{{% md %}}The request models for the route. Supported only for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1399,7 +1538,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The [route response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-response-selection-expressions) for the route.
+    <dd>{{% md %}}The [route response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-response-selection-expressions) for the route. Supported only for WebSocket APIs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1409,7 +1548,7 @@ Defaults to `NONE`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The target for the route. Must be between 1 and 128 characters in length.
+    <dd>{{% md %}}The target for the route, of the form `integrations/`*`IntegrationID`*, where *`IntegrationID`* is the identifier of an `aws.apigatewayv2.Integration` resource.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

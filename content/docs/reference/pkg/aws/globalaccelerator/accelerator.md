@@ -311,7 +311,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the accelerator is enabled. The value is true or false. The default value is true.
+    <dd>{{% md %}}Indicates whether the accelerator is enabled. Defaults to `true`. Valid values: `true`, `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -321,7 +321,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value for the address type must be `IPV4`.
+    <dd>{{% md %}}The value for the address type. Defaults to `IPV4`. Valid values: `IPV4`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -367,7 +367,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the accelerator is enabled. The value is true or false. The default value is true.
+    <dd>{{% md %}}Indicates whether the accelerator is enabled. Defaults to `true`. Valid values: `true`, `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -377,7 +377,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value for the address type must be `IPV4`.
+    <dd>{{% md %}}The value for the address type. Defaults to `IPV4`. Valid values: `IPV4`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -423,7 +423,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the accelerator is enabled. The value is true or false. The default value is true.
+    <dd>{{% md %}}Indicates whether the accelerator is enabled. Defaults to `true`. Valid values: `true`, `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -433,7 +433,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value for the address type must be `IPV4`.
+    <dd>{{% md %}}The value for the address type. Defaults to `IPV4`. Valid values: `IPV4`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -479,7 +479,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the accelerator is enabled. The value is true or false. The default value is true.
+    <dd>{{% md %}}Indicates whether the accelerator is enabled. Defaults to `true`. Valid values: `true`, `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -489,7 +489,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value for the address type must be `IPV4`.
+    <dd>{{% md %}}The value for the address type. Defaults to `IPV4`. Valid values: `IPV4`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -866,7 +866,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the accelerator is enabled. The value is true or false. The default value is true.
+    <dd>{{% md %}}Indicates whether the accelerator is enabled. Defaults to `true`. Valid values: `true`, `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -885,7 +885,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value for the address type must be `IPV4`.
+    <dd>{{% md %}}The value for the address type. Defaults to `IPV4`. Valid values: `IPV4`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -954,7 +954,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the accelerator is enabled. The value is true or false. The default value is true.
+    <dd>{{% md %}}Indicates whether the accelerator is enabled. Defaults to `true`. Valid values: `true`, `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -973,7 +973,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value for the address type must be `IPV4`.
+    <dd>{{% md %}}The value for the address type. Defaults to `IPV4`. Valid values: `IPV4`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1042,7 +1042,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the accelerator is enabled. The value is true or false. The default value is true.
+    <dd>{{% md %}}Indicates whether the accelerator is enabled. Defaults to `true`. Valid values: `true`, `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1061,7 +1061,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value for the address type must be `IPV4`.
+    <dd>{{% md %}}The value for the address type. Defaults to `IPV4`. Valid values: `IPV4`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1130,7 +1130,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the accelerator is enabled. The value is true or false. The default value is true.
+    <dd>{{% md %}}Indicates whether the accelerator is enabled. Defaults to `true`. Valid values: `true`, `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1149,7 +1149,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value for the address type must be `IPV4`.
+    <dd>{{% md %}}The value for the address type. Defaults to `IPV4`. Valid values: `IPV4`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1206,7 +1206,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether flow logs are enabled.
+    <dd>{{% md %}}Indicates whether flow logs are enabled. Defaults to `false`. Valid values: `true`, `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1216,7 +1216,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Amazon S3 bucket for the flow logs.
+    <dd>{{% md %}}The name of the Amazon S3 bucket for the flow logs. Required if `flow_logs_enabled` is `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1226,7 +1226,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The prefix for the location in the Amazon S3 bucket for the flow logs.
+    <dd>{{% md %}}The prefix for the location in the Amazon S3 bucket for the flow logs. Required if `flow_logs_enabled` is `true`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1242,7 +1242,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether flow logs are enabled.
+    <dd>{{% md %}}Indicates whether flow logs are enabled. Defaults to `false`. Valid values: `true`, `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1252,7 +1252,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Amazon S3 bucket for the flow logs.
+    <dd>{{% md %}}The name of the Amazon S3 bucket for the flow logs. Required if `flow_logs_enabled` is `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1262,7 +1262,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The prefix for the location in the Amazon S3 bucket for the flow logs.
+    <dd>{{% md %}}The prefix for the location in the Amazon S3 bucket for the flow logs. Required if `flow_logs_enabled` is `true`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1278,7 +1278,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether flow logs are enabled.
+    <dd>{{% md %}}Indicates whether flow logs are enabled. Defaults to `false`. Valid values: `true`, `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1288,7 +1288,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Amazon S3 bucket for the flow logs.
+    <dd>{{% md %}}The name of the Amazon S3 bucket for the flow logs. Required if `flow_logs_enabled` is `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1298,7 +1298,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The prefix for the location in the Amazon S3 bucket for the flow logs.
+    <dd>{{% md %}}The prefix for the location in the Amazon S3 bucket for the flow logs. Required if `flow_logs_enabled` is `true`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1314,7 +1314,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether flow logs are enabled.
+    <dd>{{% md %}}Indicates whether flow logs are enabled. Defaults to `false`. Valid values: `true`, `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1324,7 +1324,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Amazon S3 bucket for the flow logs.
+    <dd>{{% md %}}The name of the Amazon S3 bucket for the flow logs. Required if `flow_logs_enabled` is `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1334,7 +1334,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The prefix for the location in the Amazon S3 bucket for the flow logs.
+    <dd>{{% md %}}The prefix for the location in the Amazon S3 bucket for the flow logs. Required if `flow_logs_enabled` is `true`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1362,7 +1362,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The types of IP addresses included in this IP set.
+    <dd>{{% md %}}The type of IP addresses included in this IP set.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1388,7 +1388,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The types of IP addresses included in this IP set.
+    <dd>{{% md %}}The type of IP addresses included in this IP set.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1414,7 +1414,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The types of IP addresses included in this IP set.
+    <dd>{{% md %}}The type of IP addresses included in this IP set.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1440,7 +1440,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The types of IP addresses included in this IP set.
+    <dd>{{% md %}}The type of IP addresses included in this IP set.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

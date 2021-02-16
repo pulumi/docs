@@ -173,6 +173,92 @@ const example = new aws.lambda.EventSourceMapping("example", {
 
 {{% /example %}}
 
+### Managed Streaming for Kafka (MSK)
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Lambda.EventSourceMapping("example", new Aws.Lambda.EventSourceMappingArgs
+        {
+            EventSourceArn = aws_msk_cluster.Example.Arn,
+            FunctionName = aws_lambda_function.Example.Arn,
+            Topics = 
+            {
+                "Example",
+            },
+            StartingPosition = "TRIM_HORIZON",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := lambda.NewEventSourceMapping(ctx, "example", &lambda.EventSourceMappingArgs{
+			EventSourceArn: pulumi.Any(aws_msk_cluster.Example.Arn),
+			FunctionName:   pulumi.Any(aws_lambda_function.Example.Arn),
+			Topics: pulumi.StringArray{
+				pulumi.String("Example"),
+			},
+			StartingPosition: pulumi.String("TRIM_HORIZON"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.lambda_.EventSourceMapping("example",
+    event_source_arn=aws_msk_cluster["example"]["arn"],
+    function_name=aws_lambda_function["example"]["arn"],
+    topics=["Example"],
+    starting_position="TRIM_HORIZON")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.lambda.EventSourceMapping("example", {
+    eventSourceArn: aws_msk_cluster.example.arn,
+    functionName: aws_lambda_function.example.arn,
+    topics: ["Example"],
+    startingPosition: "TRIM_HORIZON",
+});
+```
+
+{{% /example %}}
+
 ### SQS
 {{% example csharp %}}
 ```csharp

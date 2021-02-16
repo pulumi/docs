@@ -796,7 +796,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectartifacts">Project<wbr>Artifacts<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information about the project's build output artifacts. Artifact blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -806,7 +806,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectenvironment">Project<wbr>Environment<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information about the project's build environment. Environment blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -816,7 +816,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -826,7 +826,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsource">Project<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information about the project's input source code. Source blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -846,7 +846,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}How long in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.
+    <dd>{{% md %}}Number of minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -856,7 +856,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectcache">Project<wbr>Cache<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information about the cache storage for the project. Cache blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -866,7 +866,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A short description of the project.
+    <dd>{{% md %}}Short description of the project.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -876,7 +876,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
+    <dd>{{% md %}}AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -886,7 +886,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectlogsconfig">Project<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the builds to store log data to CloudWatch or S3.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -896,7 +896,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The projects name.
+    <dd>{{% md %}}Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -906,7 +906,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}How long in minutes, from 5 to 480 (8 hours), a build is allowed to be queued before it times out. The default is 8 hours.
+    <dd>{{% md %}}Number of minutes, from 5 to 480 (8 hours), a build is allowed to be queued before it times out. The default is 8 hours.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -916,7 +916,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsecondaryartifact">List&lt;Project<wbr>Secondary<wbr>Artifact<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A set of secondary artifacts to be used inside the build. Secondary artifacts blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -926,7 +926,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsecondarysource">List&lt;Project<wbr>Secondary<wbr>Source<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A set of secondary sources to be used inside the build. Secondary sources blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -936,7 +936,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A version of the build input to be built for this project. If not specified, the latest version is used.
+    <dd>{{% md %}}Version of the build input to be built for this project. If not specified, the latest version is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -946,7 +946,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -956,7 +956,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectvpcconfig">Project<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the builds to run inside a VPC. VPC config blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -972,7 +972,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectartifacts">Project<wbr>Artifacts</a></span>
     </dt>
-    <dd>{{% md %}}Information about the project's build output artifacts. Artifact blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -982,7 +982,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectenvironment">Project<wbr>Environment</a></span>
     </dt>
-    <dd>{{% md %}}Information about the project's build environment. Environment blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -992,7 +992,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1002,7 +1002,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsource">Project<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}Information about the project's input source code. Source blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1022,7 +1022,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}How long in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.
+    <dd>{{% md %}}Number of minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1032,7 +1032,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectcache">Project<wbr>Cache</a></span>
     </dt>
-    <dd>{{% md %}}Information about the cache storage for the project. Cache blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1042,7 +1042,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A short description of the project.
+    <dd>{{% md %}}Short description of the project.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1052,7 +1052,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
+    <dd>{{% md %}}AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1062,7 +1062,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectlogsconfig">Project<wbr>Logs<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the builds to store log data to CloudWatch or S3.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1072,7 +1072,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The projects name.
+    <dd>{{% md %}}Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1082,7 +1082,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}How long in minutes, from 5 to 480 (8 hours), a build is allowed to be queued before it times out. The default is 8 hours.
+    <dd>{{% md %}}Number of minutes, from 5 to 480 (8 hours), a build is allowed to be queued before it times out. The default is 8 hours.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1092,7 +1092,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsecondaryartifact">[]Project<wbr>Secondary<wbr>Artifact</a></span>
     </dt>
-    <dd>{{% md %}}A set of secondary artifacts to be used inside the build. Secondary artifacts blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1102,7 +1102,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsecondarysource">[]Project<wbr>Secondary<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}A set of secondary sources to be used inside the build. Secondary sources blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1112,7 +1112,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A version of the build input to be built for this project. If not specified, the latest version is used.
+    <dd>{{% md %}}Version of the build input to be built for this project. If not specified, the latest version is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1122,7 +1122,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1132,7 +1132,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectvpcconfig">Project<wbr>Vpc<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the builds to run inside a VPC. VPC config blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1148,7 +1148,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectartifacts">Project<wbr>Artifacts</a></span>
     </dt>
-    <dd>{{% md %}}Information about the project's build output artifacts. Artifact blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1158,7 +1158,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectenvironment">Project<wbr>Environment</a></span>
     </dt>
-    <dd>{{% md %}}Information about the project's build environment. Environment blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1168,7 +1168,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1178,7 +1178,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsource">Project<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}Information about the project's input source code. Source blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1198,7 +1198,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}How long in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.
+    <dd>{{% md %}}Number of minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1208,7 +1208,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectcache">Project<wbr>Cache</a></span>
     </dt>
-    <dd>{{% md %}}Information about the cache storage for the project. Cache blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1218,7 +1218,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A short description of the project.
+    <dd>{{% md %}}Short description of the project.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1228,7 +1228,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
+    <dd>{{% md %}}AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1238,7 +1238,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectlogsconfig">Project<wbr>Logs<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the builds to store log data to CloudWatch or S3.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1248,7 +1248,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The projects name.
+    <dd>{{% md %}}Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1258,7 +1258,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}How long in minutes, from 5 to 480 (8 hours), a build is allowed to be queued before it times out. The default is 8 hours.
+    <dd>{{% md %}}Number of minutes, from 5 to 480 (8 hours), a build is allowed to be queued before it times out. The default is 8 hours.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1268,7 +1268,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsecondaryartifact">Project<wbr>Secondary<wbr>Artifact[]</a></span>
     </dt>
-    <dd>{{% md %}}A set of secondary artifacts to be used inside the build. Secondary artifacts blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1278,7 +1278,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsecondarysource">Project<wbr>Secondary<wbr>Source[]</a></span>
     </dt>
-    <dd>{{% md %}}A set of secondary sources to be used inside the build. Secondary sources blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1288,7 +1288,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A version of the build input to be built for this project. If not specified, the latest version is used.
+    <dd>{{% md %}}Version of the build input to be built for this project. If not specified, the latest version is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1298,7 +1298,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1308,7 +1308,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectvpcconfig">Project<wbr>Vpc<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the builds to run inside a VPC. VPC config blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1324,7 +1324,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectartifacts">Project<wbr>Artifacts<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information about the project's build output artifacts. Artifact blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1334,7 +1334,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectenvironment">Project<wbr>Environment<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information about the project's build environment. Environment blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1344,7 +1344,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1354,7 +1354,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsource">Project<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information about the project's input source code. Source blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1374,7 +1374,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}How long in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.
+    <dd>{{% md %}}Number of minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1384,7 +1384,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectcache">Project<wbr>Cache<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information about the cache storage for the project. Cache blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1394,7 +1394,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A short description of the project.
+    <dd>{{% md %}}Short description of the project.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1404,7 +1404,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
+    <dd>{{% md %}}AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1414,7 +1414,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectlogsconfig">Project<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the builds to store log data to CloudWatch or S3.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1424,7 +1424,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The projects name.
+    <dd>{{% md %}}Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1434,7 +1434,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}How long in minutes, from 5 to 480 (8 hours), a build is allowed to be queued before it times out. The default is 8 hours.
+    <dd>{{% md %}}Number of minutes, from 5 to 480 (8 hours), a build is allowed to be queued before it times out. The default is 8 hours.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1444,7 +1444,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsecondaryartifact">Sequence[Project<wbr>Secondary<wbr>Artifact<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A set of secondary artifacts to be used inside the build. Secondary artifacts blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1454,7 +1454,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsecondarysource">Sequence[Project<wbr>Secondary<wbr>Source<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A set of secondary sources to be used inside the build. Secondary sources blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1464,7 +1464,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A version of the build input to be built for this project. If not specified, the latest version is used.
+    <dd>{{% md %}}Version of the build input to be built for this project. If not specified, the latest version is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1474,7 +1474,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1484,7 +1484,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectvpcconfig">Project<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the builds to run inside a VPC. VPC config blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1507,7 +1507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the CodeBuild project.
+    <dd>{{% md %}}ARN of the CodeBuild project.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1517,7 +1517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the build badge when `badge_enabled` is enabled.
+    <dd>{{% md %}}URL of the build badge when `badge_enabled` is enabled.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1542,7 +1542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the CodeBuild project.
+    <dd>{{% md %}}ARN of the CodeBuild project.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1552,7 +1552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the build badge when `badge_enabled` is enabled.
+    <dd>{{% md %}}URL of the build badge when `badge_enabled` is enabled.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1577,7 +1577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the CodeBuild project.
+    <dd>{{% md %}}ARN of the CodeBuild project.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1587,7 +1587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the build badge when `badge_enabled` is enabled.
+    <dd>{{% md %}}URL of the build badge when `badge_enabled` is enabled.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1612,7 +1612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN of the CodeBuild project.
+    <dd>{{% md %}}ARN of the CodeBuild project.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1622,7 +1622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URL of the build badge when `badge_enabled` is enabled.
+    <dd>{{% md %}}URL of the build badge when `badge_enabled` is enabled.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1770,7 +1770,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the CodeBuild project.
+    <dd>{{% md %}}ARN of the CodeBuild project.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1780,7 +1780,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectartifacts">Project<wbr>Artifacts<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information about the project's build output artifacts. Artifact blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1800,7 +1800,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the build badge when `badge_enabled` is enabled.
+    <dd>{{% md %}}URL of the build badge when `badge_enabled` is enabled.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1810,7 +1810,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}How long in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.
+    <dd>{{% md %}}Number of minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1820,7 +1820,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectcache">Project<wbr>Cache<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information about the cache storage for the project. Cache blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1830,7 +1830,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A short description of the project.
+    <dd>{{% md %}}Short description of the project.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1840,7 +1840,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
+    <dd>{{% md %}}AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1850,7 +1850,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectenvironment">Project<wbr>Environment<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information about the project's build environment. Environment blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1860,7 +1860,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectlogsconfig">Project<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the builds to store log data to CloudWatch or S3.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1870,7 +1870,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The projects name.
+    <dd>{{% md %}}Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1880,7 +1880,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}How long in minutes, from 5 to 480 (8 hours), a build is allowed to be queued before it times out. The default is 8 hours.
+    <dd>{{% md %}}Number of minutes, from 5 to 480 (8 hours), a build is allowed to be queued before it times out. The default is 8 hours.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1890,7 +1890,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsecondaryartifact">List&lt;Project<wbr>Secondary<wbr>Artifact<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A set of secondary artifacts to be used inside the build. Secondary artifacts blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1900,7 +1900,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsecondarysource">List&lt;Project<wbr>Secondary<wbr>Source<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A set of secondary sources to be used inside the build. Secondary sources blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1910,7 +1910,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1920,7 +1920,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsource">Project<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information about the project's input source code. Source blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1930,7 +1930,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A version of the build input to be built for this project. If not specified, the latest version is used.
+    <dd>{{% md %}}Version of the build input to be built for this project. If not specified, the latest version is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1940,7 +1940,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1950,7 +1950,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectvpcconfig">Project<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the builds to run inside a VPC. VPC config blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1966,7 +1966,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the CodeBuild project.
+    <dd>{{% md %}}ARN of the CodeBuild project.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1976,7 +1976,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectartifacts">Project<wbr>Artifacts</a></span>
     </dt>
-    <dd>{{% md %}}Information about the project's build output artifacts. Artifact blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1996,7 +1996,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the build badge when `badge_enabled` is enabled.
+    <dd>{{% md %}}URL of the build badge when `badge_enabled` is enabled.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2006,7 +2006,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}How long in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.
+    <dd>{{% md %}}Number of minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2016,7 +2016,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectcache">Project<wbr>Cache</a></span>
     </dt>
-    <dd>{{% md %}}Information about the cache storage for the project. Cache blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2026,7 +2026,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A short description of the project.
+    <dd>{{% md %}}Short description of the project.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2036,7 +2036,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
+    <dd>{{% md %}}AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2046,7 +2046,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectenvironment">Project<wbr>Environment</a></span>
     </dt>
-    <dd>{{% md %}}Information about the project's build environment. Environment blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2056,7 +2056,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectlogsconfig">Project<wbr>Logs<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the builds to store log data to CloudWatch or S3.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2066,7 +2066,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The projects name.
+    <dd>{{% md %}}Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2076,7 +2076,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}How long in minutes, from 5 to 480 (8 hours), a build is allowed to be queued before it times out. The default is 8 hours.
+    <dd>{{% md %}}Number of minutes, from 5 to 480 (8 hours), a build is allowed to be queued before it times out. The default is 8 hours.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2086,7 +2086,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsecondaryartifact">[]Project<wbr>Secondary<wbr>Artifact</a></span>
     </dt>
-    <dd>{{% md %}}A set of secondary artifacts to be used inside the build. Secondary artifacts blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2096,7 +2096,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsecondarysource">[]Project<wbr>Secondary<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}A set of secondary sources to be used inside the build. Secondary sources blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2106,7 +2106,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2116,7 +2116,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsource">Project<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}Information about the project's input source code. Source blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2126,7 +2126,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A version of the build input to be built for this project. If not specified, the latest version is used.
+    <dd>{{% md %}}Version of the build input to be built for this project. If not specified, the latest version is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2136,7 +2136,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2146,7 +2146,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectvpcconfig">Project<wbr>Vpc<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the builds to run inside a VPC. VPC config blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2162,7 +2162,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the CodeBuild project.
+    <dd>{{% md %}}ARN of the CodeBuild project.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2172,7 +2172,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectartifacts">Project<wbr>Artifacts</a></span>
     </dt>
-    <dd>{{% md %}}Information about the project's build output artifacts. Artifact blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2192,7 +2192,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the build badge when `badge_enabled` is enabled.
+    <dd>{{% md %}}URL of the build badge when `badge_enabled` is enabled.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2202,7 +2202,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}How long in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.
+    <dd>{{% md %}}Number of minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2212,7 +2212,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectcache">Project<wbr>Cache</a></span>
     </dt>
-    <dd>{{% md %}}Information about the cache storage for the project. Cache blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2222,7 +2222,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A short description of the project.
+    <dd>{{% md %}}Short description of the project.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2232,7 +2232,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
+    <dd>{{% md %}}AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2242,7 +2242,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectenvironment">Project<wbr>Environment</a></span>
     </dt>
-    <dd>{{% md %}}Information about the project's build environment. Environment blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2252,7 +2252,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectlogsconfig">Project<wbr>Logs<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the builds to store log data to CloudWatch or S3.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2262,7 +2262,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The projects name.
+    <dd>{{% md %}}Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2272,7 +2272,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}How long in minutes, from 5 to 480 (8 hours), a build is allowed to be queued before it times out. The default is 8 hours.
+    <dd>{{% md %}}Number of minutes, from 5 to 480 (8 hours), a build is allowed to be queued before it times out. The default is 8 hours.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2282,7 +2282,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsecondaryartifact">Project<wbr>Secondary<wbr>Artifact[]</a></span>
     </dt>
-    <dd>{{% md %}}A set of secondary artifacts to be used inside the build. Secondary artifacts blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2292,7 +2292,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsecondarysource">Project<wbr>Secondary<wbr>Source[]</a></span>
     </dt>
-    <dd>{{% md %}}A set of secondary sources to be used inside the build. Secondary sources blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2302,7 +2302,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2312,7 +2312,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsource">Project<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}Information about the project's input source code. Source blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2322,7 +2322,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A version of the build input to be built for this project. If not specified, the latest version is used.
+    <dd>{{% md %}}Version of the build input to be built for this project. If not specified, the latest version is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2332,7 +2332,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2342,7 +2342,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectvpcconfig">Project<wbr>Vpc<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the builds to run inside a VPC. VPC config blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2358,7 +2358,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN of the CodeBuild project.
+    <dd>{{% md %}}ARN of the CodeBuild project.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2368,7 +2368,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectartifacts">Project<wbr>Artifacts<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information about the project's build output artifacts. Artifact blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2388,7 +2388,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URL of the build badge when `badge_enabled` is enabled.
+    <dd>{{% md %}}URL of the build badge when `badge_enabled` is enabled.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2398,7 +2398,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}How long in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.
+    <dd>{{% md %}}Number of minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2408,7 +2408,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectcache">Project<wbr>Cache<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information about the cache storage for the project. Cache blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2418,7 +2418,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A short description of the project.
+    <dd>{{% md %}}Short description of the project.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2428,7 +2428,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
+    <dd>{{% md %}}AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2438,7 +2438,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectenvironment">Project<wbr>Environment<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information about the project's build environment. Environment blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2448,7 +2448,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectlogsconfig">Project<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the builds to store log data to CloudWatch or S3.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2458,7 +2458,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The projects name.
+    <dd>{{% md %}}Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2468,7 +2468,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}How long in minutes, from 5 to 480 (8 hours), a build is allowed to be queued before it times out. The default is 8 hours.
+    <dd>{{% md %}}Number of minutes, from 5 to 480 (8 hours), a build is allowed to be queued before it times out. The default is 8 hours.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2478,7 +2478,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsecondaryartifact">Sequence[Project<wbr>Secondary<wbr>Artifact<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A set of secondary artifacts to be used inside the build. Secondary artifacts blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2488,7 +2488,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsecondarysource">Sequence[Project<wbr>Secondary<wbr>Source<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A set of secondary sources to be used inside the build. Secondary sources blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2498,7 +2498,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2508,7 +2508,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsource">Project<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information about the project's input source code. Source blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2518,7 +2518,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A version of the build input to be built for this project. If not specified, the latest version is used.
+    <dd>{{% md %}}Version of the build input to be built for this project. If not specified, the latest version is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2528,7 +2528,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2538,7 +2538,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectvpcconfig">Project<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the builds to run inside a VPC. VPC config blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2565,7 +2565,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The build output artifact's type. Valid values for this parameter are: `CODEPIPELINE`, `NO_ARTIFACTS` or `S3`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2575,7 +2575,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The artifact identifier. Must be the same specified inside AWS CodeBuild buildspec.
+    <dd>{{% md %}}Artifact identifier. Must be the same specified inside the AWS CodeBuild build specification.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2585,7 +2585,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, output artifacts will not be encrypted. If `type` is set to `NO_ARTIFACTS` then this value will be ignored. Defaults to `false`.
+    <dd>{{% md %}}Whether to disable encrypting output artifacts. If `type` is set to `NO_ARTIFACTS`, this value is ignored. Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2595,7 +2595,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Information about the build output artifact location. If `type` is set to `CODEPIPELINE` or `NO_ARTIFACTS` then this value will be ignored. If `type` is set to `S3`, this is the name of the output bucket.
+    <dd>{{% md %}}Location of the source code from git or s3.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2605,7 +2605,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the project. If `type` is set to `S3`, this is the name of the output artifact object
+    <dd>{{% md %}}Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2615,7 +2615,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace to use in storing build artifacts. If `type` is set to `S3`, then valid values for this parameter are: `BUILD_ID` or `NONE`.
+    <dd>{{% md %}}Namespace to use in storing build artifacts. If `type` is set to `S3`, then valid values are `BUILD_ID` or `NONE`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2625,7 +2625,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, a name specified in the build spec file overrides the artifact name.
+    <dd>{{% md %}}Whether a name specified in the build specification overrides the artifact name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2635,7 +2635,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of build output artifact to create. If `type` is set to `S3`, valid values for this parameter are: `NONE` or `ZIP`
+    <dd>{{% md %}}Type of build output artifact to create. If `type` is set to `S3`, valid values are `NONE`, `ZIP`
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2645,7 +2645,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If `type` is set to `S3`, this is the path to the output artifact
+    <dd>{{% md %}}If `type` is set to `S3`, this is the path to the output artifact.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2661,7 +2661,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The build output artifact's type. Valid values for this parameter are: `CODEPIPELINE`, `NO_ARTIFACTS` or `S3`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2671,7 +2671,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The artifact identifier. Must be the same specified inside AWS CodeBuild buildspec.
+    <dd>{{% md %}}Artifact identifier. Must be the same specified inside the AWS CodeBuild build specification.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2681,7 +2681,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, output artifacts will not be encrypted. If `type` is set to `NO_ARTIFACTS` then this value will be ignored. Defaults to `false`.
+    <dd>{{% md %}}Whether to disable encrypting output artifacts. If `type` is set to `NO_ARTIFACTS`, this value is ignored. Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2691,7 +2691,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Information about the build output artifact location. If `type` is set to `CODEPIPELINE` or `NO_ARTIFACTS` then this value will be ignored. If `type` is set to `S3`, this is the name of the output bucket.
+    <dd>{{% md %}}Location of the source code from git or s3.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2701,7 +2701,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the project. If `type` is set to `S3`, this is the name of the output artifact object
+    <dd>{{% md %}}Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2711,7 +2711,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace to use in storing build artifacts. If `type` is set to `S3`, then valid values for this parameter are: `BUILD_ID` or `NONE`.
+    <dd>{{% md %}}Namespace to use in storing build artifacts. If `type` is set to `S3`, then valid values are `BUILD_ID` or `NONE`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2721,7 +2721,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, a name specified in the build spec file overrides the artifact name.
+    <dd>{{% md %}}Whether a name specified in the build specification overrides the artifact name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2731,7 +2731,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of build output artifact to create. If `type` is set to `S3`, valid values for this parameter are: `NONE` or `ZIP`
+    <dd>{{% md %}}Type of build output artifact to create. If `type` is set to `S3`, valid values are `NONE`, `ZIP`
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2741,7 +2741,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If `type` is set to `S3`, this is the path to the output artifact
+    <dd>{{% md %}}If `type` is set to `S3`, this is the path to the output artifact.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2757,7 +2757,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The build output artifact's type. Valid values for this parameter are: `CODEPIPELINE`, `NO_ARTIFACTS` or `S3`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2767,7 +2767,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The artifact identifier. Must be the same specified inside AWS CodeBuild buildspec.
+    <dd>{{% md %}}Artifact identifier. Must be the same specified inside the AWS CodeBuild build specification.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2777,7 +2777,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If set to true, output artifacts will not be encrypted. If `type` is set to `NO_ARTIFACTS` then this value will be ignored. Defaults to `false`.
+    <dd>{{% md %}}Whether to disable encrypting output artifacts. If `type` is set to `NO_ARTIFACTS`, this value is ignored. Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2787,7 +2787,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Information about the build output artifact location. If `type` is set to `CODEPIPELINE` or `NO_ARTIFACTS` then this value will be ignored. If `type` is set to `S3`, this is the name of the output bucket.
+    <dd>{{% md %}}Location of the source code from git or s3.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2797,7 +2797,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the project. If `type` is set to `S3`, this is the name of the output artifact object
+    <dd>{{% md %}}Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2807,7 +2807,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace to use in storing build artifacts. If `type` is set to `S3`, then valid values for this parameter are: `BUILD_ID` or `NONE`.
+    <dd>{{% md %}}Namespace to use in storing build artifacts. If `type` is set to `S3`, then valid values are `BUILD_ID` or `NONE`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2817,7 +2817,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If set to true, a name specified in the build spec file overrides the artifact name.
+    <dd>{{% md %}}Whether a name specified in the build specification overrides the artifact name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2827,7 +2827,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of build output artifact to create. If `type` is set to `S3`, valid values for this parameter are: `NONE` or `ZIP`
+    <dd>{{% md %}}Type of build output artifact to create. If `type` is set to `S3`, valid values are `NONE`, `ZIP`
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2837,7 +2837,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If `type` is set to `S3`, this is the path to the output artifact
+    <dd>{{% md %}}If `type` is set to `S3`, this is the path to the output artifact.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2853,7 +2853,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The build output artifact's type. Valid values for this parameter are: `CODEPIPELINE`, `NO_ARTIFACTS` or `S3`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2863,7 +2863,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The artifact identifier. Must be the same specified inside AWS CodeBuild buildspec.
+    <dd>{{% md %}}Artifact identifier. Must be the same specified inside the AWS CodeBuild build specification.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2873,7 +2873,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, output artifacts will not be encrypted. If `type` is set to `NO_ARTIFACTS` then this value will be ignored. Defaults to `false`.
+    <dd>{{% md %}}Whether to disable encrypting output artifacts. If `type` is set to `NO_ARTIFACTS`, this value is ignored. Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2883,7 +2883,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Information about the build output artifact location. If `type` is set to `CODEPIPELINE` or `NO_ARTIFACTS` then this value will be ignored. If `type` is set to `S3`, this is the name of the output bucket.
+    <dd>{{% md %}}Location of the source code from git or s3.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2893,7 +2893,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the project. If `type` is set to `S3`, this is the name of the output artifact object
+    <dd>{{% md %}}Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2903,7 +2903,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The namespace to use in storing build artifacts. If `type` is set to `S3`, then valid values for this parameter are: `BUILD_ID` or `NONE`.
+    <dd>{{% md %}}Namespace to use in storing build artifacts. If `type` is set to `S3`, then valid values are `BUILD_ID` or `NONE`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2913,7 +2913,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, a name specified in the build spec file overrides the artifact name.
+    <dd>{{% md %}}Whether a name specified in the build specification overrides the artifact name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2923,7 +2923,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of build output artifact to create. If `type` is set to `S3`, valid values for this parameter are: `NONE` or `ZIP`
+    <dd>{{% md %}}Type of build output artifact to create. If `type` is set to `S3`, valid values are `NONE`, `ZIP`
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2933,7 +2933,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}If `type` is set to `S3`, this is the path to the output artifact
+    <dd>{{% md %}}If `type` is set to `S3`, this is the path to the output artifact.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2951,7 +2951,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location where the AWS CodeBuild project stores cached resources. For type `S3` the value must be a valid S3 bucket name/prefix.
+    <dd>{{% md %}}Location of the source code from git or s3.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2961,7 +2961,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Specifies settings that AWS CodeBuild uses to store and reuse build dependencies. Valid values:  `LOCAL_SOURCE_CACHE`, `LOCAL_DOCKER_LAYER_CACHE`, and `LOCAL_CUSTOM_CACHE`
+    <dd>{{% md %}}Specifies settings that AWS CodeBuild uses to store and reuse build dependencies. Valid values:  `LOCAL_SOURCE_CACHE`, `LOCAL_DOCKER_LAYER_CACHE`, `LOCAL_CUSTOM_CACHE`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2971,7 +2971,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of storage that will be used for the AWS CodeBuild project cache. Valid values: `NO_CACHE`, `LOCAL`, and `S3`. Defaults to `NO_CACHE`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2987,7 +2987,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location where the AWS CodeBuild project stores cached resources. For type `S3` the value must be a valid S3 bucket name/prefix.
+    <dd>{{% md %}}Location of the source code from git or s3.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2997,7 +2997,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Specifies settings that AWS CodeBuild uses to store and reuse build dependencies. Valid values:  `LOCAL_SOURCE_CACHE`, `LOCAL_DOCKER_LAYER_CACHE`, and `LOCAL_CUSTOM_CACHE`
+    <dd>{{% md %}}Specifies settings that AWS CodeBuild uses to store and reuse build dependencies. Valid values:  `LOCAL_SOURCE_CACHE`, `LOCAL_DOCKER_LAYER_CACHE`, `LOCAL_CUSTOM_CACHE`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3007,7 +3007,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of storage that will be used for the AWS CodeBuild project cache. Valid values: `NO_CACHE`, `LOCAL`, and `S3`. Defaults to `NO_CACHE`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3023,7 +3023,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location where the AWS CodeBuild project stores cached resources. For type `S3` the value must be a valid S3 bucket name/prefix.
+    <dd>{{% md %}}Location of the source code from git or s3.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3033,7 +3033,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Specifies settings that AWS CodeBuild uses to store and reuse build dependencies. Valid values:  `LOCAL_SOURCE_CACHE`, `LOCAL_DOCKER_LAYER_CACHE`, and `LOCAL_CUSTOM_CACHE`
+    <dd>{{% md %}}Specifies settings that AWS CodeBuild uses to store and reuse build dependencies. Valid values:  `LOCAL_SOURCE_CACHE`, `LOCAL_DOCKER_LAYER_CACHE`, `LOCAL_CUSTOM_CACHE`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3043,7 +3043,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of storage that will be used for the AWS CodeBuild project cache. Valid values: `NO_CACHE`, `LOCAL`, and `S3`. Defaults to `NO_CACHE`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3059,7 +3059,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location where the AWS CodeBuild project stores cached resources. For type `S3` the value must be a valid S3 bucket name/prefix.
+    <dd>{{% md %}}Location of the source code from git or s3.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3069,7 +3069,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Specifies settings that AWS CodeBuild uses to store and reuse build dependencies. Valid values:  `LOCAL_SOURCE_CACHE`, `LOCAL_DOCKER_LAYER_CACHE`, and `LOCAL_CUSTOM_CACHE`
+    <dd>{{% md %}}Specifies settings that AWS CodeBuild uses to store and reuse build dependencies. Valid values:  `LOCAL_SOURCE_CACHE`, `LOCAL_DOCKER_LAYER_CACHE`, `LOCAL_CUSTOM_CACHE`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3079,7 +3079,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of storage that will be used for the AWS CodeBuild project cache. Valid values: `NO_CACHE`, `LOCAL`, and `S3`. Defaults to `NO_CACHE`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3097,7 +3097,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Information about the compute resources the build project will use. Available values for this parameter are: `BUILD_GENERAL1_SMALL`, `BUILD_GENERAL1_MEDIUM`, `BUILD_GENERAL1_LARGE` or `BUILD_GENERAL1_2XLARGE`. `BUILD_GENERAL1_SMALL` is only valid if `type` is set to `LINUX_CONTAINER`. When `type` is set to `LINUX_GPU_CONTAINER`, `compute_type` need to be `BUILD_GENERAL1_LARGE`.
+    <dd>{{% md %}}Information about the compute resources the build project will use. Valid values: `BUILD_GENERAL1_SMALL`, `BUILD_GENERAL1_MEDIUM`, `BUILD_GENERAL1_LARGE`, `BUILD_GENERAL1_2XLARGE`. `BUILD_GENERAL1_SMALL` is only valid if `type` is set to `LINUX_CONTAINER`. When `type` is set to `LINUX_GPU_CONTAINER`, `compute_type` must be `BUILD_GENERAL1_LARGE`.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3107,7 +3107,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Docker image to use for this build project. Valid values include [Docker images provided by CodeBuild](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-available.html) (e.g `aws/codebuild/standard:2.0`), [Docker Hub images](https://hub.docker.com/) (e.g. `pulumi/pulumi:latest`), and full Docker repository URIs such as those for ECR (e.g. `137112412989.dkr.ecr.us-west-2.amazonaws.com/amazonlinux:latest`).
+    <dd>{{% md %}}Docker image to use for this build project. Valid values include [Docker images provided by CodeBuild](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-available.html) (e.g `aws/codebuild/standard:2.0`), [Docker Hub images](https://hub.docker.com/) (e.g. `nginx:latest`), and full Docker repository URIs such as those for ECR (e.g. `137112412989.dkr.ecr.us-west-2.amazonaws.com/amazonlinux:latest`).
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3117,7 +3117,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of build environment to use for related builds. Available values are: `LINUX_CONTAINER`, `LINUX_GPU_CONTAINER`, `WINDOWS_CONTAINER` (deprecated), `WINDOWS_SERVER_2019_CONTAINER` or `ARM_CONTAINER`. For additional information, see the [CodeBuild User Guide](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html).
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3127,7 +3127,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the S3 bucket, path prefix and object key that contains the PEM-encoded certificate.
+    <dd>{{% md %}}ARN of the S3 bucket, path prefix and object key that contains the PEM-encoded certificate.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3137,7 +3137,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectenvironmentenvironmentvariable">List&lt;Project<wbr>Environment<wbr>Environment<wbr>Variable<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A set of environment variables to make available to builds for this build project.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3147,7 +3147,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of credentials AWS CodeBuild uses to pull images in your build. Available values for this parameter are `CODEBUILD` or `SERVICE_ROLE`. When you use a cross-account or private registry image, you must use SERVICE_ROLE credentials. When you use an AWS CodeBuild curated image, you must use CODEBUILD credentials. Default to `CODEBUILD`
+    <dd>{{% md %}}Type of credentials AWS CodeBuild uses to pull images in your build. Valid values: `CODEBUILD`, `SERVICE_ROLE`. When you use a cross-account or private registry image, you must use SERVICE_ROLE credentials. When you use an AWS CodeBuild curated image, you must use CodeBuild credentials. Defaults to `CODEBUILD`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3157,7 +3157,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, enables running the Docker daemon inside a Docker container. Defaults to `false`.
+    <dd>{{% md %}}Whether to enable running the Docker daemon inside a Docker container. Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3167,7 +3167,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectenvironmentregistrycredential">Project<wbr>Environment<wbr>Registry<wbr>Credential<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information about credentials for access to a private Docker registry. Registry Credential config blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3183,7 +3183,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Information about the compute resources the build project will use. Available values for this parameter are: `BUILD_GENERAL1_SMALL`, `BUILD_GENERAL1_MEDIUM`, `BUILD_GENERAL1_LARGE` or `BUILD_GENERAL1_2XLARGE`. `BUILD_GENERAL1_SMALL` is only valid if `type` is set to `LINUX_CONTAINER`. When `type` is set to `LINUX_GPU_CONTAINER`, `compute_type` need to be `BUILD_GENERAL1_LARGE`.
+    <dd>{{% md %}}Information about the compute resources the build project will use. Valid values: `BUILD_GENERAL1_SMALL`, `BUILD_GENERAL1_MEDIUM`, `BUILD_GENERAL1_LARGE`, `BUILD_GENERAL1_2XLARGE`. `BUILD_GENERAL1_SMALL` is only valid if `type` is set to `LINUX_CONTAINER`. When `type` is set to `LINUX_GPU_CONTAINER`, `compute_type` must be `BUILD_GENERAL1_LARGE`.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3193,7 +3193,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Docker image to use for this build project. Valid values include [Docker images provided by CodeBuild](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-available.html) (e.g `aws/codebuild/standard:2.0`), [Docker Hub images](https://hub.docker.com/) (e.g. `pulumi/pulumi:latest`), and full Docker repository URIs such as those for ECR (e.g. `137112412989.dkr.ecr.us-west-2.amazonaws.com/amazonlinux:latest`).
+    <dd>{{% md %}}Docker image to use for this build project. Valid values include [Docker images provided by CodeBuild](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-available.html) (e.g `aws/codebuild/standard:2.0`), [Docker Hub images](https://hub.docker.com/) (e.g. `nginx:latest`), and full Docker repository URIs such as those for ECR (e.g. `137112412989.dkr.ecr.us-west-2.amazonaws.com/amazonlinux:latest`).
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3203,7 +3203,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of build environment to use for related builds. Available values are: `LINUX_CONTAINER`, `LINUX_GPU_CONTAINER`, `WINDOWS_CONTAINER` (deprecated), `WINDOWS_SERVER_2019_CONTAINER` or `ARM_CONTAINER`. For additional information, see the [CodeBuild User Guide](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html).
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3213,7 +3213,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the S3 bucket, path prefix and object key that contains the PEM-encoded certificate.
+    <dd>{{% md %}}ARN of the S3 bucket, path prefix and object key that contains the PEM-encoded certificate.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3223,7 +3223,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectenvironmentenvironmentvariable">[]Project<wbr>Environment<wbr>Environment<wbr>Variable</a></span>
     </dt>
-    <dd>{{% md %}}A set of environment variables to make available to builds for this build project.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3233,7 +3233,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of credentials AWS CodeBuild uses to pull images in your build. Available values for this parameter are `CODEBUILD` or `SERVICE_ROLE`. When you use a cross-account or private registry image, you must use SERVICE_ROLE credentials. When you use an AWS CodeBuild curated image, you must use CODEBUILD credentials. Default to `CODEBUILD`
+    <dd>{{% md %}}Type of credentials AWS CodeBuild uses to pull images in your build. Valid values: `CODEBUILD`, `SERVICE_ROLE`. When you use a cross-account or private registry image, you must use SERVICE_ROLE credentials. When you use an AWS CodeBuild curated image, you must use CodeBuild credentials. Defaults to `CODEBUILD`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3243,7 +3243,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, enables running the Docker daemon inside a Docker container. Defaults to `false`.
+    <dd>{{% md %}}Whether to enable running the Docker daemon inside a Docker container. Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3253,7 +3253,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectenvironmentregistrycredential">Project<wbr>Environment<wbr>Registry<wbr>Credential</a></span>
     </dt>
-    <dd>{{% md %}}Information about credentials for access to a private Docker registry. Registry Credential config blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3269,7 +3269,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Information about the compute resources the build project will use. Available values for this parameter are: `BUILD_GENERAL1_SMALL`, `BUILD_GENERAL1_MEDIUM`, `BUILD_GENERAL1_LARGE` or `BUILD_GENERAL1_2XLARGE`. `BUILD_GENERAL1_SMALL` is only valid if `type` is set to `LINUX_CONTAINER`. When `type` is set to `LINUX_GPU_CONTAINER`, `compute_type` need to be `BUILD_GENERAL1_LARGE`.
+    <dd>{{% md %}}Information about the compute resources the build project will use. Valid values: `BUILD_GENERAL1_SMALL`, `BUILD_GENERAL1_MEDIUM`, `BUILD_GENERAL1_LARGE`, `BUILD_GENERAL1_2XLARGE`. `BUILD_GENERAL1_SMALL` is only valid if `type` is set to `LINUX_CONTAINER`. When `type` is set to `LINUX_GPU_CONTAINER`, `compute_type` must be `BUILD_GENERAL1_LARGE`.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3279,7 +3279,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Docker image to use for this build project. Valid values include [Docker images provided by CodeBuild](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-available.html) (e.g `aws/codebuild/standard:2.0`), [Docker Hub images](https://hub.docker.com/) (e.g. `pulumi/pulumi:latest`), and full Docker repository URIs such as those for ECR (e.g. `137112412989.dkr.ecr.us-west-2.amazonaws.com/amazonlinux:latest`).
+    <dd>{{% md %}}Docker image to use for this build project. Valid values include [Docker images provided by CodeBuild](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-available.html) (e.g `aws/codebuild/standard:2.0`), [Docker Hub images](https://hub.docker.com/) (e.g. `nginx:latest`), and full Docker repository URIs such as those for ECR (e.g. `137112412989.dkr.ecr.us-west-2.amazonaws.com/amazonlinux:latest`).
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3289,7 +3289,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of build environment to use for related builds. Available values are: `LINUX_CONTAINER`, `LINUX_GPU_CONTAINER`, `WINDOWS_CONTAINER` (deprecated), `WINDOWS_SERVER_2019_CONTAINER` or `ARM_CONTAINER`. For additional information, see the [CodeBuild User Guide](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html).
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3299,7 +3299,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the S3 bucket, path prefix and object key that contains the PEM-encoded certificate.
+    <dd>{{% md %}}ARN of the S3 bucket, path prefix and object key that contains the PEM-encoded certificate.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3309,7 +3309,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectenvironmentenvironmentvariable">Project<wbr>Environment<wbr>Environment<wbr>Variable[]</a></span>
     </dt>
-    <dd>{{% md %}}A set of environment variables to make available to builds for this build project.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3319,7 +3319,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of credentials AWS CodeBuild uses to pull images in your build. Available values for this parameter are `CODEBUILD` or `SERVICE_ROLE`. When you use a cross-account or private registry image, you must use SERVICE_ROLE credentials. When you use an AWS CodeBuild curated image, you must use CODEBUILD credentials. Default to `CODEBUILD`
+    <dd>{{% md %}}Type of credentials AWS CodeBuild uses to pull images in your build. Valid values: `CODEBUILD`, `SERVICE_ROLE`. When you use a cross-account or private registry image, you must use SERVICE_ROLE credentials. When you use an AWS CodeBuild curated image, you must use CodeBuild credentials. Defaults to `CODEBUILD`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3329,7 +3329,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If set to true, enables running the Docker daemon inside a Docker container. Defaults to `false`.
+    <dd>{{% md %}}Whether to enable running the Docker daemon inside a Docker container. Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3339,7 +3339,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectenvironmentregistrycredential">Project<wbr>Environment<wbr>Registry<wbr>Credential</a></span>
     </dt>
-    <dd>{{% md %}}Information about credentials for access to a private Docker registry. Registry Credential config blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3355,7 +3355,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Information about the compute resources the build project will use. Available values for this parameter are: `BUILD_GENERAL1_SMALL`, `BUILD_GENERAL1_MEDIUM`, `BUILD_GENERAL1_LARGE` or `BUILD_GENERAL1_2XLARGE`. `BUILD_GENERAL1_SMALL` is only valid if `type` is set to `LINUX_CONTAINER`. When `type` is set to `LINUX_GPU_CONTAINER`, `compute_type` need to be `BUILD_GENERAL1_LARGE`.
+    <dd>{{% md %}}Information about the compute resources the build project will use. Valid values: `BUILD_GENERAL1_SMALL`, `BUILD_GENERAL1_MEDIUM`, `BUILD_GENERAL1_LARGE`, `BUILD_GENERAL1_2XLARGE`. `BUILD_GENERAL1_SMALL` is only valid if `type` is set to `LINUX_CONTAINER`. When `type` is set to `LINUX_GPU_CONTAINER`, `compute_type` must be `BUILD_GENERAL1_LARGE`.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3365,7 +3365,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Docker image to use for this build project. Valid values include [Docker images provided by CodeBuild](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-available.html) (e.g `aws/codebuild/standard:2.0`), [Docker Hub images](https://hub.docker.com/) (e.g. `pulumi/pulumi:latest`), and full Docker repository URIs such as those for ECR (e.g. `137112412989.dkr.ecr.us-west-2.amazonaws.com/amazonlinux:latest`).
+    <dd>{{% md %}}Docker image to use for this build project. Valid values include [Docker images provided by CodeBuild](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-available.html) (e.g `aws/codebuild/standard:2.0`), [Docker Hub images](https://hub.docker.com/) (e.g. `nginx:latest`), and full Docker repository URIs such as those for ECR (e.g. `137112412989.dkr.ecr.us-west-2.amazonaws.com/amazonlinux:latest`).
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3375,7 +3375,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of build environment to use for related builds. Available values are: `LINUX_CONTAINER`, `LINUX_GPU_CONTAINER`, `WINDOWS_CONTAINER` (deprecated), `WINDOWS_SERVER_2019_CONTAINER` or `ARM_CONTAINER`. For additional information, see the [CodeBuild User Guide](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html).
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3385,7 +3385,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN of the S3 bucket, path prefix and object key that contains the PEM-encoded certificate.
+    <dd>{{% md %}}ARN of the S3 bucket, path prefix and object key that contains the PEM-encoded certificate.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3395,7 +3395,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectenvironmentenvironmentvariable">Sequence[Project<wbr>Environment<wbr>Environment<wbr>Variable<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A set of environment variables to make available to builds for this build project.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3405,7 +3405,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of credentials AWS CodeBuild uses to pull images in your build. Available values for this parameter are `CODEBUILD` or `SERVICE_ROLE`. When you use a cross-account or private registry image, you must use SERVICE_ROLE credentials. When you use an AWS CodeBuild curated image, you must use CODEBUILD credentials. Default to `CODEBUILD`
+    <dd>{{% md %}}Type of credentials AWS CodeBuild uses to pull images in your build. Valid values: `CODEBUILD`, `SERVICE_ROLE`. When you use a cross-account or private registry image, you must use SERVICE_ROLE credentials. When you use an AWS CodeBuild curated image, you must use CodeBuild credentials. Defaults to `CODEBUILD`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3415,7 +3415,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, enables running the Docker daemon inside a Docker container. Defaults to `false`.
+    <dd>{{% md %}}Whether to enable running the Docker daemon inside a Docker container. Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3425,7 +3425,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectenvironmentregistrycredential">Project<wbr>Environment<wbr>Registry<wbr>Credential<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information about credentials for access to a private Docker registry. Registry Credential config blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3443,7 +3443,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The environment variable's name or key.
+    <dd>{{% md %}}Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3453,7 +3453,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The environment variable's value.
+    <dd>{{% md %}}Environment variable's value.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3463,7 +3463,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of environment variable. Valid values: `PARAMETER_STORE`, `PLAINTEXT`, and `SECRETS_MANAGER`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3479,7 +3479,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The environment variable's name or key.
+    <dd>{{% md %}}Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3489,7 +3489,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The environment variable's value.
+    <dd>{{% md %}}Environment variable's value.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3499,7 +3499,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of environment variable. Valid values: `PARAMETER_STORE`, `PLAINTEXT`, and `SECRETS_MANAGER`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3515,7 +3515,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The environment variable's name or key.
+    <dd>{{% md %}}Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3525,7 +3525,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The environment variable's value.
+    <dd>{{% md %}}Environment variable's value.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3535,7 +3535,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of environment variable. Valid values: `PARAMETER_STORE`, `PLAINTEXT`, and `SECRETS_MANAGER`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3551,7 +3551,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The environment variable's name or key.
+    <dd>{{% md %}}Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3561,7 +3561,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The environment variable's value.
+    <dd>{{% md %}}Environment variable's value.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3571,7 +3571,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of environment variable. Valid values: `PARAMETER_STORE`, `PLAINTEXT`, and `SECRETS_MANAGER`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3589,7 +3589,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) or name of credentials created using AWS Secrets Manager.
+    <dd>{{% md %}}ARN or name of credentials created using AWS Secrets Manager.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3599,7 +3599,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service that created the credentials to access a private Docker registry. The valid value, SECRETS_MANAGER, is for AWS Secrets Manager.
+    <dd>{{% md %}}Service that created the credentials to access a private Docker registry. Valid value: `SECRETS_MANAGER` (AWS Secrets Manager).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3615,7 +3615,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) or name of credentials created using AWS Secrets Manager.
+    <dd>{{% md %}}ARN or name of credentials created using AWS Secrets Manager.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3625,7 +3625,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service that created the credentials to access a private Docker registry. The valid value, SECRETS_MANAGER, is for AWS Secrets Manager.
+    <dd>{{% md %}}Service that created the credentials to access a private Docker registry. Valid value: `SECRETS_MANAGER` (AWS Secrets Manager).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3641,7 +3641,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) or name of credentials created using AWS Secrets Manager.
+    <dd>{{% md %}}ARN or name of credentials created using AWS Secrets Manager.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3651,7 +3651,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service that created the credentials to access a private Docker registry. The valid value, SECRETS_MANAGER, is for AWS Secrets Manager.
+    <dd>{{% md %}}Service that created the credentials to access a private Docker registry. Valid value: `SECRETS_MANAGER` (AWS Secrets Manager).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3667,7 +3667,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) or name of credentials created using AWS Secrets Manager.
+    <dd>{{% md %}}ARN or name of credentials created using AWS Secrets Manager.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3677,7 +3677,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The service that created the credentials to access a private Docker registry. The valid value, SECRETS_MANAGER, is for AWS Secrets Manager.
+    <dd>{{% md %}}Service that created the credentials to access a private Docker registry. Valid value: `SECRETS_MANAGER` (AWS Secrets Manager).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3695,7 +3695,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectlogsconfigcloudwatchlogs">Project<wbr>Logs<wbr>Config<wbr>Cloudwatch<wbr>Logs<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the builds to store logs to CloudWatch
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3705,7 +3705,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectlogsconfigs3logs">Project<wbr>Logs<wbr>Config<wbr>S3Logs<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the builds to store logs to S3.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3721,7 +3721,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectlogsconfigcloudwatchlogs">Project<wbr>Logs<wbr>Config<wbr>Cloudwatch<wbr>Logs</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the builds to store logs to CloudWatch
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3731,7 +3731,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectlogsconfigs3logs">Project<wbr>Logs<wbr>Config<wbr>S3Logs</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the builds to store logs to S3.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3747,7 +3747,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectlogsconfigcloudwatchlogs">Project<wbr>Logs<wbr>Config<wbr>Cloudwatch<wbr>Logs</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the builds to store logs to CloudWatch
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3757,7 +3757,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectlogsconfigs3logs">Project<wbr>Logs<wbr>Config<wbr>S3Logs</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the builds to store logs to S3.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3773,7 +3773,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectlogsconfigcloudwatchlogs">Project<wbr>Logs<wbr>Config<wbr>Cloudwatch<wbr>Logs<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the builds to store logs to CloudWatch
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3783,7 +3783,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectlogsconfigs3logs">Project<wbr>Logs<wbr>Config<wbr>S3Logs<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the builds to store logs to S3.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3801,7 +3801,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name of the logs in CloudWatch Logs.
+    <dd>{{% md %}}Group name of the logs in CloudWatch Logs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3821,7 +3821,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The stream name of the logs in CloudWatch Logs.
+    <dd>{{% md %}}Stream name of the logs in CloudWatch Logs.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3837,7 +3837,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name of the logs in CloudWatch Logs.
+    <dd>{{% md %}}Group name of the logs in CloudWatch Logs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3857,7 +3857,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The stream name of the logs in CloudWatch Logs.
+    <dd>{{% md %}}Stream name of the logs in CloudWatch Logs.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3873,7 +3873,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name of the logs in CloudWatch Logs.
+    <dd>{{% md %}}Group name of the logs in CloudWatch Logs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3893,7 +3893,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The stream name of the logs in CloudWatch Logs.
+    <dd>{{% md %}}Stream name of the logs in CloudWatch Logs.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3909,7 +3909,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The group name of the logs in CloudWatch Logs.
+    <dd>{{% md %}}Group name of the logs in CloudWatch Logs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3929,7 +3929,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The stream name of the logs in CloudWatch Logs.
+    <dd>{{% md %}}Stream name of the logs in CloudWatch Logs.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3947,7 +3947,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, output artifacts will not be encrypted. If `type` is set to `NO_ARTIFACTS` then this value will be ignored. Defaults to `false`.
+    <dd>{{% md %}}Whether to disable encrypting output artifacts. If `type` is set to `NO_ARTIFACTS`, this value is ignored. Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3957,7 +3957,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Information about the build output artifact location. If `type` is set to `CODEPIPELINE` or `NO_ARTIFACTS` then this value will be ignored. If `type` is set to `S3`, this is the name of the output bucket.
+    <dd>{{% md %}}Location of the source code from git or s3.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3967,7 +3967,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current status of logs in CloudWatch Logs for a build project. Valid values: `ENABLED`, `DISABLED`. Defaults to `ENABLED`.
+    <dd>{{% md %}}Current status of logs in S3 for a build project. Valid values: `ENABLED`, `DISABLED`. Defaults to `DISABLED`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3983,7 +3983,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, output artifacts will not be encrypted. If `type` is set to `NO_ARTIFACTS` then this value will be ignored. Defaults to `false`.
+    <dd>{{% md %}}Whether to disable encrypting output artifacts. If `type` is set to `NO_ARTIFACTS`, this value is ignored. Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3993,7 +3993,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Information about the build output artifact location. If `type` is set to `CODEPIPELINE` or `NO_ARTIFACTS` then this value will be ignored. If `type` is set to `S3`, this is the name of the output bucket.
+    <dd>{{% md %}}Location of the source code from git or s3.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4003,7 +4003,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current status of logs in CloudWatch Logs for a build project. Valid values: `ENABLED`, `DISABLED`. Defaults to `ENABLED`.
+    <dd>{{% md %}}Current status of logs in S3 for a build project. Valid values: `ENABLED`, `DISABLED`. Defaults to `DISABLED`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4019,7 +4019,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If set to true, output artifacts will not be encrypted. If `type` is set to `NO_ARTIFACTS` then this value will be ignored. Defaults to `false`.
+    <dd>{{% md %}}Whether to disable encrypting output artifacts. If `type` is set to `NO_ARTIFACTS`, this value is ignored. Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4029,7 +4029,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Information about the build output artifact location. If `type` is set to `CODEPIPELINE` or `NO_ARTIFACTS` then this value will be ignored. If `type` is set to `S3`, this is the name of the output bucket.
+    <dd>{{% md %}}Location of the source code from git or s3.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4039,7 +4039,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current status of logs in CloudWatch Logs for a build project. Valid values: `ENABLED`, `DISABLED`. Defaults to `ENABLED`.
+    <dd>{{% md %}}Current status of logs in S3 for a build project. Valid values: `ENABLED`, `DISABLED`. Defaults to `DISABLED`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4055,7 +4055,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, output artifacts will not be encrypted. If `type` is set to `NO_ARTIFACTS` then this value will be ignored. Defaults to `false`.
+    <dd>{{% md %}}Whether to disable encrypting output artifacts. If `type` is set to `NO_ARTIFACTS`, this value is ignored. Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4065,7 +4065,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Information about the build output artifact location. If `type` is set to `CODEPIPELINE` or `NO_ARTIFACTS` then this value will be ignored. If `type` is set to `S3`, this is the name of the output bucket.
+    <dd>{{% md %}}Location of the source code from git or s3.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4075,7 +4075,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Current status of logs in CloudWatch Logs for a build project. Valid values: `ENABLED`, `DISABLED`. Defaults to `ENABLED`.
+    <dd>{{% md %}}Current status of logs in S3 for a build project. Valid values: `ENABLED`, `DISABLED`. Defaults to `DISABLED`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4093,7 +4093,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The artifact identifier. Must be the same specified inside AWS CodeBuild buildspec.
+    <dd>{{% md %}}Artifact identifier. Must be the same specified inside the AWS CodeBuild build specification.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -4103,7 +4103,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The build output artifact's type. The only valid value is `S3`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4113,7 +4113,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, output artifacts will not be encrypted. If `type` is set to `NO_ARTIFACTS` then this value will be ignored. Defaults to `false`.
+    <dd>{{% md %}}Whether to disable encrypting output artifacts. If `type` is set to `NO_ARTIFACTS`, this value is ignored. Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4123,7 +4123,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Information about the build output artifact location. If `type` is set to `CODEPIPELINE` or `NO_ARTIFACTS` then this value will be ignored. If `type` is set to `S3`, this is the name of the output bucket. If `path` is not also specified, then `location` can also specify the path of the output artifact in the output bucket.
+    <dd>{{% md %}}Location of the source code from git or s3.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4133,7 +4133,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the project. If `type` is set to `S3`, this is the name of the output artifact object
+    <dd>{{% md %}}Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4143,7 +4143,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace to use in storing build artifacts. If `type` is set to `S3`, then valid values for this parameter are: `BUILD_ID` or `NONE`.
+    <dd>{{% md %}}Namespace to use in storing build artifacts. If `type` is set to `S3`, then valid values are `BUILD_ID` or `NONE`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4153,7 +4153,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, a name specified in the build spec file overrides the artifact name.
+    <dd>{{% md %}}Whether a name specified in the build specification overrides the artifact name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4163,7 +4163,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of build output artifact to create. If `type` is set to `S3`, valid values for this parameter are: `NONE` or `ZIP`
+    <dd>{{% md %}}Type of build output artifact to create. If `type` is set to `S3`, valid values are `NONE`, `ZIP`
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4173,7 +4173,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If `type` is set to `S3`, this is the path to the output artifact
+    <dd>{{% md %}}If `type` is set to `S3`, this is the path to the output artifact.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4189,7 +4189,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The artifact identifier. Must be the same specified inside AWS CodeBuild buildspec.
+    <dd>{{% md %}}Artifact identifier. Must be the same specified inside the AWS CodeBuild build specification.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -4199,7 +4199,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The build output artifact's type. The only valid value is `S3`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4209,7 +4209,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, output artifacts will not be encrypted. If `type` is set to `NO_ARTIFACTS` then this value will be ignored. Defaults to `false`.
+    <dd>{{% md %}}Whether to disable encrypting output artifacts. If `type` is set to `NO_ARTIFACTS`, this value is ignored. Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4219,7 +4219,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Information about the build output artifact location. If `type` is set to `CODEPIPELINE` or `NO_ARTIFACTS` then this value will be ignored. If `type` is set to `S3`, this is the name of the output bucket. If `path` is not also specified, then `location` can also specify the path of the output artifact in the output bucket.
+    <dd>{{% md %}}Location of the source code from git or s3.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4229,7 +4229,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the project. If `type` is set to `S3`, this is the name of the output artifact object
+    <dd>{{% md %}}Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4239,7 +4239,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace to use in storing build artifacts. If `type` is set to `S3`, then valid values for this parameter are: `BUILD_ID` or `NONE`.
+    <dd>{{% md %}}Namespace to use in storing build artifacts. If `type` is set to `S3`, then valid values are `BUILD_ID` or `NONE`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4249,7 +4249,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, a name specified in the build spec file overrides the artifact name.
+    <dd>{{% md %}}Whether a name specified in the build specification overrides the artifact name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4259,7 +4259,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of build output artifact to create. If `type` is set to `S3`, valid values for this parameter are: `NONE` or `ZIP`
+    <dd>{{% md %}}Type of build output artifact to create. If `type` is set to `S3`, valid values are `NONE`, `ZIP`
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4269,7 +4269,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If `type` is set to `S3`, this is the path to the output artifact
+    <dd>{{% md %}}If `type` is set to `S3`, this is the path to the output artifact.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4285,7 +4285,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The artifact identifier. Must be the same specified inside AWS CodeBuild buildspec.
+    <dd>{{% md %}}Artifact identifier. Must be the same specified inside the AWS CodeBuild build specification.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -4295,7 +4295,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The build output artifact's type. The only valid value is `S3`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4305,7 +4305,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If set to true, output artifacts will not be encrypted. If `type` is set to `NO_ARTIFACTS` then this value will be ignored. Defaults to `false`.
+    <dd>{{% md %}}Whether to disable encrypting output artifacts. If `type` is set to `NO_ARTIFACTS`, this value is ignored. Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4315,7 +4315,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Information about the build output artifact location. If `type` is set to `CODEPIPELINE` or `NO_ARTIFACTS` then this value will be ignored. If `type` is set to `S3`, this is the name of the output bucket. If `path` is not also specified, then `location` can also specify the path of the output artifact in the output bucket.
+    <dd>{{% md %}}Location of the source code from git or s3.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4325,7 +4325,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the project. If `type` is set to `S3`, this is the name of the output artifact object
+    <dd>{{% md %}}Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4335,7 +4335,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace to use in storing build artifacts. If `type` is set to `S3`, then valid values for this parameter are: `BUILD_ID` or `NONE`.
+    <dd>{{% md %}}Namespace to use in storing build artifacts. If `type` is set to `S3`, then valid values are `BUILD_ID` or `NONE`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4345,7 +4345,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If set to true, a name specified in the build spec file overrides the artifact name.
+    <dd>{{% md %}}Whether a name specified in the build specification overrides the artifact name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4355,7 +4355,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of build output artifact to create. If `type` is set to `S3`, valid values for this parameter are: `NONE` or `ZIP`
+    <dd>{{% md %}}Type of build output artifact to create. If `type` is set to `S3`, valid values are `NONE`, `ZIP`
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4365,7 +4365,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If `type` is set to `S3`, this is the path to the output artifact
+    <dd>{{% md %}}If `type` is set to `S3`, this is the path to the output artifact.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4381,7 +4381,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The artifact identifier. Must be the same specified inside AWS CodeBuild buildspec.
+    <dd>{{% md %}}Artifact identifier. Must be the same specified inside the AWS CodeBuild build specification.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -4391,7 +4391,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The build output artifact's type. The only valid value is `S3`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4401,7 +4401,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, output artifacts will not be encrypted. If `type` is set to `NO_ARTIFACTS` then this value will be ignored. Defaults to `false`.
+    <dd>{{% md %}}Whether to disable encrypting output artifacts. If `type` is set to `NO_ARTIFACTS`, this value is ignored. Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4411,7 +4411,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Information about the build output artifact location. If `type` is set to `CODEPIPELINE` or `NO_ARTIFACTS` then this value will be ignored. If `type` is set to `S3`, this is the name of the output bucket. If `path` is not also specified, then `location` can also specify the path of the output artifact in the output bucket.
+    <dd>{{% md %}}Location of the source code from git or s3.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4421,7 +4421,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the project. If `type` is set to `S3`, this is the name of the output artifact object
+    <dd>{{% md %}}Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4431,7 +4431,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The namespace to use in storing build artifacts. If `type` is set to `S3`, then valid values for this parameter are: `BUILD_ID` or `NONE`.
+    <dd>{{% md %}}Namespace to use in storing build artifacts. If `type` is set to `S3`, then valid values are `BUILD_ID` or `NONE`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4441,7 +4441,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, a name specified in the build spec file overrides the artifact name.
+    <dd>{{% md %}}Whether a name specified in the build specification overrides the artifact name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4451,7 +4451,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of build output artifact to create. If `type` is set to `S3`, valid values for this parameter are: `NONE` or `ZIP`
+    <dd>{{% md %}}Type of build output artifact to create. If `type` is set to `S3`, valid values are `NONE`, `ZIP`
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4461,7 +4461,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}If `type` is set to `S3`, this is the path to the output artifact
+    <dd>{{% md %}}If `type` is set to `S3`, this is the path to the output artifact.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4479,7 +4479,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source identifier. Source data will be put inside a folder named as this parameter inside AWS CodeBuild source directory
+    <dd>{{% md %}}Source identifier. Source data will be put inside a folder named as this parameter inside AWS CodeBuild source directory
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -4489,7 +4489,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of repository that contains the source code to be built. Valid values for this parameter are: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET` or `S3`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4499,7 +4499,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsecondarysourceauth">List&lt;Project<wbr>Secondary<wbr>Source<wbr>Auth<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Information about the authorization settings for AWS CodeBuild to access the source code to be built. Auth blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4509,7 +4509,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The build spec declaration to use for this build project's related builds.
+    <dd>{{% md %}}Build specification to use for this build project's related builds. This must be set when `type` is `NO_SOURCE`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4519,7 +4519,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Truncate git history to this many commits.
+    <dd>{{% md %}}Truncate git history to this many commits. Use `0` for a `Full` checkout which you need to run commands like `git branch --show-current`. See [AWS CodePipeline User Guide: Tutorial: Use full clone with a GitHub pipeline source](https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-github-gitclone.html) for details.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4529,7 +4529,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsecondarysourcegitsubmodulesconfig">Project<wbr>Secondary<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information about the Git submodules configuration for an AWS CodeBuild build project. Git submodules config blocks are documented below. This option is only valid when the `type` is `CODECOMMIT`, `GITHUB` or `GITHUB_ENTERPRISE`.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4549,7 +4549,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the source code from git or s3.
+    <dd>{{% md %}}Location of the source code from git or s3.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4559,7 +4559,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Set to `true` to report the status of a build's start and finish to your source provider. This option is only valid when your source provider is `GITHUB`, `BITBUCKET`, or `GITHUB_ENTERPRISE`.
+    <dd>{{% md %}}Whether to report the status of a build's start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4575,7 +4575,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source identifier. Source data will be put inside a folder named as this parameter inside AWS CodeBuild source directory
+    <dd>{{% md %}}Source identifier. Source data will be put inside a folder named as this parameter inside AWS CodeBuild source directory
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -4585,7 +4585,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of repository that contains the source code to be built. Valid values for this parameter are: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET` or `S3`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4595,7 +4595,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsecondarysourceauth">[]Project<wbr>Secondary<wbr>Source<wbr>Auth</a></span>
     </dt>
-    <dd>{{% md %}}Information about the authorization settings for AWS CodeBuild to access the source code to be built. Auth blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4605,7 +4605,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The build spec declaration to use for this build project's related builds.
+    <dd>{{% md %}}Build specification to use for this build project's related builds. This must be set when `type` is `NO_SOURCE`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4615,7 +4615,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Truncate git history to this many commits.
+    <dd>{{% md %}}Truncate git history to this many commits. Use `0` for a `Full` checkout which you need to run commands like `git branch --show-current`. See [AWS CodePipeline User Guide: Tutorial: Use full clone with a GitHub pipeline source](https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-github-gitclone.html) for details.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4625,7 +4625,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsecondarysourcegitsubmodulesconfig">Project<wbr>Secondary<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Information about the Git submodules configuration for an AWS CodeBuild build project. Git submodules config blocks are documented below. This option is only valid when the `type` is `CODECOMMIT`, `GITHUB` or `GITHUB_ENTERPRISE`.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4645,7 +4645,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the source code from git or s3.
+    <dd>{{% md %}}Location of the source code from git or s3.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4655,7 +4655,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Set to `true` to report the status of a build's start and finish to your source provider. This option is only valid when your source provider is `GITHUB`, `BITBUCKET`, or `GITHUB_ENTERPRISE`.
+    <dd>{{% md %}}Whether to report the status of a build's start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4671,7 +4671,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source identifier. Source data will be put inside a folder named as this parameter inside AWS CodeBuild source directory
+    <dd>{{% md %}}Source identifier. Source data will be put inside a folder named as this parameter inside AWS CodeBuild source directory
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -4681,7 +4681,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of repository that contains the source code to be built. Valid values for this parameter are: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET` or `S3`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4691,7 +4691,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsecondarysourceauth">Project<wbr>Secondary<wbr>Source<wbr>Auth[]</a></span>
     </dt>
-    <dd>{{% md %}}Information about the authorization settings for AWS CodeBuild to access the source code to be built. Auth blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4701,7 +4701,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The build spec declaration to use for this build project's related builds.
+    <dd>{{% md %}}Build specification to use for this build project's related builds. This must be set when `type` is `NO_SOURCE`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4711,7 +4711,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Truncate git history to this many commits.
+    <dd>{{% md %}}Truncate git history to this many commits. Use `0` for a `Full` checkout which you need to run commands like `git branch --show-current`. See [AWS CodePipeline User Guide: Tutorial: Use full clone with a GitHub pipeline source](https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-github-gitclone.html) for details.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4721,7 +4721,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsecondarysourcegitsubmodulesconfig">Project<wbr>Secondary<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Information about the Git submodules configuration for an AWS CodeBuild build project. Git submodules config blocks are documented below. This option is only valid when the `type` is `CODECOMMIT`, `GITHUB` or `GITHUB_ENTERPRISE`.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4741,7 +4741,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the source code from git or s3.
+    <dd>{{% md %}}Location of the source code from git or s3.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4751,7 +4751,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Set to `true` to report the status of a build's start and finish to your source provider. This option is only valid when your source provider is `GITHUB`, `BITBUCKET`, or `GITHUB_ENTERPRISE`.
+    <dd>{{% md %}}Whether to report the status of a build's start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4767,7 +4767,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The source identifier. Source data will be put inside a folder named as this parameter inside AWS CodeBuild source directory
+    <dd>{{% md %}}Source identifier. Source data will be put inside a folder named as this parameter inside AWS CodeBuild source directory
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -4777,7 +4777,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of repository that contains the source code to be built. Valid values for this parameter are: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET` or `S3`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4787,7 +4787,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsecondarysourceauth">Sequence[Project<wbr>Secondary<wbr>Source<wbr>Auth<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Information about the authorization settings for AWS CodeBuild to access the source code to be built. Auth blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4797,7 +4797,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The build spec declaration to use for this build project's related builds.
+    <dd>{{% md %}}Build specification to use for this build project's related builds. This must be set when `type` is `NO_SOURCE`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4807,7 +4807,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Truncate git history to this many commits.
+    <dd>{{% md %}}Truncate git history to this many commits. Use `0` for a `Full` checkout which you need to run commands like `git branch --show-current`. See [AWS CodePipeline User Guide: Tutorial: Use full clone with a GitHub pipeline source](https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-github-gitclone.html) for details.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4817,7 +4817,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsecondarysourcegitsubmodulesconfig">Project<wbr>Secondary<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information about the Git submodules configuration for an AWS CodeBuild build project. Git submodules config blocks are documented below. This option is only valid when the `type` is `CODECOMMIT`, `GITHUB` or `GITHUB_ENTERPRISE`.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4837,7 +4837,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location of the source code from git or s3.
+    <dd>{{% md %}}Location of the source code from git or s3.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4847,7 +4847,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Set to `true` to report the status of a build's start and finish to your source provider. This option is only valid when your source provider is `GITHUB`, `BITBUCKET`, or `GITHUB_ENTERPRISE`.
+    <dd>{{% md %}}Whether to report the status of a build's start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4865,7 +4865,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authorization type to use. The only valid value is `OAUTH`
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4875,7 +4875,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource value that applies to the specified authorization type.
+    <dd>{{% md %}}Resource value that applies to the specified authorization type.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4891,7 +4891,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authorization type to use. The only valid value is `OAUTH`
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4901,7 +4901,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource value that applies to the specified authorization type.
+    <dd>{{% md %}}Resource value that applies to the specified authorization type.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4917,7 +4917,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authorization type to use. The only valid value is `OAUTH`
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4927,7 +4927,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource value that applies to the specified authorization type.
+    <dd>{{% md %}}Resource value that applies to the specified authorization type.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4943,7 +4943,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The authorization type to use. The only valid value is `OAUTH`
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4953,7 +4953,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource value that applies to the specified authorization type.
+    <dd>{{% md %}}Resource value that applies to the specified authorization type.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4971,7 +4971,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, fetches Git submodules for the AWS CodeBuild build project.
+    <dd>{{% md %}}Whether to fetch Git submodules for the AWS CodeBuild build project.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4987,7 +4987,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, fetches Git submodules for the AWS CodeBuild build project.
+    <dd>{{% md %}}Whether to fetch Git submodules for the AWS CodeBuild build project.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5003,7 +5003,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If set to true, fetches Git submodules for the AWS CodeBuild build project.
+    <dd>{{% md %}}Whether to fetch Git submodules for the AWS CodeBuild build project.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5019,7 +5019,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, fetches Git submodules for the AWS CodeBuild build project.
+    <dd>{{% md %}}Whether to fetch Git submodules for the AWS CodeBuild build project.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5037,7 +5037,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of repository that contains the source code to be built. Valid values for this parameter are: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3` or `NO_SOURCE`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5047,7 +5047,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsourceauth">List&lt;Project<wbr>Source<wbr>Auth<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Information about the authorization settings for AWS CodeBuild to access the source code to be built. Auth blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5057,7 +5057,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The build spec declaration to use for this build project's related builds. This must be set when `type` is `NO_SOURCE`.
+    <dd>{{% md %}}Build specification to use for this build project's related builds. This must be set when `type` is `NO_SOURCE`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5067,7 +5067,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Truncate git history to this many commits.
+    <dd>{{% md %}}Truncate git history to this many commits. Use `0` for a `Full` checkout which you need to run commands like `git branch --show-current`. See [AWS CodePipeline User Guide: Tutorial: Use full clone with a GitHub pipeline source](https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-github-gitclone.html) for details.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5077,7 +5077,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsourcegitsubmodulesconfig">Project<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information about the Git submodules configuration for an AWS CodeBuild build project. Git submodules config blocks are documented below. This option is only valid when the `type` is `CODECOMMIT`, `GITHUB` or `GITHUB_ENTERPRISE`.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5097,7 +5097,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the source code from git or s3.
+    <dd>{{% md %}}Location of the source code from git or s3.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5107,7 +5107,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Set to `true` to report the status of a build's start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
+    <dd>{{% md %}}Whether to report the status of a build's start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5123,7 +5123,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of repository that contains the source code to be built. Valid values for this parameter are: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3` or `NO_SOURCE`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5133,7 +5133,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsourceauth">[]Project<wbr>Source<wbr>Auth</a></span>
     </dt>
-    <dd>{{% md %}}Information about the authorization settings for AWS CodeBuild to access the source code to be built. Auth blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5143,7 +5143,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The build spec declaration to use for this build project's related builds. This must be set when `type` is `NO_SOURCE`.
+    <dd>{{% md %}}Build specification to use for this build project's related builds. This must be set when `type` is `NO_SOURCE`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5153,7 +5153,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Truncate git history to this many commits.
+    <dd>{{% md %}}Truncate git history to this many commits. Use `0` for a `Full` checkout which you need to run commands like `git branch --show-current`. See [AWS CodePipeline User Guide: Tutorial: Use full clone with a GitHub pipeline source](https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-github-gitclone.html) for details.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5163,7 +5163,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsourcegitsubmodulesconfig">Project<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Information about the Git submodules configuration for an AWS CodeBuild build project. Git submodules config blocks are documented below. This option is only valid when the `type` is `CODECOMMIT`, `GITHUB` or `GITHUB_ENTERPRISE`.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5183,7 +5183,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the source code from git or s3.
+    <dd>{{% md %}}Location of the source code from git or s3.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5193,7 +5193,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Set to `true` to report the status of a build's start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
+    <dd>{{% md %}}Whether to report the status of a build's start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5209,7 +5209,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of repository that contains the source code to be built. Valid values for this parameter are: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3` or `NO_SOURCE`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5219,7 +5219,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsourceauth">Project<wbr>Source<wbr>Auth[]</a></span>
     </dt>
-    <dd>{{% md %}}Information about the authorization settings for AWS CodeBuild to access the source code to be built. Auth blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5229,7 +5229,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The build spec declaration to use for this build project's related builds. This must be set when `type` is `NO_SOURCE`.
+    <dd>{{% md %}}Build specification to use for this build project's related builds. This must be set when `type` is `NO_SOURCE`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5239,7 +5239,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Truncate git history to this many commits.
+    <dd>{{% md %}}Truncate git history to this many commits. Use `0` for a `Full` checkout which you need to run commands like `git branch --show-current`. See [AWS CodePipeline User Guide: Tutorial: Use full clone with a GitHub pipeline source](https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-github-gitclone.html) for details.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5249,7 +5249,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsourcegitsubmodulesconfig">Project<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Information about the Git submodules configuration for an AWS CodeBuild build project. Git submodules config blocks are documented below. This option is only valid when the `type` is `CODECOMMIT`, `GITHUB` or `GITHUB_ENTERPRISE`.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5269,7 +5269,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the source code from git or s3.
+    <dd>{{% md %}}Location of the source code from git or s3.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5279,7 +5279,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Set to `true` to report the status of a build's start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
+    <dd>{{% md %}}Whether to report the status of a build's start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5295,7 +5295,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of repository that contains the source code to be built. Valid values for this parameter are: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3` or `NO_SOURCE`.
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5305,7 +5305,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsourceauth">Sequence[Project<wbr>Source<wbr>Auth<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Information about the authorization settings for AWS CodeBuild to access the source code to be built. Auth blocks are documented below.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5315,7 +5315,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The build spec declaration to use for this build project's related builds. This must be set when `type` is `NO_SOURCE`.
+    <dd>{{% md %}}Build specification to use for this build project's related builds. This must be set when `type` is `NO_SOURCE`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5325,7 +5325,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Truncate git history to this many commits.
+    <dd>{{% md %}}Truncate git history to this many commits. Use `0` for a `Full` checkout which you need to run commands like `git branch --show-current`. See [AWS CodePipeline User Guide: Tutorial: Use full clone with a GitHub pipeline source](https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-github-gitclone.html) for details.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5335,7 +5335,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#projectsourcegitsubmodulesconfig">Project<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information about the Git submodules configuration for an AWS CodeBuild build project. Git submodules config blocks are documented below. This option is only valid when the `type` is `CODECOMMIT`, `GITHUB` or `GITHUB_ENTERPRISE`.
+    <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5355,7 +5355,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location of the source code from git or s3.
+    <dd>{{% md %}}Location of the source code from git or s3.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5365,7 +5365,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Set to `true` to report the status of a build's start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
+    <dd>{{% md %}}Whether to report the status of a build's start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5383,7 +5383,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authorization type to use. The only valid value is `OAUTH`
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5393,7 +5393,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource value that applies to the specified authorization type.
+    <dd>{{% md %}}Resource value that applies to the specified authorization type.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5409,7 +5409,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authorization type to use. The only valid value is `OAUTH`
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5419,7 +5419,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource value that applies to the specified authorization type.
+    <dd>{{% md %}}Resource value that applies to the specified authorization type.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5435,7 +5435,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authorization type to use. The only valid value is `OAUTH`
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5445,7 +5445,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource value that applies to the specified authorization type.
+    <dd>{{% md %}}Resource value that applies to the specified authorization type.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5461,7 +5461,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The authorization type to use. The only valid value is `OAUTH`
+    <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5471,7 +5471,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource value that applies to the specified authorization type.
+    <dd>{{% md %}}Resource value that applies to the specified authorization type.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5489,7 +5489,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, fetches Git submodules for the AWS CodeBuild build project.
+    <dd>{{% md %}}Whether to fetch Git submodules for the AWS CodeBuild build project.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5505,7 +5505,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, fetches Git submodules for the AWS CodeBuild build project.
+    <dd>{{% md %}}Whether to fetch Git submodules for the AWS CodeBuild build project.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5521,7 +5521,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If set to true, fetches Git submodules for the AWS CodeBuild build project.
+    <dd>{{% md %}}Whether to fetch Git submodules for the AWS CodeBuild build project.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5537,7 +5537,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, fetches Git submodules for the AWS CodeBuild build project.
+    <dd>{{% md %}}Whether to fetch Git submodules for the AWS CodeBuild build project.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5555,7 +5555,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The security group IDs to assign to running builds.
+    <dd>{{% md %}}Security group IDs to assign to running builds.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -5565,7 +5565,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The subnet IDs within which to run builds.
+    <dd>{{% md %}}Subnet IDs within which to run builds.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -5575,7 +5575,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the VPC within which to run builds.
+    <dd>{{% md %}}ID of the VPC within which to run builds.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5591,7 +5591,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The security group IDs to assign to running builds.
+    <dd>{{% md %}}Security group IDs to assign to running builds.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -5601,7 +5601,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The subnet IDs within which to run builds.
+    <dd>{{% md %}}Subnet IDs within which to run builds.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -5611,7 +5611,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the VPC within which to run builds.
+    <dd>{{% md %}}ID of the VPC within which to run builds.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5627,7 +5627,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The security group IDs to assign to running builds.
+    <dd>{{% md %}}Security group IDs to assign to running builds.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -5637,7 +5637,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The subnet IDs within which to run builds.
+    <dd>{{% md %}}Subnet IDs within which to run builds.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -5647,7 +5647,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the VPC within which to run builds.
+    <dd>{{% md %}}ID of the VPC within which to run builds.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5663,7 +5663,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The security group IDs to assign to running builds.
+    <dd>{{% md %}}Security group IDs to assign to running builds.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -5673,7 +5673,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The subnet IDs within which to run builds.
+    <dd>{{% md %}}Subnet IDs within which to run builds.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -5683,7 +5683,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the VPC within which to run builds.
+    <dd>{{% md %}}ID of the VPC within which to run builds.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

@@ -19,6 +19,8 @@ Provides an IAM policy attached to a group.
 
 {{% example csharp %}}
 ```csharp
+using System.Collections.Generic;
+using System.Text.Json;
 using Pulumi;
 using Aws = Pulumi.Aws;
 
@@ -33,19 +35,24 @@ class MyStack : Stack
         var myDeveloperPolicy = new Aws.Iam.GroupPolicy("myDeveloperPolicy", new Aws.Iam.GroupPolicyArgs
         {
             Group = myDevelopers.Name,
-            Policy = @"{
-  ""Version"": ""2012-10-17"",
-  ""Statement"": [
-    {
-      ""Action"": [
-        ""ec2:Describe*""
-      ],
-      ""Effect"": ""Allow"",
-      ""Resource"": ""*""
-    }
-  ]
-}
-",
+            Policy = JsonSerializer.Serialize(new Dictionary<string, object?>
+            {
+                { "Version", "2012-10-17" },
+                { "Statement", new[]
+                    {
+                        new Dictionary<string, object?>
+                        {
+                            { "Action", new[]
+                                {
+                                    "ec2:Describe*",
+                                }
+                             },
+                            { "Effect", "Allow" },
+                            { "Resource", "*" },
+                        },
+                    }
+                 },
+            }),
         });
     }
 
@@ -59,7 +66,7 @@ class MyStack : Stack
 package main
 
 import (
-	"fmt"
+	"encoding/json"
 
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
@@ -73,9 +80,25 @@ func main() {
 		if err != nil {
 			return err
 		}
+		tmpJSON0, err := json.Marshal(map[string]interface{}{
+			"Version": "2012-10-17",
+			"Statement": []map[string]interface{}{
+				map[string]interface{}{
+					"Action": []string{
+						"ec2:Describe*",
+					},
+					"Effect":   "Allow",
+					"Resource": "*",
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		json0 := string(tmpJSON0)
 		_, err = iam.NewGroupPolicy(ctx, "myDeveloperPolicy", &iam.GroupPolicyArgs{
 			Group:  myDevelopers.Name,
-			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\n", "        \"ec2:Describe*\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": \"*\"\n", "    }\n", "  ]\n", "}\n")),
+			Policy: pulumi.String(json0),
 		})
 		if err != nil {
 			return err
@@ -90,24 +113,20 @@ func main() {
 {{% example python %}}
 ```python
 import pulumi
+import json
 import pulumi_aws as aws
 
 my_developers = aws.iam.Group("myDevelopers", path="/users/")
 my_developer_policy = aws.iam.GroupPolicy("myDeveloperPolicy",
     group=my_developers.name,
-    policy="""{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": [
-        "ec2:Describe*"
-      ],
-      "Effect": "Allow",
-      "Resource": "*"
-    }
-  ]
-}
-""")
+    policy=json.dumps({
+        "Version": "2012-10-17",
+        "Statement": [{
+            "Action": ["ec2:Describe*"],
+            "Effect": "Allow",
+            "Resource": "*",
+        }],
+    }))
 ```
 
 {{% /example %}}
@@ -121,19 +140,14 @@ import * as aws from "@pulumi/aws";
 const myDevelopers = new aws.iam.Group("myDevelopers", {path: "/users/"});
 const myDeveloperPolicy = new aws.iam.GroupPolicy("myDeveloperPolicy", {
     group: myDevelopers.name,
-    policy: `{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": [
-        "ec2:Describe*"
-      ],
-      "Effect": "Allow",
-      "Resource": "*"
-    }
-  ]
-}
-`,
+    policy: JSON.stringify({
+        Version: "2012-10-17",
+        Statement: [{
+            Action: ["ec2:Describe*"],
+            Effect: "Allow",
+            Resource: "*",
+        }],
+    }),
 });
 ```
 
