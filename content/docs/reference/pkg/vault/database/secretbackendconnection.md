@@ -26,19 +26,19 @@ Database secret backend connections can be imported using the `backend`, `/confi
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/database/#SecretBackendConnection">SecretBackendConnection</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/database/#SecretBackendConnectionArgs">SecretBackendConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SecretBackendConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecretBackendConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vault/database/#pulumi_vault.database.SecretBackendConnection">SecretBackendConnection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowed_roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cassandra</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionCassandraArgs]</span> = None<span class="p">, </span><span class="nx">data</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionElasticsearchArgs]</span> = None<span class="p">, </span><span class="nx">hana</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionHanaArgs]</span> = None<span class="p">, </span><span class="nx">mongodb</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMongodbArgs]</span> = None<span class="p">, </span><span class="nx">mongodbatlas</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMongodbatlasArgs]</span> = None<span class="p">, </span><span class="nx">mssql</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMssqlArgs]</span> = None<span class="p">, </span><span class="nx">mysql</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlArgs]</span> = None<span class="p">, </span><span class="nx">mysql_aurora</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlAuroraArgs]</span> = None<span class="p">, </span><span class="nx">mysql_legacy</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlLegacyArgs]</span> = None<span class="p">, </span><span class="nx">mysql_rds</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlRdsArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oracle</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionOracleArgs]</span> = None<span class="p">, </span><span class="nx">postgresql</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionPostgresqlArgs]</span> = None<span class="p">, </span><span class="nx">root_rotation_statements</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">verify_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SecretBackendConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowed_roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cassandra</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionCassandraArgs]</span> = None<span class="p">, </span><span class="nx">data</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionElasticsearchArgs]</span> = None<span class="p">, </span><span class="nx">hana</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionHanaArgs]</span> = None<span class="p">, </span><span class="nx">mongodb</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMongodbArgs]</span> = None<span class="p">, </span><span class="nx">mongodbatlas</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMongodbatlasArgs]</span> = None<span class="p">, </span><span class="nx">mssql</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMssqlArgs]</span> = None<span class="p">, </span><span class="nx">mysql</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlArgs]</span> = None<span class="p">, </span><span class="nx">mysql_aurora</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlAuroraArgs]</span> = None<span class="p">, </span><span class="nx">mysql_legacy</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlLegacyArgs]</span> = None<span class="p">, </span><span class="nx">mysql_rds</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlRdsArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oracle</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionOracleArgs]</span> = None<span class="p">, </span><span class="nx">postgresql</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionPostgresqlArgs]</span> = None<span class="p">, </span><span class="nx">root_rotation_statements</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">verify_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnection">NewSecretBackendConnection</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionArgs">SecretBackendConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnection">SecretBackendConnection</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecretBackendConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SecretBackendConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecretBackendConnection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.SecretBackendConnection.html">SecretBackendConnection</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.SecretBackendConnectionArgs.html">SecretBackendConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SecretBackendConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SecretBackendConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -59,7 +59,7 @@ Database secret backend connections can be imported using the `backend`, `/confi
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/vault/database/#SecretBackendConnectionArgs">SecretBackendConnectionArgs</a></span>
+        <span class="property-type"><a href="#inputs">SecretBackendConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -128,7 +128,7 @@ Database secret backend connections can be imported using the `backend`, `/confi
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionArgs">SecretBackendConnectionArgs</a></span>
+        <span class="property-type"><a href="#inputs">SecretBackendConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -167,7 +167,7 @@ Database secret backend connections can be imported using the `backend`, `/confi
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.SecretBackendConnectionArgs.html">SecretBackendConnectionArgs</a></span>
+        <span class="property-type"><a href="#inputs">SecretBackendConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -190,11 +190,11 @@ Database secret backend connections can be imported using the `backend`, `/confi
 
 ## SecretBackendConnection Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The SecretBackendConnection resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The SecretBackendConnection resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1025,7 +1025,7 @@ Get an existing SecretBackendConnection resource's state with the given name, ID
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/database/#SecretBackendConnectionState">SecretBackendConnectionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/database/#SecretBackendConnection">SecretBackendConnection</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">SecretBackendConnectionState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SecretBackendConnection</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1034,11 +1034,11 @@ Get an existing SecretBackendConnection resource's state with the given name, ID
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecretBackendConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionState">SecretBackendConnectionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnection">SecretBackendConnection</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecretBackendConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">SecretBackendConnectionState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecretBackendConnection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.SecretBackendConnection.html">SecretBackendConnection</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.SecretBackendConnectionState.html">SecretBackendConnectionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SecretBackendConnection</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">SecretBackendConnectionState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1902,18 +1902,6 @@ initial configuration or not.
 
 
 <h4 id="secretbackendconnectioncassandra">Secret<wbr>Backend<wbr>Connection<wbr>Cassandra</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionCassandra">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/output/#SecretBackendConnectionCassandra">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionCassandraArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionCassandraOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Inputs.SecretBackendConnectionCassandraArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Outputs.SecretBackendConnectionCassandra.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2356,18 +2344,6 @@ part of the host.
 {{% /choosable %}}
 
 <h4 id="secretbackendconnectionelasticsearch">Secret<wbr>Backend<wbr>Connection<wbr>Elasticsearch</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionElasticsearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/output/#SecretBackendConnectionElasticsearch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionElasticsearchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionElasticsearchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Inputs.SecretBackendConnectionElasticsearchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Outputs.SecretBackendConnectionElasticsearch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2518,18 +2494,6 @@ by trusted CA if used.
 {{% /choosable %}}
 
 <h4 id="secretbackendconnectionhana">Secret<wbr>Backend<wbr>Connection<wbr>Hana</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionHana">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/output/#SecretBackendConnectionHana">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionHanaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionHanaOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Inputs.SecretBackendConnectionHanaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Outputs.SecretBackendConnectionHana.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2740,18 +2704,6 @@ use.
 {{% /choosable %}}
 
 <h4 id="secretbackendconnectionmongodb">Secret<wbr>Backend<wbr>Connection<wbr>Mongodb</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionMongodb">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/output/#SecretBackendConnectionMongodb">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionMongodbArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionMongodbOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Inputs.SecretBackendConnectionMongodbArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Outputs.SecretBackendConnectionMongodb.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2962,18 +2914,6 @@ use.
 {{% /choosable %}}
 
 <h4 id="secretbackendconnectionmongodbatlas">Secret<wbr>Backend<wbr>Connection<wbr>Mongodbatlas</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionMongodbatlas">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/output/#SecretBackendConnectionMongodbatlas">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionMongodbatlasArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionMongodbatlasOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Inputs.SecretBackendConnectionMongodbatlasArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Outputs.SecretBackendConnectionMongodbatlas.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3108,18 +3048,6 @@ use.
 {{% /choosable %}}
 
 <h4 id="secretbackendconnectionmssql">Secret<wbr>Backend<wbr>Connection<wbr>Mssql</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionMssql">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/output/#SecretBackendConnectionMssql">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionMssqlArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionMssqlOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Inputs.SecretBackendConnectionMssqlArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Outputs.SecretBackendConnectionMssql.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3330,18 +3258,6 @@ use.
 {{% /choosable %}}
 
 <h4 id="secretbackendconnectionmysql">Secret<wbr>Backend<wbr>Connection<wbr>Mysql</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionMysql">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/output/#SecretBackendConnectionMysql">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionMysqlArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionMysqlOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Inputs.SecretBackendConnectionMysqlArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Outputs.SecretBackendConnectionMysql.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3552,18 +3468,6 @@ use.
 {{% /choosable %}}
 
 <h4 id="secretbackendconnectionmysqlaurora">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Aurora</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionMysqlAurora">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/output/#SecretBackendConnectionMysqlAurora">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionMysqlAuroraArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionMysqlAuroraOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Inputs.SecretBackendConnectionMysqlAuroraArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Outputs.SecretBackendConnectionMysqlAurora.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3774,18 +3678,6 @@ use.
 {{% /choosable %}}
 
 <h4 id="secretbackendconnectionmysqllegacy">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Legacy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionMysqlLegacy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/output/#SecretBackendConnectionMysqlLegacy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionMysqlLegacyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionMysqlLegacyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Inputs.SecretBackendConnectionMysqlLegacyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Outputs.SecretBackendConnectionMysqlLegacy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3996,18 +3888,6 @@ use.
 {{% /choosable %}}
 
 <h4 id="secretbackendconnectionmysqlrds">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Rds</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionMysqlRds">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/output/#SecretBackendConnectionMysqlRds">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionMysqlRdsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionMysqlRdsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Inputs.SecretBackendConnectionMysqlRdsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Outputs.SecretBackendConnectionMysqlRds.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4218,18 +4098,6 @@ use.
 {{% /choosable %}}
 
 <h4 id="secretbackendconnectionoracle">Secret<wbr>Backend<wbr>Connection<wbr>Oracle</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionOracle">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/output/#SecretBackendConnectionOracle">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionOracleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionOracleOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Inputs.SecretBackendConnectionOracleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Outputs.SecretBackendConnectionOracle.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4440,18 +4308,6 @@ use.
 {{% /choosable %}}
 
 <h4 id="secretbackendconnectionpostgresql">Secret<wbr>Backend<wbr>Connection<wbr>Postgresql</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionPostgresql">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/output/#SecretBackendConnectionPostgresql">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionPostgresqlArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/database?tab=doc#SecretBackendConnectionPostgresqlOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Inputs.SecretBackendConnectionPostgresqlArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Database.Outputs.SecretBackendConnectionPostgresql.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

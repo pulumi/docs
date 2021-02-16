@@ -32,24 +32,6 @@ Explore the resources and functions of the transform module in the Vault package
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
 	<dt>Version</dt>
-	<dd>3.4.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Transform.html" title="Pulumi.Vault.Transform">Pulumi.Vault.Transform</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/transform?tab=doc#" title="vault/transform">vault/transform</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/vault/transform/#" title="@pulumi/vault/transform">@pulumi/vault/transform</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_vault/transform" title="pulumi_vault/transform">pulumi_vault/transform</a></dd>
-
+	<dd>3.4.1</dd>
 </dl>
 

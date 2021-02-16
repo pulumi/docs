@@ -39,24 +39,6 @@ Explore the resources and functions of the identity module in the Vault package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
 	<dt>Version</dt>
-	<dd>3.4.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Identity.html" title="Pulumi.Vault.Identity">Pulumi.Vault.Identity</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/identity?tab=doc#" title="vault/identity">vault/identity</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/vault/identity/#" title="@pulumi/vault/identity">@pulumi/vault/identity</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_vault/identity" title="pulumi_vault/identity">pulumi_vault/identity</a></dd>
-
+	<dd>3.4.1</dd>
 </dl>
 
