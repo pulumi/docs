@@ -56,24 +56,6 @@ A Pulumi package for creating and managing Civo cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`civo` Terraform Provider](https://github.com/civo/terraform-provider-civo).</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Civo/Pulumi.Civo.html" title="Pulumi.Civo">Pulumi.Civo</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#" title="civo">civo</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/civo/#" title="@pulumi/civo">@pulumi/civo</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_civo" title="pulumi_civo">pulumi_civo</a></dd>
-
+	<dd>0.3.1</dd>
 </dl>
 
