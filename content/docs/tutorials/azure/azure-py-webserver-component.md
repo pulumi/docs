@@ -19,7 +19,7 @@ no_edit_this_page: true
 </p>
 
 
-This example uses `pulumi.ComponentResource` as described [here](https://www.pulumi.com/docs/intro/concepts/programming-model/#components) 
+This example uses `pulumi.ComponentResource` as described [here](https://www.pulumi.com/docs/intro/concepts/resources/#components) 
 to create and deploy an Azure Virtual Machine and starts a HTTP server on it.
 
 The use of `pulumi.ComponentResource` demonstrates how multiple low-level resources 
@@ -32,14 +32,6 @@ can be composed into a higher-level, reusable abstraction.
 1. [Configure Pulumi for Python](https://www.pulumi.com/docs/intro/languages/python/)
 
 ## Deploying and running the program
-
-1. Set up a virtual Python environment and install dependencies
-
-    ```bash
-    $ python3 -m venv venv
-    $ source venv/bin/activate
-    $ pip install -r requirements.txt
-    ```
 
 1. Create a new stack:
 

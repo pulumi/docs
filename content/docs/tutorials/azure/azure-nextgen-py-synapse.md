@@ -1,7 +1,7 @@
 ---
 title: ""
-h1: "Azure Container Instances on Linux"
-linktitle: "Azure Container Instances on Linux"
+h1: "Azure Synapse Workspace and Pools"
+linktitle: "Azure Synapse Workspace and Pools"
 no_edit_this_page: true
 ---
 
@@ -9,17 +9,17 @@ no_edit_this_page: true
 <!-- To change it, please see https://github.com/pulumi/docs/tree/master/tools/mktutorial. -->
 
 <p class="mb-4 flex">
-    <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/azure-nextgen-py-aci" target="_blank">
+    <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/azure-nextgen-py-synapse" target="_blank">
         <span><i class="fab fa-github pr-2"></i> View Code</span>
     </a>
 
-    <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/azure-nextgen-py-aci" target="_blank">
+    <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/azure-nextgen-py-synapse" target="_blank">
         <img src="https://get.pulumi.com/new/button.svg" alt="Deploy">
     </a>
 </p>
 
 
-Starting point for building web application hosted in Azure Container Instances.
+Starting point for enterprise analytics solutions based on Azure Synapse.
 
 ## Running the App
 
@@ -36,9 +36,15 @@ Starting point for building web application hosted in Azure Container Instances.
     ```
 
 1. Set the Azure region location to use:
-
+    
     ```
     $ pulumi config set location westus2
+    ```
+
+1. Set the user ID to grant access to (e.g., your current user):
+    
+    ```
+    $ pulumi config set userObjectId $(az ad signed-in-user show --query=objectId | tr -d '"')
     ```
 
 1. Run `pulumi up` to preview and deploy changes:
@@ -51,21 +57,10 @@ Starting point for building web application hosted in Azure Container Instances.
     Performing changes:
     ...
     Resources:
-        + 3 created
+        + 13 created
 
-    Duration: 1m18s
+    Duration: 10m53s
     ```
 
-1. Check the deployed endpoint:
-
-    ```
-    $ pulumi stack output containerIPv4Address
-    13.83.66.37
-    $ curl "$(pulumi stack output containerIPv4Address)"
-    <html>
-    <head>
-        <title>Welcome to Azure Container Instances!</title>
-    </head>
-    ...
-    ```
+1. Navigate to https://web.azuresynapse.net and sign in to your new workspace.
 
