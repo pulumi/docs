@@ -21,7 +21,7 @@ Retrieves information about a DigitalOcean Kubernetes cluster for use in other r
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getKubernetesCluster<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#GetKubernetesClusterArgs">GetKubernetesClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#GetKubernetesClusterResult">GetKubernetesClusterResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getKubernetesCluster<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetKubernetesClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetKubernetesClusterResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -31,7 +31,7 @@ Retrieves information about a DigitalOcean Kubernetes cluster for use in other r
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupKubernetesCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#LookupKubernetesClusterArgs">LookupKubernetesClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#LookupKubernetesClusterResult">LookupKubernetesClusterResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupKubernetesCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupKubernetesClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupKubernetesClusterResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupKubernetesCluster` in the Go SDK.
 
@@ -40,7 +40,7 @@ Retrieves information about a DigitalOcean Kubernetes cluster for use in other r
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetKubernetesCluster </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.GetKubernetesClusterResult.html">GetKubernetesClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.GetKubernetesClusterArgs.html">GetKubernetesClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetKubernetesClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetKubernetesClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -869,16 +869,6 @@ The following output properties are available:
 
 
 <h4 id="getkubernetesclusterkubeconfig">Get<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetKubernetesClusterKubeConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#GetKubernetesClusterKubeConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.GetKubernetesClusterKubeConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1187,16 +1177,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getkubernetesclusternodepool">Get<wbr>Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetKubernetesClusterNodePool">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#GetKubernetesClusterNodePool">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.GetKubernetesClusterNodePool.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1665,16 +1645,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getkubernetesclusternodepoolnode">Get<wbr>Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetKubernetesClusterNodePoolNode">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#GetKubernetesClusterNodePoolNode">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.GetKubernetesClusterNodePoolNode.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

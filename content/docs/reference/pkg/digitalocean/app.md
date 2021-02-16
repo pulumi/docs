@@ -62,7 +62,6 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean"
-	"github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -190,7 +189,6 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean"
-	"github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -477,19 +475,19 @@ const mono_repo_example = new digitalocean.App("mono-repo-example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#App">App</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#AppArgs">AppArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">App</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">AppArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_digitalocean/#pulumi_digitalocean.App">App</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[AppSpecArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">App</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[AppSpecArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#App">NewApp</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppArgs">AppArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#App">App</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApp</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">AppArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">App</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.App.html">App</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.AppArgs.html">AppArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">App</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AppArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -510,7 +508,7 @@ const mono_repo_example = new digitalocean.App("mono-repo-example", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#AppArgs">AppArgs</a></span>
+        <span class="property-type"><a href="#inputs">AppArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -579,7 +577,7 @@ const mono_repo_example = new digitalocean.App("mono-repo-example", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppArgs">AppArgs</a></span>
+        <span class="property-type"><a href="#inputs">AppArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -618,7 +616,7 @@ const mono_repo_example = new digitalocean.App("mono-repo-example", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.AppArgs.html">AppArgs</a></span>
+        <span class="property-type"><a href="#inputs">AppArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -641,11 +639,11 @@ const mono_repo_example = new digitalocean.App("mono-repo-example", {
 
 ## App Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The App resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The App resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -988,7 +986,7 @@ Get an existing App resource's state with the given name, ID, and optional extra
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#AppState">AppState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#App">App</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">AppState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">App</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -997,11 +995,11 @@ Get an existing App resource's state with the given name, ID, and optional extra
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApp<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppState">AppState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#App">App</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApp<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">AppState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">App</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.App.html">App</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean..AppState.html">AppState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">App</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">AppState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1377,18 +1375,6 @@ The following state arguments are supported:
 
 
 <h4 id="appspec">App<wbr>Spec</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#AppSpec">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#AppSpec">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Inputs.AppSpecArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.AppSpec.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1751,18 +1737,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="appspecdatabase">App<wbr>Spec<wbr>Database</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#AppSpecDatabase">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#AppSpecDatabase">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecDatabaseArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecDatabaseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Inputs.AppSpecDatabaseArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.AppSpecDatabase.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2069,18 +2043,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="appspecenv">App<wbr>Spec<wbr>Env</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#AppSpecEnv">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#AppSpecEnv">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecEnvArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecEnvOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Inputs.AppSpecEnvArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.AppSpecEnv.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2267,18 +2229,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="appspecjob">App<wbr>Spec<wbr>Job</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#AppSpecJob">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#AppSpecJob">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecJobArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecJobOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Inputs.AppSpecJobArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.AppSpecJob.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2881,18 +2831,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="appspecjobenv">App<wbr>Spec<wbr>Job<wbr>Env</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#AppSpecJobEnv">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#AppSpecJobEnv">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecJobEnvArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecJobEnvOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Inputs.AppSpecJobEnvArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.AppSpecJobEnv.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3079,18 +3017,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="appspecjobgit">App<wbr>Spec<wbr>Job<wbr>Git</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#AppSpecJobGit">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#AppSpecJobGit">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecJobGitArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecJobGitOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Inputs.AppSpecJobGitArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.AppSpecJobGit.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3197,18 +3123,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="appspecjobgithub">App<wbr>Spec<wbr>Job<wbr>Github</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#AppSpecJobGithub">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#AppSpecJobGithub">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecJobGithubArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecJobGithubOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Inputs.AppSpecJobGithubArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.AppSpecJobGithub.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3355,18 +3269,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="appspecjobgitlab">App<wbr>Spec<wbr>Job<wbr>Gitlab</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#AppSpecJobGitlab">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#AppSpecJobGitlab">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecJobGitlabArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecJobGitlabOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Inputs.AppSpecJobGitlabArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.AppSpecJobGitlab.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3513,18 +3415,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="appspecjobimage">App<wbr>Spec<wbr>Job<wbr>Image</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#AppSpecJobImage">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#AppSpecJobImage">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecJobImageArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecJobImageOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Inputs.AppSpecJobImageArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.AppSpecJobImage.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3711,18 +3601,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="appspecservice">App<wbr>Spec<wbr>Service</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#AppSpecService">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#AppSpecService">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecServiceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecServiceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Inputs.AppSpecServiceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.AppSpecService.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4425,18 +4303,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="appspecserviceenv">App<wbr>Spec<wbr>Service<wbr>Env</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#AppSpecServiceEnv">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#AppSpecServiceEnv">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecServiceEnvArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecServiceEnvOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Inputs.AppSpecServiceEnvArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.AppSpecServiceEnv.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4623,18 +4489,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="appspecservicegit">App<wbr>Spec<wbr>Service<wbr>Git</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#AppSpecServiceGit">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#AppSpecServiceGit">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecServiceGitArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecServiceGitOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Inputs.AppSpecServiceGitArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.AppSpecServiceGit.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4741,18 +4595,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="appspecservicegithub">App<wbr>Spec<wbr>Service<wbr>Github</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#AppSpecServiceGithub">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#AppSpecServiceGithub">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecServiceGithubArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecServiceGithubOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Inputs.AppSpecServiceGithubArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.AppSpecServiceGithub.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4899,18 +4741,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="appspecservicegitlab">App<wbr>Spec<wbr>Service<wbr>Gitlab</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#AppSpecServiceGitlab">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#AppSpecServiceGitlab">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecServiceGitlabArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecServiceGitlabOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Inputs.AppSpecServiceGitlabArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.AppSpecServiceGitlab.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5057,18 +4887,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="appspecservicehealthcheck">App<wbr>Spec<wbr>Service<wbr>Health<wbr>Check</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#AppSpecServiceHealthCheck">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#AppSpecServiceHealthCheck">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecServiceHealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecServiceHealthCheckOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Inputs.AppSpecServiceHealthCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.AppSpecServiceHealthCheck.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5335,18 +5153,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="appspecserviceimage">App<wbr>Spec<wbr>Service<wbr>Image</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#AppSpecServiceImage">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#AppSpecServiceImage">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecServiceImageArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecServiceImageOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Inputs.AppSpecServiceImageArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.AppSpecServiceImage.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5533,18 +5339,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="appspecserviceroute">App<wbr>Spec<wbr>Service<wbr>Route</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#AppSpecServiceRoute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#AppSpecServiceRoute">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecServiceRouteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecServiceRouteOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Inputs.AppSpecServiceRouteArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.AppSpecServiceRoute.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5611,18 +5405,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="appspecstaticsite">App<wbr>Spec<wbr>Static<wbr>Site</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#AppSpecStaticSite">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#AppSpecStaticSite">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecStaticSiteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecStaticSiteOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Inputs.AppSpecStaticSiteArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.AppSpecStaticSite.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6205,18 +5987,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="appspecstaticsiteenv">App<wbr>Spec<wbr>Static<wbr>Site<wbr>Env</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#AppSpecStaticSiteEnv">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#AppSpecStaticSiteEnv">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecStaticSiteEnvArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecStaticSiteEnvOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Inputs.AppSpecStaticSiteEnvArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.AppSpecStaticSiteEnv.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6403,18 +6173,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="appspecstaticsitegit">App<wbr>Spec<wbr>Static<wbr>Site<wbr>Git</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#AppSpecStaticSiteGit">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#AppSpecStaticSiteGit">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecStaticSiteGitArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecStaticSiteGitOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Inputs.AppSpecStaticSiteGitArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.AppSpecStaticSiteGit.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6521,18 +6279,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="appspecstaticsitegithub">App<wbr>Spec<wbr>Static<wbr>Site<wbr>Github</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#AppSpecStaticSiteGithub">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#AppSpecStaticSiteGithub">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecStaticSiteGithubArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecStaticSiteGithubOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Inputs.AppSpecStaticSiteGithubArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.AppSpecStaticSiteGithub.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6679,18 +6425,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="appspecstaticsitegitlab">App<wbr>Spec<wbr>Static<wbr>Site<wbr>Gitlab</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#AppSpecStaticSiteGitlab">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#AppSpecStaticSiteGitlab">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecStaticSiteGitlabArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecStaticSiteGitlabOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Inputs.AppSpecStaticSiteGitlabArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.AppSpecStaticSiteGitlab.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6837,18 +6571,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="appspecstaticsiteroute">App<wbr>Spec<wbr>Static<wbr>Site<wbr>Route</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#AppSpecStaticSiteRoute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#AppSpecStaticSiteRoute">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecStaticSiteRouteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecStaticSiteRouteOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Inputs.AppSpecStaticSiteRouteArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.AppSpecStaticSiteRoute.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6915,18 +6637,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="appspecworker">App<wbr>Spec<wbr>Worker</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#AppSpecWorker">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#AppSpecWorker">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecWorkerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecWorkerOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Inputs.AppSpecWorkerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.AppSpecWorker.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7473,18 +7183,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="appspecworkerenv">App<wbr>Spec<wbr>Worker<wbr>Env</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#AppSpecWorkerEnv">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#AppSpecWorkerEnv">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecWorkerEnvArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecWorkerEnvOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Inputs.AppSpecWorkerEnvArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.AppSpecWorkerEnv.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7671,18 +7369,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="appspecworkergit">App<wbr>Spec<wbr>Worker<wbr>Git</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#AppSpecWorkerGit">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#AppSpecWorkerGit">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecWorkerGitArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecWorkerGitOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Inputs.AppSpecWorkerGitArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.AppSpecWorkerGit.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7789,18 +7475,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="appspecworkergithub">App<wbr>Spec<wbr>Worker<wbr>Github</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#AppSpecWorkerGithub">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#AppSpecWorkerGithub">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecWorkerGithubArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecWorkerGithubOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Inputs.AppSpecWorkerGithubArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.AppSpecWorkerGithub.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7947,18 +7621,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="appspecworkergitlab">App<wbr>Spec<wbr>Worker<wbr>Gitlab</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#AppSpecWorkerGitlab">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#AppSpecWorkerGitlab">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecWorkerGitlabArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecWorkerGitlabOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Inputs.AppSpecWorkerGitlabArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.AppSpecWorkerGitlab.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8105,18 +7767,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="appspecworkerimage">App<wbr>Spec<wbr>Worker<wbr>Image</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#AppSpecWorkerImage">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#AppSpecWorkerImage">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecWorkerImageArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#AppSpecWorkerImageOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Inputs.AppSpecWorkerImageArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.AppSpecWorkerImage.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
