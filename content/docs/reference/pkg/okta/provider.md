@@ -207,7 +207,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API Token granting privileges to Okta API.
- It can also be sourced from the following environment variable: `OKTA_API_TOKEN`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="backoff_csharp">
@@ -227,7 +227,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Okta url. (Use 'oktapreview.com' for Okta testing)
- It can also be sourced from the following environment variable: `OKTA_BASE_URL`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clientid_csharp">
@@ -287,7 +287,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organization to manage in Okta.
- It can also be sourced from the following environment variable: `OKTA_ORG_NAME`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="parallelism_csharp">
@@ -345,7 +345,7 @@ value can be `100`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API Token granting privileges to Okta API.
- It can also be sourced from the following environment variable: `OKTA_API_TOKEN`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="backoff_go">
@@ -365,7 +365,7 @@ value can be `100`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Okta url. (Use 'oktapreview.com' for Okta testing)
- It can also be sourced from the following environment variable: `OKTA_BASE_URL`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clientid_go">
@@ -425,7 +425,7 @@ value can be `100`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organization to manage in Okta.
- It can also be sourced from the following environment variable: `OKTA_ORG_NAME`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="parallelism_go">
@@ -483,7 +483,7 @@ value can be `100`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API Token granting privileges to Okta API.
- It can also be sourced from the following environment variable: `OKTA_API_TOKEN`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="backoff_nodejs">
@@ -503,7 +503,7 @@ value can be `100`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Okta url. (Use 'oktapreview.com' for Okta testing)
- It can also be sourced from the following environment variable: `OKTA_BASE_URL`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clientid_nodejs">
@@ -563,7 +563,7 @@ value can be `100`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organization to manage in Okta.
- It can also be sourced from the following environment variable: `OKTA_ORG_NAME`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="parallelism_nodejs">
@@ -621,7 +621,7 @@ value can be `100`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API Token granting privileges to Okta API.
- It can also be sourced from the following environment variable: `OKTA_API_TOKEN`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="backoff_python">
@@ -641,7 +641,7 @@ value can be `100`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Okta url. (Use 'oktapreview.com' for Okta testing)
- It can also be sourced from the following environment variable: `OKTA_BASE_URL`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="client_id_python">
@@ -701,7 +701,7 @@ value can be `100`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The organization to manage in Okta.
- It can also be sourced from the following environment variable: `OKTA_ORG_NAME`{{% /md %}}</dd>
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="parallelism_python">
