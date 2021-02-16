@@ -44,7 +44,6 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
-	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -95,7 +94,7 @@ const foo_custom = pulumi.output(rancher2.getCluster({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCluster<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#GetClusterArgs">GetClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#GetClusterResult">GetClusterResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCluster<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetClusterResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -105,7 +104,7 @@ const foo_custom = pulumi.output(rancher2.getCluster({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#LookupClusterArgs">LookupClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#LookupClusterResult">LookupClusterResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupClusterResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupCluster` in the Go SDK.
 
@@ -114,7 +113,7 @@ const foo_custom = pulumi.output(rancher2.getCluster({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCluster </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.GetClusterResult.html">GetClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.GetClusterArgs.html">GetClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -1327,16 +1326,6 @@ The following output properties are available:
 
 
 <h4 id="getclusteraksconfig">Get<wbr>Cluster<wbr>Aks<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterAksConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterAksConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterAksConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2697,16 +2686,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterclusterauthendpoint">Get<wbr>Cluster<wbr>Cluster<wbr>Auth<wbr>Endpoint</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterClusterAuthEndpoint">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterClusterAuthEndpoint">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterClusterAuthEndpoint.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2843,16 +2822,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterclustermonitoringinput">Get<wbr>Cluster<wbr>Cluster<wbr>Monitoring<wbr>Input</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterClusterMonitoringInput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterClusterMonitoringInput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterClusterMonitoringInput.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2953,16 +2922,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterclusterregistrationtoken">Get<wbr>Cluster<wbr>Cluster<wbr>Registration<wbr>Token</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterClusterRegistrationToken">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterClusterRegistrationToken">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterClusterRegistrationToken.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3403,16 +3362,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterclustertemplateanswers">Get<wbr>Cluster<wbr>Cluster<wbr>Template<wbr>Answers</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterClusterTemplateAnswers">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterClusterTemplateAnswers">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterClusterTemplateAnswers.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3549,16 +3498,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterclustertemplatequestion">Get<wbr>Cluster<wbr>Cluster<wbr>Template<wbr>Question</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterClusterTemplateQuestion">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterClusterTemplateQuestion">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterClusterTemplateQuestion.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3731,16 +3670,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclustereksconfig">Get<wbr>Cluster<wbr>Eks<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterEksConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterEksConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterEksConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -4453,16 +4382,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclustereksconfigv2">Get<wbr>Cluster<wbr>Eks<wbr>Config<wbr>V2</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterEksConfigV2">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterEksConfigV2">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterEksConfigV2.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -5071,16 +4990,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclustereksconfigv2nodegroup">Get<wbr>Cluster<wbr>Eks<wbr>Config<wbr>V2Node<wbr>Group</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterEksConfigV2NodeGroup">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterEksConfigV2NodeGroup">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterEksConfigV2NodeGroup.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -5477,16 +5386,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclustergkeconfig">Get<wbr>Cluster<wbr>Gke<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterGkeConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterGkeConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterGkeConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -7431,16 +7330,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterk3sconfig">Get<wbr>Cluster<wbr>K3s<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterK3sConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterK3sConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterK3sConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -7541,16 +7430,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterk3sconfigupgradestrategy">Get<wbr>Cluster<wbr>K3s<wbr>Config<wbr>Upgrade<wbr>Strategy</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterK3sConfigUpgradeStrategy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterK3sConfigUpgradeStrategy">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterK3sConfigUpgradeStrategy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -7723,16 +7602,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterokeconfig">Get<wbr>Cluster<wbr>Oke<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterOkeConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterOkeConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterOkeConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -8629,16 +8498,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfig">Get<wbr>Cluster<wbr>Rke<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -9423,16 +9282,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigauthentication">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Authentication</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigAuthentication">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigAuthentication">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigAuthentication.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -9533,16 +9382,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigauthorization">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Authorization</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigAuthorization">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigAuthorization">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigAuthorization.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -9643,16 +9482,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigbastionhost">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Bastion<wbr>Host</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigBastionHost">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigBastionHost">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigBastionHost.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -9897,16 +9726,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigcloudprovider">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigCloudProvider">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigCloudProvider">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigCloudProvider.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -10155,16 +9974,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigcloudproviderawscloudprovider">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigCloudProviderAwsCloudProvider">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigCloudProviderAwsCloudProvider">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigCloudProviderAwsCloudProvider.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -10265,16 +10074,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigcloudproviderawscloudproviderglobal">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Global</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigCloudProviderAwsCloudProviderGlobal">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigCloudProviderAwsCloudProviderGlobal">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigCloudProviderAwsCloudProviderGlobal.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -10663,16 +10462,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigcloudproviderawscloudproviderserviceoverride">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Service<wbr>Override</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigCloudProviderAwsCloudProviderServiceOverride">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigCloudProviderAwsCloudProviderServiceOverride">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigCloudProviderAwsCloudProviderServiceOverride.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -10917,16 +10706,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigcloudproviderazurecloudprovider">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Azure<wbr>Cloud<wbr>Provider</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigCloudProviderAzureCloudProvider">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigCloudProviderAzureCloudProvider">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigCloudProviderAzureCloudProvider.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -11999,16 +11778,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigcloudprovideropenstackcloudprovider">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigCloudProviderOpenstackCloudProvider">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigCloudProviderOpenstackCloudProvider">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigCloudProviderOpenstackCloudProvider.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -12217,16 +11986,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigcloudprovideropenstackcloudproviderblockstorage">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Block<wbr>Storage</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigCloudProviderOpenstackCloudProviderBlockStorage">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigCloudProviderOpenstackCloudProviderBlockStorage">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigCloudProviderOpenstackCloudProviderBlockStorage.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -12363,16 +12122,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigcloudprovideropenstackcloudproviderglobal">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Global</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigCloudProviderOpenstackCloudProviderGlobal">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigCloudProviderOpenstackCloudProviderGlobal">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigCloudProviderOpenstackCloudProviderGlobal.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -12761,16 +12510,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigcloudprovideropenstackcloudproviderloadbalancer">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Load<wbr>Balancer</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigCloudProviderOpenstackCloudProviderLoadBalancer">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigCloudProviderOpenstackCloudProviderLoadBalancer">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigCloudProviderOpenstackCloudProviderLoadBalancer.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -13195,16 +12934,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigcloudprovideropenstackcloudprovidermetadata">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Metadata</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigCloudProviderOpenstackCloudProviderMetadata">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigCloudProviderOpenstackCloudProviderMetadata">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigCloudProviderOpenstackCloudProviderMetadata.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -13305,16 +13034,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigcloudprovideropenstackcloudproviderroute">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Route</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigCloudProviderOpenstackCloudProviderRoute">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigCloudProviderOpenstackCloudProviderRoute">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigCloudProviderOpenstackCloudProviderRoute.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -13379,16 +13098,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigcloudprovidervspherecloudprovider">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigCloudProviderVsphereCloudProvider">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigCloudProviderVsphereCloudProvider">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigCloudProviderVsphereCloudProvider.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -13597,16 +13306,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigcloudprovidervspherecloudproviderdisk">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Disk</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigCloudProviderVsphereCloudProviderDisk">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigCloudProviderVsphereCloudProviderDisk">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigCloudProviderVsphereCloudProviderDisk.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -13671,16 +13370,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigcloudprovidervspherecloudproviderglobal">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Global</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigCloudProviderVsphereCloudProviderGlobal">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigCloudProviderVsphereCloudProviderGlobal">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigCloudProviderVsphereCloudProviderGlobal.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -13925,16 +13614,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigcloudprovidervspherecloudprovidernetwork">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Network</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigCloudProviderVsphereCloudProviderNetwork">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigCloudProviderVsphereCloudProviderNetwork">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigCloudProviderVsphereCloudProviderNetwork.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -13999,16 +13678,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigcloudprovidervspherecloudprovidervirtualcenter">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Virtual<wbr>Center</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigCloudProviderVsphereCloudProviderVirtualCenter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigCloudProviderVsphereCloudProviderVirtualCenter">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigCloudProviderVsphereCloudProviderVirtualCenter.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -14257,16 +13926,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigcloudprovidervspherecloudproviderworkspace">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Workspace</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigCloudProviderVsphereCloudProviderWorkspace">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigCloudProviderVsphereCloudProviderWorkspace">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigCloudProviderVsphereCloudProviderWorkspace.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -14475,16 +14134,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigdns">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Dns</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigDns">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigDns">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigDns.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -14765,16 +14414,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigdnslinearautoscalerparams">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Dns<wbr>Linear<wbr>Autoscaler<wbr>Params</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigDnsLinearAutoscalerParams">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigDnsLinearAutoscalerParams">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigDnsLinearAutoscalerParams.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -14983,16 +14622,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigdnsnodelocal">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Dns<wbr>Nodelocal</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigDnsNodelocal">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigDnsNodelocal">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigDnsNodelocal.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -15093,16 +14722,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigdnsupdatestrategy">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Dns<wbr>Update<wbr>Strategy</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigDnsUpdateStrategy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigDnsUpdateStrategy">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigDnsUpdateStrategy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -15203,16 +14822,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigdnsupdatestrategyrollingupdate">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Dns<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigDnsUpdateStrategyRollingUpdate">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigDnsUpdateStrategyRollingUpdate">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigDnsUpdateStrategyRollingUpdate.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -15313,16 +14922,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigingress">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Ingress</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigIngress">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigIngress">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigIngress.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -15531,16 +15130,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigmonitoring">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Monitoring</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigMonitoring">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigMonitoring">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigMonitoring.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -15749,16 +15338,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigmonitoringupdatestrategy">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Update<wbr>Strategy</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigMonitoringUpdateStrategy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigMonitoringUpdateStrategy">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigMonitoringUpdateStrategy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -15859,16 +15438,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigmonitoringupdatestrategyrollingupdate">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigMonitoringUpdateStrategyRollingUpdate">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigMonitoringUpdateStrategyRollingUpdate">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigMonitoringUpdateStrategyRollingUpdate.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -15969,16 +15538,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfignetwork">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Network</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigNetwork">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigNetwork">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigNetwork.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -16259,16 +15818,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfignetworkcaliconetworkprovider">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Network<wbr>Calico<wbr>Network<wbr>Provider</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigNetworkCalicoNetworkProvider">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigNetworkCalicoNetworkProvider">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigNetworkCalicoNetworkProvider.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -16333,16 +15882,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfignetworkcanalnetworkprovider">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Network<wbr>Canal<wbr>Network<wbr>Provider</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigNetworkCanalNetworkProvider">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigNetworkCanalNetworkProvider">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigNetworkCanalNetworkProvider.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -16407,16 +15946,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfignetworkflannelnetworkprovider">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Network<wbr>Flannel<wbr>Network<wbr>Provider</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigNetworkFlannelNetworkProvider">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigNetworkFlannelNetworkProvider">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigNetworkFlannelNetworkProvider.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -16481,16 +16010,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfignetworkweavenetworkprovider">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Network<wbr>Weave<wbr>Network<wbr>Provider</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigNetworkWeaveNetworkProvider">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigNetworkWeaveNetworkProvider">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigNetworkWeaveNetworkProvider.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -16555,16 +16074,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfignode">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Node</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigNode">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigNode">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigNode.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -17029,16 +16538,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigprivateregistry">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Private<wbr>Registry</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigPrivateRegistry">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigPrivateRegistry">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigPrivateRegistry.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -17211,16 +16710,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigservices">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigServices">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigServices">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigServices.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -17465,16 +16954,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigservicesetcd">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigServicesEtcd">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigServicesEtcd">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigServicesEtcd.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -18047,16 +17526,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigservicesetcdbackupconfig">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigServicesEtcdBackupConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigServicesEtcdBackupConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigServicesEtcdBackupConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -18265,16 +17734,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigservicesetcdbackupconfigs3backupconfig">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config<wbr>S3Backup<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigServicesEtcdBackupConfigS3BackupConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigServicesEtcdBackupConfigS3BackupConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigServicesEtcdBackupConfigS3BackupConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -18555,16 +18014,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigserviceskubeapi">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigServicesKubeApi">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigServicesKubeApi">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigServicesKubeApi.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -19025,16 +18474,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigserviceskubeapiauditlog">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigServicesKubeApiAuditLog">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigServicesKubeApiAuditLog">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigServicesKubeApiAuditLog.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -19135,16 +18574,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigserviceskubeapiauditlogconfiguration">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigServicesKubeApiAuditLogConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigServicesKubeApiAuditLogConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigServicesKubeApiAuditLogConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -19389,16 +18818,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigserviceskubeapieventratelimit">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Event<wbr>Rate<wbr>Limit</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigServicesKubeApiEventRateLimit">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigServicesKubeApiEventRateLimit">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigServicesKubeApiEventRateLimit.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -19499,16 +18918,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigserviceskubeapisecretsencryptionconfig">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Secrets<wbr>Encryption<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigServicesKubeApiSecretsEncryptionConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigServicesKubeApiSecretsEncryptionConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigServicesKubeApiSecretsEncryptionConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -19609,16 +19018,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigserviceskubecontroller">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Controller</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigServicesKubeController">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigServicesKubeController">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigServicesKubeController.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -19863,16 +19262,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigserviceskubelet">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubelet</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigServicesKubelet">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigServicesKubelet">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigServicesKubelet.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -20225,16 +19614,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigserviceskubeproxy">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubeproxy</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigServicesKubeproxy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigServicesKubeproxy">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigServicesKubeproxy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -20407,16 +19786,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigservicesscheduler">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Scheduler</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigServicesScheduler">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigServicesScheduler">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigServicesScheduler.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -20589,16 +19958,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigupgradestrategy">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigUpgradeStrategy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigUpgradeStrategy">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigUpgradeStrategy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -20771,16 +20130,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterrkeconfigupgradestrategydraininput">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy<wbr>Drain<wbr>Input</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigUpgradeStrategyDrainInput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterRkeConfigUpgradeStrategyDrainInput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterRkeConfigUpgradeStrategyDrainInput.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -20989,16 +20338,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterscheduledclusterscan">Get<wbr>Cluster<wbr>Scheduled<wbr>Cluster<wbr>Scan</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterScheduledClusterScan">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterScheduledClusterScan">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterScheduledClusterScan.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -21135,16 +20474,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterscheduledclusterscanscanconfig">Get<wbr>Cluster<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterScheduledClusterScanScanConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterScheduledClusterScanScanConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterScheduledClusterScanScanConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -21209,16 +20538,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterscheduledclusterscanscanconfigcisscanconfig">Get<wbr>Cluster<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config<wbr>Cis<wbr>Scan<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterScheduledClusterScanScanConfigCisScanConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterScheduledClusterScanScanConfigCisScanConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterScheduledClusterScanScanConfigCisScanConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -21427,16 +20746,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusterscheduledclusterscanscheduleconfig">Get<wbr>Cluster<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Schedule<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterScheduledClusterScanScheduleConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterScheduledClusterScanScheduleConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterScheduledClusterScanScheduleConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
