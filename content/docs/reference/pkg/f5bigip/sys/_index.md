@@ -29,24 +29,6 @@ Explore the resources and functions of the sys module in the f5 BIG-IP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/F5Networks/terraform-provider-bigip).</dd>
 	<dt>Version</dt>
-	<dd>2.8.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP.Sys.html" title="Pulumi.F5BigIP.Sys">Pulumi.F5BigIP.Sys</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/sys?tab=doc#" title="f5bigip/sys">f5bigip/sys</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/sys/#" title="@pulumi/f5bigip/sys">@pulumi/f5bigip/sys</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_f5bigip/sys" title="pulumi_f5bigip/sys">pulumi_f5bigip/sys</a></dd>
-
+	<dd>2.8.1</dd>
 </dl>
 

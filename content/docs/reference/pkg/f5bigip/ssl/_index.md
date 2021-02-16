@@ -29,24 +29,6 @@ Explore the resources and functions of the ssl module in the f5 BIG-IP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/F5Networks/terraform-provider-bigip).</dd>
 	<dt>Version</dt>
-	<dd>2.8.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP.Ssl.html" title="Pulumi.F5BigIP.Ssl">Pulumi.F5BigIP.Ssl</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ssl?tab=doc#" title="f5bigip/ssl">f5bigip/ssl</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/ssl/#" title="@pulumi/f5bigip/ssl">@pulumi/f5bigip/ssl</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_f5bigip/ssl" title="pulumi_f5bigip/ssl">pulumi_f5bigip/ssl</a></dd>
-
+	<dd>2.8.1</dd>
 </dl>
 
