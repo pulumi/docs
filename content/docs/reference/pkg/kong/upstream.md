@@ -18,19 +18,19 @@ meta_desc: "Explore the Upstream resource of the Kong package, including example
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kong/#Upstream">Upstream</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kong/#UpstreamArgs">UpstreamArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Upstream</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">UpstreamArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kong/#pulumi_kong.Upstream">Upstream</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">hash_fallback</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hash_fallback_header</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hash_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hash_on_cookie</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hash_on_cookie_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hash_on_header</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">healthchecks</span><span class="p">:</span> <span class="nx">Optional[UpstreamHealthchecksArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slots</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Upstream</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">hash_fallback</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hash_fallback_header</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hash_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hash_on_cookie</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hash_on_cookie_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hash_on_header</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">healthchecks</span><span class="p">:</span> <span class="nx">Optional[UpstreamHealthchecksArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slots</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kong/sdk/v2/go/kong/?tab=doc#Upstream">NewUpstream</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kong/sdk/v2/go/kong/?tab=doc#UpstreamArgs">UpstreamArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kong/sdk/v2/go/kong/?tab=doc#Upstream">Upstream</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUpstream</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">UpstreamArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Upstream</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kong/Pulumi.Kong.Upstream.html">Upstream</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kong/Pulumi.Kong.UpstreamArgs.html">UpstreamArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Upstream</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">UpstreamArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -51,7 +51,7 @@ meta_desc: "Explore the Upstream resource of the Kong package, including example
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/kong/#UpstreamArgs">UpstreamArgs</a></span>
+        <span class="property-type"><a href="#inputs">UpstreamArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -120,7 +120,7 @@ meta_desc: "Explore the Upstream resource of the Kong package, including example
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kong/sdk/v2/go/kong/?tab=doc#UpstreamArgs">UpstreamArgs</a></span>
+        <span class="property-type"><a href="#inputs">UpstreamArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -159,7 +159,7 @@ meta_desc: "Explore the Upstream resource of the Kong package, including example
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Kong/Pulumi.Kong.UpstreamArgs.html">UpstreamArgs</a></span>
+        <span class="property-type"><a href="#inputs">UpstreamArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -182,11 +182,11 @@ meta_desc: "Explore the Upstream resource of the Kong package, including example
 
 ## Upstream Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Upstream resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Upstream resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -613,7 +613,7 @@ Get an existing Upstream resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kong/#UpstreamState">UpstreamState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kong/#Upstream">Upstream</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">UpstreamState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Upstream</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -622,11 +622,11 @@ Get an existing Upstream resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUpstream<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kong/sdk/v2/go/kong/?tab=doc#UpstreamState">UpstreamState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kong/sdk/v2/go/kong/?tab=doc#Upstream">Upstream</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUpstream<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">UpstreamState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Upstream</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kong/Pulumi.Kong.Upstream.html">Upstream</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kong/Pulumi.Kong..UpstreamState.html">UpstreamState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Upstream</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">UpstreamState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1086,18 +1086,6 @@ The following state arguments are supported:
 
 
 <h4 id="upstreamhealthchecks">Upstream<wbr>Healthchecks</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kong/types/input/#UpstreamHealthchecks">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kong/types/output/#UpstreamHealthchecks">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kong/sdk/v2/go/kong/?tab=doc#UpstreamHealthchecksArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kong/sdk/v2/go/kong/?tab=doc#UpstreamHealthchecksOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Kong/Pulumi.Kong.Inputs.UpstreamHealthchecksArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Kong/Pulumi.Kong.Outputs.UpstreamHealthchecks.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1196,18 +1184,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="upstreamhealthchecksactive">Upstream<wbr>Healthchecks<wbr>Active</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kong/types/input/#UpstreamHealthchecksActive">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kong/types/output/#UpstreamHealthchecksActive">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kong/sdk/v2/go/kong/?tab=doc#UpstreamHealthchecksActiveArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kong/sdk/v2/go/kong/?tab=doc#UpstreamHealthchecksActiveOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Kong/Pulumi.Kong.Inputs.UpstreamHealthchecksActiveArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Kong/Pulumi.Kong.Outputs.UpstreamHealthchecksActive.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1522,18 +1498,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="upstreamhealthchecksactivehealthy">Upstream<wbr>Healthchecks<wbr>Active<wbr>Healthy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kong/types/input/#UpstreamHealthchecksActiveHealthy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kong/types/output/#UpstreamHealthchecksActiveHealthy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kong/sdk/v2/go/kong/?tab=doc#UpstreamHealthchecksActiveHealthyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kong/sdk/v2/go/kong/?tab=doc#UpstreamHealthchecksActiveHealthyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Kong/Pulumi.Kong.Inputs.UpstreamHealthchecksActiveHealthyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Kong/Pulumi.Kong.Outputs.UpstreamHealthchecksActiveHealthy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1668,18 +1632,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="upstreamhealthchecksactiveunhealthy">Upstream<wbr>Healthchecks<wbr>Active<wbr>Unhealthy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kong/types/input/#UpstreamHealthchecksActiveUnhealthy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kong/types/output/#UpstreamHealthchecksActiveUnhealthy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kong/sdk/v2/go/kong/?tab=doc#UpstreamHealthchecksActiveUnhealthyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kong/sdk/v2/go/kong/?tab=doc#UpstreamHealthchecksActiveUnhealthyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Kong/Pulumi.Kong.Inputs.UpstreamHealthchecksActiveUnhealthyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Kong/Pulumi.Kong.Outputs.UpstreamHealthchecksActiveUnhealthy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1886,18 +1838,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="upstreamhealthcheckspassive">Upstream<wbr>Healthchecks<wbr>Passive</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kong/types/input/#UpstreamHealthchecksPassive">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kong/types/output/#UpstreamHealthchecksPassive">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kong/sdk/v2/go/kong/?tab=doc#UpstreamHealthchecksPassiveArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kong/sdk/v2/go/kong/?tab=doc#UpstreamHealthchecksPassiveOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Kong/Pulumi.Kong.Inputs.UpstreamHealthchecksPassiveArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Kong/Pulumi.Kong.Outputs.UpstreamHealthchecksPassive.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2032,18 +1972,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="upstreamhealthcheckspassivehealthy">Upstream<wbr>Healthchecks<wbr>Passive<wbr>Healthy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kong/types/input/#UpstreamHealthchecksPassiveHealthy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kong/types/output/#UpstreamHealthchecksPassiveHealthy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kong/sdk/v2/go/kong/?tab=doc#UpstreamHealthchecksPassiveHealthyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kong/sdk/v2/go/kong/?tab=doc#UpstreamHealthchecksPassiveHealthyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Kong/Pulumi.Kong.Inputs.UpstreamHealthchecksPassiveHealthyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Kong/Pulumi.Kong.Outputs.UpstreamHealthchecksPassiveHealthy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2142,18 +2070,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="upstreamhealthcheckspassiveunhealthy">Upstream<wbr>Healthchecks<wbr>Passive<wbr>Unhealthy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/kong/types/input/#UpstreamHealthchecksPassiveUnhealthy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kong/types/output/#UpstreamHealthchecksPassiveUnhealthy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kong/sdk/v2/go/kong/?tab=doc#UpstreamHealthchecksPassiveUnhealthyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kong/sdk/v2/go/kong/?tab=doc#UpstreamHealthchecksPassiveUnhealthyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Kong/Pulumi.Kong.Inputs.UpstreamHealthchecksPassiveUnhealthyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Kong/Pulumi.Kong.Outputs.UpstreamHealthchecksPassiveUnhealthy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
