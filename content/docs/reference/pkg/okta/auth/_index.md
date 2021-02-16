@@ -34,24 +34,6 @@ Explore the resources and functions of the auth module in the Okta package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/oktadeveloper/terraform-provider-okta).</dd>
 	<dt>Version</dt>
-	<dd>2.9.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Auth.html" title="Pulumi.Okta.Auth">Pulumi.Okta.Auth</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/auth?tab=doc#" title="okta/auth">okta/auth</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/okta/auth/#" title="@pulumi/okta/auth">@pulumi/okta/auth</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_okta/auth" title="pulumi_okta/auth">pulumi_okta/auth</a></dd>
-
+	<dd>2.10.0</dd>
 </dl>
 

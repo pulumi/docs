@@ -23,24 +23,6 @@ Explore the resources and functions of the template module in the Okta package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/oktadeveloper/terraform-provider-okta).</dd>
 	<dt>Version</dt>
-	<dd>2.9.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Template.html" title="Pulumi.Okta.Template">Pulumi.Okta.Template</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/template?tab=doc#" title="okta/template">okta/template</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/okta/template/#" title="@pulumi/okta/template">@pulumi/okta/template</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_okta/template" title="pulumi_okta/template">pulumi_okta/template</a></dd>
-
+	<dd>2.10.0</dd>
 </dl>
 
